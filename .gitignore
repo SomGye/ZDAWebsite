@@ -1,0 +1,41 @@
+.vs/*
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log
+
+# No bundled stuff in git
+bin/
+dist/
+lib/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
