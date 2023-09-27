@@ -3,14 +3,20 @@ import viteLogo from "/vite.svg";
 import * as React from "react";
 import Button from "@mui/joy/Button";
 import "./App.css";
-
-const testClick = () => {
-  alert("Test button clicked!");
-};
+import ThemeToggle from "./components/ThemeToggle";
+import { Box, Container } from "@mui/joy";
 
 function App() {
+  const testClick = () => {
+    alert("Test button clicked!");
+  };
   return (
     <>
+      <Container>
+        <Box>
+          <ThemeToggle />
+        </Box>
+      </Container>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
