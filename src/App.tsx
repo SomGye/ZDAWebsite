@@ -5,6 +5,7 @@ import Button from "@mui/joy/Button";
 import "./App.css";
 import ThemeToggle from "./components/ThemeToggle";
 import { Box, Container } from "@mui/joy";
+import TopBanner from "./components/sections/TopBanner";
 
 function App() {
   const testClick = () => {
@@ -13,9 +14,7 @@ function App() {
   return (
     <>
       <Container>
-        <Box>
-          <ThemeToggle />
-        </Box>
+        <TopBanner />
       </Container>
       <div>
         <a href="https://vitejs.dev" target="_blank">
