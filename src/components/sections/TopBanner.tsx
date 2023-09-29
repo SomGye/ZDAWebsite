@@ -12,7 +12,7 @@
  * Mobile version = horizontal strip, show hamburger menu with links to pages and the Commission button
  */
 import * as React from "react";
-import { Box, Container, Button, Switch } from "@mui/joy";
+import { Box, Container, Button, ButtonGroup } from "@mui/joy";
 import DarkMode from "@mui/icons-material/DarkMode";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
@@ -33,10 +33,23 @@ const TopBanner = () => {
       <Box>
         <Button variant="solid">Request A Commission</Button>
       </Box>
+      {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
       <Box>
-        <div onClick={() => setPage("Home")}>Home</div>
-        <div onClick={() => setPage("Portfolio")}>Portfolio</div>
-        <div onClick={() => setPage("Commissions")}>Commissions</div>
+        {/* TODO: Make the current page underline the text of matching button */}
+        {/* TODO: Make justify-content: right when desktop */}
+        {/* TODO: Make flex-direction: column when mobile */}
+        <ButtonGroup aria-label="Top Banner Button Group" color="primary" variant="soft">
+          <Button onClick={() => setPage("Home")}>
+            Home
+          </Button>
+          <Button onClick={() => setPage("Portfolio")}>
+            Portfolio
+          </Button>
+          {/* TODO: Make the Commissions Button stand out more */}
+          <Button onClick={() => setPage("Commissions")}>
+            Commissions
+          </Button>
+        </ButtonGroup>
       </Box>
       <Box>
         <ThemeToggle />
