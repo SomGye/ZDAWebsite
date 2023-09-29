@@ -17,3 +17,12 @@ export const waitlistSlotsAtom = atom({
   key: "WaitlistSlots",
   default: 5,
 }); // WAITLIST commission slots open
+
+/**
+ * Commission Status: OPEN or CLOSED  
+ * Update default manually!
+ */
+export const commStatusAtom = atom({
+  key:"CommStatus",
+  default: "OPEN" // "OPEN" or "CLOSED"
+});
