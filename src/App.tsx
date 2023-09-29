@@ -3,9 +3,9 @@ import viteLogo from "/vite.svg";
 import * as React from "react";
 import Button from "@mui/joy/Button";
 import "./App.css";
-import ThemeToggle from "./components/ThemeToggle";
 import { Box, Container } from "@mui/joy";
 import TopBanner from "./components/sections/TopBanner";
+import TopInfoSection from "./components/sections/TopInfoSection";
 
 function App() {
   const testClick = () => {
@@ -15,6 +15,7 @@ function App() {
     <>
       <Container>
         <TopBanner />
+        <TopInfoSection />
       </Container>
       <div>
         <a href="https://vitejs.dev" target="_blank">
