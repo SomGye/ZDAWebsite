@@ -7,6 +7,7 @@ import { Box, Container } from "@mui/joy";
 import TopBanner from "./components/sections/TopBanner";
 import TopInfoSection from "./components/sections/TopInfoSection";
 import BodySection from "./components/sections/BodySection";
+import FooterSection from "./components/sections/FooterSection";
 
 function App() {
   const testClick = () => {
@@ -18,6 +19,7 @@ function App() {
         <TopBanner />
         <TopInfoSection />
         <BodySection />
+        <FooterSection />
       </Container>
       <div>
         <a href="https://vitejs.dev" target="_blank">
