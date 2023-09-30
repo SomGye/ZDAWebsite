@@ -38,17 +38,16 @@ const TopBanner = () => {
         {/* TODO: Make the current page underline the text of matching button */}
         {/* TODO: Make justify-content: right when desktop */}
         {/* TODO: Make flex-direction: column when mobile */}
-        <ButtonGroup aria-label="Top Banner Button Group" color="primary" variant="soft">
-          <Button onClick={() => setPage("Home")}>
-            Home
-          </Button>
-          <Button onClick={() => setPage("Portfolio")}>
-            Portfolio
-          </Button>
+        <ButtonGroup
+          aria-label="Top Banner Button Group"
+          color="primary"
+          variant="soft"
+          sx={{ justifyContent: "center" }}
+        >
+          <Button onClick={() => setPage("Home")}>Home</Button>
+          <Button onClick={() => setPage("Portfolio")}>Portfolio</Button>
           {/* TODO: Make the Commissions Button stand out more */}
-          <Button onClick={() => setPage("Commissions")}>
-            Commissions
-          </Button>
+          <Button onClick={() => setPage("Commissions")}>Commissions</Button>
         </ButtonGroup>
       </Box>
       <Box>
