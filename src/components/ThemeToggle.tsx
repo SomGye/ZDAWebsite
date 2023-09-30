@@ -14,7 +14,7 @@ const ThemeToggle = () => {
 
   React.useEffect(() => {
     toggleTheme();
-    console.log(mode);
+    console.log("Theme set to: " + mode);
   }, [checked]);
   return (
     <>
