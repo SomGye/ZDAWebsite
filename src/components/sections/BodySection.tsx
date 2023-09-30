@@ -50,27 +50,100 @@ const BodySection = () => {
     <Container>
       {page && page === "Home" && (
         <Box>
-          <h3>
-            <i>
-              <b>Highlights of My Work</b>
-            </i>
-          </h3>
+          <Box>
+            <h3>
+              <i>
+                <b>Highlights of My Work</b>
+              </i>
+            </h3>
+          </Box>
+          <Box>
+            <h3>
+              <i>
+                <b>Social Media</b>
+              </i>
+            </h3>
+          </Box>
+          <Box>
+            <h3>
+              <i>
+                <b>Prints and Support</b>
+              </i>
+            </h3>
+            <div>................</div>
+            <h4>
+              <i>Any support is greatly appreciated!</i>
+            </h4>
+          </Box>
         </Box>
       )}
       {page && page === "Portfolio" && (
         <Box>
-          <h3>
-            <i>Art Highlights 2023</i>
-          </h3>
+          <Box>
+            <h3>
+              <i>Art Highlights 2023</i>
+            </h3>
+          </Box>
+          <Box>
+            <h3>
+              <i>Late 2022 - Early 2023</i>
+            </h3>
+          </Box>
+          <Box>
+            <h3>
+              <i>Late 2021 - Early 2022</i>
+            </h3>
+            <div>................</div>
+            <h4>
+              <i>(Start of using Procreate)</i>
+            </h4>
+          </Box>
+          <Box>
+            <h3>
+              <i>Early 2021</i>
+            </h3>
+            <div>................</div>
+            <h4>
+              <i>(Using Phone Stylus)</i>
+            </h4>
+          </Box>
+          <Box>
+            <Button variant="solid" color="primary">
+              Commission Your Own Art
+            </Button>
+          </Box>
         </Box>
       )}
       {page && page === "Commissions" && (
         <Box>
-          <ButtonGroup variant="soft" sx={{ justifyContent: "center" }}>
-            <Button color="primary">Request A Commission</Button>
-            <Button color="warning">Commission Info</Button>
-            <Button color="warning">Art Tier Examples</Button>
-          </ButtonGroup>
+          <Box>
+            <ButtonGroup variant="soft" sx={{ justifyContent: "center" }}>
+              <Button color="primary">Request A Commission</Button>
+              <Button color="warning">Commission Info</Button>
+              <Button color="warning">Art Tier Examples</Button>
+            </ButtonGroup>
+          </Box>
+          <Box>
+            <h3>
+              <i>Commission Tiers</i>
+            </h3>
+          </Box>
+          <Box>
+            <h3>
+              <i>Commission Examples</i>
+            </h3>
+          </Box>
+          <Box>
+            <h3>
+              <i>
+                <b>Prints and Support</b>
+              </i>
+            </h3>
+            <div>................</div>
+            <h4>
+              <i>Any support is greatly appreciated!</i>
+            </h4>
+          </Box>
         </Box>
       )}
     </Container>
