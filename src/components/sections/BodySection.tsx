@@ -1,7 +1,6 @@
 // TODO: Body Section Component
 /**
  * Body/middle of the page, is very page-specific.
- * The background will only be visible on this section!
  * Home Body:
  * - Highlights of My Work (show top fave arts, links to music made?)
  * - Social Medias:
@@ -37,3 +36,45 @@
  *   - Include subtext: "Any support is greatly appreciated!"
  *  NOTE: using horizontal rules between each section!
  */
+import * as React from "react";
+import { useRecoilValue } from "recoil";
+import { themeAtom } from "../../states/ThemeAtom";
+import { pageAtom } from "../../states/PageAtom";
+import { Box, Button, ButtonGroup, Container } from "@mui/joy";
+
+const BodySection = () => {
+  const theme = useRecoilValue(themeAtom);
+  const page = useRecoilValue(pageAtom);
+
+  return (
+    <Container>
+      {page && page === "Home" && (
+        <Box>
+          <h3>
+            <i>
+              <b>Highlights of My Work</b>
+            </i>
+          </h3>
+        </Box>
+      )}
+      {page && page === "Portfolio" && (
+        <Box>
+          <h3>
+            <i>Art Highlights 2023</i>
+          </h3>
+        </Box>
+      )}
+      {page && page === "Commissions" && (
+        <Box>
+          <ButtonGroup variant="soft" sx={{ justifyContent: "center" }}>
+            <Button color="primary">Request A Commission</Button>
+            <Button color="warning">Commission Info</Button>
+            <Button color="warning">Art Tier Examples</Button>
+          </ButtonGroup>
+        </Box>
+      )}
+    </Container>
+  );
+};
+
+export default BodySection;
