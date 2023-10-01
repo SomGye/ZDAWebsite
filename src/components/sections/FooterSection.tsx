@@ -17,11 +17,13 @@ import * as React from "react";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { Box, Container, IconButton } from "@mui/joy";
-import {
-  EmailRounded,
-  MessageRounded,
-} from "@mui/icons-material";
+import { EmailRounded, MessageRounded } from "@mui/icons-material";
 import { clickEmail, clickLink } from "../../Helpers";
+import {
+  FooterIconButtonDarkSx,
+  FooterIconButtonLightSx,
+  FooterIconDarkSx,
+} from "./FooterSectionSx";
 
 const FooterSection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -53,25 +55,27 @@ const FooterSection = () => {
             variant="outlined"
             sx={
               theme === "dark"
-                ? { backgroundColor: "#d9d9de" }
-                : { backgroundColor: "#fafafa" }
+                ? FooterIconButtonDarkSx
+                : FooterIconButtonLightSx
             }
             onClick={clickEmail}
           >
-            <EmailRounded />
+            {theme === "dark" && <EmailRounded sx={FooterIconDarkSx} />}
+            {theme !== "dark" && <EmailRounded />}
           </IconButton>
           <IconButton
             variant="outlined"
             sx={
               theme === "dark"
-                ? { backgroundColor: "#d9d9de" }
-                : { backgroundColor: "#fafafa" }
+                ? FooterIconButtonDarkSx
+                : FooterIconButtonLightSx
             }
             onClick={() =>
               clickLink("https://discordapp.com/users/193548282264420354")
             }
           >
-            <MessageRounded />
+            {theme === "dark" && <MessageRounded sx={FooterIconDarkSx} />}
+            {theme !== "dark" && <MessageRounded />}
           </IconButton>
         </Box>
         <a href="https://drive.google.com/file/d/1H4WkDEfEIdqIAKem2sjGiyHJd5wb7udh/view?usp=sharing">
