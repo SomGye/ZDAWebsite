@@ -8,3 +8,4 @@
  * TODO: Make stub components for the inner components of this!
  * TODO: Use Joy UI's React Drawer component for this: https://mui.com/joy-ui/react-drawer/
  */
+// NOTE: Use the Inset Drawer example from here: https://mui.com/joy-ui/react-drawer/#inset-drawer 
