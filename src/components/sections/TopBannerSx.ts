@@ -9,6 +9,40 @@ export const TopBannerBoxSx = {
   },
 };
 
+export const TopBannerIconButtonDarkSx = {
+  ...{
+    backgroundColor: "#39343a",
+    borderColor: "#3d393f",
+    "&:hover": {
+      borderColor: "#6B25FE",
+      backgroundColor: "#6B25FE",
+    },
+  },
+};
+
+export const TopBannerIconButtonLightSx = {
+  ...{
+    backgroundColor: "#fcfcfc",
+  },
+};
+
+export const TopBannerNavIconDarkSx = {
+  ...{
+    color: "#fafafa",
+  },
+};
+
+export const TopBannerInnerNavBtnSx = {
+  ...{
+    justifyContent: "left",
+    color: "#6B25FE",
+    "&:hover": {
+      backgroundColor: "#6B25FE",
+      color: "#fafafa"
+    }
+  }
+};
+
 export const TopBannerIconDarkSx = {
   ...{
     backgroundColor: "#29242a",
@@ -36,7 +70,7 @@ export const TopBannerLogoTextHeaderSx = {
 };
 
 export const TopBannerButtonActiveSx = {
-    ...{
-        textDecoration: "underline"
-    }
+  ...{
+    textDecoration: "underline",
+  },
 };
