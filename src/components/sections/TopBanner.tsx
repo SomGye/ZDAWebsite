@@ -13,14 +13,16 @@
  */
 import * as React from "react";
 import { Box, Container, Button, ButtonGroup } from "@mui/joy";
-import DarkMode from "@mui/icons-material/DarkMode";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
 import ThemeToggle from "../ThemeToggle";
-import { TopBannerBoxSx } from "./TopBannerSx";
+import { TopBannerBoxSx, TopBannerButtonActiveSx, TopBannerIconDarkSx, TopBannerIconLightSx } from "./TopBannerSx";
+import { PaletteRounded } from "@mui/icons-material";
+import "./TopBanner.css";
 
 const TopBanner = () => {
+  const theme = useRecoilValue(themeAtom);
   const [page, setPage] = useRecoilState(pageAtom);
 
   return (
@@ -30,14 +32,21 @@ const TopBanner = () => {
           <div>Hamburger</div>
         </Box>
         <Box>
-          <div>Logo + Title - {page}</div>
+          <h4 className="TopBannerLogoTextHeader">
+            {theme === "dark" && (
+              <PaletteRounded sx={TopBannerIconDarkSx} />
+            )}
+            {theme !== "dark" && (
+              <PaletteRounded sx={TopBannerIconLightSx} />
+            )}
+            ⌞ZeroDayAnubis⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
+          </h4>
         </Box>
         <Box>
           <Button variant="solid">Request A Commission</Button>
         </Box>
         {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
         <Box>
-          {/* TODO: Make the current page underline the text of matching button */}
           {/* TODO: Make justify-content: right when desktop */}
           {/* TODO: Make flex-direction: column when mobile */}
           <ButtonGroup
@@ -46,13 +55,13 @@ const TopBanner = () => {
             variant="soft"
             sx={{ justifyContent: "center" }}
           >
-            <Button onClick={() => setPage("Home")}>Home</Button>
-            <Button onClick={() => setPage("Portfolio")}>Portfolio</Button>
+            <Button onClick={() => setPage("Home")} sx={page === "Home" ? TopBannerButtonActiveSx : {}}>Home</Button>
+            <Button onClick={() => setPage("Portfolio")} sx={page === "Portfolio" ? TopBannerButtonActiveSx : {}}>Portfolio</Button>
             {/* TODO: Make the Commissions Button stand out more */}
-            <Button onClick={() => setPage("Commissions")}>Commissions</Button>
+            <Button onClick={() => setPage("Commissions")} sx={page === "Commissions" ? TopBannerButtonActiveSx : {}}>Commissions</Button>
           </ButtonGroup>
         </Box>
-        <Box>
+        <Box sx={{ display: "flex" }}>
           <ThemeToggle />
         </Box>
       </Box>
