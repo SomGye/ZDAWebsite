@@ -32,17 +32,6 @@ export const TopBannerNavIconDarkSx = {
   },
 };
 
-export const TopBannerInnerNavBtnSx = {
-  ...{
-    justifyContent: "left",
-    color: "#6B25FE",
-    "&:hover": {
-      backgroundColor: "#6B25FE",
-      color: "#fafafa"
-    }
-  }
-};
-
 export const TopBannerIconDarkSx = {
   ...{
     backgroundColor: "#29242a",

@@ -15,16 +15,24 @@ import DialogTitle from "@mui/joy/DialogTitle";
 import DialogContent from "@mui/joy/DialogContent";
 import ModalClose from "@mui/joy/ModalClose";
 import Divider from "@mui/joy/Divider";
-import FormControl from "@mui/joy/FormControl";
-import FormLabel from "@mui/joy/FormLabel";
 import Stack from "@mui/joy/Stack";
 import Sheet from "@mui/joy/Sheet";
 import Typography from "@mui/joy/Typography";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/PageAtom";
 import { Button, ButtonGroup } from "@mui/joy";
-import { TopBannerInnerNavBtnSx } from "./sections/TopBannerSx";
 import { clickLink } from "../Helpers";
+import { themeAtom } from "../states/ThemeAtom";
+import {
+  HamburgerSheetDarkSx,
+  HamburgerSheetLightSx,
+  HamburgerTitleDarkSx,
+  HamburgerTitleLightSx,
+  HamburgerInnerNavBtnDarkSx,
+  HamburgerInnerNavBtnLightSx,
+  HamburgerCloseDarkSx,
+  HamburgerCloseLightSx,
+} from "./HamburgerMenuSx";
 
 type props = {
   open: boolean;
@@ -32,7 +40,8 @@ type props = {
 };
 
 const HamburgerMenu = ({ open, setOpen }: props) => {
-  const [page, setPage] = useRecoilState(pageAtom);
+  const theme = useRecoilValue(themeAtom);
+  const [, setPage] = useRecoilState(pageAtom);
 
   return (
     <>
@@ -52,68 +61,89 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
         }}
       >
         <Sheet
-          sx={{
-            borderRadius: "md",
-            p: 2,
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            height: "100%",
-            overflow: "auto",
-          }}
+          sx={theme === "dark" ? HamburgerSheetDarkSx : HamburgerSheetLightSx}
         >
           <DialogTitle>Links</DialogTitle>
-          <ModalClose />
+          <ModalClose
+            sx={theme === "dark" ? HamburgerCloseDarkSx : HamburgerCloseLightSx}
+          />
           <Divider sx={{ mt: "auto" }} />
           <DialogContent sx={{ gap: 2 }}>
-            <FormControl>
-              <FormLabel sx={{ typography: "title-md", fontWeight: "bold" }}>
-                The ZDA Website
-              </FormLabel>
-              <ButtonGroup
-                variant="soft"
-                color="neutral"
-                orientation="vertical"
+            <Typography
+              level="title-md"
+              fontWeight="bold"
+              sx={
+                theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
+              }
+            >
+              The ZDA Website
+            </Typography>
+            <ButtonGroup variant="soft" orientation="vertical" spacing={1}>
+              <Button
+                onClick={() => {
+                  setPage("Home");
+                  setOpen(false);
+                }}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
-                <Button
-                  onClick={() => {
-                    setPage("Home");
-                    setOpen(false);
-                  }}
-                  sx={TopBannerInnerNavBtnSx}
-                >
-                  Home
-                </Button>
-                <Button
-                  onClick={() => {
-                    setPage("Portfolio");
-                    setOpen(false);
-                  }}
-                  sx={TopBannerInnerNavBtnSx}
-                >
-                  Portfolio
-                </Button>
-                <Button
-                  onClick={() => {
-                    setPage("Commissions");
-                    setOpen(false);
-                  }}
-                  sx={TopBannerInnerNavBtnSx}
-                >
-                  Commissions
-                </Button>
-              </ButtonGroup>
-            </FormControl>
-            <Typography level="title-md" fontWeight="bold" sx={{ mt: 1 }}>
+                Home
+              </Button>
+              <Button
+                onClick={() => {
+                  setPage("Portfolio");
+                  setOpen(false);
+                }}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
+              >
+                Portfolio
+              </Button>
+              <Button
+                onClick={() => {
+                  setPage("Commissions");
+                  setOpen(false);
+                }}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
+              >
+                Commissions
+              </Button>
+            </ButtonGroup>
+            <Typography
+              level="title-md"
+              fontWeight="bold"
+              sx={
+                theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
+              }
+            >
               Social Media
             </Typography>
-            <ButtonGroup variant="soft" color="neutral" orientation="vertical">
+            <ButtonGroup
+              variant="soft"
+              color="neutral"
+              orientation="vertical"
+              spacing={1}
+            >
               <Button
                 onClick={() => {
                   clickLink("https://twitter.com/ZDAWorks");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Twitter/X
               </Button>
@@ -124,7 +154,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   );
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Instagram
               </Button>
@@ -135,7 +169,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   );
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Bluesky
               </Button>
@@ -144,7 +182,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   clickLink("https://www.threads.net/@zerodayanubis");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Threads
               </Button>
@@ -153,21 +195,40 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   clickLink("https://pebble.is/ZeroDayAnubis");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Pebble
               </Button>
             </ButtonGroup>
-            <Typography level="title-md" fontWeight="bold" sx={{ mt: 2 }}>
+            <Typography
+              level="title-md"
+              fontWeight="bold"
+              sx={
+                theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
+              }
+            >
               Prints and Support
             </Typography>
-            <ButtonGroup variant="soft" color="neutral" orientation="vertical">
+            <ButtonGroup
+              variant="soft"
+              color="neutral"
+              orientation="vertical"
+              spacing={1}
+            >
               <Button
                 onClick={() => {
                   clickLink("https://tinyurl.com/ZDAPrints");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Print Shop
               </Button>
@@ -176,7 +237,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   clickLink("https://ko-fi.com/zerodayanubis");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Ko-Fi (HQ Files)
               </Button>
@@ -185,7 +250,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   clickLink("https://paypal.me/ZeroDayAnubis");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 PayPal
               </Button>
@@ -194,7 +263,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   clickLink("https://account.venmo.com/u/somgye");
                   setOpen(false);
                 }}
-                sx={TopBannerInnerNavBtnSx}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
               >
                 Venmo
               </Button>
