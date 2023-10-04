@@ -47,7 +47,8 @@ const TopInfoSection = () => {
     const commStatus = useRecoilValue(commStatusAtom);
 
     return (
-        <Container>
+        // TODO: possibly remove this padding
+        <Container sx={{ paddingTop: 8 }}>
             <Box>
                 <h2>⌞ZeroDayAnubis⌝</h2>
             </Box>

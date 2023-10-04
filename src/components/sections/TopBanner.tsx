@@ -18,7 +18,8 @@ import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
 import ThemeToggle from "../ThemeToggle";
 import {
-  TopBannerBoxSx,
+  TopBannerBoxDarkSx,
+  TopBannerBoxLightSx,
   TopBannerButtonActiveSx,
   TopBannerIconButtonDarkSx,
   TopBannerIconButtonLightSx,
@@ -37,7 +38,7 @@ const TopBanner = () => {
 
   return (
     <Container>
-      <Box sx={TopBannerBoxSx}>
+      <Box sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}>
         <Box>
           <IconButton
             variant="soft"
