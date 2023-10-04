@@ -165,7 +165,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               <Button
                 onClick={() => {
                   clickLink(
-                    "https://bsky.app/profile/zerodayanubis.bsky.social"
+                    "https://bsky.app/profile/zerodayanubis.com"
                   );
                   setOpen(false);
                 }}
