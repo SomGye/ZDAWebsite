@@ -12,38 +12,64 @@
  * Mobile version = horizontal strip, show hamburger menu with links to pages and the Commission button
  */
 import * as React from "react";
-import { Box, Container, Button, ButtonGroup } from "@mui/joy";
+import { Box, Container, Button, ButtonGroup, IconButton } from "@mui/joy";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
 import ThemeToggle from "../ThemeToggle";
-import { TopBannerBoxSx, TopBannerButtonActiveSx, TopBannerIconDarkSx, TopBannerIconLightSx } from "./TopBannerSx";
-import { PaletteRounded } from "@mui/icons-material";
+import {
+  TopBannerBoxDarkSx,
+  TopBannerBoxLightSx,
+  TopBannerButtonActiveSx,
+  TopBannerButtonDefaultSx,
+  TopBannerCommButtonSx,
+  TopBannerContainerSx,
+  TopBannerIconBoxSx,
+  TopBannerIconButtonDarkSx,
+  TopBannerIconButtonLightSx,
+  TopBannerIconDarkSx,
+  TopBannerIconLightSx,
+  TopBannerNavIconDarkSx,
+  TopBannerThemeToggleBoxSx,
+} from "./TopBannerSx";
+import { Menu, PaletteRounded } from "@mui/icons-material";
+import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
+import { clickLink } from "../../Helpers";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
   const [page, setPage] = useRecoilState(pageAtom);
+  const [open, setOpen] = React.useState(false);
 
   return (
-    <Container>
-      <Box sx={TopBannerBoxSx}>
-        <Box>
-          <div>Hamburger</div>
+    <Container sx={TopBannerContainerSx}>
+      <Box sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}>
+        <Box sx={TopBannerIconBoxSx}>
+          <IconButton
+            variant="soft"
+            color="neutral"
+            sx={
+              theme === "dark"
+                ? TopBannerIconButtonDarkSx
+                : TopBannerIconButtonLightSx
+            }
+            onClick={() => setOpen(true)}
+          >
+            {theme === "dark" && <Menu sx={TopBannerNavIconDarkSx} />}
+            {theme !== "dark" && <Menu />}
+          </IconButton>
+          <HamburgerMenu open={open} setOpen={setOpen} />
         </Box>
         <Box>
           <h4 className="TopBannerLogoTextHeader">
-            {theme === "dark" && (
-              <PaletteRounded sx={TopBannerIconDarkSx} />
-            )}
-            {theme !== "dark" && (
-              <PaletteRounded sx={TopBannerIconLightSx} />
-            )}
+            {theme === "dark" && <PaletteRounded sx={TopBannerIconDarkSx} />}
+            {theme !== "dark" && <PaletteRounded sx={TopBannerIconLightSx} />}
             ⌞ZeroDayAnubis⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
           </h4>
         </Box>
         <Box>
-          <Button variant="solid">Request A Commission</Button>
+          <Button variant="solid" onClick={() => clickLink("https://tinyurl.com/ZDACommForm")} sx={TopBannerCommButtonSx}>Request A Commission</Button>
         </Box>
         {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
         <Box>
@@ -55,13 +81,40 @@ const TopBanner = () => {
             variant="soft"
             sx={{ justifyContent: "center" }}
           >
-            <Button onClick={() => setPage("Home")} sx={page === "Home" ? TopBannerButtonActiveSx : {}}>Home</Button>
-            <Button onClick={() => setPage("Portfolio")} sx={page === "Portfolio" ? TopBannerButtonActiveSx : {}}>Portfolio</Button>
+            <Button
+              onClick={() => setPage("Home")}
+              sx={
+                page === "Home"
+                  ? TopBannerButtonActiveSx
+                  : TopBannerButtonDefaultSx
+              }
+            >
+              Home
+            </Button>
+            <Button
+              onClick={() => setPage("Portfolio")}
+              sx={
+                page === "Portfolio"
+                  ? TopBannerButtonActiveSx
+                  : TopBannerButtonDefaultSx
+              }
+            >
+              Portfolio
+            </Button>
             {/* TODO: Make the Commissions Button stand out more */}
-            <Button onClick={() => setPage("Commissions")} sx={page === "Commissions" ? TopBannerButtonActiveSx : {}}>Commissions</Button>
+            <Button
+              onClick={() => setPage("Commissions")}
+              sx={
+                page === "Commissions"
+                  ? TopBannerButtonActiveSx
+                  : TopBannerButtonDefaultSx
+              }
+            >
+              Commissions
+            </Button>
           </ButtonGroup>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={TopBannerThemeToggleBoxSx}>
           <ThemeToggle />
         </Box>
       </Box>

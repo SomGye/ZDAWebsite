@@ -3,8 +3,8 @@ export const FooterIconButtonDarkSx = {
     backgroundColor: "#39343a",
     borderColor: "#3d393f",
     "&:hover": {
-      borderColor: "#4d394f",
-      backgroundColor: "#4d394f",
+      borderColor: "#6B25FE",
+      backgroundColor: "#6B25FE",
     },
   },
 };

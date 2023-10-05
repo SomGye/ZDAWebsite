@@ -1,11 +1,90 @@
-export const TopBannerBoxSx = {
+export const TopBannerContainerSx = {
   ...{
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+};
+
+export const TopBannerBoxDarkSx = {
+  ...{
+    display: "flex",
+    flexWrap: "wrap",
     alignContent: "center",
     justifyContent: "space-between",
     alignItems: "center",
+    backgroundColor: "#29242afb",
+    position: "fixed",
+    top: "0",
+    width: "98%",
+    zIndex: "999",
+    paddingTop: "8px",
+    margin: "auto",
+    boxShadow: "rgba(210,192,226,0.04) 0px 1px 20px 2px",
+    borderRadius: "24px",
+  },
+};
+
+export const TopBannerBoxLightSx = {
+  ...{
+    display: "flex",
+    flexWrap: "wrap",
+    alignContent: "center",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#fafafaf5",
+    position: "fixed",
+    top: "0",
+    width: "98%",
+    zIndex: "999",
+    paddingTop: "8px",
+    margin: "auto",
+    boxShadow: "rgba(30,12,46,0.14) 0px 60px 220px -4px",
+    borderRadius: "24px",
+  },
+};
+
+export const TopBannerIconBoxSx = {
+  ...{
+    marginLeft: "16px",
+  },
+};
+
+export const TopBannerIconButtonDarkSx = {
+  ...{
+    backgroundColor: "#39343a",
+    borderColor: "#3d393f",
+    transition: "background-color 0.10s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      borderColor: "#6B25FE",
+      backgroundColor: "#6B25FE",
+      transition: "background-color 0.10s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerIconButtonLightSx = {
+  ...{
+    backgroundColor: "#fcfcfc",
+    transition: "background-color 0.25s",
+    "&:hover": {
+      backgroundColor: "#BBA5FE90",
+      transition: "background-color 0.25s",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerNavIconDarkSx = {
+  ...{
+    color: "#fafafa",
   },
 };
 
@@ -35,8 +114,54 @@ export const TopBannerLogoTextHeaderSx = {
   },
 };
 
+export const TopBannerCommButtonSx = {
+  ...{
+    backgroundColor: "#6B25FE",
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#4817DB",
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
 export const TopBannerButtonActiveSx = {
-    ...{
-        textDecoration: "underline"
-    }
+  ...{
+    textDecoration: "underline",
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerButtonDefaultSx = {
+  ...{
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerThemeToggleBoxSx = {
+  ...{
+    display: "flex",
+    marginRight: "16px",
+  },
 };
