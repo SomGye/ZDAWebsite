@@ -54,9 +54,13 @@ export const TopBannerIconButtonDarkSx = {
   ...{
     backgroundColor: "#39343a",
     borderColor: "#3d393f",
+    transition: "background-color 0.10s",
+    transitionTimingFunction: "ease-out",
     "&:hover": {
       borderColor: "#6B25FE",
       backgroundColor: "#6B25FE",
+      transition: "background-color 0.10s",
+      transitionTimingFunction: "ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -67,8 +71,10 @@ export const TopBannerIconButtonDarkSx = {
 export const TopBannerIconButtonLightSx = {
   ...{
     backgroundColor: "#fcfcfc",
+    transition: "background-color 0.25s",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
+      transition: "background-color 0.25s",
     },
     "&:focus": {
       outline: "none",
@@ -108,9 +114,48 @@ export const TopBannerLogoTextHeaderSx = {
   },
 };
 
+export const TopBannerCommButtonSx = {
+  ...{
+    backgroundColor: "#6B25FE",
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#4817DB",
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
 export const TopBannerButtonActiveSx = {
   ...{
     textDecoration: "underline",
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerButtonDefaultSx = {
+  ...{
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
   },
 };
 

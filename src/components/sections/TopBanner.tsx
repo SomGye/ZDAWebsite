@@ -21,6 +21,8 @@ import {
   TopBannerBoxDarkSx,
   TopBannerBoxLightSx,
   TopBannerButtonActiveSx,
+  TopBannerButtonDefaultSx,
+  TopBannerCommButtonSx,
   TopBannerContainerSx,
   TopBannerIconBoxSx,
   TopBannerIconButtonDarkSx,
@@ -33,6 +35,7 @@ import {
 import { Menu, PaletteRounded } from "@mui/icons-material";
 import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
+import { clickLink } from "../../Helpers";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
@@ -66,7 +69,7 @@ const TopBanner = () => {
           </h4>
         </Box>
         <Box>
-          <Button variant="solid">Request A Commission</Button>
+          <Button variant="solid" onClick={() => clickLink("https://tinyurl.com/ZDACommForm")} sx={TopBannerCommButtonSx}>Request A Commission</Button>
         </Box>
         {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
         <Box>
@@ -80,20 +83,32 @@ const TopBanner = () => {
           >
             <Button
               onClick={() => setPage("Home")}
-              sx={page === "Home" ? TopBannerButtonActiveSx : {}}
+              sx={
+                page === "Home"
+                  ? TopBannerButtonActiveSx
+                  : TopBannerButtonDefaultSx
+              }
             >
               Home
             </Button>
             <Button
               onClick={() => setPage("Portfolio")}
-              sx={page === "Portfolio" ? TopBannerButtonActiveSx : {}}
+              sx={
+                page === "Portfolio"
+                  ? TopBannerButtonActiveSx
+                  : TopBannerButtonDefaultSx
+              }
             >
               Portfolio
             </Button>
             {/* TODO: Make the Commissions Button stand out more */}
             <Button
               onClick={() => setPage("Commissions")}
-              sx={page === "Commissions" ? TopBannerButtonActiveSx : {}}
+              sx={
+                page === "Commissions"
+                  ? TopBannerButtonActiveSx
+                  : TopBannerButtonDefaultSx
+              }
             >
               Commissions
             </Button>

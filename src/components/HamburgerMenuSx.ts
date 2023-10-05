@@ -30,9 +30,13 @@ export const HamburgerCloseDarkSx = {
   ...{
     backgroundColor: "#363137",
     color: "#89848a",
+    transition: "background-color 0.10s",
+    transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#49444a",
       color: "#89848a",
+      transition: "background-color 0.10s",
+      transitionTimingFunction: "ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -43,9 +47,13 @@ export const HamburgerCloseDarkSx = {
 export const HamburgerCloseLightSx = {
   ...{
     backgroundColor: "#e9e9e9",
+    transition: "background-color 0.20s",
+    transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
       color: "#363137",
+      transition: "background-color 0.20s",
+      transitionTimingFunction: "ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -72,9 +80,13 @@ export const HamburgerInnerNavBtnDarkSx = {
     justifyContent: "left",
     backgroundColor: "#332e34",
     color: "#fafafa",
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
     },
   },
 };
@@ -83,9 +95,13 @@ export const HamburgerInnerNavBtnLightSx = {
   ...{
     justifyContent: "left",
     color: "#6B25FE",
+    transition: "background-color 0.20s",
+    transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
+      transition: "background-color 0.20s",
+      transitionTimingFunction: "ease-out",
     },
   },
 };
