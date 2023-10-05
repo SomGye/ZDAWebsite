@@ -21,11 +21,14 @@ import {
   TopBannerBoxDarkSx,
   TopBannerBoxLightSx,
   TopBannerButtonActiveSx,
+  TopBannerContainerSx,
+  TopBannerIconBoxSx,
   TopBannerIconButtonDarkSx,
   TopBannerIconButtonLightSx,
   TopBannerIconDarkSx,
   TopBannerIconLightSx,
   TopBannerNavIconDarkSx,
+  TopBannerThemeToggleBoxSx,
 } from "./TopBannerSx";
 import { Menu, PaletteRounded } from "@mui/icons-material";
 import HamburgerMenu from "../HamburgerMenu";
@@ -37,9 +40,9 @@ const TopBanner = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Container>
+    <Container sx={TopBannerContainerSx}>
       <Box sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}>
-        <Box>
+        <Box sx={TopBannerIconBoxSx}>
           <IconButton
             variant="soft"
             color="neutral"
@@ -96,7 +99,7 @@ const TopBanner = () => {
             </Button>
           </ButtonGroup>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={TopBannerThemeToggleBoxSx}>
           <ThemeToggle />
         </Box>
       </Box>

@@ -27,24 +27,30 @@ export const HamburgerSheetLightSx = {
 };
 
 export const HamburgerCloseDarkSx = {
-    ...{
-        backgroundColor: "#363137",
-        color: "#89848a",
-        "&:hover": {
-            backgroundColor: "#49444a",
-            color: "#89848a"
-        }
-    }
+  ...{
+    backgroundColor: "#363137",
+    color: "#89848a",
+    "&:hover": {
+      backgroundColor: "#49444a",
+      color: "#89848a",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
 };
 
 export const HamburgerCloseLightSx = {
-    ...{
-        backgroundColor: "#eeeeee",
-        "&:hover": {
-            backgroundColor: "#e5e5e5",
-            color: "#363137"
-        }
-    }
+  ...{
+    backgroundColor: "#e9e9e9",
+    "&:hover": {
+      backgroundColor: "#BBA5FE90",
+      color: "#363137",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
 };
 
 export const HamburgerTitleDarkSx = {
@@ -62,24 +68,24 @@ export const HamburgerTitleLightSx = {
 };
 
 export const HamburgerInnerNavBtnDarkSx = {
-    ...{
-      justifyContent: "left",
-      backgroundColor: "#332e34",
+  ...{
+    justifyContent: "left",
+    backgroundColor: "#332e34",
+    color: "#fafafa",
+    "&:hover": {
+      backgroundColor: "#6B25FE",
       color: "#fafafa",
-      "&:hover": {
-        backgroundColor: "#6B25FE",
-        color: "#fafafa",
-      }
-    }
-  };
+    },
+  },
+};
 
 export const HamburgerInnerNavBtnLightSx = {
-    ...{
-      justifyContent: "left",
-      color: "#6B25FE",
-      "&:hover": {
-        backgroundColor: "#6B25FE",
-        color: "#fafafa"
-      }
-    }
-  };
+  ...{
+    justifyContent: "left",
+    color: "#6B25FE",
+    "&:hover": {
+      backgroundColor: "#6B25FE",
+      color: "#fafafa",
+    },
+  },
+};
