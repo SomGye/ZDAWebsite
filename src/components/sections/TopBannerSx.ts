@@ -3,6 +3,7 @@ export const TopBannerContainerSx = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    height: "67px", // TODO: change for mobile
   },
 };
 
@@ -18,7 +19,6 @@ export const TopBannerBoxDarkSx = {
     top: "0",
     width: "98%",
     zIndex: "999",
-    paddingTop: "8px",
     margin: "auto",
     boxShadow: "rgba(210,192,226,0.04) 0px 1px 20px 2px",
     borderRadius: "24px",
@@ -37,7 +37,6 @@ export const TopBannerBoxLightSx = {
     top: "0",
     width: "98%",
     zIndex: "999",
-    paddingTop: "8px",
     margin: "auto",
     boxShadow: "rgba(30,12,46,0.14) 0px 60px 220px -4px",
     borderRadius: "24px",
