@@ -5,11 +5,14 @@ import TopBanner from "./components/sections/TopBanner";
 import TopInfoSection from "./components/sections/TopInfoSection";
 import BodySection from "./components/sections/BodySection";
 import FooterSection from "./components/sections/FooterSection";
+import { AppContainerSx } from "./AppSx";
 
 function App() {
+  // TODO: use window.innerHeight and window.innerWidth to determine screen size
+  //  and set global: phone/tablet/desktop
   return (
     <>
-      <Container>
+      <Container className="AppContainer" sx={AppContainerSx}>
         <TopBanner />
         <TopInfoSection />
         <BodySection />
