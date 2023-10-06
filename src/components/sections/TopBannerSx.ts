@@ -69,7 +69,7 @@ export const TopBannerIconButtonDarkSx = {
 
 export const TopBannerIconButtonLightSx = {
   ...{
-    backgroundColor: "#fcfcfc",
+    backgroundColor: "#fafafa10",
     transition: "background-color 0.25s",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
@@ -89,7 +89,7 @@ export const TopBannerNavIconDarkSx = {
 
 export const TopBannerIconDarkSx = {
   ...{
-    backgroundColor: "#29242a",
+    backgroundColor: "#29242a10",
     fontSize: "18px",
     paddingRight: "8px",
   },
@@ -97,7 +97,7 @@ export const TopBannerIconDarkSx = {
 
 export const TopBannerIconLightSx = {
   ...{
-    backgroundColor: "#fcfcfc",
+    backgroundColor: "#fafafa10",
     fontSize: "18px",
     paddingRight: "8px",
   },
