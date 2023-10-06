@@ -22,6 +22,7 @@ import {
   TopBannerBoxLightSx,
   TopBannerButtonActiveSx,
   TopBannerButtonDefaultSx,
+  TopBannerButtonGroupSx,
   TopBannerCommButtonSx,
   TopBannerContainerSx,
   TopBannerIconBoxSx,
@@ -79,7 +80,7 @@ const TopBanner = () => {
             aria-label="Top Banner Button Group"
             color="primary"
             variant="soft"
-            sx={{ justifyContent: "center" }}
+            sx={TopBannerButtonGroupSx}
           >
             <Button
               onClick={() => setPage("Home")}

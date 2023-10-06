@@ -117,6 +117,7 @@ export const TopBannerLogoTextHeaderSx = {
 export const TopBannerCommButtonSx = {
   ...{
     backgroundColor: "#6B25FE",
+    borderRadius: "24px",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
@@ -130,9 +131,18 @@ export const TopBannerCommButtonSx = {
   },
 };
 
+export const TopBannerButtonGroupSx = {
+  ...{
+    justifyContent: "center",
+    "--ButtonGroup-radius": "24px",
+    "--ButtonGroup-separatorColor": "none !important",
+  }
+}
+
 export const TopBannerButtonActiveSx = {
   ...{
     textDecoration: "underline",
+    border: "none",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
@@ -147,6 +157,7 @@ export const TopBannerButtonActiveSx = {
 
 export const TopBannerButtonDefaultSx = {
   ...{
+    border: "none",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
