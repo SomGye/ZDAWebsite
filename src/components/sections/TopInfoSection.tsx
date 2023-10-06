@@ -42,7 +42,7 @@ import {
   waitlistSlotsAtom,
   commStatusAtom,
 } from "../../states/CommSlotsAtom";
-import { TopInfoContainerSx } from "./TopInfoSectionSx";
+import { TopInfoContainerSx, TopInfoTopDarkBoxSx, TopInfoTopLightBoxSx } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
 
 const TopInfoSection = () => {
@@ -54,7 +54,7 @@ const TopInfoSection = () => {
 
   return (
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
-      <Box>
+      <Box sx={theme === "dark" ? TopInfoTopDarkBoxSx : TopInfoTopLightBoxSx}>
         <Box>
           <h2>⌞ZeroDayAnubis⌝</h2>
         </Box>

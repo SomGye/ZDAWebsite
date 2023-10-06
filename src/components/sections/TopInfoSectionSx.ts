@@ -7,3 +7,18 @@ export const TopInfoContainerSx = {
     alignItems: "stretch",
   },
 };
+
+export const TopInfoTopDarkBoxSx = {
+  ...{
+    backgroundImage:
+    "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+  },
+};
+
+export const TopInfoTopLightBoxSx = {
+    ...{
+      backgroundImage:
+        "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+        color: "#fafafafa",
+    },
+  };
