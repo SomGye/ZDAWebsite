@@ -1,0 +1,5 @@
+/* MUI OVERRIDES */
+div.MuiContainer-root.TopInfoContainer {
+  max-width: none;
+  padding: 0;
+}

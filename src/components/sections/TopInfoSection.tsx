@@ -37,49 +37,108 @@ import { Box, Container } from "@mui/joy";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
-import { commSlotsAtom, waitlistSlotsAtom, commStatusAtom } from "../../states/CommSlotsAtom";
+import {
+  commSlotsAtom,
+  waitlistSlotsAtom,
+  commStatusAtom,
+} from "../../states/CommSlotsAtom";
+import { TopInfoContainerSx } from "./TopInfoSectionSx";
+import "./TopInfoSection.css";
 
 const TopInfoSection = () => {
-    const theme = useRecoilValue(themeAtom);
-    const page = useRecoilValue(pageAtom);
-    const commSlots = useRecoilValue(commSlotsAtom);
-    const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
-    const commStatus = useRecoilValue(commStatusAtom);
+  const theme = useRecoilValue(themeAtom);
+  const page = useRecoilValue(pageAtom);
+  const commSlots = useRecoilValue(commSlotsAtom);
+  const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
+  const commStatus = useRecoilValue(commStatusAtom);
 
-    return (
-        // TODO: possibly remove this padding
-        <Container sx={{ paddingTop: 8 }}>
-            <Box>
-                <h2>⌞ZeroDayAnubis⌝</h2>
-            </Box>
-            <Box>
-                <h3>Abstract Media Creator</h3>
-            </Box>
-            <Box>
-                <h4><i>COMMISSIONS {commStatus} {"(" + commSlots + "/5 SLOTS)"}</i></h4>
-                <h4><i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i></h4>
-            </Box>
-            {/* TODO: Proper horizontal rule */}
-            <hr />
-            {/* Page Specific */}
-            {page && page === "Home" && (
-                <Box>
-                    <p>Welcome to my page!<br />I am an abstract media creator who loves photography, music, and gaming.<br /><br />I create abstract oddities with a focus on <b><i>colors + contrast + textures</i></b>.<br /><br />With this and my versatile experience in photo editing and creating glitch art,<br />I bring strange and unique ideas to life.</p>
-                </Box>
-            )}
-            {page && page === "Portfolio" && (
-                <Box>
-                    <p><i>I have always loved and appreciated art from afar,<br />and I spent a long time doodling song lyrics and geometric shapes in school notebooks.<br />I even explored creating my own glitch art from scratch by using programming<br />and math to develop the filters and algorithms to overlay effects over my own photography.<br /><br />Starting in January 2021, I decided to finally try my hand at digital art.<br />I went from trying out stylus apps like PenUp on my phone to<br />giving Procreate a shot and deciding to throw out the 'rulebook' of usual art.<br /><br />Since then, I have developed my focus of <b>colors + contrast + textures</b> and experimentation to always deliver something<br /> unique and interesting.<br />I hope you enjoy my work!</i>
-                    </p>
-                </Box>
-            )}
-            {page && page === "Commissions" && (
-                <Box>
-                    <p><i>I am here to create abstract art for you, with 4 available tiers to meet your budget and design needs.<br />If you are interested, simply click the 'Request A Commission' button and fill out the form.</i></p>
-                </Box>
-            )}
-        </Container>
-    )
-}
+  return (
+    <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
+      <Box>
+        <Box>
+          <h2>⌞ZeroDayAnubis⌝</h2>
+        </Box>
+        <Box>
+          <h3>Abstract Media Creator</h3>
+        </Box>
+        <Box>
+          <h4>
+            <i>
+              COMMISSIONS {commStatus} {"(" + commSlots + "/5 SLOTS)"}
+            </i>
+          </h4>
+          <h4>
+            <i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i>
+          </h4>
+        </Box>
+      </Box>
+      {/* Page Specific */}
+      {page && page === "Home" && (
+        <Box>
+          <p>
+            Welcome to my page!
+            <br />I am an abstract media creator who loves photography, music,
+            and gaming.
+            <br />
+            <br />I create abstract oddities with a focus on{" "}
+            <b>
+              <i>colors + contrast + textures</i>
+            </b>
+            .<br />
+            <br />
+            With this and my versatile experience in photo editing and creating
+            glitch art,
+            <br />I bring strange and unique ideas to life.
+          </p>
+        </Box>
+      )}
+      {page && page === "Portfolio" && (
+        <Box>
+          <p>
+            <i>
+              I have always loved and appreciated art from afar,
+              <br />
+              and I spent a long time doodling song lyrics and geometric shapes
+              in school notebooks.
+              <br />I even explored creating my own glitch art from scratch by
+              using programming
+              <br />
+              and math to develop the filters and algorithms to overlay effects
+              over my own photography.
+              <br />
+              <br />
+              Starting in January 2021, I decided to finally try my hand at
+              digital art.
+              <br />I went from trying out stylus apps like PenUp on my phone to
+              <br />
+              giving Procreate a shot and deciding to throw out the 'rulebook'
+              of usual art.
+              <br />
+              <br />
+              Since then, I have developed my focus of{" "}
+              <b>colors + contrast + textures</b> and experimentation to always
+              deliver something
+              <br /> unique and interesting.
+              <br />I hope you enjoy my work!
+            </i>
+          </p>
+        </Box>
+      )}
+      {page && page === "Commissions" && (
+        <Box>
+          <p>
+            <i>
+              I am here to create abstract art for you, with 4 available tiers
+              to meet your budget and design needs.
+              <br />
+              If you are interested, simply click the 'Request A Commission'
+              button and fill out the form.
+            </i>
+          </p>
+        </Box>
+      )}
+    </Container>
+  );
+};
 
 export default TopInfoSection;
