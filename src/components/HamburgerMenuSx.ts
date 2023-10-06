@@ -75,16 +75,33 @@ export const HamburgerTitleLightSx = {
   },
 };
 
+export const HamburgerButtonGroupSx = {
+  ...{
+    "--ButtonGroup-radius": "24px",
+    "--ButtonGroup-separatorColor": "none !important",
+  },
+};
+
+export const HamburgerButtonGroupTopSx = {
+  ...{
+    justifyContent: "center",
+    "--ButtonGroup-radius": "24px",
+    "--ButtonGroup-separatorColor": "none !important",
+  },
+};
+
 export const HamburgerInnerNavBtnDarkSx = {
   ...{
     justifyContent: "left",
     backgroundColor: "#332e34",
     color: "#fafafa",
+    border: "2px solid #6b25fe05",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
+      border: "2px solid #6b25fe",
       transition: "background-color 0.15s",
       transitionTimingFunction: "ease-out",
     },
@@ -94,7 +111,9 @@ export const HamburgerInnerNavBtnDarkSx = {
 export const HamburgerInnerNavBtnLightSx = {
   ...{
     justifyContent: "left",
+    backgroundColor: "#6b25fe05",
     color: "#6B25FE",
+    border: "2px solid #6b25fe0c",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
     "&:hover": {

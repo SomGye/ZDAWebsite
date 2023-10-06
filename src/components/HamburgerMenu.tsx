@@ -32,6 +32,8 @@ import {
   HamburgerInnerNavBtnLightSx,
   HamburgerCloseDarkSx,
   HamburgerCloseLightSx,
+  HamburgerButtonGroupSx,
+  HamburgerButtonGroupTopSx,
 } from "./HamburgerMenuSx";
 
 type props = {
@@ -78,7 +80,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             >
               The ZDA Website
             </Typography>
-            <ButtonGroup variant="soft" orientation="vertical" spacing={1}>
+            <ButtonGroup
+              variant="soft"
+              orientation="vertical"
+              sx={HamburgerButtonGroupTopSx}
+            >
               <Button
                 onClick={() => {
                   setPage("Home");
@@ -132,7 +138,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               variant="soft"
               color="neutral"
               orientation="vertical"
-              spacing={1}
+              sx={HamburgerButtonGroupSx}
             >
               <Button
                 onClick={() => {
@@ -164,9 +170,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  clickLink(
-                    "https://bsky.app/profile/zerodayanubis.com"
-                  );
+                  clickLink("https://bsky.app/profile/zerodayanubis.com");
                   setOpen(false);
                 }}
                 sx={
@@ -217,7 +221,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               variant="soft"
               color="neutral"
               orientation="vertical"
-              spacing={1}
+              sx={HamburgerButtonGroupSx}
             >
               <Button
                 onClick={() => {
