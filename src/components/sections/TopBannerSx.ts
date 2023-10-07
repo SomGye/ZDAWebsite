@@ -113,20 +113,77 @@ export const TopBannerLogoTextHeaderSx = {
   },
 };
 
-export const TopBannerCommButtonSx = {
+export const TopBannerCommButtonDarkSx = {
   ...{
-    backgroundColor: "#6B25FE",
+    background:
+      "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     borderRadius: "24px",
-    transition: "background-color 0.15s",
+    transition: "background 0.15s",
     transitionTimingFunction: "ease-out",
-    "&:hover": {
-      backgroundColor: "#4817DB",
-      transition: "background-color 0.15s",
-      transitionTimingFunction: "ease-out",
-    },
     "&:focus": {
       outline: "none",
     },
+    "&:hover .Button-Helper": {
+      opacity: "1",
+    },
+  },
+};
+
+export const TopBannerCommButtonDarkHelperSx = {
+  ...{
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0px 1px 2px 1px",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    fontSize: "0.875rem",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    transition: "opacity 0.20s",
+    transitionTimingFunction: "ease-out",
+  },
+};
+
+export const TopBannerCommButtonLightSx = {
+  ...{
+    background:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    borderRadius: "24px",
+    transition: "background 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:focus": {
+      outline: "none",
+    },
+    "&:hover .Button-Helper": {
+      opacity: "1",
+    },
+  },
+};
+
+export const TopBannerCommButtonLightHelperSx = {
+  ...{
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0px 1px 2px 1px",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    fontSize: "0.875rem",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    transition: "opacity 0.20s",
+    transitionTimingFunction: "ease-out",
   },
 };
 
@@ -135,8 +192,8 @@ export const TopBannerButtonGroupSx = {
     justifyContent: "center",
     "--ButtonGroup-radius": "24px",
     "--ButtonGroup-separatorColor": "none !important",
-  }
-}
+  },
+};
 
 export const TopBannerButtonActiveDarkSx = {
   ...{

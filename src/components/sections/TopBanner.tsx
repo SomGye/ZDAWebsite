@@ -12,7 +12,7 @@
  * Mobile version = horizontal strip, show hamburger menu with links to pages and the Commission button
  */
 import * as React from "react";
-import { Box, Container, Button, ButtonGroup, IconButton } from "@mui/joy";
+import { Box, Container, Button, ButtonGroup, IconButton, Typography } from "@mui/joy";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
@@ -25,7 +25,10 @@ import {
   TopBannerButtonDefaultDarkSx,
   TopBannerButtonDefaultLightSx,
   TopBannerButtonGroupSx,
-  TopBannerCommButtonSx,
+  TopBannerCommButtonDarkHelperSx,
+  TopBannerCommButtonDarkSx,
+  TopBannerCommButtonLightHelperSx,
+  TopBannerCommButtonLightSx,
   TopBannerContainerSx,
   TopBannerIconBoxSx,
   TopBannerIconButtonDarkSx,
@@ -91,8 +94,11 @@ const TopBanner = () => {
           <Button
             variant="solid"
             onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-            sx={TopBannerCommButtonSx}
+            sx={theme === "dark" ? TopBannerCommButtonDarkSx : TopBannerCommButtonLightSx}
           >
+            <Typography className="Button-Helper" sx={theme === "dark" ? TopBannerCommButtonDarkHelperSx : TopBannerCommButtonLightHelperSx}>
+              Request A Commission
+            </Typography>
             Request A Commission
           </Button>
         </Box>
