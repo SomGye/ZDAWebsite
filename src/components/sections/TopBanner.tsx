@@ -20,8 +20,10 @@ import ThemeToggle from "../ThemeToggle";
 import {
   TopBannerBoxDarkSx,
   TopBannerBoxLightSx,
-  TopBannerButtonActiveSx,
-  TopBannerButtonDefaultSx,
+  TopBannerButtonActiveDarkSx,
+  TopBannerButtonActiveLightSx,
+  TopBannerButtonDefaultDarkSx,
+  TopBannerButtonDefaultLightSx,
   TopBannerButtonGroupSx,
   TopBannerCommButtonSx,
   TopBannerContainerSx,
@@ -42,6 +44,22 @@ const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
   const [page, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
+
+  const determineGroupButtonStyle = (path: string) => {
+    if (page === path) {
+      if (theme === "dark") {
+        return TopBannerButtonActiveDarkSx;
+      } else {
+        return TopBannerButtonActiveLightSx;
+      }
+    } else {
+      if (theme === "dark") {
+        return TopBannerButtonDefaultDarkSx;
+      } else {
+        return TopBannerButtonDefaultLightSx;
+      }
+    }
+  };
 
   return (
     <Container sx={TopBannerContainerSx}>
@@ -70,7 +88,13 @@ const TopBanner = () => {
           </h4>
         </Box>
         <Box>
-          <Button variant="solid" onClick={() => clickLink("https://tinyurl.com/ZDACommForm")} sx={TopBannerCommButtonSx}>Request A Commission</Button>
+          <Button
+            variant="solid"
+            onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
+            sx={TopBannerCommButtonSx}
+          >
+            Request A Commission
+          </Button>
         </Box>
         {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
         <Box>
@@ -84,32 +108,19 @@ const TopBanner = () => {
           >
             <Button
               onClick={() => setPage("Home")}
-              sx={
-                page === "Home"
-                  ? TopBannerButtonActiveSx
-                  : TopBannerButtonDefaultSx
-              }
+              sx={() => determineGroupButtonStyle("Home")}
             >
               Home
             </Button>
             <Button
               onClick={() => setPage("Portfolio")}
-              sx={
-                page === "Portfolio"
-                  ? TopBannerButtonActiveSx
-                  : TopBannerButtonDefaultSx
-              }
+              sx={() => determineGroupButtonStyle("Portfolio")}
             >
               Portfolio
             </Button>
-            {/* TODO: Make the Commissions Button stand out more */}
             <Button
               onClick={() => setPage("Commissions")}
-              sx={
-                page === "Commissions"
-                  ? TopBannerButtonActiveSx
-                  : TopBannerButtonDefaultSx
-              }
+              sx={() => determineGroupButtonStyle("Commissions")}
             >
               Commissions
             </Button>
