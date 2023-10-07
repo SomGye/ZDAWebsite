@@ -64,8 +64,11 @@ const TopInfoSection = () => {
         <Box>
           <h4>
             <i>
-              COMMISSIONS {commStatus} {"(" + commSlots + "/5 SLOTS)"}
+              COMMISSIONS {commStatus}
             </i>
+          </h4>
+          <h4>
+            <i>{"(" + commSlots + "/5 SLOTS)"}</i>
           </h4>
           <h4>
             <i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i>
