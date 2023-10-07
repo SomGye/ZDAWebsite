@@ -18,6 +18,7 @@ export const TopInfoTopDarkBoxSx = {
     alignItems: "center",
     backgroundImage:
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      color: "#19141acc",
   },
 };
 
