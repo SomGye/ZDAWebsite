@@ -90,12 +90,85 @@ export const HamburgerButtonGroupTopSx = {
   },
 };
 
-export const HamburgerInnerNavBtnDarkSx = {
+export const HamburgerBoxTopSx = {
+  ...{
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "left",
+    "@media (max-width: 1270px)": {
+      flexDirection: "column",
+      justifyContent: "center",
+    },
+  },
+};
+
+export const HamburgerBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "left",
+  },
+};
+
+export const HamburgerTopNavBtnDarkSx = {
   ...{
     justifyContent: "left",
     backgroundColor: "#332e34",
     color: "#fafafa",
+    border: "2px solid #6b25fef5",
+    borderRadius: "24px",
+    transition: "background-color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#6B25FE",
+      color: "#fafafa",
+      border: "2px solid #6b25fe",
+      transition: "background-color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "@media (max-width: 1270px)": {
+      width: "100%",
+      border: "2px solid #6b25fe05",
+      borderRadius: "2px",
+    },
+  },
+};
+
+export const HamburgerTopNavBtnLightSx = {
+  ...{
+    justifyContent: "left",
+    backgroundColor: "#6b25fe05",
+    color: "#6B25FE",
+    border: "2px solid #6b25fe0c",
+    borderRadius: "24px",
+    transition: "background-color 0.20s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#6B25FE",
+      color: "#fafafa",
+      transition: "background-color 0.20s",
+      transitionTimingFunction: "ease-out",
+    },
+    "@media (max-width: 1270px)": {
+      width: "100%",
+    },
+  },
+};
+
+export const HamburgerInnerNavBtnDarkSx = {
+  ...{
+    width: "100%",
+    justifyContent: "left",
+    backgroundColor: "#332e34",
+    color: "#fafafa",
     border: "2px solid #6b25fe05",
+    borderRadius: "2px",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
@@ -110,10 +183,12 @@ export const HamburgerInnerNavBtnDarkSx = {
 
 export const HamburgerInnerNavBtnLightSx = {
   ...{
+    width: "100%",
     justifyContent: "left",
     backgroundColor: "#6b25fe05",
     color: "#6B25FE",
     border: "2px solid #6b25fe0c",
+    borderRadius: "24px",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
