@@ -124,6 +124,8 @@ const BodySection = () => {
             </ButtonGroup>
           </Box>
           <Box>
+            {/* TODO: Use React Card - Pricing example for the tiers, with Commission Me button at bottom of each */}
+            {/* Link: https://mui.com/joy-ui/react-card/#pricing-card */}
             <h3>
               <i>Commission Tiers</i>
             </h3>
