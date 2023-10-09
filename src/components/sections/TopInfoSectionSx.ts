@@ -49,7 +49,8 @@ export const TopInfoCardOuterDarkSx = {
     "--Card-padding": "28px",
     "--Card-radius": "24px",
     backgroundColor: "#2d282e",
-    boxShadow: "rgba(210,192,226,0.10) 0px 6px 60px 8px",
+    border: "1px solid transparent",
+    boxShadow: "rgba(210,192,226,0.06) 0px 6px 60px 8px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       "--Card-radius": "18px",
@@ -74,6 +75,7 @@ export const TopInfoCardOuterLightSx = {
     "--Card-padding": "28px",
     "--Card-radius": "24px",
     backgroundColor: "#ffffff",
+    border: "1px solid transparent",
     boxShadow: "rgba(30,12,46,0.11) 0px 20px 40px 2px",
     transition: "all 0.15s ease-out",
     "&:hover": {
