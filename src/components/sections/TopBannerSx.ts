@@ -3,7 +3,7 @@ export const TopBannerContainerSx = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "67px", // TODO: change for mobile
+    height: "67px",
   },
 };
 
@@ -22,6 +22,13 @@ export const TopBannerBoxDarkSx = {
     margin: "auto",
     boxShadow: "rgba(210,192,226,0.04) 0px 1px 20px 2px",
     borderRadius: "24px",
+    "@media (max-width: 1080px)": {
+      paddingTop: "0.95em",
+      paddingBottom: "0.95em",
+    },
+    "@media (max-width: 670px)": {
+      justifyContent: "center",
+    },
   },
 };
 
@@ -40,12 +47,23 @@ export const TopBannerBoxLightSx = {
     margin: "auto",
     boxShadow: "rgba(30,12,46,0.14) 0px 60px 220px -4px",
     borderRadius: "24px",
+    "@media (max-width: 1080px)": {
+      paddingTop: "0.95em",
+      paddingBottom: "0.95em",
+    },
+    "@media (max-width: 670px)": {
+      justifyContent: "center",
+    },
   },
 };
 
 export const TopBannerIconBoxSx = {
   ...{
     marginLeft: "16px",
+    "@media (max-width: 670px)": {
+      position: "fixed",
+      left: "0",
+    },
   },
 };
 
@@ -84,6 +102,14 @@ export const TopBannerIconButtonLightSx = {
 export const TopBannerNavIconDarkSx = {
   ...{
     color: "#fafafa",
+  },
+};
+
+export const TopBannerLogoNamePageBoxSx = {
+  ...{
+    "@media (max-width: 1080px)": {
+      display: "none",
+    },
   },
 };
 
@@ -192,6 +218,9 @@ export const TopBannerButtonGroupSx = {
     justifyContent: "center",
     "--ButtonGroup-radius": "24px",
     "--ButtonGroup-separatorColor": "none !important",
+    "@media (max-width: 670px)": {
+      display: "none",
+    },
   },
 };
 
@@ -277,5 +306,9 @@ export const TopBannerThemeToggleBoxSx = {
   ...{
     display: "flex",
     marginRight: "16px",
+    "@media (max-width: 670px)": {
+      position: "fixed",
+      right: "0",
+    },
   },
 };

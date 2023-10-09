@@ -12,7 +12,14 @@
  * Mobile version = horizontal strip, show hamburger menu with links to pages and the Commission button
  */
 import * as React from "react";
-import { Box, Container, Button, ButtonGroup, IconButton, Typography } from "@mui/joy";
+import {
+  Box,
+  Container,
+  Button,
+  ButtonGroup,
+  IconButton,
+  Typography,
+} from "@mui/joy";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
@@ -35,6 +42,7 @@ import {
   TopBannerIconButtonLightSx,
   TopBannerIconDarkSx,
   TopBannerIconLightSx,
+  TopBannerLogoNamePageBoxSx,
   TopBannerNavIconDarkSx,
   TopBannerThemeToggleBoxSx,
 } from "./TopBannerSx";
@@ -83,7 +91,7 @@ const TopBanner = () => {
           </IconButton>
           <HamburgerMenu open={open} setOpen={setOpen} />
         </Box>
-        <Box>
+        <Box sx={TopBannerLogoNamePageBoxSx}>
           <h4 className="TopBannerLogoTextHeader">
             {theme === "dark" && <PaletteRounded sx={TopBannerIconDarkSx} />}
             {theme !== "dark" && <PaletteRounded sx={TopBannerIconLightSx} />}
@@ -94,9 +102,20 @@ const TopBanner = () => {
           <Button
             variant="solid"
             onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-            sx={theme === "dark" ? TopBannerCommButtonDarkSx : TopBannerCommButtonLightSx}
+            sx={
+              theme === "dark"
+                ? TopBannerCommButtonDarkSx
+                : TopBannerCommButtonLightSx
+            }
           >
-            <Typography className="Button-Helper" sx={theme === "dark" ? TopBannerCommButtonDarkHelperSx : TopBannerCommButtonLightHelperSx}>
+            <Typography
+              className="Button-Helper"
+              sx={
+                theme === "dark"
+                  ? TopBannerCommButtonDarkHelperSx
+                  : TopBannerCommButtonLightHelperSx
+              }
+            >
               Request A Commission
             </Typography>
             Request A Commission
@@ -104,8 +123,6 @@ const TopBanner = () => {
         </Box>
         {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
         <Box>
-          {/* TODO: Make justify-content: right when desktop */}
-          {/* TODO: Make flex-direction: column when mobile */}
           <ButtonGroup
             aria-label="Top Banner Button Group"
             color="primary"
