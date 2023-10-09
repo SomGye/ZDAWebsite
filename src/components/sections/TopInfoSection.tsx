@@ -33,7 +33,7 @@ If you are interested, simply click the 'Request A Commission' button and fill o
  * NOTE: Ideally should have top bar be same height/size for all 3 pages
  */
 import * as React from "react";
-import { Box, Container } from "@mui/joy";
+import { Box, Card, Container, Divider, Typography } from "@mui/joy";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
@@ -42,7 +42,18 @@ import {
   waitlistSlotsAtom,
   commStatusAtom,
 } from "../../states/CommSlotsAtom";
-import { TopInfoContainerSx, TopInfoTopDarkBoxSx, TopInfoTopLightBoxSx } from "./TopInfoSectionSx";
+import {
+  TopInfoCardBoxSx,
+  TopInfoCardInnerDarkSx,
+  TopInfoCardInnerLightSx,
+  TopInfoCardOuterDarkSx,
+  TopInfoCardOuterLightSx,
+  TopInfoCardOuterTypoDarkSx,
+  TopInfoCardOuterTypoLightSx,
+  TopInfoContainerSx,
+  TopInfoTopDarkBoxSx,
+  TopInfoTopLightBoxSx,
+} from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
 
 const TopInfoSection = () => {
@@ -63,9 +74,7 @@ const TopInfoSection = () => {
         </Box>
         <Box>
           <h4>
-            <i>
-              COMMISSIONS {commStatus}
-            </i>
+            <i>COMMISSIONS {commStatus}</i>
           </h4>
           <h4>
             <i>{"(" + commSlots + "/5 SLOTS)"}</i>
@@ -77,22 +86,87 @@ const TopInfoSection = () => {
       </Box>
       {/* Page Specific */}
       {page && page === "Home" && (
-        <Box>
-          <p>
-            Welcome to my page!
-            <br />I am an abstract media creator who loves photography, music,
-            and gaming.
-            <br />
-            <br />I create abstract oddities with a focus on{" "}
-            <b>
-              <i>colors + contrast + textures</i>
-            </b>
-            .<br />
-            <br />
-            With this and my versatile experience in photo editing and creating
-            glitch art,
-            <br />I bring strange and unique ideas to life.
-          </p>
+        <Box sx={TopInfoCardBoxSx}>
+          <Card
+            variant="outlined"
+            sx={
+              theme === "dark"
+                ? TopInfoCardOuterDarkSx
+                : TopInfoCardOuterLightSx
+            }
+          >
+            <Typography
+              level="title-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
+              Welcome To My Page!
+            </Typography>
+            <Divider orientation="horizontal" inset="none" />
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
+              I am an abstract media creator who loves photography, music, and
+              gaming.
+            </Typography>
+          </Card>
+          <Card
+            variant="soft"
+            sx={
+              theme === "dark"
+                ? TopInfoCardInnerDarkSx
+                : TopInfoCardInnerLightSx
+            }
+          >
+            <Typography level="title-md" textColor="inherit">
+              I create abstract oddities with a focus on
+            </Typography>
+            <Typography level="title-lg" textColor="inherit">
+              colors + contrast + textures
+            </Typography>
+          </Card>
+          <Card
+            variant="outlined"
+            sx={
+              theme === "dark"
+                ? TopInfoCardOuterDarkSx
+                : TopInfoCardOuterLightSx
+            }
+          >
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
+              With this and my versatile experience in photo editing and
+              creating glitch art,
+            </Typography>
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
+              I bring strange and unique ideas to life.
+            </Typography>
+          </Card>
         </Box>
       )}
       {page && page === "Portfolio" && (
@@ -129,6 +203,8 @@ const TopInfoSection = () => {
       )}
       {page && page === "Commissions" && (
         <Box>
+          {/* TODO: Use React Card - Bio example to replace this and keep the ButtonGroup at bottom */}
+          {/* Link: https://mui.com/joy-ui/react-card/#bio-card */}
           <p>
             <i>
               I am here to create abstract art for you, with 4 available tiers
