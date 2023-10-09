@@ -43,13 +43,18 @@ import {
   commStatusAtom,
 } from "../../states/CommSlotsAtom";
 import {
-  TopInfoCardBoxSx,
+  TopInfoCardBottomDarkSx,
+  TopInfoCardBottomLightSx,
+  TopInfoCardBoxColSx,
+  TopInfoCardBoxRowSx,
   TopInfoCardInnerDarkSx,
   TopInfoCardInnerLightSx,
   TopInfoCardOuterDarkSx,
   TopInfoCardOuterLightSx,
   TopInfoCardOuterTypoDarkSx,
   TopInfoCardOuterTypoLightSx,
+  TopInfoCardTopDarkSx,
+  TopInfoCardTopLightSx,
   TopInfoContainerSx,
   TopInfoTopDarkBoxSx,
   TopInfoTopLightBoxSx,
@@ -86,7 +91,7 @@ const TopInfoSection = () => {
       </Box>
       {/* Page Specific */}
       {page && page === "Home" && (
-        <Box sx={TopInfoCardBoxSx}>
+        <Box sx={TopInfoCardBoxRowSx}>
           <Card
             variant="outlined"
             sx={
@@ -170,35 +175,117 @@ const TopInfoSection = () => {
         </Box>
       )}
       {page && page === "Portfolio" && (
-        <Box>
-          <p>
-            <i>
+        <Box sx={TopInfoCardBoxColSx}>
+          <Card
+            variant="outlined"
+            sx={theme === "dark" ? TopInfoCardTopDarkSx : TopInfoCardTopLightSx}
+          >
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
               I have always loved and appreciated art from afar,
-              <br />
+            </Typography>
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
               and I spent a long time doodling song lyrics and geometric shapes
               in school notebooks.
-              <br />I even explored creating my own glitch art from scratch by
-              using programming
-              <br />
+            </Typography>
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
+              I even explored creating my own glitch art from scratch by using
+              programming
+            </Typography>
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
               and math to develop the filters and algorithms to overlay effects
               over my own photography.
-              <br />
-              <br />
+            </Typography>
+            <Divider orientation="horizontal" inset="none" />
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
               Starting in January 2021, I decided to finally try my hand at
               digital art.
-              <br />I went from trying out stylus apps like PenUp on my phone to
-              <br />
+            </Typography>
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
+              I went from trying out stylus apps like PenUp on my phone to
+            </Typography>
+            <Typography
+              level="body-md"
+              textColor="inherit"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterTypoDarkSx
+                  : TopInfoCardOuterTypoLightSx
+              }
+            >
               giving Procreate a shot and deciding to throw out the 'rulebook'
               of usual art.
-              <br />
-              <br />
-              Since then, I have developed my focus of{" "}
-              <b>colors + contrast + textures</b> and experimentation to always
-              deliver something
-              <br /> unique and interesting.
-              <br />I hope you enjoy my work!
-            </i>
-          </p>
+            </Typography>
+          </Card>
+          <Card
+            variant="soft"
+            sx={
+              theme === "dark"
+                ? TopInfoCardBottomDarkSx
+                : TopInfoCardBottomLightSx
+            }
+          >
+            <Typography level="title-md" textColor="inherit">
+              Since then, I have developed my focus of
+            </Typography>
+            <Typography level="title-lg" textColor="inherit">
+              colors + contrast + textures
+            </Typography>
+            <Typography level="title-md" textColor="inherit">
+              ...to always deliver something unique and interesting.
+            </Typography>
+            <Divider orientation="horizontal" inset="none" />
+            <Typography level="body-sm" textColor="inherit">
+              I hope you enjoy my work!
+            </Typography>
+          </Card>
         </Box>
       )}
       {page && page === "Commissions" && (
