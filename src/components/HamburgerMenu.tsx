@@ -20,7 +20,7 @@ import Sheet from "@mui/joy/Sheet";
 import Typography from "@mui/joy/Typography";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/PageAtom";
-import { Button, ButtonGroup } from "@mui/joy";
+import { Box, Button } from "@mui/joy";
 import { clickLink } from "../Helpers";
 import { themeAtom } from "../states/ThemeAtom";
 import {
@@ -32,6 +32,10 @@ import {
   HamburgerInnerNavBtnLightSx,
   HamburgerCloseDarkSx,
   HamburgerCloseLightSx,
+  HamburgerBoxTopSx,
+  HamburgerBoxSx,
+  HamburgerTopNavBtnDarkSx,
+  HamburgerTopNavBtnLightSx,
 } from "./HamburgerMenuSx";
 
 type props = {
@@ -78,7 +82,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             >
               The ZDA Website
             </Typography>
-            <ButtonGroup variant="soft" orientation="vertical" spacing={1}>
+            <Box sx={HamburgerBoxTopSx}>
               <Button
                 onClick={() => {
                   setPage("Home");
@@ -86,8 +90,8 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 }}
                 sx={
                   theme === "dark"
-                    ? HamburgerInnerNavBtnDarkSx
-                    : HamburgerInnerNavBtnLightSx
+                    ? HamburgerTopNavBtnDarkSx
+                    : HamburgerTopNavBtnLightSx
                 }
               >
                 Home
@@ -99,8 +103,8 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 }}
                 sx={
                   theme === "dark"
-                    ? HamburgerInnerNavBtnDarkSx
-                    : HamburgerInnerNavBtnLightSx
+                    ? HamburgerTopNavBtnDarkSx
+                    : HamburgerTopNavBtnLightSx
                 }
               >
                 Portfolio
@@ -112,13 +116,13 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 }}
                 sx={
                   theme === "dark"
-                    ? HamburgerInnerNavBtnDarkSx
-                    : HamburgerInnerNavBtnLightSx
+                    ? HamburgerTopNavBtnDarkSx
+                    : HamburgerTopNavBtnLightSx
                 }
               >
                 Commissions
               </Button>
-            </ButtonGroup>
+            </Box>
             <Typography
               level="title-md"
               fontWeight="bold"
@@ -128,12 +132,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             >
               Social Media
             </Typography>
-            <ButtonGroup
-              variant="soft"
-              color="neutral"
-              orientation="vertical"
-              spacing={1}
-            >
+            <Box sx={HamburgerBoxSx}>
               <Button
                 onClick={() => {
                   clickLink("https://twitter.com/ZDAWorks");
@@ -164,9 +163,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  clickLink(
-                    "https://bsky.app/profile/zerodayanubis.com"
-                  );
+                  clickLink("https://bsky.app/profile/zerodayanubis.com");
                   setOpen(false);
                 }}
                 sx={
@@ -203,7 +200,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               >
                 Pebble
               </Button>
-            </ButtonGroup>
+            </Box>
             <Typography
               level="title-md"
               fontWeight="bold"
@@ -213,12 +210,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             >
               Prints and Support
             </Typography>
-            <ButtonGroup
-              variant="soft"
-              color="neutral"
-              orientation="vertical"
-              spacing={1}
-            >
+            <Box sx={HamburgerBoxSx}>
               <Button
                 onClick={() => {
                   clickLink("https://tinyurl.com/ZDAPrints");
@@ -271,7 +263,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               >
                 Venmo
               </Button>
-            </ButtonGroup>
+            </Box>
           </DialogContent>
           <Divider sx={{ mt: "auto" }} />
           <Stack direction="row" justifyContent="center" useFlexGap spacing={1}>

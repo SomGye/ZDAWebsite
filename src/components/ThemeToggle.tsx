@@ -20,6 +20,7 @@ const ThemeToggle = () => {
       // Set body style
       document.body.style.backgroundColor = "#fafafa";
       document.body.style.color = "#213547";
+      document.body.style.transition = "all 0.20s ease-out";
     } else {
       // Set global variables
       setMode("dark");
@@ -28,6 +29,7 @@ const ThemeToggle = () => {
       // Set body style
       document.body.style.backgroundColor = "#29242a";
       document.body.style.color = "rgba(255, 255, 255, 0.87)";
+      document.body.style.transition = "all 0.20s ease-out";
     }
   };
 

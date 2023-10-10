@@ -3,6 +3,7 @@ export const TopBannerContainerSx = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    height: "67px",
   },
 };
 
@@ -18,10 +19,16 @@ export const TopBannerBoxDarkSx = {
     top: "0",
     width: "98%",
     zIndex: "999",
-    paddingTop: "8px",
     margin: "auto",
     boxShadow: "rgba(210,192,226,0.04) 0px 1px 20px 2px",
     borderRadius: "24px",
+    "@media (max-width: 1080px)": {
+      paddingTop: "0.95em",
+      paddingBottom: "0.95em",
+    },
+    "@media (max-width: 670px)": {
+      justifyContent: "center",
+    },
   },
 };
 
@@ -37,16 +44,26 @@ export const TopBannerBoxLightSx = {
     top: "0",
     width: "98%",
     zIndex: "999",
-    paddingTop: "8px",
     margin: "auto",
     boxShadow: "rgba(30,12,46,0.14) 0px 60px 220px -4px",
     borderRadius: "24px",
+    "@media (max-width: 1080px)": {
+      paddingTop: "0.95em",
+      paddingBottom: "0.95em",
+    },
+    "@media (max-width: 670px)": {
+      justifyContent: "center",
+    },
   },
 };
 
 export const TopBannerIconBoxSx = {
   ...{
     marginLeft: "16px",
+    "@media (max-width: 670px)": {
+      position: "fixed",
+      left: "0",
+    },
   },
 };
 
@@ -70,7 +87,7 @@ export const TopBannerIconButtonDarkSx = {
 
 export const TopBannerIconButtonLightSx = {
   ...{
-    backgroundColor: "#fcfcfc",
+    backgroundColor: "#fafafa10",
     transition: "background-color 0.25s",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
@@ -88,9 +105,17 @@ export const TopBannerNavIconDarkSx = {
   },
 };
 
+export const TopBannerLogoNamePageBoxSx = {
+  ...{
+    "@media (max-width: 1080px)": {
+      display: "none",
+    },
+  },
+};
+
 export const TopBannerIconDarkSx = {
   ...{
-    backgroundColor: "#29242a",
+    backgroundColor: "#29242a10",
     fontSize: "18px",
     paddingRight: "8px",
   },
@@ -98,7 +123,7 @@ export const TopBannerIconDarkSx = {
 
 export const TopBannerIconLightSx = {
   ...{
-    backgroundColor: "#fcfcfc",
+    backgroundColor: "#fafafa10",
     fontSize: "18px",
     paddingRight: "8px",
   },
@@ -114,29 +139,103 @@ export const TopBannerLogoTextHeaderSx = {
   },
 };
 
-export const TopBannerCommButtonSx = {
+export const TopBannerCommButtonDarkSx = {
   ...{
-    backgroundColor: "#6B25FE",
-    transition: "background-color 0.15s",
+    background:
+      "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    borderRadius: "24px",
+    transition: "background 0.15s",
     transitionTimingFunction: "ease-out",
-    "&:hover": {
-      backgroundColor: "#4817DB",
-      transition: "background-color 0.15s",
-      transitionTimingFunction: "ease-out",
-    },
     "&:focus": {
       outline: "none",
+    },
+    "&:hover .Button-Helper": {
+      opacity: "1",
     },
   },
 };
 
-export const TopBannerButtonActiveSx = {
+export const TopBannerCommButtonDarkHelperSx = {
+  ...{
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0px 1px 2px 1px",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    fontSize: "0.875rem",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    transition: "opacity 0.20s",
+    transitionTimingFunction: "ease-out",
+  },
+};
+
+export const TopBannerCommButtonLightSx = {
+  ...{
+    background:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    borderRadius: "24px",
+    transition: "background 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:focus": {
+      outline: "none",
+    },
+    "&:hover .Button-Helper": {
+      opacity: "1",
+    },
+  },
+};
+
+export const TopBannerCommButtonLightHelperSx = {
+  ...{
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0px 1px 2px 1px",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    fontSize: "0.875rem",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    transition: "opacity 0.20s",
+    transitionTimingFunction: "ease-out",
+  },
+};
+
+export const TopBannerButtonGroupSx = {
+  ...{
+    justifyContent: "center",
+    "--ButtonGroup-radius": "24px",
+    "--ButtonGroup-separatorColor": "none !important",
+    "@media (max-width: 670px)": {
+      display: "none",
+    },
+  },
+};
+
+export const TopBannerButtonActiveDarkSx = {
   ...{
     textDecoration: "underline",
-    transition: "background-color 0.15s",
+    border: "none",
+    backgroundColor: "#D600FF",
+    color: "#fafafafa",
+    transition: "background-color 0.15s, color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
-      transition: "background-color 0.15s",
+      backgroundColor: "#EB5EAF",
+      color: "#19141a",
+      transition: "background-color 0.15s, color 0.15s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -145,12 +244,56 @@ export const TopBannerButtonActiveSx = {
   },
 };
 
-export const TopBannerButtonDefaultSx = {
+export const TopBannerButtonDefaultDarkSx = {
   ...{
-    transition: "background-color 0.15s",
+    border: "none",
+    backgroundColor: "#D600FF",
+    color: "#fafafafa",
+    transition: "background-color 0.15s, color 0.15s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
-      transition: "background-color 0.15s",
+      backgroundColor: "#EB5EAF",
+      color: "#19141a",
+      transition: "background-color 0.15s, color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerButtonActiveLightSx = {
+  ...{
+    textDecoration: "underline",
+    backgroundColor: "#E10965",
+    color: "#fafafafa",
+    border: "none",
+    transition: "background-color 0.15s, color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#ef2e50",
+      color: "lightgoldenrodyellow",
+      transition: "background-color 0.15s, color 0.15s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopBannerButtonDefaultLightSx = {
+  ...{
+    border: "none",
+    backgroundColor: "#E10965",
+    color: "#fafafafa",
+    transition: "background-color 0.15s, color 0.15s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#ef2e50",
+      color: "lightgoldenrodyellow",
+      transition: "background-color 0.15s, color 0.15s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -163,5 +306,9 @@ export const TopBannerThemeToggleBoxSx = {
   ...{
     display: "flex",
     marginRight: "16px",
+    "@media (max-width: 670px)": {
+      position: "fixed",
+      right: "0",
+    },
   },
 };

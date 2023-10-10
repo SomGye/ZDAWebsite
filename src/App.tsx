@@ -1,58 +1,62 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import * as React from "react";
-import Button from "@mui/joy/Button";
 import "./App.css";
-import { Box, Container } from "@mui/joy";
+import { Container } from "@mui/joy";
 import TopBanner from "./components/sections/TopBanner";
 import TopInfoSection from "./components/sections/TopInfoSection";
 import BodySection from "./components/sections/BodySection";
 import FooterSection from "./components/sections/FooterSection";
+import { AppContainerSx } from "./AppSx";
+import { useRecoilState } from "recoil";
+import { pageAtom } from "./states/PageAtom";
 
 function App() {
-  const testClick = () => {
-    alert("Test button clicked!");
-  };
+  // TODO: use window.innerHeight and window.innerWidth to determine screen size
+  //  and set global: phone/tablet/desktop
+
+  const [page, setPage] = useRecoilState(pageAtom);
+  const rootPath = "https://www.zerodayanubis.com";
+  const portfolioPath = "portfolio";
+  const commissionsPath = "commissions";
+
+  React.useEffect(() => {
+    const currentPath = window.location.href;
+    // TODO: Figure out how to avoid 404 on sub-paths
+    if (currentPath.toLocaleLowerCase().includes(portfolioPath)) {
+      console.log("Page detected: Portfolio");
+      setPage("Portfolio");
+    } else if (currentPath.toLocaleLowerCase().includes(commissionsPath)) {
+      console.log("Page detected: Commissions");
+      setPage("Commissions");
+    } else {
+      console.log("Page detected: Home");
+      setPage("Home");
+    }
+  }, []);
+
   return (
     <>
-      <Container>
+      <Container className="AppContainer" sx={AppContainerSx}>
         <TopBanner />
         <TopInfoSection />
         <BodySection />
         <FooterSection />
       </Container>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>ZeroDayAnubis - Abstract Media Creator</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <Button variant="solid" onClick={() => testClick()}>
-          Test Me
-        </Button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <p>
-        TEST FILLER FOR SCROLL
-      </p>
-      <p>
-        TEST FILLER FOR SCROLL
-      </p>
-      <p>
-        TEST FILLER FOR SCROLL
-      </p>
-      <p>
-        TEST FILLER FOR SCROLL
-      </p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
+      <p>TEST FILLER FOR SCROLL</p>
     </>
   );
 }
