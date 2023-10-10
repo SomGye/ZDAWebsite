@@ -117,13 +117,6 @@ const BodySection = () => {
       {page && page === "Commissions" && (
         <Box>
           <Box>
-            <ButtonGroup variant="soft" sx={{ justifyContent: "center" }}>
-              <Button color="primary">Request A Commission</Button>
-              <Button color="warning">Commission Info</Button>
-              <Button color="warning">Art Tier Examples</Button>
-            </ButtonGroup>
-          </Box>
-          <Box>
             {/* TODO: Use React Card - Pricing example for the tiers, with Commission Me button at bottom of each */}
             {/* Link: https://mui.com/joy-ui/react-card/#pricing-card */}
             <h3>

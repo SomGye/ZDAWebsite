@@ -219,3 +219,253 @@ export const TopInfoCardBottomLightSx = {
     },
   },
 };
+
+export const TopInfoCommBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+};
+
+export const TopInfoCommCardDarkSx = {
+  ...{
+    "--Card-padding": "28px",
+    "--Card-radius": "24px",
+    margin: "20px",
+    background:
+      "linear-gradient(#2d282e,#2d282e) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    border: "1px solid transparent",
+    boxShadow: "rgba(235,91,174,0.40) 0px 8px 32px -1px",
+    transition: "all 0.15s ease-out",
+    "&:hover": {
+      background:
+        "linear-gradient(#312c32,#312c32) padding-box, linear-gradient(66deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      boxShadow: "rgba(235,91,174,0.45) 0px 26px 180px 10px",
+      transition: "all 0.15s ease-out",
+    },
+  },
+};
+
+export const TopInfoCommCardLightSx = {
+  ...{
+    "--Card-padding": "28px",
+    "--Card-radius": "24px",
+    margin: "20px",
+    background:
+      "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    border: "1px solid transparent",
+    boxShadow: "rgba(229,98,13,0.40) 0px 8px 32px -1px",
+    transition: "all 0.15s ease-out",
+    "&:hover": {
+      background:
+        "linear-gradient(#f5f5f5,#f5f5f5) padding-box, linear-gradient(320deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+      boxShadow: "rgba(229,98,13,0.45) 0px 26px 180px 10px",
+      transition: "all 0.15s ease-out",
+    },
+  },
+};
+
+export const TopInfoCardContentSx = {
+  ...{
+    alignItems: "center",
+    textAlign: "center",
+  },
+};
+
+export const TopInfoCommCardTitleDarkSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+  },
+};
+
+export const TopInfoCommCardTitleLightSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+  },
+};
+
+export const TopInfoCommCardBodyTopDarkSx = {
+  ...{
+    maxWidth: "32ch",
+    color: "#fafafaca",
+  },
+};
+
+export const TopInfoCommCardBodyTopLightSx = {
+  ...{
+    maxWidth: "32ch",
+    color: "#29242ada",
+  },
+};
+
+export const TopInfoCommCardBodyBtmDarkSx = {
+  ...{
+    maxWidth: "28ch",
+    color: "#fafafacf",
+  },
+};
+
+export const TopInfoCommCardBodyBtmLightSx = {
+  ...{
+    maxWidth: "28ch",
+    color: "#29242adf",
+  },
+};
+
+export const TopInfoCommCardOverflowDarkSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+  },
+};
+
+export const TopInfoCommCardOverflowLightSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+  },
+};
+
+export const TopInfoButtonGroupDarkSx = {
+  ...{
+    justifyContent: "center",
+    "--ButtonGroup-radius": "24px",
+    "--ButtonGroup-separatorColor": "none !important",
+    "& > span": {
+      zIndex: 3,
+      background:
+        "linear-gradient(to top, transparent, rgba(255 255 255 / 0.6), transparent)",
+    },
+    background:
+      "linear-gradient(#2d282e,#2d282e) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    border: "1px solid transparent",
+  },
+};
+
+export const TopInfoButtonGroupLightSx = {
+  ...{
+    justifyContent: "center",
+    "--ButtonGroup-radius": "24px",
+    "--ButtonGroup-separatorColor": "none !important",
+    "& > span": {
+      zIndex: 3,
+      background:
+        "linear-gradient(to top, transparent, rgba(0 0 0 / 0.6), transparent)",
+    },
+    backgroundImage:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    border: "none",
+  },
+};
+
+export const TopInfoCommCardBtnLeftDarkSx = {
+  ...{
+    backgroundColor: "#2d282e",
+    borderRight: "none",
+    color: "#fafafacf",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#3a353b",
+      color: "#fafafa",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoCommCardBtnLeftLightSx = {
+  ...{
+    backgroundColor: "#fafafa",
+    borderRight: "none",
+    color: "#2d282ecf",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#e7e7e7",
+      color: "#2d282e",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoCommCardBtnMidDarkSx = {
+  ...{
+    backgroundColor: "#2d282e",
+    borderLeft: "none",
+    borderRight: "none",
+    color: "#fafafacf",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#3a353b",
+      color: "#fafafa",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoCommCardBtnMidLightSx = {
+  ...{
+    backgroundColor: "#fafafa",
+    borderLeft: "none",
+    borderRight: "none",
+    color: "#2d282ecf",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#e7e7e7",
+      color: "#2d282e",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoCommCardBtnRightDarkSx = {
+  ...{
+    backgroundColor: "#2d282e",
+    borderLeft: "none",
+    color: "#fafafacf",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#3a353b",
+      color: "#fafafa",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoCommCardBtnRightLightSx = {
+  ...{
+    backgroundColor: "#fafafa",
+    borderLeft: "none",
+    color: "#2d282ecf",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#e7e7e7",
+      color: "#2d282e",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};

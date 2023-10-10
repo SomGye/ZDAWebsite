@@ -33,7 +33,18 @@ If you are interested, simply click the 'Request A Commission' button and fill o
  * NOTE: Ideally should have top bar be same height/size for all 3 pages
  */
 import * as React from "react";
-import { Box, Card, Container, Divider, Typography } from "@mui/joy";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Card,
+  CardActions,
+  CardContent,
+  CardOverflow,
+  Container,
+  Divider,
+  Typography,
+} from "@mui/joy";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
@@ -43,10 +54,13 @@ import {
   commStatusAtom,
 } from "../../states/CommSlotsAtom";
 import {
+  TopInfoButtonGroupDarkSx,
+  TopInfoButtonGroupLightSx,
   TopInfoCardBottomDarkSx,
   TopInfoCardBottomLightSx,
   TopInfoCardBoxColSx,
   TopInfoCardBoxRowSx,
+  TopInfoCardContentSx,
   TopInfoCardInnerDarkSx,
   TopInfoCardInnerLightSx,
   TopInfoCardOuterDarkSx,
@@ -55,6 +69,23 @@ import {
   TopInfoCardOuterTypoLightSx,
   TopInfoCardTopDarkSx,
   TopInfoCardTopLightSx,
+  TopInfoCommBoxSx,
+  TopInfoCommCardBodyBtmDarkSx,
+  TopInfoCommCardBodyBtmLightSx,
+  TopInfoCommCardBodyTopDarkSx,
+  TopInfoCommCardBodyTopLightSx,
+  TopInfoCommCardBtnLeftDarkSx,
+  TopInfoCommCardBtnLeftLightSx,
+  TopInfoCommCardBtnMidDarkSx,
+  TopInfoCommCardBtnMidLightSx,
+  TopInfoCommCardBtnRightDarkSx,
+  TopInfoCommCardBtnRightLightSx,
+  TopInfoCommCardDarkSx,
+  TopInfoCommCardLightSx,
+  TopInfoCommCardOverflowDarkSx,
+  TopInfoCommCardOverflowLightSx,
+  TopInfoCommCardTitleDarkSx,
+  TopInfoCommCardTitleLightSx,
   TopInfoContainerSx,
   TopInfoTopDarkBoxSx,
   TopInfoTopLightBoxSx,
@@ -289,18 +320,96 @@ const TopInfoSection = () => {
         </Box>
       )}
       {page && page === "Commissions" && (
-        <Box>
-          {/* TODO: Use React Card - Bio example to replace this and keep the ButtonGroup at bottom */}
-          {/* Link: https://mui.com/joy-ui/react-card/#bio-card */}
-          <p>
-            <i>
-              I am here to create abstract art for you, with 4 available tiers
-              to meet your budget and design needs.
-              <br />
-              If you are interested, simply click the 'Request A Commission'
-              button and fill out the form.
-            </i>
-          </p>
+        <Box sx={TopInfoCommBoxSx}>
+          <Card
+            sx={
+              theme === "dark" ? TopInfoCommCardDarkSx : TopInfoCommCardLightSx
+            }
+          >
+            <CardContent sx={TopInfoCardContentSx}>
+              <Typography
+                level="title-lg"
+                sx={
+                  theme === "dark"
+                    ? TopInfoCommCardTitleDarkSx
+                    : TopInfoCommCardTitleLightSx
+                }
+              >
+                ZDA Works - Commissions
+              </Typography>
+              <Typography
+                level="body-md"
+                sx={
+                  theme === "dark"
+                    ? TopInfoCommCardBodyTopDarkSx
+                    : TopInfoCommCardBodyTopLightSx
+                }
+              >
+                I am here to create abstract art for you, with 4 available tiers
+                to meet your budget and design needs.
+              </Typography>
+              <Divider orientation="horizontal" inset="none" />
+              <Typography
+                level="body-md"
+                sx={
+                  theme === "dark"
+                    ? TopInfoCommCardBodyBtmDarkSx
+                    : TopInfoCommCardBodyBtmLightSx
+                }
+              >
+                If you are interested, simply click the 'Request A Commission'
+                button and fill out the form.
+              </Typography>
+            </CardContent>
+            <CardOverflow
+              sx={
+                theme === "dark"
+                  ? TopInfoCommCardOverflowDarkSx
+                  : TopInfoCommCardOverflowLightSx
+              }
+            >
+              <CardActions buttonFlex="1">
+                <ButtonGroup
+                  variant="soft"
+                  sx={
+                    theme === "dark"
+                      ? TopInfoButtonGroupDarkSx
+                      : TopInfoButtonGroupLightSx
+                  }
+                >
+                  <Button
+                    sx={
+                      theme === "dark"
+                        ? TopInfoCommCardBtnLeftDarkSx
+                        : TopInfoCommCardBtnLeftLightSx
+                    }
+                  >
+                    Request A Commission
+                  </Button>
+                  <Divider orientation="vertical" />
+                  <Button
+                    sx={
+                      theme === "dark"
+                        ? TopInfoCommCardBtnMidDarkSx
+                        : TopInfoCommCardBtnMidLightSx
+                    }
+                  >
+                    Commission Info
+                  </Button>
+                  <Divider orientation="vertical" />
+                  <Button
+                    sx={
+                      theme === "dark"
+                        ? TopInfoCommCardBtnRightDarkSx
+                        : TopInfoCommCardBtnRightLightSx
+                    }
+                  >
+                    Art Tier Examples
+                  </Button>
+                </ButtonGroup>
+              </CardActions>
+            </CardOverflow>
+          </Card>
         </Box>
       )}
     </Container>
