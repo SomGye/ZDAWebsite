@@ -41,6 +41,7 @@ export const TopInfoCardBoxRowSx = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    marginTop: "20px",
   },
 };
 
@@ -56,14 +57,14 @@ export const TopInfoCardOuterDarkSx = {
   ...{
     "--Card-padding": "28px",
     "--Card-radius": "24px",
-    backgroundColor: "#2d282e",
+    backgroundColor: "#2b262c",
     border: "1px solid transparent",
-    boxShadow: "rgba(210,192,226,0.06) 0px 6px 60px 8px",
+    boxShadow: "rgba(210,192,226,0.06) 0px -8px 60px 8px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       "--Card-radius": "18px",
       backgroundColor: "#332e34",
-      boxShadow: "rgba(210,192,226,0.18) 0px 26px 180px 10px",
+      boxShadow: "rgba(210,192,226,0.16) 0px 2px 180px 10px",
       transition: "all 0.15s ease-out",
     },
   },
@@ -147,13 +148,13 @@ export const TopInfoCardTopDarkSx = {
     "--Card-padding": "28px",
     "--Card-radius": "24px",
     margin: "20px",
-    backgroundColor: "#29242a",
+    backgroundColor: "#262127",
     border: "1px solid transparent",
     boxShadow: "rgba(210,192,226,0.06) 0px 6px 60px 8px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       "--Card-radius": "18px",
-      backgroundColor: "#332e34",
+      backgroundColor: "#2b262c",
       boxShadow: "rgba(210,192,226,0.18) 0px 26px 180px 10px",
       transition: "all 0.15s ease-out",
     },
