@@ -1,4 +1,4 @@
-// TODO: Top Banner Component
+// Top Banner Component
 /**
  * Top fixed banner, will stay at top even when scrolling.
  * Will contain:

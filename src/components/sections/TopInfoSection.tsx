@@ -1,4 +1,4 @@
-// TODO: Top Info Section Component
+// Top Info Section Component
 /**
  * The top info that shows on all pages.
  * This changes depending on page!
