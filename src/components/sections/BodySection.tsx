@@ -41,6 +41,7 @@ import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
 import { Box, Button, ButtonGroup, Container } from "@mui/joy";
+import { clickLink } from "../../Helpers";
 
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -108,7 +109,11 @@ const BodySection = () => {
             </h4>
           </Box>
           <Box>
-            <Button variant="solid" color="primary">
+            <Button
+              onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
+              variant="solid"
+              color="primary"
+            >
               Commission Your Own Art
             </Button>
           </Box>
