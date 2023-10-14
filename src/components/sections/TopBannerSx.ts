@@ -29,6 +29,10 @@ export const TopBannerBoxDarkSx = {
     "@media (max-width: 670px)": {
       justifyContent: "center",
     },
+    "@media (max-width: 340px)": {
+      paddingTop: "28px",
+      paddingBottom: "28px",
+    },
   },
 };
 
@@ -53,6 +57,10 @@ export const TopBannerBoxLightSx = {
     },
     "@media (max-width: 670px)": {
       justifyContent: "center",
+    },
+    "@media (max-width: 340px)": {
+      paddingTop: "28px",
+      paddingBottom: "28px",
     },
   },
 };
@@ -152,6 +160,9 @@ export const TopBannerCommButtonDarkSx = {
     "&:hover .Button-Helper": {
       opacity: "1",
     },
+    "@media (max-width: 340px)": {
+      display: "none",
+    },
   },
 };
 
@@ -173,6 +184,9 @@ export const TopBannerCommButtonDarkHelperSx = {
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     transition: "opacity 0.20s",
     transitionTimingFunction: "ease-out",
+    "@media (max-width: 340px)": {
+      display: "none",
+    },
   },
 };
 
@@ -188,6 +202,9 @@ export const TopBannerCommButtonLightSx = {
     },
     "&:hover .Button-Helper": {
       opacity: "1",
+    },
+    "@media (max-width: 340px)": {
+      display: "none",
     },
   },
 };
@@ -210,6 +227,9 @@ export const TopBannerCommButtonLightHelperSx = {
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     transition: "opacity 0.20s",
     transitionTimingFunction: "ease-out",
+    "@media (max-width: 340px)": {
+      display: "none",
+    },
   },
 };
 
