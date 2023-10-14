@@ -4,7 +4,7 @@ export const TopInfoContainerSx = {
     flexDirection: "column",
     flexWrap: "nowrap",
     justifyContent: "center",
-    alignItems: "stretch",
+    alignItems: "center",
   },
 };
 
@@ -16,9 +16,13 @@ export const TopInfoTopDarkBoxSx = {
     alignContent: "center",
     justifyContent: "space-evenly",
     alignItems: "center",
+    width: "100%",
     backgroundImage:
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     color: "#19141acc",
+    "@media (max-width: 670px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -30,9 +34,13 @@ export const TopInfoTopLightBoxSx = {
     alignContent: "center",
     justifyContent: "space-evenly",
     alignItems: "center",
+    width: "100%",
     backgroundImage:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     color: "#fafafafa",
+    "@media (max-width: 670px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -50,6 +58,8 @@ export const TopInfoCardBoxColSx = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    minWidth: "70%",
+    maxWidth: "95%",
   },
 };
 
@@ -172,7 +182,7 @@ export const TopInfoCardTopLightSx = {
     transition: "all 0.15s ease-out",
     "&:hover": {
       "--Card-radius": "18px",
-      backgroundColor: "#f0f0f0",
+      backgroundColor: "#f5f5f5",
       boxShadow: "rgba(30,12,46,0.20) 0px 40px 180px 4px",
       transition: "all 0.15s ease-out",
     },
