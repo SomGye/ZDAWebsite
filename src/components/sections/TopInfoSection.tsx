@@ -91,6 +91,7 @@ import {
   TopInfoTopLightBoxSx,
 } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
+import { clickLink } from "../../Helpers";
 
 const TopInfoSection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -370,6 +371,7 @@ const TopInfoSection = () => {
                   }
                 >
                   <Button
+                    onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
                       theme === "dark"
                         ? TopInfoCommCardBtnLeftDarkSx
@@ -380,6 +382,9 @@ const TopInfoSection = () => {
                   </Button>
                   <Divider orientation="vertical" />
                   <Button
+                    onClick={() =>
+                      clickLink("https://tinyurl.com/ZDACommInfo5")
+                    }
                     sx={
                       theme === "dark"
                         ? TopInfoCommCardBtnMidDarkSx
@@ -390,6 +395,9 @@ const TopInfoSection = () => {
                   </Button>
                   <Divider orientation="vertical" />
                   <Button
+                    onClick={() =>
+                      clickLink("https://tinyurl.com/ZDACommExamples")
+                    }
                     sx={
                       theme === "dark"
                         ? TopInfoCommCardBtnRightDarkSx
