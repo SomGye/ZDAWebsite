@@ -30,8 +30,8 @@ export const TopBannerBoxDarkSx = {
       justifyContent: "center",
     },
     "@media (max-width: 340px)": {
-      paddingTop: "28px",
-      paddingBottom: "28px",
+      paddingTop: "32px",
+      paddingBottom: "32px",
     },
   },
 };
@@ -59,8 +59,8 @@ export const TopBannerBoxLightSx = {
       justifyContent: "center",
     },
     "@media (max-width: 340px)": {
-      paddingTop: "28px",
-      paddingBottom: "28px",
+      paddingTop: "32px",
+      paddingBottom: "32px",
     },
   },
 };
