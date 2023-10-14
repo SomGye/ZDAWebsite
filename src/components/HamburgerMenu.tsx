@@ -198,6 +198,19 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               >
                 Pebble
               </Button>
+              <Button
+                onClick={() => {
+                  clickLink("https://ohai.social/@ZeroDayAnubis");
+                  setOpen(false);
+                }}
+                sx={
+                  theme === "dark"
+                    ? HamburgerInnerNavBtnDarkSx
+                    : HamburgerInnerNavBtnLightSx
+                }
+              >
+                Mastodon
+              </Button>
             </Box>
             <Typography
               level="title-md"
