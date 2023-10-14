@@ -40,23 +40,99 @@ import * as React from "react";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
-import { Box, Button, ButtonGroup, Container } from "@mui/joy";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Card,
+  CardActions,
+  CardContent,
+  CardOverflow,
+  Container,
+  Divider,
+  Typography,
+} from "@mui/joy";
 import { clickLink } from "../../Helpers";
+import {
+  BodyContainerSx,
+  BodyHomeBoxSx,
+  BodyHomeHighlightsBoxSx,
+  BodyHomeHighlightsCardBodyBtmDarkSx,
+  BodyHomeHighlightsCardBodyBtmLightSx,
+  BodyHomeHighlightsCardBodyTopDarkSx,
+  BodyHomeHighlightsCardBodyTopLightSx,
+  BodyHomeHighlightsCardContentSx,
+  BodyHomeHighlightsCardDarkSx,
+  BodyHomeHighlightsCardLightSx,
+  BodyHomeHighlightsCardOverflowDarkSx,
+  BodyHomeHighlightsCardOverflowLightSx,
+  BodyHomeHighlightsCardTitleDarkSx,
+  BodyHomeHighlightsCardTitleLightSx,
+  BodyHomeHightlightsCardOverflowBoxSx,
+} from "./BodySectionSx";
+import "./BodySection.css";
 
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
   const page = useRecoilValue(pageAtom);
 
   return (
-    <Container>
+    <Container className="BodyContainer" sx={BodyContainerSx}>
       {page && page === "Home" && (
-        <Box>
-          <Box>
-            <h3>
-              <i>
-                <b>Highlights of My Work</b>
-              </i>
-            </h3>
+        <Box sx={BodyHomeBoxSx}>
+          <Box sx={BodyHomeHighlightsBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyHomeHighlightsCardDarkSx
+                  : BodyHomeHighlightsCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyHomeHighlightsCardTitleDarkSx
+                      : BodyHomeHighlightsCardTitleLightSx
+                  }
+                >
+                  Highlights of My Work
+                </Typography>
+                <Typography
+                  level="body-md"
+                  sx={
+                    theme === "dark"
+                      ? BodyHomeHighlightsCardBodyTopDarkSx
+                      : BodyHomeHighlightsCardBodyTopLightSx
+                  }
+                >
+                  I am here to create abstract art for you, with 4 available
+                  tiers to meet your budget and design needs.
+                </Typography>
+                <Divider orientation="horizontal" inset="none" />
+                <Typography
+                  level="body-md"
+                  sx={
+                    theme === "dark"
+                      ? BodyHomeHighlightsCardBodyBtmDarkSx
+                      : BodyHomeHighlightsCardBodyBtmLightSx
+                  }
+                >
+                  If you are interested, simply click the 'Request A Commission'
+                  button and fill out the form.
+                </Typography>
+              </CardContent>
+              <CardOverflow
+                sx={
+                  theme === "dark"
+                    ? BodyHomeHighlightsCardOverflowDarkSx
+                    : BodyHomeHighlightsCardOverflowLightSx
+                }
+              >
+                <Box sx={BodyHomeHightlightsCardOverflowBoxSx} />
+              </CardOverflow>
+            </Card>
           </Box>
           <Box>
             <h3>

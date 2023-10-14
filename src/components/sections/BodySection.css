@@ -1,0 +1,5 @@
+/* MUI OVERRIDES */
+div.MuiContainer-root.BodyContainer {
+  max-width: none;
+  padding: 0;
+}
