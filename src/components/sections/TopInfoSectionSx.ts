@@ -117,8 +117,11 @@ export const TopInfoCardOuterTypoLightSx = {
 
 export const TopInfoCardInnerDarkSx = {
   ...{
-    "--Card-padding": "28px",
+    "--Card-padding": "32px",
     "--Card-radius": "24px",
+    margin: "20px",
+    marginBottom: "0",
+    marginTop: "0",
     backgroundImage:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     color: "#19141acc",
@@ -136,8 +139,11 @@ export const TopInfoCardInnerDarkSx = {
 
 export const TopInfoCardInnerLightSx = {
   ...{
-    "--Card-padding": "28px",
+    "--Card-padding": "32px",
     "--Card-radius": "24px",
+    margin: "20px",
+    marginBottom: "0",
+    marginTop: "0",
     backgroundImage:
       "linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     color: "#fafafafa",

@@ -122,14 +122,10 @@ const TopInfoSection = () => {
       </Box>
       {/* Page Specific */}
       {page && page === "Home" && (
-        <Box sx={TopInfoCardBoxRowSx}>
+        <Box sx={TopInfoCardBoxColSx}>
           <Card
             variant="outlined"
-            sx={
-              theme === "dark"
-                ? TopInfoCardOuterDarkSx
-                : TopInfoCardOuterLightSx
-            }
+            sx={theme === "dark" ? TopInfoCardTopDarkSx : TopInfoCardTopLightSx}
           >
             <Typography
               level="title-md"
@@ -173,11 +169,7 @@ const TopInfoSection = () => {
           </Card>
           <Card
             variant="outlined"
-            sx={
-              theme === "dark"
-                ? TopInfoCardOuterDarkSx
-                : TopInfoCardOuterLightSx
-            }
+            sx={theme === "dark" ? TopInfoCardTopDarkSx : TopInfoCardTopLightSx}
           >
             <Typography
               level="body-md"
