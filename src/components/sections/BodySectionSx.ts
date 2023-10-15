@@ -38,6 +38,8 @@ export const BodyHomeHighlightsCardDarkSx = {
     background:
       "linear-gradient(#2d282e,#2d282e) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     border: "1px solid transparent",
+    borderBottomLeftRadius: "0",
+    borderBottomRightRadius: "0",
     boxShadow: "rgba(235,91,174,0.40) 0px 8px 32px -1px",
     transition: "all 0.15s ease-out",
     "&:hover": {
@@ -59,6 +61,8 @@ export const BodyHomeHighlightsCardLightSx = {
     background:
       "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     border: "1px solid transparent",
+    borderBottomLeftRadius: "0",
+    borderBottomRightRadius: "0",
     boxShadow: "rgba(229,98,13,0.40) 0px 8px 32px -1px",
     transition: "all 0.15s ease-out",
     "&:hover": {
@@ -127,6 +131,7 @@ export const BodyHomeHighlightsCardOverflowDarkSx = {
   ...{
     backgroundImage:
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    borderRadius: "0",
   },
 };
 
@@ -134,6 +139,7 @@ export const BodyHomeHighlightsCardOverflowLightSx = {
   ...{
     backgroundImage:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    borderRadius: "0",
   },
 };
 
