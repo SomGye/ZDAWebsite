@@ -35,6 +35,7 @@ export const BodyHomeHighlightsCardDarkSx = {
     margin: "20px",
     minWidth: "80%",
     maxWidth: "95%",
+    minHeight: "250px",
     background:
       "linear-gradient(#2d282e,#2d282e) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     border: "1px solid transparent",
@@ -58,6 +59,7 @@ export const BodyHomeHighlightsCardLightSx = {
     margin: "20px",
     minWidth: "80%",
     maxWidth: "95%",
+    minHeight: "250px",
     background:
       "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     border: "1px solid transparent",
