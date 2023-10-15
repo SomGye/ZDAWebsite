@@ -43,22 +43,21 @@ import { pageAtom } from "../../states/PageAtom";
 import {
   Box,
   Button,
-  ButtonGroup,
   Card,
-  CardActions,
   CardContent,
   CardOverflow,
   Container,
   Divider,
   Typography,
 } from "@mui/joy";
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { clickLink } from "../../Helpers";
 import {
   BodyContainerSx,
   BodyHomeBoxSx,
   BodyHomeHighlightsBoxSx,
-  BodyHomeHighlightsCardBodyBtmDarkSx,
-  BodyHomeHighlightsCardBodyBtmLightSx,
   BodyHomeHighlightsCardBodyTopDarkSx,
   BodyHomeHighlightsCardBodyTopLightSx,
   BodyHomeHighlightsCardContentSx,
@@ -68,13 +67,47 @@ import {
   BodyHomeHighlightsCardOverflowLightSx,
   BodyHomeHighlightsCardTitleDarkSx,
   BodyHomeHighlightsCardTitleLightSx,
+  BodyHomeHighlightsLightboxSx,
+  BodyHomeHighlightsPhotoBoxSx,
   BodyHomeHightlightsCardOverflowBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 
+const photos = [
+  {
+    src: "src/assets/highlights_home/Wisps_of_Afterlife-prog8.jpg",
+    width: 2480,
+    height: 3508,
+    alt: "Wisps of Afterlife",
+    title: "Wisps of Afterlife",
+  },
+  {
+    src: "src/assets/highlights_home/Kublai_Anubis_02-prog8.jpg",
+    width: 2480,
+    height: 3508,
+    alt: "Kublai Anubis 02",
+    title: "Kublai Anubis 02",
+  },
+  {
+    src: "src/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8.jpg",
+    width: 2360,
+    height: 1640,
+    alt: "The Lotus of Inspiration",
+    title: "The Lotus of Inspiration",
+  },
+  {
+    src: "src/assets/highlights_home/The_Chroma_Passage-prog8.jpg",
+    width: 2480,
+    height: 3508,
+    alt: "The Chroma Passage",
+    title: "The Chroma Passage",
+  },
+];
+
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
   const page = useRecoilValue(pageAtom);
+  const [index, setIndex] = React.useState(-1);
 
   return (
     <Container className="BodyContainer" sx={BodyContainerSx}>
@@ -100,28 +133,31 @@ const BodySection = () => {
                   Highlights of My Work
                 </Typography>
                 <Typography
-                  level="body-md"
+                  level="body-xs"
                   sx={
                     theme === "dark"
                       ? BodyHomeHighlightsCardBodyTopDarkSx
                       : BodyHomeHighlightsCardBodyTopLightSx
                   }
                 >
-                  I am here to create abstract art for you, with 4 available
-                  tiers to meet your budget and design needs.
+                  {"("}Please click to view the full-size image{")"}
                 </Typography>
                 <Divider orientation="horizontal" inset="none" />
-                <Typography
-                  level="body-md"
-                  sx={
-                    theme === "dark"
-                      ? BodyHomeHighlightsCardBodyBtmDarkSx
-                      : BodyHomeHighlightsCardBodyBtmLightSx
-                  }
-                >
-                  If you are interested, simply click the 'Request A Commission'
-                  button and fill out the form.
-                </Typography>
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos}
+                    targetRowHeight={300}
+                    onClick={({ index: current }) => setIndex(current)}
+                  />
+                  <Lightbox
+                    index={index}
+                    slides={photos}
+                    styles={BodyHomeHighlightsLightboxSx}
+                    open={index >= 0}
+                    close={() => setIndex(-1)}
+                  />
+                </Box>
               </CardContent>
               <CardOverflow
                 sx={

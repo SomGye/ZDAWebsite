@@ -115,17 +115,20 @@ export const BodyHomeHighlightsCardBodyTopLightSx = {
   },
 };
 
-export const BodyHomeHighlightsCardBodyBtmDarkSx = {
+export const BodyHomeHighlightsPhotoBoxSx = {
   ...{
-    maxWidth: "28ch",
-    color: "#fafafacf",
+    minWidth: "1px",
+    maxWidth: "90%",
+    minHeight: "1px",
   },
 };
 
-export const BodyHomeHighlightsCardBodyBtmLightSx = {
+export const BodyHomeHighlightsLightboxSx = {
   ...{
-    maxWidth: "28ch",
-    color: "#29242adf",
+    container: {
+      backdropFilter: "blur(16px)",
+      backgroundColor: "rgba(0,0,0,0.8)",
+    },
   },
 };
 
