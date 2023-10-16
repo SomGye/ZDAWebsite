@@ -60,6 +60,8 @@ import {
   BodyHomeHighlightsBoxSx,
   BodyHomeHighlightsCardBodyTopDarkSx,
   BodyHomeHighlightsCardBodyTopLightSx,
+  BodyHomeHighlightsCardBtnDarkSx,
+  BodyHomeHighlightsCardBtnLightSx,
   BodyHomeHighlightsCardContentSx,
   BodyHomeHighlightsCardDarkSx,
   BodyHomeHighlightsCardLightSx,
@@ -167,7 +169,20 @@ const BodySection = () => {
                     : BodyHomeHighlightsCardOverflowLightSx
                 }
               >
-                <Box sx={BodyHomeHightlightsCardOverflowBoxSx} />
+                <Box sx={BodyHomeHightlightsCardOverflowBoxSx}>
+                    <Button
+                      onClick={() =>
+                        clickLink("https://ko-fi.com/zerodayanubis")
+                      }
+                      sx={
+                        theme === "dark"
+                          ? BodyHomeHighlightsCardBtnDarkSx
+                          : BodyHomeHighlightsCardBtnLightSx
+                      }
+                    >
+                      Download These Images at Ko-Fi
+                    </Button>
+                </Box>
               </CardOverflow>
             </Card>
           </Box>

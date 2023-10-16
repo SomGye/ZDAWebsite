@@ -150,7 +150,46 @@ export const BodyHomeHighlightsCardOverflowLightSx = {
 
 export const BodyHomeHightlightsCardOverflowBoxSx = {
   ...{
-    height: "40px",
     width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+  },
+};
+
+export const BodyHomeHighlightsCardBtnDarkSx = {
+  ...{
+    backgroundColor: "#2d282e",
+    color: "#fafafacf",
+    borderRadius: "24px",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#eb51ae",
+      color: "#2d282e",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyHomeHighlightsCardBtnLightSx = {
+  ...{
+    backgroundColor: "#fafafa",
+    color: "#2d282ecf",
+    borderRadius: "24px",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#e55100",
+      color: "#fafafa",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
   },
 };
