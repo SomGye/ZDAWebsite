@@ -147,7 +147,8 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos}
-                    targetRowHeight={300}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={200}
                     onClick={({ index: current }) => setIndex(current)}
                   />
                   <Lightbox
