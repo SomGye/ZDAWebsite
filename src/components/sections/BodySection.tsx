@@ -75,7 +75,7 @@ import {
 } from "./BodySectionSx";
 import "./BodySection.css";
 
-const photos = [
+const photos_highlights = [
   {
     src: "src/assets/highlights_home/Wisps_of_Afterlife-prog8.jpg",
     width: 2480,
@@ -103,6 +103,26 @@ const photos = [
     height: 3508,
     alt: "The Chroma Passage",
     title: "The Chroma Passage",
+  },
+];
+
+const photos_socmed = [
+  {
+    src: "src/assets/socmed/Saturated_Axons-prog8.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Saturated Axons",
+    title: "Saturated Axons",
+  },
+];
+
+const photos_prints_support = [
+  {
+    src: "src/assets/prints_support/Shores_of_Sanity-prog8.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Shores of Sanity",
+    title: "Shores of Sanity",
   },
 ];
 
@@ -148,14 +168,14 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos}
+                    photos={photos_highlights}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={200}
                     onClick={({ index: current }) => setIndex(current)}
                   />
                   <Lightbox
                     index={index}
-                    slides={photos}
+                    slides={photos_highlights}
                     styles={BodyHomeHighlightsLightboxSx}
                     open={index >= 0}
                     close={() => setIndex(-1)}
@@ -171,18 +191,16 @@ const BodySection = () => {
                 }
               >
                 <Box sx={BodyHomeHightlightsCardOverflowBoxSx}>
-                    <Button
-                      onClick={() =>
-                        clickLink("https://ko-fi.com/zerodayanubis")
-                      }
-                      sx={
-                        theme === "dark"
-                          ? BodyHomeHighlightsCardBtnDarkSx
-                          : BodyHomeHighlightsCardBtnLightSx
-                      }
-                    >
-                      Download These Images at Ko-Fi
-                    </Button>
+                  <Button
+                    onClick={() => clickLink("https://ko-fi.com/zerodayanubis")}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeHighlightsCardBtnDarkSx
+                        : BodyHomeHighlightsCardBtnLightSx
+                    }
+                  >
+                    Download These Images at Ko-Fi
+                  </Button>
                 </Box>
               </CardOverflow>
             </Card>
