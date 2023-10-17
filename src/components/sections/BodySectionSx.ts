@@ -37,17 +37,17 @@ export const BodyHomeHighlightsCardDarkSx = {
     maxWidth: "90%",
     minHeight: "250px",
     background:
-      "linear-gradient(#2d282e,#2d282e) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      "linear-gradient(270deg, rgba(30,24,35,1) 0%, rgba(40,14,38,1) 43%, rgba(30,30,32,1) 100%) padding-box, linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(29,9,35,1) 43%, rgba(29,29,35,1) 100%)",
     border: "1px solid transparent",
     borderBottomLeftRadius: "0",
     borderBottomRightRadius: "0",
-    boxShadow: "rgba(235,91,174,0.40) 0px 8px 32px -1px",
+    boxShadow: "rgba(29,9,121,0.80) 0px 8px 80px -1px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       background:
-        "linear-gradient(#312c32,#312c32) padding-box, linear-gradient(66deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
-      boxShadow: "rgba(235,91,174,0.45) 0px 26px 180px 10px",
-      transition: "all 0.15s ease-out",
+        "linear-gradient(315deg, rgba(33,27,38,1) 0%, rgba(43,17,41,1) 43%, rgba(33,33,35,1) 100%) padding-box, linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(29,9,35,1) 43%, rgba(29,29,35,1) 100%)",
+      boxShadow: "rgba(69,19,121,0.85) 0px 26px 180px 10px",
+      transition: "all 0.25s ease-out",
     },
   },
 };
@@ -61,17 +61,17 @@ export const BodyHomeHighlightsCardLightSx = {
     maxWidth: "90%",
     minHeight: "250px",
     background:
-      "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+      "linear-gradient(270deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
     border: "1px solid transparent",
     borderBottomLeftRadius: "0",
     borderBottomRightRadius: "0",
-    boxShadow: "rgba(229,98,13,0.40) 0px 8px 32px -1px",
+    boxShadow: "rgba(29,9,121,0.30) 0px 8px 32px -1px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       background:
-        "linear-gradient(#f5f5f5,#f5f5f5) padding-box, linear-gradient(320deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
-      boxShadow: "rgba(229,98,13,0.45) 0px 26px 180px 10px",
-      transition: "all 0.15s ease-out",
+        "linear-gradient(0deg, rgba(229,209,245,1) 0%, rgba(239,229,245,1) 43%, rgba(239,239,245,1) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
+      boxShadow: "rgba(69,19,121,0.45) 0px 26px 180px 10px",
+      transition: "all 0.6s ease-out",
     },
   },
 };
@@ -86,7 +86,7 @@ export const BodyHomeHighlightsCardContentSx = {
 export const BodyHomeHighlightsCardTitleDarkSx = {
   ...{
     backgroundImage:
-      "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
   },
@@ -95,7 +95,7 @@ export const BodyHomeHighlightsCardTitleDarkSx = {
 export const BodyHomeHighlightsCardTitleLightSx = {
   ...{
     backgroundImage:
-      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+      "linear-gradient(90deg, rgba(0,10,28,1) 0%, rgba(9,9,121,1) 43%, rgba(228,0,254,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
   },
@@ -134,17 +134,15 @@ export const BodyHomeHighlightsLightboxSx = {
 
 export const BodyHomeHighlightsCardOverflowDarkSx = {
   ...{
-    backgroundImage:
-      "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     borderRadius: "0",
+    marginTop: "-11px", // hack to get button vertically aligned with Divider above it
   },
 };
 
 export const BodyHomeHighlightsCardOverflowLightSx = {
   ...{
-    backgroundImage:
-      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     borderRadius: "0",
+    marginTop: "-11px", // hack to get button vertically aligned with Divider above it
   },
 };
 
@@ -162,12 +160,12 @@ export const BodyHomeHightlightsCardOverflowBoxSx = {
 
 export const BodyHomeHighlightsCardBtnDarkSx = {
   ...{
-    backgroundColor: "#2d282e",
+    backgroundColor: "#472950",
     color: "#fafafacf",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     "&:hover": {
-      backgroundColor: "#eb51ae",
+      backgroundColor: "#db51d4",
       color: "#2d282e",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
@@ -184,7 +182,7 @@ export const BodyHomeHighlightsCardBtnLightSx = {
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     "&:hover": {
-      backgroundColor: "#e55100",
+      backgroundColor: "#493979",
       color: "#fafafa",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },

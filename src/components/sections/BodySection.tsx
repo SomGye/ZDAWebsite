@@ -161,6 +161,7 @@ const BodySection = () => {
                     close={() => setIndex(-1)}
                   />
                 </Box>
+                <Divider orientation="horizontal" inset="none" />
               </CardContent>
               <CardOverflow
                 sx={
