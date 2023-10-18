@@ -121,22 +121,6 @@ export const TopBannerLogoNamePageBoxSx = {
   },
 };
 
-export const TopBannerIconDarkSx = {
-  ...{
-    backgroundColor: "#29242a10",
-    fontSize: "18px",
-    paddingRight: "8px",
-  },
-};
-
-export const TopBannerIconLightSx = {
-  ...{
-    backgroundColor: "#fafafa10",
-    fontSize: "18px",
-    paddingRight: "8px",
-  },
-};
-
 export const TopBannerLogoTextHeaderSx = {
   ...{
     display: "flex",

@@ -40,13 +40,11 @@ import {
   TopBannerIconBoxSx,
   TopBannerIconButtonDarkSx,
   TopBannerIconButtonLightSx,
-  TopBannerIconDarkSx,
-  TopBannerIconLightSx,
   TopBannerLogoNamePageBoxSx,
   TopBannerNavIconDarkSx,
   TopBannerThemeToggleBoxSx,
 } from "./TopBannerSx";
-import { Menu, PaletteRounded } from "@mui/icons-material";
+import { Menu } from "@mui/icons-material";
 import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
 import { clickLink } from "../../Helpers";
