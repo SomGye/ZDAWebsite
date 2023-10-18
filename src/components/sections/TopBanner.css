@@ -4,4 +4,5 @@ h4.TopBannerLogoTextHeader {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
 }

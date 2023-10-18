@@ -93,9 +93,7 @@ const TopBanner = () => {
         </Box>
         <Box sx={TopBannerLogoNamePageBoxSx}>
           <h4 className="TopBannerLogoTextHeader">
-            {theme === "dark" && <PaletteRounded sx={TopBannerIconDarkSx} />}
-            {theme !== "dark" && <PaletteRounded sx={TopBannerIconLightSx} />}
-            ⌞ZeroDayAnubis⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
+            ⌞ZDA⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
           </h4>
         </Box>
         <Box>

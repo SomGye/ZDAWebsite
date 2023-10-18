@@ -22,7 +22,7 @@ export const TopBannerBoxDarkSx = {
     margin: "auto",
     boxShadow: "rgba(210,192,226,0.04) 0px 1px 20px 2px",
     borderRadius: "24px",
-    "@media (max-width: 1080px)": {
+    "@media (max-width: 1000px)": {
       paddingTop: "0.95em",
       paddingBottom: "0.95em",
     },
@@ -51,7 +51,7 @@ export const TopBannerBoxLightSx = {
     margin: "auto",
     boxShadow: "rgba(30,12,46,0.14) 0px 60px 220px -4px",
     borderRadius: "24px",
-    "@media (max-width: 1080px)": {
+    "@media (max-width: 1000px)": {
       paddingTop: "0.95em",
       paddingBottom: "0.95em",
     },
@@ -115,7 +115,7 @@ export const TopBannerNavIconDarkSx = {
 
 export const TopBannerLogoNamePageBoxSx = {
   ...{
-    "@media (max-width: 1080px)": {
+    "@media (max-width: 1000px)": {
       display: "none",
     },
   },
