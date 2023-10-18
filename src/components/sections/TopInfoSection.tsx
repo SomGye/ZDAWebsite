@@ -59,12 +59,9 @@ import {
   TopInfoCardBottomDarkSx,
   TopInfoCardBottomLightSx,
   TopInfoCardBoxColSx,
-  TopInfoCardBoxRowSx,
   TopInfoCardContentSx,
   TopInfoCardInnerDarkSx,
   TopInfoCardInnerLightSx,
-  TopInfoCardOuterDarkSx,
-  TopInfoCardOuterLightSx,
   TopInfoCardOuterTypoDarkSx,
   TopInfoCardOuterTypoLightSx,
   TopInfoCardTopDarkSx,
@@ -88,6 +85,8 @@ import {
   TopInfoCommCardTitleLightSx,
   TopInfoContainerSx,
   TopInfoTopDarkBoxSx,
+  TopInfoTopLeftTitleDarkSx,
+  TopInfoTopLeftTitleLightSx,
   TopInfoTopLightBoxSx,
 } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
@@ -104,7 +103,17 @@ const TopInfoSection = () => {
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
       <Box sx={theme === "dark" ? TopInfoTopDarkBoxSx : TopInfoTopLightBoxSx}>
         <Box>
-          <h2>⌞ZeroDayAnubis⌝</h2>
+          {/* IDEA: For light, have dark pink left, dark reg mid, and dark orange right */}
+          <Typography
+            level="title-lg"
+            sx={
+              theme === "dark"
+                ? TopInfoTopLeftTitleDarkSx
+                : TopInfoTopLeftTitleLightSx
+            }
+          >
+            ⌞ZeroDayAnubis⌝
+          </Typography>
         </Box>
         <Box>
           <h3>Abstract Media Creator</h3>

@@ -20,7 +20,7 @@ export const TopInfoTopDarkBoxSx = {
     backgroundImage:
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     color: "#19141acc",
-    "@media (max-width: 670px)": {
+    "@media (max-width: 780px)": {
       flexDirection: "column",
     },
   },
@@ -38,18 +38,29 @@ export const TopInfoTopLightBoxSx = {
     backgroundImage:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     color: "#fafafafa",
-    "@media (max-width: 670px)": {
+    "@media (max-width: 780px)": {
       flexDirection: "column",
     },
   },
 };
 
-export const TopInfoCardBoxRowSx = {
+export const TopInfoTopLeftTitleDarkSx = {
   ...{
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: "20px",
+    color: "#29242a",
+    fontSize: "40px",
+    fontWeight: "800",
+    marginTop: "12px",
+    marginBottom: "12px",
+  },
+};
+
+export const TopInfoTopLeftTitleLightSx = {
+  ...{
+    color: "#fafafafa",
+    fontSize: "40px",
+    fontWeight: "800",
+    marginTop: "12px",
+    marginBottom: "12px",
   },
 };
 
@@ -63,46 +74,12 @@ export const TopInfoCardBoxColSx = {
   },
 };
 
-export const TopInfoCardOuterDarkSx = {
-  ...{
-    "--Card-padding": "28px",
-    "--Card-radius": "24px",
-    backgroundColor: "#2b262c",
-    border: "1px solid transparent",
-    boxShadow: "rgba(210,192,226,0.06) 0px -8px 60px 8px",
-    transition: "all 0.15s ease-out",
-    "&:hover": {
-      "--Card-radius": "18px",
-      backgroundColor: "#332e34",
-      boxShadow: "rgba(210,192,226,0.16) 0px 2px 180px 10px",
-      transition: "all 0.15s ease-out",
-    },
-  },
-};
-
 export const TopInfoCardOuterTypoDarkSx = {
   ...{
     backgroundImage:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
-  },
-};
-
-export const TopInfoCardOuterLightSx = {
-  ...{
-    "--Card-padding": "28px",
-    "--Card-radius": "24px",
-    backgroundColor: "#ffffff",
-    border: "1px solid transparent",
-    boxShadow: "rgba(30,12,46,0.11) 0px 20px 40px 2px",
-    transition: "all 0.15s ease-out",
-    "&:hover": {
-      "--Card-radius": "18px",
-      backgroundColor: "#f0f0f0",
-      boxShadow: "rgba(30,12,46,0.20) 0px 40px 180px 4px",
-      transition: "all 0.15s ease-out",
-    },
   },
 };
 
