@@ -115,6 +115,7 @@ export const TopBannerNavIconDarkSx = {
 
 export const TopBannerLogoNamePageBoxSx = {
   ...{
+    width: "288px",
     "@media (max-width: 1000px)": {
       display: "none",
     },
