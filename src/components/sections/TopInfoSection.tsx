@@ -376,7 +376,14 @@ const TopInfoSection = () => {
             <Typography level="title-md" textColor="inherit">
               Since then, I have developed my focus of
             </Typography>
-            <Typography level="title-lg" textColor="inherit">
+            <Typography
+              level="title-lg"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardInnerCCTDarkSx
+                  : TopInfoCardInnerCCTLightSx
+              }
+            >
               colors + contrast + textures
             </Typography>
             <Typography level="title-md" textColor="inherit">
