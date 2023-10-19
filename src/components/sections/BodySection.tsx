@@ -77,28 +77,28 @@ import "./BodySection.css";
 
 const photos_highlights = [
   {
-    src: "src/assets/highlights_home/Wisps_of_Afterlife-prog8.jpg",
+    src: "/assets/highlights_home/Wisps_of_Afterlife-prog8.jpg",
     width: 2480,
     height: 3508,
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
   },
   {
-    src: "src/assets/highlights_home/Kublai_Anubis_02-prog8.jpg",
+    src: "/assets/highlights_home/Kublai_Anubis_02-prog8.jpg",
     width: 2480,
     height: 3508,
     alt: "Kublai Anubis 02",
     title: "Kublai Anubis 02",
   },
   {
-    src: "src/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8.jpg",
+    src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8.jpg",
     width: 2360,
     height: 1640,
     alt: "The Lotus of Inspiration",
     title: "The Lotus of Inspiration",
   },
   {
-    src: "src/assets/highlights_home/The_Chroma_Passage-prog8.jpg",
+    src: "/assets/highlights_home/The_Chroma_Passage-prog8.jpg",
     width: 2480,
     height: 3508,
     alt: "The Chroma Passage",
@@ -108,7 +108,7 @@ const photos_highlights = [
 
 const photos_socmed = [
   {
-    src: "src/assets/socmed/Saturated_Axons-prog8.jpg",
+    src: "/assets/socmed/Saturated_Axons-prog8.jpg",
     width: 2048,
     height: 2048,
     alt: "Saturated Axons",
@@ -118,7 +118,7 @@ const photos_socmed = [
 
 const photos_prints_support = [
   {
-    src: "src/assets/prints_support/Shores_of_Sanity-prog8.jpg",
+    src: "/assets/prints_support/Shores_of_Sanity-prog8.jpg",
     width: 2048,
     height: 2048,
     alt: "Shores of Sanity",
