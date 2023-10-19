@@ -6,3 +6,8 @@ h4.TopBannerLogoTextHeader {
     align-items: center;
     font-weight: 400;
 }
+
+div.TopBannerBox.MuiBox-root {
+    padding-right: 0 !important;
+    width: 98% !important;
+}

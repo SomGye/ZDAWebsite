@@ -72,7 +72,10 @@ const TopBanner = () => {
 
   return (
     <Container sx={TopBannerContainerSx}>
-      <Box sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}>
+      <Box
+        className="TopBannerBox"
+        sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}
+      >
         <Box sx={TopBannerIconBoxSx}>
           <IconButton
             variant="soft"
