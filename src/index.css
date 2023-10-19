@@ -30,6 +30,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding-right: 0 !important;
+}
+
+body.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 h1 {

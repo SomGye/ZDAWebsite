@@ -45,11 +45,20 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
 
+  React.useEffect(() => {
+    if (open) {
+      document.body.classList.add("noscroll");
+    } else {
+      document.body.classList.remove("noscroll");
+    }
+  }, [open]);
+
   return (
     <>
       <Drawer
         size="md"
         variant="plain"
+        disableScrollLock={true}
         open={open}
         onClose={() => setOpen(false)}
         slotProps={{
