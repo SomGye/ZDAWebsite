@@ -88,6 +88,12 @@ import {
   TopInfoTopLeftTitleDarkSx,
   TopInfoTopLeftTitleLightSx,
   TopInfoTopLightBoxSx,
+  TopInfoTopMidTitleDarkSx,
+  TopInfoTopMidTitleLightSx,
+  TopInfoTopRightTitleDarkSx,
+  TopInfoTopRightTitleLightSx,
+  TopInfoTopTypoBoxColSx,
+  TopInfoTopTypoBoxSx,
 } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
 import { clickLink } from "../../Helpers";
@@ -102,32 +108,86 @@ const TopInfoSection = () => {
   return (
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
       <Box sx={theme === "dark" ? TopInfoTopDarkBoxSx : TopInfoTopLightBoxSx}>
-        <Box>
+        <Box sx={TopInfoTopTypoBoxSx}>
           {/* IDEA: For light, have dark pink left, dark reg mid, and dark orange right */}
           <Typography
             level="title-lg"
+            className="TopInfoTopLeftTitle"
             sx={
               theme === "dark"
                 ? TopInfoTopLeftTitleDarkSx
                 : TopInfoTopLeftTitleLightSx
             }
           >
-            ⌞ZeroDayAnubis⌝
+            <Typography
+              className="TopInfoTopLeftTitleL"
+              sx={
+                theme === "dark"
+                  ? TopInfoTopLeftTitleDarkSx
+                  : TopInfoTopLeftTitleLightSx
+              }
+            >
+              {"⌞ "}
+            </Typography>
+            ZeroDayAnubis
+            <Typography
+              className="TopInfoTopLeftTitleR"
+              sx={
+                theme === "dark"
+                  ? TopInfoTopLeftTitleDarkSx
+                  : TopInfoTopLeftTitleLightSx
+              }
+            >
+              {" ⌝"}
+            </Typography>
           </Typography>
         </Box>
-        <Box>
-          <h3>Abstract Media Creator</h3>
+        <Box sx={TopInfoTopTypoBoxSx}>
+          <Typography
+            level="title-md"
+            sx={
+              theme === "dark"
+                ? TopInfoTopMidTitleDarkSx
+                : TopInfoTopMidTitleLightSx
+            }
+          >
+            Abstract Media Creator
+          </Typography>
         </Box>
-        <Box>
-          <h4>
+        <Box sx={TopInfoTopTypoBoxColSx}>
+          <Typography
+            level="title-md"
+            component="h4"
+            sx={
+              theme === "dark"
+                ? TopInfoTopRightTitleDarkSx
+                : TopInfoTopRightTitleLightSx
+            }
+          >
             <i>COMMISSIONS {commStatus}</i>
-          </h4>
-          <h4>
+          </Typography>
+          <Typography
+            level="title-md"
+            component="h4"
+            sx={
+              theme === "dark"
+                ? TopInfoTopRightTitleDarkSx
+                : TopInfoTopRightTitleLightSx
+            }
+          >
             <i>{"(" + commSlots + "/5 SLOTS)"}</i>
-          </h4>
-          <h4>
+          </Typography>
+          <Typography
+            level="title-md"
+            component="h4"
+            sx={
+              theme === "dark"
+                ? TopInfoTopRightTitleDarkSx
+                : TopInfoTopRightTitleLightSx
+            }
+          >
             <i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i>
-          </h4>
+          </Typography>
         </Box>
       </Box>
       {/* Page Specific */}

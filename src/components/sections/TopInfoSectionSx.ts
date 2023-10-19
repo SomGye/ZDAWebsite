@@ -13,9 +13,6 @@ export const TopInfoTopDarkBoxSx = {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    alignContent: "center",
-    justifyContent: "space-evenly",
-    alignItems: "center",
     width: "100%",
     backgroundImage:
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
@@ -31,9 +28,6 @@ export const TopInfoTopLightBoxSx = {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    alignContent: "center",
-    justifyContent: "space-evenly",
-    alignItems: "center",
     width: "100%",
     backgroundImage:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
@@ -44,23 +38,84 @@ export const TopInfoTopLightBoxSx = {
   },
 };
 
+export const TopInfoTopTypoBoxSx = {
+  ...{
+    flex: "1",
+    display: "flex",
+    justifyContent: "center",
+  },
+};
+
+export const TopInfoTopTypoBoxColSx = {
+  ...{
+    flex: "1",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
+};
+
 export const TopInfoTopLeftTitleDarkSx = {
   ...{
     color: "#29242a",
-    fontSize: "40px",
-    fontWeight: "800",
-    marginTop: "12px",
-    marginBottom: "12px",
+    fontWeight: "300",
+    marginTop: "auto", // CENTERING
+    marginBottom: "auto",
+    marginRight: "auto",
+    marginLeft: "auto",
   },
 };
 
 export const TopInfoTopLeftTitleLightSx = {
   ...{
     color: "#fafafafa",
-    fontSize: "40px",
-    fontWeight: "800",
-    marginTop: "12px",
-    marginBottom: "12px",
+    fontWeight: "200",
+    marginTop: "auto", // CENTERING
+    marginBottom: "auto",
+    marginRight: "auto",
+    marginLeft: "auto",
+  },
+};
+
+export const TopInfoTopMidTitleDarkSx = {
+  ...{
+    color: "#29242a",
+    fontSize: "24px",
+    fontWeight: "300",
+    marginTop: "auto", // CENTERING
+    marginBottom: "auto",
+  },
+};
+
+export const TopInfoTopMidTitleLightSx = {
+  ...{
+    color: "#fafafafa",
+    fontSize: "24px",
+    fontWeight: "200",
+    marginTop: "auto", // CENTERING
+    marginBottom: "auto",
+  },
+};
+
+export const TopInfoTopRightTitleDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    color: "#29242a",
+    fontSize: "18px",
+    fontWeight: "400",
+    marginTop: "auto", // CENTERING
+    marginBottom: "auto",
+  },
+};
+
+export const TopInfoTopRightTitleLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    color: "#fafafafa",
+    fontSize: "18px",
+    fontWeight: "400",
+    marginTop: "auto", // CENTERING
+    marginBottom: "auto",
   },
 };
 
