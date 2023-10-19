@@ -109,7 +109,6 @@ const TopInfoSection = () => {
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
       <Box sx={theme === "dark" ? TopInfoTopDarkBoxSx : TopInfoTopLightBoxSx}>
         <Box sx={TopInfoTopTypoBoxSx}>
-          {/* IDEA: For light, have dark pink left, dark reg mid, and dark orange right */}
           <Typography
             level="title-lg"
             className="TopInfoTopLeftTitle"

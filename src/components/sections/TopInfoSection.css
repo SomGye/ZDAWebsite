@@ -9,6 +9,9 @@ p.TopInfoTopLeftTitle {
   font-size: 40px;
   font-style: italic;
   letter-spacing: 4px;
+  @media (max-width: 670px) {
+    font-size: 28px;
+  }
 }
 
 span.TopInfoTopLeftTitleL {
@@ -17,6 +20,9 @@ span.TopInfoTopLeftTitleL {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 2px;
+  @media (max-width: 670px) {
+    font-size: 24px;
+  }
 }
 
 span.TopInfoTopLeftTitleR {
@@ -25,4 +31,7 @@ span.TopInfoTopLeftTitleR {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 2px;
+  @media (max-width: 670px) {
+    font-size: 24px;
+  }
 }

@@ -17,7 +17,7 @@ export const TopInfoTopDarkBoxSx = {
     backgroundImage:
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     color: "#19141acc",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1300px)": {
       flexDirection: "column",
     },
   },
@@ -32,7 +32,7 @@ export const TopInfoTopLightBoxSx = {
     backgroundImage:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     color: "#fafafafa",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1300px)": {
       flexDirection: "column",
     },
   },
@@ -84,6 +84,9 @@ export const TopInfoTopMidTitleDarkSx = {
     fontWeight: "300",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
+    "@media (max-width: 670px)": {
+      fontSize: "20px",
+    },
   },
 };
 
@@ -94,6 +97,9 @@ export const TopInfoTopMidTitleLightSx = {
     fontWeight: "200",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
+    "@media (max-width: 670px)": {
+      fontSize: "20px",
+    },
   },
 };
 
