@@ -80,6 +80,23 @@ const photos_highlights = [
     src: "/assets/highlights_home/Wisps_of_Afterlife-prog8.jpg",
     width: 2480,
     height: 3508,
+    srcSet: [
+      {
+        src: "/assets/highlights_home/Wisps_of_Afterlife-prog8-1200px.jpg",
+        width: 1200,
+        height: 1697,
+      },
+      {
+        src: "/assets/highlights_home/Wisps_of_Afterlife-prog8-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/highlights_home/Wisps_of_Afterlife-prog8-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
   },
@@ -87,6 +104,23 @@ const photos_highlights = [
     src: "/assets/highlights_home/Kublai_Anubis_02-prog8.jpg",
     width: 2480,
     height: 3508,
+    srcSet: [
+      {
+        src: "/assets/highlights_home/Kublai_Anubis_02-prog8-1200px.jpg",
+        width: 1200,
+        height: 1697,
+      },
+      {
+        src: "/assets/highlights_home/Kublai_Anubis_02-prog8-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/highlights_home/Kublai_Anubis_02-prog8-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
     alt: "Kublai Anubis 02",
     title: "Kublai Anubis 02",
   },
@@ -94,6 +128,23 @@ const photos_highlights = [
     src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8.jpg",
     width: 2360,
     height: 1640,
+    srcSet: [
+      {
+        src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8-1200px.jpg",
+        width: 1200,
+        height: 834,
+      },
+      {
+        src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8-640px.jpg",
+        width: 640,
+        height: 445,
+      },
+      {
+        src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8-320px.jpg",
+        width: 320,
+        height: 222,
+      },
+    ],
     alt: "The Lotus of Inspiration",
     title: "The Lotus of Inspiration",
   },
@@ -101,6 +152,23 @@ const photos_highlights = [
     src: "/assets/highlights_home/The_Chroma_Passage-prog8.jpg",
     width: 2480,
     height: 3508,
+    srcSet: [
+      {
+        src: "/assets/highlights_home/The_Chroma_Passage-prog8-1200px.jpg",
+        width: 1200,
+        height: 1697,
+      },
+      {
+        src: "/assets/highlights_home/The_Chroma_Passage-prog8-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/highlights_home/The_Chroma_Passage-prog8-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
     alt: "The Chroma Passage",
     title: "The Chroma Passage",
   },
@@ -111,6 +179,23 @@ const photos_socmed = [
     src: "/assets/socmed/Saturated_Axons-prog8.jpg",
     width: 2048,
     height: 2048,
+    srcSet: [
+      {
+        src: "/assets/socmed/Saturated_Axons-prog8-1200px.jpg",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        src: "/assets/socmed/Saturated_Axons-prog8-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/socmed/Saturated_Axons-prog8-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
     alt: "Saturated Axons",
     title: "Saturated Axons",
   },
@@ -121,6 +206,23 @@ const photos_prints_support = [
     src: "/assets/prints_support/Shores_of_Sanity-prog8.jpg",
     width: 2048,
     height: 2048,
+    srcSet: [
+      {
+        src: "/assets/prints_support/Shores_of_Sanity-prog8-1200px.jpg",
+        width: 1200,
+        height: 1200,
+      },
+      {
+        src: "/assets/prints_support/Shores_of_Sanity-prog8-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/prints_support/Shores_of_Sanity-prog8-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
     alt: "Shores of Sanity",
     title: "Shores of Sanity",
   },
@@ -171,6 +273,7 @@ const BodySection = () => {
                     photos={photos_highlights}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={200}
+                    defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIndex(current)}
                   />
                   <Lightbox
