@@ -60,6 +60,8 @@ import {
   TopInfoCardBottomLightSx,
   TopInfoCardBoxColSx,
   TopInfoCardContentSx,
+  TopInfoCardInnerCCTDarkSx,
+  TopInfoCardInnerCCTLightSx,
   TopInfoCardInnerDarkSx,
   TopInfoCardInnerLightSx,
   TopInfoCardOuterTypoDarkSx,
@@ -232,7 +234,14 @@ const TopInfoSection = () => {
             <Typography level="title-md" textColor="inherit">
               I create abstract oddities with a focus on
             </Typography>
-            <Typography level="title-lg" textColor="inherit">
+            <Typography
+              level="title-lg"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardInnerCCTDarkSx
+                  : TopInfoCardInnerCCTLightSx
+              }
+            >
               colors + contrast + textures
             </Typography>
           </Card>

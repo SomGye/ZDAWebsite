@@ -197,6 +197,26 @@ export const TopInfoCardInnerLightSx = {
   },
 };
 
+export const TopInfoCardInnerCCTDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    color: "#29242a",
+    fontSize: "20px",
+    fontWeight: "700",
+    fontStyle: "italic",
+  },
+};
+
+export const TopInfoCardInnerCCTLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    color: "#fafafafa",
+    fontSize: "20px",
+    fontWeight: "700",
+    fontStyle: "italic",
+  },
+};
+
 export const TopInfoCardTopDarkSx = {
   ...{
     "--Card-padding": "28px",
