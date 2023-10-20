@@ -3,3 +3,8 @@ div.MuiContainer-root.BodyContainer {
   max-width: none;
   padding: 0;
 }
+
+img.react-photo-album--photo { /* NOTE: Affects all React Photo Album imgs! */
+  border-radius: 24px;
+  max-height: 30vh;
+}

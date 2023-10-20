@@ -72,6 +72,16 @@ import {
   BodyHomeHighlightsLightboxSx,
   BodyHomeHighlightsPhotoBoxSx,
   BodyHomeHightlightsCardOverflowBoxSx,
+  BodyHomeSocmedCardBoxSx,
+  BodyHomeSocmedCardButtonBoxSx,
+  BodyHomeSocmedCardButtonDarkSx,
+  BodyHomeSocmedCardButtonLightSx,
+  BodyHomeSocmedCardDarkSx,
+  BodyHomeSocmedCardLightSx,
+  BodyHomeSocmedCardOuterBoxSx,
+  BodyHomeSocmedCardTitleDarkSx,
+  BodyHomeSocmedCardTitleLightSx,
+  BodyHomeSocmedPhotoBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 
@@ -308,12 +318,116 @@ const BodySection = () => {
               </CardOverflow>
             </Card>
           </Box>
-          <Box>
-            <h3>
-              <i>
-                <b>Social Media</b>
-              </i>
-            </h3>
+          <Box sx={BodyHomeSocmedCardBoxSx}>
+            <Card
+              variant="outlined"
+              sx={
+                theme === "dark"
+                  ? BodyHomeSocmedCardDarkSx
+                  : BodyHomeSocmedCardLightSx
+              }
+            >
+              <Typography
+                level="body-md"
+                textColor="inherit"
+                sx={
+                  theme === "dark"
+                    ? BodyHomeSocmedCardTitleDarkSx
+                    : BodyHomeSocmedCardTitleLightSx
+                }
+              >
+                Social Media
+              </Typography>
+              <Box sx={BodyHomeSocmedCardOuterBoxSx}>
+                <Box sx={BodyHomeSocmedCardButtonBoxSx}>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://twitter.com/ZDAWorks");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSocmedCardButtonDarkSx
+                        : BodyHomeSocmedCardButtonLightSx
+                    }
+                  >
+                    Twitter/X
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink(
+                        "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
+                      );
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSocmedCardButtonDarkSx
+                        : BodyHomeSocmedCardButtonLightSx
+                    }
+                  >
+                    Instagram
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://bsky.app/profile/zerodayanubis.com");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSocmedCardButtonDarkSx
+                        : BodyHomeSocmedCardButtonLightSx
+                    }
+                  >
+                    Bluesky
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://www.threads.net/@zerodayanubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSocmedCardButtonDarkSx
+                        : BodyHomeSocmedCardButtonLightSx
+                    }
+                  >
+                    Threads
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://pebble.is/ZeroDayAnubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSocmedCardButtonDarkSx
+                        : BodyHomeSocmedCardButtonLightSx
+                    }
+                  >
+                    Pebble
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://ohai.social/@ZeroDayAnubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSocmedCardButtonDarkSx
+                        : BodyHomeSocmedCardButtonLightSx
+                    }
+                  >
+                    Mastodon
+                  </Button>
+                </Box>
+                <Box sx={BodyHomeSocmedPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_socmed}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    columns={1}
+                    spacing={1}
+                    padding={1}
+                    defaultContainerWidth={600}
+                  />
+                </Box>
+              </Box>
+            </Card>
           </Box>
           <Box>
             <h3>
