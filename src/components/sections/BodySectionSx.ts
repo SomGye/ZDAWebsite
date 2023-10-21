@@ -165,8 +165,8 @@ export const BodyHomeHighlightsCardBtnDarkSx = {
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     "&:hover": {
-      backgroundColor: "#db51d4",
-      color: "#2d282e",
+      backgroundColor: "#9571fc",
+      color: "#252026",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
     "&:focus": {
