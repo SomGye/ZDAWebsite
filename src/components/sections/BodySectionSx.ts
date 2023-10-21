@@ -221,11 +221,11 @@ export const BodyHomeSocmedCardDarkSx = {
     margin: "20px",
     backgroundColor: "#262127",
     border: "1px solid transparent",
-    boxShadow: "rgba(210,192,226,0.06) 0px 6px 60px 8px",
+    boxShadow: "rgba(218,75,90,0.25) 0px 1px 16px 2px",
     transition: "all 0.15s ease-out",
     "&:hover": {
-      backgroundColor: "#2b262c",
-      boxShadow: "rgba(210,192,226,0.18) 0px 26px 180px 10px",
+      backgroundColor: "#29232a",
+      boxShadow: "rgba(218,75,90,0.8) 0px 2px 240px 4px",
       transition: "all 0.15s ease-out",
     },
   },
@@ -242,7 +242,7 @@ export const BodyHomeSocmedCardLightSx = {
     transition: "all 0.15s ease-out",
     "&:hover": {
       backgroundColor: "#f5f5f5",
-      boxShadow: "rgba(30,12,46,0.20) 0px 40px 180px 4px",
+      boxShadow: "rgba(30,12,46,0.3) 0px 40px 180px 4px",
       transition: "all 0.15s ease-out",
     },
   },
