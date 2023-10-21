@@ -64,6 +64,8 @@ import {
   BodyHomeHighlightsCardBtnLightSx,
   BodyHomeHighlightsCardContentSx,
   BodyHomeHighlightsCardDarkSx,
+  BodyHomeHighlightsCardDividerDarkSx,
+  BodyHomeHighlightsCardDividerLightSx,
   BodyHomeHighlightsCardLightSx,
   BodyHomeHighlightsCardOverflowDarkSx,
   BodyHomeHighlightsCardOverflowLightSx,
@@ -276,7 +278,15 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider orientation="horizontal" inset="none" />
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyHomeHighlightsCardDividerDarkSx
+                      : BodyHomeHighlightsCardDividerLightSx
+                  }
+                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
@@ -294,7 +304,15 @@ const BodySection = () => {
                     close={() => setIndex(-1)}
                   />
                 </Box>
-                <Divider orientation="horizontal" inset="none" />
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyHomeHighlightsCardDividerDarkSx
+                      : BodyHomeHighlightsCardDividerLightSx
+                  }
+                />
               </CardContent>
               <CardOverflow
                 sx={

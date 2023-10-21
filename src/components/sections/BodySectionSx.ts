@@ -37,16 +37,16 @@ export const BodyHomeHighlightsCardDarkSx = {
     maxWidth: "90%",
     minHeight: "250px",
     background:
-      "linear-gradient(270deg, rgba(30,24,35,1) 0%, rgba(40,14,38,1) 43%, rgba(30,30,32,1) 100%) padding-box, linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(29,9,35,1) 43%, rgba(29,29,35,1) 100%)",
+      "linear-gradient(270deg, rgba(30,24,35,1) 0%, #1F135F 50%, rgba(29,26,43,1) 100%) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     border: "1px solid transparent",
-    borderBottomLeftRadius: "0",
-    borderBottomRightRadius: "0",
-    boxShadow: "rgba(29,9,121,0.80) 0px 8px 80px -1px",
+    borderBottomLeftRadius: "8px",
+    borderBottomRightRadius: "8px",
+    boxShadow: "rgba(29,9,121,1) 0px 8px 80px -1px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       background:
-        "linear-gradient(315deg, rgba(33,27,38,1) 0%, rgba(43,17,41,1) 43%, rgba(33,33,35,1) 100%) padding-box, linear-gradient(90deg, rgba(29,29,35,1) 0%, rgba(29,9,35,1) 43%, rgba(29,29,35,1) 100%)",
-      boxShadow: "rgba(69,19,121,0.85) 0px 26px 180px 10px",
+        "linear-gradient(270deg, rgba(37,26,41,1) 0%, #1F0C5C 50%, rgba(36,28,49,1) 100%) padding-box, linear-gradient(180deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      boxShadow: "rgba(69,19,121,1) 0px 26px 180px 10px",
       transition: "all 0.25s ease-out",
     },
   },
@@ -63,8 +63,8 @@ export const BodyHomeHighlightsCardLightSx = {
     background:
       "linear-gradient(270deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
     border: "1px solid transparent",
-    borderBottomLeftRadius: "0",
-    borderBottomRightRadius: "0",
+    borderBottomLeftRadius: "8px",
+    borderBottomRightRadius: "8px",
     boxShadow: "rgba(29,9,121,0.30) 0px 8px 32px -1px",
     transition: "all 0.15s ease-out",
     "&:hover": {
@@ -112,6 +112,18 @@ export const BodyHomeHighlightsCardBodyTopLightSx = {
   ...{
     maxWidth: "32ch",
     color: "#29242ada",
+  },
+};
+
+export const BodyHomeHighlightsCardDividerDarkSx = {
+  ...{
+    "--Divider-lineColor": "rgba(61,39,115,0.5)",
+  },
+};
+
+export const BodyHomeHighlightsCardDividerLightSx = {
+  ...{
+    "--Divider-lineColor": "rgba(229,209,245,0.15)",
   },
 };
 
