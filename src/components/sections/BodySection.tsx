@@ -52,6 +52,7 @@ import {
 } from "@mui/joy";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import "yet-another-react-lightbox/styles.css";
 import { clickLink } from "../../Helpers";
 import {
@@ -84,6 +85,18 @@ import {
   BodyHomeSocmedCardTitleDarkSx,
   BodyHomeSocmedCardTitleLightSx,
   BodyHomeSocmedPhotoBoxSx,
+  BodyHomeSupportCardButtonBoxSx,
+  BodyHomeSupportCardButtonDarkSx,
+  BodyHomeSupportCardButtonLightSx,
+  BodyHomeSupportCardDarkSx,
+  BodyHomeSupportCardLightSx,
+  BodyHomeSupportCardOuterBoxSx,
+  BodyHomeSupportCardStarDarkSx,
+  BodyHomeSupportCardStarLightSx,
+  BodyHomeSupportCardSubtitleDarkSx,
+  BodyHomeSupportCardSubtitleLightSx,
+  BodyHomeSupportCardTitleDarkSx,
+  BodyHomeSupportCardTitleLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 
@@ -447,16 +460,114 @@ const BodySection = () => {
               </Box>
             </Card>
           </Box>
-          <Box>
-            <h3>
-              <i>
-                <b>Prints and Support</b>
-              </i>
-            </h3>
-            <div>................</div>
-            <h4>
-              <i>Any support is greatly appreciated!</i>
-            </h4>
+          <Box sx={BodyHomeSocmedCardBoxSx}>
+            <Card
+              variant="outlined"
+              sx={
+                theme === "dark"
+                  ? BodyHomeSupportCardDarkSx
+                  : BodyHomeSupportCardLightSx
+              }
+            >
+              <Typography
+                level="body-md"
+                textColor="inherit"
+                sx={
+                  theme === "dark"
+                    ? BodyHomeSupportCardTitleDarkSx
+                    : BodyHomeSupportCardTitleLightSx
+                }
+              >
+                Prints and Support
+              </Typography>
+              <Box sx={BodyHomeSupportCardOuterBoxSx}>
+                <Box sx={BodyHomeSupportCardButtonBoxSx}>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://tinyurl.com/ZDAPrints");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    Print Shop
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://ko-fi.com/zerodayanubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    Ko-Fi (HQ Files)
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://paypal.me/ZeroDayAnubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    PayPal
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://account.venmo.com/u/somgye");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    Venmo
+                  </Button>
+                  <Typography
+                    level="body-xs"
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardSubtitleDarkSx
+                        : BodyHomeSupportCardSubtitleLightSx
+                    }
+                  >
+                    <StarRoundedIcon
+                      sx={
+                        theme === "dark"
+                          ? BodyHomeSupportCardStarDarkSx
+                          : BodyHomeSupportCardStarLightSx
+                      }
+                    />
+                    Any support is greatly appreciated!
+                    <StarRoundedIcon
+                      sx={
+                        theme === "dark"
+                          ? BodyHomeSupportCardStarDarkSx
+                          : BodyHomeSupportCardStarLightSx
+                      }
+                    />
+                  </Typography>
+                </Box>
+                <Box sx={BodyHomeSocmedPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_prints_support}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    columns={1}
+                    spacing={1}
+                    padding={1}
+                    defaultContainerWidth={600}
+                  />
+                </Box>
+              </Box>
+            </Card>
           </Box>
         </Box>
       )}

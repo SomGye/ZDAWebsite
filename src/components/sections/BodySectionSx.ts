@@ -221,7 +221,7 @@ export const BodyHomeSocmedCardDarkSx = {
     margin: "20px",
     backgroundColor: "#262127",
     border: "1px solid transparent",
-    boxShadow: "rgba(218,75,90,0.25) 0px 1px 16px 2px",
+    boxShadow: "rgba(218,75,90,0.3) 0px 1px 16px 2px",
     transition: "all 0.15s ease-out",
     "&:hover": {
       backgroundColor: "#29232a",
@@ -303,7 +303,7 @@ export const BodyHomeSocmedCardButtonBoxSx = {
 
 export const BodyHomeSocmedCardButtonDarkSx = {
   ...{
-    width: "132px",
+    width: "164px",
     justifyContent: "center",
     backgroundColor: "#262228",
     color: "#fafafa",
@@ -326,7 +326,7 @@ export const BodyHomeSocmedCardButtonDarkSx = {
 
 export const BodyHomeSocmedCardButtonLightSx = {
   ...{
-    width: "132px",
+    width: "164px",
     justifyContent: "center",
     backgroundColor: "#6b25fe05",
     color: "rgba(228,0,254,1)",
@@ -353,5 +353,197 @@ export const BodyHomeSocmedPhotoBoxSx = {
     minHeight: "1px",
     height: "100%",
     width: "100%", // NEEDED to fill box space, shrink img in CSS
+  },
+};
+
+export const BodyHomeSupportCardDarkSx = {
+  ...{
+    "--Card-padding": "24px",
+    "--Card-radius": "24px",
+    margin: "20px",
+    backgroundColor: "#262127",
+    border: "1px solid transparent",
+    boxShadow: "rgba(244,210,191,0.2) 0px 1px 16px 2px",
+    transition: "all 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#29232a",
+      boxShadow: "rgba(244,210,191,0.7) 0px 2px 240px 4px",
+      transition: "all 0.15s ease-out",
+    },
+  },
+};
+
+export const BodyHomeSupportCardLightSx = {
+  ...{
+    "--Card-padding": "24px",
+    "--Card-radius": "24px",
+    margin: "20px",
+    backgroundColor: "#ffffff",
+    border: "1px solid transparent",
+    boxShadow: "rgba(30,12,46,0.11) 0px 20px 40px 2px",
+    transition: "all 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#f5f5f5",
+      boxShadow: "rgba(70,56,24,0.45) 0px 40px 180px 4px",
+      transition: "all 0.15s ease-out",
+    },
+  },
+};
+
+export const BodyHomeSupportCardTitleDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "24px",
+    fontWeight: "600",
+    backgroundImage:
+      "linear-gradient(90deg, #F4EFDF 0%, #F39330 85%, #EA45AC 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+  },
+};
+
+export const BodyHomeSupportCardTitleLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "24px",
+    fontWeight: "600",
+    backgroundImage:
+      "linear-gradient(180deg, #F3DFCF 0%, #E57320 85%, #000000 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+  },
+};
+
+export const BodyHomeSupportCardOuterBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "row-reverse",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    "@media (max-width: 1030px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyHomeSupportCardButtonBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: "12px",
+    marginRight: "12px",
+    "@media (max-width: 1030px)": {
+      marginBottom: "12px",
+    },
+  },
+};
+
+export const BodyHomeSupportCardButtonDarkSx = {
+  ...{
+    width: "200px",
+    justifyContent: "center",
+    backgroundColor: "#262228",
+    // color: "#fafafa",
+    color: "#FEFBF6EA",
+    border: "1px solid #F4DFBF8F",
+    borderRadius: "24px",
+    transition: "all 0.25s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#F4DFBF",
+      color: "#221706",
+      border: "1px solid #F4DFBF",
+      transition: "all 0.25s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyHomeSupportCardButtonLightSx = {
+  ...{
+    width: "200px",
+    justifyContent: "center",
+    backgroundColor: "#FEFBF685",
+    color: "#E07E00",
+    border: "1px solid #F4DFBFAF",
+    borderRadius: "24px",
+    transition: "all 0.25s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#D4BF99",
+      color: "#1C160C",
+      border: "1px solid #D4BF99",
+      transition: "all 0.25s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyHomeSupportCardSubtitleDarkSx = {
+  ...{
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontWeight: "300",
+    fontStyle: "italic",
+    backgroundImage:
+      "linear-gradient(90deg, #F4EFDF 0%, #F39330 85%, #EA45AC 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    margin: "10px",
+    "@media (max-width: 1030px)": {
+      marginBottom: "0",
+    },
+  },
+};
+
+export const BodyHomeSupportCardSubtitleLightSx = {
+  ...{
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontWeight: "300",
+    fontStyle: "italic",
+    backgroundImage:
+      "linear-gradient(250deg, #E3CFBF 0%, #D56310 85%, #000000 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    margin: "10px",
+    "@media (max-width: 1030px)": {
+      marginBottom: "0",
+    },
+  },
+};
+
+export const BodyHomeSupportCardStarDarkSx = {
+  ...{
+    color: "#F4DFBF",
+    fontSize: "20px",
+  },
+};
+
+export const BodyHomeSupportCardStarLightSx = {
+  ...{
+    color: "#E4CFAF",
+    fontSize: "20px",
   },
 };
