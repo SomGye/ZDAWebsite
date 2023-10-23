@@ -372,7 +372,6 @@ export const BodyHomeSocmedPhotoBoxSx = {
     minWidth: "1px",
     minHeight: "1px",
     height: "100%",
-    width: "100%", // NEEDED to fill box space, shrink img in CSS
   },
 };
 
