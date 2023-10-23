@@ -37,7 +37,7 @@ export const BodyHomeHighlightsCardDarkSx = {
     maxWidth: "90%",
     minHeight: "250px",
     background:
-      "linear-gradient(270deg, rgba(30,24,35,1) 0%, #1F135F 50%, rgba(29,26,43,1) 100%) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      "linear-gradient(270deg, rgba(30,24,35,1) 0%, #2A135F 50%, rgba(29,26,43,1) 100%) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     border: "1px solid transparent",
     borderBottomLeftRadius: "8px",
     borderBottomRightRadius: "8px",
@@ -45,7 +45,7 @@ export const BodyHomeHighlightsCardDarkSx = {
     transition: "all 0.15s ease-out",
     "&:hover": {
       background:
-        "linear-gradient(270deg, rgba(37,26,41,1) 0%, #1F0C5C 50%, rgba(36,28,49,1) 100%) padding-box, linear-gradient(180deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+        "linear-gradient(270deg, rgba(37,26,41,1) 0%, #3A0C5C 50%, rgba(36,28,49,1) 100%) padding-box, linear-gradient(180deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
       boxShadow: "rgba(69,19,121,1) 0px 26px 180px 10px",
       transition: "all 0.25s ease-out",
     },
@@ -89,6 +89,8 @@ export const BodyHomeHighlightsCardTitleDarkSx = {
       "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -98,20 +100,34 @@ export const BodyHomeHighlightsCardTitleLightSx = {
       "linear-gradient(90deg, rgba(0,10,28,1) 0%, rgba(9,9,121,1) 43%, rgba(228,0,254,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
 export const BodyHomeHighlightsCardBodyTopDarkSx = {
   ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "14px",
+    fontStyle: "italic",
+    fontWeight: "300",
     maxWidth: "32ch",
-    color: "#fafafaca",
+    color: "#cf00ffda",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
 export const BodyHomeHighlightsCardBodyTopLightSx = {
   ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "14px",
+    fontStyle: "italic",
+    fontWeight: "300",
     maxWidth: "32ch",
-    color: "#29242ada",
+    color: "#31008ff0",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -257,6 +273,8 @@ export const BodyHomeSocmedCardTitleDarkSx = {
       "linear-gradient(175deg, rgba(228,0,254,1) 0%, #ff8442 66%, #936eff 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -269,6 +287,8 @@ export const BodyHomeSocmedCardTitleLightSx = {
       "linear-gradient(185deg, #936eff 0%, #ff8442 33%, rgba(228,0,254,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -399,6 +419,8 @@ export const BodyHomeSupportCardTitleDarkSx = {
       "linear-gradient(90deg, #F4EFDF 0%, #F39330 85%, #EA45AC 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -411,6 +433,8 @@ export const BodyHomeSupportCardTitleLightSx = {
       "linear-gradient(180deg, #F3DFCF 0%, #E57320 85%, #000000 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -448,7 +472,6 @@ export const BodyHomeSupportCardButtonDarkSx = {
     width: "200px",
     justifyContent: "center",
     backgroundColor: "#262228",
-    // color: "#fafafa",
     color: "#FEFBF6EA",
     border: "1px solid #F4DFBF8F",
     borderRadius: "24px",
@@ -506,6 +529,8 @@ export const BodyHomeSupportCardSubtitleDarkSx = {
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     margin: "10px",
+    pointerEvents: "none",
+    userSelect: "none",
     "@media (max-width: 1030px)": {
       marginBottom: "0",
     },
@@ -524,10 +549,12 @@ export const BodyHomeSupportCardSubtitleLightSx = {
     fontWeight: "300",
     fontStyle: "italic",
     backgroundImage:
-      "linear-gradient(250deg, #E3CFBF 0%, #D56310 85%, #000000 100%)",
+      "linear-gradient(250deg, #D7C3B3 0%, #D56310 85%, #000000 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     margin: "10px",
+    pointerEvents: "none",
+    userSelect: "none",
     "@media (max-width: 1030px)": {
       marginBottom: "0",
     },
