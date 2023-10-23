@@ -65,6 +65,8 @@ export const HamburgerTitleDarkSx = {
   ...{
     marginTop: "8px",
     color: "rgba(255, 255, 255, 0.90)",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -72,6 +74,8 @@ export const HamburgerTitleLightSx = {
   ...{
     marginTop: "8px",
     color: "#213547",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -197,5 +201,29 @@ export const HamburgerInnerNavBtnLightSx = {
       transition: "background-color 0.20s",
       transitionTimingFunction: "ease-out",
     },
+  },
+};
+
+export const HamburgerFooterTextDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    color: "#fafafafa",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const HamburgerFooterTextLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    color: "#6B25FE",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };

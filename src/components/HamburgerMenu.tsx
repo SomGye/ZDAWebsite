@@ -34,6 +34,8 @@ import {
   HamburgerBoxSx,
   HamburgerTopNavBtnDarkSx,
   HamburgerTopNavBtnLightSx,
+  HamburgerFooterTextDarkSx,
+  HamburgerFooterTextLightSx,
 } from "./HamburgerMenuSx";
 
 type props = {
@@ -74,7 +76,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
         <Sheet
           sx={theme === "dark" ? HamburgerSheetDarkSx : HamburgerSheetLightSx}
         >
-          <DialogTitle>Links</DialogTitle>
+          <DialogTitle sx={{ pointerEvents: "none", userSelect: "none" }}>Links</DialogTitle>
           <ModalClose
             sx={theme === "dark" ? HamburgerCloseDarkSx : HamburgerCloseLightSx}
           />
@@ -287,9 +289,16 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
           </DialogContent>
           <Divider sx={{ mt: "auto" }} />
           <Stack direction="row" justifyContent="center" useFlexGap spacing={1}>
-            <h5>
-              <i>Thank you for your support!</i>
-            </h5>
+            <Typography
+              level="body-xs"
+              sx={
+                theme === "dark"
+                  ? HamburgerFooterTextDarkSx
+                  : HamburgerFooterTextLightSx
+              }
+            >
+              Thank you for your support!
+            </Typography>
           </Stack>
         </Sheet>
       </Drawer>
