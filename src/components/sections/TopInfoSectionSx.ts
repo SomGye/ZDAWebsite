@@ -12,6 +12,7 @@ export const TopInfoTopDarkBoxSx = {
   ...{
     display: "flex",
     flexDirection: "row",
+    // flexDirection: "column", // TODO: use for when LOGO
     flexWrap: "wrap",
     width: "100%",
     backgroundImage:
@@ -27,6 +28,7 @@ export const TopInfoTopLightBoxSx = {
   ...{
     display: "flex",
     flexDirection: "row",
+    // flexDirection: "column", // TODO: use for when LOGO
     flexWrap: "wrap",
     width: "100%",
     backgroundImage:
@@ -51,7 +53,11 @@ export const TopInfoTopTypoBoxColSx = {
     flex: "1",
     display: "flex",
     flexDirection: "column",
+    // flexDirection: "row", // TODO: use when LOGO and desktop width
     justifyContent: "center",
+    // "@media (max-width: 670px)": { // TODO: use when LOGO and tablet/mobile
+    //   flexDirection: "column",
+    // },
   },
 };
 
@@ -63,6 +69,8 @@ export const TopInfoTopLeftTitleDarkSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -74,6 +82,8 @@ export const TopInfoTopLeftTitleLightSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -84,6 +94,8 @@ export const TopInfoTopMidTitleDarkSx = {
     fontWeight: "300",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
+    pointerEvents: "none",
+    userSelect: "none",
     "@media (max-width: 670px)": {
       fontSize: "20px",
     },
@@ -97,6 +109,8 @@ export const TopInfoTopMidTitleLightSx = {
     fontWeight: "200",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
+    pointerEvents: "none",
+    userSelect: "none",
     "@media (max-width: 670px)": {
       fontSize: "20px",
     },
@@ -111,6 +125,15 @@ export const TopInfoTopRightTitleDarkSx = {
     fontWeight: "400",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
+    pointerEvents: "none",
+    userSelect: "none",
+    //--
+    // marginLeft: "auto", // TODO: use when LOGO
+    // marginRight: "auto",
+    // width: "200px", // TODO: use when LOGO and desktop
+    // "@media (max-width: 670px)": {
+    //   width: "auto", // TODO: use when LOGO
+    // },
   },
 };
 
@@ -122,6 +145,15 @@ export const TopInfoTopRightTitleLightSx = {
     fontWeight: "400",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
+    pointerEvents: "none",
+    userSelect: "none",
+    // --
+    // marginLeft: "auto", // TODO: use when LOGO
+    // marginRight: "auto",
+    // width: "200px", // TODO: use when LOGO and desktop
+    // "@media (max-width: 670px)": {
+    //   width: "auto", // TODO: use when LOGO
+    // },
   },
 };
 
@@ -141,6 +173,8 @@ export const TopInfoCardOuterTypoDarkSx = {
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -150,7 +184,17 @@ export const TopInfoCardOuterTypoLightSx = {
       "linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
+};
+
+export const TopInfoCardOuterDividerDarkSx = {
+  "--Divider-lineColor": "#fafafa05",
+};
+
+export const TopInfoCardOuterDividerLightSx = {
+  "--Divider-lineColor": "#2621270c",
 };
 
 export const TopInfoCardInnerDarkSx = {
@@ -204,6 +248,8 @@ export const TopInfoCardInnerCCTDarkSx = {
     fontSize: "20px",
     fontWeight: "700",
     fontStyle: "italic",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -214,6 +260,20 @@ export const TopInfoCardInnerCCTLightSx = {
     fontSize: "20px",
     fontWeight: "700",
     fontStyle: "italic",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const TopInfoCardInnerCCTDividerDarkSx = {
+  ...{
+    "--Divider-lineColor": "#0000000f",
+  },
+};
+
+export const TopInfoCardInnerCCTDividerLightSx = {
+  ...{
+    "--Divider-lineColor": "#fafafa1f",
   },
 };
 
@@ -355,6 +415,8 @@ export const TopInfoCommCardTitleDarkSx = {
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -364,6 +426,8 @@ export const TopInfoCommCardTitleLightSx = {
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -371,6 +435,8 @@ export const TopInfoCommCardBodyTopDarkSx = {
   ...{
     maxWidth: "32ch",
     color: "#fafafaca",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -378,6 +444,22 @@ export const TopInfoCommCardBodyTopLightSx = {
   ...{
     maxWidth: "32ch",
     color: "#29242ada",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const TopInfoCommCardDividerDarkSx = {
+  ...{
+    background:
+      "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+  },
+};
+
+export const TopInfoCommCardDividerLightSx = {
+  ...{
+    background:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
   },
 };
 
@@ -385,6 +467,8 @@ export const TopInfoCommCardBodyBtmDarkSx = {
   ...{
     maxWidth: "28ch",
     color: "#fafafacf",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -392,6 +476,8 @@ export const TopInfoCommCardBodyBtmLightSx = {
   ...{
     maxWidth: "28ch",
     color: "#29242adf",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -542,5 +628,12 @@ export const TopInfoCommCardBtnRightLightSx = {
     "&:focus": {
       outline: "none",
     },
+  },
+};
+
+export const TopInfoDefaultTextSx = {
+  ...{
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };

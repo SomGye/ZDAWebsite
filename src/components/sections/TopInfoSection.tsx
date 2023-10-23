@@ -61,9 +61,13 @@ import {
   TopInfoCardBoxColSx,
   TopInfoCardContentSx,
   TopInfoCardInnerCCTDarkSx,
+  TopInfoCardInnerCCTDividerDarkSx,
+  TopInfoCardInnerCCTDividerLightSx,
   TopInfoCardInnerCCTLightSx,
   TopInfoCardInnerDarkSx,
   TopInfoCardInnerLightSx,
+  TopInfoCardOuterDividerDarkSx,
+  TopInfoCardOuterDividerLightSx,
   TopInfoCardOuterTypoDarkSx,
   TopInfoCardOuterTypoLightSx,
   TopInfoCardTopDarkSx,
@@ -80,12 +84,15 @@ import {
   TopInfoCommCardBtnRightDarkSx,
   TopInfoCommCardBtnRightLightSx,
   TopInfoCommCardDarkSx,
+  TopInfoCommCardDividerDarkSx,
+  TopInfoCommCardDividerLightSx,
   TopInfoCommCardLightSx,
   TopInfoCommCardOverflowDarkSx,
   TopInfoCommCardOverflowLightSx,
   TopInfoCommCardTitleDarkSx,
   TopInfoCommCardTitleLightSx,
   TopInfoContainerSx,
+  TopInfoDefaultTextSx,
   TopInfoTopDarkBoxSx,
   TopInfoTopLeftTitleDarkSx,
   TopInfoTopLeftTitleLightSx,
@@ -209,7 +216,15 @@ const TopInfoSection = () => {
             >
               Welcome To My Page!
             </Typography>
-            <Divider orientation="horizontal" inset="none" />
+            <Divider
+              orientation="horizontal"
+              inset="none"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterDividerDarkSx
+                  : TopInfoCardOuterDividerLightSx
+              }
+            />
             <Typography
               level="body-md"
               textColor="inherit"
@@ -231,7 +246,11 @@ const TopInfoSection = () => {
                 : TopInfoCardInnerLightSx
             }
           >
-            <Typography level="title-md" textColor="inherit">
+            <Typography
+              level="title-md"
+              textColor="inherit"
+              sx={TopInfoDefaultTextSx}
+            >
               I create abstract oddities with a focus on
             </Typography>
             <Typography
@@ -328,7 +347,15 @@ const TopInfoSection = () => {
               and math to develop the filters and algorithms to overlay effects
               over my own photography.
             </Typography>
-            <Divider orientation="horizontal" inset="none" />
+            <Divider
+              orientation="horizontal"
+              inset="none"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardOuterDividerDarkSx
+                  : TopInfoCardOuterDividerLightSx
+              }
+            />
             <Typography
               level="body-md"
               textColor="inherit"
@@ -373,7 +400,11 @@ const TopInfoSection = () => {
                 : TopInfoCardBottomLightSx
             }
           >
-            <Typography level="title-md" textColor="inherit">
+            <Typography
+              level="title-md"
+              textColor="inherit"
+              sx={TopInfoDefaultTextSx}
+            >
               Since then, I have developed my focus of
             </Typography>
             <Typography
@@ -386,11 +417,27 @@ const TopInfoSection = () => {
             >
               colors + contrast + textures
             </Typography>
-            <Typography level="title-md" textColor="inherit">
+            <Typography
+              level="title-md"
+              textColor="inherit"
+              sx={TopInfoDefaultTextSx}
+            >
               ...to always deliver something unique and interesting.
             </Typography>
-            <Divider orientation="horizontal" inset="none" />
-            <Typography level="body-sm" textColor="inherit">
+            <Divider
+              orientation="horizontal"
+              inset="none"
+              sx={
+                theme === "dark"
+                  ? TopInfoCardInnerCCTDividerDarkSx
+                  : TopInfoCardInnerCCTDividerLightSx
+              }
+            />
+            <Typography
+              level="body-sm"
+              textColor="inherit"
+              sx={TopInfoDefaultTextSx}
+            >
               I hope you enjoy my work!
             </Typography>
           </Card>
@@ -425,7 +472,15 @@ const TopInfoSection = () => {
                 I am here to create abstract art for you, with 4 available tiers
                 to meet your budget and design needs.
               </Typography>
-              <Divider orientation="horizontal" inset="none" />
+              <Divider
+                orientation="horizontal"
+                inset="none"
+                sx={
+                  theme === "dark"
+                    ? TopInfoCommCardDividerDarkSx
+                    : TopInfoCommCardDividerLightSx
+                }
+              />
               <Typography
                 level="body-md"
                 sx={
