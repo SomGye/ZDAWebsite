@@ -69,14 +69,11 @@ export const TopInfoTopLeftTitleDarkSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(2px 2px 1px #DF00C5C0)", // BUG: adds flicker to highlights subtitle
-    transition: "filter 0.10s ease-out",
-    // "-webkit-backface-visibility": "hidden", // NOTE: would get rid of Body Home Highlights flicker BUT becomes dark and inconsistent
+    filter: "drop-shadow(2px 2px 1px #DF00C5C0)", // NOTE: got rid of transition here to fix flicker
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(6px 3px 1px #DF00C5FF)",
-      transition: "filter 0.15s ease-out",
+      filter: "drop-shadow(3px 3px 1px #DF00C5FF)",
     },
   },
 };
