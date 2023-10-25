@@ -69,8 +69,15 @@ export const TopInfoTopLeftTitleDarkSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    pointerEvents: "none",
+    filter: "drop-shadow(2px 2px 1px #DF00C5C0)", // BUG: adds flicker to highlights subtitle
+    transition: "filter 0.10s ease-out",
+    // "-webkit-backface-visibility": "hidden", // NOTE: would get rid of Body Home Highlights flicker BUT becomes dark and inconsistent
+    cursor: "default",
     userSelect: "none",
+    "&:hover": {
+      filter: "drop-shadow(6px 3px 1px #DF00C5FF)",
+      transition: "filter 0.15s ease-out",
+    },
   },
 };
 
@@ -82,8 +89,15 @@ export const TopInfoTopLeftTitleLightSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    pointerEvents: "none",
+    filter: "drop-shadow(2px 2px 0px #DF00C53A)", // BUG: adds flicker to highlights subtitle
+    transition: "filter 0.10s ease-out",
+    // "-webkit-backface-visibility": "hidden", // NOTE: would get rid of Body Home Highlights flicker BUT becomes dark and inconsistent
+    cursor: "default",
     userSelect: "none",
+    "&:hover": {
+      filter: "drop-shadow(6px 4px 2px #DF00C5A0)",
+      transition: "filter 0.25s ease-out",
+    },
   },
 };
 
