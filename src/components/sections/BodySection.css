@@ -4,7 +4,9 @@ div.MuiContainer-root.BodyContainer {
   padding: 0;
 }
 
-img.react-photo-album--photo { /* NOTE: Affects all React Photo Album imgs! */
+/* IMAGE/ALBUM/LIGHTBOX OVERRIDES */
+img.react-photo-album--photo {
+  /* NOTE: Affects all React Photo Album imgs! */
   border-radius: 24px;
   max-height: 30vh;
   transition: opacity 0.2s ease-out;
@@ -13,4 +15,9 @@ img.react-photo-album--photo { /* NOTE: Affects all React Photo Album imgs! */
     opacity: 0.85;
     transition: opacity 0.2s ease-out;
   }
+}
+
+button.yarl__button:focus,
+button.yarl__button:focus-visible {
+  outline: none;
 }
