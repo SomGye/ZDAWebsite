@@ -151,15 +151,6 @@ export const BodyHomeHighlightsPhotoBoxSx = {
   },
 };
 
-export const BodyHomeHighlightsLightboxSx = {
-  ...{
-    container: {
-      backdropFilter: "blur(16px)",
-      backgroundColor: "rgba(0,0,0,0.8)",
-    },
-  },
-};
-
 export const BodyHomeHighlightsCardOverflowDarkSx = {
   ...{
     borderRadius: "0",

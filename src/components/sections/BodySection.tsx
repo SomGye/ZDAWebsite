@@ -52,8 +52,10 @@ import {
 } from "@mui/joy";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
-import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import { clickLink } from "../../Helpers";
 import {
   BodyContainerSx,
@@ -72,7 +74,6 @@ import {
   BodyHomeHighlightsCardOverflowLightSx,
   BodyHomeHighlightsCardTitleDarkSx,
   BodyHomeHighlightsCardTitleLightSx,
-  BodyHomeHighlightsLightboxSx,
   BodyHomeHighlightsPhotoBoxSx,
   BodyHomeHightlightsCardOverflowBoxSx,
   BodyHomeSocmedCardBoxSx,
@@ -257,6 +258,8 @@ const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
   const page = useRecoilValue(pageAtom);
   const [index, setIndex] = React.useState(-1);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const captionsRef = React.useRef(null) as any;
 
   return (
     <Container className="BodyContainer" sx={BodyContainerSx}>
@@ -310,9 +313,41 @@ const BodySection = () => {
                     onClick={({ index: current }) => setIndex(current)}
                   />
                   <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
                     index={index}
                     slides={photos_highlights}
-                    styles={BodyHomeHighlightsLightboxSx}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "20px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
                     open={index >= 0}
                     close={() => setIndex(-1)}
                   />
