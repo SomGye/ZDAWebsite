@@ -56,6 +56,9 @@ import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import ClosedCaptionRoundedIcon from "@mui/icons-material/ClosedCaptionRounded";
+import ClosedCaptionDisabledRoundedIcon from "@mui/icons-material/ClosedCaptionDisabledRounded";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { clickLink } from "../../Helpers";
 import {
   BodyContainerSx,
@@ -327,6 +330,13 @@ const BodySection = () => {
                       },
                     }}
                     index={index}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
                     slides={photos_highlights}
                     styles={{
                       container: {
@@ -338,7 +348,7 @@ const BodySection = () => {
                         fontWeight: "400",
                       },
                       captionsTitleContainer: {
-                        height: "20px",
+                        height: "16px",
                         position: "absolute",
                         bottom: "0",
                         left: "0",
