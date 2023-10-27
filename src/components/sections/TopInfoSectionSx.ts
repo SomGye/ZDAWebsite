@@ -165,6 +165,114 @@ export const TopInfoTopRightTitleLightSx = {
   },
 };
 
+export const TopInfoNavButtonBoxSx = {
+  ...{
+    display: "none",
+    marginTop: "8px",
+    marginBottom: "-8px",
+    "@media (max-width: 670px)": {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+};
+
+export const TopInfoNavButtonActiveDarkSx = {
+  ...{
+    width: "140px",
+    textDecoration: "underline",
+    border: "none",
+    borderRadius: "24px",
+    marginTop: "2px",
+    marginBottom: "2px",
+    backgroundColor: "#D600FF",
+    color: "#fafafafa",
+    transition: "background-color 0.3s, color 0.3s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#F05AFF",
+      color: "#19141a",
+      transition: "background-color 0.3s, color 0.3s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoNavButtonDefaultDarkSx = {
+  ...{
+    width: "140px",
+    border: "none",
+    borderRadius: "24px",
+    marginTop: "2px",
+    marginBottom: "2px",
+    backgroundColor: "#D600FF",
+    color: "#fafafafa",
+    transition: "background-color 0.3s, color 0.3s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#F05AFF",
+      color: "#19141a",
+      transition: "background-color 0.3s, color 0.3s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoNavButtonActiveLightSx = {
+  ...{
+    width: "140px",
+    textDecoration: "underline",
+    backgroundColor: "#E10965",
+    color: "#fafafafa",
+    border: "none",
+    borderRadius: "24px",
+    marginTop: "2px",
+    marginBottom: "2px",
+    transition: "background-color 0.3s, color 0.3s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#ef2e50",
+      color: "lightgoldenrodyellow",
+      transition: "background-color 0.3s, color 0.3s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const TopInfoNavButtonDefaultLightSx = {
+  ...{
+    width: "140px",
+    border: "none",
+    borderRadius: "24px",
+    marginTop: "2px",
+    marginBottom: "2px",
+    backgroundColor: "#E10965",
+    color: "#fafafafa",
+    transition: "background-color 0.3s, color 0.3s",
+    transitionTimingFunction: "ease-out",
+    "&:hover": {
+      backgroundColor: "#ef2e50",
+      color: "lightgoldenrodyellow",
+      transition: "background-color 0.3s, color 0.3s",
+      transitionTimingFunction: "ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
 export const TopInfoCardBoxColSx = {
   ...{
     display: "flex",

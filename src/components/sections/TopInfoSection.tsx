@@ -45,7 +45,7 @@ import {
   Divider,
   Typography,
 } from "@mui/joy";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
 import {
@@ -93,6 +93,11 @@ import {
   TopInfoCommCardTitleLightSx,
   TopInfoContainerSx,
   TopInfoDefaultTextSx,
+  TopInfoNavButtonActiveDarkSx,
+  TopInfoNavButtonActiveLightSx,
+  TopInfoNavButtonBoxSx,
+  TopInfoNavButtonDefaultDarkSx,
+  TopInfoNavButtonDefaultLightSx,
   TopInfoTopDarkBoxSx,
   TopInfoTopLeftTitleDarkSx,
   TopInfoTopLeftTitleLightSx,
@@ -109,10 +114,26 @@ import { clickLink } from "../../Helpers";
 
 const TopInfoSection = () => {
   const theme = useRecoilValue(themeAtom);
-  const page = useRecoilValue(pageAtom);
+  const [page, setPage] = useRecoilState(pageAtom);
   const commSlots = useRecoilValue(commSlotsAtom);
   const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
   const commStatus = useRecoilValue(commStatusAtom);
+
+  const determineGroupButtonStyle = (path: string) => {
+    if (page === path) {
+      if (theme === "dark") {
+        return TopInfoNavButtonActiveDarkSx;
+      } else {
+        return TopInfoNavButtonActiveLightSx;
+      }
+    } else {
+      if (theme === "dark") {
+        return TopInfoNavButtonDefaultDarkSx;
+      } else {
+        return TopInfoNavButtonDefaultLightSx;
+      }
+    }
+  };
 
   return (
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
@@ -197,6 +218,26 @@ const TopInfoSection = () => {
             <i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i>
           </Typography>
         </Box>
+      </Box>
+      <Box sx={TopInfoNavButtonBoxSx}>
+        <Button
+          onClick={() => setPage("Home")}
+          sx={() => determineGroupButtonStyle("Home")}
+        >
+          Home
+        </Button>
+        <Button
+          onClick={() => setPage("Portfolio")}
+          sx={() => determineGroupButtonStyle("Portfolio")}
+        >
+          Portfolio
+        </Button>
+        <Button
+          onClick={() => setPage("Commissions")}
+          sx={() => determineGroupButtonStyle("Commissions")}
+        >
+          Commissions
+        </Button>
       </Box>
       {/* Page Specific */}
       {page && page === "Home" && (

@@ -235,12 +235,12 @@ export const TopBannerButtonActiveDarkSx = {
     border: "none",
     backgroundColor: "#D600FF",
     color: "#fafafafa",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
-      backgroundColor: "#EB5EAF",
+      backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -254,12 +254,12 @@ export const TopBannerButtonDefaultDarkSx = {
     border: "none",
     backgroundColor: "#D600FF",
     color: "#fafafafa",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
-      backgroundColor: "#EB5EAF",
+      backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -274,12 +274,12 @@ export const TopBannerButtonActiveLightSx = {
     backgroundColor: "#E10965",
     color: "#fafafafa",
     border: "none",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -293,12 +293,12 @@ export const TopBannerButtonDefaultLightSx = {
     border: "none",
     backgroundColor: "#E10965",
     color: "#fafafafa",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
