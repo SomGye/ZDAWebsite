@@ -69,11 +69,11 @@ export const TopInfoTopLeftTitleDarkSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(2px 2px 1px #DF00C5C0)",
+    filter: "drop-shadow(2px 2px 1px #DF00C5D5)",
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(3px 3px 1px #DF00C5FF)",
+      filter: "drop-shadow(3px 3px 1px #D400BAFF)",
     },
   },
 };
@@ -86,11 +86,11 @@ export const TopInfoTopLeftTitleLightSx = {
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(3px 2px 0px #DF00C52F)",
+    filter: "drop-shadow(3px 2px 0px #DF00C545)",
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(4px 3px 2px #DF00C570)",
+      filter: "drop-shadow(4px 3px 2px #DF00C585)",
     },
   },
 };
