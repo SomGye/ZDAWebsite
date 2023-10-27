@@ -468,18 +468,6 @@ const BodySection = () => {
                   </Button>
                   <Button
                     onClick={() => {
-                      clickLink("https://pebble.is/ZeroDayAnubis");
-                    }}
-                    sx={
-                      theme === "dark"
-                        ? BodyHomeSocmedCardButtonDarkSx
-                        : BodyHomeSocmedCardButtonLightSx
-                    }
-                  >
-                    Pebble
-                  </Button>
-                  <Button
-                    onClick={() => {
                       clickLink("https://ohai.social/@ZeroDayAnubis");
                     }}
                     sx={
