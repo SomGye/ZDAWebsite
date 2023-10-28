@@ -608,7 +608,7 @@ const BodySection = () => {
         <Box>
           <Box>
             <h3>
-              <i>Art Highlights 2023</i>
+              <i>Late 2023</i>
             </h3>
           </Box>
           <Box>
@@ -620,19 +620,26 @@ const BodySection = () => {
             <h3>
               <i>Late 2021 - Early 2022</i>
             </h3>
-            <div>................</div>
-            <h4>
-              <i>(Start of using Procreate)</i>
-            </h4>
           </Box>
           <Box>
             <h3>
               <i>Early 2021</i>
             </h3>
-            <div>................</div>
-            <h4>
-              <i>(Using Phone Stylus)</i>
-            </h4>
+            <Box>
+              <h4>
+                <i>(Procreate: First Works)</i>
+              </h4>
+            </Box>
+            <Box>
+              <h4>
+                <i>(Huion Sketch (Phone))</i>
+              </h4>
+            </Box>
+            <Box>
+              <h4>
+                <i>(PenUp (Phone))</i>
+              </h4>
+            </Box>
           </Box>
           <Box>
             <Button
