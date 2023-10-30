@@ -10,15 +10,34 @@ import { useRecoilState } from "recoil";
 import { pageAtom } from "./states/PageAtom";
 
 function App() {
-  // TODO: use window.innerHeight and window.innerWidth to determine screen size
-  //  and set global: phone/tablet/desktop
-
   const [page, setPage] = useRecoilState(pageAtom);
+  const [bannerReady, setBannerReady] = React.useState(false);
+  const [infoReady, setInfoReady] = React.useState(false);
+  const [bodyReady, setBodyReady] = React.useState(false);
+  const [footerReady, setFooterReady] = React.useState(false);
+  const bannerDelay = 10;
+  const infoDelay = 100;
+  const bodyDelay = 250;
+  const footerDelay = 400;
   const rootPath = "https://www.zerodayanubis.com";
   const portfolioPath = "portfolio";
   const commissionsPath = "commissions";
 
   React.useEffect(() => {
+    // Perf Tweak: Load Sections on Delays
+    setTimeout(() => {
+      setBannerReady(true);
+    }, bannerDelay);
+    setTimeout(() => {
+      setInfoReady(true);
+    }, infoDelay);
+    setTimeout(() => {
+      setBodyReady(true);
+    }, bodyDelay);
+    setTimeout(() => {
+      setFooterReady(true);
+    }, footerDelay);
+
     const currentPath = window.location.href;
     // TODO: Figure out how to avoid 404 on sub-paths
     if (currentPath.toLocaleLowerCase().includes(portfolioPath)) {
@@ -36,10 +55,10 @@ function App() {
   return (
     <>
       <Container className="AppContainer" sx={AppContainerSx}>
-        <TopBanner />
-        <TopInfoSection />
-        <BodySection />
-        <FooterSection />
+        {bannerReady && <TopBanner />}
+        {infoReady && <TopInfoSection />}
+        {bodyReady && <BodySection />}
+        {footerReady && <FooterSection />}
       </Container>
       <p>TEST FILLER FOR SCROLL</p>
       <p>TEST FILLER FOR SCROLL</p>
