@@ -105,7 +105,7 @@ export const BodyHomeHighlightsCardTitleLightSx = {
   },
 };
 
-export const BodyHomeHighlightsCardBodyTopDarkSx = {
+export const BodyHomeHighlightsCardSubtitleDarkSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
@@ -118,7 +118,7 @@ export const BodyHomeHighlightsCardBodyTopDarkSx = {
   },
 };
 
-export const BodyHomeHighlightsCardBodyTopLightSx = {
+export const BodyHomeHighlightsCardSubtitleLightSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
@@ -562,5 +562,159 @@ export const BodyHomeSupportCardStarLightSx = {
   ...{
     color: "#E4CFAF",
     fontSize: "20px",
+  },
+};
+
+export const BodyPortfolioLatestCardDarkSx = {
+  ...{
+    "--Card-padding": "28px",
+    "--Card-radius": "24px",
+    margin: "20px",
+    width: "95%",
+    minHeight: "250px",
+    backgroundColor: "#1B1D24",
+    border: "1px solid transparent",
+    borderBottomLeftRadius: "8px",
+    borderBottomRightRadius: "8px",
+    boxShadow: "rgba(29,9,121,0.4) 0px 0px 18px 1px",
+    "@media (max-width: 1500px)": {
+      width: "94%",
+    },
+    "@media (max-width: 1300px)": {
+      width: "92%",
+    },
+    "@media (max-width: 1000px)": {
+      width: "90%",
+    },
+    "@media (max-width: 800px)": {
+      width: "88%",
+    },
+    "@media (max-width: 670px)": {
+      width: "85%",
+    },
+  },
+};
+
+export const BodyPortfolioLatestCardLightSx = {
+  ...{
+    "--Card-padding": "28px",
+    "--Card-radius": "24px",
+    margin: "20px",
+    width: "95%",
+    minHeight: "250px",
+    backgroundColor: "#fafafafa",
+    border: "1px solid transparent",
+    borderBottomLeftRadius: "8px",
+    borderBottomRightRadius: "8px",
+    boxShadow: "rgba(29,9,121,0.30) 0px 4px 12px -1px",
+    "@media (max-width: 1500px)": {
+      width: "94%",
+    },
+    "@media (max-width: 1300px)": {
+      width: "92%",
+    },
+    "@media (max-width: 1000px)": {
+      width: "90%",
+    },
+    "@media (max-width: 800px)": {
+      width: "88%",
+    },
+    "@media (max-width: 670px)": {
+      width: "85%",
+    },
+  },
+};
+
+export const BodyPortfolioLatestCardTitleDarkSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyPortfolioLatestCardTitleLightSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(90deg, rgba(0,10,28,1) 0%, rgba(9,9,121,1) 43%, rgba(228,0,254,1) 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyPortfolioLatestCardSubtitleDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "14px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    maxWidth: "32ch",
+    color: "#cf00ffda",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyPortfolioLatestCardSubtitleLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "14px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    maxWidth: "32ch",
+    color: "#31008ff0",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyPortfolioLatestCardDividerDarkSx = {
+  ...{
+    "--Divider-lineColor": "rgba(61,39,115,0.15)",
+  },
+};
+
+export const BodyPortfolioLatestCardDividerLightSx = {
+  ...{
+    "--Divider-lineColor": "rgba(229,209,245,0.15)",
+  },
+};
+
+export const BodyPortfolioLatestCardBtnDarkSx = {
+  ...{
+    backgroundColor: "#4D2F76",
+    color: "#fafafacf",
+    borderRadius: "24px",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#9571fc",
+      color: "#252026",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyPortfolioLatestCardBtnLightSx = {
+  ...{
+    backgroundColor: "#c5cafa",
+    color: "#2d282ecf",
+    borderRadius: "24px",
+    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    "&:hover": {
+      backgroundColor: "#493979",
+      color: "#fafafa",
+      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
   },
 };

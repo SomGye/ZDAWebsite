@@ -64,8 +64,8 @@ import {
   BodyContainerSx,
   BodyHomeBoxSx,
   BodyHomeHighlightsBoxSx,
-  BodyHomeHighlightsCardBodyTopDarkSx,
-  BodyHomeHighlightsCardBodyTopLightSx,
+  BodyHomeHighlightsCardSubtitleDarkSx,
+  BodyHomeHighlightsCardSubtitleLightSx,
   BodyHomeHighlightsCardBtnDarkSx,
   BodyHomeHighlightsCardBtnLightSx,
   BodyHomeHighlightsCardContentSx,
@@ -101,10 +101,23 @@ import {
   BodyHomeSupportCardSubtitleLightSx,
   BodyHomeSupportCardTitleDarkSx,
   BodyHomeSupportCardTitleLightSx,
+  BodyPortfolioLatestCardDarkSx,
+  BodyPortfolioLatestCardLightSx,
+  BodyPortfolioLatestCardTitleDarkSx,
+  BodyPortfolioLatestCardTitleLightSx,
+  BodyPortfolioLatestCardSubtitleDarkSx,
+  BodyPortfolioLatestCardSubtitleLightSx,
+  BodyPortfolioLatestCardDividerDarkSx,
+  BodyPortfolioLatestCardDividerLightSx,
+  BodyPortfolioLatestCardBtnDarkSx,
+  BodyPortfolioLatestCardBtnLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
   photos_highlights,
+  photos_highlights_srcSet,
+  photos_portfolio_late2023,
+  photos_portfolio_late2023_srcSet,
   photos_prints_support,
   photos_socmed,
 } from "./BodySectionPhotos";
@@ -143,8 +156,8 @@ const BodySection = () => {
                   level="body-xs"
                   sx={
                     theme === "dark"
-                      ? BodyHomeHighlightsCardBodyTopDarkSx
-                      : BodyHomeHighlightsCardBodyTopLightSx
+                      ? BodyHomeHighlightsCardSubtitleDarkSx
+                      : BodyHomeHighlightsCardSubtitleLightSx
                   }
                 >
                   {"("}Please click to view the full-size image{")"}
@@ -161,7 +174,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_highlights}
+                    photos={photos_highlights_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={200}
                     defaultContainerWidth={1000}
@@ -458,10 +471,132 @@ const BodySection = () => {
       )}
       {page && page === "Portfolio" && (
         <Box>
-          <Box>
-            <h3>
-              <i>Late 2023</i>
-            </h3>
+          <Box sx={BodyHomeHighlightsBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioLatestCardDarkSx
+                  : BodyPortfolioLatestCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioLatestCardTitleDarkSx
+                      : BodyPortfolioLatestCardTitleLightSx
+                  }
+                >
+                  Late 2023
+                </Typography>
+                <Typography
+                  level="body-xs"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioLatestCardSubtitleDarkSx
+                      : BodyPortfolioLatestCardSubtitleLightSx
+                  }
+                >
+                  {"("}Please click to view the full-size image{")"}
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioLatestCardDividerDarkSx
+                      : BodyPortfolioLatestCardDividerLightSx
+                  }
+                />
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_late2023_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    defaultContainerWidth={1000}
+                    onClick={({ index: current }) => setIndex(current)}
+                  />
+                  <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
+                    index={index}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
+                    slides={photos_portfolio_late2023}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "16px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    open={index >= 0}
+                    close={() => setIndex(-1)}
+                  />
+                </Box>
+                {/* NOTE: Only have Divider and CardOverflow/Button on LATEST Card */}
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioLatestCardDividerDarkSx
+                      : BodyPortfolioLatestCardDividerLightSx
+                  }
+                />
+              </CardContent>
+              <CardOverflow
+                sx={
+                  theme === "dark"
+                    ? BodyHomeHighlightsCardOverflowDarkSx
+                    : BodyHomeHighlightsCardOverflowLightSx
+                }
+              >
+                <Box sx={BodyHomeHightlightsCardOverflowBoxSx}>
+                  <Button
+                    onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
+                    sx={
+                      theme === "dark"
+                        ? BodyPortfolioLatestCardBtnDarkSx
+                        : BodyPortfolioLatestCardBtnLightSx
+                    }
+                  >
+                    Commission Your Own Art
+                  </Button>
+                </Box>
+              </CardOverflow>
+            </Card>
           </Box>
           <Box>
             <h3>
