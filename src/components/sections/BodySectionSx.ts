@@ -685,9 +685,24 @@ export const BodyPortfolioLatestCardDividerLightSx = {
   },
 };
 
-export const BodyPortfolioLatestCardBtnDarkSx = {
+export const BodyPortfolioCommBoxSx = {
   ...{
-    backgroundColor: "#4D2F76",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "16px",
+    paddingBottom: "16px",
+  },
+};
+
+export const BodyPortfolioCommBtnDarkSx = {
+  ...{
+    minWidth: "55vw",
+    maxWidth: "75vw",
+    height: "44px",
+    backgroundColor: "#503279",
     color: "#fafafacf",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
@@ -702,8 +717,11 @@ export const BodyPortfolioLatestCardBtnDarkSx = {
   },
 };
 
-export const BodyPortfolioLatestCardBtnLightSx = {
+export const BodyPortfolioCommBtnLightSx = {
   ...{
+    minWidth: "55vw",
+    maxWidth: "75vw",
+    height: "44px",
     backgroundColor: "#c5cafa",
     color: "#2d282ecf",
     borderRadius: "24px",

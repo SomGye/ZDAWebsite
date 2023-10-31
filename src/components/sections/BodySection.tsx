@@ -109,8 +109,9 @@ import {
   BodyPortfolioLatestCardSubtitleLightSx,
   BodyPortfolioLatestCardDividerDarkSx,
   BodyPortfolioLatestCardDividerLightSx,
-  BodyPortfolioLatestCardBtnDarkSx,
-  BodyPortfolioLatestCardBtnLightSx,
+  BodyPortfolioCommBtnDarkSx,
+  BodyPortfolioCommBtnLightSx,
+  BodyPortfolioCommBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -565,7 +566,6 @@ const BodySection = () => {
                     close={() => setIndex(-1)}
                   />
                 </Box>
-                {/* NOTE: Only have Divider and CardOverflow/Button on LATEST Card */}
                 <Divider
                   orientation="horizontal"
                   inset="none"
@@ -576,26 +576,6 @@ const BodySection = () => {
                   }
                 />
               </CardContent>
-              <CardOverflow
-                sx={
-                  theme === "dark"
-                    ? BodyHomeHighlightsCardOverflowDarkSx
-                    : BodyHomeHighlightsCardOverflowLightSx
-                }
-              >
-                <Box sx={BodyHomeHighlightsCardOverflowBoxSx}>
-                  <Button
-                    onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                    sx={
-                      theme === "dark"
-                        ? BodyPortfolioLatestCardBtnDarkSx
-                        : BodyPortfolioLatestCardBtnLightSx
-                    }
-                  >
-                    Commission Your Own Art
-                  </Button>
-                </Box>
-              </CardOverflow>
             </Card>
           </Box>
           <Box>
@@ -628,11 +608,14 @@ const BodySection = () => {
               </h4>
             </Box>
           </Box>
-          <Box>
+          <Box sx={BodyPortfolioCommBoxSx}>
             <Button
               onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-              variant="solid"
-              color="primary"
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioCommBtnDarkSx
+                  : BodyPortfolioCommBtnLightSx
+              }
             >
               Commission Your Own Art
             </Button>
