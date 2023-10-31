@@ -572,7 +572,7 @@ export const BodyPortfolioCardDarkSx = {
     margin: "20px",
     width: "95%",
     minHeight: "250px",
-    background: "linear-gradient(70deg, #212121, #181818) padding-box",
+    background: "linear-gradient(70deg, #14131540, #252525) padding-box",
     backgroundClip: "padding-box",
     border: "1px solid transparent",
     boxShadow: "41px 41px 82px rgba(69,69,69,0.25), -41px -41px 82px rgba(20,19,21,0.5)",
