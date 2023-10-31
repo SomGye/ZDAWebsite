@@ -165,7 +165,7 @@ export const BodyHomeHighlightsCardOverflowLightSx = {
   },
 };
 
-export const BodyHomeHightlightsCardOverflowBoxSx = {
+export const BodyHomeHighlightsCardOverflowBoxSx = {
   ...{
     width: "100%",
     display: "flex",

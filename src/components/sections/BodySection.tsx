@@ -78,7 +78,7 @@ import {
   BodyHomeHighlightsCardTitleDarkSx,
   BodyHomeHighlightsCardTitleLightSx,
   BodyHomeHighlightsPhotoBoxSx,
-  BodyHomeHightlightsCardOverflowBoxSx,
+  BodyHomeHighlightsCardOverflowBoxSx,
   BodyHomeSocmedCardBoxSx,
   BodyHomeSocmedCardButtonBoxSx,
   BodyHomeSocmedCardButtonDarkSx,
@@ -244,7 +244,7 @@ const BodySection = () => {
                     : BodyHomeHighlightsCardOverflowLightSx
                 }
               >
-                <Box sx={BodyHomeHightlightsCardOverflowBoxSx}>
+                <Box sx={BodyHomeHighlightsCardOverflowBoxSx}>
                   <Button
                     onClick={() => clickLink("https://ko-fi.com/zerodayanubis")}
                     sx={
@@ -583,7 +583,7 @@ const BodySection = () => {
                     : BodyHomeHighlightsCardOverflowLightSx
                 }
               >
-                <Box sx={BodyHomeHightlightsCardOverflowBoxSx}>
+                <Box sx={BodyHomeHighlightsCardOverflowBoxSx}>
                   <Button
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
