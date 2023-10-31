@@ -565,7 +565,7 @@ export const BodyHomeSupportCardStarLightSx = {
   },
 };
 
-export const BodyPortfolioLatestCardDarkSx = {
+export const BodyPortfolioCardDarkSx = {
   ...{
     "--Card-padding": "28px",
     "--Card-radius": "24px",
@@ -595,7 +595,7 @@ export const BodyPortfolioLatestCardDarkSx = {
   },
 };
 
-export const BodyPortfolioLatestCardLightSx = {
+export const BodyPortfolioCardLightSx = {
   ...{
     "--Card-padding": "28px",
     "--Card-radius": "24px",
@@ -625,7 +625,7 @@ export const BodyPortfolioLatestCardLightSx = {
   },
 };
 
-export const BodyPortfolioLatestCardTitleDarkSx = {
+export const BodyPortfolioCardTitleDarkSx = {
   ...{
     backgroundImage:
       "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
@@ -636,7 +636,7 @@ export const BodyPortfolioLatestCardTitleDarkSx = {
   },
 };
 
-export const BodyPortfolioLatestCardTitleLightSx = {
+export const BodyPortfolioCardTitleLightSx = {
   ...{
     backgroundImage:
       "linear-gradient(90deg, rgba(0,10,28,1) 0%, rgba(9,9,121,1) 43%, rgba(228,0,254,1) 100%)",
@@ -647,7 +647,7 @@ export const BodyPortfolioLatestCardTitleLightSx = {
   },
 };
 
-export const BodyPortfolioLatestCardSubtitleDarkSx = {
+export const BodyPortfolioCardSubtitleDarkSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
@@ -660,7 +660,7 @@ export const BodyPortfolioLatestCardSubtitleDarkSx = {
   },
 };
 
-export const BodyPortfolioLatestCardSubtitleLightSx = {
+export const BodyPortfolioCardSubtitleLightSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
@@ -673,13 +673,13 @@ export const BodyPortfolioLatestCardSubtitleLightSx = {
   },
 };
 
-export const BodyPortfolioLatestCardDividerDarkSx = {
+export const BodyPortfolioCardDividerDarkSx = {
   ...{
     "--Divider-lineColor": "rgba(61,39,115,0.15)",
   },
 };
 
-export const BodyPortfolioLatestCardDividerLightSx = {
+export const BodyPortfolioCardDividerLightSx = {
   ...{
     "--Divider-lineColor": "rgba(229,209,245,0.15)",
   },

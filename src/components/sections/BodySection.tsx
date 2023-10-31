@@ -101,14 +101,14 @@ import {
   BodyHomeSupportCardSubtitleLightSx,
   BodyHomeSupportCardTitleDarkSx,
   BodyHomeSupportCardTitleLightSx,
-  BodyPortfolioLatestCardDarkSx,
-  BodyPortfolioLatestCardLightSx,
-  BodyPortfolioLatestCardTitleDarkSx,
-  BodyPortfolioLatestCardTitleLightSx,
-  BodyPortfolioLatestCardSubtitleDarkSx,
-  BodyPortfolioLatestCardSubtitleLightSx,
-  BodyPortfolioLatestCardDividerDarkSx,
-  BodyPortfolioLatestCardDividerLightSx,
+  BodyPortfolioCardDarkSx,
+  BodyPortfolioCardLightSx,
+  BodyPortfolioCardTitleDarkSx,
+  BodyPortfolioCardTitleLightSx,
+  BodyPortfolioCardSubtitleDarkSx,
+  BodyPortfolioCardSubtitleLightSx,
+  BodyPortfolioCardDividerDarkSx,
+  BodyPortfolioCardDividerLightSx,
   BodyPortfolioCommBtnDarkSx,
   BodyPortfolioCommBtnLightSx,
   BodyPortfolioCommBoxSx,
@@ -476,8 +476,8 @@ const BodySection = () => {
             <Card
               sx={
                 theme === "dark"
-                  ? BodyPortfolioLatestCardDarkSx
-                  : BodyPortfolioLatestCardLightSx
+                  ? BodyPortfolioCardDarkSx
+                  : BodyPortfolioCardLightSx
               }
             >
               <CardContent sx={BodyHomeHighlightsCardContentSx}>
@@ -485,8 +485,8 @@ const BodySection = () => {
                   level="title-lg"
                   sx={
                     theme === "dark"
-                      ? BodyPortfolioLatestCardTitleDarkSx
-                      : BodyPortfolioLatestCardTitleLightSx
+                      ? BodyPortfolioCardTitleDarkSx
+                      : BodyPortfolioCardTitleLightSx
                   }
                 >
                   Late 2023
@@ -495,8 +495,8 @@ const BodySection = () => {
                   level="body-xs"
                   sx={
                     theme === "dark"
-                      ? BodyPortfolioLatestCardSubtitleDarkSx
-                      : BodyPortfolioLatestCardSubtitleLightSx
+                      ? BodyPortfolioCardSubtitleDarkSx
+                      : BodyPortfolioCardSubtitleLightSx
                   }
                 >
                   {"("}Please click to view the full-size image{")"}
@@ -506,8 +506,8 @@ const BodySection = () => {
                   inset="none"
                   sx={
                     theme === "dark"
-                      ? BodyPortfolioLatestCardDividerDarkSx
-                      : BodyPortfolioLatestCardDividerLightSx
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
                   }
                 />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
@@ -571,8 +571,8 @@ const BodySection = () => {
                   inset="none"
                   sx={
                     theme === "dark"
-                      ? BodyPortfolioLatestCardDividerDarkSx
-                      : BodyPortfolioLatestCardDividerLightSx
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
                   }
                 />
               </CardContent>
