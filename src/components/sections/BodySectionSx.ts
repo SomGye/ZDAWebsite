@@ -575,7 +575,8 @@ export const BodyPortfolioCardDarkSx = {
     background: "linear-gradient(70deg, #14131540, #252525) padding-box",
     backgroundClip: "padding-box",
     border: "1px solid transparent",
-    boxShadow: "41px 41px 82px rgba(69,69,69,0.25), -41px -41px 82px rgba(20,19,21,0.5)",
+    boxShadow:
+      "41px 41px 82px rgba(69,69,69,0.25), -41px -41px 82px rgba(20,19,21,0.5)",
     "@media (max-width: 1500px)": {
       width: "94%",
     },
@@ -604,7 +605,8 @@ export const BodyPortfolioCardLightSx = {
     background: "linear-gradient(210deg, #f9f9f9, #ededed) padding-box",
     backgroundClip: "padding-box",
     border: "1px solid transparent",
-    boxShadow: "41px 41px 82px rgba(186,186,186,0.65), -41px -41px 82px #fafafa",
+    boxShadow:
+      "41px 41px 82px rgba(186,186,186,0.65), -41px -41px 82px #fafafa",
     "@media (max-width: 1500px)": {
       width: "94%",
     },
@@ -626,7 +628,7 @@ export const BodyPortfolioCardLightSx = {
 export const BodyPortfolioCardTitleDarkSx = {
   ...{
     backgroundImage:
-      "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
+      "linear-gradient(90deg, rgba(239,138,181,1) 0%, rgba(234,66,171,1) 43%, rgba(191,26,255,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -637,7 +639,7 @@ export const BodyPortfolioCardTitleDarkSx = {
 export const BodyPortfolioCardTitleLightSx = {
   ...{
     backgroundImage:
-      "linear-gradient(90deg, rgba(0,10,28,1) 0%, rgba(9,9,121,1) 43%, rgba(228,0,254,1) 100%)",
+      "linear-gradient(90deg, rgba(130,9,20,1) 0%, rgba(196,5,79,1) 43%, rgba(225,127,96,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -652,7 +654,7 @@ export const BodyPortfolioCardSubtitleDarkSx = {
     fontStyle: "italic",
     fontWeight: "300",
     maxWidth: "32ch",
-    color: "#cf00ffda",
+    color: "rgba(234,66,231,0.8)",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -665,7 +667,7 @@ export const BodyPortfolioCardSubtitleLightSx = {
     fontStyle: "italic",
     fontWeight: "300",
     maxWidth: "32ch",
-    color: "#31008ff0",
+    color: "rgba(196,5,79,1)",
     pointerEvents: "none",
     userSelect: "none",
   },
