@@ -117,6 +117,8 @@ import {
   BodyPortfolioCommBtnDividerDarkSx,
   BodyPortfolioCommBtnDividerLightSx,
   BodyPortfolioCommBtnDividerBoxSx,
+  BodyPortfolioCommBtnDarkHelperSx,
+  BodyPortfolioCommBtnLightHelperSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -1165,6 +1167,7 @@ const BodySection = () => {
               </CardContent>
             </Card>
           </Box>
+          {/* TODO: fix targetRowHeight for above images! */}
           <Box sx={BodyPortfolioCommBoxSx}>
             <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
               <Divider
@@ -1177,16 +1180,28 @@ const BodySection = () => {
                 }
               />
             </Box>
-            <Button
-              onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-              sx={
-                theme === "dark"
-                  ? BodyPortfolioCommBtnDarkSx
-                  : BodyPortfolioCommBtnLightSx
-              }
-            >
-              Commission Your Own Art
-            </Button>
+            <Box>
+              <Button
+                onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
+                sx={
+                  theme === "dark"
+                    ? BodyPortfolioCommBtnDarkSx
+                    : BodyPortfolioCommBtnLightSx
+                }
+              >
+                <Typography
+                  className="Portfolio-Button-Helper"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCommBtnDarkHelperSx
+                      : BodyPortfolioCommBtnLightHelperSx
+                  }
+                >
+                  Commission Your Own Art
+                </Typography>
+                Commission Your Own Art
+              </Button>
+            </Box>
             <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
               <Divider
                 orientation="horizontal"

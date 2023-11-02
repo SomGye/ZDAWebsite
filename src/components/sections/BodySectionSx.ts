@@ -718,8 +718,8 @@ export const BodyPortfolioCommBoxSx = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "16px",
-    paddingBottom: "16px",
+    paddingTop: "4px",
+    paddingBottom: "4px",
   },
 };
 
@@ -729,15 +729,15 @@ export const BodyPortfolioCommBtnDividerBoxSx = {
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "16px",
-    marginBottom: "16px",
+    marginTop: "20px",
+    marginBottom: "20px",
   },
 };
 
 export const BodyPortfolioCommBtnDividerDarkSx = {
   ...{
     background:
-      "linear-gradient(90deg, #E89B00 0%, #E54500 35%, #E51059 70%, #D200FF)",
+      "linear-gradient(90deg, #E89B0004 0%, #E5450070 35%, #E5105970 70%, #D200FF0F)",
     minWidth: "85vw",
     maxWidth: "90vw",
   },
@@ -746,7 +746,7 @@ export const BodyPortfolioCommBtnDividerDarkSx = {
 export const BodyPortfolioCommBtnDividerLightSx = {
   ...{
     background:
-      "linear-gradient(90deg, #F4C7BE 0%, #EB58AE 35%, #E822BB 70%, #D104FF)",
+      "linear-gradient(90deg, #F4C7BE20 0%, #EB58AE40 35%, #E822BB40 70%, #D104FF0A)",
     minWidth: "85vw",
     maxWidth: "90vw",
   },
@@ -757,18 +757,42 @@ export const BodyPortfolioCommBtnDarkSx = {
     minWidth: "55vw",
     maxWidth: "75vw",
     height: "44px",
-    backgroundColor: "#503279",
+    background:
+      "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#ff00b5 77%,#936eff)",
     color: "#fafafacf",
     borderRadius: "24px",
-    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    boxShadow: "0px 1px 28px 1px #FF301F",
+    transition: "background-color 0.35s ease-out, color 0.35s ease-out",
     "&:hover": {
-      backgroundColor: "#9571fc",
-      color: "#252026",
-      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+      transition: "background-color 0.35s ease-out, color 0.35s ease-out",
+    },
+    "&:hover .Portfolio-Button-Helper": {
+      opacity: "1",
     },
     "&:focus": {
       outline: "none",
     },
+  },
+};
+
+export const BodyPortfolioCommBtnDarkHelperSx = {
+  ...{
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "1px 1px 1px 1px",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    fontSize: "0.875rem",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(291deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f040c5 77%,#936eff)",
+    boxShadow: "0px 2px 40px 2px red",
+    transition: "opacity 0.35s ease-out",
   },
 };
 
@@ -777,17 +801,42 @@ export const BodyPortfolioCommBtnLightSx = {
     minWidth: "55vw",
     maxWidth: "75vw",
     height: "44px",
-    backgroundColor: "#c5cafa",
-    color: "#2d282ecf",
+    background:
+      "linear-gradient(69deg,#f0a0ff,#f0a0ff 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    color: "#fafafafa",
     borderRadius: "24px",
-    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    boxShadow: "0px 1px 24px 4px #f0a0ff",
+    transition: "background-color 0.35s ease-out, color 0.35s ease-out",
     "&:hover": {
-      backgroundColor: "#493979",
-      color: "#fafafa",
-      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+      transition: "background-color 0.35s ease-out, color 0.35s ease-out",
+    },
+    "&:hover .Portfolio-Button-Helper": {
+      opacity: "1",
     },
     "&:focus": {
       outline: "none",
     },
+  },
+};
+
+export const BodyPortfolioCommBtnLightHelperSx = {
+  ...{
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "1px 1px 1px 1px",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    fontSize: "0.875rem",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(291deg,#E600D7,#ff6042 30%,#ff3f00 52%,#f701b5 77%,#936eff)",
+    color: "#2d282ecf",
+    boxShadow: "0px 2px 36px 2px #E600D7",
+    transition: "opacity 0.35s ease-out",
   },
 };
