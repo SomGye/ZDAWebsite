@@ -736,7 +736,8 @@ export const BodyPortfolioCommBtnDividerBoxSx = {
 
 export const BodyPortfolioCommBtnDividerDarkSx = {
   ...{
-    background: "linear-gradient(90deg, #E89B00 0%, #E54500 35%, #E51059 70%, #D200FF)",
+    background:
+      "linear-gradient(90deg, #E89B00 0%, #E54500 35%, #E51059 70%, #D200FF)",
     minWidth: "85vw",
     maxWidth: "90vw",
   },
@@ -744,9 +745,8 @@ export const BodyPortfolioCommBtnDividerDarkSx = {
 
 export const BodyPortfolioCommBtnDividerLightSx = {
   ...{
-    "--Divider-lineColor": "rgba(229,209,245,0.15)",
-    // TODO: gradient bg
-    // background: "linear-gradient(90deg, #E89B00 0%, #E54500 35%, #E51059 70%, #D200FF)",
+    background:
+      "linear-gradient(90deg, #F4C7BE 0%, #EB58AE 35%, #E822BB 70%, #D104FF)",
     minWidth: "85vw",
     maxWidth: "90vw",
   },

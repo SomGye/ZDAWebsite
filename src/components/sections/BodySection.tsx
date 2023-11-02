@@ -1166,7 +1166,7 @@ const BodySection = () => {
             </Card>
           </Box>
           <Box sx={BodyPortfolioCommBoxSx}>
-            {/* <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
+            <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
               <Divider
                 orientation="horizontal"
                 inset="none"
@@ -1176,7 +1176,7 @@ const BodySection = () => {
                     : BodyPortfolioCommBtnDividerLightSx
                 }
               />
-            </Box> */}
+            </Box>
             <Button
               onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
               sx={
@@ -1187,7 +1187,7 @@ const BodySection = () => {
             >
               Commission Your Own Art
             </Button>
-            {/* <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
+            <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
               <Divider
                 orientation="horizontal"
                 inset="none"
@@ -1197,7 +1197,7 @@ const BodySection = () => {
                     : BodyPortfolioCommBtnDividerLightSx
                 }
               />
-            </Box> */}
+            </Box>
           </Box>
         </Box>
       )}
