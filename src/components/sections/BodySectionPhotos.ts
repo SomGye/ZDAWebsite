@@ -110,21 +110,9 @@ export const photos_highlights_srcSet = [
 
 export const photos_socmed = [
   {
-    src: "/assets/socmed/Saturated_Axons-prog8-1200px.jpg",
-    width: 1200,
-    height: 1200,
-    srcSet: [
-      {
-        src: "/assets/socmed/Saturated_Axons-prog8-640px.jpg",
-        width: 640,
-        height: 640,
-      },
-      {
-        src: "/assets/socmed/Saturated_Axons-prog8-320px.jpg",
-        width: 320,
-        height: 320,
-      },
-    ],
+    src: "/assets/socmed/Saturated_Axons.jpg",
+    width: 2048,
+    height: 2048,
     alt: "Saturated Axons",
     title: "Saturated Axons",
   },
@@ -132,21 +120,9 @@ export const photos_socmed = [
 
 export const photos_prints_support = [
   {
-    src: "/assets/prints_support/Shores_of_Sanity-prog8-1200px.jpg",
+    src: "/assets/prints_support/Shores_of_Sanity-1600px.jpg",
     width: 1200,
     height: 1200,
-    srcSet: [
-      {
-        src: "/assets/prints_support/Shores_of_Sanity-prog8-640px.jpg",
-        width: 640,
-        height: 640,
-      },
-      {
-        src: "/assets/prints_support/Shores_of_Sanity-prog8-320px.jpg",
-        width: 320,
-        height: 320,
-      },
-    ],
     alt: "Shores of Sanity",
     title: "Shores of Sanity",
   },
