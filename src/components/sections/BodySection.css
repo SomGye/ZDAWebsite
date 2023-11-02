@@ -8,7 +8,7 @@ div.MuiContainer-root.BodyContainer {
 img.react-photo-album--photo {
   /* NOTE: Affects all React Photo Album imgs! */
   border-radius: 24px;
-  max-height: 30vh;
+  max-height: 520px;
   transition: opacity 0.2s ease-out;
   object-fit: cover; /* force correct aspect ratio but cropped in */
   &:hover {
