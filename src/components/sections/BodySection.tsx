@@ -62,8 +62,6 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { clickLink } from "../../Helpers";
 import {
   BodyContainerSx,
-  BodyHomeBoxSx,
-  BodyHomeHighlightsBoxSx,
   BodyHomeHighlightsCardSubtitleDarkSx,
   BodyHomeHighlightsCardSubtitleLightSx,
   BodyHomeHighlightsCardBtnDarkSx,
@@ -112,11 +110,15 @@ import {
   BodyPortfolioCommBtnDarkSx,
   BodyPortfolioCommBtnLightSx,
   BodyPortfolioCommBoxSx,
+  BodyHomeCardBoxSx,
+  BodyPortfolioCardBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
   photos_highlights,
   photos_highlights_srcSet,
+  photos_portfolio_late2022,
+  photos_portfolio_late2022_srcSet,
   photos_portfolio_late2023,
   photos_portfolio_late2023_srcSet,
   photos_prints_support,
@@ -126,15 +128,22 @@ import {
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
   const page = useRecoilValue(pageAtom);
-  const [index, setIndex] = React.useState(-1);
+  // const [index, setIndex] = React.useState(-1);
+  const [idx_highlights, setIdx_highlights] = React.useState(-1);
+  const [idx_late2023, setIdx_late2023] = React.useState(-1);
+  const [idx_late2022, setIdx_late2022] = React.useState(-1);
+  const [idx_late2021, setIdx_late2021] = React.useState(-1);
+  const [idx_early2021_pc, setIdx_early2021_pc] = React.useState(-1);
+  const [idx_early2021_h, setIdx_early2021_h] = React.useState(-1);
+  const [idx_early2021_p, setIdx_early2021_p] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
 
   return (
     <Container className="BodyContainer" sx={BodyContainerSx}>
       {page && page === "Home" && (
-        <Box sx={BodyHomeBoxSx}>
-          <Box sx={BodyHomeHighlightsBoxSx}>
+        <Box sx={BodyHomeCardBoxSx}>
+          <Box sx={BodyHomeCardBoxSx}>
             <Card
               sx={
                 theme === "dark"
@@ -179,7 +188,7 @@ const BodySection = () => {
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={200}
                     defaultContainerWidth={1000}
-                    onClick={({ index: current }) => setIndex(current)}
+                    onClick={({ index: current }) => setIdx_highlights(current)}
                   />
                   <Lightbox
                     plugins={[Captions]}
@@ -195,7 +204,7 @@ const BodySection = () => {
                           : captionsRef.current?.show)?.();
                       },
                     }}
-                    index={index}
+                    index={idx_highlights}
                     render={{
                       iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
                       iconCaptionsHidden: () => (
@@ -224,8 +233,8 @@ const BodySection = () => {
                         justifyContent: "center",
                       },
                     }}
-                    open={index >= 0}
-                    close={() => setIndex(-1)}
+                    open={idx_highlights >= 0}
+                    close={() => setIdx_highlights(-1)}
                   />
                 </Box>
                 <Divider
@@ -472,7 +481,7 @@ const BodySection = () => {
       )}
       {page && page === "Portfolio" && (
         <Box>
-          <Box sx={BodyHomeHighlightsBoxSx}>
+          <Box sx={BodyPortfolioCardBoxSx}>
             <Card
               sx={
                 theme === "dark"
@@ -517,7 +526,7 @@ const BodySection = () => {
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
                     defaultContainerWidth={1000}
-                    onClick={({ index: current }) => setIndex(current)}
+                    onClick={({ index: current }) => setIdx_late2023(current)}
                   />
                   <Lightbox
                     plugins={[Captions]}
@@ -533,7 +542,7 @@ const BodySection = () => {
                           : captionsRef.current?.show)?.();
                       },
                     }}
-                    index={index}
+                    index={idx_late2023}
                     render={{
                       iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
                       iconCaptionsHidden: () => (
@@ -562,8 +571,8 @@ const BodySection = () => {
                         justifyContent: "center",
                       },
                     }}
-                    open={index >= 0}
-                    close={() => setIndex(-1)}
+                    open={idx_late2023 >= 0}
+                    close={() => setIdx_late2023(-1)}
                   />
                 </Box>
                 <Divider
@@ -578,10 +587,111 @@ const BodySection = () => {
               </CardContent>
             </Card>
           </Box>
-          <Box>
-            <h3>
-              <i>Late 2022 - Early 2023</i>
-            </h3>
+          <Box sx={BodyPortfolioCardBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioCardDarkSx
+                  : BodyPortfolioCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardTitleDarkSx
+                      : BodyPortfolioCardTitleLightSx
+                  }
+                >
+                  Late 2022 - Early 2023
+                </Typography>
+                <Typography
+                  level="body-xs"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSubtitleDarkSx
+                      : BodyPortfolioCardSubtitleLightSx
+                  }
+                >
+                  {"("}Please click to view the full-size image{")"}
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_late2022_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    defaultContainerWidth={1000}
+                    onClick={({ index: current }) => setIdx_late2022(current)}
+                  />
+                  <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
+                    index={idx_late2022}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
+                    slides={photos_portfolio_late2022}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "16px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    open={idx_late2022 >= 0}
+                    close={() => setIdx_late2022(-1)}
+                  />
+                </Box>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+              </CardContent>
+            </Card>
           </Box>
           <Box>
             <h3>

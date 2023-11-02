@@ -8,7 +8,7 @@ export const BodyContainerSx = {
   },
 };
 
-export const BodyHomeBoxSx = {
+export const BodyHomeCardBoxSx = {
   ...{
     display: "flex",
     flexDirection: "column",
@@ -18,13 +18,15 @@ export const BodyHomeBoxSx = {
   },
 };
 
-export const BodyHomeHighlightsBoxSx = {
+export const BodyPortfolioCardBoxSx = {
   ...{
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
+    marginTop: "20px",
+    marginBottom: "20px",
   },
 };
 
