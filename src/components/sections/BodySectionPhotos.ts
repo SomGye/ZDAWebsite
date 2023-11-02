@@ -577,7 +577,7 @@ export const photos_portfolio_late2022 = [
     title: "Retrofuturista",
   },
   {
-    src: "/assets/portfolio_late2022/Was_It_Punishment.jpg",
+    src: "/assets/portfolio_late2022/Was%20It%20Punishment.jpg",
     width: 2048,
     height: 2048,
     alt: "Was It Punishment?",
@@ -872,17 +872,17 @@ export const photos_portfolio_late2022_srcSet = [
     title: "Retrofuturista",
   },
   {
-    src: "/assets/portfolio_late2022/Was_It_Punishment-1200px.jpg",
+    src: "/assets/portfolio_late2022/Was%20It%20Punishment-1200px.jpg",
     width: 1200,
     height: 1200,
     srcSet: [
       {
-        src: "/assets/portfolio_late2022/Was_It_Punishment-640px.jpg",
+        src: "/assets/portfolio_late2022/Was%20It%20Punishment-640px.jpg",
         width: 640,
         height: 640,
       },
       {
-        src: "/assets/portfolio_late2022/Was_It_Punishment-320px.jpg",
+        src: "/assets/portfolio_late2022/Was%20It%20Punishment-320px.jpg",
         width: 320,
         height: 320,
       },
@@ -894,21 +894,21 @@ export const photos_portfolio_late2022_srcSet = [
 
 export const photos_portfolio_late2021 = [
   {
-    src: "/assets/portfolio_late2021/We Enter The Fray Again.jpg",
+    src: "/assets/portfolio_late2021/We%20Enter%20The%20Fray%20Again.jpg",
     width: 2360,
     height: 1640,
     alt: "We Enter The Fray Again",
     title: "We Enter The Fray Again",
   },
   {
-    src: "/assets/portfolio_late2021/Ashes of Reverence.jpg",
+    src: "/assets/portfolio_late2021/Ashes%20of%20Reverence.jpg",
     width: 2360,
     height: 1640,
     alt: "Ashes of Reverence",
     title: "Ashes of Reverence",
   },
   {
-    src: "/assets/portfolio_late2021/Impending Flood.jpg",
+    src: "/assets/portfolio_late2021/Impending%20Flood.jpg",
     width: 2360,
     height: 1640,
     alt: "Impending Flood",
@@ -929,28 +929,28 @@ export const photos_portfolio_late2021 = [
     title: "Deconstricted",
   },
   {
-    src: "/assets/portfolio_late2021/ZDA Logo Concept 9-12-2021.jpg",
+    src: "/assets/portfolio_late2021/ZDA%20Logo%20Concept%209-12-2021.jpg",
     width: 2360,
     height: 1640,
     alt: "ZDA Logo Concept 9-12-2021",
     title: "ZDA Logo Concept 9-12-2021",
   },
   {
-    src: "/assets/portfolio_late2021/Paralytic Embrace.jpg",
+    src: "/assets/portfolio_late2021/Paralytic%20Embrace.jpg",
     width: 2360,
     height: 1640,
     alt: "Paralytic Embrace",
     title: "Paralytic Embrace",
   },
   {
-    src: "/assets/portfolio_late2021/Parallel Abandonment.jpg",
+    src: "/assets/portfolio_late2021/Parallel%20Abandonment.jpg",
     width: 2360,
     height: 1640,
     alt: "Parallel Abandonment",
     title: "Parallel Abandonment",
   },
   {
-    src: "/assets/portfolio_late2021/Voidshift Zero Alt.jpg",
+    src: "/assets/portfolio_late2021/Voidshift%20Zero%20Alt.jpg",
     width: 1640,
     height: 2360,
     alt: "Voidshift Zero Alt",
@@ -964,28 +964,28 @@ export const photos_portfolio_late2021 = [
     title: "Wordless",
   },
   {
-    src: "/assets/portfolio_late2021/Neural Burn.jpg",
+    src: "/assets/portfolio_late2021/Neural%20Burn.jpg",
     width: 1640,
     height: 2360,
     alt: "Neural Burn",
     title: "Neural Burn",
   },
   {
-    src: "/assets/portfolio_late2021/Power of Exclusion.jpg",
+    src: "/assets/portfolio_late2021/Power%20of%20Exclusion.jpg",
     width: 1640,
     height: 2360,
     alt: "Power of Exclusion",
     title: "Power of Exclusion",
   },
   {
-    src: "/assets/portfolio_late2021/A Toxic Stitch.jpg",
+    src: "/assets/portfolio_late2021/A%20Toxic%20Stitch.jpg",
     width: 1640,
     height: 2360,
     alt: "A Toxic Stitch",
     title: "A Toxic Stitch",
   },
   {
-    src: "/assets/portfolio_late2021/Sakura Fingers.jpg",
+    src: "/assets/portfolio_late2021/Sakura%20Fingers.jpg",
     width: 1640,
     height: 2360,
     alt: "Sakura Fingers",
@@ -1009,17 +1009,17 @@ export const photos_portfolio_late2021 = [
 
 export const photos_portfolio_late2021_srcSet = [
   {
-    src: "/assets/portfolio_late2021/We Enter The Fray Again-1200px.jpg",
+    src: "/assets/portfolio_late2021/We%20Enter%20The%20Fray%20Again-1200px.jpg",
     width: 1200,
     height: 834,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/We Enter The Fray Again-640px.jpg",
+        src: "/assets/portfolio_late2021/We%20Enter%20The%20Fray%20Again-640px.jpg",
         width: 640,
         height: 445,
       },
       {
-        src: "/assets/portfolio_late2021/We Enter The Fray Again-320px.jpg",
+        src: "/assets/portfolio_late2021/We%20Enter%20The%20Fray%20Again-320px.jpg",
         width: 320,
         height: 222,
       },
@@ -1028,17 +1028,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "We Enter The Fray Again",
   },
   {
-    src: "/assets/portfolio_late2021/Ashes of Reverence-1200px.jpg",
+    src: "/assets/portfolio_late2021/Ashes%20of%20Reverence-1200px.jpg",
     width: 1200,
     height: 834,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Ashes of Reverence-640px.jpg",
+        src: "/assets/portfolio_late2021/Ashes%20of%20Reverence-640px.jpg",
         width: 640,
         height: 445,
       },
       {
-        src: "/assets/portfolio_late2021/Ashes of Reverence-320px.jpg",
+        src: "/assets/portfolio_late2021/Ashes%20of%20Reverence-320px.jpg",
         width: 320,
         height: 222,
       },
@@ -1047,17 +1047,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Ashes of Reverence",
   },
   {
-    src: "/assets/portfolio_late2021/Impending Flood-1200px.jpg",
+    src: "/assets/portfolio_late2021/Impending%20Flood-1200px.jpg",
     width: 1200,
     height: 834,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Impending Flood-640px.jpg",
+        src: "/assets/portfolio_late2021/Impending%20Flood-640px.jpg",
         width: 640,
         height: 445,
       },
       {
-        src: "/assets/portfolio_late2021/Impending Flood-320px.jpg",
+        src: "/assets/portfolio_late2021/Impending%20Flood-320px.jpg",
         width: 320,
         height: 222,
       },
@@ -1104,17 +1104,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Deconstricted",
   },
   {
-    src: "/assets/portfolio_late2021/ZDA Logo Concept 9-12-2021-1200px.jpg",
+    src: "/assets/portfolio_late2021/ZDA%20Logo%20Concept%209-12-2021-1200px.jpg",
     width: 1200,
     height: 834,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/ZDA Logo Concept 9-12-2021-640px.jpg",
+        src: "/assets/portfolio_late2021/ZDA%20Logo%20Concept%209-12-2021-640px.jpg",
         width: 640,
         height: 445,
       },
       {
-        src: "/assets/portfolio_late2021/ZDA Logo Concept 9-12-2021-320px.jpg",
+        src: "/assets/portfolio_late2021/ZDA%20Logo%20Concept%209-12-2021-320px.jpg",
         width: 320,
         height: 222,
       },
@@ -1123,17 +1123,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "ZDA Logo Concept 9-12-2021",
   },
   {
-    src: "/assets/portfolio_late2021/Paralytic Embrace-1200px.jpg",
+    src: "/assets/portfolio_late2021/Paralytic%20Embrace-1200px.jpg",
     width: 1200,
     height: 834,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Paralytic Embrace-640px.jpg",
+        src: "/assets/portfolio_late2021/Paralytic%20Embrace-640px.jpg",
         width: 640,
         height: 445,
       },
       {
-        src: "/assets/portfolio_late2021/Paralytic Embrace-320px.jpg",
+        src: "/assets/portfolio_late2021/Paralytic%20Embrace-320px.jpg",
         width: 320,
         height: 222,
       },
@@ -1142,17 +1142,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Paralytic Embrace",
   },
   {
-    src: "/assets/portfolio_late2021/Parallel Abandonment-1200px.jpg",
+    src: "/assets/portfolio_late2021/Parallel%20Abandonment-1200px.jpg",
     width: 1200,
     height: 834,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Parallel Abandonment-640px.jpg",
+        src: "/assets/portfolio_late2021/Parallel%20Abandonment-640px.jpg",
         width: 640,
         height: 445,
       },
       {
-        src: "/assets/portfolio_late2021/Parallel Abandonment-320px.jpg",
+        src: "/assets/portfolio_late2021/Parallel%20Abandonment-320px.jpg",
         width: 320,
         height: 222,
       },
@@ -1161,17 +1161,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Parallel Abandonment",
   },
   {
-    src: "/assets/portfolio_late2021/Voidshift Zero Alt-1200px.jpg",
+    src: "/assets/portfolio_late2021/Voidshift%20Zero%20Alt-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Voidshift Zero Alt-640px.jpg",
+        src: "/assets/portfolio_late2021/Voidshift%20Zero%20Alt-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_late2021/Voidshift Zero Alt-320px.jpg",
+        src: "/assets/portfolio_late2021/Voidshift%20Zero%20Alt-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1199,17 +1199,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Wordless",
   },
   {
-    src: "/assets/portfolio_late2021/Neural Burn-1200px.jpg",
+    src: "/assets/portfolio_late2021/Neural%20Burn-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Neural Burn-640px.jpg",
+        src: "/assets/portfolio_late2021/Neural%20Burn-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_late2021/Neural Burn-320px.jpg",
+        src: "/assets/portfolio_late2021/Neural%20Burn-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1218,17 +1218,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Neural Burn",
   },
   {
-    src: "/assets/portfolio_late2021/Power of Exclusion-1200px.jpg",
+    src: "/assets/portfolio_late2021/Power%20of%20Exclusion-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Power of Exclusion-640px.jpg",
+        src: "/assets/portfolio_late2021/Power%20of%20Exclusion-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_late2021/Power of Exclusion-320px.jpg",
+        src: "/assets/portfolio_late2021/Power%20of%20Exclusion-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1237,17 +1237,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "Power of Exclusion",
   },
   {
-    src: "/assets/portfolio_late2021/A Toxic Stitch-1200px.jpg",
+    src: "/assets/portfolio_late2021/A%20Toxic%20Stitch-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/A Toxic Stitch-640px.jpg",
+        src: "/assets/portfolio_late2021/A%20Toxic%20Stitch-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_late2021/A Toxic Stitch-320px.jpg",
+        src: "/assets/portfolio_late2021/A%20Toxic%20Stitch-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1256,17 +1256,17 @@ export const photos_portfolio_late2021_srcSet = [
     title: "A Toxic Stitch",
   },
   {
-    src: "/assets/portfolio_late2021/Sakura Fingers-1200px.jpg",
+    src: "/assets/portfolio_late2021/Sakura%20Fingers-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_late2021/Sakura Fingers-640px.jpg",
+        src: "/assets/portfolio_late2021/Sakura%20Fingers-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_late2021/Sakura Fingers-320px.jpg",
+        src: "/assets/portfolio_late2021/Sakura%20Fingers-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1316,28 +1316,28 @@ export const photos_portfolio_late2021_srcSet = [
 
 export const photos_portfolio_early2021_procreate = [
   {
-    src: "/assets/portfolio_early2021_procreate/Nothing Will Stay.jpg",
+    src: "/assets/portfolio_early2021_procreate/Nothing%20Will%20Stay.jpg",
     width: 1640,
     height: 2360,
     alt: "Nothing Will Stay",
     title: "Nothing Will Stay",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/Eroded Heart.jpg",
+    src: "/assets/portfolio_early2021_procreate/Eroded%20Heart.jpg",
     width: 1640,
     height: 2360,
     alt: "Eroded Heart",
     title: "Eroded Heart",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/Eroded Chamber.jpg",
+    src: "/assets/portfolio_early2021_procreate/Eroded%20Chamber.jpg",
     width: 1640,
     height: 2360,
     alt: "Eroded Chamber",
     title: "Eroded Chamber",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/First Doodle in Procreate.jpg",
+    src: "/assets/portfolio_early2021_procreate/First%20Doodle%20in%20Procreate.jpg",
     width: 1640,
     height: 2360,
     alt: "First Doodle in Procreate",
@@ -1347,17 +1347,17 @@ export const photos_portfolio_early2021_procreate = [
 
 export const photos_portfolio_early2021_procreate_srcSet = [
   {
-    src: "/assets/portfolio_early2021_procreate/Nothing Will Stay-1200px.jpg",
+    src: "/assets/portfolio_early2021_procreate/Nothing%20Will%20Stay-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/Nothing Will Stay-640px.jpg",
+        src: "/assets/portfolio_early2021_procreate/Nothing%20Will%20Stay-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_early2021_procreate/Nothing Will Stay-320px.jpg",
+        src: "/assets/portfolio_early2021_procreate/Nothing%20Will%20Stay-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1366,17 +1366,17 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     title: "Nothing Will Stay",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/Eroded Heart-1200px.jpg",
+    src: "/assets/portfolio_early2021_procreate/Eroded%20Heart-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/Eroded Heart-640px.jpg",
+        src: "/assets/portfolio_early2021_procreate/Eroded%20Heart-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_early2021_procreate/Eroded Heart-320px.jpg",
+        src: "/assets/portfolio_early2021_procreate/Eroded%20Heart-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1385,17 +1385,17 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     title: "Eroded Heart",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/Eroded Chamber-1200px.jpg",
+    src: "/assets/portfolio_early2021_procreate/Eroded%20Chamber-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/Eroded Chamber-640px.jpg",
+        src: "/assets/portfolio_early2021_procreate/Eroded%20Chamber-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_early2021_procreate/Eroded Chamber-320px.jpg",
+        src: "/assets/portfolio_early2021_procreate/Eroded%20Chamber-320px.jpg",
         width: 320,
         height: 460,
       },
@@ -1404,17 +1404,17 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     title: "Eroded Chamber",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/First Doodle in Procreate-1200px.jpg",
+    src: "/assets/portfolio_early2021_procreate/First%20Doodle%20in%20Procreate-1200px.jpg",
     width: 1200,
     height: 1727,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/First Doodle in Procreate-640px.jpg",
+        src: "/assets/portfolio_early2021_procreate/First%20Doodle%20in%20Procreate-640px.jpg",
         width: 640,
         height: 921,
       },
       {
-        src: "/assets/portfolio_early2021_procreate/First Doodle in Procreate-320px.jpg",
+        src: "/assets/portfolio_early2021_procreate/First%20Doodle%20in%20Procreate-320px.jpg",
         width: 320,
         height: 460,
       },
