@@ -649,6 +649,30 @@ export const BodyPortfolioCardTitleLightSx = {
   },
 };
 
+export const BodyPortfolioCardSecondTitleDarkSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(270deg, rgba(239,138,181,1) 0%, rgba(234,66,171,1) 43%, rgba(191,26,255,1) 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    fontSize: "14px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyPortfolioCardSecondTitleLightSx = {
+  ...{
+    backgroundImage:
+      "linear-gradient(270deg, rgba(130,9,20,1) 0%, rgba(196,5,79,1) 43%, rgba(225,127,96,1) 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    fontSize: "14px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
 export const BodyPortfolioCardSubtitleDarkSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
@@ -696,6 +720,35 @@ export const BodyPortfolioCommBoxSx = {
     alignItems: "center",
     paddingTop: "16px",
     paddingBottom: "16px",
+  },
+};
+
+export const BodyPortfolioCommBtnDividerBoxSx = {
+  ...{
+    display: "flex",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "16px",
+    marginBottom: "16px",
+  },
+};
+
+export const BodyPortfolioCommBtnDividerDarkSx = {
+  ...{
+    background: "linear-gradient(90deg, #E89B00 0%, #E54500 35%, #E51059 70%, #D200FF)",
+    minWidth: "85vw",
+    maxWidth: "90vw",
+  },
+};
+
+export const BodyPortfolioCommBtnDividerLightSx = {
+  ...{
+    "--Divider-lineColor": "rgba(229,209,245,0.15)",
+    // TODO: gradient bg
+    // background: "linear-gradient(90deg, #E89B00 0%, #E54500 35%, #E51059 70%, #D200FF)",
+    minWidth: "85vw",
+    maxWidth: "90vw",
   },
 };
 

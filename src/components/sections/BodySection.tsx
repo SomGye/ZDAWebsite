@@ -112,11 +112,24 @@ import {
   BodyPortfolioCommBoxSx,
   BodyHomeCardBoxSx,
   BodyPortfolioCardBoxSx,
+  BodyPortfolioCardSecondTitleDarkSx,
+  BodyPortfolioCardSecondTitleLightSx,
+  BodyPortfolioCommBtnDividerDarkSx,
+  BodyPortfolioCommBtnDividerLightSx,
+  BodyPortfolioCommBtnDividerBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
   photos_highlights,
   photos_highlights_srcSet,
+  photos_portfolio_early2021_huion,
+  photos_portfolio_early2021_huion_srcSet,
+  photos_portfolio_early2021_penup,
+  photos_portfolio_early2021_penup_srcSet,
+  photos_portfolio_early2021_procreate,
+  photos_portfolio_early2021_procreate_srcSet,
+  photos_portfolio_late2021,
+  photos_portfolio_late2021_srcSet,
   photos_portfolio_late2022,
   photos_portfolio_late2022_srcSet,
   photos_portfolio_late2023,
@@ -128,7 +141,6 @@ import {
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
   const page = useRecoilValue(pageAtom);
-  // const [index, setIndex] = React.useState(-1);
   const [idx_highlights, setIdx_highlights] = React.useState(-1);
   const [idx_late2023, setIdx_late2023] = React.useState(-1);
   const [idx_late2022, setIdx_late2022] = React.useState(-1);
@@ -693,32 +705,478 @@ const BodySection = () => {
               </CardContent>
             </Card>
           </Box>
-          <Box>
-            <h3>
-              <i>Late 2021 - Early 2022</i>
-            </h3>
+          <Box sx={BodyPortfolioCardBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioCardDarkSx
+                  : BodyPortfolioCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardTitleDarkSx
+                      : BodyPortfolioCardTitleLightSx
+                  }
+                >
+                  Late 2021 - Early 2022
+                </Typography>
+                <Typography
+                  level="body-xs"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSubtitleDarkSx
+                      : BodyPortfolioCardSubtitleLightSx
+                  }
+                >
+                  {"("}Please click to view the full-size image{")"}
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_late2021_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    defaultContainerWidth={1000}
+                    onClick={({ index: current }) => setIdx_late2021(current)}
+                  />
+                  <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
+                    index={idx_late2021}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
+                    slides={photos_portfolio_late2021}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "16px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    open={idx_late2021 >= 0}
+                    close={() => setIdx_late2021(-1)}
+                  />
+                </Box>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+              </CardContent>
+            </Card>
           </Box>
-          <Box>
-            <h3>
-              <i>Early 2021</i>
-            </h3>
-            <Box>
-              <h4>
-                <i>(Procreate: First Works)</i>
-              </h4>
-            </Box>
-            <Box>
-              <h4>
-                <i>(Huion Sketch (Phone))</i>
-              </h4>
-            </Box>
-            <Box>
-              <h4>
-                <i>(PenUp (Phone))</i>
-              </h4>
-            </Box>
+          <Box sx={BodyPortfolioCardBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioCardDarkSx
+                  : BodyPortfolioCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardTitleDarkSx
+                      : BodyPortfolioCardTitleLightSx
+                  }
+                >
+                  Early 2021
+                </Typography>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSecondTitleDarkSx
+                      : BodyPortfolioCardSecondTitleLightSx
+                  }
+                >
+                  Procreate: First Works
+                </Typography>
+                <Typography
+                  level="body-xs"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSubtitleDarkSx
+                      : BodyPortfolioCardSubtitleLightSx
+                  }
+                >
+                  {"("}Please click to view the full-size image{")"}
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_early2021_procreate_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    defaultContainerWidth={1000}
+                    onClick={({ index: current }) =>
+                      setIdx_early2021_pc(current)
+                    }
+                  />
+                  <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
+                    index={idx_early2021_pc}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
+                    slides={photos_portfolio_early2021_procreate}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "16px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    open={idx_early2021_pc >= 0}
+                    close={() => setIdx_early2021_pc(-1)}
+                  />
+                </Box>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+              </CardContent>
+            </Card>
+          </Box>
+          <Box sx={BodyPortfolioCardBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioCardDarkSx
+                  : BodyPortfolioCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardTitleDarkSx
+                      : BodyPortfolioCardTitleLightSx
+                  }
+                >
+                  Early 2021
+                </Typography>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSecondTitleDarkSx
+                      : BodyPortfolioCardSecondTitleLightSx
+                  }
+                >
+                  Huion Sketch (Phone)
+                </Typography>
+                <Typography
+                  level="body-xs"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSubtitleDarkSx
+                      : BodyPortfolioCardSubtitleLightSx
+                  }
+                >
+                  {"("}Please click to view the full-size image{")"}
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_early2021_huion_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    defaultContainerWidth={1000}
+                    onClick={({ index: current }) =>
+                      setIdx_early2021_h(current)
+                    }
+                  />
+                  <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
+                    index={idx_early2021_h}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
+                    slides={photos_portfolio_early2021_huion}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "16px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    open={idx_early2021_h >= 0}
+                    close={() => setIdx_early2021_h(-1)}
+                  />
+                </Box>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+              </CardContent>
+            </Card>
+          </Box>
+          <Box sx={BodyPortfolioCardBoxSx}>
+            <Card
+              sx={
+                theme === "dark"
+                  ? BodyPortfolioCardDarkSx
+                  : BodyPortfolioCardLightSx
+              }
+            >
+              <CardContent sx={BodyHomeHighlightsCardContentSx}>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardTitleDarkSx
+                      : BodyPortfolioCardTitleLightSx
+                  }
+                >
+                  Early 2021
+                </Typography>
+                <Typography
+                  level="title-lg"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSecondTitleDarkSx
+                      : BodyPortfolioCardSecondTitleLightSx
+                  }
+                >
+                  PenUp (Phone)
+                </Typography>
+                <Typography
+                  level="body-xs"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardSubtitleDarkSx
+                      : BodyPortfolioCardSubtitleLightSx
+                  }
+                >
+                  {"("}Please click to view the full-size image{")"}
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_early2021_penup_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    defaultContainerWidth={1000}
+                    onClick={({ index: current }) =>
+                      setIdx_early2021_p(current)
+                    }
+                  />
+                  <Lightbox
+                    plugins={[Captions]}
+                    captions={{
+                      ref: captionsRef,
+                      showToggle: true,
+                      descriptionTextAlign: "center",
+                    }}
+                    on={{
+                      click: () => {
+                        (captionsRef.current?.visible
+                          ? captionsRef.current?.hide
+                          : captionsRef.current?.show)?.();
+                      },
+                    }}
+                    index={idx_early2021_p}
+                    render={{
+                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsHidden: () => (
+                        <ClosedCaptionDisabledRoundedIcon />
+                      ),
+                      iconClose: () => <CloseRoundedIcon />,
+                    }}
+                    slides={photos_portfolio_early2021_penup}
+                    styles={{
+                      container: {
+                        backdropFilter: "blur(16px)",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      },
+                      captionsTitle: {
+                        fontSize: "16px",
+                        fontWeight: "400",
+                      },
+                      captionsTitleContainer: {
+                        height: "16px",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        top: "auto",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    open={idx_early2021_p >= 0}
+                    close={() => setIdx_early2021_p(-1)}
+                  />
+                </Box>
+                <Divider
+                  orientation="horizontal"
+                  inset="none"
+                  sx={
+                    theme === "dark"
+                      ? BodyPortfolioCardDividerDarkSx
+                      : BodyPortfolioCardDividerLightSx
+                  }
+                />
+              </CardContent>
+            </Card>
           </Box>
           <Box sx={BodyPortfolioCommBoxSx}>
+            {/* <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
+              <Divider
+                orientation="horizontal"
+                inset="none"
+                sx={
+                  theme === "dark"
+                    ? BodyPortfolioCommBtnDividerDarkSx
+                    : BodyPortfolioCommBtnDividerLightSx
+                }
+              />
+            </Box> */}
             <Button
               onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
               sx={
@@ -729,6 +1187,17 @@ const BodySection = () => {
             >
               Commission Your Own Art
             </Button>
+            {/* <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
+              <Divider
+                orientation="horizontal"
+                inset="none"
+                sx={
+                  theme === "dark"
+                    ? BodyPortfolioCommBtnDividerDarkSx
+                    : BodyPortfolioCommBtnDividerLightSx
+                }
+              />
+            </Box> */}
           </Box>
         </Box>
       )}
