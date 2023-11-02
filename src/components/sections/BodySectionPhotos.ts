@@ -1457,12 +1457,12 @@ export const photos_portfolio_early2021_huion = [
 
 export const photos_portfolio_early2021_huion_srcSet = [
   {
-    src: "/assets/portfolio_early2021_procreate/HuionSketch_1623481967592-640px.jpg",
+    src: "/assets/portfolio_early2021_huion/HuionSketch_1623481967592-640px.jpg",
     width: 640,
     height: 853,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/HuionSketch_1623481967592-320px.jpg",
+        src: "/assets/portfolio_early2021_huion/HuionSketch_1623481967592-320px.jpg",
         width: 320,
         height: 427,
       },
@@ -1471,12 +1471,12 @@ export const photos_portfolio_early2021_huion_srcSet = [
     title: "HuionSketch_1623481967592",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/HuionSketch_1625698314399-640px.jpg",
+    src: "/assets/portfolio_early2021_huion/HuionSketch_1625698314399-640px.jpg",
     width: 640,
     height: 853,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/HuionSketch_1625698314399-320px.jpg",
+        src: "/assets/portfolio_early2021_huion/HuionSketch_1625698314399-320px.jpg",
         width: 320,
         height: 427,
       },
@@ -1485,12 +1485,12 @@ export const photos_portfolio_early2021_huion_srcSet = [
     title: "HuionSketch_1625698314399",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/HuionSketch_1625699078818-640px.jpg",
+    src: "/assets/portfolio_early2021_huion/HuionSketch_1625699078818-640px.jpg",
     width: 640,
     height: 853,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/HuionSketch_1625699078818-320px.jpg",
+        src: "/assets/portfolio_early2021_huion/HuionSketch_1625699078818-320px.jpg",
         width: 320,
         height: 427,
       },
@@ -1499,12 +1499,12 @@ export const photos_portfolio_early2021_huion_srcSet = [
     title: "HuionSketch_1625699078818",
   },
   {
-    src: "/assets/portfolio_early2021_procreate/HuionSketch_1625704616676-640px.jpg",
+    src: "/assets/portfolio_early2021_huion/HuionSketch_1625704616676-640px.jpg",
     width: 640,
     height: 853,
     srcSet: [
       {
-        src: "/assets/portfolio_early2021_procreate/HuionSketch_1625704616676-320px.jpg",
+        src: "/assets/portfolio_early2021_huion/HuionSketch_1625704616676-320px.jpg",
         width: 320,
         height: 427,
       },
