@@ -105,8 +105,6 @@ import {
   BodyPortfolioCardTitleLightSx,
   BodyPortfolioCardSubtitleDarkSx,
   BodyPortfolioCardSubtitleLightSx,
-  BodyPortfolioCardDividerDarkSx,
-  BodyPortfolioCardDividerLightSx,
   BodyPortfolioCommBtnDarkSx,
   BodyPortfolioCommBtnLightSx,
   BodyPortfolioCommBoxSx,
@@ -525,22 +523,13 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_late2023_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
-                    rowConstraints={{maxPhotos: 4, minPhotos: 1}}
+                    rowConstraints={{ maxPhotos: 4, minPhotos: 1 }}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2023(current)}
                   />
@@ -591,15 +580,6 @@ const BodySection = () => {
                     close={() => setIdx_late2023(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
               </CardContent>
             </Card>
           </Box>
@@ -632,22 +612,13 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_late2022_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
-                    rowConstraints={{maxPhotos: 5, minPhotos: 2}}
+                    rowConstraints={{ maxPhotos: 5, minPhotos: 2 }}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2022(current)}
                   />
@@ -698,15 +669,6 @@ const BodySection = () => {
                     close={() => setIdx_late2022(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
               </CardContent>
             </Card>
           </Box>
@@ -739,22 +701,13 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_late2021_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={170}
-                    rowConstraints={{maxPhotos: 6, minPhotos: 2}}
+                    rowConstraints={{ maxPhotos: 6, minPhotos: 2 }}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2021(current)}
                   />
@@ -805,15 +758,6 @@ const BodySection = () => {
                     close={() => setIdx_late2021(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
               </CardContent>
             </Card>
           </Box>
@@ -856,22 +800,13 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_early2021_procreate_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={163}
-                    rowConstraints={{maxPhotos: 4, minPhotos: 2}}
+                    rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_pc(current)
@@ -924,15 +859,6 @@ const BodySection = () => {
                     close={() => setIdx_early2021_pc(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
               </CardContent>
             </Card>
           </Box>
@@ -975,22 +901,13 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_early2021_huion_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
-                    rowConstraints={{maxPhotos: 4, minPhotos: 2}}
+                    rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_h(current)
@@ -1043,15 +960,6 @@ const BodySection = () => {
                     close={() => setIdx_early2021_h(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
               </CardContent>
             </Card>
           </Box>
@@ -1094,22 +1002,13 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_early2021_penup_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={160}
-                    rowConstraints={{maxPhotos: 8, minPhotos: 3}}
+                    rowConstraints={{ maxPhotos: 8, minPhotos: 3 }}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_p(current)
@@ -1162,19 +1061,9 @@ const BodySection = () => {
                     close={() => setIdx_early2021_p(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyPortfolioCardDividerDarkSx
-                      : BodyPortfolioCardDividerLightSx
-                  }
-                />
               </CardContent>
             </Card>
           </Box>
-          {/* TODO: fix targetRowHeight for above images! */}
           <Box sx={BodyPortfolioCommBoxSx}>
             <Box sx={BodyPortfolioCommBtnDividerBoxSx}>
               <Divider

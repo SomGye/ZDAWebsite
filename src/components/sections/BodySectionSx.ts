@@ -704,18 +704,6 @@ export const BodyPortfolioCardSubtitleLightSx = {
   },
 };
 
-export const BodyPortfolioCardDividerDarkSx = {
-  ...{
-    "--Divider-lineColor": "rgba(61,39,115,0.15)",
-  },
-};
-
-export const BodyPortfolioCardDividerLightSx = {
-  ...{
-    "--Divider-lineColor": "rgba(229,209,245,0.15)",
-  },
-};
-
 export const BodyPortfolioCommBoxSx = {
   ...{
     width: "100%",
