@@ -607,11 +607,11 @@ export const BodyPortfolioCardLightSx = {
     margin: "20px",
     width: "95%",
     minHeight: "250px",
-    background: "linear-gradient(210deg, #f9f9f9, #f0f0f0fa) padding-box",
+    background: "linear-gradient(210deg, #f9f9f9, #f2f2f2fa) padding-box",
     backgroundClip: "padding-box",
     border: "1px solid transparent",
     filter:
-      "drop-shadow(28px 28px 24px rgba(186,186,186,0.5)) drop-shadow(-28px -28px 12px #f2f2f2f0)",
+      "drop-shadow(20px 14px 8px rgba(186,186,186,0.6)) drop-shadow(-28px -28px 12px #efefeff9)",
     "@media (max-width: 1500px)": {
       width: "94%",
     },
