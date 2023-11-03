@@ -137,6 +137,7 @@ export const TopBannerCommButtonDarkSx = {
     background:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     borderRadius: "24px",
+    boxShadow: "0px 1px 12px 1px #FF301F",
     transition: "background 0.15s",
     transitionTimingFunction: "ease-out",
     "&:focus": {
@@ -167,6 +168,7 @@ export const TopBannerCommButtonDarkHelperSx = {
     borderRadius: "24px",
     background:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    boxShadow: "0px 1px 24px 2px red",
     transition: "opacity 0.20s",
     transitionTimingFunction: "ease-out",
     "@media (max-width: 340px)": {
@@ -180,6 +182,7 @@ export const TopBannerCommButtonLightSx = {
     background:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     borderRadius: "24px",
+    boxShadow: "0px 1px 12px 3px #f0a0ff",
     transition: "background 0.15s",
     transitionTimingFunction: "ease-out",
     "&:focus": {
@@ -210,6 +213,7 @@ export const TopBannerCommButtonLightHelperSx = {
     borderRadius: "24px",
     background:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    boxShadow: "0px 1px 24px 2px #E600D7",
     transition: "opacity 0.20s",
     transitionTimingFunction: "ease-out",
     "@media (max-width: 340px)": {
