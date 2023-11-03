@@ -540,6 +540,7 @@ const BodySection = () => {
                     photos={photos_portfolio_late2023_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
+                    rowConstraints={{maxPhotos: 4, minPhotos: 1}}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2023(current)}
                   />
@@ -646,6 +647,7 @@ const BodySection = () => {
                     photos={photos_portfolio_late2022_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
+                    rowConstraints={{maxPhotos: 5, minPhotos: 2}}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2022(current)}
                   />
@@ -752,6 +754,7 @@ const BodySection = () => {
                     photos={photos_portfolio_late2021_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={170}
+                    rowConstraints={{maxPhotos: 6, minPhotos: 2}}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2021(current)}
                   />
@@ -868,6 +871,7 @@ const BodySection = () => {
                     photos={photos_portfolio_early2021_procreate_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={163}
+                    rowConstraints={{maxPhotos: 4, minPhotos: 2}}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_pc(current)
@@ -986,6 +990,7 @@ const BodySection = () => {
                     photos={photos_portfolio_early2021_huion_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
+                    rowConstraints={{maxPhotos: 4, minPhotos: 2}}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_h(current)
@@ -1104,6 +1109,7 @@ const BodySection = () => {
                     photos={photos_portfolio_early2021_penup_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={160}
+                    rowConstraints={{maxPhotos: 8, minPhotos: 3}}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_p(current)
