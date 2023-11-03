@@ -376,6 +376,7 @@ const BodySection = () => {
                     columns={1}
                     spacing={1}
                     padding={1}
+                    targetRowHeight={400}
                     defaultContainerWidth={600}
                   />
                 </Box>
@@ -750,7 +751,7 @@ const BodySection = () => {
                     layout="rows"
                     photos={photos_portfolio_late2021_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
-                    targetRowHeight={220}
+                    targetRowHeight={170}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) => setIdx_late2021(current)}
                   />
@@ -866,7 +867,7 @@ const BodySection = () => {
                     layout="rows"
                     photos={photos_portfolio_early2021_procreate_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
-                    targetRowHeight={220}
+                    targetRowHeight={163}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_pc(current)
@@ -984,7 +985,7 @@ const BodySection = () => {
                     layout="rows"
                     photos={photos_portfolio_early2021_huion_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
-                    targetRowHeight={220}
+                    targetRowHeight={150}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_h(current)
@@ -1102,7 +1103,7 @@ const BodySection = () => {
                     layout="rows"
                     photos={photos_portfolio_early2021_penup_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
-                    targetRowHeight={220}
+                    targetRowHeight={160}
                     defaultContainerWidth={1000}
                     onClick={({ index: current }) =>
                       setIdx_early2021_p(current)
