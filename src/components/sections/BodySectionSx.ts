@@ -366,6 +366,7 @@ export const BodyHomeSocmedPhotoBoxSx = {
   ...{
     minWidth: "1px",
     minHeight: "1px",
+    maxWidth: "360px",
     height: "100%",
   },
 };
