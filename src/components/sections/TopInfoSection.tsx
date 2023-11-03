@@ -119,6 +119,11 @@ const TopInfoSection = () => {
   const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
   const commStatus = useRecoilValue(commStatusAtom);
 
+  const switchPage = (target: string) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    setPage(target);
+  };
+
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
       if (theme === "dark") {
@@ -221,19 +226,19 @@ const TopInfoSection = () => {
       </Box>
       <Box sx={TopInfoNavButtonBoxSx}>
         <Button
-          onClick={() => setPage("Home")}
+          onClick={() => switchPage("Home")}
           sx={() => determineGroupButtonStyle("Home")}
         >
           Home
         </Button>
         <Button
-          onClick={() => setPage("Portfolio")}
+          onClick={() => switchPage("Portfolio")}
           sx={() => determineGroupButtonStyle("Portfolio")}
         >
           Portfolio
         </Button>
         <Button
-          onClick={() => setPage("Commissions")}
+          onClick={() => switchPage("Commissions")}
           sx={() => determineGroupButtonStyle("Commissions")}
         >
           Commissions

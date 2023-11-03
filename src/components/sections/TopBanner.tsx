@@ -54,6 +54,11 @@ const TopBanner = () => {
   const [page, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
 
+  const switchPage = (target: string) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    setPage(target);
+  };
+
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
       if (theme === "dark") {
@@ -129,19 +134,19 @@ const TopBanner = () => {
             sx={TopBannerButtonGroupSx}
           >
             <Button
-              onClick={() => setPage("Home")}
+              onClick={() => switchPage("Home")}
               sx={() => determineGroupButtonStyle("Home")}
             >
               Home
             </Button>
             <Button
-              onClick={() => setPage("Portfolio")}
+              onClick={() => switchPage("Portfolio")}
               sx={() => determineGroupButtonStyle("Portfolio")}
             >
               Portfolio
             </Button>
             <Button
-              onClick={() => setPage("Commissions")}
+              onClick={() => switchPage("Commissions")}
               sx={() => determineGroupButtonStyle("Commissions")}
             >
               Commissions

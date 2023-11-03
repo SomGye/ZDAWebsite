@@ -47,6 +47,11 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
 
+  const switchPage = (target: string) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    setPage(target);
+  };
+
   React.useEffect(() => {
     if (open) {
       document.body.classList.add("noscroll");
@@ -76,7 +81,9 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
         <Sheet
           sx={theme === "dark" ? HamburgerSheetDarkSx : HamburgerSheetLightSx}
         >
-          <DialogTitle sx={{ pointerEvents: "none", userSelect: "none" }}>Links</DialogTitle>
+          <DialogTitle sx={{ pointerEvents: "none", userSelect: "none" }}>
+            Links
+          </DialogTitle>
           <ModalClose
             sx={theme === "dark" ? HamburgerCloseDarkSx : HamburgerCloseLightSx}
           />
@@ -94,7 +101,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <Box sx={HamburgerBoxTopSx}>
               <Button
                 onClick={() => {
-                  setPage("Home");
+                  switchPage("Home");
                   setOpen(false);
                 }}
                 sx={
@@ -107,7 +114,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  setPage("Portfolio");
+                  switchPage("Portfolio");
                   setOpen(false);
                 }}
                 sx={
@@ -120,7 +127,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  setPage("Commissions");
+                  switchPage("Commissions");
                   setOpen(false);
                 }}
                 sx={
