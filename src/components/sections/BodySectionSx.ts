@@ -577,11 +577,11 @@ export const BodyPortfolioCardDarkSx = {
     margin: "20px",
     width: "95%",
     minHeight: "250px",
-    background: "linear-gradient(70deg, #14131540, #252525) padding-box",
+    background: "linear-gradient(70deg, #202020f8, #252525) padding-box",
     backgroundClip: "padding-box",
     border: "1px solid transparent",
-    boxShadow:
-      "41px 41px 82px rgba(69,69,69,0.25), -41px -41px 82px rgba(20,19,21,0.5)",
+    filter:
+      "drop-shadow(10px 8px 7px rgba(48,48,48,0.6)) drop-shadow(-12px -8px 8px rgba(20,19,21,0.6))",
     "@media (max-width: 1500px)": {
       width: "94%",
     },
@@ -607,11 +607,11 @@ export const BodyPortfolioCardLightSx = {
     margin: "20px",
     width: "95%",
     minHeight: "250px",
-    background: "linear-gradient(210deg, #f9f9f9, #ededed) padding-box",
+    background: "linear-gradient(210deg, #f9f9f9, #f0f0f0fa) padding-box",
     backgroundClip: "padding-box",
     border: "1px solid transparent",
-    boxShadow:
-      "41px 41px 82px rgba(186,186,186,0.65), -41px -41px 82px #fafafa",
+    filter:
+      "drop-shadow(28px 28px 24px rgba(186,186,186,0.5)) drop-shadow(-28px -28px 12px #f2f2f2f0)",
     "@media (max-width: 1500px)": {
       width: "94%",
     },
