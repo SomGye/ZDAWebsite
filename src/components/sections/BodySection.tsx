@@ -44,10 +44,14 @@ import {
   Box,
   Button,
   Card,
+  CardActions,
   CardContent,
   CardOverflow,
   Container,
   Divider,
+  List,
+  ListItem,
+  ListItemDecorator,
   Typography,
 } from "@mui/joy";
 import PhotoAlbum from "react-photo-album";
@@ -117,6 +121,37 @@ import {
   BodyPortfolioCommBtnDividerBoxSx,
   BodyPortfolioCommBtnDarkHelperSx,
   BodyPortfolioCommBtnLightHelperSx,
+  BodyCommsTiersTypographyDarkSx,
+  BodyCommsTiersTypographyLightSx,
+  BodyCommsTiersCardsBoxSx,
+  BodyCommsTiersCardBasicDarkSx,
+  BodyCommsTiersCardBasicLightSx,
+  BodyCommsTiersCardStandardDarkSx,
+  BodyCommsTiersCardStandardLightSx,
+  BodyCommsTiersCardAbstractifyDarkSx,
+  BodyCommsTiersCardAbstractifyLightSx,
+  BodyCommsTiersCardPremiumDarkSx,
+  BodyCommsTiersCardPremiumLightSx,
+  BodyCommsTiersCardBasicTitleDarkSx,
+  BodyCommsTiersCardBasicTitleLightSx,
+  BodyCommsTiersBoxSx,
+  BodyCommsTiersCardBasicDescOuterDarkSx,
+  BodyCommsTiersCardBasicDescOuterLightSx,
+  BodyCommsTiersCardBasicDescInnerDarkSx,
+  BodyCommsTiersCardBasicDescInnerLightSx,
+  BodyCommsTiersCardBasicDescBoxSx,
+  BodyCommsTiersCardBasicListIconDarkSx,
+  BodyCommsTiersCardBasicListIconLightSx,
+  BodyCommsTiersCardBasicListItemDarkSx,
+  BodyCommsTiersCardBasicListItemLightSx,
+  BodyCommsTiersCardBasicPricingBoxSx,
+  BodyCommsTiersCardBasicCardActionsSx,
+  BodyCommsTiersCardBasicPricingLeftDarkSx,
+  BodyCommsTiersCardBasicPricingLeftLightSx,
+  BodyCommsTiersCardBasicPricingRightDarkSx,
+  BodyCommsTiersCardBasicPricingRightLightSx,
+  BodyCommsTiersCardBasicBtnDarkSx,
+  BodyCommsTiersCardBasicBtnLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -137,6 +172,10 @@ import {
   photos_prints_support,
   photos_socmed,
 } from "./BodySectionPhotos";
+import {
+  HorizontalRuleRounded,
+  NavigateNextRounded,
+} from "@mui/icons-material";
 
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -1113,29 +1152,491 @@ const BodySection = () => {
         </Box>
       )}
       {page && page === "Commissions" && (
-        <Box>
-          <Box>
-            {/* TODO: Use React Card - Pricing example for the tiers, with Commission Me button at bottom of each */}
-            {/* Link: https://mui.com/joy-ui/react-card/#pricing-card */}
-            <h3>
-              <i>Commission Tiers</i>
-            </h3>
+        <Box sx={BodyCommsTiersBoxSx}>
+          <Typography
+            level="title-md"
+            sx={
+              theme === "dark"
+                ? BodyCommsTiersTypographyDarkSx
+                : BodyCommsTiersTypographyLightSx
+            }
+          >
+            Commission Tiers
+          </Typography>
+          <Box sx={BodyCommsTiersCardsBoxSx}>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardBasicDarkSx
+                  : BodyCommsTiersCardBasicLightSx
+              }
+            >
+              <Typography
+                level="h2"
+                sx={
+                  theme === "dark"
+                    ? BodyCommsTiersCardBasicTitleDarkSx
+                    : BodyCommsTiersCardBasicTitleLightSx
+                }
+              >
+                Basic
+              </Typography>
+              <Box sx={BodyCommsTiersCardBasicDescBoxSx}>
+                <Typography
+                  level="title-md"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicDescOuterDarkSx
+                      : BodyCommsTiersCardBasicDescOuterLightSx
+                  }
+                >
+                  Description:
+                  <br />
+                  <Typography
+                    level="body-sm"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicDescInnerDarkSx
+                        : BodyCommsTiersCardBasicDescInnerLightSx
+                    }
+                  >
+                    Quick sketch and composition with focus on interesting
+                    colors and contrast.
+                  </Typography>
+                </Typography>
+              </Box>
+              <Divider inset="none" />
+              <List size="sm" sx={{ mx: "2px" }}>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicListItemDarkSx
+                      : BodyCommsTiersCardBasicListItemLightSx
+                  }
+                >
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicListIconDarkSx
+                          : BodyCommsTiersCardBasicListIconLightSx
+                      }
+                    />
+                  </ListItemDecorator>
+                  Layers: 3 - 5
+                </ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicListItemDarkSx
+                      : BodyCommsTiersCardBasicListItemLightSx
+                  }
+                >
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicListIconDarkSx
+                          : BodyCommsTiersCardBasicListIconLightSx
+                      }
+                    />
+                  </ListItemDecorator>
+                  Minimal # of effects
+                </ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicListItemDarkSx
+                      : BodyCommsTiersCardBasicListItemLightSx
+                  }
+                >
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicListIconDarkSx
+                          : BodyCommsTiersCardBasicListIconLightSx
+                      }
+                    />
+                  </ListItemDecorator>
+                  Simple shading + blending
+                </ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicListItemDarkSx
+                      : BodyCommsTiersCardBasicListItemLightSx
+                  }
+                >
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicListIconDarkSx
+                          : BodyCommsTiersCardBasicListIconLightSx
+                      }
+                    />
+                  </ListItemDecorator>
+                  Turnaround Time: ~1 day
+                </ListItem>
+              </List>
+              <Divider inset="none" />
+              <CardActions sx={BodyCommsTiersCardBasicCardActionsSx}>
+                <Box sx={BodyCommsTiersCardBasicPricingBoxSx}>
+                  <Typography
+                    level="title-lg"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicPricingLeftDarkSx
+                        : BodyCommsTiersCardBasicPricingLeftLightSx
+                    }
+                  >
+                    $ 10{" "}
+                  </Typography>
+                  <Typography
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicPricingRightDarkSx
+                        : BodyCommsTiersCardBasicPricingRightLightSx
+                    }
+                  >
+                    (PayPal/Ko-fi)
+                  </Typography>
+                </Box>
+                <Button
+                  endDecorator={<NavigateNextRounded />}
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicBtnDarkSx
+                      : BodyCommsTiersCardBasicBtnLightSx
+                  }
+                >
+                  Commission Form
+                </Button>
+              </CardActions>
+            </Card>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardStandardDarkSx
+                  : BodyCommsTiersCardStandardLightSx
+              }
+            >
+              <Typography level="h2">Standard</Typography>
+              <Typography level="title-md">
+                Description:
+                <Typography level="body-sm">
+                  More detailed and thoughtful composition with additional
+                  layers for effects and depth.
+                  <br />
+                  Texturing and retouching used to bring out even better colors
+                  and contrast.
+                </Typography>
+              </Typography>
+              <Divider inset="none" />
+              <List size="sm" sx={{ mx: "2px" }}>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Layers: 5 - 10
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Standard # of effects
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Standard shading/blending/lighting
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Turnaround Time: ~1 day
+                </ListItem>
+              </List>
+              <Divider inset="none" />
+              <CardActions>
+                <Typography level="title-lg" sx={{ mr: "auto" }}>
+                  $ 15{" "}
+                  <Typography fontSize="sm" textColor="text.tertiary">
+                    (PayPal/Ko-fi)
+                  </Typography>
+                </Typography>
+                <Button
+                  variant="soft"
+                  color="neutral"
+                  endDecorator={<NavigateNextRounded />}
+                >
+                  Request A Commission
+                </Button>
+              </CardActions>
+            </Card>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardAbstractifyDarkSx
+                  : BodyCommsTiersCardAbstractifyLightSx
+              }
+            >
+              <Typography level="h2">Abstractify</Typography>
+              <Typography level="title-md">
+                Description:
+                <Typography level="body-sm">
+                  “Abstractify” an existing reference (preferably album art or
+                  movie poster); transform an idea into a fresh, new abstract
+                  version.
+                </Typography>
+              </Typography>
+              <Divider inset="none" />
+              <List size="sm" sx={{ mx: "2px" }}>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Layers: 5 - 10
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Standard # of effects
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Standard shading/blending/lighting
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Turnaround Time: 1-2 days
+                </ListItem>
+                <ListItem sx={{ ml: "1em" }}>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  (Additional time needed to plan and recreate the reference in
+                  a new, abstract way)
+                </ListItem>
+              </List>
+              <Typography level="body-sm">
+                NOTE: Not aiming to make a direct copy of the reference; the
+                goal is to be heavily influenced by the reference and make
+                something new and interesting
+              </Typography>
+              <Divider inset="none" />
+              <CardActions>
+                <Typography level="title-lg" sx={{ mr: "auto" }}>
+                  $ 20{" "}
+                  <Typography fontSize="sm" textColor="text.tertiary">
+                    (PayPal/Ko-fi)
+                  </Typography>
+                </Typography>
+                <Button
+                  variant="soft"
+                  color="neutral"
+                  endDecorator={<NavigateNextRounded />}
+                >
+                  Request A Commission
+                </Button>
+              </CardActions>
+            </Card>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardPremiumDarkSx
+                  : BodyCommsTiersCardPremiumLightSx
+              }
+            >
+              <Typography level="h2">Premium</Typography>
+              <Typography level="title-md">
+                Description:
+                <Typography level="body-sm">
+                  Most detailed composition with more planning and retouching to
+                  achieve the best possible effects and overall look.
+                  <br />
+                  Color, contrast, textures, depth, and effects are all taken to
+                  maximum potential.
+                </Typography>
+              </Typography>
+              <Divider inset="none" />
+              <List size="sm" sx={{ mx: "2px" }}>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Layers: {">10"}
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Maximum # of effects (as needed)
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Best level of shading + blending + lighting
+                </ListItem>
+                <ListItem>
+                  <ListItemDecorator>
+                    <HorizontalRuleRounded />
+                  </ListItemDecorator>
+                  Turnaround Time: 1-2 days
+                </ListItem>
+              </List>
+              <Divider inset="none" />
+              <CardActions>
+                <Typography level="title-lg" sx={{ mr: "auto" }}>
+                  $ 30{" "}
+                  <Typography fontSize="sm" textColor="text.tertiary">
+                    (PayPal/Ko-fi)
+                  </Typography>
+                </Typography>
+                {/* TODO: add glowing boxShadow around these buttons, in increasing intensity per tier */}
+                {/* TODO: For Premium, add glowing sheen on hover */}
+                {/* Ex 1: https://uiverse.io/satyamchaudharydev/rude-wolverine-24 */}
+                {/* Ex 2: https://uiverse.io/mrhyddenn/stale-cheetah-42 */}
+                <Button
+                  variant="soft"
+                  color="neutral"
+                  endDecorator={<NavigateNextRounded />}
+                >
+                  Request A Commission
+                </Button>
+              </CardActions>
+            </Card>
           </Box>
           <Box>
             <h3>
               <i>Commission Examples</i>
             </h3>
           </Box>
-          <Box>
-            <h3>
-              <i>
-                <b>Prints and Support</b>
-              </i>
-            </h3>
-            <div>................</div>
-            <h4>
-              <i>Any support is greatly appreciated!</i>
-            </h4>
+          <Box sx={BodyHomeSocmedCardBoxSx}>
+            <Card
+              variant="outlined"
+              sx={
+                theme === "dark"
+                  ? BodyHomeSupportCardDarkSx
+                  : BodyHomeSupportCardLightSx
+              }
+            >
+              <Typography
+                level="body-md"
+                textColor="inherit"
+                sx={
+                  theme === "dark"
+                    ? BodyHomeSupportCardTitleDarkSx
+                    : BodyHomeSupportCardTitleLightSx
+                }
+              >
+                Prints and Support
+              </Typography>
+              <Box sx={BodyHomeSupportCardOuterBoxSx}>
+                <Box sx={BodyHomeSupportCardButtonBoxSx}>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://tinyurl.com/ZDAPrints");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    Print Shop
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://ko-fi.com/zerodayanubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    Ko-Fi (HQ Files)
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://paypal.me/ZeroDayAnubis");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    PayPal
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      clickLink("https://account.venmo.com/u/somgye");
+                    }}
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardButtonDarkSx
+                        : BodyHomeSupportCardButtonLightSx
+                    }
+                  >
+                    Venmo
+                  </Button>
+                  <Typography
+                    level="body-xs"
+                    sx={
+                      theme === "dark"
+                        ? BodyHomeSupportCardSubtitleDarkSx
+                        : BodyHomeSupportCardSubtitleLightSx
+                    }
+                  >
+                    <StarRoundedIcon
+                      sx={
+                        theme === "dark"
+                          ? BodyHomeSupportCardStarDarkSx
+                          : BodyHomeSupportCardStarLightSx
+                      }
+                    />
+                    Any support is greatly appreciated!
+                    <StarRoundedIcon
+                      sx={
+                        theme === "dark"
+                          ? BodyHomeSupportCardStarDarkSx
+                          : BodyHomeSupportCardStarLightSx
+                      }
+                    />
+                  </Typography>
+                </Box>
+                <Box sx={BodyHomeSocmedPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_prints_support}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    columns={1}
+                    spacing={1}
+                    padding={1}
+                    defaultContainerWidth={600}
+                  />
+                </Box>
+              </Box>
+            </Card>
           </Box>
         </Box>
       )}
