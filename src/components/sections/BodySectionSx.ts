@@ -1055,8 +1055,8 @@ export const BodyCommsTiersCardBasicPricingRightLightSx = {
 
 export const BodyCommsTiersCardBasicBtnDarkSx = {
   ...{
-    backgroundColor: "#472950",
-    color: "#fafafacf",
+    backgroundColor: "#f0f0f0fa",
+    color: "#29242a",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     "&:hover": {
