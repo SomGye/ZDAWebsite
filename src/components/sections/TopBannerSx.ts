@@ -116,19 +116,14 @@ export const TopBannerNavIconDarkSx = {
 export const TopBannerLogoNamePageBoxSx = {
   ...{
     width: "288px",
-    "@media (max-width: 1000px)": {
-      display: "none",
-    },
-  },
-};
-
-export const TopBannerLogoTextHeaderSx = {
-  ...{
     display: "flex",
     flexDirection: "row",
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
+    "@media (max-width: 1000px)": {
+      display: "none",
+    },
   },
 };
 
