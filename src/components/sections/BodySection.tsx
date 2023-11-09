@@ -1326,6 +1326,7 @@ const BodySection = () => {
                 </Box>
                 <Button
                   endDecorator={<NavigateNextRounded />}
+                  onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                   sx={
                     theme === "dark"
                       ? BodyCommsTiersCardBasicBtnDarkSx
@@ -1482,6 +1483,7 @@ const BodySection = () => {
                 </Box>
                 <Button
                   endDecorator={<NavigateNextRounded />}
+                  onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                   sx={
                     theme === "dark"
                       ? BodyCommsTiersCardStandardBtnDarkSx
@@ -1561,6 +1563,7 @@ const BodySection = () => {
                   variant="soft"
                   color="neutral"
                   endDecorator={<NavigateNextRounded />}
+                  onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                 >
                   Request A Commission
                 </Button>
@@ -1629,6 +1632,7 @@ const BodySection = () => {
                   variant="soft"
                   color="neutral"
                   endDecorator={<NavigateNextRounded />}
+                  onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                 >
                   Request A Commission
                 </Button>
