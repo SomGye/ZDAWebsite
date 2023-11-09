@@ -191,6 +191,7 @@ export const TopInfoNavButtonActiveDarkSx = {
     color: "#fafafafa",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#F05AFF",
       color: "#19141a",
@@ -214,6 +215,7 @@ export const TopInfoNavButtonDefaultDarkSx = {
     color: "#fafafafa",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#F05AFF",
       color: "#19141a",
@@ -238,6 +240,7 @@ export const TopInfoNavButtonActiveLightSx = {
     marginBottom: "2px",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
@@ -261,6 +264,7 @@ export const TopInfoNavButtonDefaultLightSx = {
     color: "#fafafafa",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
@@ -671,6 +675,7 @@ export const TopInfoCommCardBtnLeftDarkSx = {
     borderRight: "none",
     color: "#fafafacf",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#3a353b",
       color: "#fafafa",
@@ -688,6 +693,7 @@ export const TopInfoCommCardBtnLeftLightSx = {
     borderRight: "none",
     color: "#2d282ecf",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#e7e7e7",
       color: "#2d282e",
@@ -706,6 +712,7 @@ export const TopInfoCommCardBtnMidDarkSx = {
     borderRight: "none",
     color: "#fafafacf",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#3a353b",
       color: "#fafafa",
@@ -724,6 +731,7 @@ export const TopInfoCommCardBtnMidLightSx = {
     borderRight: "none",
     color: "#2d282ecf",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#e7e7e7",
       color: "#2d282e",
@@ -741,6 +749,7 @@ export const TopInfoCommCardBtnRightDarkSx = {
     borderLeft: "none",
     color: "#fafafacf",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#3a353b",
       color: "#fafafa",
@@ -758,6 +767,7 @@ export const TopInfoCommCardBtnRightLightSx = {
     borderLeft: "none",
     color: "#2d282ecf",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#e7e7e7",
       color: "#2d282e",

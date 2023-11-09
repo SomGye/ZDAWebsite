@@ -32,6 +32,7 @@ export const HamburgerCloseDarkSx = {
     color: "#89848a",
     transition: "background-color 0.10s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#49444a",
       color: "#89848a",
@@ -49,6 +50,7 @@ export const HamburgerCloseLightSx = {
     backgroundColor: "#e9e9e9",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
       color: "#363137",
@@ -129,6 +131,7 @@ export const HamburgerTopNavBtnDarkSx = {
     borderRadius: "24px",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
@@ -153,6 +156,7 @@ export const HamburgerTopNavBtnLightSx = {
     borderRadius: "24px",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
@@ -175,6 +179,7 @@ export const HamburgerInnerNavBtnDarkSx = {
     borderRadius: "2px",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
@@ -195,6 +200,7 @@ export const HamburgerInnerNavBtnLightSx = {
     borderRadius: "24px",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",

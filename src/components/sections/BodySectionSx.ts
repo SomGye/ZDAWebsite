@@ -187,6 +187,7 @@ export const BodyHomeHighlightsCardBtnDarkSx = {
     color: "#fafafacf",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#9571fc",
       color: "#252026",
@@ -204,6 +205,7 @@ export const BodyHomeHighlightsCardBtnLightSx = {
     color: "#2d282ecf",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#493979",
       color: "#fafafa",
@@ -326,6 +328,7 @@ export const BodyHomeSocmedCardButtonDarkSx = {
     borderRadius: "24px",
     transition: "all 0.25s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#E500A2",
       color: "#fafafa",
@@ -349,6 +352,7 @@ export const BodyHomeSocmedCardButtonLightSx = {
     borderRadius: "24px",
     transition: "all 0.25s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#E500A2",
       color: "#fafafa",
@@ -472,6 +476,7 @@ export const BodyHomeSupportCardButtonDarkSx = {
     borderRadius: "24px",
     transition: "all 0.25s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#F4DFBF",
       color: "#221706",
@@ -495,6 +500,7 @@ export const BodyHomeSupportCardButtonLightSx = {
     borderRadius: "24px",
     transition: "all 0.25s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#D4BF99",
       color: "#1C160C",
@@ -756,6 +762,7 @@ export const BodyPortfolioCommBtnDarkSx = {
     borderRadius: "24px",
     boxShadow: "0px 1px 28px 1px #FF301F",
     transition: "background-color 0.35s ease-out, color 0.35s ease-out",
+    userSelect: "none",
     "&:hover": {
       transition: "background-color 0.35s ease-out, color 0.35s ease-out",
     },
@@ -786,6 +793,7 @@ export const BodyPortfolioCommBtnDarkHelperSx = {
       "linear-gradient(291deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f040c5 77%,#936eff)",
     boxShadow: "0px 2px 40px 2px red",
     transition: "opacity 0.35s ease-out",
+    userSelect: "none",
   },
 };
 
@@ -800,6 +808,7 @@ export const BodyPortfolioCommBtnLightSx = {
     borderRadius: "24px",
     boxShadow: "0px 1px 24px 4px #f0a0ff",
     transition: "background-color 0.35s ease-out, color 0.35s ease-out",
+    userSelect: "none",
     "&:hover": {
       transition: "background-color 0.35s ease-out, color 0.35s ease-out",
     },
@@ -831,6 +840,7 @@ export const BodyPortfolioCommBtnLightHelperSx = {
     color: "#2d282ecf",
     boxShadow: "0px 2px 36px 2px #E600D7",
     transition: "opacity 0.35s ease-out",
+    userSelect: "none",
   },
 };
 
@@ -1059,6 +1069,7 @@ export const BodyCommsTiersCardBasicBtnDarkSx = {
     color: "#29242a",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#9571fc",
       color: "#252026",
@@ -1076,6 +1087,7 @@ export const BodyCommsTiersCardBasicBtnLightSx = {
     color: "#fafafae0",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#694999",
       color: "#fafafa",
