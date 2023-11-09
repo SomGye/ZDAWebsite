@@ -152,6 +152,25 @@ import {
   BodyCommsTiersCardBasicPricingRightLightSx,
   BodyCommsTiersCardBasicBtnDarkSx,
   BodyCommsTiersCardBasicBtnLightSx,
+  BodyCommsTiersCardStandardTitleDarkSx,
+  BodyCommsTiersCardStandardTitleLightSx,
+  BodyCommsTiersCardStandardDescBoxSx,
+  BodyCommsTiersCardStandardDescOuterDarkSx,
+  BodyCommsTiersCardStandardDescOuterLightSx,
+  BodyCommsTiersCardStandardDescInnerDarkSx,
+  BodyCommsTiersCardStandardDescInnerLightSx,
+  BodyCommsTiersCardStandardListItemDarkSx,
+  BodyCommsTiersCardStandardListItemLightSx,
+  BodyCommsTiersCardStandardListIconDarkSx,
+  BodyCommsTiersCardStandardListIconLightSx,
+  BodyCommsTiersCardStandardCardActionsSx,
+  BodyCommsTiersCardStandardPricingBoxSx,
+  BodyCommsTiersCardStandardPricingLeftDarkSx,
+  BodyCommsTiersCardStandardPricingLeftLightSx,
+  BodyCommsTiersCardStandardPricingRightDarkSx,
+  BodyCommsTiersCardStandardPricingRightLightSx,
+  BodyCommsTiersCardStandardBtnDarkSx,
+  BodyCommsTiersCardStandardBtnLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -1326,58 +1345,150 @@ const BodySection = () => {
                   : BodyCommsTiersCardStandardLightSx
               }
             >
-              <Typography level="h2">Standard</Typography>
-              <Typography level="title-md">
-                Description:
-                <Typography level="body-sm">
-                  More detailed and thoughtful composition with additional
-                  layers for effects and depth.
-                  <br />
-                  Texturing and retouching used to bring out even better colors
-                  and contrast.
-                </Typography>
+              <Typography
+                level="h2"
+                sx={
+                  theme === "dark"
+                    ? BodyCommsTiersCardStandardTitleDarkSx
+                    : BodyCommsTiersCardStandardTitleLightSx
+                }
+              >
+                Standard
               </Typography>
+              <Box sx={BodyCommsTiersCardStandardDescBoxSx}>
+                <Typography
+                  level="title-md"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardDescOuterDarkSx
+                      : BodyCommsTiersCardStandardDescOuterLightSx
+                  }
+                >
+                  Description:
+                  <br />
+                  <Typography
+                    level="body-sm"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardDescInnerDarkSx
+                        : BodyCommsTiersCardStandardDescInnerLightSx
+                    }
+                  >
+                    More detailed and thoughtful composition with additional
+                    layers for effects and depth.
+                    <br />
+                    Texturing and retouching used to bring out even better
+                    colors and contrast.
+                  </Typography>
+                </Typography>
+              </Box>
               <Divider inset="none" />
               <List size="sm" sx={{ mx: "2px" }}>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardListItemDarkSx
+                      : BodyCommsTiersCardStandardListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardListIconDarkSx
+                          : BodyCommsTiersCardStandardListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Layers: 5 - 10
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardListItemDarkSx
+                      : BodyCommsTiersCardStandardListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardListIconDarkSx
+                          : BodyCommsTiersCardStandardListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Standard # of effects
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardListItemDarkSx
+                      : BodyCommsTiersCardStandardListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardListIconDarkSx
+                          : BodyCommsTiersCardStandardListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Standard shading/blending/lighting
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardListItemDarkSx
+                      : BodyCommsTiersCardStandardListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardListIconDarkSx
+                          : BodyCommsTiersCardStandardListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Turnaround Time: ~1 day
                 </ListItem>
               </List>
               <Divider inset="none" />
-              <CardActions>
-                <Typography level="title-lg" sx={{ mr: "auto" }}>
-                  $ 15{" "}
-                  <Typography fontSize="sm" textColor="text.tertiary">
+              <CardActions sx={BodyCommsTiersCardStandardCardActionsSx}>
+                <Box sx={BodyCommsTiersCardStandardPricingBoxSx}>
+                  <Typography
+                    level="title-lg"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardPricingLeftDarkSx
+                        : BodyCommsTiersCardStandardPricingLeftLightSx
+                    }
+                  >
+                    $ 15{" "}
+                  </Typography>
+                  <Typography
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardPricingRightDarkSx
+                        : BodyCommsTiersCardStandardPricingRightLightSx
+                    }
+                  >
                     (PayPal/Ko-fi)
                   </Typography>
-                </Typography>
+                </Box>
                 <Button
-                  variant="soft"
-                  color="neutral"
                   endDecorator={<NavigateNextRounded />}
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardBtnDarkSx
+                      : BodyCommsTiersCardStandardBtnLightSx
+                  }
                 >
-                  Request A Commission
+                  Commission Form
                 </Button>
               </CardActions>
             </Card>
