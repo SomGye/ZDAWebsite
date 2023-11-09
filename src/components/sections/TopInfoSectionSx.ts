@@ -481,6 +481,9 @@ export const TopInfoCommBoxSx = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    "@media (max-width: 670px)": {
+      maxWidth: "100%",
+    }
   },
 };
 
