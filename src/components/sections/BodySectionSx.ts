@@ -1071,8 +1071,8 @@ export const BodyCommsTiersCardBasicBtnDarkSx = {
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#9a909f",
-      color: "#252026",
+      backgroundColor: "#b0b0b0",
+      color: "#000000",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
     "&:focus": {
@@ -1089,7 +1089,7 @@ export const BodyCommsTiersCardBasicBtnLightSx = {
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#6a5f80",
+      backgroundColor: "#655f66",
       color: "#fafafa",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
