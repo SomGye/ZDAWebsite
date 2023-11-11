@@ -171,6 +171,29 @@ import {
   BodyCommsTiersCardStandardPricingRightLightSx,
   BodyCommsTiersCardStandardBtnDarkSx,
   BodyCommsTiersCardStandardBtnLightSx,
+  BodyCommsTiersCardAbstractifyListItemIdtDarkSx,
+  BodyCommsTiersCardAbstractifyListItemIdtLightSx,
+  BodyCommsTiersCardAbstractifyListSubtitleDarkSx,
+  BodyCommsTiersCardAbstractifyListSubtitleLightSx,
+  BodyCommsTiersCardAbstractifyTitleDarkSx,
+  BodyCommsTiersCardAbstractifyTitleLightSx,
+  BodyCommsTiersCardAbstractifyDescBoxSx,
+  BodyCommsTiersCardAbstractifyDescOuterDarkSx,
+  BodyCommsTiersCardAbstractifyDescOuterLightSx,
+  BodyCommsTiersCardAbstractifyDescInnerDarkSx,
+  BodyCommsTiersCardAbstractifyDescInnerLightSx,
+  BodyCommsTiersCardAbstractifyListItemDarkSx,
+  BodyCommsTiersCardAbstractifyListItemLightSx,
+  BodyCommsTiersCardAbstractifyListIconDarkSx,
+  BodyCommsTiersCardAbstractifyListIconLightSx,
+  BodyCommsTiersCardAbstractifyCardActionsSx,
+  BodyCommsTiersCardAbstractifyPricingBoxSx,
+  BodyCommsTiersCardAbstractifyPricingLeftDarkSx,
+  BodyCommsTiersCardAbstractifyPricingLeftLightSx,
+  BodyCommsTiersCardAbstractifyPricingRightDarkSx,
+  BodyCommsTiersCardAbstractifyPricingRightLightSx,
+  BodyCommsTiersCardAbstractifyBtnDarkSx,
+  BodyCommsTiersCardAbstractifyBtnLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -1503,69 +1526,180 @@ const BodySection = () => {
                   : BodyCommsTiersCardAbstractifyLightSx
               }
             >
-              <Typography level="h2">Abstractify</Typography>
-              <Typography level="title-md">
-                Description:
-                <Typography level="body-sm">
-                  “Abstractify” an existing reference (preferably album art or
-                  movie poster); transform an idea into a fresh, new abstract
-                  version.
-                </Typography>
+              <Typography
+                level="h2"
+                sx={
+                  theme === "dark"
+                    ? BodyCommsTiersCardAbstractifyTitleDarkSx
+                    : BodyCommsTiersCardAbstractifyTitleLightSx
+                }
+              >
+                Abstractify
               </Typography>
+              <Box sx={BodyCommsTiersCardAbstractifyDescBoxSx}>
+                <Typography
+                  level="title-md"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyDescOuterDarkSx
+                      : BodyCommsTiersCardAbstractifyDescOuterLightSx
+                  }
+                >
+                  Description:
+                  <br />
+                  <Typography
+                    level="body-sm"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyDescInnerDarkSx
+                        : BodyCommsTiersCardAbstractifyDescInnerLightSx
+                    }
+                  >
+                    “Abstractify” an existing reference, preferably album art or
+                    movie poster, by transforming an idea into a fresh, new
+                    abstract version.
+                  </Typography>
+                </Typography>
+              </Box>
               <Divider inset="none" />
               <List size="sm" sx={{ mx: "2px" }}>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                      : BodyCommsTiersCardAbstractifyListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                          : BodyCommsTiersCardAbstractifyListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Layers: 5 - 10
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                      : BodyCommsTiersCardAbstractifyListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                          : BodyCommsTiersCardAbstractifyListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Standard # of effects
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                      : BodyCommsTiersCardAbstractifyListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                          : BodyCommsTiersCardAbstractifyListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Standard shading/blending/lighting
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                      : BodyCommsTiersCardAbstractifyListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                          : BodyCommsTiersCardAbstractifyListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Turnaround Time: 1-2 days
                 </ListItem>
-                <ListItem sx={{ ml: "1em" }}>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyListItemIdtDarkSx
+                      : BodyCommsTiersCardAbstractifyListItemIdtLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                          : BodyCommsTiersCardAbstractifyListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   (Additional time needed to plan and recreate the reference in
                   a new, abstract way)
                 </ListItem>
               </List>
-              <Typography level="body-sm">
+              <Typography
+                level="body-sm"
+                sx={
+                  theme === "dark"
+                    ? BodyCommsTiersCardAbstractifyListSubtitleDarkSx
+                    : BodyCommsTiersCardAbstractifyListSubtitleLightSx
+                }
+              >
                 NOTE: Not aiming to make a direct copy of the reference; the
                 goal is to be heavily influenced by the reference and make
                 something new and interesting
               </Typography>
               <Divider inset="none" />
-              <CardActions>
-                <Typography level="title-lg" sx={{ mr: "auto" }}>
-                  $ 20{" "}
-                  <Typography fontSize="sm" textColor="text.tertiary">
+              <CardActions sx={BodyCommsTiersCardAbstractifyCardActionsSx}>
+                <Box sx={BodyCommsTiersCardAbstractifyPricingBoxSx}>
+                  <Typography
+                    level="title-lg"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyPricingLeftDarkSx
+                        : BodyCommsTiersCardAbstractifyPricingLeftLightSx
+                    }
+                  >
+                    $ 20{" "}
+                  </Typography>
+                  <Typography
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyPricingRightDarkSx
+                        : BodyCommsTiersCardAbstractifyPricingRightLightSx
+                    }
+                  >
                     (PayPal/Ko-fi)
                   </Typography>
-                </Typography>
+                </Box>
                 <Button
-                  variant="soft"
-                  color="neutral"
                   endDecorator={<NavigateNextRounded />}
                   onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyBtnDarkSx
+                      : BodyCommsTiersCardAbstractifyBtnLightSx
+                  }
                 >
-                  Request A Commission
+                  Commission Form
                 </Button>
               </CardActions>
             </Card>
