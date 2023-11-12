@@ -1719,3 +1719,573 @@ export const photos_portfolio_early2021_penup_srcSet = [
     title: "20210202_235729",
   },
 ];
+
+export const photos_comm_abstractify = [
+  {
+    src: "/assets/comm_abstractify/Thing_202304231215_-_AEF.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "All Else Failed",
+    title: "All Else Failed",
+  },
+  {
+    src: "/assets/comm_abstractify/Thing_202304241843_-_ORA.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Oracle",
+    title: "Oracle",
+  },
+  {
+    src: "/assets/comm_abstractify/Thing_202307071103-SFV.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Screaming for Vengeance",
+    title: "Screaming for Vengeance",
+  },
+  {
+    src: "/assets/comm_abstractify/Thing_202308061205-ATS.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "A Thousand Suns",
+    title: "A Thousand Suns",
+  },
+];
+
+export const photos_comm_abstractify_srcSet = [
+  {
+    src: "/assets/comm_abstractify/Thing_202304231215_-_AEF-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Thing_202304231215_-_AEF-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Thing_202304231215_-_AEF-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "All Else Failed",
+    title: "All Else Failed",
+  },
+  {
+    src: "/assets/comm_abstractify/Thing_202304241843_-_ORA-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Thing_202304241843_-_ORA-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Thing_202304241843_-_ORA-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Oracle",
+    title: "Oracle",
+  },
+  {
+    src: "/assets/comm_abstractify/Thing_202307071103-SFV-1200px.jpg",
+    width: 1200,
+    height: 834,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Thing_202307071103-SFV-640px.jpg",
+        width: 640,
+        height: 445,
+      },
+      {
+        src: "/assets/comm_abstractify/Thing_202307071103-SFV-320px.jpg",
+        width: 320,
+        height: 222,
+      },
+    ],
+    alt: "Screaming for Vengeance",
+    title: "Screaming for Vengeance",
+  },
+  {
+    src: "/assets/comm_abstractify/Thing_202308061205-ATS-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Thing_202308061205-ATS-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Thing_202308061205-ATS-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "A Thousand Suns",
+    title: "A Thousand Suns",
+  },
+];
+
+export const photos_comm_basic = [
+  {
+    src: "/assets/comm_basic/Indistinguishable_Torment.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Indistinguishable Torment",
+    title: "Indistinguishable Torment",
+  },
+  {
+    src: "/assets/comm_basic/QS1-BL.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "QS1-BL",
+    title: "QS1-BL",
+  },
+  {
+    src: "/assets/comm_basic/QS1-BR.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "QS1-BR",
+    title: "QS1-BR",
+  },
+  {
+    src: "/assets/comm_basic/The_Shore_Sees.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "The Shore Sees",
+    title: "The Shore Sees",
+  },
+  {
+    src: "/assets/comm_basic/Tidal_Interference.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Tidal Interference",
+    title: "Tidal Interference",
+  },
+];
+
+export const photos_comm_basic_srcSet = [
+  {
+    src: "/assets/comm_basic/Indistinguishable_Torment-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/Indistinguishable_Torment-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_basic/Indistinguishable_Torment-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Indistinguishable Torment",
+    title: "Indistinguishable Torment",
+  },
+  {
+    src: "/assets/comm_basic/QS1-BL-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/QS1-BL-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_basic/QS1-BL-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "QS1-BL",
+    title: "QS1-BL",
+  },
+  {
+    src: "/assets/comm_basic/QS1-BR-1200px.jpg",
+    width: 1200,
+    height: 834,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/QS1-BR-640px.jpg",
+        width: 640,
+        height: 445,
+      },
+      {
+        src: "/assets/comm_basic/QS1-BR-320px.jpg",
+        width: 320,
+        height: 222,
+      },
+    ],
+    alt: "QS1-BR",
+    title: "QS1-BR",
+  },
+  {
+    src: "/assets/comm_basic/The_Shore_Sees-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/The_Shore_Sees-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_basic/The_Shore_Sees-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "The Shore Sees",
+    title: "The Shore Sees",
+  },
+  {
+    src: "/assets/comm_basic/Tidal_Interference-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/Tidal_Interference-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_basic/Tidal_Interference-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Tidal Interference",
+    title: "Tidal Interference",
+  },
+];
+
+export const photos_comm_premium = [
+  {
+    src: "/assets/comm_premium/A_Reflection_of_Self.jpg",
+    width: 3508,
+    height: 4961,
+    alt: "A Reflection of Self",
+    title: "A Reflection of Self",
+  },
+  {
+    src: "/assets/comm_premium/A_System_of_Structure.jpg",
+    width: 3508,
+    height: 4961,
+    alt: "A System of Structure",
+    title: "A System of Structure",
+  },
+  {
+    src: "/assets/comm_premium/Frame_of_Revelation.jpg",
+    width: 3508,
+    height: 4961,
+    alt: "Frame of Revelation",
+    title: "Frame of Revelation",
+  },
+  {
+    src: "/assets/comm_premium/The_Crux_of_Crisis.jpg",
+    width: 3508,
+    height: 4961,
+    alt: "The Crux of Crisis",
+    title: "The Crux of Crisis",
+  },
+  {
+    src: "/assets/comm_premium/The_Temple_of_Loss.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "The Temple of Loss",
+    title: "The Temple of Loss",
+  },
+  {
+    src: "/assets/comm_premium/The_Toxic_Descent.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "The Toxic Descent",
+    title: "The Toxic Descent",
+  },
+];
+
+export const photos_comm_premium_srcSet = [
+  {
+    src: "/assets/comm_premium/A_Reflection_of_Self-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/A_Reflection_of_Self-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_premium/A_Reflection_of_Self-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "A Reflection of Self",
+    title: "A Reflection of Self",
+  },
+  {
+    src: "/assets/comm_premium/A_System_of_Structure-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/A_System_of_Structure-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_premium/A_System_of_Structure-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "A System of Structure",
+    title: "A System of Structure",
+  },
+  {
+    src: "/assets/comm_premium/Frame_of_Revelation-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/Frame_of_Revelation-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_premium/Frame_of_Revelation-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "Frame of Revelation",
+    title: "Frame of Revelation",
+  },
+  {
+    src: "/assets/comm_premium/The_Crux_of_Crisis-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/The_Crux_of_Crisis-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_premium/The_Crux_of_Crisis-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "The Crux of Crisis",
+    title: "The Crux of Crisis",
+  },
+  {
+    src: "/assets/comm_premium/The_Temple_of_Loss-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/The_Temple_of_Loss-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_premium/The_Temple_of_Loss-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "The Temple of Loss",
+    title: "The Temple of Loss",
+  },
+  {
+    src: "/assets/comm_premium/The_Toxic_Descent-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/The_Toxic_Descent-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_premium/The_Toxic_Descent-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "The Toxic Descent",
+    title: "The Toxic Descent",
+  },
+];
+
+export const photos_comm_standard = [
+  {
+    src: "/assets/comm_standard/Divinity_Ends.jpg",
+    width: 1440,
+    height: 3120,
+    alt: "Divinity Ends",
+    title: "Divinity Ends",
+  },
+  {
+    src: "/assets/comm_standard/Passengers.jpg",
+    width: 2360,
+    height: 1640,
+    alt: "Passengers",
+    title: "Passengers",
+  },
+  {
+    src: "/assets/comm_standard/Returning_Sublimation.jpg",
+    width: 2480,
+    height: 3508,
+    alt: "Returning Sublimation",
+    title: "Returning Sublimation",
+  },
+  {
+    src: "/assets/comm_standard/Saturated_Axons.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Saturated Axons",
+    title: "Saturated Axons",
+  },
+  {
+    src: "/assets/comm_standard/The_Chroma_Passage.jpg",
+    width: 2480,
+    height: 3508,
+    alt: "The Chroma Passage",
+    title: "The Chroma Passage",
+  },
+  {
+    src: "/assets/comm_standard/Wisps_of_Afterlife.jpg",
+    width: 2480,
+    height: 3508,
+    alt: "Wisps of Afterlife",
+    title: "Wisps of Afterlife",
+  },
+];
+
+export const photos_comm_standard_srcSet = [
+  {
+    src: "/assets/comm_standard/Divinity_Ends-1200px.jpg",
+    width: 1200,
+    height: 2600,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Divinity_Ends-640px.jpg",
+        width: 640,
+        height: 1387,
+      },
+      {
+        src: "/assets/comm_standard/Divinity_Ends-320px.jpg",
+        width: 320,
+        height: 693,
+      },
+    ],
+    alt: "Divinity Ends",
+    title: "Divinity Ends",
+  },
+  {
+    src: "/assets/comm_standard/Passengers-1200px.jpg",
+    width: 1200,
+    height: 834,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Passengers-640px.jpg",
+        width: 640,
+        height: 445,
+      },
+      {
+        src: "/assets/comm_standard/Passengers-320px.jpg",
+        width: 320,
+        height: 222,
+      },
+    ],
+    alt: "Passengers",
+    title: "Passengers",
+  },
+  {
+    src: "/assets/comm_standard/Returning_Sublimation-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Returning_Sublimation-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_standard/Returning_Sublimation-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "Returning Sublimation",
+    title: "Returning Sublimation",
+  },
+  {
+    src: "/assets/comm_standard/Saturated_Axons-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Saturated_Axons-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_standard/Saturated_Axons-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Saturated Axons",
+    title: "Saturated Axons",
+  },
+  {
+    src: "/assets/comm_standard/The_Chroma_Passage-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/The_Chroma_Passage-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_standard/The_Chroma_Passage-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "The Chroma Passage",
+    title: "The Chroma Passage",
+  },
+  {
+    src: "/assets/comm_standard/Wisps_of_Afterlife-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Wisps_of_Afterlife-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_standard/Wisps_of_Afterlife-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "Wisps of Afterlife",
+    title: "Wisps of Afterlife",
+  },
+];
