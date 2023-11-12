@@ -1562,13 +1562,13 @@ export const BodyCommsTiersCardAbstractifyPricingRightLightSx = {
 
 export const BodyCommsTiersCardAbstractifyBtnDarkSx = {
   ...{
-    backgroundColor: "#f0f0f0fa",
-    color: "#29242a",
+    backgroundColor: "#CD00BA",
+    color: "#fafafafa",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#8561dc",
+      backgroundColor: "#360080",
       color: "#fafafa",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
@@ -1580,14 +1580,14 @@ export const BodyCommsTiersCardAbstractifyBtnDarkSx = {
 
 export const BodyCommsTiersCardAbstractifyBtnLightSx = {
   ...{
-    backgroundColor: "#453f46",
+    backgroundColor: "#42307C",
     color: "#fafafae0",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#8561dc",
-      color: "#fafafa",
+      backgroundColor: "#E600E6",
+      color: "#19141a",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
     "&:focus": {
