@@ -194,6 +194,25 @@ import {
   BodyCommsTiersCardAbstractifyPricingRightLightSx,
   BodyCommsTiersCardAbstractifyBtnDarkSx,
   BodyCommsTiersCardAbstractifyBtnLightSx,
+  BodyCommsTiersCardPremiumTitleDarkSx,
+  BodyCommsTiersCardPremiumTitleLightSx,
+  BodyCommsTiersCardPremiumDescBoxSx,
+  BodyCommsTiersCardPremiumDescOuterDarkSx,
+  BodyCommsTiersCardPremiumDescOuterLightSx,
+  BodyCommsTiersCardPremiumDescInnerDarkSx,
+  BodyCommsTiersCardPremiumDescInnerLightSx,
+  BodyCommsTiersCardPremiumListItemDarkSx,
+  BodyCommsTiersCardPremiumListItemLightSx,
+  BodyCommsTiersCardPremiumListIconDarkSx,
+  BodyCommsTiersCardPremiumListIconLightSx,
+  BodyCommsTiersCardPremiumCardActionsSx,
+  BodyCommsTiersCardPremiumPricingBoxSx,
+  BodyCommsTiersCardPremiumPricingLeftDarkSx,
+  BodyCommsTiersCardPremiumPricingLeftLightSx,
+  BodyCommsTiersCardPremiumPricingRightDarkSx,
+  BodyCommsTiersCardPremiumPricingRightLightSx,
+  BodyCommsTiersCardPremiumBtnDarkSx,
+  BodyCommsTiersCardPremiumBtnLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -1712,63 +1731,155 @@ const BodySection = () => {
                   : BodyCommsTiersCardPremiumLightSx
               }
             >
-              <Typography level="h2">Premium</Typography>
-              <Typography level="title-md">
-                Description:
-                <Typography level="body-sm">
-                  Most detailed composition with more planning and retouching to
-                  achieve the best possible effects and overall look.
-                  <br />
-                  Color, contrast, textures, depth, and effects are all taken to
-                  maximum potential.
-                </Typography>
+              <Typography
+                level="h2"
+                sx={
+                  theme === "dark"
+                    ? BodyCommsTiersCardPremiumTitleDarkSx
+                    : BodyCommsTiersCardPremiumTitleLightSx
+                }
+              >
+                Premium
               </Typography>
+              <Box sx={BodyCommsTiersCardPremiumDescBoxSx}>
+                <Typography
+                  level="title-md"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumDescOuterDarkSx
+                      : BodyCommsTiersCardPremiumDescOuterLightSx
+                  }
+                >
+                  Description:
+                  <br />
+                  <Typography
+                    level="body-sm"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumDescInnerDarkSx
+                        : BodyCommsTiersCardPremiumDescInnerLightSx
+                    }
+                  >
+                    Most detailed composition with more planning and retouching
+                    to achieve the best possible effects and overall look.
+                    <br />
+                    Color, contrast, textures, depth, and effects are all taken
+                    to maximum potential.
+                  </Typography>
+                </Typography>
+              </Box>
               <Divider inset="none" />
               <List size="sm" sx={{ mx: "2px" }}>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumListItemDarkSx
+                      : BodyCommsTiersCardPremiumListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumListIconDarkSx
+                          : BodyCommsTiersCardPremiumListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Layers: {">10"}
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumListItemDarkSx
+                      : BodyCommsTiersCardPremiumListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumListIconDarkSx
+                          : BodyCommsTiersCardPremiumListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Maximum # of effects (as needed)
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumListItemDarkSx
+                      : BodyCommsTiersCardPremiumListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumListIconDarkSx
+                          : BodyCommsTiersCardPremiumListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Best level of shading + blending + lighting
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumListItemDarkSx
+                      : BodyCommsTiersCardPremiumListItemLightSx
+                  }
+                >
                   <ListItemDecorator>
-                    <HorizontalRuleRounded />
+                    <HorizontalRuleRounded
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumListIconDarkSx
+                          : BodyCommsTiersCardPremiumListIconLightSx
+                      }
+                    />
                   </ListItemDecorator>
                   Turnaround Time: 1-2 days
                 </ListItem>
               </List>
               <Divider inset="none" />
-              <CardActions>
-                <Typography level="title-lg" sx={{ mr: "auto" }}>
-                  $ 30{" "}
-                  <Typography fontSize="sm" textColor="text.tertiary">
+              <CardActions sx={BodyCommsTiersCardPremiumCardActionsSx}>
+                <Box sx={BodyCommsTiersCardPremiumPricingBoxSx}>
+                  <Typography
+                    level="title-lg"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumPricingLeftDarkSx
+                        : BodyCommsTiersCardPremiumPricingLeftLightSx
+                    }
+                  >
+                    $ 30{" "}
+                  </Typography>
+                  <Typography
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumPricingRightDarkSx
+                        : BodyCommsTiersCardPremiumPricingRightLightSx
+                    }
+                  >
                     (PayPal/Ko-fi)
                   </Typography>
-                </Typography>
+                </Box>
                 {/* TODO: add glowing boxShadow around these buttons, in increasing intensity per tier */}
                 {/* TODO: For Premium, add glowing sheen on hover */}
                 {/* Ex 1: https://uiverse.io/satyamchaudharydev/rude-wolverine-24 */}
                 {/* Ex 2: https://uiverse.io/mrhyddenn/stale-cheetah-42 */}
                 <Button
-                  variant="soft"
-                  color="neutral"
                   endDecorator={<NavigateNextRounded />}
                   onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumBtnDarkSx
+                      : BodyCommsTiersCardPremiumBtnLightSx
+                  }
                 >
-                  Request A Commission
+                  Commission Form
                 </Button>
               </CardActions>
             </Card>
