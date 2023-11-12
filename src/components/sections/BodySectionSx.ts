@@ -850,6 +850,7 @@ export const BodyCommsTiersBoxSx = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
   },
 };
 
@@ -885,8 +886,12 @@ export const BodyCommsTiersTypographyLightSx = {
 
 export const BodyCommsTiersCardsBoxSx = {
   ...{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 370px), 1fr))",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "stretch",
+    minWidth: "65%",
+    maxWidth: "92%",
     gap: 4,
     margin: "24px",
   },
