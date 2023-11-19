@@ -2127,10 +2127,6 @@ const BodySection = () => {
                       (PayPal/Ko-fi)
                     </Typography>
                   </Box>
-                  {/* TODO: add glowing boxShadow around these buttons, in increasing intensity per tier */}
-                  {/* TODO: For Premium, add glowing sheen on hover */}
-                  {/* Ex 1: https://uiverse.io/satyamchaudharydev/rude-wolverine-24 */}
-                  {/* Ex 2: https://uiverse.io/mrhyddenn/stale-cheetah-42 */}
                   <Button
                     endDecorator={<NavigateNextRounded />}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
