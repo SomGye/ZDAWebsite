@@ -1645,7 +1645,7 @@ export const BodyCommsTiersCardPremiumDarkSx = {
   ...{
     borderRadius: "24px",
     background:
-      "linear-gradient(270deg, rgba(145,127,85,0.3) 0%, rgba(145,127,85,0.65) 50%, rgba(145,127,85,0.8) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
+      "linear-gradient(270deg, rgba(145,127,85,0.3) 0%, rgba(145,127,85,0.65) 50%, rgba(138,120,78,0.8) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
     border: "1px solid transparent",
     backgroundClip: "padding-box",
     filter:
