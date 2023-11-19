@@ -1,12 +1,3 @@
-// Hamburger Menu Component
-/**
- * Should be composed of:
- * - Initial 3 lines icon button
- * - X icon button to close menu
- * - Backdrop that covers screen, and is dismissed if clicked away
- * - Text links to other pages
- */
-// NOTE: Use the Inset Drawer example from here: https://mui.com/joy-ui/react-drawer/#inset-drawer
 import * as React from "react";
 import Drawer from "@mui/joy/Drawer";
 import DialogTitle from "@mui/joy/DialogTitle";
