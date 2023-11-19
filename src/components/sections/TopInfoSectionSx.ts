@@ -495,6 +495,8 @@ export const TopInfoCommCardDarkSx = {
     "--Card-padding": "28px",
     "--Card-radius": "24px",
     margin: "20px",
+    minWidth: "89%",
+    maxWidth: "92%",
     background:
       "linear-gradient(#2d282e,#2d282e) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     border: "1px solid transparent",
@@ -506,9 +508,6 @@ export const TopInfoCommCardDarkSx = {
       boxShadow: "rgba(235,91,174,0.45) 0px 26px 180px 10px",
       transition: "all 0.15s ease-out",
     },
-    "@media (max-width: 470px)": {
-      maxWidth: "92%",
-    },
   },
 };
 
@@ -517,6 +516,8 @@ export const TopInfoCommCardLightSx = {
     "--Card-padding": "28px",
     "--Card-radius": "24px",
     margin: "20px",
+    minWidth: "89%",
+    maxWidth: "92%",
     background:
       "linear-gradient(#ffffff,#ffffff) padding-box, linear-gradient(323deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     border: "1px solid transparent",
@@ -527,9 +528,6 @@ export const TopInfoCommCardLightSx = {
         "linear-gradient(#f5f5f5,#f5f5f5) padding-box, linear-gradient(320deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
       boxShadow: "rgba(229,98,13,0.45) 0px 26px 180px 10px",
       transition: "all 0.15s ease-out",
-    },
-    "@media (max-width: 470px)": {
-      maxWidth: "92%",
     },
   },
 };

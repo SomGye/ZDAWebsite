@@ -481,7 +481,7 @@ const TopInfoSection = () => {
                     : TopInfoCommCardBodyTopLightSx
                 }
               >
-                I am here to create abstract art for you, with 4 available tiers
+                I am here to create abstract art for you, with several tiers
                 to meet your budget and design needs.
               </Typography>
               <Divider
@@ -543,19 +543,6 @@ const TopInfoSection = () => {
                     }
                   >
                     Commission Info
-                  </Button>
-                  <Divider orientation="vertical" />
-                  <Button
-                    onClick={() =>
-                      clickLink("https://tinyurl.com/ZDACommExamples")
-                    }
-                    sx={
-                      theme === "dark"
-                        ? TopInfoCommCardBtnRightDarkSx
-                        : TopInfoCommCardBtnRightLightSx
-                    }
-                  >
-                    Art Tier Examples
                   </Button>
                 </ButtonGroup>
               </CardActions>
