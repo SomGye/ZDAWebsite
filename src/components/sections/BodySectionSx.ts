@@ -1440,7 +1440,7 @@ export const BodyCommsTiersCardAbstractifyDescOuterDarkSx = {
 
 export const BodyCommsTiersCardAbstractifyDescOuterLightSx = {
   ...{
-    color: "#19141a",
+    color: "#140f15",
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "30ch",
