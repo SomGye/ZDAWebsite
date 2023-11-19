@@ -1870,7 +1870,7 @@ export const BodyCommsTiersCardPremiumBtnLightSx = {
     "&:hover": {
       backgroundColor: "#FFFBF0",
       color: "#19141a",
-      boxShadow: "0px 1px 26px 10px #F7F3E8",
+      boxShadow: "0px 1px 26px 10px #FFFEF3",
       transition:
         "background-color 0.15s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out",
     },
