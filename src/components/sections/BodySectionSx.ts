@@ -897,11 +897,36 @@ export const BodyCommsTiersCardsBoxSx = {
   },
 };
 
+export const BodyCommsTiersSplitImgBoxSx = {
+  ...{
+    flex: "1",
+  },
+};
+
+export const BodyCommsTiersSplitContentBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    flex: "1",
+  },
+};
+
+export const BodyCommsTiersTopDividerSx = {
+  ...{
+    marginTop: "16px",
+    marginBottom: "16px",
+  },
+};
+
 export const BodyCommsTiersCardBasicDarkSx = {
   ...{
     backgroundColor: "#2b262c",
     border: "1px solid #fafafa1a",
     borderRadius: "24px",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -910,6 +935,10 @@ export const BodyCommsTiersCardBasicLightSx = {
     backgroundColor: "#eeeeee80",
     border: "1px solid #29242a",
     borderRadius: "24px",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -1114,6 +1143,10 @@ export const BodyCommsTiersCardStandardDarkSx = {
     border: "1px solid transparent",
     filter:
       "drop-shadow(10px 8px 7px rgba(48,48,48,0.5)) drop-shadow(-12px -8px 8px rgba(20,19,21,0.5))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -1125,6 +1158,10 @@ export const BodyCommsTiersCardStandardLightSx = {
     border: "1px solid transparent",
     filter:
       "drop-shadow(20px 14px 8px rgba(186,186,186,0.5)) drop-shadow(-28px -28px 12px #efefeff0)",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -1335,6 +1372,10 @@ export const BodyCommsTiersCardAbstractifyDarkSx = {
     border: "1px solid transparent",
     filter:
       "drop-shadow(8px 6px 7px rgba(180,60,144,0.25)) drop-shadow(-10px -6px 8px rgba(174,0,138,0.25))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -1346,6 +1387,10 @@ export const BodyCommsTiersCardAbstractifyLightSx = {
     border: "1px solid transparent",
     filter:
       "drop-shadow(4px 4px 5px rgba(250,150,204,0.9)) drop-shadow(-4px -4px 5px rgba(224,60,198,0.35))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -1605,6 +1650,10 @@ export const BodyCommsTiersCardPremiumDarkSx = {
     backgroundClip: "padding-box",
     filter:
       "drop-shadow(5px 4px 4px rgba(172,163,144,0.9)) drop-shadow(-8px -6px 4px rgba(29,24,21,0.8))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
@@ -1617,6 +1666,10 @@ export const BodyCommsTiersCardPremiumLightSx = {
     backgroundClip: "padding-box",
     filter:
       "drop-shadow(20px 14px 8px rgba(186,186,186,0.5)) drop-shadow(-28px -28px 12px #efefeff0)",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
   },
 };
 
