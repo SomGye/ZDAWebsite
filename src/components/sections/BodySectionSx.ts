@@ -1368,7 +1368,7 @@ export const BodyCommsTiersCardAbstractifyDarkSx = {
   ...{
     borderRadius: "24px",
     background:
-      "linear-gradient(0deg, rgba(20,0,55,1) 0%, #2A135F 50%, rgba(55,0,20,1) 100%) padding-box, linear-gradient(295deg,rgba(189,144,135,1),rgba(197,77,138,1) 40%,rgba(192,8,130,1) 60%,rgba(185,0,215) 80%,rgba(129,14,215,1))",
+      "linear-gradient(0deg, rgba(20,0,55,1) 0%, #2A135F 50%, rgba(55,0,20,1) 100%) padding-box",
     border: "1px solid transparent",
     filter:
       "drop-shadow(8px 6px 7px rgba(180,60,144,0.25)) drop-shadow(-10px -6px 8px rgba(174,0,138,0.25))",
