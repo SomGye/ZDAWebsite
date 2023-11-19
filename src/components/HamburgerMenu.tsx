@@ -1,14 +1,3 @@
-// TODO: Hamburger Menu Component
-/**
- * Should be composed of:
- * - Initial 3 lines icon button
- * - X icon button to close menu
- * - Backdrop that covers screen, and is dismissed if clicked away
- * - Text links to other pages
- * TODO: Make stub components for the inner components of this!
- * TODO: Use Joy UI's React Drawer component for this: https://mui.com/joy-ui/react-drawer/
- */
-// NOTE: Use the Inset Drawer example from here: https://mui.com/joy-ui/react-drawer/#inset-drawer
 import * as React from "react";
 import Drawer from "@mui/joy/Drawer";
 import DialogTitle from "@mui/joy/DialogTitle";
@@ -36,6 +25,8 @@ import {
   HamburgerBoxSx,
   HamburgerTopNavBtnDarkSx,
   HamburgerTopNavBtnLightSx,
+  HamburgerFooterTextDarkSx,
+  HamburgerFooterTextLightSx,
 } from "./HamburgerMenuSx";
 
 type props = {
@@ -47,11 +38,25 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
 
+  const switchPage = (target: string) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    setPage(target);
+  };
+
+  React.useEffect(() => {
+    if (open) {
+      document.body.classList.add("noscroll");
+    } else {
+      document.body.classList.remove("noscroll");
+    }
+  }, [open]);
+
   return (
     <>
       <Drawer
         size="md"
         variant="plain"
+        disableScrollLock={true}
         open={open}
         onClose={() => setOpen(false)}
         slotProps={{
@@ -67,7 +72,9 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
         <Sheet
           sx={theme === "dark" ? HamburgerSheetDarkSx : HamburgerSheetLightSx}
         >
-          <DialogTitle>Links</DialogTitle>
+          <DialogTitle sx={{ pointerEvents: "none", userSelect: "none" }}>
+            Links
+          </DialogTitle>
           <ModalClose
             sx={theme === "dark" ? HamburgerCloseDarkSx : HamburgerCloseLightSx}
           />
@@ -85,7 +92,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <Box sx={HamburgerBoxTopSx}>
               <Button
                 onClick={() => {
-                  setPage("Home");
+                  switchPage("Home");
                   setOpen(false);
                 }}
                 sx={
@@ -98,7 +105,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  setPage("Portfolio");
+                  switchPage("Portfolio");
                   setOpen(false);
                 }}
                 sx={
@@ -111,7 +118,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  setPage("Commissions");
+                  switchPage("Commissions");
                   setOpen(false);
                 }}
                 sx={
@@ -189,7 +196,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  clickLink("https://pebble.is/ZeroDayAnubis");
+                  clickLink("https://ohai.social/@ZeroDayAnubis");
                   setOpen(false);
                 }}
                 sx={
@@ -198,7 +205,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                     : HamburgerInnerNavBtnLightSx
                 }
               >
-                Pebble
+                Mastodon
               </Button>
             </Box>
             <Typography
@@ -267,9 +274,16 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
           </DialogContent>
           <Divider sx={{ mt: "auto" }} />
           <Stack direction="row" justifyContent="center" useFlexGap spacing={1}>
-            <h5>
-              <i>Thank you for your support!</i>
-            </h5>
+            <Typography
+              level="body-xs"
+              sx={
+                theme === "dark"
+                  ? HamburgerFooterTextDarkSx
+                  : HamburgerFooterTextLightSx
+              }
+            >
+              Thank you for your support!
+            </Typography>
           </Stack>
         </Sheet>
       </Drawer>

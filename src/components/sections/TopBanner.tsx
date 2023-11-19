@@ -1,16 +1,3 @@
-// TODO: Top Banner Component
-/**
- * Top fixed banner, will stay at top even when scrolling.
- * Will contain:
- * - Logo + Title at left
- * - Name of current page (Home/Portfolio/Commissions) at mid-left
- * - Big 'Request A Commission' Button at mid-right
- * - Nav links for (Home/Portfolio/Commissions) at right
- * - Theme dark/light toggle at far right (small)
- * NOTE: Needs to be mobile-optimized!
- * Desktop version = horizontal strip, full button visibility
- * Mobile version = horizontal strip, show hamburger menu with links to pages and the Commission button
- */
 import * as React from "react";
 import {
   Box,
@@ -40,13 +27,11 @@ import {
   TopBannerIconBoxSx,
   TopBannerIconButtonDarkSx,
   TopBannerIconButtonLightSx,
-  TopBannerIconDarkSx,
-  TopBannerIconLightSx,
   TopBannerLogoNamePageBoxSx,
   TopBannerNavIconDarkSx,
   TopBannerThemeToggleBoxSx,
 } from "./TopBannerSx";
-import { Menu, PaletteRounded } from "@mui/icons-material";
+import { Menu } from "@mui/icons-material";
 import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
 import { clickLink } from "../../Helpers";
@@ -55,6 +40,11 @@ const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
   const [page, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
+
+  const switchPage = (target: string) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    setPage(target);
+  };
 
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
@@ -74,7 +64,10 @@ const TopBanner = () => {
 
   return (
     <Container sx={TopBannerContainerSx}>
-      <Box sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}>
+      <Box
+        className="TopBannerBox"
+        sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}
+      >
         <Box sx={TopBannerIconBoxSx}>
           <IconButton
             variant="soft"
@@ -93,9 +86,7 @@ const TopBanner = () => {
         </Box>
         <Box sx={TopBannerLogoNamePageBoxSx}>
           <h4 className="TopBannerLogoTextHeader">
-            {theme === "dark" && <PaletteRounded sx={TopBannerIconDarkSx} />}
-            {theme !== "dark" && <PaletteRounded sx={TopBannerIconLightSx} />}
-            ⌞ZeroDayAnubis⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
+            ⌞ZDA⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
           </h4>
         </Box>
         <Box>
@@ -130,19 +121,19 @@ const TopBanner = () => {
             sx={TopBannerButtonGroupSx}
           >
             <Button
-              onClick={() => setPage("Home")}
+              onClick={() => switchPage("Home")}
               sx={() => determineGroupButtonStyle("Home")}
             >
               Home
             </Button>
             <Button
-              onClick={() => setPage("Portfolio")}
+              onClick={() => switchPage("Portfolio")}
               sx={() => determineGroupButtonStyle("Portfolio")}
             >
               Portfolio
             </Button>
             <Button
-              onClick={() => setPage("Commissions")}
+              onClick={() => switchPage("Commissions")}
               sx={() => determineGroupButtonStyle("Commissions")}
             >
               Commissions

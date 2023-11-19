@@ -1,0 +1,27 @@
+/* MUI OVERRIDES */
+div.MuiContainer-root.BodyContainer {
+  max-width: none;
+  padding: 0;
+}
+
+/* IMAGE/ALBUM/LIGHTBOX OVERRIDES */
+img.react-photo-album--photo {
+  /* NOTE: Affects all React Photo Album imgs! */
+  border-radius: 24px;
+  max-height: 520px;
+  transition: opacity 0.2s ease-out;
+  object-fit: cover; /* force correct aspect ratio but cropped in */
+  &:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s ease-out;
+  }
+}
+
+img.yarl__slide_image {
+  max-height: 93vh !important;
+}
+
+button.yarl__button:focus,
+button.yarl__button:focus-visible {
+  outline: none;
+}

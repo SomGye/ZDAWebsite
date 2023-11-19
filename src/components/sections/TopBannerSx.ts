@@ -22,12 +22,16 @@ export const TopBannerBoxDarkSx = {
     margin: "auto",
     boxShadow: "rgba(210,192,226,0.04) 0px 1px 20px 2px",
     borderRadius: "24px",
-    "@media (max-width: 1080px)": {
+    "@media (max-width: 1000px)": {
       paddingTop: "0.95em",
       paddingBottom: "0.95em",
     },
     "@media (max-width: 670px)": {
       justifyContent: "center",
+    },
+    "@media (max-width: 340px)": {
+      paddingTop: "32px",
+      paddingBottom: "32px",
     },
   },
 };
@@ -47,12 +51,16 @@ export const TopBannerBoxLightSx = {
     margin: "auto",
     boxShadow: "rgba(30,12,46,0.14) 0px 60px 220px -4px",
     borderRadius: "24px",
-    "@media (max-width: 1080px)": {
+    "@media (max-width: 1000px)": {
       paddingTop: "0.95em",
       paddingBottom: "0.95em",
     },
     "@media (max-width: 670px)": {
       justifyContent: "center",
+    },
+    "@media (max-width: 340px)": {
+      paddingTop: "32px",
+      paddingBottom: "32px",
     },
   },
 };
@@ -73,6 +81,7 @@ export const TopBannerIconButtonDarkSx = {
     borderColor: "#3d393f",
     transition: "background-color 0.10s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       borderColor: "#6B25FE",
       backgroundColor: "#6B25FE",
@@ -89,6 +98,7 @@ export const TopBannerIconButtonLightSx = {
   ...{
     backgroundColor: "#fafafa10",
     transition: "background-color 0.25s",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
       transition: "background-color 0.25s",
@@ -107,35 +117,15 @@ export const TopBannerNavIconDarkSx = {
 
 export const TopBannerLogoNamePageBoxSx = {
   ...{
-    "@media (max-width: 1080px)": {
-      display: "none",
-    },
-  },
-};
-
-export const TopBannerIconDarkSx = {
-  ...{
-    backgroundColor: "#29242a10",
-    fontSize: "18px",
-    paddingRight: "8px",
-  },
-};
-
-export const TopBannerIconLightSx = {
-  ...{
-    backgroundColor: "#fafafa10",
-    fontSize: "18px",
-    paddingRight: "8px",
-  },
-};
-
-export const TopBannerLogoTextHeaderSx = {
-  ...{
+    width: "288px",
     display: "flex",
     flexDirection: "row",
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
+    "@media (max-width: 1000px)": {
+      display: "none",
+    },
   },
 };
 
@@ -144,13 +134,18 @@ export const TopBannerCommButtonDarkSx = {
     background:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     borderRadius: "24px",
+    boxShadow: "0px 1px 12px 1px #FF301F",
     transition: "background 0.15s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:focus": {
       outline: "none",
     },
     "&:hover .Button-Helper": {
       opacity: "1",
+    },
+    "@media (max-width: 340px)": {
+      display: "none",
     },
   },
 };
@@ -171,8 +166,13 @@ export const TopBannerCommButtonDarkHelperSx = {
     borderRadius: "24px",
     background:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
+    boxShadow: "0px 1px 24px 2px red",
     transition: "opacity 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
+    "@media (max-width: 340px)": {
+      display: "none",
+    },
   },
 };
 
@@ -181,13 +181,18 @@ export const TopBannerCommButtonLightSx = {
     background:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     borderRadius: "24px",
+    boxShadow: "0px 1px 12px 3px #f0a0ff",
     transition: "background 0.15s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:focus": {
       outline: "none",
     },
     "&:hover .Button-Helper": {
       opacity: "1",
+    },
+    "@media (max-width: 340px)": {
+      display: "none",
     },
   },
 };
@@ -208,8 +213,13 @@ export const TopBannerCommButtonLightHelperSx = {
     borderRadius: "24px",
     background:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+    boxShadow: "0px 1px 24px 2px #E600D7",
     transition: "opacity 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
+    "@media (max-width: 340px)": {
+      display: "none",
+    },
   },
 };
 
@@ -230,12 +240,13 @@ export const TopBannerButtonActiveDarkSx = {
     border: "none",
     backgroundColor: "#D600FF",
     color: "#fafafafa",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
-      backgroundColor: "#EB5EAF",
+      backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -249,12 +260,13 @@ export const TopBannerButtonDefaultDarkSx = {
     border: "none",
     backgroundColor: "#D600FF",
     color: "#fafafafa",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
-      backgroundColor: "#EB5EAF",
+      backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -269,12 +281,13 @@ export const TopBannerButtonActiveLightSx = {
     backgroundColor: "#E10965",
     color: "#fafafafa",
     border: "none",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {
@@ -288,12 +301,13 @@ export const TopBannerButtonDefaultLightSx = {
     border: "none",
     backgroundColor: "#E10965",
     color: "#fafafafa",
-    transition: "background-color 0.15s, color 0.15s",
+    transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.15s, color 0.15s",
+      transition: "background-color 0.3s, color 0.3s",
       transitionTimingFunction: "ease-out",
     },
     "&:focus": {

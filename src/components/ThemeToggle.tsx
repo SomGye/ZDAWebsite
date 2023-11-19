@@ -1,13 +1,12 @@
 import * as React from "react";
 import { Switch } from "@mui/joy";
 import DarkMode from "@mui/icons-material/DarkMode";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { themeAtom } from "../states/ThemeAtom";
 
 const ThemeToggle = () => {
   const [currentScheme, setScheme] = React.useState("dark"); // OS-detected Color Scheme
-  const [, setMode] = useRecoilState(themeAtom);
-  const mode = useRecoilValue(themeAtom);
+  const [mode, setMode] = useRecoilState(themeAtom);
   const [checked, setChecked] = React.useState(true);
   const [init, setInit] = React.useState(false);
 

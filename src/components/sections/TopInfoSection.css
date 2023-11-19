@@ -3,3 +3,35 @@ div.MuiContainer-root.TopInfoContainer {
   max-width: none;
   padding: 0;
 }
+
+p.TopInfoTopLeftTitle {
+  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: 4px;
+  @media (max-width: 670px) {
+    font-size: 28px;
+  }
+}
+
+span.TopInfoTopLeftTitleL {
+  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 2px;
+  @media (max-width: 670px) {
+    font-size: 24px;
+  }
+}
+
+span.TopInfoTopLeftTitleR {
+  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 2px;
+  @media (max-width: 670px) {
+    font-size: 24px;
+  }
+}

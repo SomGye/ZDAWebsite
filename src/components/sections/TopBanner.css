@@ -4,4 +4,12 @@ h4.TopBannerLogoTextHeader {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
+    pointer-events: none;
+    user-select: none;
+}
+
+div.TopBannerBox.MuiBox-root {
+    padding-right: 0 !important;
+    width: 98% !important;
 }

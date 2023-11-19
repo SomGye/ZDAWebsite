@@ -32,6 +32,7 @@ export const HamburgerCloseDarkSx = {
     color: "#89848a",
     transition: "background-color 0.10s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#49444a",
       color: "#89848a",
@@ -49,6 +50,7 @@ export const HamburgerCloseLightSx = {
     backgroundColor: "#e9e9e9",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#BBA5FE90",
       color: "#363137",
@@ -65,6 +67,8 @@ export const HamburgerTitleDarkSx = {
   ...{
     marginTop: "8px",
     color: "rgba(255, 255, 255, 0.90)",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -72,6 +76,8 @@ export const HamburgerTitleLightSx = {
   ...{
     marginTop: "8px",
     color: "#213547",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
 
@@ -125,6 +131,7 @@ export const HamburgerTopNavBtnDarkSx = {
     borderRadius: "24px",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
@@ -149,6 +156,7 @@ export const HamburgerTopNavBtnLightSx = {
     borderRadius: "24px",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
@@ -171,6 +179,7 @@ export const HamburgerInnerNavBtnDarkSx = {
     borderRadius: "2px",
     transition: "background-color 0.15s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
@@ -191,11 +200,36 @@ export const HamburgerInnerNavBtnLightSx = {
     borderRadius: "24px",
     transition: "background-color 0.20s",
     transitionTimingFunction: "ease-out",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#6B25FE",
       color: "#fafafa",
       transition: "background-color 0.20s",
       transitionTimingFunction: "ease-out",
     },
+  },
+};
+
+export const HamburgerFooterTextDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    color: "#fafafafa",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const HamburgerFooterTextLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    color: "#6B25FE",
+    pointerEvents: "none",
+    userSelect: "none",
   },
 };
