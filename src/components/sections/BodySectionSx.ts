@@ -921,7 +921,7 @@ export const BodyCommsTiersTopDividerSx = {
 export const BodyCommsTiersCardBasicDarkSx = {
   ...{
     backgroundColor: "#2b262c",
-    border: "1px solid #fafafa1a",
+    border: "1px solid #fafafa35",
     borderRadius: "24px",
     flexDirection: "row",
     "@media (max-width: 1000px)": {
