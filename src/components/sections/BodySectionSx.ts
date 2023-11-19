@@ -1409,7 +1409,7 @@ export const BodyCommsTiersCardAbstractifyTitleDarkSx = {
 export const BodyCommsTiersCardAbstractifyTitleLightSx = {
   ...{
     backgroundImage:
-      "linear-gradient(185deg, rgba(235,215,235,1) 0%, rgba(35,20,45,0.6) 40%, black 100%)",
+      "linear-gradient(185deg, rgba(235,215,235,1) 0%, rgba(39,24,49,0.6) 27%, black 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     fontWeight: "800",
