@@ -1610,12 +1610,16 @@ export const BodyCommsTiersCardAbstractifyBtnDarkSx = {
     backgroundColor: "#CD00BA",
     color: "#fafafafa",
     borderRadius: "24px",
-    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    boxShadow: "0px 0px 20px 2px #e020eac0",
+    transition:
+      "background-color 0.15s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#360080",
       color: "#fafafa",
-      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+      boxShadow: "0px 1px 26px 10px #8020ea",
+      transition:
+        "background-color 0.15s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -1628,12 +1632,16 @@ export const BodyCommsTiersCardAbstractifyBtnLightSx = {
     backgroundColor: "#42307C",
     color: "#fafafae0",
     borderRadius: "24px",
-    transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+    boxShadow: "0px 0px 36px 6px #f925a0",
+    transition:
+      "background-color 0.15s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#E600E6",
       color: "#19141a",
-      transition: "background-color 0.15s ease-out, color 0.15s ease-out",
+      boxShadow: "0px 1px 32px 16px #ba50ff",
+      transition:
+        "background-color 0.15s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out",
     },
     "&:focus": {
       outline: "none",
