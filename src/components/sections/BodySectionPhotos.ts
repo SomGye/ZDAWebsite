@@ -1722,6 +1722,20 @@ export const photos_portfolio_early2021_penup_srcSet = [
 
 export const photos_comm_abstractify = [
   {
+    src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "Broken",
+    title: "Broken",
+  },
+  {
+    src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114.jpg",
+    width: 2048,
+    height: 2048,
+    alt: "The Ghost Within",
+    title: "The Ghost Within",
+  },
+  {
     src: "/assets/comm_abstractify/Thing_202304231215_-_AEF.jpg",
     width: 2048,
     height: 2048,
@@ -1752,6 +1766,44 @@ export const photos_comm_abstractify = [
 ];
 
 export const photos_comm_abstractify_srcSet = [
+  {
+    src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Broken",
+    title: "Broken",
+  },
+  {
+    src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "The Ghost Within",
+    title: "The Ghost Within",
+  },
   {
     src: "/assets/comm_abstractify/Thing_202304231215_-_AEF-1200px.jpg",
     width: 1200,
