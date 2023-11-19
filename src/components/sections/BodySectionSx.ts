@@ -1107,7 +1107,7 @@ export const BodyCommsTiersCardBasicBtnDarkSx = {
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#b0b0b0",
+      backgroundColor: "#a0a0a0",
       color: "#000000",
       transition: "background-color 0.15s ease-out, color 0.15s ease-out",
     },
