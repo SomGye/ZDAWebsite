@@ -16,10 +16,11 @@
 import * as React from "react";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
-import { Box, Container, IconButton } from "@mui/joy";
+import { Box, Button, Container, IconButton } from "@mui/joy";
 import { EmailRounded, MessageRounded } from "@mui/icons-material";
 import { clickEmail, clickLink } from "../../Helpers";
 import {
+  FooterIconButtonBoxSx,
   FooterIconButtonDarkSx,
   FooterIconButtonLightSx,
   FooterIconDarkSx,
@@ -42,17 +43,12 @@ const FooterSection = () => {
           <br />
           Have a great day!
         </h4>
-        <Box
-          sx={{
-            display: "flex",
-            gap: 2,
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <IconButton
-            variant="outlined"
+        <Box sx={FooterIconButtonBoxSx}>
+          <Button
+            variant="solid"
+            startDecorator={
+              <EmailRounded sx={theme === "dark" ? FooterIconDarkSx : {}} />
+            }
             sx={
               theme === "dark"
                 ? FooterIconButtonDarkSx
@@ -60,11 +56,14 @@ const FooterSection = () => {
             }
             onClick={clickEmail}
           >
-            {theme === "dark" && <EmailRounded sx={FooterIconDarkSx} />}
-            {theme !== "dark" && <EmailRounded />}
-          </IconButton>
-          <IconButton
-            variant="outlined"
+            {" "}
+            Email Me
+          </Button>
+          <Button
+            variant="solid"
+            startDecorator={
+              <MessageRounded sx={theme === "dark" ? FooterIconDarkSx : {}} />
+            }
             sx={
               theme === "dark"
                 ? FooterIconButtonDarkSx
@@ -74,10 +73,11 @@ const FooterSection = () => {
               clickLink("https://discordapp.com/users/193548282264420354")
             }
           >
-            {theme === "dark" && <MessageRounded sx={FooterIconDarkSx} />}
-            {theme !== "dark" && <MessageRounded />}
-          </IconButton>
+            {" "}
+            Message Me
+          </Button>
         </Box>
+        {/* TODO: change to soft button and open in new tab */}
         <a href="https://drive.google.com/file/d/1H4WkDEfEIdqIAKem2sjGiyHJd5wb7udh/view?usp=sharing">
           <h5>Privacy Policy</h5>
         </a>
