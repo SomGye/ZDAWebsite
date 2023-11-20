@@ -1415,6 +1415,10 @@ export const BodyCommsTiersCardAbstractifyTitleLightSx = {
     fontWeight: "800",
     pointerEvents: "none",
     userSelect: "none",
+    "@media (max-width: 1000px)": {
+      backgroundImage:
+        "linear-gradient(185deg, rgba(40,20,40,1) 0%, rgba(235,230,250,0.45) 40%, white 100%)",
+    },
   },
 };
 
@@ -1446,6 +1450,9 @@ export const BodyCommsTiersCardAbstractifyDescOuterLightSx = {
     maxWidth: "30ch",
     pointerEvents: "none",
     userSelect: "none",
+    "@media (max-width: 1000px)": {
+      color: "#fafafaba",
+    },
   },
 };
 
@@ -1462,6 +1469,9 @@ export const BodyCommsTiersCardAbstractifyDescInnerLightSx = {
     color: "#000000fa",
     fontSize: "14px",
     fontWeight: "500",
+    "@media (max-width: 1000px)": {
+      color: "#fafafaaa",
+    },
   },
 };
 
