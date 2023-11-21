@@ -93,11 +93,7 @@ const FooterSection = () => {
           sx={
             theme === "dark" ? FooterIconButtonDarkSx : FooterIconButtonLightSx
           }
-          onClick={() =>
-            clickLink(
-              "https://drive.google.com/file/d/1H4WkDEfEIdqIAKem2sjGiyHJd5wb7udh/view?usp=sharing"
-            )
-          }
+          onClick={() => clickLink("https://tinyurl.com/ZDAPrivacy")}
         >
           {" "}
           Privacy Policy
