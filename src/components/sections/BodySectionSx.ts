@@ -495,7 +495,7 @@ export const BodyHomeSupportCardButtonLightSx = {
     width: "200px",
     justifyContent: "center",
     backgroundColor: "#FEFBF685",
-    color: "#E07E00",
+    color: "#ab5f00",
     border: "1px solid #F4DFBFAF",
     borderRadius: "24px",
     transition: "all 0.25s",
@@ -1079,7 +1079,7 @@ export const BodyCommsTiersCardBasicPricingLeftLightSx = {
 
 export const BodyCommsTiersCardBasicPricingRightDarkSx = {
   ...{
-    color: "#bababaaa",
+    color: "#908f91",
     fontSize: "14px",
     fontWeight: "500",
     textWrap: "nowrap",
