@@ -78,6 +78,9 @@ const TopBanner = () => {
                 : TopBannerIconButtonLightSx
             }
             onClick={() => setOpen(true)}
+            aria-label="Navigation Menu"
+            aria-description="Opens the Navigation Menu"
+            title="Navigation Menu"
           >
             {theme === "dark" && <Menu sx={TopBannerNavIconDarkSx} />}
             {theme !== "dark" && <Menu />}
@@ -98,6 +101,7 @@ const TopBanner = () => {
                 ? TopBannerCommButtonDarkSx
                 : TopBannerCommButtonLightSx
             }
+            aria-description="Opens the request form for Commissions"
           >
             <Typography
               className="Button-Helper"
@@ -123,18 +127,21 @@ const TopBanner = () => {
             <Button
               onClick={() => switchPage("Home")}
               sx={() => determineGroupButtonStyle("Home")}
+              aria-description="Opens the Home Tab"
             >
               Home
             </Button>
             <Button
               onClick={() => switchPage("Portfolio")}
               sx={() => determineGroupButtonStyle("Portfolio")}
+              aria-description="Opens the Portfolio Tab"
             >
               Portfolio
             </Button>
             <Button
               onClick={() => switchPage("Commissions")}
               sx={() => determineGroupButtonStyle("Commissions")}
+              aria-description="Opens the Commissions Tab"
             >
               Commissions
             </Button>
