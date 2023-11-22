@@ -556,6 +556,7 @@ const TopInfoSection = () => {
                         ? TopInfoCommCardBtnLeftDarkSx
                         : TopInfoCommCardBtnLeftLightSx
                     }
+                    aria-description="Opens the request form for Commissions"
                   >
                     Request A Commission
                   </Button>
@@ -569,6 +570,7 @@ const TopInfoSection = () => {
                         ? TopInfoCommCardBtnMidDarkSx
                         : TopInfoCommCardBtnMidLightSx
                     }
+                    aria-description="Opens the PDF for Commissions Info in a new tab"
                   >
                     Commission Info
                   </Button>

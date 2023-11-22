@@ -94,6 +94,7 @@ const FooterSection = () => {
             theme === "dark" ? FooterIconButtonDarkSx : FooterIconButtonLightSx
           }
           onClick={() => clickLink("https://tinyurl.com/ZDAPrivacy")}
+          aria-description="Opens the Privacy Policy PDF in a new tab"
         >
           {" "}
           Privacy Policy
