@@ -238,7 +238,7 @@ export const TopBannerButtonActiveDarkSx = {
   ...{
     textDecoration: "underline",
     border: "none",
-    backgroundColor: "#D600FF",
+    backgroundColor: "#b600d9",
     color: "#fafafafa",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
@@ -258,7 +258,7 @@ export const TopBannerButtonActiveDarkSx = {
 export const TopBannerButtonDefaultDarkSx = {
   ...{
     border: "none",
-    backgroundColor: "#D600FF",
+    backgroundColor: "#b600d9",
     color: "#fafafafa",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
@@ -278,7 +278,7 @@ export const TopBannerButtonDefaultDarkSx = {
 export const TopBannerButtonActiveLightSx = {
   ...{
     textDecoration: "underline",
-    backgroundColor: "#E10965",
+    backgroundColor: "#d5085f",
     color: "#fafafafa",
     border: "none",
     transition: "background-color 0.3s, color 0.3s",
@@ -299,7 +299,7 @@ export const TopBannerButtonActiveLightSx = {
 export const TopBannerButtonDefaultLightSx = {
   ...{
     border: "none",
-    backgroundColor: "#E10965",
+    backgroundColor: "#d5085f",
     color: "#fafafafa",
     transition: "background-color 0.3s, color 0.3s",
     transitionTimingFunction: "ease-out",
