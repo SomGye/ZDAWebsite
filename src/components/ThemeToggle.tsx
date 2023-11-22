@@ -79,7 +79,7 @@ const ThemeToggle = () => {
     <>
       <Switch
         slotProps={{
-          input: { "aria-label": "Dark Mode" },
+          input: { "aria-label": "Theme Toggle" },
           thumb: {
             children: <DarkMode />,
           },
@@ -89,6 +89,8 @@ const ThemeToggle = () => {
         }}
         checked={checked}
         onChange={(event) => setChecked(event.target.checked)}
+        aria-label="Theme Toggle"
+        title="Theme Toggle"
       />
     </>
   );
