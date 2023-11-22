@@ -78,6 +78,8 @@ const TopBanner = () => {
                 : TopBannerIconButtonLightSx
             }
             onClick={() => setOpen(true)}
+            aria-label="Navigation Menu"
+            title="Navigation Menu"
           >
             {theme === "dark" && <Menu sx={TopBannerNavIconDarkSx} />}
             {theme !== "dark" && <Menu />}
