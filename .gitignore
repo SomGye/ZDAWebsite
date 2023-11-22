@@ -30,6 +30,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env.development
+.env.production
 npm-debug.log
 
 # No bundled stuff in git
@@ -42,3 +44,4 @@ lib/
 
 # Optional eslint cache
 .eslintcache
+.vercel
