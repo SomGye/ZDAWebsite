@@ -347,7 +347,7 @@ export const BodyHomeSocmedCardButtonLightSx = {
     width: "164px",
     justifyContent: "center",
     backgroundColor: "#6b25fe05",
-    color: "rgba(228,0,254,1)",
+    color: "#c200d8",
     border: "1px solid rgba(228,0,254,0.2)",
     borderRadius: "24px",
     transition: "all 0.25s",
