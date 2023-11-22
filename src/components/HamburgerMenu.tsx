@@ -77,6 +77,8 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
           </DialogTitle>
           <ModalClose
             sx={theme === "dark" ? HamburgerCloseDarkSx : HamburgerCloseLightSx}
+            aria-label="Close Navigation Menu"
+            title="Close"
           />
           <Divider sx={{ mt: "auto" }} />
           <DialogContent sx={{ gap: 2 }}>
