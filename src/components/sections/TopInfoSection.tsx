@@ -9,6 +9,7 @@ import {
   CardOverflow,
   Container,
   Divider,
+  Modal,
   Typography,
 } from "@mui/joy";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -18,6 +19,7 @@ import {
   commSlotsAtom,
   waitlistSlotsAtom,
   commStatusAtom,
+  slotsReadyAtom,
 } from "../../states/CommSlotsAtom";
 import {
   TopInfoButtonGroupDarkSx,
@@ -84,6 +86,7 @@ const TopInfoSection = () => {
   const commSlots = useRecoilValue(commSlotsAtom);
   const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
   const commStatus = useRecoilValue(commStatusAtom);
+  const slotsReady = useRecoilValue(slotsReadyAtom);
 
   const switchPage = (target: string) => {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -155,39 +158,64 @@ const TopInfoSection = () => {
           </Typography>
         </Box>
         <Box sx={TopInfoTopTypoBoxColSx}>
-          <Typography
-            level="title-md"
-            component="h4"
-            sx={
-              theme === "dark"
-                ? TopInfoTopRightTitleDarkSx
-                : TopInfoTopRightTitleLightSx
-            }
-          >
-            <i>COMMISSIONS {commStatus}</i>
-          </Typography>
-          <Typography
-            level="title-md"
-            component="h4"
-            sx={
-              theme === "dark"
-                ? TopInfoTopRightTitleDarkSx
-                : TopInfoTopRightTitleLightSx
-            }
-          >
-            <i>{"(" + commSlots + "/5 SLOTS)"}</i>
-          </Typography>
-          <Typography
-            level="title-md"
-            component="h4"
-            sx={
-              theme === "dark"
-                ? TopInfoTopRightTitleDarkSx
-                : TopInfoTopRightTitleLightSx
-            }
-          >
-            <i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i>
-          </Typography>
+          {/* Spinner and Backdrop */}
+          {!slotsReady && (
+            <>
+              <Modal
+                open={!slotsReady}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box className="SpinnerBox">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </Box>
+              </Modal>
+            </>
+          )}
+          {/* Commissions Status/Active Slots/Waitlist Slots */}
+          {slotsReady && (
+            <>
+              <Typography
+                level="title-md"
+                component="h4"
+                sx={
+                  theme === "dark"
+                    ? TopInfoTopRightTitleDarkSx
+                    : TopInfoTopRightTitleLightSx
+                }
+              >
+                <i>COMMISSIONS {commStatus}</i>
+              </Typography>
+              <Typography
+                level="title-md"
+                component="h4"
+                sx={
+                  theme === "dark"
+                    ? TopInfoTopRightTitleDarkSx
+                    : TopInfoTopRightTitleLightSx
+                }
+              >
+                <i>{"(" + commSlots + "/5 SLOTS)"}</i>
+              </Typography>
+              <Typography
+                level="title-md"
+                component="h4"
+                sx={
+                  theme === "dark"
+                    ? TopInfoTopRightTitleDarkSx
+                    : TopInfoTopRightTitleLightSx
+                }
+              >
+                <i>{"(" + waitlistSlots + "/5 WAITLIST)"}</i>
+              </Typography>
+            </>
+          )}
         </Box>
       </Box>
       <Box sx={TopInfoNavButtonBoxSx}>
@@ -481,8 +509,8 @@ const TopInfoSection = () => {
                     : TopInfoCommCardBodyTopLightSx
                 }
               >
-                I am here to create abstract art for you, with several tiers
-                to meet your budget and design needs.
+                I am here to create abstract art for you, with several tiers to
+                meet your budget and design needs.
               </Typography>
               <Divider
                 orientation="horizontal"

@@ -1,8 +1,7 @@
 import { atom } from "recoil";
 
 /**
- * ACTIVE Commission Slots  
- * Update default manually!
+ * ACTIVE Commission Slots
  */
 export const commSlotsAtom = atom({
   key: "CommSlots",
@@ -10,8 +9,7 @@ export const commSlotsAtom = atom({
 }); // ACTIVE commission slots open
 
 /**
- * WAITLIST Commission Slots  
- * Update default manually!
+ * WAITLIST Commission Slots
  */
 export const waitlistSlotsAtom = atom({
   key: "WaitlistSlots",
@@ -19,10 +17,17 @@ export const waitlistSlotsAtom = atom({
 }); // WAITLIST commission slots open
 
 /**
- * Commission Status: OPEN or CLOSED  
- * Update default manually!
+ * Commission Status: OPEN or CLOSED
  */
 export const commStatusAtom = atom({
-  key:"CommStatus",
-  default: "OPEN" // "OPEN" or "CLOSED"
+  key: "CommStatus",
+  default: "OPEN", // "OPEN" or "CLOSED"
+});
+
+/**
+ * FLAG for hiding Spinner and setting Slots display to Ready
+ */
+export const slotsReadyAtom = atom({
+  key: "slotsReady",
+  default: false,
 });
