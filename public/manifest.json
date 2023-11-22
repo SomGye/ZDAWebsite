@@ -1,5 +1,5 @@
 {
-  "short_name": "ZeroDayAnubis",
+  "short_name": "ZDA Website",
   "name": "ZeroDayAnubis - Abstract Media Creator",
   "icons": [
     {
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#2D2937",
-  "background_color": "#955A94"
+  "theme_color": "#29242a",
+  "background_color": "#29242a"
 }
