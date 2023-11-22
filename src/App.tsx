@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import { Container } from "@mui/joy";
+import { Box, Card, Container, Divider, Typography } from "@mui/joy";
 import TopBanner from "./components/sections/TopBanner";
 import TopInfoSection from "./components/sections/TopInfoSection";
 import BodySection from "./components/sections/BodySection";
@@ -8,17 +8,28 @@ import FooterSection from "./components/sections/FooterSection";
 import { AppContainerSx } from "./AppSx";
 import { useRecoilState } from "recoil";
 import { pageAtom } from "./states/PageAtom";
+import {
+  commSlotsAtom,
+  commStatusAtom,
+  slotsReadyAtom,
+  waitlistSlotsAtom,
+} from "./states/CommSlotsAtom";
 
 function App() {
-  const [page, setPage] = useRecoilState(pageAtom);
+  const [, setPage] = useRecoilState(pageAtom);
+  const [commSlots, setCommSlots] = useRecoilState(commSlotsAtom);
+  const [waitSlots, setWaitSlots] = useRecoilState(waitlistSlotsAtom);
+  const [, setStatus] = useRecoilState(commStatusAtom);
+  const [, setSlotsReady] = useRecoilState(slotsReadyAtom);
   const [bannerReady, setBannerReady] = React.useState(false);
   const [infoReady, setInfoReady] = React.useState(false);
   const [bodyReady, setBodyReady] = React.useState(false);
   const [footerReady, setFooterReady] = React.useState(false);
   const bannerDelay = 10;
-  const infoDelay = 100;
-  const bodyDelay = 250;
-  const footerDelay = 400;
+  const infoDelay = 50;
+  const bodyDelay = 100;
+  const footerDelay = 200;
+  const slotDelay = 500;
   const rootPath = "https://www.zerodayanubis.com";
   const portfolioPath = "portfolio";
   const commissionsPath = "commissions";
@@ -50,6 +61,89 @@ function App() {
       console.log("Page detected: Home");
       setPage("Home");
     }
+
+    // Query Vercel KV Store to get Commissions Slots Info
+    const fetchData = async () => {
+      const result = await fetch(
+        `${
+          import.meta.env.VITE_KV_REST_API_URL
+        }/mget/slots:active/slots:waitlist`,
+        {
+          headers: {
+            Authorization: `Bearer ${import.meta.env.VITE_KV_REST_API_TOKEN}`,
+          },
+        }
+      )
+        .then((response) => response.json())
+        .catch((err) => console.log(err));
+
+      // Check for Result/Error
+      if (result && !result.error && result.result) {
+        // Check for empty results
+        if (result.result.length === 0) {
+          console.log("Warning while fetching KV: No results");
+        } else {
+          // Parse Current Active and Waitlist Slots
+          let commSlotsResult = commSlots;
+          let waitSlotsResult = waitSlots;
+          if (result.result[0] && result.result[0].length > 0) {
+            commSlotsResult = parseInt(result.result[0]);
+          }
+          if (result.result[1] && result.result[1].length > 0) {
+            waitSlotsResult = parseInt(result.result[1]);
+          }
+
+          // Update Commission Slots
+          if (!isNaN(commSlotsResult)) {
+            setTimeout(() => {
+              setCommSlots(commSlotsResult);
+            }, slotDelay);
+          }
+          if (!isNaN(waitSlotsResult)) {
+            setTimeout(() => {
+              setWaitSlots(waitSlotsResult);
+            }, slotDelay);
+          }
+
+          // Determine Commission Status
+          if (commSlotsResult < 1) {
+            setTimeout(() => {
+              setStatus("CLOSED");
+            }, slotDelay);
+          } else {
+            setTimeout(() => {
+              setStatus("OPEN");
+            }, slotDelay);
+          }
+
+          // Set Ready Flag
+          setTimeout(() => {
+            setSlotsReady(true);
+          }, slotDelay);
+
+          // Log result
+          console.log("Commission Slots updated from KV result:");
+          console.log(result.result);
+        }
+      } else if (result && result.error) {
+        // ERROR
+        console.log("Error while fetching KV: " + result.error);
+        setSlotsReady(true);
+      } else if (!result) {
+        // FETCH ERROR
+        console.log(
+          "Unexpected Error while fetching KV: Failed to Fetch Due to Incorrect URL"
+        );
+        setSlotsReady(true);
+      } else {
+        // UNEXPECTED ERROR
+        console.log("Unexpected Error while fetching KV: " + result);
+        setSlotsReady(true);
+      }
+    };
+
+    // Call Vercel KV API within hook
+    fetchData();
   }, []);
 
   return (
@@ -60,22 +154,6 @@ function App() {
         {bodyReady && <BodySection />}
         {footerReady && <FooterSection />}
       </Container>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
-      <p>TEST FILLER FOR SCROLL</p>
     </>
   );
 }
