@@ -1,13 +1,13 @@
 export const photos_highlights = [
   {
-    src: "/assets/highlights_home/Wisps_of_Afterlife-prog8.jpg",
+    src: "/assets/highlights_home/Wisps_of_Afterlife.jpg",
     width: 2480,
     height: 3508,
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
   },
   {
-    src: "/assets/highlights_home/Kublai_Anubis_02-prog8.jpg",
+    src: "/assets/highlights_home/Kublai_Anubis_02.jpg",
     width: 2480,
     height: 3508,
     alt: "Kublai Anubis 02",
@@ -31,17 +31,17 @@ export const photos_highlights = [
 
 export const photos_highlights_srcSet = [
   {
-    src: "/assets/highlights_home/Wisps_of_Afterlife-prog8-1200px.jpg",
+    src: "/assets/highlights_home/Wisps_of_Afterlife-1200px.jpg",
     width: 1200,
     height: 1697,
     srcSet: [
       {
-        src: "/assets/highlights_home/Wisps_of_Afterlife-prog8-640px.jpg",
+        src: "/assets/highlights_home/Wisps_of_Afterlife-640px.jpg",
         width: 640,
         height: 905,
       },
       {
-        src: "/assets/highlights_home/Wisps_of_Afterlife-prog8-320px.jpg",
+        src: "/assets/highlights_home/Wisps_of_Afterlife-320px.jpg",
         width: 320,
         height: 453,
       },
@@ -50,17 +50,17 @@ export const photos_highlights_srcSet = [
     title: "Wisps of Afterlife",
   },
   {
-    src: "/assets/highlights_home/Kublai_Anubis_02-prog8-1200px.jpg",
+    src: "/assets/highlights_home/Kublai_Anubis_02-1200px.jpg",
     width: 1200,
     height: 1697,
     srcSet: [
       {
-        src: "/assets/highlights_home/Kublai_Anubis_02-prog8-640px.jpg",
+        src: "/assets/highlights_home/Kublai_Anubis_02-640px.jpg",
         width: 640,
         height: 905,
       },
       {
-        src: "/assets/highlights_home/Kublai_Anubis_02-prog8-320px.jpg",
+        src: "/assets/highlights_home/Kublai_Anubis_02-320px.jpg",
         width: 320,
         height: 453,
       },
