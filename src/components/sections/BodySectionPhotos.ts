@@ -14,18 +14,18 @@ export const photos_highlights = [
     title: "Kublai Anubis 02",
   },
   {
-    src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8.jpg",
-    width: 2360,
-    height: 1640,
-    alt: "The Lotus of Inspiration",
-    title: "The Lotus of Inspiration",
+    src: "/assets/highlights_home/The_Crux_of_Crisis-3200px.jpg",
+    width: 3200,
+    height: 4526,
+    alt: "The Crux of Crisis",
+    title: "The Crux of Crisis",
   },
   {
-    src: "/assets/highlights_home/The_Chroma_Passage-prog8.jpg",
-    width: 2480,
-    height: 3508,
-    alt: "The Chroma Passage",
-    title: "The Chroma Passage",
+    src: "/assets/highlights_home/Divinity_Ends.jpg",
+    width: 1440,
+    height: 3120,
+    alt: "Divinity Ends",
+    title: "Divinity Ends",
   },
 ];
 
@@ -69,42 +69,42 @@ export const photos_highlights_srcSet = [
     title: "Kublai Anubis 02",
   },
   {
-    src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8-1200px.jpg",
-    width: 1200,
-    height: 834,
-    srcSet: [
-      {
-        src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8-640px.jpg",
-        width: 640,
-        height: 445,
-      },
-      {
-        src: "/assets/highlights_home/The_Lotus_of_Inspiration_-_ZDA-prog8-320px.jpg",
-        width: 320,
-        height: 222,
-      },
-    ],
-    alt: "The Lotus of Inspiration",
-    title: "The Lotus of Inspiration",
-  },
-  {
-    src: "/assets/highlights_home/The_Chroma_Passage-prog8-1200px.jpg",
+    src: "/assets/highlights_home/The_Crux_of_Crisis-1200px.jpg",
     width: 1200,
     height: 1697,
     srcSet: [
       {
-        src: "/assets/highlights_home/The_Chroma_Passage-prog8-640px.jpg",
+        src: "/assets/highlights_home/The_Crux_of_Crisis-640px.jpg",
         width: 640,
         height: 905,
       },
       {
-        src: "/assets/highlights_home/The_Chroma_Passage-prog8-320px.jpg",
+        src: "/assets/highlights_home/The_Crux_of_Crisis-320px.jpg",
         width: 320,
         height: 453,
       },
     ],
-    alt: "The Chroma Passage",
-    title: "The Chroma Passage",
+    alt: "The Crux of Crisis",
+    title: "The Crux of Crisis",
+  },
+  {
+    src: "/assets/highlights_home/Divinity_Ends-1200px.jpg",
+    width: 1200,
+    height: 2600,
+    srcSet: [
+      {
+        src: "/assets/highlights_home/Divinity_Ends-640px.jpg",
+        width: 640,
+        height: 1387,
+      },
+      {
+        src: "/assets/highlights_home/Divinity_Ends-320px.jpg",
+        width: 320,
+        height: 693,
+      },
+    ],
+    alt: "Divinity Ends",
+    title: "Divinity Ends",
   },
 ];
 
