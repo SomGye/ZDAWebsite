@@ -43,6 +43,12 @@ const TopBanner = () => {
 
   const switchPage = (target: string) => {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // Set URL to target without refresh
+    if (target === "Home") {
+      window.history.replaceState({}, "", "/");
+    } else {
+      window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
+    }
     setPage(target);
   };
 

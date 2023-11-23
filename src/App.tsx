@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import { Box, Card, Container, Divider, Typography } from "@mui/joy";
+import { Container } from "@mui/joy";
 import TopBanner from "./components/sections/TopBanner";
 import TopInfoSection from "./components/sections/TopInfoSection";
 import BodySection from "./components/sections/BodySection";
@@ -15,7 +15,11 @@ import {
   waitlistSlotsAtom,
 } from "./states/CommSlotsAtom";
 
-function App() {
+type Props = {
+  route: string;
+};
+
+const App = ({ route }: Props) => {
   const [, setPage] = useRecoilState(pageAtom);
   const [commSlots, setCommSlots] = useRecoilState(commSlotsAtom);
   const [waitSlots, setWaitSlots] = useRecoilState(waitlistSlotsAtom);
@@ -30,9 +34,6 @@ function App() {
   const bodyDelay = 100;
   const footerDelay = 200;
   const slotDelay = 500;
-  const rootPath = "https://www.zerodayanubis.com";
-  const portfolioPath = "portfolio";
-  const commissionsPath = "commissions";
 
   React.useEffect(() => {
     // Perf Tweak: Load Sections on Delays
@@ -49,16 +50,12 @@ function App() {
       setFooterReady(true);
     }, footerDelay);
 
-    const currentPath = window.location.href;
-    // TODO: Figure out how to avoid 404 on sub-paths
-    if (currentPath.toLocaleLowerCase().includes(portfolioPath)) {
-      console.log("Page detected: Portfolio");
+    // Set page to incoming route
+    if (route === "portfolio") {
       setPage("Portfolio");
-    } else if (currentPath.toLocaleLowerCase().includes(commissionsPath)) {
-      console.log("Page detected: Commissions");
+    } else if (route === "commissions") {
       setPage("Commissions");
     } else {
-      console.log("Page detected: Home");
       setPage("Home");
     }
 
@@ -156,6 +153,6 @@ function App() {
       </Container>
     </>
   );
-}
+};
 
 export default App;
