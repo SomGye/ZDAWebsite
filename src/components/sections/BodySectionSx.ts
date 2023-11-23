@@ -39,7 +39,7 @@ export const BodyHomeHighlightsCardDarkSx = {
     maxWidth: "90%",
     minHeight: "250px",
     background:
-      "linear-gradient(270deg, rgba(30,24,35,1) 0%, #2A135F 50%, rgba(29,26,43,1) 100%) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+      "linear-gradient(270deg, rgba(30,24,35,1) 0%, #2A135F 50%, rgba(29,26,43,1) 100%) padding-box, linear-gradient(69deg,#981CF4,#37264a 30%,#8541EC 60%,#c100f0 77%,#c100f0)",
     border: "1px solid transparent",
     borderBottomLeftRadius: "8px",
     borderBottomRightRadius: "8px",
@@ -47,7 +47,7 @@ export const BodyHomeHighlightsCardDarkSx = {
     transition: "all 0.15s ease-out",
     "&:hover": {
       background:
-        "linear-gradient(270deg, rgba(37,26,41,1) 0%, #3A0C5C 50%, rgba(36,28,49,1) 100%) padding-box, linear-gradient(180deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
+        "linear-gradient(270deg, rgba(30,24,35,1) 0%, #2A135F 50%, rgba(29,26,43,1) 100%) padding-box, linear-gradient(69deg,#6b25fe,#ff3fa0 60%,#f74cf5 77%,#936eff)",
       boxShadow: "rgba(69,19,121,1) 0px 26px 180px 10px",
       transition: "all 0.25s ease-out",
     },
