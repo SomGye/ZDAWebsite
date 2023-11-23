@@ -183,7 +183,7 @@ export const BodyHomeHighlightsCardOverflowBoxSx = {
 
 export const BodyHomeHighlightsCardBtnDarkSx = {
   ...{
-    backgroundColor: "#472950",
+    backgroundColor: "#6600C0",
     color: "#fafafacf",
     borderRadius: "24px",
     transition: "background-color 0.15s ease-out, color 0.15s ease-out",
