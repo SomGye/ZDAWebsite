@@ -10,7 +10,7 @@ import Typography from "@mui/joy/Typography";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/PageAtom";
 import { Box, Button } from "@mui/joy";
-import { clickLink } from "../Helpers";
+import { clickLink, switchPage } from "../Helpers";
 import { themeAtom } from "../states/ThemeAtom";
 import {
   HamburgerSheetDarkSx,
@@ -37,17 +37,6 @@ type props = {
 const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
-
-  const switchPage = (target: string) => {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-    // Set URL to target without refresh
-    if (target === "Home") {
-      window.history.replaceState({}, "", "/");
-    } else {
-      window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
-    }
-    setPage(target);
-  };
 
   React.useEffect(() => {
     if (open) {
@@ -100,7 +89,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <Box sx={HamburgerBoxTopSx}>
               <Button
                 onClick={() => {
-                  switchPage("Home");
+                  switchPage("Home", setPage);
                   setOpen(false);
                 }}
                 sx={
@@ -113,7 +102,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  switchPage("Portfolio");
+                  switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
                 sx={
@@ -126,7 +115,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  switchPage("Commissions");
+                  switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
                 sx={

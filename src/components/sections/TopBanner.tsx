@@ -34,23 +34,12 @@ import {
 import { Menu } from "@mui/icons-material";
 import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
-import { clickLink } from "../../Helpers";
+import { clickLink, switchPage } from "../../Helpers";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
   const [page, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
-
-  const switchPage = (target: string) => {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-    // Set URL to target without refresh
-    if (target === "Home") {
-      window.history.replaceState({}, "", "/");
-    } else {
-      window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
-    }
-    setPage(target);
-  };
 
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
@@ -122,7 +111,6 @@ const TopBanner = () => {
             Request A Commission
           </Button>
         </Box>
-        {/* TODO: Routing on Navigation, so that users can bookmark or go directly to a page */}
         <Box>
           <ButtonGroup
             aria-label="Top Banner Button Group"
@@ -131,21 +119,21 @@ const TopBanner = () => {
             sx={TopBannerButtonGroupSx}
           >
             <Button
-              onClick={() => switchPage("Home")}
+              onClick={() => switchPage("Home", setPage)}
               sx={() => determineGroupButtonStyle("Home")}
               aria-description="Opens the Home Tab"
             >
               Home
             </Button>
             <Button
-              onClick={() => switchPage("Portfolio")}
+              onClick={() => switchPage("Portfolio", setPage)}
               sx={() => determineGroupButtonStyle("Portfolio")}
               aria-description="Opens the Portfolio Tab"
             >
               Portfolio
             </Button>
             <Button
-              onClick={() => switchPage("Commissions")}
+              onClick={() => switchPage("Commissions", setPage)}
               sx={() => determineGroupButtonStyle("Commissions")}
               aria-description="Opens the Commissions Tab"
             >
