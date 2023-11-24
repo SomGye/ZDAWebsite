@@ -83,9 +83,7 @@ const TopBanner = () => {
           <HamburgerMenu open={open} setOpen={setOpen} />
         </Box>
         <Box sx={TopBannerLogoNamePageBoxSx}>
-          <h4 className="TopBannerLogoTextHeader">
-            ⌞ZDA⌝&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{page}
-          </h4>
+          <h4 className="TopBannerLogoTextHeader">{page}</h4>
         </Box>
         <Box>
           <Button
