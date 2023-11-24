@@ -64,16 +64,16 @@ export const TopInfoTopTypoBoxColSx = {
 export const TopInfoTopLeftTitleDarkSx = {
   ...{
     color: "#29242a",
-    fontWeight: "300",
+    fontWeight: "600",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(2px 2px 1px #DF00C5D5)",
+    filter: "drop-shadow(2px 2px 1px #DF00C59F)",
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(3px 3px 1px #D400BAFF)",
+      filter: "drop-shadow(3px 3px 1px #D400BABF)",
     },
   },
 };
@@ -81,16 +81,16 @@ export const TopInfoTopLeftTitleDarkSx = {
 export const TopInfoTopLeftTitleLightSx = {
   ...{
     color: "#fafafafa",
-    fontWeight: "200",
+    fontWeight: "600",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(3px 2px 0px #DF00C545)",
+    filter: "drop-shadow(3px 2px 0px #DF4B0135)",
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(4px 3px 2px #DF00C585)",
+      filter: "drop-shadow(4px 3px 2px #DF00C550)",
     },
   },
 };
