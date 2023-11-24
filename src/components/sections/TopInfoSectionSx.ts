@@ -64,7 +64,7 @@ export const TopInfoTopTypoBoxColSx = {
 export const TopInfoTopLeftTitleDarkSx = {
   ...{
     color: "#29242a",
-    fontWeight: "600",
+    fontWeight: "500",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
     marginRight: "auto",
@@ -81,7 +81,7 @@ export const TopInfoTopLeftTitleDarkSx = {
 export const TopInfoTopLeftTitleLightSx = {
   ...{
     color: "#fafafafa",
-    fontWeight: "600",
+    fontWeight: "400",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
     marginRight: "auto",

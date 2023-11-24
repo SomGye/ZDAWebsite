@@ -6,7 +6,7 @@ div.MuiContainer-root.TopInfoContainer {
 
 p.TopInfoTopLeftTitle {
   font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   letter-spacing: -2px;
   @media (max-width: 670px) {
     font-size: 28px;
@@ -26,7 +26,7 @@ span.TopInfoTopLeftTitleL {
   justify-content: center;
   align-items: center;
   @media (max-width: 670px) {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 
@@ -35,7 +35,7 @@ span.TopInfoTopLeftTitleR {
   font-size: 28px;
   font-weight: 500;
   font-style: normal;
-  letter-spacing: -5px;
+  letter-spacing: -4px;
   /* SPACING COMPENSATION */
   margin-top: -8px;
   display: inline-flex;
@@ -43,7 +43,7 @@ span.TopInfoTopLeftTitleR {
   justify-content: center;
   align-items: center;
   @media (max-width: 670px) {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 

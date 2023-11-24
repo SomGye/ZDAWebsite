@@ -127,7 +127,7 @@ const TopInfoSection = () => {
             >
               {"⌞ "}
             </Typography>
-            ZeroDayAnubis
+            ZERODAYANUBIS
             <Typography
               className="TopInfoTopLeftTitleR"
               sx={
