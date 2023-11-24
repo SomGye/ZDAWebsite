@@ -249,7 +249,7 @@ const TopInfoSection = () => {
                   : TopInfoCardOuterTypoLightSx
               }
             >
-              Welcome To My Page!
+              Welcome to the ZDA Website!
             </Typography>
             <Divider
               orientation="horizontal"
