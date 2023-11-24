@@ -1,0 +1,6 @@
+/* MUI OVERRIDES */
+div.MuiContainer-root.ErrorContainer {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}

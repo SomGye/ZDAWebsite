@@ -79,14 +79,12 @@ export const TopBannerIconButtonDarkSx = {
   ...{
     backgroundColor: "#39343a",
     borderColor: "#3d393f",
-    transition: "background-color 0.10s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.1s ease-out",
     userSelect: "none",
     "&:hover": {
       borderColor: "#6B25FE",
       backgroundColor: "#6B25FE",
-      transition: "background-color 0.10s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.1s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -135,8 +133,7 @@ export const TopBannerCommButtonDarkSx = {
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     borderRadius: "24px",
     boxShadow: "0px 1px 12px 1px #FF301F",
-    transition: "background 0.15s",
-    transitionTimingFunction: "ease-out",
+    transition: "background 0.15s ease-out",
     userSelect: "none",
     "&:focus": {
       outline: "none",
@@ -167,8 +164,7 @@ export const TopBannerCommButtonDarkHelperSx = {
     background:
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     boxShadow: "0px 1px 24px 2px red",
-    transition: "opacity 0.20s",
-    transitionTimingFunction: "ease-out",
+    transition: "opacity 0.2s ease-out",
     userSelect: "none",
     "@media (max-width: 340px)": {
       display: "none",
@@ -182,8 +178,7 @@ export const TopBannerCommButtonLightSx = {
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     borderRadius: "24px",
     boxShadow: "0px 1px 12px 3px #f0a0ff",
-    transition: "background 0.15s",
-    transitionTimingFunction: "ease-out",
+    transition: "background 0.15s ease-out",
     userSelect: "none",
     "&:focus": {
       outline: "none",
@@ -214,8 +209,7 @@ export const TopBannerCommButtonLightHelperSx = {
     background:
       "linear-gradient(69deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     boxShadow: "0px 1px 24px 2px #E600D7",
-    transition: "opacity 0.20s",
-    transitionTimingFunction: "ease-out",
+    transition: "opacity 0.2s ease-out",
     userSelect: "none",
     "@media (max-width: 340px)": {
       display: "none",
@@ -240,14 +234,12 @@ export const TopBannerButtonActiveDarkSx = {
     border: "none",
     backgroundColor: "#b600d9",
     color: "#fafafafa",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -260,14 +252,12 @@ export const TopBannerButtonDefaultDarkSx = {
     border: "none",
     backgroundColor: "#b600d9",
     color: "#fafafafa",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -281,14 +271,12 @@ export const TopBannerButtonActiveLightSx = {
     backgroundColor: "#d5085f",
     color: "#fafafafa",
     border: "none",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -301,14 +289,12 @@ export const TopBannerButtonDefaultLightSx = {
     border: "none",
     backgroundColor: "#d5085f",
     color: "#fafafafa",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",

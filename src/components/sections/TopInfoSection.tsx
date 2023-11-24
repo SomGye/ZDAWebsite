@@ -78,7 +78,7 @@ import {
   TopInfoTopTypoBoxSx,
 } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
-import { clickLink } from "../../Helpers";
+import { clickLink, switchPage } from "../../Helpers";
 
 const TopInfoSection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -87,11 +87,6 @@ const TopInfoSection = () => {
   const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
   const commStatus = useRecoilValue(commStatusAtom);
   const slotsReady = useRecoilValue(slotsReadyAtom);
-
-  const switchPage = (target: string) => {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-    setPage(target);
-  };
 
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
@@ -132,7 +127,7 @@ const TopInfoSection = () => {
             >
               {"⌞ "}
             </Typography>
-            ZeroDayAnubis
+            ZERODAYANUBIS
             <Typography
               className="TopInfoTopLeftTitleR"
               sx={
@@ -220,19 +215,19 @@ const TopInfoSection = () => {
       </Box>
       <Box sx={TopInfoNavButtonBoxSx}>
         <Button
-          onClick={() => switchPage("Home")}
+          onClick={() => switchPage("Home", setPage)}
           sx={() => determineGroupButtonStyle("Home")}
         >
           Home
         </Button>
         <Button
-          onClick={() => switchPage("Portfolio")}
+          onClick={() => switchPage("Portfolio", setPage)}
           sx={() => determineGroupButtonStyle("Portfolio")}
         >
           Portfolio
         </Button>
         <Button
-          onClick={() => switchPage("Commissions")}
+          onClick={() => switchPage("Commissions", setPage)}
           sx={() => determineGroupButtonStyle("Commissions")}
         >
           Commissions
@@ -254,7 +249,7 @@ const TopInfoSection = () => {
                   : TopInfoCardOuterTypoLightSx
               }
             >
-              Welcome To My Page!
+              Welcome to the ZDA Website!
             </Typography>
             <Divider
               orientation="horizontal"

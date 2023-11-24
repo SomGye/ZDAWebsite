@@ -6,9 +6,8 @@ div.MuiContainer-root.TopInfoContainer {
 
 p.TopInfoTopLeftTitle {
   font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  font-style: italic;
-  letter-spacing: 4px;
+  font-size: 29px;
+  letter-spacing: -2px;
   @media (max-width: 670px) {
     font-size: 28px;
   }
@@ -16,23 +15,35 @@ p.TopInfoTopLeftTitle {
 
 span.TopInfoTopLeftTitleL {
   font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 500;
   font-style: normal;
-  letter-spacing: 2px;
+  letter-spacing: -5px;
+  /* SPACING COMPENSATION */
+  margin-top: -8px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 670px) {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 
 span.TopInfoTopLeftTitleR {
   font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 500;
   font-style: normal;
-  letter-spacing: 2px;
+  letter-spacing: -4px;
+  /* SPACING COMPENSATION */
+  margin-top: -8px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 670px) {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 

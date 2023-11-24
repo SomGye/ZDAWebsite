@@ -64,16 +64,16 @@ export const TopInfoTopTypoBoxColSx = {
 export const TopInfoTopLeftTitleDarkSx = {
   ...{
     color: "#29242a",
-    fontWeight: "300",
+    fontWeight: "500",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(2px 2px 1px #DF00C5D5)",
+    filter: "drop-shadow(2px 2px 1px #DF00C59F)",
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(3px 3px 1px #D400BAFF)",
+      filter: "drop-shadow(3px 3px 1px #D400BABF)",
     },
   },
 };
@@ -81,16 +81,16 @@ export const TopInfoTopLeftTitleDarkSx = {
 export const TopInfoTopLeftTitleLightSx = {
   ...{
     color: "#fafafafa",
-    fontWeight: "200",
+    fontWeight: "400",
     marginTop: "auto", // CENTERING
     marginBottom: "auto",
     marginRight: "auto",
     marginLeft: "auto",
-    filter: "drop-shadow(3px 2px 0px #DF00C545)",
+    filter: "drop-shadow(3px 2px 0px #DF4B0135)",
     cursor: "default",
     userSelect: "none",
     "&:hover": {
-      filter: "drop-shadow(4px 3px 2px #DF00C585)",
+      filter: "drop-shadow(4px 3px 2px #DF00C550)",
     },
   },
 };
@@ -187,16 +187,14 @@ export const TopInfoNavButtonActiveDarkSx = {
     borderRadius: "24px",
     marginTop: "2px",
     marginBottom: "2px",
-    backgroundColor: "#D600FF",
+    backgroundColor: "#b600d9",
     color: "#fafafafa",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -211,16 +209,14 @@ export const TopInfoNavButtonDefaultDarkSx = {
     borderRadius: "24px",
     marginTop: "2px",
     marginBottom: "2px",
-    backgroundColor: "#D600FF",
+    backgroundColor: "#b600d9",
     color: "#fafafafa",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#F05AFF",
       color: "#19141a",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -232,20 +228,18 @@ export const TopInfoNavButtonActiveLightSx = {
   ...{
     width: "140px",
     textDecoration: "underline",
-    backgroundColor: "#E10965",
+    backgroundColor: "#d5085f",
     color: "#fafafafa",
     border: "none",
     borderRadius: "24px",
     marginTop: "2px",
     marginBottom: "2px",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -260,16 +254,14 @@ export const TopInfoNavButtonDefaultLightSx = {
     borderRadius: "24px",
     marginTop: "2px",
     marginBottom: "2px",
-    backgroundColor: "#E10965",
+    backgroundColor: "#d5085f",
     color: "#fafafafa",
-    transition: "background-color 0.3s, color 0.3s",
-    transitionTimingFunction: "ease-out",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
       backgroundColor: "#ef2e50",
       color: "lightgoldenrodyellow",
-      transition: "background-color 0.3s, color 0.3s",
-      transitionTimingFunction: "ease-out",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",

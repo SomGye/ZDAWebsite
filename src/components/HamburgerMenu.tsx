@@ -10,7 +10,7 @@ import Typography from "@mui/joy/Typography";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/PageAtom";
 import { Box, Button } from "@mui/joy";
-import { clickLink } from "../Helpers";
+import { clickLink, switchPage } from "../Helpers";
 import { themeAtom } from "../states/ThemeAtom";
 import {
   HamburgerSheetDarkSx,
@@ -27,7 +27,10 @@ import {
   HamburgerTopNavBtnLightSx,
   HamburgerFooterTextDarkSx,
   HamburgerFooterTextLightSx,
+  HamburgerInnerNavIconDarkSx,
+  HamburgerInnerNavIconLightSx,
 } from "./HamburgerMenuSx";
+import { LaunchRounded } from "@mui/icons-material";
 
 type props = {
   open: boolean;
@@ -37,11 +40,6 @@ type props = {
 const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
-
-  const switchPage = (target: string) => {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-    setPage(target);
-  };
 
   React.useEffect(() => {
     if (open) {
@@ -94,7 +92,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <Box sx={HamburgerBoxTopSx}>
               <Button
                 onClick={() => {
-                  switchPage("Home");
+                  switchPage("Home", setPage);
                   setOpen(false);
                 }}
                 sx={
@@ -107,7 +105,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  switchPage("Portfolio");
+                  switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
                 sx={
@@ -120,7 +118,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               </Button>
               <Button
                 onClick={() => {
-                  switchPage("Commissions");
+                  switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
                 sx={
@@ -143,6 +141,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             </Typography>
             <Box sx={HamburgerBoxSx}>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://twitter.com/ZDAWorks");
                   setOpen(false);
@@ -156,6 +163,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 Twitter/X
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink(
                     "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
@@ -171,6 +187,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 Instagram
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://bsky.app/profile/zerodayanubis.com");
                   setOpen(false);
@@ -184,6 +209,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 Bluesky
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://www.threads.net/@zerodayanubis");
                   setOpen(false);
@@ -197,6 +231,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 Threads
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://ohai.social/@ZeroDayAnubis");
                   setOpen(false);
@@ -221,6 +264,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             </Typography>
             <Box sx={HamburgerBoxSx}>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://tinyurl.com/ZDAPrints");
                   setOpen(false);
@@ -234,6 +286,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 Print Shop
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://ko-fi.com/zerodayanubis");
                   setOpen(false);
@@ -247,6 +308,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 Ko-Fi (HQ Files)
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://paypal.me/ZeroDayAnubis");
                   setOpen(false);
@@ -260,6 +330,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 PayPal
               </Button>
               <Button
+                startDecorator={
+                  <LaunchRounded
+                    sx={
+                      theme === "dark"
+                        ? HamburgerInnerNavIconDarkSx
+                        : HamburgerInnerNavIconLightSx
+                    }
+                  />
+                }
                 onClick={() => {
                   clickLink("https://account.venmo.com/u/somgye");
                   setOpen(false);
