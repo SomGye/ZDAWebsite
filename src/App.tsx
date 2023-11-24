@@ -55,6 +55,8 @@ const App = ({ route }: Props) => {
       setPage("Portfolio");
     } else if (route === "commissions") {
       setPage("Commissions");
+    } else if (route === "examples") {
+      setPage("Examples");
     } else {
       setPage("Home");
     }

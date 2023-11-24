@@ -182,12 +182,16 @@ import {
 import "./BodySection.css";
 import {
   photos_comm_abstractify,
+  photos_comm_abstractify_ex_srcSet,
   photos_comm_abstractify_srcSet,
   photos_comm_basic,
+  photos_comm_basic_ex_srcSet,
   photos_comm_basic_srcSet,
   photos_comm_premium,
+  photos_comm_premium_ex_srcSet,
   photos_comm_premium_srcSet,
   photos_comm_standard,
+  photos_comm_standard_ex_srcSet,
   photos_comm_standard_srcSet,
   photos_highlights,
   photos_highlights_srcSet,
@@ -2214,6 +2218,690 @@ const BodySection = () => {
                     defaultContainerWidth={600}
                   />
                 </Box>
+              </Box>
+            </Card>
+          </Box>
+        </Box>
+      )}
+      {page && page === "Examples" && (
+        <Box sx={BodyCommsTiersBoxSx}>
+          <span style={{ marginTop: "20px" }} />
+          <Typography
+            level="title-md"
+            sx={
+              theme === "dark"
+                ? BodyCommsTiersTypographyDarkSx
+                : BodyCommsTiersTypographyLightSx
+            }
+          >
+            ZDA Commission Tiers Examples
+          </Typography>
+          <Box sx={BodyCommsTiersCardsBoxSx}>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardBasicDarkSx
+                  : BodyCommsTiersCardBasicLightSx
+              }
+            >
+              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_comm_basic_ex_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={150}
+                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    defaultContainerWidth={1000}
+                  />
+                </Box>
+              </Box>
+              <Box sx={BodyCommsTiersSplitContentBoxSx}>
+                <Typography
+                  level="h2"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardBasicTitleDarkSx
+                      : BodyCommsTiersCardBasicTitleLightSx
+                  }
+                >
+                  Basic
+                </Typography>
+                <Box sx={BodyCommsTiersCardBasicDescBoxSx}>
+                  <Typography
+                    level="title-md"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicDescOuterDarkSx
+                        : BodyCommsTiersCardBasicDescOuterLightSx
+                    }
+                  >
+                    Description:
+                    <br />
+                    <Typography
+                      level="body-sm"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicDescInnerDarkSx
+                          : BodyCommsTiersCardBasicDescInnerLightSx
+                      }
+                    >
+                      Quick sketch and composition with focus on interesting
+                      colors and contrast.
+                    </Typography>
+                  </Typography>
+                </Box>
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
+                <List size="sm" sx={{ mx: "2px" }}>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicListItemDarkSx
+                        : BodyCommsTiersCardBasicListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardBasicListIconDarkSx
+                            : BodyCommsTiersCardBasicListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Layers: 3 - 5
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicListItemDarkSx
+                        : BodyCommsTiersCardBasicListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardBasicListIconDarkSx
+                            : BodyCommsTiersCardBasicListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Minimal # of effects
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicListItemDarkSx
+                        : BodyCommsTiersCardBasicListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardBasicListIconDarkSx
+                            : BodyCommsTiersCardBasicListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Simple shading + blending
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardBasicListItemDarkSx
+                        : BodyCommsTiersCardBasicListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardBasicListIconDarkSx
+                            : BodyCommsTiersCardBasicListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Turnaround Time: ~1 day
+                  </ListItem>
+                </List>
+                <Divider inset="none" />
+                <CardActions sx={BodyCommsTiersCardBasicCardActionsSx}>
+                  <Box sx={BodyCommsTiersCardBasicPricingBoxSx}>
+                    <Typography
+                      level="title-lg"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicPricingLeftDarkSx
+                          : BodyCommsTiersCardBasicPricingLeftLightSx
+                      }
+                    >
+                      $ 10{" "}
+                    </Typography>
+                    <Typography
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardBasicPricingRightDarkSx
+                          : BodyCommsTiersCardBasicPricingRightLightSx
+                      }
+                    >
+                      (PayPal/Ko-fi)
+                    </Typography>
+                  </Box>
+                </CardActions>
+              </Box>
+            </Card>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardStandardDarkSx
+                  : BodyCommsTiersCardStandardLightSx
+              }
+            >
+              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_comm_standard_ex_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={150}
+                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    defaultContainerWidth={1000}
+                  />
+                </Box>
+              </Box>
+              <Box sx={BodyCommsTiersSplitContentBoxSx}>
+                <Typography
+                  level="h2"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardStandardTitleDarkSx
+                      : BodyCommsTiersCardStandardTitleLightSx
+                  }
+                >
+                  Standard
+                </Typography>
+                <Box sx={BodyCommsTiersCardStandardDescBoxSx}>
+                  <Typography
+                    level="title-md"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardDescOuterDarkSx
+                        : BodyCommsTiersCardStandardDescOuterLightSx
+                    }
+                  >
+                    Description:
+                    <br />
+                    <Typography
+                      level="body-sm"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardDescInnerDarkSx
+                          : BodyCommsTiersCardStandardDescInnerLightSx
+                      }
+                    >
+                      More detailed and thoughtful composition with additional
+                      layers for effects and depth.
+                      <br />
+                      Texturing and retouching used to bring out even better
+                      colors and contrast.
+                    </Typography>
+                  </Typography>
+                </Box>
+                <Divider inset="none" />
+                <List size="sm" sx={{ mx: "2px" }}>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardListItemDarkSx
+                        : BodyCommsTiersCardStandardListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardStandardListIconDarkSx
+                            : BodyCommsTiersCardStandardListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Layers: 5 - 10
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardListItemDarkSx
+                        : BodyCommsTiersCardStandardListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardStandardListIconDarkSx
+                            : BodyCommsTiersCardStandardListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Standard # of effects
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardListItemDarkSx
+                        : BodyCommsTiersCardStandardListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardStandardListIconDarkSx
+                            : BodyCommsTiersCardStandardListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Standard shading/blending/lighting
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardStandardListItemDarkSx
+                        : BodyCommsTiersCardStandardListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardStandardListIconDarkSx
+                            : BodyCommsTiersCardStandardListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Turnaround Time: ~1 day
+                  </ListItem>
+                </List>
+                <Divider inset="none" />
+                <CardActions sx={BodyCommsTiersCardStandardCardActionsSx}>
+                  <Box sx={BodyCommsTiersCardStandardPricingBoxSx}>
+                    <Typography
+                      level="title-lg"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardPricingLeftDarkSx
+                          : BodyCommsTiersCardStandardPricingLeftLightSx
+                      }
+                    >
+                      $ 15{" "}
+                    </Typography>
+                    <Typography
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardStandardPricingRightDarkSx
+                          : BodyCommsTiersCardStandardPricingRightLightSx
+                      }
+                    >
+                      (PayPal/Ko-fi)
+                    </Typography>
+                  </Box>
+                </CardActions>
+              </Box>
+            </Card>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardAbstractifyDarkSx
+                  : BodyCommsTiersCardAbstractifyLightSx
+              }
+            >
+              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_comm_abstractify_ex_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={150}
+                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    defaultContainerWidth={1000}
+                  />
+                </Box>
+              </Box>
+              <Box sx={BodyCommsTiersSplitContentBoxSx}>
+                <Typography
+                  level="h2"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyTitleDarkSx
+                      : BodyCommsTiersCardAbstractifyTitleLightSx
+                  }
+                >
+                  Abstractify
+                </Typography>
+                <Box sx={BodyCommsTiersCardAbstractifyDescBoxSx}>
+                  <Typography
+                    level="title-md"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyDescOuterDarkSx
+                        : BodyCommsTiersCardAbstractifyDescOuterLightSx
+                    }
+                  >
+                    Description:
+                    <br />
+                    <Typography
+                      level="body-sm"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyDescInnerDarkSx
+                          : BodyCommsTiersCardAbstractifyDescInnerLightSx
+                      }
+                    >
+                      “Abstractify” an existing reference, preferably album art
+                      or movie poster, by transforming an idea into a fresh, new
+                      abstract version.
+                    </Typography>
+                  </Typography>
+                </Box>
+                <Divider inset="none" />
+                <List size="sm" sx={{ mx: "2px" }}>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                            : BodyCommsTiersCardAbstractifyListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Layers: 5 - 10
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                            : BodyCommsTiersCardAbstractifyListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Standard # of effects
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                            : BodyCommsTiersCardAbstractifyListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Standard shading/blending/lighting
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                            : BodyCommsTiersCardAbstractifyListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Turnaround Time: 1-2 days
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardAbstractifyListItemIdtDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemIdtLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardAbstractifyListIconDarkSx
+                            : BodyCommsTiersCardAbstractifyListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    (Additional time needed to plan and recreate the reference
+                    in a new, abstract way)
+                  </ListItem>
+                </List>
+                <Typography
+                  level="body-sm"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardAbstractifyListSubtitleDarkSx
+                      : BodyCommsTiersCardAbstractifyListSubtitleLightSx
+                  }
+                >
+                  NOTE: Not aiming to make a direct copy of the reference; the
+                  goal is to be heavily influenced by the reference and make
+                  something new and interesting
+                </Typography>
+                <Divider inset="none" />
+                <CardActions sx={BodyCommsTiersCardAbstractifyCardActionsSx}>
+                  <Box sx={BodyCommsTiersCardAbstractifyPricingBoxSx}>
+                    <Typography
+                      level="title-lg"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyPricingLeftDarkSx
+                          : BodyCommsTiersCardAbstractifyPricingLeftLightSx
+                      }
+                    >
+                      $ 20{" "}
+                    </Typography>
+                    <Typography
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardAbstractifyPricingRightDarkSx
+                          : BodyCommsTiersCardAbstractifyPricingRightLightSx
+                      }
+                    >
+                      (PayPal/Ko-fi)
+                    </Typography>
+                  </Box>
+                </CardActions>
+              </Box>
+            </Card>
+            <Card
+              size="lg"
+              variant="solid"
+              sx={
+                theme === "dark"
+                  ? BodyCommsTiersCardPremiumDarkSx
+                  : BodyCommsTiersCardPremiumLightSx
+              }
+            >
+              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_comm_premium_ex_srcSet}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={150}
+                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    defaultContainerWidth={1000}
+                  />
+                </Box>
+              </Box>
+              <Box sx={BodyCommsTiersSplitContentBoxSx}>
+                <Typography
+                  level="h2"
+                  sx={
+                    theme === "dark"
+                      ? BodyCommsTiersCardPremiumTitleDarkSx
+                      : BodyCommsTiersCardPremiumTitleLightSx
+                  }
+                >
+                  Premium
+                </Typography>
+                <Box sx={BodyCommsTiersCardPremiumDescBoxSx}>
+                  <Typography
+                    level="title-md"
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumDescOuterDarkSx
+                        : BodyCommsTiersCardPremiumDescOuterLightSx
+                    }
+                  >
+                    Description:
+                    <br />
+                    <Typography
+                      level="body-sm"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumDescInnerDarkSx
+                          : BodyCommsTiersCardPremiumDescInnerLightSx
+                      }
+                    >
+                      Most detailed composition with more planning and
+                      retouching to achieve the best possible effects and
+                      overall look.
+                      <br />
+                      Color, contrast, textures, depth, and effects are all
+                      taken to maximum potential.
+                    </Typography>
+                  </Typography>
+                </Box>
+                <Divider inset="none" />
+                <List size="sm" sx={{ mx: "2px" }}>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumListItemDarkSx
+                        : BodyCommsTiersCardPremiumListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardPremiumListIconDarkSx
+                            : BodyCommsTiersCardPremiumListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Layers: {">10"}
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumListItemDarkSx
+                        : BodyCommsTiersCardPremiumListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardPremiumListIconDarkSx
+                            : BodyCommsTiersCardPremiumListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Maximum # of effects (as needed)
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumListItemDarkSx
+                        : BodyCommsTiersCardPremiumListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardPremiumListIconDarkSx
+                            : BodyCommsTiersCardPremiumListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Best level of shading + blending + lighting
+                  </ListItem>
+                  <ListItem
+                    sx={
+                      theme === "dark"
+                        ? BodyCommsTiersCardPremiumListItemDarkSx
+                        : BodyCommsTiersCardPremiumListItemLightSx
+                    }
+                  >
+                    <ListItemDecorator>
+                      <HorizontalRuleRounded
+                        sx={
+                          theme === "dark"
+                            ? BodyCommsTiersCardPremiumListIconDarkSx
+                            : BodyCommsTiersCardPremiumListIconLightSx
+                        }
+                      />
+                    </ListItemDecorator>
+                    Turnaround Time: 1-2 days
+                  </ListItem>
+                </List>
+                <Divider inset="none" />
+                <CardActions sx={BodyCommsTiersCardPremiumCardActionsSx}>
+                  <Box sx={BodyCommsTiersCardPremiumPricingBoxSx}>
+                    <Typography
+                      level="title-lg"
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumPricingLeftDarkSx
+                          : BodyCommsTiersCardPremiumPricingLeftLightSx
+                      }
+                    >
+                      $ 30{" "}
+                    </Typography>
+                    <Typography
+                      sx={
+                        theme === "dark"
+                          ? BodyCommsTiersCardPremiumPricingRightDarkSx
+                          : BodyCommsTiersCardPremiumPricingRightLightSx
+                      }
+                    >
+                      (PayPal/Ko-fi)
+                    </Typography>
+                  </Box>
+                </CardActions>
               </Box>
             </Card>
           </Box>

@@ -1882,6 +1882,47 @@ export const photos_comm_abstractify_srcSet = [
   },
 ];
 
+export const photos_comm_abstractify_ex_srcSet = [
+  {
+    src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Broken_20231112-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Broken",
+    title: "Broken",
+  },
+  {
+    src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "The Ghost Within",
+    title: "The Ghost Within",
+  },
+];
+
 export const photos_comm_basic = [
   {
     src: "/assets/comm_basic/Indistinguishable_Torment.jpg",
@@ -1996,6 +2037,47 @@ export const photos_comm_basic_srcSet = [
     ],
     alt: "The Shore Sees",
     title: "The Shore Sees",
+  },
+  {
+    src: "/assets/comm_basic/Tidal_Interference-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/Tidal_Interference-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_basic/Tidal_Interference-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "Tidal Interference",
+    title: "Tidal Interference",
+  },
+];
+
+export const photos_comm_basic_ex_srcSet = [
+  {
+    src: "/assets/comm_basic/QS1-BL-1200px.jpg",
+    width: 1200,
+    height: 1200,
+    srcSet: [
+      {
+        src: "/assets/comm_basic/QS1-BL-640px.jpg",
+        width: 640,
+        height: 640,
+      },
+      {
+        src: "/assets/comm_basic/QS1-BL-320px.jpg",
+        width: 320,
+        height: 320,
+      },
+    ],
+    alt: "QS1-BL",
+    title: "QS1-BL",
   },
   {
     src: "/assets/comm_basic/Tidal_Interference-1200px.jpg",
@@ -2180,6 +2262,47 @@ export const photos_comm_premium_srcSet = [
   },
 ];
 
+export const photos_comm_premium_ex_srcSet = [
+  {
+    src: "/assets/comm_premium/Frame_of_Revelation-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/Frame_of_Revelation-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_premium/Frame_of_Revelation-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "Frame of Revelation",
+    title: "Frame of Revelation",
+  },
+  {
+    src: "/assets/comm_premium/The_Crux_of_Crisis-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_premium/The_Crux_of_Crisis-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_premium/The_Crux_of_Crisis-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "The Crux of Crisis",
+    title: "The Crux of Crisis",
+  },
+];
+
 export const photos_comm_standard = [
   {
     src: "/assets/comm_standard/Divinity_Ends.jpg",
@@ -2320,6 +2443,47 @@ export const photos_comm_standard_srcSet = [
     ],
     alt: "The Chroma Passage",
     title: "The Chroma Passage",
+  },
+  {
+    src: "/assets/comm_standard/Wisps_of_Afterlife-1200px.jpg",
+    width: 1200,
+    height: 1697,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Wisps_of_Afterlife-640px.jpg",
+        width: 640,
+        height: 905,
+      },
+      {
+        src: "/assets/comm_standard/Wisps_of_Afterlife-320px.jpg",
+        width: 320,
+        height: 453,
+      },
+    ],
+    alt: "Wisps of Afterlife",
+    title: "Wisps of Afterlife",
+  },
+];
+
+export const photos_comm_standard_ex_srcSet = [
+  {
+    src: "/assets/comm_standard/Divinity_Ends-1200px.jpg",
+    width: 1200,
+    height: 2600,
+    srcSet: [
+      {
+        src: "/assets/comm_standard/Divinity_Ends-640px.jpg",
+        width: 640,
+        height: 1387,
+      },
+      {
+        src: "/assets/comm_standard/Divinity_Ends-320px.jpg",
+        width: 320,
+        height: 693,
+      },
+    ],
+    alt: "Divinity Ends",
+    title: "Divinity Ends",
   },
   {
     src: "/assets/comm_standard/Wisps_of_Afterlife-1200px.jpg",
