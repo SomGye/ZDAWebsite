@@ -192,6 +192,58 @@ import {
   BodyCommsExButtonBoxSx,
   BodyCommsExButtonDarkSx,
   BodyCommsExButtonLightSx,
+  BodyCommsTiersCardBasicTitleExDarkSx,
+  BodyCommsTiersCardBasicTitleExLightSx,
+  BodyCommsTiersCardBasicDescOuterExDarkSx,
+  BodyCommsTiersCardBasicDescOuterExLightSx,
+  BodyCommsTiersCardBasicDescInnerExDarkSx,
+  BodyCommsTiersCardBasicDescInnerExLightSx,
+  BodyCommsTiersCardBasicListItemExDarkSx,
+  BodyCommsTiersCardBasicListItemExLightSx,
+  BodyCommsTiersCardBasicPricingLeftExDarkSx,
+  BodyCommsTiersCardBasicPricingLeftExLightSx,
+  BodyCommsTiersCardBasicPricingRightExDarkSx,
+  BodyCommsTiersCardBasicPricingRightExLightSx,
+  BodyCommsTiersCardStandardTitleExDarkSx,
+  BodyCommsTiersCardStandardTitleExLightSx,
+  BodyCommsTiersCardStandardDescOuterExDarkSx,
+  BodyCommsTiersCardStandardDescOuterExLightSx,
+  BodyCommsTiersCardStandardDescInnerExDarkSx,
+  BodyCommsTiersCardStandardDescInnerExLightSx,
+  BodyCommsTiersCardStandardListItemExDarkSx,
+  BodyCommsTiersCardStandardListItemExLightSx,
+  BodyCommsTiersCardStandardPricingLeftExDarkSx,
+  BodyCommsTiersCardStandardPricingLeftExLightSx,
+  BodyCommsTiersCardStandardPricingRightExDarkSx,
+  BodyCommsTiersCardStandardPricingRightExLightSx,
+  BodyCommsTiersCardAbstractifyTitleExDarkSx,
+  BodyCommsTiersCardAbstractifyTitleExLightSx,
+  BodyCommsTiersCardAbstractifyDescOuterExDarkSx,
+  BodyCommsTiersCardAbstractifyDescOuterExLightSx,
+  BodyCommsTiersCardAbstractifyDescInnerExDarkSx,
+  BodyCommsTiersCardAbstractifyDescInnerExLightSx,
+  BodyCommsTiersCardAbstractifyListItemExDarkSx,
+  BodyCommsTiersCardAbstractifyListItemExLightSx,
+  BodyCommsTiersCardAbstractifyListItemIdtExDarkSx,
+  BodyCommsTiersCardAbstractifyListItemIdtExLightSx,
+  BodyCommsTiersCardAbstractifyPricingLeftExDarkSx,
+  BodyCommsTiersCardAbstractifyPricingLeftExLightSx,
+  BodyCommsTiersCardAbstractifyPricingRightExDarkSx,
+  BodyCommsTiersCardAbstractifyPricingRightExLightSx,
+  BodyCommsTiersCardPremiumTitleExDarkSx,
+  BodyCommsTiersCardPremiumTitleExLightSx,
+  BodyCommsTiersCardPremiumDescOuterExDarkSx,
+  BodyCommsTiersCardPremiumDescOuterExLightSx,
+  BodyCommsTiersCardPremiumDescInnerExDarkSx,
+  BodyCommsTiersCardPremiumDescInnerExLightSx,
+  BodyCommsTiersCardPremiumListItemExDarkSx,
+  BodyCommsTiersCardPremiumListItemExLightSx,
+  BodyCommsTiersCardPremiumPricingLeftExDarkSx,
+  BodyCommsTiersCardPremiumPricingLeftExLightSx,
+  BodyCommsTiersCardPremiumPricingRightExDarkSx,
+  BodyCommsTiersCardPremiumPricingRightExLightSx,
+  BodyCommsTiersCardPremiumListItemLongExDarkSx,
+  BodyCommsTiersCardPremiumListItemLongExLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -2277,8 +2329,8 @@ const BodySection = () => {
                   level="h2"
                   sx={
                     theme === "dark"
-                      ? BodyCommsTiersCardBasicTitleDarkSx
-                      : BodyCommsTiersCardBasicTitleLightSx
+                      ? BodyCommsTiersCardBasicTitleExDarkSx
+                      : BodyCommsTiersCardBasicTitleExLightSx
                   }
                 >
                   Basic
@@ -2288,8 +2340,8 @@ const BodySection = () => {
                     level="title-md"
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardBasicDescOuterDarkSx
-                        : BodyCommsTiersCardBasicDescOuterLightSx
+                        ? BodyCommsTiersCardBasicDescOuterExDarkSx
+                        : BodyCommsTiersCardBasicDescOuterExLightSx
                     }
                   >
                     Description:
@@ -2298,8 +2350,8 @@ const BodySection = () => {
                       level="body-sm"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardBasicDescInnerDarkSx
-                          : BodyCommsTiersCardBasicDescInnerLightSx
+                          ? BodyCommsTiersCardBasicDescInnerExDarkSx
+                          : BodyCommsTiersCardBasicDescInnerExLightSx
                       }
                     >
                       Quick sketch and composition with focus on interesting
@@ -2312,8 +2364,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardBasicListItemDarkSx
-                        : BodyCommsTiersCardBasicListItemLightSx
+                        ? BodyCommsTiersCardBasicListItemExDarkSx
+                        : BodyCommsTiersCardBasicListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2330,8 +2382,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardBasicListItemDarkSx
-                        : BodyCommsTiersCardBasicListItemLightSx
+                        ? BodyCommsTiersCardBasicListItemExDarkSx
+                        : BodyCommsTiersCardBasicListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2348,8 +2400,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardBasicListItemDarkSx
-                        : BodyCommsTiersCardBasicListItemLightSx
+                        ? BodyCommsTiersCardBasicListItemExDarkSx
+                        : BodyCommsTiersCardBasicListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2366,8 +2418,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardBasicListItemDarkSx
-                        : BodyCommsTiersCardBasicListItemLightSx
+                        ? BodyCommsTiersCardBasicListItemExDarkSx
+                        : BodyCommsTiersCardBasicListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2389,8 +2441,8 @@ const BodySection = () => {
                       level="title-lg"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardBasicPricingLeftDarkSx
-                          : BodyCommsTiersCardBasicPricingLeftLightSx
+                          ? BodyCommsTiersCardBasicPricingLeftExDarkSx
+                          : BodyCommsTiersCardBasicPricingLeftExLightSx
                       }
                     >
                       $ 10{" "}
@@ -2398,8 +2450,8 @@ const BodySection = () => {
                     <Typography
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardBasicPricingRightDarkSx
-                          : BodyCommsTiersCardBasicPricingRightLightSx
+                          ? BodyCommsTiersCardBasicPricingRightExDarkSx
+                          : BodyCommsTiersCardBasicPricingRightExLightSx
                       }
                     >
                       (PayPal/Ko-fi)
@@ -2434,8 +2486,8 @@ const BodySection = () => {
                   level="h2"
                   sx={
                     theme === "dark"
-                      ? BodyCommsTiersCardStandardTitleDarkSx
-                      : BodyCommsTiersCardStandardTitleLightSx
+                      ? BodyCommsTiersCardStandardTitleExDarkSx
+                      : BodyCommsTiersCardStandardTitleExLightSx
                   }
                 >
                   Standard
@@ -2445,8 +2497,8 @@ const BodySection = () => {
                     level="title-md"
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardStandardDescOuterDarkSx
-                        : BodyCommsTiersCardStandardDescOuterLightSx
+                        ? BodyCommsTiersCardStandardDescOuterExDarkSx
+                        : BodyCommsTiersCardStandardDescOuterExLightSx
                     }
                   >
                     Description:
@@ -2455,8 +2507,8 @@ const BodySection = () => {
                       level="body-sm"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardStandardDescInnerDarkSx
-                          : BodyCommsTiersCardStandardDescInnerLightSx
+                          ? BodyCommsTiersCardStandardDescInnerExDarkSx
+                          : BodyCommsTiersCardStandardDescInnerExLightSx
                       }
                     >
                       More detailed and thoughtful composition with additional
@@ -2472,8 +2524,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardStandardListItemDarkSx
-                        : BodyCommsTiersCardStandardListItemLightSx
+                        ? BodyCommsTiersCardStandardListItemExDarkSx
+                        : BodyCommsTiersCardStandardListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2490,8 +2542,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardStandardListItemDarkSx
-                        : BodyCommsTiersCardStandardListItemLightSx
+                        ? BodyCommsTiersCardStandardListItemExDarkSx
+                        : BodyCommsTiersCardStandardListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2508,8 +2560,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardStandardListItemDarkSx
-                        : BodyCommsTiersCardStandardListItemLightSx
+                        ? BodyCommsTiersCardStandardListItemExDarkSx
+                        : BodyCommsTiersCardStandardListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2526,8 +2578,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardStandardListItemDarkSx
-                        : BodyCommsTiersCardStandardListItemLightSx
+                        ? BodyCommsTiersCardStandardListItemExDarkSx
+                        : BodyCommsTiersCardStandardListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2549,8 +2601,8 @@ const BodySection = () => {
                       level="title-lg"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardStandardPricingLeftDarkSx
-                          : BodyCommsTiersCardStandardPricingLeftLightSx
+                          ? BodyCommsTiersCardStandardPricingLeftExDarkSx
+                          : BodyCommsTiersCardStandardPricingLeftExLightSx
                       }
                     >
                       $ 15{" "}
@@ -2558,8 +2610,8 @@ const BodySection = () => {
                     <Typography
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardStandardPricingRightDarkSx
-                          : BodyCommsTiersCardStandardPricingRightLightSx
+                          ? BodyCommsTiersCardStandardPricingRightExDarkSx
+                          : BodyCommsTiersCardStandardPricingRightExLightSx
                       }
                     >
                       (PayPal/Ko-fi)
@@ -2594,8 +2646,8 @@ const BodySection = () => {
                   level="h2"
                   sx={
                     theme === "dark"
-                      ? BodyCommsTiersCardAbstractifyTitleDarkSx
-                      : BodyCommsTiersCardAbstractifyTitleLightSx
+                      ? BodyCommsTiersCardAbstractifyTitleExDarkSx
+                      : BodyCommsTiersCardAbstractifyTitleExLightSx
                   }
                 >
                   Abstractify
@@ -2605,8 +2657,8 @@ const BodySection = () => {
                     level="title-md"
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyDescOuterDarkSx
-                        : BodyCommsTiersCardAbstractifyDescOuterLightSx
+                        ? BodyCommsTiersCardAbstractifyDescOuterExDarkSx
+                        : BodyCommsTiersCardAbstractifyDescOuterExLightSx
                     }
                   >
                     Description:
@@ -2615,8 +2667,8 @@ const BodySection = () => {
                       level="body-sm"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardAbstractifyDescInnerDarkSx
-                          : BodyCommsTiersCardAbstractifyDescInnerLightSx
+                          ? BodyCommsTiersCardAbstractifyDescInnerExDarkSx
+                          : BodyCommsTiersCardAbstractifyDescInnerExLightSx
                       }
                     >
                       “Abstractify” an existing reference, preferably album art
@@ -2630,8 +2682,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
-                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                        ? BodyCommsTiersCardAbstractifyListItemExDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2648,8 +2700,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
-                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                        ? BodyCommsTiersCardAbstractifyListItemExDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2666,8 +2718,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
-                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                        ? BodyCommsTiersCardAbstractifyListItemExDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2684,8 +2736,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyListItemDarkSx
-                        : BodyCommsTiersCardAbstractifyListItemLightSx
+                        ? BodyCommsTiersCardAbstractifyListItemExDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2702,8 +2754,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyListItemIdtDarkSx
-                        : BodyCommsTiersCardAbstractifyListItemIdtLightSx
+                        ? BodyCommsTiersCardAbstractifyListItemIdtExDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemIdtExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2738,8 +2790,8 @@ const BodySection = () => {
                       level="title-lg"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardAbstractifyPricingLeftDarkSx
-                          : BodyCommsTiersCardAbstractifyPricingLeftLightSx
+                          ? BodyCommsTiersCardAbstractifyPricingLeftExDarkSx
+                          : BodyCommsTiersCardAbstractifyPricingLeftExLightSx
                       }
                     >
                       $ 20{" "}
@@ -2747,8 +2799,8 @@ const BodySection = () => {
                     <Typography
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardAbstractifyPricingRightDarkSx
-                          : BodyCommsTiersCardAbstractifyPricingRightLightSx
+                          ? BodyCommsTiersCardAbstractifyPricingRightExDarkSx
+                          : BodyCommsTiersCardAbstractifyPricingRightExLightSx
                       }
                     >
                       (PayPal/Ko-fi)
@@ -2783,8 +2835,8 @@ const BodySection = () => {
                   level="h2"
                   sx={
                     theme === "dark"
-                      ? BodyCommsTiersCardPremiumTitleDarkSx
-                      : BodyCommsTiersCardPremiumTitleLightSx
+                      ? BodyCommsTiersCardPremiumTitleExDarkSx
+                      : BodyCommsTiersCardPremiumTitleExLightSx
                   }
                 >
                   Premium
@@ -2794,8 +2846,8 @@ const BodySection = () => {
                     level="title-md"
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardPremiumDescOuterDarkSx
-                        : BodyCommsTiersCardPremiumDescOuterLightSx
+                        ? BodyCommsTiersCardPremiumDescOuterExDarkSx
+                        : BodyCommsTiersCardPremiumDescOuterExLightSx
                     }
                   >
                     Description:
@@ -2804,8 +2856,8 @@ const BodySection = () => {
                       level="body-sm"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardPremiumDescInnerDarkSx
-                          : BodyCommsTiersCardPremiumDescInnerLightSx
+                          ? BodyCommsTiersCardPremiumDescInnerExDarkSx
+                          : BodyCommsTiersCardPremiumDescInnerExLightSx
                       }
                     >
                       Most detailed composition with more planning and
@@ -2822,8 +2874,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardPremiumListItemDarkSx
-                        : BodyCommsTiersCardPremiumListItemLightSx
+                        ? BodyCommsTiersCardPremiumListItemExDarkSx
+                        : BodyCommsTiersCardPremiumListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2840,8 +2892,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardPremiumListItemDarkSx
-                        : BodyCommsTiersCardPremiumListItemLightSx
+                        ? BodyCommsTiersCardPremiumListItemExDarkSx
+                        : BodyCommsTiersCardPremiumListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2858,8 +2910,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardPremiumListItemDarkSx
-                        : BodyCommsTiersCardPremiumListItemLightSx
+                        ? BodyCommsTiersCardPremiumListItemLongExDarkSx
+                        : BodyCommsTiersCardPremiumListItemLongExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2876,8 +2928,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardPremiumListItemDarkSx
-                        : BodyCommsTiersCardPremiumListItemLightSx
+                        ? BodyCommsTiersCardPremiumListItemExDarkSx
+                        : BodyCommsTiersCardPremiumListItemExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2899,8 +2951,8 @@ const BodySection = () => {
                       level="title-lg"
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardPremiumPricingLeftDarkSx
-                          : BodyCommsTiersCardPremiumPricingLeftLightSx
+                          ? BodyCommsTiersCardPremiumPricingLeftExDarkSx
+                          : BodyCommsTiersCardPremiumPricingLeftExLightSx
                       }
                     >
                       $ 30{" "}
@@ -2908,8 +2960,8 @@ const BodySection = () => {
                     <Typography
                       sx={
                         theme === "dark"
-                          ? BodyCommsTiersCardPremiumPricingRightDarkSx
-                          : BodyCommsTiersCardPremiumPricingRightLightSx
+                          ? BodyCommsTiersCardPremiumPricingRightExDarkSx
+                          : BodyCommsTiersCardPremiumPricingRightExLightSx
                       }
                     >
                       (PayPal/Ko-fi)
