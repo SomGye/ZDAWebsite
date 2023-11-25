@@ -1882,6 +1882,16 @@ export const photos_comm_abstractify_srcSet = [
   },
 ];
 
+export const photos_comm_abstractify_ex_srcSet = [
+  {
+    src: "/assets/comm_abstractify/Abstractify_-_Phantom_Anthem_20231114-400px.jpg",
+    width: 400,
+    height: 400,
+    alt: "The Ghost Within",
+    title: "The Ghost Within",
+  },
+];
+
 export const photos_comm_basic = [
   {
     src: "/assets/comm_basic/Indistinguishable_Torment.jpg",
@@ -2015,6 +2025,16 @@ export const photos_comm_basic_srcSet = [
     ],
     alt: "Tidal Interference",
     title: "Tidal Interference",
+  },
+];
+
+export const photos_comm_basic_ex_srcSet = [
+  {
+    src: "/assets/comm_basic/QS1-BL-400px.jpg",
+    width: 400,
+    height: 400,
+    alt: "QS1-BL",
+    title: "QS1-BL",
   },
 ];
 
@@ -2180,6 +2200,16 @@ export const photos_comm_premium_srcSet = [
   },
 ];
 
+export const photos_comm_premium_ex_srcSet = [
+  {
+    src: "/assets/comm_premium/Frame_of_Revelation-400px.jpg",
+    width: 400,
+    height: 566,
+    alt: "Frame of Revelation",
+    title: "Frame of Revelation",
+  },
+];
+
 export const photos_comm_standard = [
   {
     src: "/assets/comm_standard/Divinity_Ends.jpg",
@@ -2339,5 +2369,15 @@ export const photos_comm_standard_srcSet = [
     ],
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
+  },
+];
+
+export const photos_comm_standard_ex_srcSet = [
+  {
+    src: "/assets/comm_standard/Divinity_Ends-cropped-400px.jpg",
+    width: 400,
+    height: 689,
+    alt: "Divinity Ends",
+    title: "Divinity Ends",
   },
 ];

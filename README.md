@@ -36,3 +36,9 @@
   - A `fetchData` function in `App.tsx` queries the KV data store by using environment variables for the API URL and token, which are stored locally in `.env.development` and `.env.production`. These are NOT committed and will have to be created on your own.
   - When hosting on Vercel, you will also have to populate these environment variables in the Project Settings online as well, or else it will not work in production.
 ------
+##### Examples Page
+- To see the Commission Tiers Examples page, which is just for my own convenience, you can do one of the following:
+  - Go to the `/examples` route (or https://www.zerodayanubis.com/examples)
+  - Run `npm run examples`, instead of the usual `npm start`, when deploying a local instance
+  - Scroll down to the footer and click the dotted line section below the Copyright text
+------

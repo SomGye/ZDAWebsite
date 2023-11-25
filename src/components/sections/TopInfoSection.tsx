@@ -558,7 +558,7 @@ const TopInfoSection = () => {
                   <Divider orientation="vertical" />
                   <Button
                     onClick={() =>
-                      clickLink("https://tinyurl.com/ZDACommInfo5")
+                      clickLink("https://tinyurl.com/ZDACommInfo6")
                     }
                     sx={
                       theme === "dark"
