@@ -1060,7 +1060,7 @@ export const BodyCommsTiersCardBasicDescOuterDarkSx = {
     color: "#fafafaef",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "20ch",
+    maxWidth: "29ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1071,7 +1071,7 @@ export const BodyCommsTiersCardBasicDescOuterLightSx = {
     color: "#29242aef",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "20ch",
+    maxWidth: "29ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1102,7 +1102,7 @@ export const BodyCommsTiersCardBasicDescOuterExLightSx = {
 export const BodyCommsTiersCardBasicDescInnerDarkSx = {
   ...{
     color: "#cacaca",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -1110,7 +1110,7 @@ export const BodyCommsTiersCardBasicDescInnerDarkSx = {
 export const BodyCommsTiersCardBasicDescInnerLightSx = {
   ...{
     color: "#69646a",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -1445,7 +1445,7 @@ export const BodyCommsTiersCardStandardDescOuterDarkSx = {
     color: "#fafafaef",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "30ch",
+    maxWidth: "31ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1456,7 +1456,7 @@ export const BodyCommsTiersCardStandardDescOuterLightSx = {
     color: "#29242aef",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "30ch",
+    maxWidth: "31ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1487,7 +1487,7 @@ export const BodyCommsTiersCardStandardDescOuterExLightSx = {
 export const BodyCommsTiersCardStandardDescInnerDarkSx = {
   ...{
     color: "#cacaca",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -1495,7 +1495,7 @@ export const BodyCommsTiersCardStandardDescInnerDarkSx = {
 export const BodyCommsTiersCardStandardDescInnerLightSx = {
   ...{
     color: "#69646a",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -1534,6 +1534,7 @@ export const BodyCommsTiersCardStandardListItemDarkSx = {
   ...{
     color: "#e0e0e0",
     fontSize: "14px",
+    textAlign: "justify",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1543,6 +1544,7 @@ export const BodyCommsTiersCardStandardListItemLightSx = {
   ...{
     color: "#59545a",
     fontSize: "14px",
+    textAlign: "justify",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1838,7 +1840,7 @@ export const BodyCommsTiersCardAbstractifyDescOuterDarkSx = {
     color: "#fafafaef",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "30ch",
+    maxWidth: "32ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1849,7 +1851,7 @@ export const BodyCommsTiersCardAbstractifyDescOuterLightSx = {
     color: "#140f15",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "30ch",
+    maxWidth: "32ch",
     pointerEvents: "none",
     userSelect: "none",
     "@media (max-width: 1000px)": {
@@ -1886,7 +1888,7 @@ export const BodyCommsTiersCardAbstractifyDescOuterExLightSx = {
 export const BodyCommsTiersCardAbstractifyDescInnerDarkSx = {
   ...{
     color: "#cacaca",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -1894,7 +1896,7 @@ export const BodyCommsTiersCardAbstractifyDescInnerDarkSx = {
 export const BodyCommsTiersCardAbstractifyDescInnerLightSx = {
   ...{
     color: "#000000fa",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
     "@media (max-width: 1000px)": {
       color: "#fafafaaa",
@@ -1939,6 +1941,7 @@ export const BodyCommsTiersCardAbstractifyListItemDarkSx = {
   ...{
     color: "#e0e0e0",
     fontSize: "14px",
+    textAlign: "justify",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1948,6 +1951,7 @@ export const BodyCommsTiersCardAbstractifyListItemLightSx = {
   ...{
     color: "#fafafada",
     fontSize: "14px",
+    textAlign: "justify",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -2331,7 +2335,7 @@ export const BodyCommsTiersCardPremiumDescOuterDarkSx = {
     color: "#19141a",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "30ch",
+    maxWidth: "31ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -2342,7 +2346,7 @@ export const BodyCommsTiersCardPremiumDescOuterLightSx = {
     color: "#19141a",
     fontSize: "16px",
     fontWeight: "500",
-    maxWidth: "30ch",
+    maxWidth: "31ch",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -2373,7 +2377,7 @@ export const BodyCommsTiersCardPremiumDescOuterExLightSx = {
 export const BodyCommsTiersCardPremiumDescInnerDarkSx = {
   ...{
     color: "#000000ca",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -2381,7 +2385,7 @@ export const BodyCommsTiersCardPremiumDescInnerDarkSx = {
 export const BodyCommsTiersCardPremiumDescInnerLightSx = {
   ...{
     color: "#000000cf",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: "500",
   },
 };
@@ -2422,6 +2426,9 @@ export const BodyCommsTiersCardPremiumListItemDarkSx = {
     fontSize: "14px",
     pointerEvents: "none",
     userSelect: "none",
+    "@media (max-width: 450px)": {
+      maxWidth: "26ch",
+    }
   },
 };
 
@@ -2431,6 +2438,9 @@ export const BodyCommsTiersCardPremiumListItemLightSx = {
     fontSize: "14px",
     pointerEvents: "none",
     userSelect: "none",
+    "@media (max-width: 450px)": {
+      maxWidth: "26ch",
+    }
   },
 };
 

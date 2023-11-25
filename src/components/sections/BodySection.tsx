@@ -1363,8 +1363,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardBasicDescOuterLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -1579,8 +1577,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardStandardDescOuterLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -1800,8 +1796,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardAbstractifyDescOuterLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -2048,8 +2042,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardPremiumDescOuterLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
