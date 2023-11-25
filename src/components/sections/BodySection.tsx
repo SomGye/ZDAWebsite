@@ -244,6 +244,8 @@ import {
   BodyCommsTiersCardPremiumPricingRightExLightSx,
   BodyCommsTiersCardPremiumListItemLongExDarkSx,
   BodyCommsTiersCardPremiumListItemLongExLightSx,
+  BodyCommsTiersCardAbstractifyListItemLongExDarkSx,
+  BodyCommsTiersCardAbstractifyListItemLongExLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -1595,7 +1597,7 @@ const BodySection = () => {
                     </Typography>
                   </Typography>
                 </Box>
-                <Divider inset="none" />
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
                 <List size="sm" sx={{ mx: "2px" }}>
                   <ListItem
                     sx={
@@ -1814,7 +1816,7 @@ const BodySection = () => {
                     </Typography>
                   </Typography>
                 </Box>
-                <Divider inset="none" />
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
                 <List size="sm" sx={{ mx: "2px" }}>
                   <ListItem
                     sx={
@@ -2065,7 +2067,7 @@ const BodySection = () => {
                     </Typography>
                   </Typography>
                 </Box>
-                <Divider inset="none" />
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
                 <List size="sm" sx={{ mx: "2px" }}>
                   <ListItem
                     sx={
@@ -2344,8 +2346,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardBasicDescOuterExLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -2469,7 +2469,7 @@ const BodySection = () => {
                   : BodyCommsTiersCardStandardExLightSx
               }
             >
-              <Box>
+              <Box sx={{ margin: "auto" }}>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
@@ -2501,8 +2501,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardStandardDescOuterExLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -2519,7 +2517,7 @@ const BodySection = () => {
                     </Typography>
                   </Typography>
                 </Box>
-                <Divider inset="none" />
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
                 <List size="sm" sx={{ mx: "2px" }}>
                   <ListItem
                     sx={
@@ -2629,7 +2627,7 @@ const BodySection = () => {
                   : BodyCommsTiersCardAbstractifyExLightSx
               }
             >
-              <Box>
+              <Box sx={{ margin: "auto" }}>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
@@ -2661,8 +2659,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardAbstractifyDescOuterExLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -2677,7 +2673,7 @@ const BodySection = () => {
                     </Typography>
                   </Typography>
                 </Box>
-                <Divider inset="none" />
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
                 <List size="sm" sx={{ mx: "2px" }}>
                   <ListItem
                     sx={
@@ -2718,8 +2714,8 @@ const BodySection = () => {
                   <ListItem
                     sx={
                       theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyListItemExDarkSx
-                        : BodyCommsTiersCardAbstractifyListItemExLightSx
+                        ? BodyCommsTiersCardAbstractifyListItemLongExDarkSx
+                        : BodyCommsTiersCardAbstractifyListItemLongExLightSx
                     }
                   >
                     <ListItemDecorator>
@@ -2771,18 +2767,6 @@ const BodySection = () => {
                     in a new, abstract way)
                   </ListItem>
                 </List>
-                <Typography
-                  level="body-sm"
-                  sx={
-                    theme === "dark"
-                      ? BodyCommsTiersCardAbstractifyListSubtitleDarkSx
-                      : BodyCommsTiersCardAbstractifyListSubtitleLightSx
-                  }
-                >
-                  NOTE: Not aiming to make a direct copy of the reference; the
-                  goal is to be heavily influenced by the reference and make
-                  something new and interesting
-                </Typography>
                 <Divider inset="none" />
                 <CardActions sx={BodyCommsTiersCardAbstractifyCardActionsSx}>
                   <Box sx={BodyCommsTiersCardAbstractifyPricingBoxSx}>
@@ -2818,7 +2802,7 @@ const BodySection = () => {
                   : BodyCommsTiersCardPremiumExLightSx
               }
             >
-              <Box>
+              <Box sx={{ margin: "auto" }}>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
@@ -2850,8 +2834,6 @@ const BodySection = () => {
                         : BodyCommsTiersCardPremiumDescOuterExLightSx
                     }
                   >
-                    Description:
-                    <br />
                     <Typography
                       level="body-sm"
                       sx={
@@ -2869,7 +2851,7 @@ const BodySection = () => {
                     </Typography>
                   </Typography>
                 </Box>
-                <Divider inset="none" />
+                <Divider inset="none" sx={BodyCommsTiersTopDividerSx} />
                 <List size="sm" sx={{ mx: "2px" }}>
                   <ListItem
                     sx={
