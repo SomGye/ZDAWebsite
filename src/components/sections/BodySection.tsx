@@ -2956,14 +2956,14 @@ const BodySection = () => {
           <Box sx={BodyCommsExButtonBoxSx}>
             <Button
               startDecorator={<KeyboardBackspaceRounded />}
-              onClick={() => switchPage("Home", setPage)}
+              onClick={() => switchPage("Commissions", setPage)}
               sx={
                 theme === "dark"
                   ? BodyCommsExButtonDarkSx
                   : BodyCommsExButtonLightSx
               }
             >
-              Go Back Home
+              Back To Commissions
             </Button>
           </Box>
         </Box>

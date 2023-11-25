@@ -2627,7 +2627,7 @@ export const BodyCommsExButtonBoxSx = {
 
 export const BodyCommsExButtonDarkSx = {
   ...{
-    width: "200px",
+    width: "230px",
     border: "none",
     borderRadius: "24px",
     marginBottom: "8px",
@@ -2648,7 +2648,7 @@ export const BodyCommsExButtonDarkSx = {
 
 export const BodyCommsExButtonLightSx = {
   ...{
-    width: "200px",
+    width: "230px",
     border: "none",
     borderRadius: "24px",
     marginBottom: "8px",
