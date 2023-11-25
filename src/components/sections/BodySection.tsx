@@ -1462,7 +1462,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardBasicPricingLeftLightSx
                       }
                     >
-                      $ 10{" "}
+                      $ 15{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -1679,7 +1679,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardStandardPricingLeftLightSx
                       }
                     >
-                      $ 15{" "}
+                      $ 20{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -1927,7 +1927,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardAbstractifyPricingLeftLightSx
                       }
                     >
-                      $ 20{" "}
+                      $ 25{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -2131,7 +2131,7 @@ const BodySection = () => {
                         }
                       />
                     </ListItemDecorator>
-                    Turnaround Time: 1-2 days
+                    Turnaround Time: 2-3 days
                   </ListItem>
                 </List>
                 <Divider inset="none" />
@@ -2145,7 +2145,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardPremiumPricingLeftLightSx
                       }
                     >
-                      $ 30{" "}
+                      $ 40{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -2437,7 +2437,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardBasicPricingLeftExLightSx
                       }
                     >
-                      $ 10{" "}
+                      $ 15{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -2595,7 +2595,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardStandardPricingLeftExLightSx
                       }
                     >
-                      $ 15{" "}
+                      $ 20{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -2770,7 +2770,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardAbstractifyPricingLeftExLightSx
                       }
                     >
-                      $ 20{" "}
+                      $ 25{" "}
                     </Typography>
                     <Typography
                       sx={
@@ -2915,7 +2915,7 @@ const BodySection = () => {
                         }
                       />
                     </ListItemDecorator>
-                    Turnaround Time: 1-2 days
+                    Turnaround Time: 2-3 days
                   </ListItem>
                 </List>
                 <Divider inset="none" />
@@ -2929,7 +2929,7 @@ const BodySection = () => {
                           : BodyCommsTiersCardPremiumPricingLeftExLightSx
                       }
                     >
-                      $ 30{" "}
+                      $ 40{" "}
                     </Typography>
                     <Typography
                       sx={
