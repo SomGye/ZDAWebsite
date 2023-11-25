@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { Box, Button, Container, Divider, Typography } from "@mui/joy";
 import {
@@ -7,7 +7,7 @@ import {
   EmailRounded,
   MessageRounded,
 } from "@mui/icons-material";
-import { clickEmail, clickLink } from "../../Helpers";
+import { clickEmail, clickLink, switchPage } from "../../Helpers";
 import {
   FooterBodyDarkSx,
   FooterBodyLightSx,
@@ -24,9 +24,11 @@ import {
   FooterTitleLightSx,
 } from "./FooterSectionSx";
 import "./FooterSection.css";
+import { pageAtom } from "../../states/PageAtom";
 
 const FooterSection = () => {
   const theme = useRecoilValue(themeAtom);
+  const [, setPage] = useRecoilState(pageAtom);
 
   return (
     <Container className="FooterContainer" sx={FooterContainerSx}>
@@ -105,6 +107,33 @@ const FooterSection = () => {
         >
           © ZDA WORKS. ALL RIGHTS RESERVED.
         </Typography>
+        {/* Shortcut for getting to Examples Page */}
+        <span
+          style={
+            theme === "dark"
+              ? {
+                  fontSize: "8px",
+                  fontWeight: "300",
+                  color: "#a1affaf0",
+                  marginTop: "0px",
+                  marginBottom: "0px",
+                  cursor: "default",
+                  userSelect: "none",
+                }
+              : {
+                  fontSize: "8px",
+                  fontWeight: "300",
+                  color: "#afc5ffef",
+                  marginTop: "0px",
+                  marginBottom: "0px",
+                  cursor: "default",
+                  userSelect: "none",
+                }
+          }
+          onClick={() => switchPage("Examples", setPage)}
+        >
+          {"----------------"}
+        </span>
       </Box>
     </Container>
   );

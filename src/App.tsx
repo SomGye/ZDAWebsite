@@ -20,7 +20,7 @@ type Props = {
 };
 
 const App = ({ route }: Props) => {
-  const [, setPage] = useRecoilState(pageAtom);
+  const [page, setPage] = useRecoilState(pageAtom);
   const [commSlots, setCommSlots] = useRecoilState(commSlotsAtom);
   const [waitSlots, setWaitSlots] = useRecoilState(waitlistSlotsAtom);
   const [, setStatus] = useRecoilState(commStatusAtom);
@@ -148,10 +148,10 @@ const App = ({ route }: Props) => {
   return (
     <>
       <Container className="AppContainer" sx={AppContainerSx}>
-        {bannerReady && <TopBanner />}
-        {infoReady && <TopInfoSection />}
+        {bannerReady && page != "Examples" && <TopBanner />}
+        {infoReady && page != "Examples" && <TopInfoSection />}
         {bodyReady && <BodySection />}
-        {footerReady && <FooterSection />}
+        {footerReady && page != "Examples" && <FooterSection />}
       </Container>
     </>
   );

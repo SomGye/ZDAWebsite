@@ -876,6 +876,38 @@ export const BodyCommsTiersTypographyLightSx = {
   },
 };
 
+export const BodyCommsTiersTypographyExDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "30px",
+    fontWeight: "700",
+    backgroundImage:
+      "linear-gradient(175deg, rgba(228,0,254,1) 0%, #ff8442 66%, #936eff 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    filter: "drop-shadow(0px 4px 3px #101010)",
+    marginBottom: "-10px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyCommsTiersTypographyExLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "30px",
+    fontWeight: "700",
+    backgroundImage:
+      "linear-gradient(185deg, #936eff 0%, #ff8442 33%, rgba(228,0,254,1) 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    filter: "drop-shadow(0px 4px 3px #10101050)",
+    marginBottom: "-10px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
 export const BodyCommsTiersCardsBoxSx = {
   ...{
     display: "flex",
@@ -886,6 +918,20 @@ export const BodyCommsTiersCardsBoxSx = {
     maxWidth: "92%",
     gap: 4,
     margin: "24px",
+  },
+};
+
+export const BodyCommsTiersExCardsBoxSx = {
+  ...{
+    display: "grid",
+    gridTemplateColumns: "800px 800px",
+    justifyContent: "center",
+    alignItems: "stretch",
+    width: "70%",
+    gap: 2,
+    margin: "24px",
+    borderLeft: "2px solid #fafafa2a",
+    borderRight: "2px solid #fafafa2a",
   },
 };
 
@@ -924,6 +970,32 @@ export const BodyCommsTiersCardBasicDarkSx = {
 
 export const BodyCommsTiersCardBasicLightSx = {
   ...{
+    backgroundColor: "#eeeeee80",
+    border: "1px solid #29242a",
+    borderRadius: "24px",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyCommsTiersCardBasicExDarkSx = {
+  ...{
+    height: "524px",
+    backgroundColor: "#2b262c",
+    border: "1px solid #fafafa35",
+    borderRadius: "24px",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyCommsTiersCardBasicExLightSx = {
+  ...{
+    height: "524px",
     backgroundColor: "#eeeeee80",
     border: "1px solid #29242a",
     borderRadius: "24px",
@@ -1157,6 +1229,38 @@ export const BodyCommsTiersCardStandardLightSx = {
   },
 };
 
+export const BodyCommsTiersCardStandardExDarkSx = {
+  ...{
+    height: "524px",
+    borderRadius: "24px",
+    background: "linear-gradient(70deg, #202020f8, #252525) padding-box",
+    backgroundClip: "padding-box",
+    border: "1px solid transparent",
+    filter:
+      "drop-shadow(10px 8px 7px rgba(48,48,48,0.5)) drop-shadow(-12px -8px 8px rgba(20,19,21,0.5))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyCommsTiersCardStandardExLightSx = {
+  ...{
+    height: "524px",
+    borderRadius: "24px",
+    background: "linear-gradient(210deg, #f9f9f9, #f2f2f2fa) padding-box",
+    backgroundClip: "padding-box",
+    border: "1px solid transparent",
+    filter:
+      "drop-shadow(20px 14px 8px rgba(186,186,186,0.5)) drop-shadow(-28px -28px 12px #efefeff0)",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
 export const BodyCommsTiersCardStandardTitleDarkSx = {
   ...{
     backgroundImage:
@@ -1373,6 +1477,38 @@ export const BodyCommsTiersCardAbstractifyDarkSx = {
 
 export const BodyCommsTiersCardAbstractifyLightSx = {
   ...{
+    borderRadius: "24px",
+    background:
+      "linear-gradient(180deg, rgba(220,0,255,1) 0%, #2A135F 50%, rgba(255,0,220,1) 100%) padding-box, linear-gradient(295deg,rgba(229,184,175,1),rgba(237,117,178,1) 40%,rgba(232,48,170,1) 60%,rgba(225,0,255) 80%,rgba(169,54,255,1))",
+    border: "1px solid transparent",
+    filter:
+      "drop-shadow(4px 4px 5px rgba(250,150,204,0.9)) drop-shadow(-4px -4px 5px rgba(224,60,198,0.35))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyCommsTiersCardAbstractifyExDarkSx = {
+  ...{
+    height: "524px",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(0deg, rgba(20,0,55,1) 0%, #2A135F 50%, rgba(55,0,20,1) 100%) padding-box",
+    border: "1px solid transparent",
+    filter:
+      "drop-shadow(8px 6px 7px rgba(180,60,144,0.25)) drop-shadow(-10px -6px 8px rgba(174,0,138,0.25))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyCommsTiersCardAbstractifyExLightSx = {
+  ...{
+    height: "524px",
     borderRadius: "24px",
     background:
       "linear-gradient(180deg, rgba(220,0,255,1) 0%, #2A135F 50%, rgba(255,0,220,1) 100%) padding-box, linear-gradient(295deg,rgba(229,184,175,1),rgba(237,117,178,1) 40%,rgba(232,48,170,1) 60%,rgba(225,0,255) 80%,rgba(169,54,255,1))",
@@ -1679,6 +1815,40 @@ export const BodyCommsTiersCardPremiumLightSx = {
   },
 };
 
+export const BodyCommsTiersCardPremiumExDarkSx = {
+  ...{
+    height: "524px",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(270deg, rgba(145,127,85,0.3) 0%, rgba(145,127,85,0.65) 50%, rgba(138,120,78,0.8) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
+    border: "1px solid transparent",
+    backgroundClip: "padding-box",
+    filter:
+      "drop-shadow(5px 4px 4px rgba(172,163,144,0.9)) drop-shadow(-8px -6px 4px rgba(29,24,21,0.8))",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
+export const BodyCommsTiersCardPremiumExLightSx = {
+  ...{
+    height: "524px",
+    borderRadius: "24px",
+    background:
+      "linear-gradient(270deg, rgba(245,227,185,0.3) 0%, rgba(245,227,185,0.65) 50%, rgba(245,227,185,0.8) 100%) padding-box, linear-gradient(90deg, rgba(249,239,255,1) 0%, rgba(239,219,255,1) 43%, rgba(249,249,255,1) 100%)",
+    border: "1px solid transparent",
+    backgroundClip: "padding-box",
+    filter:
+      "drop-shadow(20px 14px 8px rgba(186,186,186,0.5)) drop-shadow(-28px -28px 12px #efefeff0)",
+    flexDirection: "row",
+    "@media (max-width: 1000px)": {
+      flexDirection: "column",
+    },
+  },
+};
+
 export const BodyCommsTiersCardPremiumTitleDarkSx = {
   ...{
     backgroundImage:
@@ -1875,6 +2045,59 @@ export const BodyCommsTiersCardPremiumBtnLightSx = {
       color: "#19141a",
       boxShadow: "0px 1px 28px 8px #29242a40",
       transition: "all 0.2s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyCommsExButtonBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "8px",
+    marginBottom: "-8px",
+  },
+};
+
+export const BodyCommsExButtonDarkSx = {
+  ...{
+    width: "200px",
+    border: "none",
+    borderRadius: "24px",
+    marginBottom: "8px",
+    backgroundColor: "#323352",
+    color: "#fafafafa",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    userSelect: "none",
+    "&:hover": {
+      backgroundColor: "#7273A2",
+      color: "#19141a",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyCommsExButtonLightSx = {
+  ...{
+    width: "200px",
+    border: "none",
+    borderRadius: "24px",
+    marginBottom: "8px",
+    backgroundColor: "#d5085f",
+    color: "#fafafafa",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    userSelect: "none",
+    "&:hover": {
+      backgroundColor: "#ef2e50",
+      color: "lightgoldenrodyellow",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",

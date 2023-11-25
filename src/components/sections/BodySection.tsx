@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/ThemeAtom";
 import { pageAtom } from "../../states/PageAtom";
 import {
@@ -25,7 +25,7 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import ClosedCaptionRoundedIcon from "@mui/icons-material/ClosedCaptionRounded";
 import ClosedCaptionDisabledRoundedIcon from "@mui/icons-material/ClosedCaptionDisabledRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { clickLink } from "../../Helpers";
+import { clickLink, switchPage } from "../../Helpers";
 import {
   BodyContainerSx,
   BodyHomeHighlightsCardSubtitleDarkSx,
@@ -178,6 +178,20 @@ import {
   BodyCommsTiersSplitImgBoxSx,
   BodyCommsTiersSplitContentBoxSx,
   BodyCommsTiersTopDividerSx,
+  BodyCommsTiersExCardsBoxSx,
+  BodyCommsTiersCardBasicExDarkSx,
+  BodyCommsTiersCardBasicExLightSx,
+  BodyCommsTiersCardStandardExDarkSx,
+  BodyCommsTiersCardStandardExLightSx,
+  BodyCommsTiersCardAbstractifyExDarkSx,
+  BodyCommsTiersCardAbstractifyExLightSx,
+  BodyCommsTiersCardPremiumExDarkSx,
+  BodyCommsTiersCardPremiumExLightSx,
+  BodyCommsTiersTypographyExDarkSx,
+  BodyCommsTiersTypographyExLightSx,
+  BodyCommsExButtonBoxSx,
+  BodyCommsExButtonDarkSx,
+  BodyCommsExButtonLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -212,12 +226,13 @@ import {
 } from "./BodySectionPhotos";
 import {
   HorizontalRuleRounded,
+  KeyboardBackspaceRounded,
   NavigateNextRounded,
 } from "@mui/icons-material";
 
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
-  const page = useRecoilValue(pageAtom);
+  const [page, setPage] = useRecoilState(pageAtom);
   const [idx_highlights, setIdx_highlights] = React.useState(-1);
   const [idx_late2023, setIdx_late2023] = React.useState(-1);
   const [idx_late2022, setIdx_late2022] = React.useState(-1);
@@ -2225,35 +2240,34 @@ const BodySection = () => {
       )}
       {page && page === "Examples" && (
         <Box sx={BodyCommsTiersBoxSx}>
-          <span style={{ marginTop: "20px" }} />
           <Typography
             level="title-md"
             sx={
               theme === "dark"
-                ? BodyCommsTiersTypographyDarkSx
-                : BodyCommsTiersTypographyLightSx
+                ? BodyCommsTiersTypographyExDarkSx
+                : BodyCommsTiersTypographyExLightSx
             }
           >
             ZDA Commission Tiers Examples
           </Typography>
-          <Box sx={BodyCommsTiersCardsBoxSx}>
+          <Box sx={BodyCommsTiersExCardsBoxSx}>
             <Card
               size="lg"
               variant="solid"
               sx={
                 theme === "dark"
-                  ? BodyCommsTiersCardBasicDarkSx
-                  : BodyCommsTiersCardBasicLightSx
+                  ? BodyCommsTiersCardBasicExDarkSx
+                  : BodyCommsTiersCardBasicExLightSx
               }
             >
-              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+              <Box sx={{ margin: "auto" }}>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_basic_ex_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
-                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
                     defaultContainerWidth={1000}
                   />
                 </Box>
@@ -2399,18 +2413,18 @@ const BodySection = () => {
               variant="solid"
               sx={
                 theme === "dark"
-                  ? BodyCommsTiersCardStandardDarkSx
-                  : BodyCommsTiersCardStandardLightSx
+                  ? BodyCommsTiersCardStandardExDarkSx
+                  : BodyCommsTiersCardStandardExLightSx
               }
             >
-              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+              <Box>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_standard_ex_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
-                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
                     defaultContainerWidth={1000}
                   />
                 </Box>
@@ -2559,18 +2573,18 @@ const BodySection = () => {
               variant="solid"
               sx={
                 theme === "dark"
-                  ? BodyCommsTiersCardAbstractifyDarkSx
-                  : BodyCommsTiersCardAbstractifyLightSx
+                  ? BodyCommsTiersCardAbstractifyExDarkSx
+                  : BodyCommsTiersCardAbstractifyExLightSx
               }
             >
-              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+              <Box>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_abstractify_ex_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
-                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
                     defaultContainerWidth={1000}
                   />
                 </Box>
@@ -2748,18 +2762,18 @@ const BodySection = () => {
               variant="solid"
               sx={
                 theme === "dark"
-                  ? BodyCommsTiersCardPremiumDarkSx
-                  : BodyCommsTiersCardPremiumLightSx
+                  ? BodyCommsTiersCardPremiumExDarkSx
+                  : BodyCommsTiersCardPremiumExLightSx
               }
             >
-              <Box sx={BodyCommsTiersSplitImgBoxSx}>
+              <Box>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_premium_ex_srcSet}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
-                    rowConstraints={{ maxPhotos: 2, minPhotos: 2 }}
+                    rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
                     defaultContainerWidth={1000}
                   />
                 </Box>
@@ -2904,6 +2918,19 @@ const BodySection = () => {
                 </CardActions>
               </Box>
             </Card>
+          </Box>
+          <Box sx={BodyCommsExButtonBoxSx}>
+            <Button
+              startDecorator={<KeyboardBackspaceRounded />}
+              onClick={() => switchPage("Home", setPage)}
+              sx={
+                theme === "dark"
+                  ? BodyCommsExButtonDarkSx
+                  : BodyCommsExButtonLightSx
+              }
+            >
+              Go Back Home
+            </Button>
           </Box>
         </Box>
       )}
