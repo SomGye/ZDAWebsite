@@ -62,11 +62,11 @@ const App = ({ route }: Props) => {
     } else {
       // Check for direct path in URL and use Hard URL switch to clear sub-domain
       if (currentPath.toLocaleLowerCase().includes("portfolio")) {
-        switchPage("Portfolio", setPage, true);
+        switchPage("Portfolio", setPage, false); // was true
       } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
-        switchPage("Commissions", setPage, true);
+        switchPage("Commissions", setPage, false); // was true
       } else if (currentPath.toLocaleLowerCase().includes("examples")) {
-        switchPage("Examples", setPage, true);
+        switchPage("Examples", setPage, false); // was true
       } else {
         setPage("Home");
       }
