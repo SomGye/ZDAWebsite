@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    { "source": "/portfolio", "destination": "/index.html", "permanent": true },
+    {
+      "source": "/commissions",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    { "source": "/examples", "destination": "/index.html", "permanent": true }
+  ]
+}
