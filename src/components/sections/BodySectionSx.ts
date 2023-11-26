@@ -88,7 +88,7 @@ export const BodyHomeHighlightsCardContentSx = {
 export const BodyHomeHighlightsCardTitleDarkSx = {
   ...{
     backgroundImage:
-      "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
+      "linear-gradient(90deg, rgba(230,0,200,1) 0%, rgba(255,45,0,1) 5%, rgba(255,70,0,1) 20%, rgba(240,110,10,1) 30%, rgba(235,130,30,1) 60%, rgba(230,0,190,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -115,7 +115,7 @@ export const BodyHomeHighlightsCardSubtitleDarkSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#cf00ffda",
+    color: "#f0008aef",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -129,7 +129,7 @@ export const BodyHomeHighlightsCardSubtitleLightSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#31008ff0",
+    color: "#2d008b",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -2428,7 +2428,7 @@ export const BodyCommsTiersCardPremiumListItemDarkSx = {
     userSelect: "none",
     "@media (max-width: 450px)": {
       maxWidth: "26ch",
-    }
+    },
   },
 };
 
@@ -2440,7 +2440,7 @@ export const BodyCommsTiersCardPremiumListItemLightSx = {
     userSelect: "none",
     "@media (max-width: 450px)": {
       maxWidth: "26ch",
-    }
+    },
   },
 };
 
