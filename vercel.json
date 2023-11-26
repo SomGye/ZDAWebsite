@@ -1,10 +1,16 @@
 {
   "redirects": [
-    { "source": "/portfolio", "destination": "/portfolio" },
+    {
+      "source": "/portfolio",
+      "destination": "https://portfolio.zerodayanubis.com/"
+    },
     {
       "source": "/commissions",
-      "destination": "/commissions"
+      "destination": "https://commissions.zerodayanubis.com/"
     },
-    { "source": "/examples", "destination": "/examples" }
+    {
+      "source": "/examples",
+      "destination": "https://examples.zerodayanubis.com/"
+    }
   ]
 }
