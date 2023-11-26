@@ -423,9 +423,9 @@ export const BodyHomeSupportCardTitleLightSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
-    fontWeight: "600",
+    fontWeight: "700",
     backgroundImage:
-      "linear-gradient(180deg, #F3DFCF 0%, #E57320 85%, #000000 100%)",
+      "linear-gradient(180deg, #F3DFCF 0%, #EE9C69 45%, #D15F0C 85%, #000000 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
