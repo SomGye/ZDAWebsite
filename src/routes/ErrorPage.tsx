@@ -14,12 +14,16 @@ const ErrorPage = () => {
     const currentPath = window.location.href;
     // Check for direct path in URL and use Hard URL switch to clear sub-domain
     if (currentPath.toLocaleLowerCase().includes("portfolio")) {
+      console.log("Hard redirect from ErrorPage to Portfolio");
       switchPage("Portfolio", setPage, true);
     } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
+      console.log("Hard redirect from ErrorPage to Commissions");
       switchPage("Commissions", setPage, true);
     } else if (currentPath.toLocaleLowerCase().includes("examples")) {
+      console.log("Hard redirect from ErrorPage to Examples");
       switchPage("Examples", setPage, true);
     } else {
+      console.log("Redirect from ErrorPage to Home - countdown started");
       setCountdownReady(true);
     }
   }, []);
@@ -28,6 +32,7 @@ const ErrorPage = () => {
     if (countdownReady) {
       setTimeout(() => {
         if (countdown > 1) {
+          console.log("Setting Countdown to: " + (countdown - 1));
           setCountdown((prev) => prev - 1);
         } else {
           // Redirect to Home (root)
