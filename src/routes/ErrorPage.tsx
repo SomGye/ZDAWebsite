@@ -1,20 +1,41 @@
 import * as React from "react";
 import { Box, Container, Typography } from "@mui/joy";
 import "./ErrorPage.css";
+import { useRecoilState } from "recoil";
+import { pageAtom } from "../states/PageAtom";
+import { switchPage } from "../Helpers";
 
 const ErrorPage = () => {
   const [countdown, setCountdown] = React.useState(3);
+  const [countdownReady, setCountdownReady] = React.useState(false);
+  const [, setPage] = useRecoilState(pageAtom);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      if (countdown > 1) {
-        setCountdown((prev) => prev - 1);
-      } else {
-        // Redirect to Home (root)
-        window.location.replace("/");
-      }
-    }, 1000);
-  }, [countdown]);
+    const currentPath = window.location.href;
+    // Check for direct path in URL and use Hard URL switch to clear sub-domain
+    if (currentPath.toLocaleLowerCase().includes("portfolio")) {
+      switchPage("Portfolio", setPage, true);
+    } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
+      switchPage("Commissions", setPage, true);
+    } else if (currentPath.toLocaleLowerCase().includes("examples")) {
+      switchPage("Examples", setPage, true);
+    } else {
+      setCountdownReady(true);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (countdownReady) {
+      setTimeout(() => {
+        if (countdown > 1) {
+          setCountdown((prev) => prev - 1);
+        } else {
+          // Redirect to Home (root)
+          window.location.replace("/");
+        }
+      }, 1000);
+    }
+  }, [countdown, countdownReady]);
 
   return (
     <Container className="ErrorContainer">
