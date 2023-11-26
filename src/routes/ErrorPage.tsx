@@ -15,13 +15,13 @@ const ErrorPage = () => {
     // Check for direct path in URL and use Hard URL switch to clear sub-domain
     if (currentPath.toLocaleLowerCase().includes("portfolio")) {
       console.log("Hard redirect from ErrorPage to Portfolio");
-      switchPage("Portfolio", setPage, true);
+      switchPage("portfolio", setPage, true);
     } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
       console.log("Hard redirect from ErrorPage to Commissions");
-      switchPage("Commissions", setPage, true);
+      switchPage("commissions", setPage, true);
     } else if (currentPath.toLocaleLowerCase().includes("examples")) {
       console.log("Hard redirect from ErrorPage to Examples");
-      switchPage("Examples", setPage, true);
+      switchPage("examples", setPage, true);
     } else {
       console.log("Redirect from ErrorPage to Home - countdown started");
       setCountdownReady(true);
