@@ -23,14 +23,23 @@ export const clickLink = (linkLocation: string, newTab: boolean = true) => {
  * - Setting the global state to new page
  * @param target URL path (Portfolio, Commissions, etc)
  * @param setPage React.useState setter passed in from component
+ * @param hardUrl If true, clear subdomain and go direct to root/target
  */
-export const switchPage = (target: string, setPage: (page: string) => void) => {
+export const switchPage = (
+  target: string,
+  setPage: (page: string) => void,
+  hardUrl: boolean = false
+) => {
   document.body.scrollTop = document.documentElement.scrollTop = 0;
   // Set URL to target without refresh
   if (target === "Home") {
     window.history.replaceState({}, "", "/");
   } else {
-    window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
+    if (hardUrl) {
+      window.location.replace("https://www.zerodayanubis.com/" + target);
+    } else {
+      window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
+    }
   }
   setPage(target);
 };

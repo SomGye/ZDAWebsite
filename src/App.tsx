@@ -14,6 +14,7 @@ import {
   slotsReadyAtom,
   waitlistSlotsAtom,
 } from "./states/CommSlotsAtom";
+import { switchPage } from "./Helpers";
 
 type Props = {
   route: string;
@@ -51,6 +52,7 @@ const App = ({ route }: Props) => {
     }, footerDelay);
 
     // Set page to incoming route
+    const currentPath = window.location.href;
     if (route === "portfolio") {
       setPage("Portfolio");
     } else if (route === "commissions") {
@@ -58,7 +60,16 @@ const App = ({ route }: Props) => {
     } else if (route === "examples") {
       setPage("Examples");
     } else {
-      setPage("Home");
+      // Check for direct path in URL and use Hard URL switch to clear sub-domain
+      if (currentPath.toLocaleLowerCase().includes("portfolio")) {
+        switchPage("Portfolio", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
+        switchPage("Commissions", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("examples")) {
+        switchPage("Examples", setPage, true);
+      } else {
+        setPage("Home");
+      }
     }
 
     // Query Vercel KV Store to get Commissions Slots Info
