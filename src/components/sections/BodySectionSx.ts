@@ -515,7 +515,7 @@ export const BodyHomeSupportCardSubtitleDarkSx = {
     alignItems: "center",
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
-    fontWeight: "300",
+    fontWeight: "400",
     fontStyle: "italic",
     backgroundImage:
       "linear-gradient(90deg, #F4EFDF 0%, #F39330 85%, #EA45AC 100%)",
@@ -539,7 +539,7 @@ export const BodyHomeSupportCardSubtitleLightSx = {
     alignItems: "center",
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
-    fontWeight: "300",
+    fontWeight: "400",
     fontStyle: "italic",
     backgroundImage:
       "linear-gradient(250deg, #D7C3B3 0%, #D56310 85%, #000000 100%)",
