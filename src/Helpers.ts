@@ -36,7 +36,7 @@ export const switchPage = (
     window.history.replaceState({}, "", "/");
   } else {
     if (hardUrl) {
-      window.location.replace("https://www.zerodayanubis.com/" + target);
+      window.location.replace("https://www.zerodayanubis.com/" + target.toLocaleLowerCase());
     } else {
       window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
     }

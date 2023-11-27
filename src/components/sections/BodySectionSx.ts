@@ -88,7 +88,7 @@ export const BodyHomeHighlightsCardContentSx = {
 export const BodyHomeHighlightsCardTitleDarkSx = {
   ...{
     backgroundImage:
-      "linear-gradient(90deg, rgba(100,110,228,1) 0%, rgba(109,109,221,1) 43%, rgba(228,0,254,1) 100%)",
+      "linear-gradient(90deg, rgba(230,0,200,1) 0%, rgba(255,45,0,1) 5%, rgba(255,70,0,1) 20%, rgba(240,110,10,1) 30%, rgba(235,130,30,1) 60%, rgba(230,0,190,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -115,7 +115,7 @@ export const BodyHomeHighlightsCardSubtitleDarkSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#cf00ffda",
+    color: "#f0008aef",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -129,7 +129,7 @@ export const BodyHomeHighlightsCardSubtitleLightSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#31008ff0",
+    color: "#2d008b",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -423,9 +423,9 @@ export const BodyHomeSupportCardTitleLightSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
-    fontWeight: "600",
+    fontWeight: "700",
     backgroundImage:
-      "linear-gradient(180deg, #F3DFCF 0%, #E57320 85%, #000000 100%)",
+      "linear-gradient(180deg, #F3DFCF 0%, #EE9C69 45%, #D15F0C 85%, #000000 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -681,7 +681,7 @@ export const BodyPortfolioCardSubtitleDarkSx = {
     fontStyle: "italic",
     fontWeight: "300",
     maxWidth: "32ch",
-    color: "rgba(234,66,231,0.8)",
+    color: "rgba(244,76,241,0.95)",
     marginBottom: "20px",
     pointerEvents: "none",
     userSelect: "none",
@@ -695,7 +695,7 @@ export const BodyPortfolioCardSubtitleLightSx = {
     fontStyle: "italic",
     fontWeight: "300",
     maxWidth: "32ch",
-    color: "rgba(196,5,79,1)",
+    color: "rgba(186,5,69,1)",
     marginBottom: "20px",
     pointerEvents: "none",
     userSelect: "none",
@@ -1061,6 +1061,8 @@ export const BodyCommsTiersCardBasicDescOuterDarkSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "29ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1072,6 +1074,8 @@ export const BodyCommsTiersCardBasicDescOuterLightSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "29ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1446,6 +1450,8 @@ export const BodyCommsTiersCardStandardDescOuterDarkSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "31ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1457,6 +1463,8 @@ export const BodyCommsTiersCardStandardDescOuterLightSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "31ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1841,6 +1849,8 @@ export const BodyCommsTiersCardAbstractifyDescOuterDarkSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "32ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -1852,6 +1862,8 @@ export const BodyCommsTiersCardAbstractifyDescOuterLightSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "32ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
     "@media (max-width: 1000px)": {
@@ -2039,7 +2051,7 @@ export const BodyCommsTiersCardAbstractifyListSubtitleDarkSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#fafafaba",
-    fontSize: "14px",
+    fontSize: "14.5px",
     fontStyle: "italic",
     fontWeight: "300",
     maxWidth: "45ch",
@@ -2053,7 +2065,7 @@ export const BodyCommsTiersCardAbstractifyListSubtitleLightSx = {
   ...{
     fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#fafafac0",
-    fontSize: "14px",
+    fontSize: "14.5px",
     fontStyle: "italic",
     fontWeight: "300",
     maxWidth: "45ch",
@@ -2336,6 +2348,8 @@ export const BodyCommsTiersCardPremiumDescOuterDarkSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "31ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -2347,6 +2361,8 @@ export const BodyCommsTiersCardPremiumDescOuterLightSx = {
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "31ch",
+    marginTop: "2px",
+    marginBottom: "2px",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -2428,7 +2444,7 @@ export const BodyCommsTiersCardPremiumListItemDarkSx = {
     userSelect: "none",
     "@media (max-width: 450px)": {
       maxWidth: "26ch",
-    }
+    },
   },
 };
 
@@ -2440,7 +2456,7 @@ export const BodyCommsTiersCardPremiumListItemLightSx = {
     userSelect: "none",
     "@media (max-width: 450px)": {
       maxWidth: "26ch",
-    }
+    },
   },
 };
 
