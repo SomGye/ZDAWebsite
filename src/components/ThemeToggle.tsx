@@ -99,6 +99,7 @@ const ThemeToggle = () => {
           "--Switch-thumbSize": "24px",
           "--Switch-trackRadius": "24px",
           "--Switch-thumbShadow": "0 0 0 1px #29242a50",
+          "&:focus-visible": { outline: "none" },
         }}
         checked={checked}
         onChange={(event) => setChecked(event.target.checked)}

@@ -1,6 +1,9 @@
 /* MUI OVERRIDES */
 span.MuiSwitch-track.Mui-checked {
   background-color: #506aff;
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 span.MuiSwitch-thumb.Mui-checked {
@@ -10,9 +13,21 @@ span.MuiSwitch-thumb.Mui-checked {
 
 span.MuiSwitch-track {
   background-color: #f59801;
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 span.MuiSwitch-thumb {
   color: #ffaa00;
   background-color: #fff;
+}
+
+div.MuiSwitch-action:focus-visible {
+  outline: none;
+}
+
+/* CLICKABLE AREA FIX FOR SWITCH */
+input[type="checkbox"].MuiSwitch-input {
+  position: relative;
 }
