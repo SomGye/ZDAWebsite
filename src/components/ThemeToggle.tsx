@@ -1,17 +1,34 @@
 import * as React from "react";
 import { Switch } from "@mui/joy";
-import DarkMode from "@mui/icons-material/DarkMode";
 import { useRecoilState } from "recoil";
 import { themeAtom } from "../states/ThemeAtom";
+import { Brightness6, DarkMode } from "@mui/icons-material";
+import "./ThemeToggle.css";
 
 const ThemeToggle = () => {
-  const [currentScheme, setScheme] = React.useState("dark"); // OS-detected Color Scheme
   const [mode, setMode] = useRecoilState(themeAtom);
   const [checked, setChecked] = React.useState(true);
   const [init, setInit] = React.useState(false);
+  const initDelay = 800;
 
-  const toggleTheme = () => {
-    if (mode === "dark") {
+  const toggleTheme = (initToggle: boolean = false) => {
+    if (mode === "dark" && initToggle) {
+      // Set prefs
+      localStorage.setItem("theme", "dark");
+      // Set body style
+      document.body.style.backgroundColor = "#29242a";
+      document.body.style.color = "rgba(255, 255, 255, 0.87)";
+      document.body.style.transition = "all 0.20s ease-out";
+      console.log("Theme toggled to dark, on init toggle");
+    } else if (mode === "light" && initToggle) {
+      // Set prefs
+      localStorage.setItem("theme", "light");
+      // Set body style
+      document.body.style.backgroundColor = "#fafafa";
+      document.body.style.color = "#213547";
+      document.body.style.transition = "all 0.20s ease-out";
+      console.log("Theme toggled to light, on init toggle");
+    } else if (mode === "dark" && !initToggle) {
       // Set global variables
       setMode("light");
       // Set prefs for next visit
@@ -20,7 +37,8 @@ const ThemeToggle = () => {
       document.body.style.backgroundColor = "#fafafa";
       document.body.style.color = "#213547";
       document.body.style.transition = "all 0.20s ease-out";
-    } else {
+      console.log("Theme toggled to light from switch");
+    } else if (mode === "light" && !initToggle) {
       // Set global variables
       setMode("dark");
       // Set prefs for next visit
@@ -29,6 +47,7 @@ const ThemeToggle = () => {
       document.body.style.backgroundColor = "#29242a";
       document.body.style.color = "rgba(255, 255, 255, 0.87)";
       document.body.style.transition = "all 0.20s ease-out";
+      console.log("Theme toggled to dark from switch");
     }
   };
 
@@ -37,7 +56,7 @@ const ThemeToggle = () => {
 
     // Local storage is used to override OS theme settings
     if (localStorage.getItem("theme")) {
-      if (localStorage.getItem("theme") == "light") {
+      if (localStorage.getItem("theme") === "light") {
         theme = "light";
       }
     } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
@@ -46,34 +65,26 @@ const ThemeToggle = () => {
     }
 
     // Set initial scheme and prop state from detected Color Scheme
-    if (theme == "light") {
+    if (theme === "light") {
       setChecked(false);
     } else {
       setChecked(true);
     }
     console.log("Color scheme detected: " + theme);
-    setScheme(theme);
+    setMode(theme);
   };
 
   React.useEffect(() => {
     // Detect preferred Color Scheme from OS
     detectColorScheme();
     // Set init state
-    setInit(true);
+    setTimeout(() => {
+      setInit(true);
+    }, initDelay);
   }, []);
 
   React.useEffect(() => {
-    // Initialize switch and app theme based on detected Color Scheme of OS
-    setMode(currentScheme);
-  }, [currentScheme]);
-
-  React.useEffect(() => {
-    // Prevent toggle on first load
-    if (init) {
-      toggleTheme();
-    }
-
-    console.log("Theme set to: " + mode);
+    toggleTheme(!init);
   }, [checked]);
   return (
     <>
@@ -81,11 +92,14 @@ const ThemeToggle = () => {
         slotProps={{
           input: { "aria-label": "Theme Toggle" },
           thumb: {
-            children: <DarkMode />,
+            children: mode === "dark" ? <DarkMode /> : <Brightness6 />,
           },
         }}
         sx={{
-          "--Switch-thumbSize": "20px",
+          "--Switch-thumbSize": "24px",
+          "--Switch-trackRadius": "24px",
+          "--Switch-thumbShadow": "0 0 0 1px #29242a50",
+          "&:focus-visible": { outline: "none" },
         }}
         checked={checked}
         onChange={(event) => setChecked(event.target.checked)}
