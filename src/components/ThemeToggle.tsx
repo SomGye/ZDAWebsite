@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Switch } from "@mui/joy";
-import DarkMode from "@mui/icons-material/DarkMode";
 import { useRecoilState } from "recoil";
 import { themeAtom } from "../states/ThemeAtom";
+import { Brightness6, DarkMode } from "@mui/icons-material";
+import "./ThemeToggle.css";
 
 const ThemeToggle = () => {
   const [mode, setMode] = useRecoilState(themeAtom);
@@ -91,11 +92,13 @@ const ThemeToggle = () => {
         slotProps={{
           input: { "aria-label": "Theme Toggle" },
           thumb: {
-            children: <DarkMode />,
+            children: mode === "dark" ? <DarkMode /> : <Brightness6 />,
           },
         }}
         sx={{
-          "--Switch-thumbSize": "20px",
+          "--Switch-thumbSize": "24px",
+          "--Switch-trackRadius": "24px",
+          "--Switch-thumbShadow": "0 0 0 1px #29242a50",
         }}
         checked={checked}
         onChange={(event) => setChecked(event.target.checked)}

@@ -1,0 +1,18 @@
+/* MUI OVERRIDES */
+span.MuiSwitch-track.Mui-checked {
+  background-color: #506aff;
+}
+
+span.MuiSwitch-thumb.Mui-checked {
+  color: #405aef;
+  background-color: #fafafa;
+}
+
+span.MuiSwitch-track {
+  background-color: #f59801;
+}
+
+span.MuiSwitch-thumb {
+  color: #ffaa00;
+  background-color: #fff;
+}
