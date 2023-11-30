@@ -283,10 +283,13 @@ import {
   KeyboardBackspaceRounded,
   NavigateNextRounded,
 } from "@mui/icons-material";
+import { commStatusAtom } from "../../states/CommSlotsAtom";
 
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
+  const commStatus = useRecoilValue(commStatusAtom);
   const [page, setPage] = useRecoilState(pageAtom);
+  const [isClosed, setClosed] = React.useState(false);
   const [idx_highlights, setIdx_highlights] = React.useState(-1);
   const [idx_late2023, setIdx_late2023] = React.useState(-1);
   const [idx_late2022, setIdx_late2022] = React.useState(-1);
@@ -300,6 +303,12 @@ const BodySection = () => {
   const [idx_premium, setIdx_premium] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
+
+  React.useEffect(() => {
+    if (commStatus === "CLOSED") {
+      setClosed(true);
+    }
+  }, [commStatus]);
 
   return (
     <Container className="BodyContainer" sx={BodyContainerSx}>
@@ -1228,6 +1237,7 @@ const BodySection = () => {
             </Box>
             <Box>
               <Button
+                disabled={isClosed}
                 onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                 sx={
                   theme === "dark"
@@ -1476,6 +1486,7 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
+                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
                       theme === "dark"
@@ -1693,6 +1704,7 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
+                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
                       theme === "dark"
@@ -1941,6 +1953,7 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
+                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
                       theme === "dark"
@@ -2159,6 +2172,7 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
+                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
                       theme === "dark"

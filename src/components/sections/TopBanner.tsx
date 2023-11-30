@@ -35,11 +35,14 @@ import { Menu } from "@mui/icons-material";
 import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
 import { clickLink, switchPage } from "../../Helpers";
+import { commStatusAtom } from "../../states/CommSlotsAtom";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
+  const commStatus = useRecoilValue(commStatusAtom);
   const [page, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
+  const [isClosed, setClosed] = React.useState(false);
 
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
@@ -56,6 +59,12 @@ const TopBanner = () => {
       }
     }
   };
+
+  React.useEffect(() => {
+    if (commStatus === "CLOSED") {
+      setClosed(true);
+    }
+  }, [commStatus]);
 
   return (
     <Container sx={TopBannerContainerSx}>
@@ -88,6 +97,7 @@ const TopBanner = () => {
         <Box>
           <Button
             variant="solid"
+            disabled={isClosed}
             onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
             sx={
               theme === "dark"
