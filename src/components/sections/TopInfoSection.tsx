@@ -87,6 +87,7 @@ const TopInfoSection = () => {
   const waitlistSlots = useRecoilValue(waitlistSlotsAtom);
   const commStatus = useRecoilValue(commStatusAtom);
   const slotsReady = useRecoilValue(slotsReadyAtom);
+  const [isClosed, setClosed] = React.useState(false);
 
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
@@ -103,6 +104,12 @@ const TopInfoSection = () => {
       }
     }
   };
+
+  React.useEffect(() => {
+    if (commStatus === "CLOSED") {
+      setClosed(true);
+    }
+  }, [commStatus]);
 
   return (
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
@@ -545,6 +552,7 @@ const TopInfoSection = () => {
                   }
                 >
                   <Button
+                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
                     sx={
                       theme === "dark"
