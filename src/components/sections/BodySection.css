@@ -11,6 +11,7 @@ img.react-photo-album--photo {
   max-height: 520px;
   transition: opacity 0.2s ease-out;
   object-fit: cover; /* force correct aspect ratio but cropped in */
+  user-select: none;
   &:hover {
     opacity: 0.85;
     transition: opacity 0.2s ease-out;
