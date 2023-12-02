@@ -25,7 +25,7 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import ClosedCaptionRoundedIcon from "@mui/icons-material/ClosedCaptionRounded";
 import ClosedCaptionDisabledRoundedIcon from "@mui/icons-material/ClosedCaptionDisabledRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { clickLink, switchPage } from "../../Helpers";
+import { clickLink, switchPage, switchTheme } from "../../Helpers";
 import {
   BodyContainerSx,
   BodyHomeHighlightsCardSubtitleDarkSx,
@@ -1237,13 +1237,13 @@ const BodySection = () => {
             </Box>
             <Box>
               <Button
-                disabled={isClosed}
                 onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                sx={
-                  theme === "dark"
-                    ? BodyPortfolioCommBtnDarkSx
-                    : BodyPortfolioCommBtnLightSx
-                }
+                sx={switchTheme(
+                  theme,
+                  BodyPortfolioCommBtnDarkSx,
+                  BodyPortfolioCommBtnLightSx,
+                  isClosed
+                )}
               >
                 <Typography
                   className="Portfolio-Button-Helper"
@@ -1486,13 +1486,13 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
-                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                    sx={
-                      theme === "dark"
-                        ? BodyCommsTiersCardBasicBtnDarkSx
-                        : BodyCommsTiersCardBasicBtnLightSx
-                    }
+                    sx={switchTheme(
+                      theme,
+                      BodyCommsTiersCardBasicBtnDarkSx,
+                      BodyCommsTiersCardBasicBtnLightSx,
+                      isClosed
+                    )}
                     aria-description="Opens the request form for Commissions"
                   >
                     Commission Form
@@ -1704,13 +1704,13 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
-                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                    sx={
-                      theme === "dark"
-                        ? BodyCommsTiersCardStandardBtnDarkSx
-                        : BodyCommsTiersCardStandardBtnLightSx
-                    }
+                    sx={switchTheme(
+                      theme,
+                      BodyCommsTiersCardStandardBtnDarkSx,
+                      BodyCommsTiersCardStandardBtnLightSx,
+                      isClosed
+                    )}
                     aria-description="Opens the request form for Commissions"
                   >
                     Commission Form
@@ -1953,13 +1953,13 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
-                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                    sx={
-                      theme === "dark"
-                        ? BodyCommsTiersCardAbstractifyBtnDarkSx
-                        : BodyCommsTiersCardAbstractifyBtnLightSx
-                    }
+                    sx={switchTheme(
+                      theme,
+                      BodyCommsTiersCardAbstractifyBtnDarkSx,
+                      BodyCommsTiersCardAbstractifyBtnLightSx,
+                      isClosed
+                    )}
                     aria-description="Opens the request form for Commissions"
                   >
                     Commission Form
@@ -2172,13 +2172,13 @@ const BodySection = () => {
                   </Box>
                   <Button
                     endDecorator={<NavigateNextRounded />}
-                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                    sx={
-                      theme === "dark"
-                        ? BodyCommsTiersCardPremiumBtnDarkSx
-                        : BodyCommsTiersCardPremiumBtnLightSx
-                    }
+                    sx={switchTheme(
+                      theme,
+                      BodyCommsTiersCardPremiumBtnDarkSx,
+                      BodyCommsTiersCardPremiumBtnLightSx,
+                      isClosed
+                    )}
                     aria-description="Opens the request form for Commissions"
                   >
                     Commission Form

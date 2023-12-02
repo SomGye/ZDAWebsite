@@ -78,7 +78,7 @@ import {
   TopInfoTopTypoBoxSx,
 } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
-import { clickLink, switchPage } from "../../Helpers";
+import { clickLink, switchPage, switchTheme } from "../../Helpers";
 
 const TopInfoSection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -552,19 +552,20 @@ const TopInfoSection = () => {
                   }
                 >
                   <Button
-                    disabled={isClosed}
                     onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-                    sx={
-                      theme === "dark"
-                        ? TopInfoCommCardBtnLeftDarkSx
-                        : TopInfoCommCardBtnLeftLightSx
-                    }
+                    sx={switchTheme(
+                      theme,
+                      TopInfoCommCardBtnLeftDarkSx,
+                      TopInfoCommCardBtnLeftLightSx,
+                      isClosed
+                    )}
                     aria-description="Opens the request form for Commissions"
                   >
                     Request A Commission
                   </Button>
-                  <Divider orientation="vertical" />
+                  {!isClosed && <Divider orientation="vertical" />}
                   <Button
+                    className={isClosed ? "ButtonRounded" : "ButtonRegular"}
                     onClick={() =>
                       clickLink("https://tinyurl.com/ZDACommInfo6")
                     }

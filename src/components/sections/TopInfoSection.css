@@ -116,3 +116,7 @@ div.MuiBox-root.SpinnerBox::after {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
+button.MuiButton-root.ButtonRounded {
+  border-radius: 24px; /* force full rounded button for Commission Info btn when isClosed */
+}
