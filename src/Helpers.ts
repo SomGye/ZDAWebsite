@@ -36,10 +36,33 @@ export const switchPage = (
     window.history.replaceState({}, "", "/");
   } else {
     if (hardUrl) {
-      window.location.replace("https://www.zerodayanubis.com/" + target.toLocaleLowerCase());
+      window.location.replace(
+        "https://www.zerodayanubis.com/" + target.toLocaleLowerCase()
+      );
     } else {
       window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
     }
   }
   setPage(target);
+};
+
+const hideSx = {
+  ...{
+    display: "none",
+  },
+};
+
+export const switchTheme = (
+  theme: string,
+  darkSx: object,
+  lightSx: object,
+  hide: boolean = false
+) => {
+  if (hide) {
+    return hideSx;
+  } else if (theme === "light") {
+    return lightSx;
+  } else {
+    return darkSx;
+  }
 };
