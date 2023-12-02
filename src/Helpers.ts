@@ -52,6 +52,14 @@ const hideSx = {
   },
 };
 
+/**
+ * Switch style of component depending on theme and whether to hide or not.
+ * @param theme "light"/"dark" value from global atom
+ * @param darkSx the Sx object to use for dark mode
+ * @param lightSx the Sx object to use for light mode
+ * @param hide if true, simply hide the component
+ * @returns 
+ */
 export const switchTheme = (
   theme: string,
   darkSx: object,
