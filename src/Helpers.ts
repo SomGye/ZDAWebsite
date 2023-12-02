@@ -36,10 +36,41 @@ export const switchPage = (
     window.history.replaceState({}, "", "/");
   } else {
     if (hardUrl) {
-      window.location.replace("https://www.zerodayanubis.com/" + target.toLocaleLowerCase());
+      window.location.replace(
+        "https://www.zerodayanubis.com/" + target.toLocaleLowerCase()
+      );
     } else {
       window.history.replaceState({}, "", "/" + target.toLocaleLowerCase());
     }
   }
   setPage(target);
+};
+
+const hideSx = {
+  ...{
+    display: "none",
+  },
+};
+
+/**
+ * Switch style of component depending on theme and whether to hide or not.
+ * @param theme "light"/"dark" value from global atom
+ * @param darkSx the Sx object to use for dark mode
+ * @param lightSx the Sx object to use for light mode
+ * @param hide if true, simply hide the component
+ * @returns 
+ */
+export const switchTheme = (
+  theme: string,
+  darkSx: object,
+  lightSx: object,
+  hide: boolean = false
+) => {
+  if (hide) {
+    return hideSx;
+  } else if (theme === "light") {
+    return lightSx;
+  } else {
+    return darkSx;
+  }
 };

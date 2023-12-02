@@ -217,6 +217,22 @@ export const TopBannerCommButtonLightHelperSx = {
   },
 };
 
+export const TopBannerCommButtonDisabledSx = {
+  ...{
+    background:
+      "linear-gradient(69deg,#505050,#707070 30%,#909090 60%,#606060 77%,#707070)",
+    borderRadius: "24px",
+    boxShadow: "0px 0px 1px 1px #afafaf",
+    userSelect: "none",
+    "&:focus": {
+      outline: "none",
+    },
+    "@media (max-width: 340px)": {
+      display: "none",
+    },
+  },
+};
+
 export const TopBannerButtonGroupSx = {
   ...{
     justifyContent: "center",

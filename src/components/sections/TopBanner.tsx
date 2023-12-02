@@ -21,6 +21,7 @@ import {
   TopBannerButtonGroupSx,
   TopBannerCommButtonDarkHelperSx,
   TopBannerCommButtonDarkSx,
+  TopBannerCommButtonDisabledSx,
   TopBannerCommButtonLightHelperSx,
   TopBannerCommButtonLightSx,
   TopBannerContainerSx,
@@ -43,6 +44,20 @@ const TopBanner = () => {
   const [page, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
   const [isClosed, setClosed] = React.useState(false);
+
+  const determineCommButtonStyle = (
+    darkSx: object,
+    lightSx: object,
+    disabledSx: object
+  ) => {
+    if (isClosed) {
+      return disabledSx;
+    } else if (theme === "light") {
+      return lightSx;
+    } else {
+      return darkSx;
+    }
+  };
 
   const determineGroupButtonStyle = (path: string) => {
     if (page === path) {
@@ -99,11 +114,11 @@ const TopBanner = () => {
             variant="solid"
             disabled={isClosed}
             onClick={() => clickLink("https://tinyurl.com/ZDACommForm")}
-            sx={
-              theme === "dark"
-                ? TopBannerCommButtonDarkSx
-                : TopBannerCommButtonLightSx
-            }
+            sx={determineCommButtonStyle(
+              TopBannerCommButtonDarkSx,
+              TopBannerCommButtonLightSx,
+              TopBannerCommButtonDisabledSx
+            )}
             aria-description="Opens the request form for Commissions"
           >
             <Typography
@@ -116,7 +131,7 @@ const TopBanner = () => {
             >
               Request A Commission
             </Typography>
-            Request A Commission
+            {isClosed ? "Commissions Closed" : "Request A Commission"}
           </Button>
         </Box>
         <Box>
