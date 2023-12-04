@@ -2320,7 +2320,7 @@ const BodySection = () => {
                   : BodyCommsTiersCardBasicExLightSx
               }
             >
-              <Box sx={{ margin: "auto" }}>
+              <Box sx={{ margin: "auto", maxWidth: "400px" }}>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
@@ -2633,7 +2633,7 @@ const BodySection = () => {
                   : BodyCommsTiersCardAbstractifyExLightSx
               }
             >
-              <Box sx={{ margin: "auto" }}>
+              <Box sx={{ margin: "auto", maxWidth: "400px" }}>
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
