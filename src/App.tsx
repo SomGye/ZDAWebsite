@@ -159,10 +159,10 @@ const App = ({ route }: Props) => {
   return (
     <>
       <Container className="AppContainer" sx={AppContainerSx}>
-        {bannerReady && page != "Examples" && <TopBanner />}
-        {infoReady && page != "Examples" && <TopInfoSection />}
+        {bannerReady && page !== "Examples" && <TopBanner />}
+        {infoReady && page !== "Examples" && <TopInfoSection />}
         {bodyReady && <BodySection />}
-        {footerReady && page != "Examples" && <FooterSection />}
+        {footerReady && page !== "Examples" && <FooterSection />}
       </Container>
     </>
   );
