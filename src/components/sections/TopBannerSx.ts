@@ -118,7 +118,7 @@ export const TopBannerNavIconDarkSx = {
 
 export const TopBannerLogoNamePageBoxSx = {
   ...{
-    width: "288px",
+    width: "240px",
     display: "flex",
     flexDirection: "row",
     flexWrap: "nowrap",
