@@ -21,10 +21,15 @@ import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import StarRoundedIcon from "@mui/icons-material/StarRounded";
-import ClosedCaptionRoundedIcon from "@mui/icons-material/ClosedCaptionRounded";
-import ClosedCaptionDisabledRoundedIcon from "@mui/icons-material/ClosedCaptionDisabledRounded";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import {
+  StarRounded,
+  ClosedCaptionRounded,
+  ClosedCaptionDisabledRounded,
+  CloseRounded,
+  HorizontalRuleRounded,
+  KeyboardBackspaceRounded,
+  NavigateNextRounded,
+} from "@mui/icons-material";
 import { clickLink, switchPage, switchTheme } from "../../Helpers";
 import {
   BodyContainerSx,
@@ -278,11 +283,6 @@ import {
   photos_prints_support,
   photos_socmed,
 } from "./BodySectionPhotos";
-import {
-  HorizontalRuleRounded,
-  KeyboardBackspaceRounded,
-  NavigateNextRounded,
-} from "@mui/icons-material";
 import { commStatusAtom } from "../../states/CommSlotsAtom";
 
 const BodySection = () => {
@@ -377,11 +377,11 @@ const BodySection = () => {
                     }}
                     index={idx_highlights}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_highlights}
                     styles={{
@@ -618,7 +618,7 @@ const BodySection = () => {
                         : BodyHomeSupportCardSubtitleLightSx
                     }
                   >
-                    <StarRoundedIcon
+                    <StarRounded
                       sx={
                         theme === "dark"
                           ? BodyHomeSupportCardStarDarkSx
@@ -626,7 +626,7 @@ const BodySection = () => {
                       }
                     />
                     Any support is greatly appreciated!
-                    <StarRoundedIcon
+                    <StarRounded
                       sx={
                         theme === "dark"
                           ? BodyHomeSupportCardStarDarkSx
@@ -708,11 +708,11 @@ const BodySection = () => {
                     }}
                     index={idx_late2023}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_portfolio_late2023}
                     styles={{
@@ -797,11 +797,11 @@ const BodySection = () => {
                     }}
                     index={idx_late2022}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_portfolio_late2022}
                     styles={{
@@ -886,11 +886,11 @@ const BodySection = () => {
                     }}
                     index={idx_late2021}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_portfolio_late2021}
                     styles={{
@@ -987,11 +987,11 @@ const BodySection = () => {
                     }}
                     index={idx_early2021_pc}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_portfolio_early2021_procreate}
                     styles={{
@@ -1088,11 +1088,11 @@ const BodySection = () => {
                     }}
                     index={idx_early2021_h}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_portfolio_early2021_huion}
                     styles={{
@@ -1189,11 +1189,11 @@ const BodySection = () => {
                     }}
                     index={idx_early2021_p}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_portfolio_early2021_penup}
                     styles={{
@@ -1321,11 +1321,11 @@ const BodySection = () => {
                     }}
                     index={idx_basic}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_comm_basic}
                     styles={{
@@ -1536,11 +1536,11 @@ const BodySection = () => {
                     }}
                     index={idx_standard}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_comm_standard}
                     styles={{
@@ -1756,11 +1756,11 @@ const BodySection = () => {
                     }}
                     index={idx_abstractify}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_comm_abstractify}
                     styles={{
@@ -2003,11 +2003,11 @@ const BodySection = () => {
                     }}
                     index={idx_premium}
                     render={{
-                      iconCaptionsVisible: () => <ClosedCaptionRoundedIcon />,
+                      iconCaptionsVisible: () => <ClosedCaptionRounded />,
                       iconCaptionsHidden: () => (
-                        <ClosedCaptionDisabledRoundedIcon />
+                        <ClosedCaptionDisabledRounded />
                       ),
-                      iconClose: () => <CloseRoundedIcon />,
+                      iconClose: () => <CloseRounded />,
                     }}
                     slides={photos_comm_premium}
                     styles={{
@@ -2265,7 +2265,7 @@ const BodySection = () => {
                         : BodyHomeSupportCardSubtitleLightSx
                     }
                   >
-                    <StarRoundedIcon
+                    <StarRounded
                       sx={
                         theme === "dark"
                           ? BodyHomeSupportCardStarDarkSx
@@ -2273,7 +2273,7 @@ const BodySection = () => {
                       }
                     />
                     Any support is greatly appreciated!
-                    <StarRoundedIcon
+                    <StarRounded
                       sx={
                         theme === "dark"
                           ? BodyHomeSupportCardStarDarkSx
