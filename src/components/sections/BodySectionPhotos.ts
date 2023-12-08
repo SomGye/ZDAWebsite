@@ -34,13 +34,6 @@ export const photos_highlights_srcSet = [
     src: "/assets/highlights_home/album/A_Visual_Violation-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/highlights_home/album/A_Visual_Violation-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "A Visual Violation",
     title: "A Visual Violation",
   },
@@ -48,13 +41,6 @@ export const photos_highlights_srcSet = [
     src: "/assets/highlights_home/album/Kublai_Anubis_02-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/highlights_home/album/Kublai_Anubis_02-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Kublai Anubis 02",
     title: "Kublai Anubis 02",
   },
@@ -62,13 +48,6 @@ export const photos_highlights_srcSet = [
     src: "/assets/highlights_home/album/The_Crux_of_Crisis-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/highlights_home/album/The_Crux_of_Crisis-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "The Crux of Crisis",
     title: "The Crux of Crisis",
   },
@@ -76,13 +55,6 @@ export const photos_highlights_srcSet = [
     src: "/assets/highlights_home/album/Wisps_of_Afterlife-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/highlights_home/album/Wisps_of_Afterlife-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
   },
@@ -200,13 +172,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Frame_of_Revelation-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Frame_of_Revelation-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Frame of Revelation",
     title: "Frame of Revelation",
   },
@@ -214,13 +179,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/A_Reflection_of_Self-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/A_Reflection_of_Self-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "A Reflection of Self",
     title: "A Reflection of Self",
   },
@@ -228,13 +186,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Mark_of_Manifestation-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Mark_of_Manifestation-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Mark of Manifestation",
     title: "Mark of Manifestation",
   },
@@ -242,13 +193,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/A_System_of_Structure-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/A_System_of_Structure-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "A System of Structure",
     title: "A System of Structure",
   },
@@ -256,13 +200,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/The_Toxic_Descent-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/The_Toxic_Descent-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Toxic Descent",
     title: "The Toxic Descent",
   },
@@ -270,13 +207,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Converging_Spheres-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Converging_Spheres-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Converging Spheres",
     title: "Converging Spheres",
   },
@@ -284,13 +214,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Flight_of_Nihility-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Flight_of_Nihility-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Flight of Nihility",
     title: "Flight of Nihility",
   },
@@ -298,13 +221,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/The_Ephemeral_Eclipse-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/The_Ephemeral_Eclipse-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Ephemeral Eclipse",
     title: "The Ephemeral Eclipse",
   },
@@ -312,13 +228,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Haunted_Tendrils-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Haunted_Tendrils-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Haunted Tendrils",
     title: "Haunted Tendrils",
   },
@@ -326,13 +235,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Zygotes_Severed-1000px.jpg",
     width: 1000,
     height: 2167,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Zygotes_Severed-600px.jpg",
-        width: 600,
-        height: 1300,
-      },
-    ],
     alt: "Zygotes Severed",
     title: "Zygotes Severed",
   },
@@ -340,13 +242,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/Self_Destruct_Sequence-1000px.jpg",
     width: 1000,
     height: 418,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/Self_Destruct_Sequence-600px.jpg",
-        width: 600,
-        height: 251,
-      },
-    ],
     alt: "Self Destruct Sequence",
     title: "Self Destruct Sequence",
   },
@@ -354,13 +249,6 @@ export const photos_portfolio_late2023_srcSet = [
     src: "/assets/portfolio_late2023/album/The_Temple_of_Loss-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2023/album/The_Temple_of_Loss-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Temple of Loss",
     title: "The Temple of Loss",
   },
@@ -458,13 +346,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/An_Era_Burned_Away-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/An_Era_Burned_Away-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "An_Era_Burned_Away",
     title: "An_Era_Burned_Away",
   },
@@ -472,13 +353,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Smeared_Bridges-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Smeared_Bridges-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Smeared Bridges",
     title: "Smeared Bridges",
   },
@@ -486,13 +360,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Thing_202305291932-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Thing_202305291932-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Thing_202305291932",
     title: "Thing_202305291932",
   },
@@ -500,13 +367,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Psionic_Twist-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Psionic_Twist-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Psionic Twist",
     title: "Psionic Twist",
   },
@@ -514,13 +374,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/The_Mess_Between-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/The_Mess_Between-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Mess Between",
     title: "The Mess Between",
   },
@@ -528,13 +381,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Love_Across_Time-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Love_Across_Time-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Love Across Time",
     title: "Love Across Time",
   },
@@ -542,13 +388,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Was_It_Punishment-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Was_It_Punishment-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Was It Punishment",
     title: "Was It Punishment",
   },
@@ -556,13 +395,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Your_Fear_Regenerates-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Your_Fear_Regenerates-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Your Fear Regenerates",
     title: "Your Fear Regenerates",
   },
@@ -570,13 +402,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Just_A_Flicker-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Just_A_Flicker-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Just A Flicker",
     title: "Just A Flicker",
   },
@@ -584,13 +409,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Retrofuturista-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Retrofuturista-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Retrofuturista",
     title: "Retrofuturista",
   },
@@ -598,13 +416,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Returning_Sublimation-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Returning_Sublimation-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Returning Sublimation",
     title: "Returning Sublimation",
   },
@@ -612,13 +423,6 @@ export const photos_portfolio_late2022_srcSet = [
     src: "/assets/portfolio_late2022/album/Z_Emerges-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2022/album/Z_Emerges-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Z Emerges",
     title: "Z Emerges",
   },
@@ -716,13 +520,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Power_of_Exclusion-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Power_of_Exclusion-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Power of Exclusion",
     title: "Power of Exclusion",
   },
@@ -730,13 +527,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Sakura_Fingers-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Sakura_Fingers-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Sakura Fingers",
     title: "Sakura Fingers",
   },
@@ -744,13 +534,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/A_Toxic_Stitch-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/A_Toxic_Stitch-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "A Toxic Stitch",
     title: "A Toxic Stitch",
   },
@@ -758,13 +541,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Nightrealm-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Nightrealm-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Nightrealm",
     title: "Nightrealm",
   },
@@ -772,13 +548,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Ashes_of_Reverence-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Ashes_of_Reverence-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Ashes of Reverence",
     title: "Ashes of Reverence",
   },
@@ -786,13 +555,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Deconstricted-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Deconstricted-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Deconstricted",
     title: "Deconstricted",
   },
@@ -800,13 +562,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Paralytic_Embrace-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Paralytic_Embrace-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Paralytic Embrace",
     title: "Paralytic Embrace",
   },
@@ -814,13 +569,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Parallel_Abandonment-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Parallel_Abandonment-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Parallel Abandonment",
     title: "Parallel Abandonment",
   },
@@ -828,13 +576,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Impending_Flood-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Impending_Flood-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Impending Flood",
     title: "Impending Flood",
   },
@@ -842,13 +583,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Voidshift_Zero-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Voidshift_Zero-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Voidshift Zero",
     title: "Voidshift Zero",
   },
@@ -856,13 +590,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Forgotten-Displaced-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Forgotten-Displaced-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Forgotten-Displaced",
     title: "Forgotten-Displaced",
   },
@@ -870,13 +597,6 @@ export const photos_portfolio_late2021_srcSet = [
     src: "/assets/portfolio_late2021/album/Ghoul-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_late2021/album/Ghoul-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Ghoul",
     title: "Ghoul",
   },
@@ -918,13 +638,6 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     src: "/assets/portfolio_early2021_procreate/album/First_Doodle_in_Procreate-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_procreate/album/First_Doodle_in_Procreate-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "First Doodle in Procreate",
     title: "First Doodle in Procreate",
   },
@@ -932,13 +645,6 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     src: "/assets/portfolio_early2021_procreate/album/Nothing_Will_Stay-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_procreate/album/Nothing_Will_Stay-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Nothing Will Stay",
     title: "Nothing Will Stay",
   },
@@ -946,13 +652,6 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     src: "/assets/portfolio_early2021_procreate/album/Eroded_Heart-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_procreate/album/Eroded_Heart-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Eroded Heart",
     title: "Eroded Heart",
   },
@@ -960,13 +659,6 @@ export const photos_portfolio_early2021_procreate_srcSet = [
     src: "/assets/portfolio_early2021_procreate/album/Eroded_Chamber-1000px.jpg",
     width: 1000,
     height: 1439,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_procreate/album/Eroded_Chamber-600px.jpg",
-        width: 600,
-        height: 863,
-      },
-    ],
     alt: "Eroded Chamber",
     title: "Eroded Chamber",
   },
@@ -1008,13 +700,6 @@ export const photos_portfolio_early2021_huion_srcSet = [
     src: "/assets/portfolio_early2021_huion/album/HuionSketch_1623481967592-1000px.jpg",
     width: 1000,
     height: 1333,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_huion/album/HuionSketch_1623481967592-600px.jpg",
-        width: 600,
-        height: 800,
-      },
-    ],
     alt: "HuionSketch_1623481967592",
     title: "HuionSketch_1623481967592",
   },
@@ -1022,13 +707,6 @@ export const photos_portfolio_early2021_huion_srcSet = [
     src: "/assets/portfolio_early2021_huion/album/HuionSketch_1625698314399-1000px.jpg",
     width: 1000,
     height: 1333,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_huion/album/HuionSketch_1625698314399-600px.jpg",
-        width: 600,
-        height: 800,
-      },
-    ],
     alt: "HuionSketch_1625698314399",
     title: "HuionSketch_1625698314399",
   },
@@ -1036,13 +714,6 @@ export const photos_portfolio_early2021_huion_srcSet = [
     src: "/assets/portfolio_early2021_huion/album/HuionSketch_1625699078818-1000px.jpg",
     width: 1000,
     height: 1333,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_huion/album/HuionSketch_1625699078818-600px.jpg",
-        width: 600,
-        height: 800,
-      },
-    ],
     alt: "HuionSketch_1625699078818",
     title: "HuionSketch_1625699078818",
   },
@@ -1050,13 +721,6 @@ export const photos_portfolio_early2021_huion_srcSet = [
     src: "/assets/portfolio_early2021_huion/album/HuionSketch_1625704616676-1000px.jpg",
     width: 1000,
     height: 1333,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_huion/album/HuionSketch_1625704616676-600px.jpg",
-        width: 600,
-        height: 800,
-      },
-    ],
     alt: "HuionSketch_1625704616676",
     title: "HuionSketch_1625704616676",
   },
@@ -1154,13 +818,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/penup_20210422_053046-1000px.jpg",
     width: 1000,
     height: 1500,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/penup_20210422_053046-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "penup_20210422_053046",
     title: "penup_20210422_053046",
   },
@@ -1168,13 +825,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210326_003107-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210326_003107-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210326_003107",
     title: "20210326_003107",
   },
@@ -1182,13 +832,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/penup_20210422_055424-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/penup_20210422_055424-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "penup_20210422_055424",
     title: "penup_20210422_055424",
   },
@@ -1196,13 +839,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210202_235729-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210202_235729-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210202_235729",
     title: "20210202_235729",
   },
@@ -1210,13 +846,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210531_091809-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210531_091809-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210531_091809",
     title: "20210531_091809",
   },
@@ -1224,13 +853,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210219_053858-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210219_053858-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210219_053858",
     title: "20210219_053858",
   },
@@ -1238,13 +860,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210308_015320-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210308_015320-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210308_015320",
     title: "20210308_015320",
   },
@@ -1252,13 +867,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210309_005026-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210309_005026-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210309_005026",
     title: "20210309_005026",
   },
@@ -1266,13 +874,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210207_203848-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210207_203848-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210207_203848",
     title: "20210207_203848",
   },
@@ -1280,13 +881,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210203_175221-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210203_175221-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210203_175221",
     title: "20210203_175221",
   },
@@ -1294,13 +888,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210221_021422-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210221_021422-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210221_021422",
     title: "20210221_021422",
   },
@@ -1308,13 +895,6 @@ export const photos_portfolio_early2021_penup_srcSet = [
     src: "/assets/portfolio_early2021_penup/album/20210327_044743-1000px.jpg",
     width: 1080,
     height: 1620,
-    srcSet: [
-      {
-        src: "/assets/portfolio_early2021_penup/album/20210327_044743-600px.jpg",
-        width: 600,
-        height: 900,
-      },
-    ],
     alt: "20210327_044743",
     title: "20210327_044743",
   },
@@ -1370,13 +950,6 @@ export const photos_comm_abstractify_srcSet = [
     src: "/assets/comm_abstractify/album/Broken-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_abstractify/album/Broken-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Broken",
     title: "Broken",
   },
@@ -1384,13 +957,6 @@ export const photos_comm_abstractify_srcSet = [
     src: "/assets/comm_abstractify/album/The_Ghost_Within-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_abstractify/album/The_Ghost_Within-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Ghost Within",
     title: "The Ghost Within",
   },
@@ -1398,13 +964,6 @@ export const photos_comm_abstractify_srcSet = [
     src: "/assets/comm_abstractify/album/AEF-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_abstractify/album/AEF-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "All Else Failed",
     title: "All Else Failed",
   },
@@ -1412,13 +971,6 @@ export const photos_comm_abstractify_srcSet = [
     src: "/assets/comm_abstractify/album/SFV-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_abstractify/album/SFV-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Screaming for Vengeance",
     title: "Screaming for Vengeance",
   },
@@ -1426,13 +978,6 @@ export const photos_comm_abstractify_srcSet = [
     src: "/assets/comm_abstractify/album/ORA-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_abstractify/album/ORA-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Oracle",
     title: "Oracle",
   },
@@ -1440,13 +985,6 @@ export const photos_comm_abstractify_srcSet = [
     src: "/assets/comm_abstractify/album/ATS-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_abstractify/album/ATS-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "A Thousand Suns",
     title: "A Thousand Suns",
   },
@@ -1498,13 +1036,6 @@ export const photos_comm_basic_srcSet = [
     src: "/assets/comm_basic/album/QS1-BL-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_basic/album/QS1-BL-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "QS1-BL",
     title: "QS1-BL",
   },
@@ -1512,13 +1043,6 @@ export const photos_comm_basic_srcSet = [
     src: "/assets/comm_basic/album/Tidal_Interference-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_basic/album/Tidal_Interference-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Tidal Interference",
     title: "Tidal Interference",
   },
@@ -1526,13 +1050,6 @@ export const photos_comm_basic_srcSet = [
     src: "/assets/comm_basic/album/QS1-BR-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_basic/album/QS1-BR-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "QS1-BR",
     title: "QS1-BR",
   },
@@ -1540,13 +1057,6 @@ export const photos_comm_basic_srcSet = [
     src: "/assets/comm_basic/album/Indistinguishable_Torment-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_basic/album/Indistinguishable_Torment-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Indistinguishable Torment",
     title: "Indistinguishable Torment",
   },
@@ -1612,13 +1122,6 @@ export const photos_comm_premium_srcSet = [
     src: "/assets/comm_premium/album/The_Crux_of_Crisis-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_premium/album/The_Crux_of_Crisis-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "The Crux of Crisis",
     title: "The Crux of Crisis",
   },
@@ -1626,13 +1129,6 @@ export const photos_comm_premium_srcSet = [
     src: "/assets/comm_premium/album/A_System_of_Structure-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_premium/album/A_System_of_Structure-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "A System of Structure",
     title: "A System of Structure",
   },
@@ -1640,13 +1136,6 @@ export const photos_comm_premium_srcSet = [
     src: "/assets/comm_premium/album/A_Reflection_of_Self-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_premium/album/A_Reflection_of_Self-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "A Reflection of Self",
     title: "A Reflection of Self",
   },
@@ -1654,13 +1143,6 @@ export const photos_comm_premium_srcSet = [
     src: "/assets/comm_premium/album/The_Toxic_Descent-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_premium/album/The_Toxic_Descent-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Toxic Descent",
     title: "The Toxic Descent",
   },
@@ -1668,13 +1150,6 @@ export const photos_comm_premium_srcSet = [
     src: "/assets/comm_premium/album/Frame_of_Revelation-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_premium/album/Frame_of_Revelation-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Frame of Revelation",
     title: "Frame of Revelation",
   },
@@ -1682,13 +1157,6 @@ export const photos_comm_premium_srcSet = [
     src: "/assets/comm_premium/album/The_Temple_of_Loss-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_premium/album/The_Temple_of_Loss-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "The Temple of Loss",
     title: "The Temple of Loss",
   },
@@ -1754,13 +1222,6 @@ export const photos_comm_standard_srcSet = [
     src: "/assets/comm_standard/album/Divinity_Ends-1000px.jpg",
     width: 1000,
     height: 2167,
-    srcSet: [
-      {
-        src: "/assets/comm_standard/album/Divinity_Ends-600px.jpg",
-        width: 600,
-        height: 1300,
-      },
-    ],
     alt: "Divinity Ends",
     title: "Divinity Ends",
   },
@@ -1768,13 +1229,6 @@ export const photos_comm_standard_srcSet = [
     src: "/assets/comm_standard/album/Wisps_of_Afterlife-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_standard/album/Wisps_of_Afterlife-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
   },
@@ -1782,13 +1236,6 @@ export const photos_comm_standard_srcSet = [
     src: "/assets/comm_standard/album/Returning_Sublimation-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_standard/album/Returning_Sublimation-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "Returning Sublimation",
     title: "Returning Sublimation",
   },
@@ -1796,13 +1243,6 @@ export const photos_comm_standard_srcSet = [
     src: "/assets/comm_standard/album/The_Chroma_Passage-1000px.jpg",
     width: 1000,
     height: 1414,
-    srcSet: [
-      {
-        src: "/assets/comm_standard/album/The_Chroma_Passage-600px.jpg",
-        width: 600,
-        height: 849,
-      },
-    ],
     alt: "The Chroma Passage",
     title: "The Chroma Passage",
   },
@@ -1810,13 +1250,6 @@ export const photos_comm_standard_srcSet = [
     src: "/assets/comm_standard/album/Passengers-1000px.jpg",
     width: 1000,
     height: 695,
-    srcSet: [
-      {
-        src: "/assets/comm_standard/album/Passengers-600px.jpg",
-        width: 600,
-        height: 417,
-      },
-    ],
     alt: "Passengers",
     title: "Passengers",
   },
@@ -1824,13 +1257,6 @@ export const photos_comm_standard_srcSet = [
     src: "/assets/comm_standard/album/Jack-O-Portal-1000px.jpg",
     width: 1000,
     height: 1000,
-    srcSet: [
-      {
-        src: "/assets/comm_standard/album/Jack-O-Portal-600px.jpg",
-        width: 600,
-        height: 600,
-      },
-    ],
     alt: "Jack-O-Portal",
     title: "Jack-O-Portal",
   },

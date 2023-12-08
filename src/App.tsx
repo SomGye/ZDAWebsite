@@ -37,6 +37,12 @@ const App = ({ route }: Props) => {
   const slotDelay = 500;
 
   React.useEffect(() => {
+    // Hide the init loading screen
+    const loadingpage = document.querySelector("#loadingpage") as any;
+    if (loadingpage && loadingpage.style) {
+      loadingpage.style = "display: none";
+    }
+
     // Perf Tweak: Load Sections on Delays
     setTimeout(() => {
       setBannerReady(true);
@@ -159,10 +165,10 @@ const App = ({ route }: Props) => {
   return (
     <>
       <Container className="AppContainer" sx={AppContainerSx}>
-        {bannerReady && page != "Examples" && <TopBanner />}
-        {infoReady && page != "Examples" && <TopInfoSection />}
+        {bannerReady && page !== "Examples" && <TopBanner />}
+        {infoReady && page !== "Examples" && <TopInfoSection />}
         {bodyReady && <BodySection />}
-        {footerReady && page != "Examples" && <FooterSection />}
+        {footerReady && page !== "Examples" && <FooterSection />}
       </Container>
     </>
   );
