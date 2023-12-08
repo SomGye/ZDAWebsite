@@ -94,13 +94,25 @@
      id="layer9"
      style="display:inline;opacity:1;mix-blend-mode:color-dodge">
     <path
-       style="display:inline;opacity:1;mix-blend-mode:color-dodge;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       d="M 425.24144,81.90581 -5,668.47593 Z"
+       style="display:inline;opacity:1;mix-blend-mode:normal;fill:#ff006a;fill-opacity:1;stroke:#ff006a;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 404.8966,81.90581 10.061178,630.22265 Z"
        id="path58" />
     <path
-       style="display:inline;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       d="M 297.67196,636.52499 745,25 Z"
+       style="display:inline;fill:#ff006a;fill-opacity:1;stroke:#ff006a;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 315.25571,636.52499 711.51232,91.571426 Z"
        id="path57" />
+  </g>
+  <g
+     id="g65"
+     style="display:none;opacity:1;mix-blend-mode:normal">
+    <path
+       style="display:inline;opacity:1;mix-blend-mode:normal;fill:#eb004e;fill-opacity:1;stroke:#eb004e;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 404.8966,81.90581 10.061178,630.22265 Z"
+       id="path3" />
+    <path
+       style="display:inline;fill:#eb004e;fill-opacity:1;stroke:#eb004e;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 315.25571,636.52499 711.51232,91.571426 Z"
+       id="path65" />
   </g>
   <g
      id="layer2"
