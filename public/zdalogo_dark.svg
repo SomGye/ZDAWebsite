@@ -91,6 +91,18 @@
        y="0" />
   </g>
   <g
+     id="layer9"
+     style="display:inline;opacity:1;mix-blend-mode:color-dodge">
+    <path
+       style="display:inline;opacity:1;mix-blend-mode:color-dodge;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 425.24144,81.90581 -5,668.47593 Z"
+       id="path58" />
+    <path
+       style="display:inline;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 297.67196,636.52499 745,25 Z"
+       id="path57" />
+  </g>
+  <g
      id="layer2"
      style="display:inline"
      clip-path="url(#clipPath103)">
@@ -243,46 +255,6 @@
        style="fill:#0055d4;stroke:#0055d4;stroke-linecap:square;stroke-linejoin:miter"
        d="m 279.5,210 h 92.87837 z"
        id="path34" />
-  </g>
-  <g
-     id="layer9"
-     style="display:inline;opacity:1;mix-blend-mode:color-dodge">
-    <path
-       style="display:inline;opacity:0.091;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:6;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:60, 81;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 350,0 V 720"
-       id="path2" />
-    <path
-       style="display:none;opacity:1;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:6;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:60, 81;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 720,0 0,720"
-       id="path3" />
-    <path
-       style="fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       d="M 274.42072,635.99995 720,25 Z"
-       id="path57" />
-    <path
-       style="fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       d="M 446.74884,83.200648 0,695 Z"
-       id="path58" />
-  </g>
-  <g
-     id="g69"
-     style="display:none;opacity:1;mix-blend-mode:multiply">
-    <path
-       style="display:inline;opacity:0.091;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:6;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:60, 81;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 350,0 V 720"
-       id="path65" />
-    <path
-       style="display:none;opacity:1;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:6;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:60, 81;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 720,0 0,720"
-       id="path67" />
-    <path
-       style="fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       d="M 274.42072,635.99995 720,25 Z"
-       id="path68" />
-    <path
-       style="fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       d="M 446.74884,83.200648 0,695 Z"
-       id="path69" />
   </g>
   <g
      id="layer4"
@@ -483,5 +455,12 @@
        style="fill:#fafafa;fill-opacity:1;stroke:#fafafa;stroke-width:4;stroke-opacity:1"
        d="m 182,638 h 538 v 0 z"
        id="path71" />
+  </g>
+  <g
+     id="layer10">
+    <path
+       style="display:inline;opacity:0.091;mix-blend-mode:color-dodge;fill:#ff0074;fill-opacity:1;stroke:#ff0074;stroke-width:6;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:60, 81;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 350,0 V 720"
+       id="path2" />
   </g>
 </svg>

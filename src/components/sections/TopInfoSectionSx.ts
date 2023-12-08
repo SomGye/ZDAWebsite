@@ -12,7 +12,6 @@ export const TopInfoTopDarkBoxSx = {
   ...{
     display: "flex",
     flexDirection: "row",
-    // flexDirection: "column", // TODO: use for when LOGO
     flexWrap: "wrap",
     width: "100%",
     backgroundImage:
@@ -28,7 +27,6 @@ export const TopInfoTopLightBoxSx = {
   ...{
     display: "flex",
     flexDirection: "row",
-    // flexDirection: "column", // TODO: use for when LOGO
     flexWrap: "wrap",
     width: "100%",
     backgroundImage:
@@ -53,11 +51,7 @@ export const TopInfoTopTypoBoxColSx = {
     flex: "1",
     display: "flex",
     flexDirection: "column",
-    // flexDirection: "row", // TODO: use when LOGO and desktop width
     justifyContent: "center",
-    // "@media (max-width: 670px)": { // TODO: use when LOGO and tablet/mobile
-    //   flexDirection: "column",
-    // },
   },
 };
 
@@ -135,13 +129,6 @@ export const TopInfoTopRightTitleDarkSx = {
     marginBottom: "auto",
     pointerEvents: "none",
     userSelect: "none",
-    //--
-    // marginLeft: "auto", // TODO: use when LOGO
-    // marginRight: "auto",
-    // width: "200px", // TODO: use when LOGO and desktop
-    // "@media (max-width: 670px)": {
-    //   width: "auto", // TODO: use when LOGO
-    // },
   },
 };
 
@@ -155,13 +142,6 @@ export const TopInfoTopRightTitleLightSx = {
     marginBottom: "auto",
     pointerEvents: "none",
     userSelect: "none",
-    // --
-    // marginLeft: "auto", // TODO: use when LOGO
-    // marginRight: "auto",
-    // width: "200px", // TODO: use when LOGO and desktop
-    // "@media (max-width: 670px)": {
-    //   width: "auto", // TODO: use when LOGO
-    // },
   },
 };
 
@@ -170,7 +150,7 @@ export const TopInfoNavButtonBoxSx = {
     display: "none",
     marginTop: "8px",
     marginBottom: "-8px",
-    "@media (max-width: 670px)": {
+    "@media (max-width: 700px)": {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",

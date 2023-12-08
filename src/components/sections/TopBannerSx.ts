@@ -65,6 +65,19 @@ export const TopBannerBoxLightSx = {
   },
 };
 
+export const TopBannerMobileLogoBoxSx = {
+  ...{
+    display: "none",
+    "@media (max-width: 430px)": {
+      display: "flex",
+      alignItems: "center",
+      position: "relative",
+      marginLeft: "-20px",
+      right: "20px",
+    },
+  },
+};
+
 export const TopBannerIconBoxSx = {
   ...{
     display: "flex",

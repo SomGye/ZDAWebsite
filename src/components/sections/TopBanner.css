@@ -14,9 +14,17 @@ div.Logo-Box {
   justify-content: center;
   width: 100%;
   @media (max-width: 430px) {
+    display: none;
+  }
+}
+
+div.Logo-Box-Mobile {
+  display: none;
+  @media (max-width: 430px) {
+    display: flex;
     position: absolute;
     left: 50%;
-    margin-left: calc(50% - 120px / 2);
+    margin: 0 auto;
   }
 }
 

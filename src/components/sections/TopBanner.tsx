@@ -29,6 +29,7 @@ import {
   TopBannerIconButtonDarkSx,
   TopBannerIconButtonLightSx,
   TopBannerLogoNamePageBoxSx,
+  TopBannerMobileLogoBoxSx,
   TopBannerNavIconDarkSx,
   TopBannerThemeToggleBoxSx,
 } from "./TopBannerSx";
@@ -89,6 +90,16 @@ const TopBanner = () => {
         className="TopBannerBox"
         sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}
       >
+        {/* ZDA Logo Box - Mobile (centered) */}
+        <Box sx={TopBannerMobileLogoBoxSx}>
+          <div className="Logo-Box-Mobile">
+            <img
+              src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
+              className="ZDA-Logo-TopBanner"
+              alt="ZDA"
+            />
+          </div>
+        </Box>
         <Box sx={TopBannerIconBoxSx}>
           <IconButton
             variant="soft"
@@ -106,8 +117,13 @@ const TopBanner = () => {
             {theme === "dark" && <Menu sx={TopBannerNavIconDarkSx} />}
             {theme !== "dark" && <Menu />}
           </IconButton>
+          {/* ZDA Logo Box - Tablet/Laptop/Desktop (left-aligned) */}
           <div className="Logo-Box">
-            <img src={theme === "dark" ? zdaDarkLogo : zdaLightLogo} className="ZDA-Logo-TopBanner" alt="ZDA" />
+            <img
+              src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
+              className="ZDA-Logo-TopBanner"
+              alt="ZDA"
+            />
           </div>
           <HamburgerMenu open={open} setOpen={setOpen} />
         </Box>
