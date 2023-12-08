@@ -35,6 +35,7 @@
 - *Vercel KV NOTE*: Vercel KV is used to populate the Commissions Slots (Active, Waitlist, Status) in the TopInfoSection.
   - A `fetchData` function in `App.tsx` queries the KV data store by using environment variables for the API URL and token, which are stored locally in `.env.development` and `.env.production`. These are NOT committed and will have to be created on your own.
   - When hosting on Vercel, you will also have to populate these environment variables in the Project Settings online as well, or else it will not work in production.
+- *NOTE*: to force *Vite.js* to rebuild and reoptimize its dependencies and run a hard start, use `npm run hardstart`
 ------
 ##### Examples Page
 - To see the Commission Tiers Examples page, which is just for my own convenience, you can do one of the following:
