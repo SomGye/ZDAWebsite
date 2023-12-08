@@ -1,15 +1,32 @@
 h4.TopBannerLogoTextHeader {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    pointer-events: none;
-    user-select: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+
+div.Logo-Box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: 430px) {
+    position: absolute;
+    left: 50%;
+    margin-left: calc(50% - 120px / 2);
+  }
+}
+
+img.ZDA-Logo-TopBanner {
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 div.TopBannerBox.MuiBox-root {
-    padding-right: 0 !important;
-    width: 98% !important;
+  padding-right: 0 !important;
+  width: 98% !important;
 }

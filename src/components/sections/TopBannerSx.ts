@@ -26,10 +26,10 @@ export const TopBannerBoxDarkSx = {
       paddingTop: "0.95em",
       paddingBottom: "0.95em",
     },
-    "@media (max-width: 670px)": {
+    "@media (max-width: 700px)": {
       justifyContent: "center",
     },
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       paddingTop: "32px",
       paddingBottom: "32px",
     },
@@ -55,10 +55,10 @@ export const TopBannerBoxLightSx = {
       paddingTop: "0.95em",
       paddingBottom: "0.95em",
     },
-    "@media (max-width: 670px)": {
+    "@media (max-width: 700px)": {
       justifyContent: "center",
     },
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       paddingTop: "32px",
       paddingBottom: "32px",
     },
@@ -67,8 +67,11 @@ export const TopBannerBoxLightSx = {
 
 export const TopBannerIconBoxSx = {
   ...{
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
     marginLeft: "16px",
-    "@media (max-width: 670px)": {
+    "@media (max-width: 700px)": {
       position: "fixed",
       left: "0",
     },
@@ -141,7 +144,7 @@ export const TopBannerCommButtonDarkSx = {
     "&:hover .Button-Helper": {
       opacity: "1",
     },
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       display: "none",
     },
   },
@@ -166,7 +169,7 @@ export const TopBannerCommButtonDarkHelperSx = {
     boxShadow: "0px 1px 24px 2px red",
     transition: "opacity 0.2s ease-out",
     userSelect: "none",
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       display: "none",
     },
   },
@@ -186,7 +189,7 @@ export const TopBannerCommButtonLightSx = {
     "&:hover .Button-Helper": {
       opacity: "1",
     },
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       display: "none",
     },
   },
@@ -211,7 +214,7 @@ export const TopBannerCommButtonLightHelperSx = {
     boxShadow: "0px 1px 24px 2px #E600D7",
     transition: "opacity 0.2s ease-out",
     userSelect: "none",
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       display: "none",
     },
   },
@@ -227,7 +230,7 @@ export const TopBannerCommButtonDisabledSx = {
     "&:focus": {
       outline: "none",
     },
-    "@media (max-width: 340px)": {
+    "@media (max-width: 430px)": {
       display: "none",
     },
   },
@@ -238,7 +241,7 @@ export const TopBannerButtonGroupSx = {
     justifyContent: "center",
     "--ButtonGroup-radius": "24px",
     "--ButtonGroup-separatorColor": "none !important",
-    "@media (max-width: 670px)": {
+    "@media (max-width: 700px)": {
       display: "none",
     },
   },
@@ -322,7 +325,7 @@ export const TopBannerThemeToggleBoxSx = {
   ...{
     display: "flex",
     marginRight: "16px",
-    "@media (max-width: 670px)": {
+    "@media (max-width: 700px)": {
       position: "fixed",
       right: "0",
     },

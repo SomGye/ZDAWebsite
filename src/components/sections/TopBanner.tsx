@@ -37,6 +37,8 @@ import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
 import { clickLink, switchPage } from "../../Helpers";
 import { commStatusAtom } from "../../states/CommSlotsAtom";
+import zdaDarkLogo from "/zdalogo_dark.svg";
+import zdaLightLogo from "/zdalogo_light.svg";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
@@ -104,6 +106,9 @@ const TopBanner = () => {
             {theme === "dark" && <Menu sx={TopBannerNavIconDarkSx} />}
             {theme !== "dark" && <Menu />}
           </IconButton>
+          <div className="Logo-Box">
+            <img src={theme === "dark" ? zdaDarkLogo : zdaLightLogo} className="ZDA-Logo-TopBanner" alt="ZDA" />
+          </div>
           <HamburgerMenu open={open} setOpen={setOpen} />
         </Box>
         <Box sx={TopBannerLogoNamePageBoxSx}>
