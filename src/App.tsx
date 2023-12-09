@@ -65,6 +65,8 @@ const App = ({ route }: Props) => {
       setPage("Commissions");
     } else if (route === "examples") {
       setPage("Examples");
+    } else if (route === "logo") {
+      setPage("Logo");
     } else {
       // Check for direct path in URL and use Hard URL switch to clear sub-domain
       if (currentPath.toLocaleLowerCase().includes("portfolio")) {
@@ -73,6 +75,8 @@ const App = ({ route }: Props) => {
         switchPage("Commissions", setPage, true);
       } else if (currentPath.toLocaleLowerCase().includes("examples")) {
         switchPage("Examples", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("logo")) {
+        switchPage("Logo", setPage, true);
       } else {
         setPage("Home");
       }
@@ -165,10 +169,10 @@ const App = ({ route }: Props) => {
   return (
     <>
       <Container className="AppContainer" sx={AppContainerSx}>
-        {bannerReady && page !== "Examples" && <TopBanner />}
-        {infoReady && page !== "Examples" && <TopInfoSection />}
+        {bannerReady && page !== "Examples" && page !== "Logo" && <TopBanner />}
+        {infoReady && page !== "Examples" && page !== "Logo" && <TopInfoSection />}
         {bodyReady && <BodySection />}
-        {footerReady && page !== "Examples" && <FooterSection />}
+        {footerReady && page !== "Examples" && page !== "Logo" && <FooterSection />}
       </Container>
     </>
   );
