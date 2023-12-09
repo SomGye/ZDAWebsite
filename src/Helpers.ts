@@ -74,3 +74,12 @@ export const switchTheme = (
     return darkSx;
   }
 };
+
+/**
+ * Capitalize the first word of a string.  
+ * @param str string (word or sentence)
+ * @returns string with capitalized first word
+ */
+export const capitalize = (str: string) => {
+  return str.charAt(0).toLocaleUpperCase() + str.slice(1);
+};
