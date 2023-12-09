@@ -251,6 +251,16 @@ import {
   BodyCommsTiersCardPremiumListItemLongExLightSx,
   BodyCommsTiersCardAbstractifyListItemLongExDarkSx,
   BodyCommsTiersCardAbstractifyListItemLongExLightSx,
+  BodyLogoPageBoxSx,
+  BodyLogoPageTitleTypographyDarkSx,
+  BodyLogoPageTitleTypographyLightSx,
+  BodyLogoPageFooterOuterTypographyDarkSx,
+  BodyLogoPageFooterOuterTypographyLightSx,
+  BodyLogoPageFooterInnerTypographyDarkSx,
+  BodyLogoPageFooterInnerTypographyLightSx,
+  BodyLogoPageButtonBoxSx,
+  BodyLogoPageButtonDarkSx,
+  BodyLogoPageButtonLightSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -284,6 +294,8 @@ import {
   photos_socmed,
 } from "./BodySectionPhotos";
 import { commStatusAtom } from "../../states/CommSlotsAtom";
+import zdaDarkLogo from "/zdalogo_dark.svg";
+import zdaLightLogo from "/zdalogo_light.svg";
 
 const BodySection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -2970,6 +2982,60 @@ const BodySection = () => {
               }
             >
               Back To Commissions
+            </Button>
+          </Box>
+        </Box>
+      )}
+      {page && page === "Logo" && (
+        <Box sx={BodyLogoPageBoxSx}>
+          <Typography
+            level="title-md"
+            sx={
+              theme === "dark"
+                ? BodyLogoPageTitleTypographyDarkSx
+                : BodyLogoPageTitleTypographyLightSx
+            }
+          >
+            {"⌞ZERODAYANUBIS⌝"}
+          </Typography>
+          <div className="Logo-Box-LogoPage">
+            <img
+              src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
+              className="ZDA-Logo-LogoPage"
+              alt="ZDA"
+            />
+          </div>
+          <Typography
+            level="title-sm"
+            sx={
+              theme === "dark"
+                ? BodyLogoPageFooterOuterTypographyDarkSx
+                : BodyLogoPageFooterOuterTypographyLightSx
+            }
+          >
+            (Logo designed and created by ZDA in InkScape)
+            <Typography
+              level="title-sm"
+              sx={
+                theme === "dark"
+                  ? BodyLogoPageFooterInnerTypographyDarkSx
+                  : BodyLogoPageFooterInnerTypographyLightSx
+              }
+            >
+              © ZDA WORKS. ALL RIGHTS RESERVED.
+            </Typography>
+          </Typography>
+          <Box sx={BodyLogoPageButtonBoxSx}>
+            <Button
+              startDecorator={<KeyboardBackspaceRounded />}
+              onClick={() => switchPage("Home", setPage)}
+              sx={
+                theme === "dark"
+                  ? BodyLogoPageButtonDarkSx
+                  : BodyLogoPageButtonLightSx
+              }
+            >
+              Go Back Home
             </Button>
           </Box>
         </Box>

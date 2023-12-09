@@ -2694,3 +2694,162 @@ export const BodyCommsExButtonLightSx = {
     },
   },
 };
+
+export const BodyLogoPageBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+  },
+};
+
+export const BodyLogoPageTitleTypographyDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "32px",
+    fontWeight: "700",
+    backgroundImage:
+      "linear-gradient(175deg, #ff0010 0%, #ff006a 50%, #ef90ff 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    filter: "drop-shadow(0px 18px 3px #10101090)",
+    marginTop: "8px",
+    marginBottom: "-10px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyLogoPageTitleTypographyLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "32px",
+    fontWeight: "700",
+    backgroundImage:
+      "linear-gradient(175deg, #ff003e 0%, #eb004e 50%, #db206e 100%)",
+    backgroundClip: "text",
+    "-webkit-text-fill-color": "transparent",
+    filter: "drop-shadow(0px 4px 3px #10101050)",
+    marginTop: "8px",
+    marginBottom: "-10px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyLogoPageFooterOuterTypographyDarkSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontWeight: "500",
+    color: "#ff006a",
+    filter: "drop-shadow(0px 4px 3px #101010)",
+    marginTop: "8px",
+    marginBottom: "16px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyLogoPageFooterOuterTypographyLightSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "16px",
+    fontWeight: "500",
+    color: "#e7004a",
+    filter: "drop-shadow(0px 4px 3px #10101040)",
+    marginTop: "8px",
+    marginBottom: "16px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyLogoPageFooterInnerTypographyDarkSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "12px",
+    fontWeight: "400",
+    color: "#ff2af0",
+    filter: "drop-shadow(0px 4px 3px #10101060)",
+    marginTop: "8px",
+    marginBottom: "8px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyLogoPageFooterInnerTypographyLightSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "12px",
+    fontWeight: "400",
+    color: "#db105e",
+    filter: "drop-shadow(0px 4px 3px #10101010)",
+    marginTop: "8px",
+    marginBottom: "8px",
+    pointerEvents: "none",
+    userSelect: "none",
+  },
+};
+
+export const BodyLogoPageButtonBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "12px",
+    marginBottom: "12px",
+  },
+};
+
+export const BodyLogoPageButtonDarkSx = {
+  ...{
+    width: "230px",
+    border: "none",
+    borderRadius: "24px",
+    marginBottom: "8px",
+    backgroundColor: "#ff006a",
+    color: "#fafafafa",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    userSelect: "none",
+    "&:hover": {
+      backgroundColor: "#aa003a",
+      color: "#09040a",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
+
+export const BodyLogoPageButtonLightSx = {
+  ...{
+    width: "230px",
+    border: "none",
+    borderRadius: "24px",
+    marginBottom: "8px",
+    backgroundColor: "#eb004e",
+    color: "#fafafafa",
+    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    userSelect: "none",
+    "&:hover": {
+      backgroundColor: "#ff507a",
+      color: "#19141a",
+      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+  },
+};
