@@ -97,6 +97,7 @@ const TopBanner = () => {
               src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
               className="ZDA-Logo-TopBanner"
               alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
             />
           </div>
         </Box>
@@ -123,6 +124,7 @@ const TopBanner = () => {
               src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
               className="ZDA-Logo-TopBanner"
               alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
             />
           </div>
           <HamburgerMenu open={open} setOpen={setOpen} />
