@@ -261,6 +261,8 @@ import {
   BodyLogoPageButtonBoxSx,
   BodyLogoPageButtonDarkSx,
   BodyLogoPageButtonLightSx,
+  BodyLogoPageHiddenTextBoxSx,
+  BodyLogoPageHiddenTextTypoSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -3037,6 +3039,17 @@ const BodySection = () => {
             >
               Go Back Home
             </Button>
+          </Box>
+          <Box sx={BodyLogoPageHiddenTextBoxSx}>
+            <Typography
+              level="body-xs"
+              sx={BodyLogoPageHiddenTextTypoSx}
+              onClick={() =>
+                alert("Thanks for the support, cool person!\n— ZDA")
+              }
+            >
+              (If you found this page, you're really cool)
+            </Typography>
           </Box>
         </Box>
       )}

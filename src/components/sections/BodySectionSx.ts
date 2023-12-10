@@ -2853,3 +2853,26 @@ export const BodyLogoPageButtonLightSx = {
     },
   },
 };
+
+export const BodyLogoPageHiddenTextBoxSx = {
+  ...{
+    position: "absolute",
+    right: "10px",
+    bottom: "10px",
+  },
+};
+
+export const BodyLogoPageHiddenTextTypoSx = {
+  ...{
+    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontSize: "12.5px",
+    fontStyle: "italic",
+    fontWeight: "300",
+    color: "#eb206e",
+    filter: "drop-shadow(0px 4px 3px #10101010)",
+    marginTop: "8px",
+    marginBottom: "8px",
+    cursor: "pointer",
+    userSelect: "none",
+  },
+};
