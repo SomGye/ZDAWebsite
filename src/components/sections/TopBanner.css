@@ -34,9 +34,10 @@ img.ZDA-Logo-TopBanner {
   margin-right: 20px;
   cursor: pointer;
   user-select: none;
-  &:hover {
-    display: none;
-  }
+  /* More precise but less compatible/more buggy */
+  /* &:hover { */
+    /* display: none; */
+  /* } */
 }
 
 img.ZDA-Logo-TopBanner-Hover {
@@ -48,7 +49,19 @@ img.ZDA-Logo-TopBanner-Hover {
   user-select: none;
 }
 
-img.ZDA-Logo-TopBanner:hover + img {
+/* More precise but less compatible/more buggy */
+/* img.ZDA-Logo-TopBanner:hover + img {
+  display: block;
+} */
+
+/* Less precise but more compatible/less buggy */
+div.Logo-Box:hover img.ZDA-Logo-TopBanner,
+div.Logo-Box:active img.ZDA-Logo-TopBanner {
+  display: none;
+}
+
+div.Logo-Box:hover img.ZDA-Logo-TopBanner-Hover,
+div.Logo-Box:active img.ZDA-Logo-TopBanner-Hover {
   display: block;
 }
 
