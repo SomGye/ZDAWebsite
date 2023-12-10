@@ -29,6 +29,7 @@ import {
   TopBannerIconButtonDarkSx,
   TopBannerIconButtonLightSx,
   TopBannerLogoNamePageBoxSx,
+  TopBannerMobileLogoBoxSx,
   TopBannerNavIconDarkSx,
   TopBannerThemeToggleBoxSx,
 } from "./TopBannerSx";
@@ -37,6 +38,9 @@ import HamburgerMenu from "../HamburgerMenu";
 import "./TopBanner.css";
 import { clickLink, switchPage } from "../../Helpers";
 import { commStatusAtom } from "../../states/CommSlotsAtom";
+import zdaDarkLogo from "/zdalogo_dark.svg";
+import zdaLightLogo from "/zdalogo_light.svg";
+import zdaHoverLogo from "/zdalogo_pfp.svg";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
@@ -87,6 +91,23 @@ const TopBanner = () => {
         className="TopBannerBox"
         sx={theme === "dark" ? TopBannerBoxDarkSx : TopBannerBoxLightSx}
       >
+        {/* ZDA Logo Box - Mobile (centered) */}
+        <Box sx={TopBannerMobileLogoBoxSx}>
+          <div className="Logo-Box-Mobile">
+            <img
+              src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
+              className="ZDA-Logo-TopBanner"
+              alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
+            />
+            <img
+              src={zdaHoverLogo}
+              className="ZDA-Logo-TopBanner-Hover"
+              alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
+            />
+          </div>
+        </Box>
         <Box sx={TopBannerIconBoxSx}>
           <IconButton
             variant="soft"
@@ -104,6 +125,21 @@ const TopBanner = () => {
             {theme === "dark" && <Menu sx={TopBannerNavIconDarkSx} />}
             {theme !== "dark" && <Menu />}
           </IconButton>
+          {/* ZDA Logo Box - Tablet/Laptop/Desktop (left-aligned) */}
+          <div className="Logo-Box">
+            <img
+              src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
+              className="ZDA-Logo-TopBanner"
+              alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
+            />
+            <img
+              src={zdaHoverLogo}
+              className="ZDA-Logo-TopBanner-Hover"
+              alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
+            />
+          </div>
           <HamburgerMenu open={open} setOpen={setOpen} />
         </Box>
         <Box sx={TopBannerLogoNamePageBoxSx}>

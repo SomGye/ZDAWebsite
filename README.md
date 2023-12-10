@@ -35,10 +35,17 @@
 - *Vercel KV NOTE*: Vercel KV is used to populate the Commissions Slots (Active, Waitlist, Status) in the TopInfoSection.
   - A `fetchData` function in `App.tsx` queries the KV data store by using environment variables for the API URL and token, which are stored locally in `.env.development` and `.env.production`. These are NOT committed and will have to be created on your own.
   - When hosting on Vercel, you will also have to populate these environment variables in the Project Settings online as well, or else it will not work in production.
+- *NOTE*: to force *Vite.js* to rebuild and reoptimize its dependencies and run a hard start, use `npm run hardstart`
 ------
 ##### Examples Page
 - To see the Commission Tiers Examples page, which is just for my own convenience, you can do one of the following:
   - Go to the `/examples` route (or https://www.zerodayanubis.com/examples)
   - Run `npm run examples`, instead of the usual `npm start`, when deploying a local instance
   - Scroll down to the footer and click the dotted line section below the Copyright text
+------
+##### Logo Page
+- To see the ZDA Logo page you can do one of the following:
+  - Go to the `/logo` route (or https://www.zerodayanubis.com/logo)
+  - Run `npm run logo`, instead of the usual `npm start`, when deploying a local instance
+  - Click the **Z** logo in the top banner (left for tablet/desktop, center for phone)
 ------
