@@ -43,3 +43,9 @@
   - Run `npm run examples`, instead of the usual `npm start`, when deploying a local instance
   - Scroll down to the footer and click the dotted line section below the Copyright text
 ------
+##### Logo Page
+- To see the ZDA Logo page you can do one of the following:
+  - Go to the `/logo` route (or https://www.zerodayanubis.com/logo)
+  - Run `npm run logo`, instead of the usual `npm start`, when deploying a local instance
+  - Click the **Z** logo in the top banner (left for tablet/desktop, center for phone)
+------
