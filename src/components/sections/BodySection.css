@@ -8,6 +8,16 @@ img.ZDA-Logo-LogoPage {
   height: 400px;
   margin: 64px 64px;
   user-select: none;
+
+  @media (max-width: 580px) {
+    height: 300px;
+    margin: 48px 48px;
+  }
+
+  @media (max-width: 470px) {
+    height: 220px;
+    margin: 32px 32px;
+  }
 }
 
 /* MUI OVERRIDES */

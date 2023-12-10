@@ -2859,6 +2859,9 @@ export const BodyLogoPageHiddenTextBoxSx = {
     position: "absolute",
     right: "10px",
     bottom: "10px",
+    "@media (max-width: 1000px)": {
+      right: "auto",
+    },
   },
 };
 
