@@ -99,12 +99,14 @@ const TopBanner = () => {
               className="ZDA-Logo-TopBanner"
               alt="ZDA"
               onClick={() => switchPage("Logo", setPage)}
+              onTouchEnd={() => switchPage("Logo", setPage)}
             />
             <img
               src={zdaHoverLogo}
               className="ZDA-Logo-TopBanner-Hover"
               alt="ZDA"
               onClick={() => switchPage("Logo", setPage)}
+              onTouchEnd={() => switchPage("Logo", setPage)}
             />
           </div>
         </Box>
@@ -132,12 +134,14 @@ const TopBanner = () => {
               className="ZDA-Logo-TopBanner"
               alt="ZDA"
               onClick={() => switchPage("Logo", setPage)}
+              onTouchEnd={() => switchPage("Logo", setPage)}
             />
             <img
               src={zdaHoverLogo}
               className="ZDA-Logo-TopBanner-Hover"
               alt="ZDA"
               onClick={() => switchPage("Logo", setPage)}
+              onTouchEnd={() => switchPage("Logo", setPage)}
             />
           </div>
           <HamburgerMenu open={open} setOpen={setOpen} />
