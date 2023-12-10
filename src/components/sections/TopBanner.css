@@ -35,6 +35,7 @@ img.ZDA-Logo-TopBanner {
   margin-left: 20px;
   margin-right: 20px;
   cursor: pointer;
+  user-select: none;
 }
 
 div.TopBannerBox.MuiBox-root {

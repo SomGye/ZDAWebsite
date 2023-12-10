@@ -7,6 +7,7 @@ div.Logo-Box-LogoPage {
 img.ZDA-Logo-LogoPage {
   height: 400px;
   margin: 64px 64px;
+  user-select: none;
 }
 
 /* MUI OVERRIDES */
