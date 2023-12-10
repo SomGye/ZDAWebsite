@@ -40,6 +40,7 @@ import { clickLink, switchPage } from "../../Helpers";
 import { commStatusAtom } from "../../states/CommSlotsAtom";
 import zdaDarkLogo from "/zdalogo_dark.svg";
 import zdaLightLogo from "/zdalogo_light.svg";
+import zdaHoverLogo from "/zdalogo_pfp.svg";
 
 const TopBanner = () => {
   const theme = useRecoilValue(themeAtom);
@@ -99,6 +100,12 @@ const TopBanner = () => {
               alt="ZDA"
               onClick={() => switchPage("Logo", setPage)}
             />
+            <img
+              src={zdaHoverLogo}
+              className="ZDA-Logo-TopBanner-Hover"
+              alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
+            />
           </div>
         </Box>
         <Box sx={TopBannerIconBoxSx}>
@@ -123,6 +130,12 @@ const TopBanner = () => {
             <img
               src={theme === "dark" ? zdaDarkLogo : zdaLightLogo}
               className="ZDA-Logo-TopBanner"
+              alt="ZDA"
+              onClick={() => switchPage("Logo", setPage)}
+            />
+            <img
+              src={zdaHoverLogo}
+              className="ZDA-Logo-TopBanner-Hover"
               alt="ZDA"
               onClick={() => switchPage("Logo", setPage)}
             />

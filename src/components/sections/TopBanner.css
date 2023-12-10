@@ -28,14 +28,28 @@ div.Logo-Box-Mobile {
   }
 }
 
-/* TODO: swap the SVG by hiding this and showing the PFP/red SVG on hover */
-/* Link: https://css-tricks.com/swapping-svg-icons/ */
 img.ZDA-Logo-TopBanner {
   height: 20px;
   margin-left: 20px;
   margin-right: 20px;
   cursor: pointer;
   user-select: none;
+  &:hover {
+    display: none;
+  }
+}
+
+img.ZDA-Logo-TopBanner-Hover {
+  display: none;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+img.ZDA-Logo-TopBanner:hover + img {
+  display: block;
 }
 
 div.TopBannerBox.MuiBox-root {
