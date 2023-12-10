@@ -2820,12 +2820,12 @@ export const BodyLogoPageButtonDarkSx = {
     marginBottom: "8px",
     backgroundColor: "#ff006a",
     color: "#fafafafa",
-    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    transition: "background-color 0.6s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#aa003a",
-      color: "#09040a",
-      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+      backgroundColor: "#c955bf",
+      color: "#000000",
+      transition: "background-color 0.6s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
@@ -2841,12 +2841,12 @@ export const BodyLogoPageButtonLightSx = {
     marginBottom: "8px",
     backgroundColor: "#eb004e",
     color: "#fafafafa",
-    transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+    transition: "background-color 0.6s ease-out, color 0.3s ease-out",
     userSelect: "none",
     "&:hover": {
-      backgroundColor: "#ff507a",
-      color: "#19141a",
-      transition: "background-color 0.3s ease-out, color 0.3s ease-out",
+      backgroundColor: "#ff557f",
+      color: "#09040a",
+      transition: "background-color 0.6s ease-out, color 0.3s ease-out",
     },
     "&:focus": {
       outline: "none",
