@@ -269,31 +269,31 @@ import {
 import "./BodySection.css";
 import {
   photos_comm_abstractify,
-  photos_comm_abstractify_ex_srcSet,
-  photos_comm_abstractify_srcSet,
+  photos_comm_abstractify_ex_album,
+  photos_comm_abstractify_album,
   photos_comm_basic,
-  photos_comm_basic_ex_srcSet,
-  photos_comm_basic_srcSet,
+  photos_comm_basic_ex_album,
+  photos_comm_basic_album,
   photos_comm_premium,
-  photos_comm_premium_ex_srcSet,
-  photos_comm_premium_srcSet,
+  photos_comm_premium_ex_album,
+  photos_comm_premium_album,
   photos_comm_standard,
-  photos_comm_standard_ex_srcSet,
-  photos_comm_standard_srcSet,
+  photos_comm_standard_ex_album,
+  photos_comm_standard_album,
   photos_highlights,
-  photos_highlights_srcSet,
+  photos_highlights_album,
   photos_portfolio_early2021_huion,
-  photos_portfolio_early2021_huion_srcSet,
+  photos_portfolio_early2021_huion_album,
   photos_portfolio_early2021_penup,
-  photos_portfolio_early2021_penup_srcSet,
+  photos_portfolio_early2021_penup_album,
   photos_portfolio_early2021_procreate,
-  photos_portfolio_early2021_procreate_srcSet,
+  photos_portfolio_early2021_procreate_album,
   photos_portfolio_late2021,
-  photos_portfolio_late2021_srcSet,
+  photos_portfolio_late2021_album,
   photos_portfolio_late2022,
-  photos_portfolio_late2022_srcSet,
+  photos_portfolio_late2022_album,
   photos_portfolio_late2023,
-  photos_portfolio_late2023_srcSet,
+  photos_portfolio_late2023_album,
   photos_prints_support,
   photos_socmed,
 } from "./BodySectionPhotos";
@@ -365,10 +365,10 @@ const BodySection = () => {
                     sx={BodyHomeHighlightsPhotoColBoxSx}
                   >
                     <img
-                      src={photos_highlights_srcSet[0].src}
+                      src={photos_highlights_album[0].src}
                       loading="lazy"
                       onClick={() =>
-                        setIdx_highlights(photos_highlights_srcSet[0].idx)
+                        setIdx_highlights(photos_highlights_album[0].idx)
                       }
                     />
                   </Box>
@@ -377,10 +377,10 @@ const BodySection = () => {
                     sx={BodyHomeHighlightsPhotoColBoxSx}
                   >
                     <img
-                      src={photos_highlights_srcSet[1].src}
+                      src={photos_highlights_album[1].src}
                       loading="lazy"
                       onClick={() =>
-                        setIdx_highlights(photos_highlights_srcSet[1].idx)
+                        setIdx_highlights(photos_highlights_album[1].idx)
                       }
                     />
                   </Box>
@@ -389,10 +389,10 @@ const BodySection = () => {
                     sx={BodyHomeHighlightsPhotoColBoxSx}
                   >
                     <img
-                      src={photos_highlights_srcSet[2].src}
+                      src={photos_highlights_album[2].src}
                       loading="lazy"
                       onClick={() =>
-                        setIdx_highlights(photos_highlights_srcSet[2].idx)
+                        setIdx_highlights(photos_highlights_album[2].idx)
                       }
                     />
                   </Box>
@@ -401,10 +401,10 @@ const BodySection = () => {
                     sx={BodyHomeHighlightsPhotoColBoxSx}
                   >
                     <img
-                      src={photos_highlights_srcSet[3].src}
+                      src={photos_highlights_album[3].src}
                       loading="lazy"
                       onClick={() =>
-                        setIdx_highlights(photos_highlights_srcSet[3].idx)
+                        setIdx_highlights(photos_highlights_album[3].idx)
                       }
                     />
                   </Box>
@@ -723,7 +723,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_late2023_srcSet}
+                    photos={photos_portfolio_late2023_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 1 }}
@@ -812,7 +812,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_late2022_srcSet}
+                    photos={photos_portfolio_late2022_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
                     rowConstraints={{ maxPhotos: 5, minPhotos: 2 }}
@@ -901,7 +901,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_late2021_srcSet}
+                    photos={photos_portfolio_late2021_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={170}
                     rowConstraints={{ maxPhotos: 6, minPhotos: 2 }}
@@ -1000,7 +1000,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_early2021_procreate_srcSet}
+                    photos={photos_portfolio_early2021_procreate_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={163}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
@@ -1101,7 +1101,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_early2021_huion_srcSet}
+                    photos={photos_portfolio_early2021_huion_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
@@ -1202,7 +1202,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_early2021_penup_srcSet}
+                    photos={photos_portfolio_early2021_penup_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={160}
                     rowConstraints={{ maxPhotos: 8, minPhotos: 3 }}
@@ -1336,7 +1336,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_basic_srcSet}
+                    photos={photos_comm_basic_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
@@ -1551,7 +1551,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_standard_srcSet}
+                    photos={photos_comm_standard_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
@@ -1769,7 +1769,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_abstractify_srcSet}
+                    photos={photos_comm_abstractify_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
@@ -2018,7 +2018,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_premium_srcSet}
+                    photos={photos_comm_premium_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
@@ -2362,7 +2362,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_basic_ex_srcSet}
+                    photos={photos_comm_basic_ex_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2517,7 +2517,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_standard_ex_srcSet}
+                    photos={photos_comm_standard_ex_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2675,7 +2675,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_abstractify_ex_srcSet}
+                    photos={photos_comm_abstractify_ex_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2850,7 +2850,7 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_premium_ex_srcSet}
+                    photos={photos_comm_premium_ex_album}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}

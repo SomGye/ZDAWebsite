@@ -29,7 +29,7 @@ export const photos_highlights = [
   },
 ];
 
-export const photos_highlights_srcSet = [
+export const photos_highlights_album = [
   {
     src: "/assets/highlights_home/album/A_Visual_Violation-1000px.jpg",
     width: 1000,
@@ -171,7 +171,7 @@ export const photos_portfolio_late2023 = [
   },
 ];
 
-export const photos_portfolio_late2023_srcSet = [
+export const photos_portfolio_late2023_album = [
   {
     src: "/assets/portfolio_late2023/album/Frame_of_Revelation-1000px.jpg",
     width: 1000,
@@ -345,7 +345,7 @@ export const photos_portfolio_late2022 = [
   },
 ];
 
-export const photos_portfolio_late2022_srcSet = [
+export const photos_portfolio_late2022_album = [
   {
     src: "/assets/portfolio_late2022/album/An_Era_Burned_Away-1000px.jpg",
     width: 1000,
@@ -519,7 +519,7 @@ export const photos_portfolio_late2021 = [
   },
 ];
 
-export const photos_portfolio_late2021_srcSet = [
+export const photos_portfolio_late2021_album = [
   {
     src: "/assets/portfolio_late2021/album/Power_of_Exclusion-1000px.jpg",
     width: 1000,
@@ -637,7 +637,7 @@ export const photos_portfolio_early2021_procreate = [
   },
 ];
 
-export const photos_portfolio_early2021_procreate_srcSet = [
+export const photos_portfolio_early2021_procreate_album = [
   {
     src: "/assets/portfolio_early2021_procreate/album/First_Doodle_in_Procreate-1000px.jpg",
     width: 1000,
@@ -699,7 +699,7 @@ export const photos_portfolio_early2021_huion = [
   },
 ];
 
-export const photos_portfolio_early2021_huion_srcSet = [
+export const photos_portfolio_early2021_huion_album = [
   {
     src: "/assets/portfolio_early2021_huion/album/HuionSketch_1623481967592-1000px.jpg",
     width: 1000,
@@ -817,7 +817,7 @@ export const photos_portfolio_early2021_penup = [
   },
 ];
 
-export const photos_portfolio_early2021_penup_srcSet = [
+export const photos_portfolio_early2021_penup_album = [
   {
     src: "/assets/portfolio_early2021_penup/album/penup_20210422_053046-1000px.jpg",
     width: 1000,
@@ -949,7 +949,7 @@ export const photos_comm_abstractify = [
   },
 ];
 
-export const photos_comm_abstractify_srcSet = [
+export const photos_comm_abstractify_album = [
   {
     src: "/assets/comm_abstractify/album/Broken-1000px.jpg",
     width: 1000,
@@ -994,7 +994,7 @@ export const photos_comm_abstractify_srcSet = [
   },
 ];
 
-export const photos_comm_abstractify_ex_srcSet = [
+export const photos_comm_abstractify_ex_album = [
   {
     src: "/assets/comm_abstractify/album/The_Ghost_Within-1000px.jpg",
     width: 1000,
@@ -1035,7 +1035,7 @@ export const photos_comm_basic = [
   },
 ];
 
-export const photos_comm_basic_srcSet = [
+export const photos_comm_basic_album = [
   {
     src: "/assets/comm_basic/album/QS1-BL-1000px.jpg",
     width: 1000,
@@ -1066,7 +1066,7 @@ export const photos_comm_basic_srcSet = [
   },
 ];
 
-export const photos_comm_basic_ex_srcSet = [
+export const photos_comm_basic_ex_album = [
   {
     src: "/assets/comm_basic/album/QS1-BL-1000px.jpg",
     width: 1000,
@@ -1121,7 +1121,7 @@ export const photos_comm_premium = [
   },
 ];
 
-export const photos_comm_premium_srcSet = [
+export const photos_comm_premium_album = [
   {
     src: "/assets/comm_premium/album/The_Crux_of_Crisis-1000px.jpg",
     width: 1000,
@@ -1166,7 +1166,7 @@ export const photos_comm_premium_srcSet = [
   },
 ];
 
-export const photos_comm_premium_ex_srcSet = [
+export const photos_comm_premium_ex_album = [
   {
     src: "/assets/comm_premium/album/Frame_of_Revelation-1000px.jpg",
     width: 1000,
@@ -1221,7 +1221,7 @@ export const photos_comm_standard = [
   },
 ];
 
-export const photos_comm_standard_srcSet = [
+export const photos_comm_standard_album = [
   {
     src: "/assets/comm_standard/album/Divinity_Ends-1000px.jpg",
     width: 1000,
@@ -1266,7 +1266,7 @@ export const photos_comm_standard_srcSet = [
   },
 ];
 
-export const photos_comm_standard_ex_srcSet = [
+export const photos_comm_standard_ex_album = [
   {
     src: "/assets/comm_standard/album/Divinity_Ends-cropped-600px.jpg",
     width: 600,
