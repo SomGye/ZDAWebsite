@@ -88,7 +88,7 @@ export const BodyHomeHighlightsCardContentSx = {
 export const BodyHomeHighlightsCardTitleDarkSx = {
   ...{
     backgroundImage:
-      "linear-gradient(90deg, rgba(230,0,200,1) 0%, rgba(255,45,0,1) 5%, rgba(255,70,0,1) 20%, rgba(240,110,10,1) 30%, rgba(235,130,30,1) 60%, rgba(230,0,190,1) 100%)",
+      "linear-gradient(90deg, rgba(230,0,200,1) 0%, rgba(200,90,230,1) 5%, rgba(130,125,255,1) 20%, rgba(0,145,255,1) 30%, rgba(125,195,255,1) 57%, rgba(230,0,190,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -115,7 +115,7 @@ export const BodyHomeHighlightsCardSubtitleDarkSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#f0008aef",
+    color: "rgba(125,195,255,0.8)",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -129,7 +129,7 @@ export const BodyHomeHighlightsCardSubtitleLightSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#2d008b",
+    color: "#250083",
     pointerEvents: "none",
     userSelect: "none",
   },
