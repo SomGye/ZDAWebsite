@@ -155,17 +155,62 @@ export const BodyHomeHighlightsPhotoBoxSx = {
   },
 };
 
+export const BodyHomeHighlightsPhotoRowBoxSx = {
+  ...{
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "0 2px",
+    maxWidth: "75vw",
+    "@media (max-width: 1000px)": {
+      maxWidth: "80vw",
+    },
+    "@media (max-width: 510px)": {
+      maxWidth: "90vw",
+    },
+  },
+};
+
+export const BodyHomeHighlightsPhotoColBoxSx = {
+  ...{
+    flex: "calc(25% - 8px)", // 4 per row on desktop, sub 2x margin
+    maxWidth: "25%",
+    margin: "0 4px",
+    img: {
+      borderRadius: "12px",
+      marginTop: "8px",
+      verticalAlign: "middle",
+      width: "100%",
+      objectFit: "cover",
+      userSelect: "none",
+      transition: "opacity 0.2s ease-out",
+      "&:hover": {
+        cursor: "pointer",
+        opacity: "0.85",
+        transition: "opacity 0.2s ease-out",
+      },
+    },
+    "@media (max-width: 1000px)": {
+      flex: "calc(50% - 8px)",
+      maxWidth: "50%",
+    },
+    "@media (max-width: 510px)": {
+      flex: "calc(100% - 8px)",
+      maxWidth: "100%",
+    },
+  },
+};
+
 export const BodyHomeHighlightsCardOverflowDarkSx = {
   ...{
     borderRadius: "0",
-    marginTop: "-11px", // hack to get button vertically aligned with Divider above it
+    marginTop: "-3px",
   },
 };
 
 export const BodyHomeHighlightsCardOverflowLightSx = {
   ...{
     borderRadius: "0",
-    marginTop: "-11px", // hack to get button vertically aligned with Divider above it
+    marginTop: "-3px",
   },
 };
 
@@ -178,6 +223,7 @@ export const BodyHomeHighlightsCardOverflowBoxSx = {
     alignItems: "center",
     paddingTop: "10px",
     paddingBottom: "10px",
+    marginBottom: "8px",
   },
 };
 

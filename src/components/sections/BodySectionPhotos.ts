@@ -36,6 +36,7 @@ export const photos_highlights_srcSet = [
     height: 1414,
     alt: "A Visual Violation",
     title: "A Visual Violation",
+    idx: 0,
   },
   {
     src: "/assets/highlights_home/album/Kublai_Anubis_02-1000px.jpg",
@@ -43,6 +44,7 @@ export const photos_highlights_srcSet = [
     height: 1414,
     alt: "Kublai Anubis 02",
     title: "Kublai Anubis 02",
+    idx: 1,
   },
   {
     src: "/assets/highlights_home/album/The_Crux_of_Crisis-1000px.jpg",
@@ -50,6 +52,7 @@ export const photos_highlights_srcSet = [
     height: 1414,
     alt: "The Crux of Crisis",
     title: "The Crux of Crisis",
+    idx: 2,
   },
   {
     src: "/assets/highlights_home/album/Wisps_of_Afterlife-1000px.jpg",
@@ -57,6 +60,7 @@ export const photos_highlights_srcSet = [
     height: 1414,
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
+    idx: 3,
   },
 ];
 

@@ -263,6 +263,8 @@ import {
   BodyLogoPageButtonLightSx,
   BodyLogoPageHiddenTextBoxSx,
   BodyLogoPageHiddenTextTypoSx,
+  BodyHomeHighlightsPhotoRowBoxSx,
+  BodyHomeHighlightsPhotoColBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -357,24 +359,55 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyHomeHighlightsCardDividerDarkSx
-                      : BodyHomeHighlightsCardDividerLightSx
-                  }
-                />
-                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_highlights_srcSet}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    targetRowHeight={200}
-                    defaultContainerWidth={1000}
-                    onClick={({ index: current }) => setIdx_highlights(current)}
-                  />
+                <Box className="image-row" sx={BodyHomeHighlightsPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodyHomeHighlightsPhotoColBoxSx}
+                  >
+                    <img
+                      src={photos_highlights_srcSet[0].src}
+                      loading="lazy"
+                      onClick={() =>
+                        setIdx_highlights(photos_highlights_srcSet[0].idx)
+                      }
+                    />
+                  </Box>
+                  <Box
+                    className="image-column"
+                    sx={BodyHomeHighlightsPhotoColBoxSx}
+                  >
+                    <img
+                      src={photos_highlights_srcSet[1].src}
+                      loading="lazy"
+                      onClick={() =>
+                        setIdx_highlights(photos_highlights_srcSet[1].idx)
+                      }
+                    />
+                  </Box>
+                  <Box
+                    className="image-column"
+                    sx={BodyHomeHighlightsPhotoColBoxSx}
+                  >
+                    <img
+                      src={photos_highlights_srcSet[2].src}
+                      loading="lazy"
+                      onClick={() =>
+                        setIdx_highlights(photos_highlights_srcSet[2].idx)
+                      }
+                    />
+                  </Box>
+                  <Box
+                    className="image-column"
+                    sx={BodyHomeHighlightsPhotoColBoxSx}
+                  >
+                    <img
+                      src={photos_highlights_srcSet[3].src}
+                      loading="lazy"
+                      onClick={() =>
+                        setIdx_highlights(photos_highlights_srcSet[3].idx)
+                      }
+                    />
+                  </Box>
                   <Lightbox
                     plugins={[Captions]}
                     captions={{
@@ -422,15 +455,6 @@ const BodySection = () => {
                     close={() => setIdx_highlights(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyHomeHighlightsCardDividerDarkSx
-                      : BodyHomeHighlightsCardDividerLightSx
-                  }
-                />
               </CardContent>
               <CardOverflow
                 sx={
