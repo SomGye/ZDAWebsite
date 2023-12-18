@@ -135,18 +135,6 @@ export const BodyHomeHighlightsCardSubtitleLightSx = {
   },
 };
 
-export const BodyHomeHighlightsCardDividerDarkSx = {
-  ...{
-    "--Divider-lineColor": "rgba(61,39,115,0.5)",
-  },
-};
-
-export const BodyHomeHighlightsCardDividerLightSx = {
-  ...{
-    "--Divider-lineColor": "rgba(229,209,245,0.15)",
-  },
-};
-
 export const BodyHomeHighlightsPhotoBoxSx = {
   ...{
     minWidth: "1px",
@@ -410,12 +398,38 @@ export const BodyHomeSocmedCardButtonLightSx = {
   },
 };
 
-export const BodyHomeSocmedPhotoBoxSx = {
+export const BodySocmedSupportPhotoRowBoxSx = {
   ...{
-    minWidth: "1px",
-    minHeight: "1px",
-    maxWidth: "360px",
-    height: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "0 2px",
+    maxWidth: "75vw",
+    "@media (max-width: 1000px)": {
+      maxWidth: "80vw",
+    },
+    "@media (max-width: 510px)": {
+      maxWidth: "90vw",
+    },
+  },
+};
+
+export const BodySocmedSupportPhotoColBoxSx = {
+  ...{
+    maxWidth: "250px",
+    margin: "0 2px",
+    img: {
+      borderRadius: "20px",
+      marginTop: "8px",
+      verticalAlign: "middle",
+      width: "100%",
+      objectFit: "cover",
+      userSelect: "none",
+      transition: "opacity 0.2s ease-out",
+      "&:hover": {
+        opacity: "0.85",
+        transition: "opacity 0.2s ease-out",
+      },
+    },
   },
 };
 

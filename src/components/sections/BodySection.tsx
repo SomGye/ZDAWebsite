@@ -39,8 +39,6 @@ import {
   BodyHomeHighlightsCardBtnLightSx,
   BodyHomeHighlightsCardContentSx,
   BodyHomeHighlightsCardDarkSx,
-  BodyHomeHighlightsCardDividerDarkSx,
-  BodyHomeHighlightsCardDividerLightSx,
   BodyHomeHighlightsCardLightSx,
   BodyHomeHighlightsCardOverflowDarkSx,
   BodyHomeHighlightsCardOverflowLightSx,
@@ -57,7 +55,6 @@ import {
   BodyHomeSocmedCardOuterBoxSx,
   BodyHomeSocmedCardTitleDarkSx,
   BodyHomeSocmedCardTitleLightSx,
-  BodyHomeSocmedPhotoBoxSx,
   BodyHomeSupportCardButtonBoxSx,
   BodyHomeSupportCardButtonDarkSx,
   BodyHomeSupportCardButtonLightSx,
@@ -265,6 +262,8 @@ import {
   BodyLogoPageHiddenTextTypoSx,
   BodyHomeHighlightsPhotoRowBoxSx,
   BodyHomeHighlightsPhotoColBoxSx,
+  BodySocmedSupportPhotoRowBoxSx,
+  BodySocmedSupportPhotoColBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -563,17 +562,13 @@ const BodySection = () => {
                     Mastodon
                   </Button>
                 </Box>
-                <Box sx={BodyHomeSocmedPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_socmed}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    columns={1}
-                    spacing={1}
-                    padding={1}
-                    targetRowHeight={400}
-                    defaultContainerWidth={600}
-                  />
+                <Box className="image-row" sx={BodySocmedSupportPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodySocmedSupportPhotoColBoxSx}
+                  >
+                    <img src={photos_socmed[0].src} loading="lazy" />
+                  </Box>
                 </Box>
               </Box>
             </Card>
@@ -673,16 +668,13 @@ const BodySection = () => {
                     />
                   </Typography>
                 </Box>
-                <Box sx={BodyHomeSocmedPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_prints_support}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    columns={1}
-                    spacing={1}
-                    padding={1}
-                    defaultContainerWidth={600}
-                  />
+                <Box className="image-row" sx={BodySocmedSupportPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodySocmedSupportPhotoColBoxSx}
+                  >
+                    <img src={photos_prints_support[0].src} loading="lazy" />
+                  </Box>
                 </Box>
               </Box>
             </Card>
@@ -2320,16 +2312,13 @@ const BodySection = () => {
                     />
                   </Typography>
                 </Box>
-                <Box sx={BodyHomeSocmedPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_prints_support}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    columns={1}
-                    spacing={1}
-                    padding={1}
-                    defaultContainerWidth={600}
-                  />
+                <Box className="image-row" sx={BodySocmedSupportPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodySocmedSupportPhotoColBoxSx}
+                  >
+                    <img src={photos_prints_support[0].src} loading="lazy" />
+                  </Box>
                 </Box>
               </Box>
             </Card>
