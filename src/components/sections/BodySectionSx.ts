@@ -149,6 +149,7 @@ export const BodyHomeHighlightsPhotoRowBoxSx = {
     flexWrap: "wrap",
     padding: "0 2px",
     maxWidth: "75vw",
+    marginRight: "3px", // counter the 3px border on imgs
     "@media (max-width: 1000px)": {
       maxWidth: "80vw",
     },
@@ -169,12 +170,14 @@ export const BodyHomeHighlightsPhotoColBoxSx = {
       verticalAlign: "middle",
       width: "100%",
       objectFit: "cover",
+      border: "3px solid transparent",
       userSelect: "none",
-      transition: "opacity 0.2s ease-out",
+      transition: "opacity 0.2s ease-out, border 0.2s ease-out",
       "&:hover": {
+        border: "3px solid #666",
         cursor: "pointer",
         opacity: "0.85",
-        transition: "opacity 0.2s ease-out",
+        transition: "opacity 0.2s ease-out, border 0.2s ease-out",
       },
     },
     "@media (max-width: 1000px)": {
