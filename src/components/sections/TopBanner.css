@@ -65,6 +65,16 @@ div.Logo-Box:active img.ZDA-Logo-TopBanner-Hover {
   display: block;
 }
 
+div.Logo-Box-Mobile:hover img.ZDA-Logo-TopBanner,
+div.Logo-Box-Mobile:active img.ZDA-Logo-TopBanner {
+  display: none;
+}
+
+div.Logo-Box-Mobile:hover img.ZDA-Logo-TopBanner-Hover,
+div.Logo-Box-Mobile:active img.ZDA-Logo-TopBanner-Hover {
+  display: block;
+}
+
 div.TopBannerBox.MuiBox-root {
   padding-right: 0 !important;
   width: 98% !important;
