@@ -424,11 +424,6 @@ export const BodySocmedSupportPhotoColBoxSx = {
       width: "100%",
       objectFit: "cover",
       userSelect: "none",
-      transition: "opacity 0.2s ease-out",
-      "&:hover": {
-        opacity: "0.85",
-        transition: "opacity 0.2s ease-out",
-      },
     },
   },
 };
