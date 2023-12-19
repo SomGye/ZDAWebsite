@@ -742,7 +742,7 @@ export const BodyPortfolioCardSubtitleDarkSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     color: "rgba(244,76,241,0.95)",
-    marginBottom: "20px",
+    // marginBottom: "20px", // TODO: remove comment?
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -756,9 +756,155 @@ export const BodyPortfolioCardSubtitleLightSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     color: "rgba(186,5,69,1)",
-    marginBottom: "20px",
+    // marginBottom: "20px", // TODO: remove comment?
     pointerEvents: "none",
     userSelect: "none",
+  },
+};
+
+export const BodyPortfolioLate2023PhotoOuterBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    marginRight: "3px", // counter the 3px border on imgs
+  },
+};
+
+export const BodyPortfolioLate2023PhotoRow1BoxSx = {
+  ...{
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "0 2px",
+    width: "100%",
+    img: {
+      borderRadius: "12px",
+      marginTop: "8px",
+      verticalAlign: "middle",
+      width: "100%",
+      height: "33vw",
+      objectFit: "cover",
+      objectPosition: "center",
+      border: "3px solid transparent",
+      userSelect: "none",
+      transition: "opacity 0.2s ease-out, border 0.2s ease-out",
+      "&:hover": {
+        border: "3px solid #666",
+        cursor: "pointer",
+        opacity: "0.85",
+        transition: "opacity 0.2s ease-out, border 0.2s ease-out",
+      },
+      "@media(max-width: 1000px)": {
+        height: "41vw",
+      },
+      "@media(max-width: 700px)": {
+        height: "45vw",
+      },
+      "@media(max-width: 580px)": {
+        height: "55vw",
+      },
+      "@media(max-width: 430px)": {
+        height: "100%",
+      },
+    },
+  },
+};
+
+export const BodyPortfolioLate2023PhotoRow2BoxSx = {
+  ...{
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "0 2px",
+    width: "100%",
+    img: {
+      borderRadius: "12px",
+      marginTop: "8px",
+      verticalAlign: "middle",
+      width: "100%",
+      height: "31vw",
+      objectFit: "cover",
+      objectPosition: "center",
+      border: "3px solid transparent",
+      userSelect: "none",
+      transition: "opacity 0.2s ease-out, border 0.2s ease-out",
+      "&:hover": {
+        border: "3px solid #666",
+        cursor: "pointer",
+        opacity: "0.85",
+        transition: "opacity 0.2s ease-out, border 0.2s ease-out",
+      },
+      "@media(max-width: 1000px)": {
+        height: "33vw",
+      },
+      "@media(max-width: 700px)": {
+        height: "32vw",
+      },
+      "@media(max-width: 580px)": {
+        height: "53vw",
+      },
+      "@media(max-width: 430px)": {
+        height: "100%",
+      },
+    },
+  },
+};
+
+export const BodyPortfolioLate2023PhotoRow3BoxSx = {
+  ...{
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "0 2px",
+    width: "100%",
+    img: {
+      borderRadius: "12px",
+      marginTop: "8px",
+      verticalAlign: "middle",
+      width: "100%",
+      height: "12vw",
+      objectFit: "cover",
+      objectPosition: "center",
+      border: "3px solid transparent",
+      userSelect: "none",
+      transition: "opacity 0.2s ease-out, border 0.2s ease-out",
+      "&:hover": {
+        border: "3px solid #666",
+        cursor: "pointer",
+        opacity: "0.85",
+        transition: "opacity 0.2s ease-out, border 0.2s ease-out",
+      },
+      "@media(max-width: 1000px)": {
+        height: "22vw",
+      },
+      "@media(max-width: 700px)": {
+        height: "24vw",
+      },
+      "@media(max-width: 580px)": {
+        height: "26vw",
+      },
+      "@media(max-width: 430px)": {
+        height: "100%",
+      },
+    },
+  },
+};
+
+export const BodyPortfolioLate2023PhotoColBoxSx = {
+  ...{
+    flex: "calc(25% - 8px)", // 4 per row on desktop, sub 2x margin
+    maxWidth: "25%",
+    margin: "0 4px",
+    "@media (max-width: 1000px)": {
+      flex: "calc(50% - 8px)",
+      maxWidth: "50%",
+    },
+    "@media (max-width: 430px)": {
+      flex: "calc(100% - 8px)",
+      maxWidth: "100%",
+      margin: "8px 0",
+    },
   },
 };
 

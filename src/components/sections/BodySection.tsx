@@ -264,6 +264,11 @@ import {
   BodyHomeHighlightsPhotoColBoxSx,
   BodySocmedSupportPhotoRowBoxSx,
   BodySocmedSupportPhotoColBoxSx,
+  BodyPortfolioLate2023PhotoColBoxSx,
+  BodyPortfolioLate2023PhotoRow1BoxSx,
+  BodyPortfolioLate2023PhotoRow2BoxSx,
+  BodyPortfolioLate2023PhotoRow3BoxSx,
+  BodyPortfolioLate2023PhotoOuterBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -712,16 +717,196 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_portfolio_late2023_album}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    targetRowHeight={220}
-                    rowConstraints={{ maxPhotos: 4, minPhotos: 1 }}
-                    defaultContainerWidth={1000}
-                    onClick={({ index: current }) => setIdx_late2023(current)}
-                  />
+                {/* 3 ROWS of 4 COLS */}
+                <Box sx={BodyPortfolioLate2023PhotoOuterBoxSx}>
+                  <Box
+                    className="image-row"
+                    sx={BodyPortfolioLate2023PhotoRow1BoxSx}
+                  >
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        className="square"
+                        src={photos_portfolio_late2023_album[0].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[0].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        className="portrait"
+                        src={photos_portfolio_late2023_album[1].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[1].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        className="portrait"
+                        src={photos_portfolio_late2023_album[2].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[2].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        className="portrait"
+                        src={photos_portfolio_late2023_album[3].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[3].idx
+                          )
+                        }
+                      />
+                    </Box>
+                  </Box>
+                  <Box
+                    className="image-row"
+                    sx={BodyPortfolioLate2023PhotoRow2BoxSx}
+                  >
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[4].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[4].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[5].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[5].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[6].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[6].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[7].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[7].idx
+                          )
+                        }
+                      />
+                    </Box>
+                  </Box>
+                  <Box
+                    className="image-row"
+                    sx={BodyPortfolioLate2023PhotoRow3BoxSx}
+                  >
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[8].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[8].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[9].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[9].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        className="landscape"
+                        src={photos_portfolio_late2023_album[10].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[10].idx
+                          )
+                        }
+                      />
+                    </Box>
+                    <Box
+                      className="image-column"
+                      sx={BodyPortfolioLate2023PhotoColBoxSx}
+                    >
+                      <img
+                        src={photos_portfolio_late2023_album[11].src}
+                        loading="lazy"
+                        onClick={() =>
+                          setIdx_late2023(
+                            photos_portfolio_late2023_album[11].idx
+                          )
+                        }
+                      />
+                    </Box>
+                  </Box>
                   <Lightbox
                     plugins={[Captions]}
                     captions={{
