@@ -36,7 +36,6 @@ export const photos_highlights_album = [
     height: 1414,
     alt: "A Visual Violation",
     title: "A Visual Violation",
-    idx: 0,
   },
   {
     src: "/assets/highlights_home/album/Kublai_Anubis_02-1000px.jpg",
@@ -44,7 +43,6 @@ export const photos_highlights_album = [
     height: 1414,
     alt: "Kublai Anubis 02",
     title: "Kublai Anubis 02",
-    idx: 1,
   },
   {
     src: "/assets/highlights_home/album/The_Crux_of_Crisis-1000px.jpg",
@@ -52,7 +50,6 @@ export const photos_highlights_album = [
     height: 1414,
     alt: "The Crux of Crisis",
     title: "The Crux of Crisis",
-    idx: 2,
   },
   {
     src: "/assets/highlights_home/album/Wisps_of_Afterlife-1000px.jpg",
@@ -60,7 +57,6 @@ export const photos_highlights_album = [
     height: 1414,
     alt: "Wisps of Afterlife",
     title: "Wisps of Afterlife",
-    idx: 3,
   },
 ];
 
@@ -135,11 +131,11 @@ export const photos_portfolio_late2023 = [
     title: "Converging Spheres",
   },
   {
-    src: "/assets/portfolio_late2023/lightbox/The_Ephemeral_Eclipse-lb.jpg",
+    src: "/assets/portfolio_late2023/lightbox/Regents-lb.jpg",
     width: 2000,
     height: 2000,
-    alt: "The Ephemeral Eclipse",
-    title: "The Ephemeral Eclipse",
+    alt: "Regents",
+    title: "Regents",
   },
   {
     src: "/assets/portfolio_late2023/lightbox/Haunted_Tendrils-lb.jpg",
@@ -178,7 +174,6 @@ export const photos_portfolio_late2023_album = [
     height: 1000,
     alt: "Hunters",
     title: "Hunters",
-    idx: 0,
   },
   {
     src: "/assets/portfolio_late2023/album/Frame_of_Revelation-1000px.jpg",
@@ -186,7 +181,6 @@ export const photos_portfolio_late2023_album = [
     height: 1414,
     alt: "Frame of Revelation",
     title: "Frame of Revelation",
-    idx: 1,
   },
   {
     src: "/assets/portfolio_late2023/album/A_Reflection_of_Self-1000px.jpg",
@@ -194,7 +188,6 @@ export const photos_portfolio_late2023_album = [
     height: 1414,
     alt: "A Reflection of Self",
     title: "A Reflection of Self",
-    idx: 2,
   },
   {
     src: "/assets/portfolio_late2023/album/Mark_of_Manifestation-1000px.jpg",
@@ -202,7 +195,6 @@ export const photos_portfolio_late2023_album = [
     height: 1414,
     alt: "Mark of Manifestation",
     title: "Mark of Manifestation",
-    idx: 3,
   },
   {
     src: "/assets/portfolio_late2023/album/A_System_of_Structure-1000px.jpg",
@@ -210,7 +202,6 @@ export const photos_portfolio_late2023_album = [
     height: 1414,
     alt: "A System of Structure",
     title: "A System of Structure",
-    idx: 4,
   },
   {
     src: "/assets/portfolio_late2023/album/The_Toxic_Descent-1000px.jpg",
@@ -218,7 +209,6 @@ export const photos_portfolio_late2023_album = [
     height: 1000,
     alt: "The Toxic Descent",
     title: "The Toxic Descent",
-    idx: 5,
   },
   {
     src: "/assets/portfolio_late2023/album/Converging_Spheres-1000px.jpg",
@@ -226,15 +216,13 @@ export const photos_portfolio_late2023_album = [
     height: 695,
     alt: "Converging Spheres",
     title: "Converging Spheres",
-    idx: 6,
   },
   {
-    src: "/assets/portfolio_late2023/album/The_Ephemeral_Eclipse-1000px.jpg",
+    src: "/assets/portfolio_late2023/album/Regents-1000px.jpg",
     width: 1000,
     height: 1000,
-    alt: "The Ephemeral Eclipse",
-    title: "The Ephemeral Eclipse",
-    idx: 7,
+    alt: "Regents",
+    title: "Regents",
   },
   {
     src: "/assets/portfolio_late2023/album/Haunted_Tendrils-1000px.jpg",
@@ -242,7 +230,6 @@ export const photos_portfolio_late2023_album = [
     height: 1414,
     alt: "Haunted Tendrils",
     title: "Haunted Tendrils",
-    idx: 8,
   },
   {
     src: "/assets/portfolio_late2023/album/Zygotes_Severed-1000px.jpg",
@@ -250,7 +237,6 @@ export const photos_portfolio_late2023_album = [
     height: 2167,
     alt: "Zygotes Severed",
     title: "Zygotes Severed",
-    idx: 9,
   },
   {
     src: "/assets/portfolio_late2023/album/Self_Destruct_Sequence-1000px.jpg",
@@ -258,7 +244,6 @@ export const photos_portfolio_late2023_album = [
     height: 418,
     alt: "Self Destruct Sequence",
     title: "Self Destruct Sequence",
-    idx: 10,
   },
   {
     src: "/assets/portfolio_late2023/album/The_Temple_of_Loss-1000px.jpg",
@@ -266,7 +251,6 @@ export const photos_portfolio_late2023_album = [
     height: 1000,
     alt: "The Temple of Loss",
     title: "The Temple of Loss",
-    idx: 11,
   },
 ];
 
