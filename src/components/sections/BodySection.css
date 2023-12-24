@@ -20,26 +20,124 @@ img.ZDA-Logo-LogoPage {
   }
 }
 
-/* MUI OVERRIDES */
+/* MUI Overrides */
 div.MuiContainer-root.BodyContainer {
   max-width: none;
   padding: 0;
 }
 
-/* IMAGE/ALBUM/LIGHTBOX OVERRIDES */
-img.react-photo-album--photo {
-  /* NOTE: Affects all React Photo Album imgs! */
-  border-radius: 24px;
-  max-height: 520px;
-  transition: opacity 0.2s ease-out;
-  object-fit: cover; /* force correct aspect ratio but cropped in */
+/* React-Photo-Album Overrides */
+img.react-photo-album--photo.dark {
+  border: 3px solid transparent;
+  border-radius: 12px;
+  filter: drop-shadow(0px 2px 4px #140f1590);
+  transition: opacity 0.2s ease-out, border 0.3s ease-out, filter 0.4s ease-out;
+  object-fit: cover;
   user-select: none;
   &:hover {
+    border: 3px solid #99949a;
+    filter: drop-shadow(0px 2px 5px #0a050b);
     opacity: 0.85;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out, border 0.3s ease-out,
+      filter 0.4s ease-out;
+  }
+  margin-bottom: -8px; /* compensate for `spacing` and row gap */
+}
+
+img.react-photo-album--photo.light {
+  border: 3px solid transparent;
+  border-radius: 12px;
+  filter: drop-shadow(0px 2px 4px #19141a5a);
+  transition: opacity 0.2s ease-out, border 0.3s ease-out, filter 0.4s ease-out;
+  object-fit: cover;
+  user-select: none;
+  &:hover {
+    border: 3px solid #f0f0f0;
+    filter: drop-shadow(0px 2px 5px #19141af0);
+    opacity: 0.85;
+    transition: opacity 0.2s ease-out, border 0.3s ease-out,
+      filter 0.4s ease-out;
+  }
+  margin-bottom: -8px; /* compensate for `spacing` and row gap */
+}
+
+img.react-photo-album--photo.dark-highlights {
+  max-height: 500px;
+  max-width: 400px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  filter: drop-shadow(0px 2px 4px #140f1590);
+  transition: opacity 0.2s ease-out, border 0.3s ease-out, filter 0.4s ease-out;
+  object-fit: cover;
+  user-select: none;
+  &:hover {
+    border: 3px solid #99949a;
+    filter: drop-shadow(0px 2px 5px #0a050b);
+    opacity: 0.85;
+    transition: opacity 0.2s ease-out, border 0.3s ease-out,
+      filter 0.4s ease-out;
+  }
+  margin-bottom: -8px; /* compensate for `spacing` and row gap */
+}
+
+img.react-photo-album--photo.light-highlights {
+  max-height: 500px;
+  max-width: 400px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  filter: drop-shadow(0px 2px 4px #19141a5a);
+  transition: opacity 0.2s ease-out, border 0.3s ease-out, filter 0.4s ease-out;
+  object-fit: cover;
+  user-select: none;
+  &:hover {
+    border: 3px solid #f0f0f0;
+    filter: drop-shadow(0px 2px 5px #19141af0);
+    opacity: 0.85;
+    transition: opacity 0.2s ease-out, border 0.3s ease-out,
+      filter 0.4s ease-out;
+  }
+  margin-bottom: -8px; /* compensate for `spacing` and row gap */
+}
+
+img.react-photo-album--photo.dark-noclick {
+  max-height: 520px;
+  border-radius: 12px;
+  filter: drop-shadow(0px 2px 4px #140f15);
+  transition: opacity 0.2s ease-out, border 0.3s ease-out, filter 0.4s ease-out;
+  object-fit: cover;
+  user-select: none;
+  cursor: default;
+  &:hover {
+    filter: drop-shadow(0px 2px 5px #0a050b);
+    opacity: 0.85;
+    transition: opacity 0.2s ease-out, border 0.3s ease-out,
+      filter 0.4s ease-out;
   }
 }
 
+img.react-photo-album--photo.light-noclick {
+  max-height: 520px;
+  border-radius: 12px;
+  filter: drop-shadow(0px 2px 4px #19141a5a);
+  transition: opacity 0.2s ease-out, border 0.3s ease-out, filter 0.4s ease-out;
+  object-fit: cover;
+  user-select: none;
+  cursor: default;
+  &:hover {
+    filter: drop-shadow(0px 2px 5px #19141af0);
+    opacity: 0.85;
+    transition: opacity 0.2s ease-out, border 0.3s ease-out,
+      filter 0.4s ease-out;
+  }
+}
+
+div.react-photo-album--row {
+  @media (max-width: 400px) {
+    margin-right: 6px; /* 50% of PhotoAlbum `spacing` value */
+  }
+}
+
+/* Lightbox Overrides */
 img.yarl__slide_image {
   max-height: 93vh !important;
 }

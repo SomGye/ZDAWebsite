@@ -260,15 +260,8 @@ import {
   BodyLogoPageButtonLightSx,
   BodyLogoPageHiddenTextBoxSx,
   BodyLogoPageHiddenTextTypoSx,
-  BodyHomeHighlightsPhotoRowBoxSx,
-  BodyHomeHighlightsPhotoColBoxSx,
   BodySocmedSupportPhotoRowBoxSx,
   BodySocmedSupportPhotoColBoxSx,
-  BodyPortfolioLate2023PhotoColBoxSx,
-  BodyPortfolioLate2023PhotoRow1BoxSx,
-  BodyPortfolioLate2023PhotoRow2BoxSx,
-  BodyPortfolioLate2023PhotoRow3BoxSx,
-  BodyPortfolioLate2023PhotoOuterBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
@@ -363,55 +356,28 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Box className="image-row" sx={BodyHomeHighlightsPhotoRowBoxSx}>
-                  <Box
-                    className="image-column"
-                    sx={BodyHomeHighlightsPhotoColBoxSx}
-                  >
-                    <img
-                      src={photos_highlights_album[0].src}
-                      loading="lazy"
-                      onClick={() =>
-                        setIdx_highlights(photos_highlights_album[0].idx)
-                      }
-                    />
-                  </Box>
-                  <Box
-                    className="image-column"
-                    sx={BodyHomeHighlightsPhotoColBoxSx}
-                  >
-                    <img
-                      src={photos_highlights_album[1].src}
-                      loading="lazy"
-                      onClick={() =>
-                        setIdx_highlights(photos_highlights_album[1].idx)
-                      }
-                    />
-                  </Box>
-                  <Box
-                    className="image-column"
-                    sx={BodyHomeHighlightsPhotoColBoxSx}
-                  >
-                    <img
-                      src={photos_highlights_album[2].src}
-                      loading="lazy"
-                      onClick={() =>
-                        setIdx_highlights(photos_highlights_album[2].idx)
-                      }
-                    />
-                  </Box>
-                  <Box
-                    className="image-column"
-                    sx={BodyHomeHighlightsPhotoColBoxSx}
-                  >
-                    <img
-                      src={photos_highlights_album[3].src}
-                      loading="lazy"
-                      onClick={() =>
-                        setIdx_highlights(photos_highlights_album[3].idx)
-                      }
-                    />
-                  </Box>
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_highlights_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-highlights"
+                            : "react-photo-album--photo light-highlights"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={200}
+                    defaultContainerWidth={1000}
+                    spacing={12}
+                    onClick={({ index: current }) => setIdx_highlights(current)}
+                  />
                   <Lightbox
                     plugins={[Captions]}
                     captions={{
@@ -482,6 +448,8 @@ const BodySection = () => {
               </CardOverflow>
             </Card>
           </Box>
+          {/* TODO: make socmed and support on same side align */}
+          {/* TODO: add spacing to socmed to make it even width with support */}
           <Box sx={BodyHomeSocmedCardBoxSx}>
             <Card
               variant="outlined"
@@ -717,196 +685,29 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                {/* 3 ROWS of 4 COLS */}
-                <Box sx={BodyPortfolioLate2023PhotoOuterBoxSx}>
-                  <Box
-                    className="image-row"
-                    sx={BodyPortfolioLate2023PhotoRow1BoxSx}
-                  >
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
+                <Box sx={BodyHomeHighlightsPhotoBoxSx}>
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={photos_portfolio_late2023_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
                       <img
-                        className="square"
-                        src={photos_portfolio_late2023_album[0].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[0].idx
-                          )
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
                         }
+                        {...restImageProps}
                       />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        className="portrait"
-                        src={photos_portfolio_late2023_album[1].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[1].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        className="portrait"
-                        src={photos_portfolio_late2023_album[2].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[2].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        className="portrait"
-                        src={photos_portfolio_late2023_album[3].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[3].idx
-                          )
-                        }
-                      />
-                    </Box>
-                  </Box>
-                  <Box
-                    className="image-row"
-                    sx={BodyPortfolioLate2023PhotoRow2BoxSx}
-                  >
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[4].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[4].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[5].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[5].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[6].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[6].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[7].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[7].idx
-                          )
-                        }
-                      />
-                    </Box>
-                  </Box>
-                  <Box
-                    className="image-row"
-                    sx={BodyPortfolioLate2023PhotoRow3BoxSx}
-                  >
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[8].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[8].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[9].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[9].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        className="landscape"
-                        src={photos_portfolio_late2023_album[10].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[10].idx
-                          )
-                        }
-                      />
-                    </Box>
-                    <Box
-                      className="image-column"
-                      sx={BodyPortfolioLate2023PhotoColBoxSx}
-                    >
-                      <img
-                        src={photos_portfolio_late2023_album[11].src}
-                        loading="lazy"
-                        onClick={() =>
-                          setIdx_late2023(
-                            photos_portfolio_late2023_album[11].idx
-                          )
-                        }
-                      />
-                    </Box>
-                  </Box>
+                    )}
+                    breakpoints={[320, 600, 1200, 1824]}
+                    targetRowHeight={220}
+                    rowConstraints={{ maxPhotos: 4, minPhotos: 1 }}
+                    defaultContainerWidth={1000}
+                    spacing={12}
+                    onClick={({ index: current }) => setIdx_late2023(current)}
+                  />
                   <Lightbox
                     plugins={[Captions]}
                     captions={{
@@ -990,10 +791,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_late2022_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
                     rowConstraints={{ maxPhotos: 5, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_late2022(current)}
                   />
                   <Lightbox
@@ -1079,10 +893,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_late2021_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={170}
                     rowConstraints={{ maxPhotos: 6, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_late2021(current)}
                   />
                   <Lightbox
@@ -1178,10 +1005,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_early2021_procreate_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={163}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_early2021_pc(current)
                     }
@@ -1279,10 +1119,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_early2021_huion_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_early2021_h(current)
                     }
@@ -1380,10 +1233,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_portfolio_early2021_penup_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={160}
                     rowConstraints={{ maxPhotos: 8, minPhotos: 3 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_early2021_p(current)
                     }
@@ -1514,10 +1380,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_basic_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_basic(current)}
                   />
                   <Lightbox
@@ -1729,10 +1608,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_standard_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_standard(current)}
                   />
                   <Lightbox
@@ -1947,10 +1839,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_abstractify_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_abstractify(current)
                     }
@@ -2196,10 +2101,23 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_premium_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_premium(current)}
                   />
                   <Lightbox
@@ -2537,6 +2455,18 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_basic_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2692,6 +2622,18 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_standard_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2850,6 +2792,18 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_abstractify_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -3025,6 +2979,18 @@ const BodySection = () => {
                   <PhotoAlbum
                     layout="rows"
                     photos={photos_comm_premium_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
