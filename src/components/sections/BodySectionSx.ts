@@ -167,6 +167,7 @@ export const BodyHomeHighlightsCardOverflowBoxSx = {
     paddingTop: "10px",
     paddingBottom: "10px",
     marginBottom: "8px",
+    marginTop: "6px",
   },
 };
 
