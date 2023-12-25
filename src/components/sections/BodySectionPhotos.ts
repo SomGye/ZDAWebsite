@@ -82,11 +82,11 @@ export const photos_prints_support = [
 
 export const photos_portfolio_late2023 = [
   {
-    src: "/assets/portfolio_late2023/lightbox/Hunters-lb.jpg",
-    width: 2000,
-    height: 2000,
-    alt: "Hunters",
-    title: "Hunters",
+    src: "/assets/portfolio_late2023/lightbox/A_System_of_Structure-lb.jpg",
+    width: 3000,
+    height: 4243,
+    alt: "A System of Structure",
+    title: "A System of Structure",
   },
   {
     src: "/assets/portfolio_late2023/lightbox/Frame_of_Revelation-lb.jpg",
@@ -110,11 +110,11 @@ export const photos_portfolio_late2023 = [
     title: "Mark of Manifestation",
   },
   {
-    src: "/assets/portfolio_late2023/lightbox/A_System_of_Structure-lb.jpg",
-    width: 3000,
-    height: 4243,
-    alt: "A System of Structure",
-    title: "A System of Structure",
+    src: "/assets/portfolio_late2023/lightbox/Hunters-lb.jpg",
+    width: 2000,
+    height: 2000,
+    alt: "Hunters",
+    title: "Hunters",
   },
   {
     src: "/assets/portfolio_late2023/lightbox/The_Toxic_Descent-lb.jpg",
@@ -169,11 +169,11 @@ export const photos_portfolio_late2023 = [
 
 export const photos_portfolio_late2023_album = [
   {
-    src: "/assets/portfolio_late2023/album/Hunters-1000px.jpg",
+    src: "/assets/portfolio_late2023/album/A_System_of_Structure-1000px.jpg",
     width: 1000,
-    height: 1000,
-    alt: "Hunters",
-    title: "Hunters",
+    height: 1414,
+    alt: "A System of Structure",
+    title: "A System of Structure",
   },
   {
     src: "/assets/portfolio_late2023/album/Frame_of_Revelation-1000px.jpg",
@@ -197,11 +197,11 @@ export const photos_portfolio_late2023_album = [
     title: "Mark of Manifestation",
   },
   {
-    src: "/assets/portfolio_late2023/album/A_System_of_Structure-1000px.jpg",
+    src: "/assets/portfolio_late2023/album/Hunters-1000px.jpg",
     width: 1000,
-    height: 1414,
-    alt: "A System of Structure",
-    title: "A System of Structure",
+    height: 1000,
+    alt: "Hunters",
+    title: "Hunters",
   },
   {
     src: "/assets/portfolio_late2023/album/The_Toxic_Descent-1000px.jpg",
