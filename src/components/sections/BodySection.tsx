@@ -448,8 +448,6 @@ const BodySection = () => {
               </CardOverflow>
             </Card>
           </Box>
-          {/* TODO: make socmed and support on same side align */}
-          {/* TODO: add spacing to socmed to make it even width with support */}
           <Box sx={BodyHomeSocmedCardBoxSx}>
             <Card
               variant="outlined"
