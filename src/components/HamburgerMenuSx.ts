@@ -217,7 +217,7 @@ export const HamburgerInnerNavBtnLightSx = {
 
 export const HamburgerFooterTextDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "17px",
     fontStyle: "italic",
     fontWeight: "400",
@@ -229,7 +229,7 @@ export const HamburgerFooterTextDarkSx = {
 
 export const HamburgerFooterTextLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "17px",
     fontStyle: "italic",
     fontWeight: "400",

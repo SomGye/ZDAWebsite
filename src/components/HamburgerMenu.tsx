@@ -82,7 +82,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
           <DialogContent sx={{ gap: 2 }}>
             <Typography
               level="title-md"
-              fontWeight="bold"
+              fontWeight={600}
               sx={
                 theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
               }
@@ -132,7 +132,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             </Box>
             <Typography
               level="title-md"
-              fontWeight="bold"
+              fontWeight={600}
               sx={
                 theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
               }
@@ -255,7 +255,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             </Box>
             <Typography
               level="title-md"
-              fontWeight="bold"
+              fontWeight={600}
               sx={
                 theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
               }

@@ -3,10 +3,29 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { RecoilRoot } from "recoil";
 import "./index.css";
-import "@fontsource/inter";
-import "@fontsource/karla";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage.tsx";
+
+/* FONTSOURCE IMPORTS */
+import "@fontsource/inter/200.css";
+import "@fontsource/inter/300.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/karla/200.css";
+import "@fontsource/karla/300.css";
+import "@fontsource/karla/400.css";
+import "@fontsource/karla/500.css";
+import "@fontsource/karla/600.css";
+import "@fontsource/karla/700.css";
+import "@fontsource/karla/800.css";
+import "@fontsource/karla/300-italic.css";
+import "@fontsource/karla/400-italic.css";
+import "@fontsource/karla/500-italic.css";
+import "@fontsource/karla/600-italic.css";
+import "@fontsource/karla/700-italic.css";
 
 const router = createBrowserRouter([
   {

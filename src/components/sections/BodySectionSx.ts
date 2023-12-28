@@ -109,7 +109,7 @@ export const BodyHomeHighlightsCardTitleLightSx = {
 
 export const BodyHomeHighlightsCardSubtitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
     fontStyle: "italic",
     fontWeight: "300",
@@ -123,7 +123,7 @@ export const BodyHomeHighlightsCardSubtitleDarkSx = {
 
 export const BodyHomeHighlightsCardSubtitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
     fontStyle: "italic",
     fontWeight: "300",
@@ -255,7 +255,7 @@ export const BodyHomeSocmedCardLightSx = {
 
 export const BodyHomeSocmedCardTitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
     fontWeight: "600",
     backgroundImage:
@@ -273,7 +273,7 @@ export const BodyHomeSocmedCardTitleDarkSx = {
 
 export const BodyHomeSocmedCardTitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
     fontWeight: "600",
     backgroundImage:
@@ -431,7 +431,7 @@ export const BodyHomeSupportCardLightSx = {
 
 export const BodyHomeSupportCardTitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
     fontWeight: "600",
     backgroundImage:
@@ -449,7 +449,7 @@ export const BodyHomeSupportCardTitleDarkSx = {
 
 export const BodyHomeSupportCardTitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
     fontWeight: "700",
     backgroundImage:
@@ -547,7 +547,7 @@ export const BodyHomeSupportCardSubtitleDarkSx = {
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontWeight: "400",
     fontStyle: "italic",
@@ -571,7 +571,7 @@ export const BodyHomeSupportCardSubtitleLightSx = {
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontWeight: "400",
     fontStyle: "italic",
@@ -710,7 +710,7 @@ export const BodyPortfolioCardSecondTitleLightSx = {
 
 export const BodyPortfolioCardSubtitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
     fontStyle: "italic",
     fontWeight: "300",
@@ -724,7 +724,7 @@ export const BodyPortfolioCardSubtitleDarkSx = {
 
 export const BodyPortfolioCardSubtitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "14px",
     fontStyle: "italic",
     fontWeight: "300",
@@ -882,7 +882,7 @@ export const BodyCommsTiersBoxSx = {
 
 export const BodyCommsTiersTypographyDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
     fontWeight: "600",
     backgroundImage:
@@ -897,7 +897,7 @@ export const BodyCommsTiersTypographyDarkSx = {
 
 export const BodyCommsTiersTypographyLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "24px",
     fontWeight: "600",
     backgroundImage:
@@ -912,7 +912,7 @@ export const BodyCommsTiersTypographyLightSx = {
 
 export const BodyCommsTiersTypographyExDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "30.5px",
     fontWeight: "700",
     backgroundImage:
@@ -929,7 +929,7 @@ export const BodyCommsTiersTypographyExDarkSx = {
 
 export const BodyCommsTiersTypographyExLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "30.5px",
     fontWeight: "700",
     backgroundImage:
@@ -2083,7 +2083,7 @@ export const BodyCommsTiersCardAbstractifyListItemIdtExLightSx = {
 
 export const BodyCommsTiersCardAbstractifyListSubtitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#fafafaba",
     fontSize: "14.5px",
     fontStyle: "italic",
@@ -2097,7 +2097,7 @@ export const BodyCommsTiersCardAbstractifyListSubtitleDarkSx = {
 
 export const BodyCommsTiersCardAbstractifyListSubtitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#fafafac0",
     fontSize: "14.5px",
     fontStyle: "italic",
@@ -2739,7 +2739,7 @@ export const BodyLogoPageBoxSx = {
 
 export const BodyLogoPageTitleTypographyDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "32px",
     fontWeight: "700",
     backgroundImage:
@@ -2756,7 +2756,7 @@ export const BodyLogoPageTitleTypographyDarkSx = {
 
 export const BodyLogoPageTitleTypographyLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "32px",
     fontWeight: "700",
     backgroundImage:
@@ -2776,7 +2776,7 @@ export const BodyLogoPageFooterOuterTypographyDarkSx = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontWeight: "500",
     color: "#ff006a",
@@ -2793,7 +2793,7 @@ export const BodyLogoPageFooterOuterTypographyLightSx = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontWeight: "500",
     color: "#e7004a",
@@ -2807,7 +2807,7 @@ export const BodyLogoPageFooterOuterTypographyLightSx = {
 
 export const BodyLogoPageFooterInnerTypographyDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "12px",
     fontWeight: "400",
     color: "#ff2af0",
@@ -2821,7 +2821,7 @@ export const BodyLogoPageFooterInnerTypographyDarkSx = {
 
 export const BodyLogoPageFooterInnerTypographyLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "12px",
     fontWeight: "400",
     color: "#db105e",
@@ -2899,7 +2899,7 @@ export const BodyLogoPageHiddenTextBoxSx = {
 
 export const BodyLogoPageHiddenTextTypoSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "12.5px",
     fontStyle: "italic",
     fontWeight: "300",
