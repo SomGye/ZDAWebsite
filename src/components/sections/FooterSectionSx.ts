@@ -21,7 +21,7 @@ export const FooterBoxSx = {
 
 export const FooterTitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "20px",
     fontStyle: "italic",
     fontWeight: "600",
@@ -35,7 +35,7 @@ export const FooterTitleDarkSx = {
 
 export const FooterTitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "20px",
     fontStyle: "italic",
     fontWeight: "600",
@@ -49,7 +49,7 @@ export const FooterTitleLightSx = {
 
 export const FooterBodyDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontStyle: "italic",
     fontWeight: "500",
@@ -63,7 +63,7 @@ export const FooterBodyDarkSx = {
 
 export const FooterBodyLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontStyle: "italic",
     fontWeight: "500",
@@ -143,7 +143,7 @@ export const FooterDividerSx = {
 
 export const FooterCopyrightDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "12px",
     fontWeight: "500",
     color: "#a1affaf0",
@@ -156,7 +156,7 @@ export const FooterCopyrightDarkSx = {
 
 export const FooterCopyrightLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "12px",
     fontWeight: "500",
     color: "#afc5ffef",

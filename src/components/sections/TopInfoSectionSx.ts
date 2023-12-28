@@ -121,7 +121,7 @@ export const TopInfoTopMidTitleLightSx = {
 
 export const TopInfoTopRightTitleDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#29242a",
     fontSize: "18px",
     fontWeight: "400",
@@ -134,7 +134,7 @@ export const TopInfoTopRightTitleDarkSx = {
 
 export const TopInfoTopRightTitleLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#fafafafa",
     fontSize: "18px",
     fontWeight: "400",
@@ -335,7 +335,7 @@ export const TopInfoCardInnerLightSx = {
 
 export const TopInfoCardInnerCCTDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#29242a",
     fontSize: "20px",
     fontWeight: "700",
@@ -347,7 +347,7 @@ export const TopInfoCardInnerCCTDarkSx = {
 
 export const TopInfoCardInnerCCTLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     color: "#fafafafa",
     fontSize: "20px",
     fontWeight: "700",
@@ -517,7 +517,7 @@ export const TopInfoCommCardTitleDarkSx = {
       "linear-gradient(323deg,#6b25fe,#ffd4c2 0%,#ff3fa0 60%,#f74cf5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "20px",
     fontWeight: "600",
     filter: "drop-shadow(1px 1px 4px #E94BADA0)",
@@ -532,7 +532,7 @@ export const TopInfoCommCardTitleLightSx = {
       "linear-gradient(69deg,#fd9800,#ff8442 23%,#ff3f00 52%,#f701f5 77%,#936eff)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "20px",
     fontWeight: "600",
     filter: "drop-shadow(1px 1px 4px #E2691AA0)",
@@ -543,7 +543,7 @@ export const TopInfoCommCardTitleLightSx = {
 
 export const TopInfoCommCardBodyTopDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontStyle: "italic",
     fontWeight: "500",
@@ -556,7 +556,7 @@ export const TopInfoCommCardBodyTopDarkSx = {
 
 export const TopInfoCommCardBodyTopLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontStyle: "italic",
     fontWeight: "600",
@@ -583,7 +583,7 @@ export const TopInfoCommCardDividerLightSx = {
 
 export const TopInfoCommCardBodyBtmDarkSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontWeight: "400",
     maxWidth: "28ch",
@@ -595,7 +595,7 @@ export const TopInfoCommCardBodyBtmDarkSx = {
 
 export const TopInfoCommCardBodyBtmLightSx = {
   ...{
-    fontFamily: "Karla, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "16px",
     fontWeight: "500",
     maxWidth: "28ch",

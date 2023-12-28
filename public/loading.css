@@ -6,7 +6,7 @@ div#loadingpage {
   position: absolute;
   color: rgba(255, 255, 255, 0.87);
   background-color: #29242a;
-  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
