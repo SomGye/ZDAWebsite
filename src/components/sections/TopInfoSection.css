@@ -5,7 +5,7 @@ div.MuiContainer-root.TopInfoContainer {
 }
 
 p.TopInfoTopLeftTitle {
-  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 29px;
   letter-spacing: -2px;
   @media (max-width: 670px) {
@@ -14,7 +14,7 @@ p.TopInfoTopLeftTitle {
 }
 
 span.TopInfoTopLeftTitleL {
-  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 32px;
   font-weight: 500;
   font-style: normal;
@@ -31,7 +31,7 @@ span.TopInfoTopLeftTitleL {
 }
 
 span.TopInfoTopLeftTitleR {
-  font-family: Karla, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 28px;
   font-weight: 500;
   font-style: normal;
