@@ -39,8 +39,6 @@ import {
   BodyHomeHighlightsCardBtnLightSx,
   BodyHomeHighlightsCardContentSx,
   BodyHomeHighlightsCardDarkSx,
-  BodyHomeHighlightsCardDividerDarkSx,
-  BodyHomeHighlightsCardDividerLightSx,
   BodyHomeHighlightsCardLightSx,
   BodyHomeHighlightsCardOverflowDarkSx,
   BodyHomeHighlightsCardOverflowLightSx,
@@ -57,7 +55,6 @@ import {
   BodyHomeSocmedCardOuterBoxSx,
   BodyHomeSocmedCardTitleDarkSx,
   BodyHomeSocmedCardTitleLightSx,
-  BodyHomeSocmedPhotoBoxSx,
   BodyHomeSupportCardButtonBoxSx,
   BodyHomeSupportCardButtonDarkSx,
   BodyHomeSupportCardButtonLightSx,
@@ -263,35 +260,37 @@ import {
   BodyLogoPageButtonLightSx,
   BodyLogoPageHiddenTextBoxSx,
   BodyLogoPageHiddenTextTypoSx,
+  BodySocmedSupportPhotoRowBoxSx,
+  BodySocmedSupportPhotoColBoxSx,
 } from "./BodySectionSx";
 import "./BodySection.css";
 import {
   photos_comm_abstractify,
-  photos_comm_abstractify_ex_srcSet,
-  photos_comm_abstractify_srcSet,
+  photos_comm_abstractify_ex_album,
+  photos_comm_abstractify_album,
   photos_comm_basic,
-  photos_comm_basic_ex_srcSet,
-  photos_comm_basic_srcSet,
+  photos_comm_basic_ex_album,
+  photos_comm_basic_album,
   photos_comm_premium,
-  photos_comm_premium_ex_srcSet,
-  photos_comm_premium_srcSet,
+  photos_comm_premium_ex_album,
+  photos_comm_premium_album,
   photos_comm_standard,
-  photos_comm_standard_ex_srcSet,
-  photos_comm_standard_srcSet,
+  photos_comm_standard_ex_album,
+  photos_comm_standard_album,
   photos_highlights,
-  photos_highlights_srcSet,
+  photos_highlights_album,
   photos_portfolio_early2021_huion,
-  photos_portfolio_early2021_huion_srcSet,
+  photos_portfolio_early2021_huion_album,
   photos_portfolio_early2021_penup,
-  photos_portfolio_early2021_penup_srcSet,
+  photos_portfolio_early2021_penup_album,
   photos_portfolio_early2021_procreate,
-  photos_portfolio_early2021_procreate_srcSet,
+  photos_portfolio_early2021_procreate_album,
   photos_portfolio_late2021,
-  photos_portfolio_late2021_srcSet,
+  photos_portfolio_late2021_album,
   photos_portfolio_late2022,
-  photos_portfolio_late2022_srcSet,
+  photos_portfolio_late2022_album,
   photos_portfolio_late2023,
-  photos_portfolio_late2023_srcSet,
+  photos_portfolio_late2023_album,
   photos_prints_support,
   photos_socmed,
 } from "./BodySectionPhotos";
@@ -357,22 +356,26 @@ const BodySection = () => {
                 >
                   {"("}Please click to view the full-size image{")"}
                 </Typography>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyHomeHighlightsCardDividerDarkSx
-                      : BodyHomeHighlightsCardDividerLightSx
-                  }
-                />
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_highlights_srcSet}
+                    photos={photos_highlights_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-highlights"
+                            : "react-photo-album--photo light-highlights"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={200}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_highlights(current)}
                   />
                   <Lightbox
@@ -422,15 +425,6 @@ const BodySection = () => {
                     close={() => setIdx_highlights(-1)}
                   />
                 </Box>
-                <Divider
-                  orientation="horizontal"
-                  inset="none"
-                  sx={
-                    theme === "dark"
-                      ? BodyHomeHighlightsCardDividerDarkSx
-                      : BodyHomeHighlightsCardDividerLightSx
-                  }
-                />
               </CardContent>
               <CardOverflow
                 sx={
@@ -539,17 +533,13 @@ const BodySection = () => {
                     Mastodon
                   </Button>
                 </Box>
-                <Box sx={BodyHomeSocmedPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_socmed}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    columns={1}
-                    spacing={1}
-                    padding={1}
-                    targetRowHeight={400}
-                    defaultContainerWidth={600}
-                  />
+                <Box className="image-row" sx={BodySocmedSupportPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodySocmedSupportPhotoColBoxSx}
+                  >
+                    <img src={photos_socmed[0].src} loading="lazy" />
+                  </Box>
                 </Box>
               </Box>
             </Card>
@@ -649,16 +639,13 @@ const BodySection = () => {
                     />
                   </Typography>
                 </Box>
-                <Box sx={BodyHomeSocmedPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_prints_support}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    columns={1}
-                    spacing={1}
-                    padding={1}
-                    defaultContainerWidth={600}
-                  />
+                <Box className="image-row" sx={BodySocmedSupportPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodySocmedSupportPhotoColBoxSx}
+                  >
+                    <img src={photos_prints_support[0].src} loading="lazy" />
+                  </Box>
                 </Box>
               </Box>
             </Card>
@@ -699,11 +686,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_late2023_srcSet}
+                    photos={photos_portfolio_late2023_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 1 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_late2023(current)}
                   />
                   <Lightbox
@@ -788,11 +788,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_late2022_srcSet}
+                    photos={photos_portfolio_late2022_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={220}
                     rowConstraints={{ maxPhotos: 5, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_late2022(current)}
                   />
                   <Lightbox
@@ -877,11 +890,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_late2021_srcSet}
+                    photos={photos_portfolio_late2021_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={170}
                     rowConstraints={{ maxPhotos: 6, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_late2021(current)}
                   />
                   <Lightbox
@@ -976,11 +1002,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_early2021_procreate_srcSet}
+                    photos={photos_portfolio_early2021_procreate_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={163}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_early2021_pc(current)
                     }
@@ -1077,11 +1116,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_early2021_huion_srcSet}
+                    photos={photos_portfolio_early2021_huion_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 4, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_early2021_h(current)
                     }
@@ -1178,11 +1230,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_portfolio_early2021_penup_srcSet}
+                    photos={photos_portfolio_early2021_penup_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={160}
                     rowConstraints={{ maxPhotos: 8, minPhotos: 3 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_early2021_p(current)
                     }
@@ -1312,11 +1377,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_basic_srcSet}
+                    photos={photos_comm_basic_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_basic(current)}
                   />
                   <Lightbox
@@ -1527,11 +1605,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_standard_srcSet}
+                    photos={photos_comm_standard_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_standard(current)}
                   />
                   <Lightbox
@@ -1745,11 +1836,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_abstractify_srcSet}
+                    photos={photos_comm_abstractify_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) =>
                       setIdx_abstractify(current)
                     }
@@ -1994,11 +2098,24 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_premium_srcSet}
+                    photos={photos_comm_premium_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark"
+                            : "react-photo-album--photo light"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 3, minPhotos: 2 }}
                     defaultContainerWidth={1000}
+                    spacing={12}
                     onClick={({ index: current }) => setIdx_premium(current)}
                   />
                   <Lightbox
@@ -2296,16 +2413,13 @@ const BodySection = () => {
                     />
                   </Typography>
                 </Box>
-                <Box sx={BodyHomeSocmedPhotoBoxSx}>
-                  <PhotoAlbum
-                    layout="rows"
-                    photos={photos_prints_support}
-                    breakpoints={[320, 600, 1200, 1824]}
-                    columns={1}
-                    spacing={1}
-                    padding={1}
-                    defaultContainerWidth={600}
-                  />
+                <Box className="image-row" sx={BodySocmedSupportPhotoRowBoxSx}>
+                  <Box
+                    className="image-column"
+                    sx={BodySocmedSupportPhotoColBoxSx}
+                  >
+                    <img src={photos_prints_support[0].src} loading="lazy" />
+                  </Box>
                 </Box>
               </Box>
             </Card>
@@ -2338,7 +2452,19 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_basic_ex_srcSet}
+                    photos={photos_comm_basic_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2493,7 +2619,19 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_standard_ex_srcSet}
+                    photos={photos_comm_standard_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2651,7 +2789,19 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_abstractify_ex_srcSet}
+                    photos={photos_comm_abstractify_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}
@@ -2826,7 +2976,19 @@ const BodySection = () => {
                 <Box sx={BodyHomeHighlightsPhotoBoxSx}>
                   <PhotoAlbum
                     layout="rows"
-                    photos={photos_comm_premium_ex_srcSet}
+                    photos={photos_comm_premium_ex_album}
+                    renderPhoto={({
+                      imageProps: { className, ...restImageProps },
+                    }) => (
+                      <img
+                        className={
+                          theme === "dark"
+                            ? "react-photo-album--photo dark-noclick"
+                            : "react-photo-album--photo light-noclick"
+                        }
+                        {...restImageProps}
+                      />
+                    )}
                     breakpoints={[320, 600, 1200, 1824]}
                     targetRowHeight={150}
                     rowConstraints={{ maxPhotos: 1, minPhotos: 1 }}

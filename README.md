@@ -19,9 +19,12 @@
 - Fork and Clone the repo at https://github.com/SomGye/ZDAWebsite
   - This uses Vite.js with the `react-ts` template. Use `npm start` to run a dev build (which will open a new tab in your last used browser), or use `npm run build` to compile a production build.
 - Updating Images:
-  - The images themselves are stored in `/public/assets/[folder]`, generally at 320px, 640px, 1200px, and original resolution, with some exceptions.
-  - To update the images, take the full quality PNG or TIFF, save to a progressive scan JPG with compression level 8, export the multiple sizes (by width in px), and then replace the desired image in the assets folder of choice.
-  - You will also need to update the relevant arrays (for the folder you picked) in `/src/components/sections/BodySectionPhotos.ts`. For each folder, there is both the regular array (for the full size photo) and the `srcSet` array (for the scaled down photos). For the sake of performance, the `srcSet` version is needed to display performant thumbnails for the *React Photo Album*, and the regular version is needed to display the full size image for the *Yet Another React Lightbox*.
+  - The images themselves are stored in `/public/assets/[folder]`, generally at 1000px and original resolution, with some exceptions.
+    - Each section has its own folder path, and within are `album` and `lightbox` folders:
+      - `album`: for the *React Photo Album*, which acts as the responsive image grid for the thumbnails.
+      - `lightbox`: for the *Yet Another React Lightbox*, which shows the higher quality/size photo on click.
+  - To update the images, take the full quality PNG or TIFF, save to a progressive scan JPG with compression level 9, export the multiple sizes (by width in px), and then replace the desired image in the assets folder of choice.
+  - You will also need to update the relevant arrays (for the folder you picked) in `/src/components/sections/BodySectionPhotos.ts`. For each folder, there is both the regular array (for the full size photo) and the `album` array (for the scaled down photos). For the sake of performance, the `album` version is needed to display performant thumbnails for the *React Photo Album*, and the regular version is needed to display the full size image for the *Yet Another React Lightbox*.
 - Updating Styles:
   - Each section has its own `[section]Sx.ts` file, with the custom styles for the Joy UI components. In special cases, raw CSS is used in the respective `[section].css` file.
   - Most components have both a Dark and a Light version, so be sure to update both if needed.

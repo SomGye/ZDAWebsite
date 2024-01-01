@@ -29,7 +29,7 @@ export const photos_highlights = [
   },
 ];
 
-export const photos_highlights_srcSet = [
+export const photos_highlights_album = [
   {
     src: "/assets/highlights_home/album/A_Visual_Violation-1000px.jpg",
     width: 1000,
@@ -82,6 +82,13 @@ export const photos_prints_support = [
 
 export const photos_portfolio_late2023 = [
   {
+    src: "/assets/portfolio_late2023/lightbox/A_System_of_Structure-lb.jpg",
+    width: 3000,
+    height: 4243,
+    alt: "A System of Structure",
+    title: "A System of Structure",
+  },
+  {
     src: "/assets/portfolio_late2023/lightbox/Frame_of_Revelation-lb.jpg",
     width: 3000,
     height: 4243,
@@ -103,11 +110,11 @@ export const photos_portfolio_late2023 = [
     title: "Mark of Manifestation",
   },
   {
-    src: "/assets/portfolio_late2023/lightbox/A_System_of_Structure-lb.jpg",
-    width: 3000,
-    height: 4243,
-    alt: "A System of Structure",
-    title: "A System of Structure",
+    src: "/assets/portfolio_late2023/lightbox/Hunters-lb.jpg",
+    width: 2000,
+    height: 2000,
+    alt: "Hunters",
+    title: "Hunters",
   },
   {
     src: "/assets/portfolio_late2023/lightbox/The_Toxic_Descent-lb.jpg",
@@ -124,18 +131,11 @@ export const photos_portfolio_late2023 = [
     title: "Converging Spheres",
   },
   {
-    src: "/assets/portfolio_late2023/lightbox/Flight_of_Nihility-lb.jpg",
-    width: 2360,
-    height: 1640,
-    alt: "Flight of Nihility",
-    title: "Flight of Nihility",
-  },
-  {
-    src: "/assets/portfolio_late2023/lightbox/The_Ephemeral_Eclipse-lb.jpg",
+    src: "/assets/portfolio_late2023/lightbox/Regents-lb.jpg",
     width: 2000,
     height: 2000,
-    alt: "The Ephemeral Eclipse",
-    title: "The Ephemeral Eclipse",
+    alt: "Regents",
+    title: "Regents",
   },
   {
     src: "/assets/portfolio_late2023/lightbox/Haunted_Tendrils-lb.jpg",
@@ -167,7 +167,14 @@ export const photos_portfolio_late2023 = [
   },
 ];
 
-export const photos_portfolio_late2023_srcSet = [
+export const photos_portfolio_late2023_album = [
+  {
+    src: "/assets/portfolio_late2023/album/A_System_of_Structure-1000px.jpg",
+    width: 1000,
+    height: 1414,
+    alt: "A System of Structure",
+    title: "A System of Structure",
+  },
   {
     src: "/assets/portfolio_late2023/album/Frame_of_Revelation-1000px.jpg",
     width: 1000,
@@ -190,11 +197,11 @@ export const photos_portfolio_late2023_srcSet = [
     title: "Mark of Manifestation",
   },
   {
-    src: "/assets/portfolio_late2023/album/A_System_of_Structure-1000px.jpg",
+    src: "/assets/portfolio_late2023/album/Hunters-1000px.jpg",
     width: 1000,
-    height: 1414,
-    alt: "A System of Structure",
-    title: "A System of Structure",
+    height: 1000,
+    alt: "Hunters",
+    title: "Hunters",
   },
   {
     src: "/assets/portfolio_late2023/album/The_Toxic_Descent-1000px.jpg",
@@ -211,18 +218,11 @@ export const photos_portfolio_late2023_srcSet = [
     title: "Converging Spheres",
   },
   {
-    src: "/assets/portfolio_late2023/album/Flight_of_Nihility-1000px.jpg",
-    width: 1000,
-    height: 695,
-    alt: "Flight of Nihility",
-    title: "Flight of Nihility",
-  },
-  {
-    src: "/assets/portfolio_late2023/album/The_Ephemeral_Eclipse-1000px.jpg",
+    src: "/assets/portfolio_late2023/album/Regents-1000px.jpg",
     width: 1000,
     height: 1000,
-    alt: "The Ephemeral Eclipse",
-    title: "The Ephemeral Eclipse",
+    alt: "Regents",
+    title: "Regents",
   },
   {
     src: "/assets/portfolio_late2023/album/Haunted_Tendrils-1000px.jpg",
@@ -341,7 +341,7 @@ export const photos_portfolio_late2022 = [
   },
 ];
 
-export const photos_portfolio_late2022_srcSet = [
+export const photos_portfolio_late2022_album = [
   {
     src: "/assets/portfolio_late2022/album/An_Era_Burned_Away-1000px.jpg",
     width: 1000,
@@ -515,7 +515,7 @@ export const photos_portfolio_late2021 = [
   },
 ];
 
-export const photos_portfolio_late2021_srcSet = [
+export const photos_portfolio_late2021_album = [
   {
     src: "/assets/portfolio_late2021/album/Power_of_Exclusion-1000px.jpg",
     width: 1000,
@@ -633,7 +633,7 @@ export const photos_portfolio_early2021_procreate = [
   },
 ];
 
-export const photos_portfolio_early2021_procreate_srcSet = [
+export const photos_portfolio_early2021_procreate_album = [
   {
     src: "/assets/portfolio_early2021_procreate/album/First_Doodle_in_Procreate-1000px.jpg",
     width: 1000,
@@ -695,7 +695,7 @@ export const photos_portfolio_early2021_huion = [
   },
 ];
 
-export const photos_portfolio_early2021_huion_srcSet = [
+export const photos_portfolio_early2021_huion_album = [
   {
     src: "/assets/portfolio_early2021_huion/album/HuionSketch_1623481967592-1000px.jpg",
     width: 1000,
@@ -813,7 +813,7 @@ export const photos_portfolio_early2021_penup = [
   },
 ];
 
-export const photos_portfolio_early2021_penup_srcSet = [
+export const photos_portfolio_early2021_penup_album = [
   {
     src: "/assets/portfolio_early2021_penup/album/penup_20210422_053046-1000px.jpg",
     width: 1000,
@@ -945,7 +945,7 @@ export const photos_comm_abstractify = [
   },
 ];
 
-export const photos_comm_abstractify_srcSet = [
+export const photos_comm_abstractify_album = [
   {
     src: "/assets/comm_abstractify/album/Broken-1000px.jpg",
     width: 1000,
@@ -990,7 +990,7 @@ export const photos_comm_abstractify_srcSet = [
   },
 ];
 
-export const photos_comm_abstractify_ex_srcSet = [
+export const photos_comm_abstractify_ex_album = [
   {
     src: "/assets/comm_abstractify/album/The_Ghost_Within-1000px.jpg",
     width: 1000,
@@ -1031,7 +1031,7 @@ export const photos_comm_basic = [
   },
 ];
 
-export const photos_comm_basic_srcSet = [
+export const photos_comm_basic_album = [
   {
     src: "/assets/comm_basic/album/QS1-BL-1000px.jpg",
     width: 1000,
@@ -1062,7 +1062,7 @@ export const photos_comm_basic_srcSet = [
   },
 ];
 
-export const photos_comm_basic_ex_srcSet = [
+export const photos_comm_basic_ex_album = [
   {
     src: "/assets/comm_basic/album/QS1-BL-1000px.jpg",
     width: 1000,
@@ -1117,7 +1117,7 @@ export const photos_comm_premium = [
   },
 ];
 
-export const photos_comm_premium_srcSet = [
+export const photos_comm_premium_album = [
   {
     src: "/assets/comm_premium/album/The_Crux_of_Crisis-1000px.jpg",
     width: 1000,
@@ -1162,7 +1162,7 @@ export const photos_comm_premium_srcSet = [
   },
 ];
 
-export const photos_comm_premium_ex_srcSet = [
+export const photos_comm_premium_ex_album = [
   {
     src: "/assets/comm_premium/album/Frame_of_Revelation-1000px.jpg",
     width: 1000,
@@ -1217,7 +1217,7 @@ export const photos_comm_standard = [
   },
 ];
 
-export const photos_comm_standard_srcSet = [
+export const photos_comm_standard_album = [
   {
     src: "/assets/comm_standard/album/Divinity_Ends-1000px.jpg",
     width: 1000,
@@ -1262,7 +1262,7 @@ export const photos_comm_standard_srcSet = [
   },
 ];
 
-export const photos_comm_standard_ex_srcSet = [
+export const photos_comm_standard_ex_album = [
   {
     src: "/assets/comm_standard/album/Divinity_Ends-cropped-600px.jpg",
     width: 600,

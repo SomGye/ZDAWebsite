@@ -88,7 +88,7 @@ export const BodyHomeHighlightsCardContentSx = {
 export const BodyHomeHighlightsCardTitleDarkSx = {
   ...{
     backgroundImage:
-      "linear-gradient(90deg, rgba(230,0,200,1) 0%, rgba(255,45,0,1) 5%, rgba(255,70,0,1) 20%, rgba(240,110,10,1) 30%, rgba(235,130,30,1) 60%, rgba(230,0,190,1) 100%)",
+      "linear-gradient(90deg, rgba(230,0,200,1) 0%, rgba(200,90,230,1) 5%, rgba(130,125,255,1) 20%, rgba(0,145,255,1) 30%, rgba(125,195,255,1) 57%, rgba(230,0,190,1) 100%)",
     backgroundClip: "text",
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
@@ -115,7 +115,7 @@ export const BodyHomeHighlightsCardSubtitleDarkSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#f0008aef",
+    color: "rgba(125,195,255,0.8)",
     pointerEvents: "none",
     userSelect: "none",
   },
@@ -129,21 +129,9 @@ export const BodyHomeHighlightsCardSubtitleLightSx = {
     fontWeight: "300",
     maxWidth: "32ch",
     marginBottom: "14px",
-    color: "#2d008b",
+    color: "#250083",
     pointerEvents: "none",
     userSelect: "none",
-  },
-};
-
-export const BodyHomeHighlightsCardDividerDarkSx = {
-  ...{
-    "--Divider-lineColor": "rgba(61,39,115,0.5)",
-  },
-};
-
-export const BodyHomeHighlightsCardDividerLightSx = {
-  ...{
-    "--Divider-lineColor": "rgba(229,209,245,0.15)",
   },
 };
 
@@ -158,14 +146,14 @@ export const BodyHomeHighlightsPhotoBoxSx = {
 export const BodyHomeHighlightsCardOverflowDarkSx = {
   ...{
     borderRadius: "0",
-    marginTop: "-11px", // hack to get button vertically aligned with Divider above it
+    marginTop: "-3px",
   },
 };
 
 export const BodyHomeHighlightsCardOverflowLightSx = {
   ...{
     borderRadius: "0",
-    marginTop: "-11px", // hack to get button vertically aligned with Divider above it
+    marginTop: "-3px",
   },
 };
 
@@ -178,6 +166,8 @@ export const BodyHomeHighlightsCardOverflowBoxSx = {
     alignItems: "center",
     paddingTop: "10px",
     paddingBottom: "10px",
+    marginBottom: "8px",
+    marginTop: "6px",
   },
 };
 
@@ -274,6 +264,10 @@ export const BodyHomeSocmedCardTitleDarkSx = {
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
     userSelect: "none",
+    marginTop: "-4px",
+    "@media (max-width: 1030px)": {
+      marginTop: "-8px",
+    },
   },
 };
 
@@ -288,6 +282,10 @@ export const BodyHomeSocmedCardTitleLightSx = {
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
     userSelect: "none",
+    marginTop: "-4px",
+    "@media (max-width: 1030px)": {
+      marginTop: "-8px",
+    },
   },
 };
 
@@ -300,6 +298,7 @@ export const BodyHomeSocmedCardOuterBoxSx = {
     width: "100%",
     "@media (max-width: 1030px)": {
       flexDirection: "column-reverse",
+      marginTop: "-8px", // even out with support card's title to btn gap
     },
   },
 };
@@ -314,6 +313,8 @@ export const BodyHomeSocmedCardButtonBoxSx = {
     justifyContent: "center",
     marginLeft: "12px",
     marginRight: "12px",
+    minWidth: "260px",
+    maxWidth: "70vw",
     "@media (max-width: 1030px)": {
       marginTop: "12px",
     },
@@ -364,12 +365,33 @@ export const BodyHomeSocmedCardButtonLightSx = {
   },
 };
 
-export const BodyHomeSocmedPhotoBoxSx = {
+export const BodySocmedSupportPhotoRowBoxSx = {
   ...{
-    minWidth: "1px",
-    minHeight: "1px",
-    maxWidth: "360px",
-    height: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "0 2px",
+    maxWidth: "75vw",
+    "@media (max-width: 1000px)": {
+      maxWidth: "80vw",
+    },
+    "@media (max-width: 510px)": {
+      maxWidth: "90vw",
+    },
+  },
+};
+
+export const BodySocmedSupportPhotoColBoxSx = {
+  ...{
+    maxWidth: "250px",
+    margin: "0 2px",
+    img: {
+      borderRadius: "20px",
+      marginTop: "8px",
+      verticalAlign: "middle",
+      width: "100%",
+      objectFit: "cover",
+      userSelect: "none",
+    },
   },
 };
 
@@ -418,6 +440,10 @@ export const BodyHomeSupportCardTitleDarkSx = {
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
     userSelect: "none",
+    marginTop: "-4px",
+    "@media (max-width: 1030px)": {
+      marginTop: "-8px",
+    },
   },
 };
 
@@ -432,6 +458,10 @@ export const BodyHomeSupportCardTitleLightSx = {
     "-webkit-text-fill-color": "transparent",
     pointerEvents: "none",
     userSelect: "none",
+    marginTop: "-4px",
+    "@media (max-width: 1030px)": {
+      marginTop: "-8px",
+    },
   },
 };
 
@@ -458,6 +488,8 @@ export const BodyHomeSupportCardButtonBoxSx = {
     justifyContent: "center",
     marginLeft: "12px",
     marginRight: "12px",
+    minWidth: "260px",
+    maxWidth: "70vw",
     "@media (max-width: 1030px)": {
       marginBottom: "12px",
     },
