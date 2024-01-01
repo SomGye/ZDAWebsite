@@ -13,18 +13,19 @@ import {
   FooterBodyLightSx,
   FooterBoxSx,
   FooterContainerSx,
-  FooterCopyrightDarkSx,
-  FooterCopyrightLightSx,
+  FooterCopyrightSx,
   FooterDividerSx,
   FooterIconButtonBoxSx,
   FooterIconButtonDarkSx,
   FooterIconButtonLightSx,
   FooterIconDarkSx,
+  FooterLogoBoxSx,
   FooterTitleDarkSx,
   FooterTitleLightSx,
 } from "./FooterSectionSx";
 import "./FooterSection.css";
 import { pageAtom } from "../../states/PageAtom";
+import zdaWorksFooter from "/zdaworks_footer.svg";
 
 const FooterSection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -101,11 +102,17 @@ const FooterSection = () => {
           {" "}
           Privacy Policy
         </Button>
-        <Typography
-          level="body-xs"
-          sx={theme === "dark" ? FooterCopyrightDarkSx : FooterCopyrightLightSx}
-        >
-          © ZDA WORKS. ALL RIGHTS RESERVED.
+        <Typography level="body-xs" sx={FooterCopyrightSx}>
+          ©{" "}
+          <Box className="ZDA-Works-Logo-Box" sx={FooterLogoBoxSx}>
+            <img
+              src={zdaWorksFooter}
+              className="ZDA-Works-Logo"
+              style={{ maxWidth: "77px" }}
+              alt="ZDA Works"
+            />
+          </Box>{" "}
+          &#8212;&nbsp; ALL RIGHTS RESERVED.
         </Typography>
         {/* Shortcut for getting to Examples Page */}
         <span

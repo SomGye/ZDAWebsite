@@ -141,28 +141,34 @@ export const FooterDividerSx = {
   },
 };
 
-export const FooterCopyrightDarkSx = {
+export const FooterCopyrightSx = {
   ...{
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
     fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     fontSize: "12px",
     fontWeight: "500",
     color: "#a1affaf0",
     marginTop: "20px",
-    marginBottom: "16px",
+    marginBottom: "12px",
     pointerEvents: "none",
     userSelect: "none",
   },
 };
 
-export const FooterCopyrightLightSx = {
+export const FooterLogoBoxSx = {
   ...{
-    fontFamily: "Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
-    fontSize: "12px",
-    fontWeight: "500",
-    color: "#afc5ffef",
-    marginTop: "20px",
-    marginBottom: "16px",
-    pointerEvents: "none",
-    userSelect: "none",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "-2px",
+    marginLeft: "4px",
+    marginRight: "4px",
   },
 };
