@@ -46,46 +46,21 @@ export const TopInfoTopTypoBoxSx = {
   },
 };
 
+export const TopInfoTopLogoBoxSx = {
+  ...{
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "center",
+  },
+};
+
 export const TopInfoTopTypoBoxColSx = {
   ...{
     flex: "1",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-  },
-};
-
-export const TopInfoTopLeftTitleDarkSx = {
-  ...{
-    color: "#29242a",
-    fontWeight: "500",
-    marginTop: "auto", // CENTERING
-    marginBottom: "auto",
-    marginRight: "auto",
-    marginLeft: "auto",
-    filter: "drop-shadow(2px 2px 1px #DF00C59F)",
-    cursor: "default",
-    userSelect: "none",
-    "&:hover": {
-      filter: "drop-shadow(3px 3px 1px #D400BABF)",
-    },
-  },
-};
-
-export const TopInfoTopLeftTitleLightSx = {
-  ...{
-    color: "#fafafafa",
-    fontWeight: "400",
-    marginTop: "auto", // CENTERING
-    marginBottom: "auto",
-    marginRight: "auto",
-    marginLeft: "auto",
-    filter: "drop-shadow(3px 2px 0px #DF4B0135)",
-    cursor: "default",
-    userSelect: "none",
-    "&:hover": {
-      filter: "drop-shadow(4px 3px 2px #DF00C550)",
-    },
   },
 };
 

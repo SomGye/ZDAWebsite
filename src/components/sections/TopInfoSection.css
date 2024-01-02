@@ -4,46 +4,16 @@ div.MuiContainer-root.TopInfoContainer {
   padding: 0;
 }
 
-p.TopInfoTopLeftTitle {
-  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 29px;
-  letter-spacing: -2px;
+img.zerodayanubis-text-logo {
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(2px -2px 1px #29242a2c);
+  max-width: 300px;
   @media (max-width: 670px) {
-    font-size: 28px;
+    width: 250px;
   }
-}
-
-span.TopInfoTopLeftTitleL {
-  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: -5px;
-  /* SPACING COMPENSATION */
-  margin-top: -8px;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 670px) {
-    font-size: 26px;
-  }
-}
-
-span.TopInfoTopLeftTitleR {
-  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: -4px;
-  /* SPACING COMPENSATION */
-  margin-top: -8px;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 670px) {
-    font-size: 26px;
+  @media (max-width: 400px) {
+    width: 240px;
   }
 }
 

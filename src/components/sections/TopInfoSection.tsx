@@ -67,9 +67,8 @@ import {
   TopInfoNavButtonDefaultDarkSx,
   TopInfoNavButtonDefaultLightSx,
   TopInfoTopDarkBoxSx,
-  TopInfoTopLeftTitleDarkSx,
-  TopInfoTopLeftTitleLightSx,
   TopInfoTopLightBoxSx,
+  TopInfoTopLogoBoxSx,
   TopInfoTopMidTitleDarkSx,
   TopInfoTopMidTitleLightSx,
   TopInfoTopRightTitleDarkSx,
@@ -79,6 +78,8 @@ import {
 } from "./TopInfoSectionSx";
 import "./TopInfoSection.css";
 import { clickLink, switchPage, switchTheme } from "../../Helpers";
+import zdaWorksDark from "/zerodayanubis_textlogo_dark.svg";
+import zdaWorksLight from "/zerodayanubis_textlogo_light.svg";
 
 const TopInfoSection = () => {
   const theme = useRecoilValue(themeAtom);
@@ -115,37 +116,13 @@ const TopInfoSection = () => {
     <Container className="TopInfoContainer" sx={TopInfoContainerSx}>
       <Box sx={theme === "dark" ? TopInfoTopDarkBoxSx : TopInfoTopLightBoxSx}>
         <Box sx={TopInfoTopTypoBoxSx}>
-          <Typography
-            level="title-lg"
-            className="TopInfoTopLeftTitle"
-            sx={
-              theme === "dark"
-                ? TopInfoTopLeftTitleDarkSx
-                : TopInfoTopLeftTitleLightSx
-            }
-          >
-            <Typography
-              className="TopInfoTopLeftTitleL"
-              sx={
-                theme === "dark"
-                  ? TopInfoTopLeftTitleDarkSx
-                  : TopInfoTopLeftTitleLightSx
-              }
-            >
-              {"⌞ "}
-            </Typography>
-            ZERODAYANUBIS
-            <Typography
-              className="TopInfoTopLeftTitleR"
-              sx={
-                theme === "dark"
-                  ? TopInfoTopLeftTitleDarkSx
-                  : TopInfoTopLeftTitleLightSx
-              }
-            >
-              {" ⌝"}
-            </Typography>
-          </Typography>
+          <Box sx={TopInfoTopLogoBoxSx}>
+            <img
+              src={theme === "dark" ? zdaWorksLight : zdaWorksDark}
+              className="zerodayanubis-text-logo"
+              alt="ZDA Works"
+            />
+          </Box>
         </Box>
         <Box sx={TopInfoTopTypoBoxSx}>
           <Typography
