@@ -167,7 +167,6 @@ export const FooterLogoBoxSx = {
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "-2px",
     marginLeft: "4px",
     marginRight: "4px",
   },
