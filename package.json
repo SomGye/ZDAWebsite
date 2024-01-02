@@ -1,7 +1,7 @@
 {
   "name": "zdawebsite",
   "private": true,
-  "version": "1.5.0",
+  "version": "1.5.1",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
@@ -20,6 +20,7 @@
     "@emotion/styled": "~11.11.0",
     "@fontsource/inter": "^5.0.13",
     "@fontsource/karla": "^5.0.15",
+    "@fontsource/urbanist": "^5.0.18",
     "@mui/icons-material": "~5.14.11",
     "@mui/joy": "~5.0.0-beta.8",
     "react": "~18.2.0",

@@ -26,6 +26,11 @@ import "@fontsource/karla/400-italic.css";
 import "@fontsource/karla/500-italic.css";
 import "@fontsource/karla/600-italic.css";
 import "@fontsource/karla/700-italic.css";
+import "@fontsource/urbanist/300.css";
+import "@fontsource/urbanist/400.css";
+import "@fontsource/urbanist/500.css";
+import "@fontsource/urbanist/600.css";
+import "@fontsource/urbanist/700.css";
 
 const router = createBrowserRouter([
   {
