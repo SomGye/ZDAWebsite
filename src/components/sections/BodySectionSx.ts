@@ -2734,6 +2734,10 @@ export const BodyLogoPageBoxSx = {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
+    height: "100vh",
+    "@media (max-height: 550px)": {
+      height: "100%", // prevent squish and allow scroll on small screens
+    },
   },
 };
 
@@ -2894,6 +2898,9 @@ export const BodyLogoPageHiddenTextBoxSx = {
     "@media (max-width: 1000px)": {
       right: "auto",
     },
+    "@media (max-height: 540px)": {
+      position: "relative", // prevents squish and overlap on other elems
+    }
   },
 };
 
