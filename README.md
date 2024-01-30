@@ -1,5 +1,7 @@
 # ZDAWebsite
 ------
+#### TODO: Redo for v2
+------
 ### Description
 - The front-end code for the ***ZDA Website***: a website for the <u>ZDA Works</u> abstract media company run by *ZeroDayAnubis*.
   - This website serves as the hub for highlighting both the <u>history of ZDA's abstract artworks and inspirations</u>, as well as acting as a **portfolio** showcase of works and giving useful information for future art **commissions**.
