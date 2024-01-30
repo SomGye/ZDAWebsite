@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import * as React from "react";
+import zerodayanubis_redpink from "/zerodayanubis_redpink.svg";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [theme, setTheme] = React.useState("light");
+  const systemMatch = window.matchMedia("(prefers-color-scheme: dark)");
+
+  React.useEffect(() => {
+    if (systemMatch.matches) {
+      setTheme("dark");
+    }
+  }, []);
 
   return (
-    <>
+    <main className="bg-zdaBG-light dark:bg-zdaBG-dark flex min-h-screen flex-col items-center justify-evenly p-0 xs:px-12 sm:px-24 transition ease-out duration-500">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <h1 className="font-outfit font-light text-2xl my-4">ZDAWebsite</h1>
+      <p
+        className={
+          theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"
+        }
+        // className="nav-link-animated dark:nav-link-animated-dark"
+      >
+        Page Nav Link
       </p>
-    </>
-  )
-}
+    </main>
+  );
+};
 
-export default App
+export default App;

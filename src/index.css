@@ -2,71 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TAILWIND CSS EXTENSIONS */
+@layer components {
+  .webkit-appearance-none {
+    -webkit-appearance: none;
+  }
+}
+/* -- */
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", Outfit, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* fixes the i in Ko-fi */
+  font-variant: no-common-ligatures;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  /* min-width: 320px; */
+  min-width: 1px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* CSS ADDENDUM */
+.nav-link-animated {
+  display: inline-block;
+  position: relative;
+  color: #2284ff; /* zdaBlue-500 */
+  width: fit-content;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  user-select: none;
+  transition: color 0.3s ease-out, filter 0.3s ease-out;
+  &:hover {
+    color: #166ae8; /* zdaBlue-550 */
+    filter: drop-shadow(0 0 32px #166ae880);
+    transition: color 0.3s ease-out, filter 0.3s ease-out;
+  }
+  &:active {
+    font-weight: 600;
+  }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.nav-link-animated::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -0.3rem;
+  left: 0;
+  background-color: #166ae8; /* zdaBlue-550 */
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link-animated-dark {
+  display: inline-block;
+  position: relative;
+  color: #2284ff; /* zdaBlue-500 */
+  width: fit-content;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease-out, filter 0.3s ease-out;
+  &:hover {
+    color: #49a1ff; /* zdaBlue-450 */
+    filter: drop-shadow(0 0 3px #49a1ff70);
+    transition: color 0.3s ease-out, filter 0.3s ease-out;
   }
-  a:hover {
-    color: #747bff;
+  &:active {
+    font-weight: 600;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.nav-link-animated-dark::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -0.3rem;
+  left: 0;
+  background-color: #49a1ff; /* zdaBlue-450 */
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link-animated:hover::after,
+.nav-link-animated-dark:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
 }
