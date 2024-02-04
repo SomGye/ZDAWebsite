@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+} /* NEEDED here too! */
+
+div#loadingpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0b0a0d;
+  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div.SpinnerBox {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  animation: rotate_3922 1.2s linear infinite;
+  background-color: #c7002b;
+  background-image: linear-gradient(#ff0037, #c7002b, #ff0048);
+  z-index: 999;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+div.SpinnerBox span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #c7002b;
+  background-image: linear-gradient(#ff0037, #c7002b, #ff0048);
+}
+
+div.SpinnerBox span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+div.SpinnerBox span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+div.SpinnerBox span:nth-of-type(3) {
+  filter: blur(25px);
+}
+
+div.SpinnerBox span:nth-of-type(4) {
+  filter: blur(50px);
+}
+
+div.SpinnerBox::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #0b0a0d1a;
+  border: solid 5px #fafafaea;
+  border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+span.loadingspan {
+  position: absolute;
+  margin-left: 8px; /* center relative to spinner */
+  margin-top: 148px;
+  font-size: 1.25rem;
+  pointer-events: none;
+  user-select: none;
+}
