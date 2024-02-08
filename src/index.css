@@ -109,3 +109,35 @@ body {
   transform: scaleX(1);
   transform-origin: center;
 }
+
+.btn-logopage {
+  transition: background-image 0.3s ease-out;
+  &:hover .btn-logopage-helper {
+    opacity: 1;
+  }
+  &:active .btn-logopage-helper {
+    opacity: 0;
+  }
+  &:active .btn-logopage-helper-active {
+    opacity: 1;
+  }
+}
+
+.btn-logopage-helper {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.45s ease-out;
+}
+
+.btn-logopage-helper-active {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease-out;
+}
+/* -- */
