@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  // darkMode: 'class', // TODO: uncomment when I introduce ThemeMenu
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -35,12 +35,16 @@ export default {
           200: '#f7cdc9',
           300: '#f2a1a3',
           400: '#ea6c76',
+          450: '#e84c56',
           500: '#e43f58',
+          550: '#d93a53', // used for hover on 500
           600: '#ff0037',
+          650: '#ff002f',
           700: '#c61044',
           800: '#a21043',
           900: '#881646',
           950: '#4b0628',
+          1000: '#190207',
         },
         zdaRedpink: {
           50: '#ffe5f3',
@@ -48,13 +52,16 @@ export default {
           200: '#ffbddd',
           300: '#ff8fbc',
           400: '#ff528e',
+          450: '#ff326e',
           500: '#ff1a62',
+          550: '#fa155d', // used for hover on 500
           600: '#ff0048',
           650: '#f70040',
           700: '#c7002b',
           800: '#a30021',
           900: '#880218',
           950: '#470001',
+          1000: '#15040b',
         },
         zdaBlue: {
           50: '#edf7ff',
@@ -64,14 +71,19 @@ export default {
           400: '#4ca9ff',
           450: '#49a1ff',
           500: '#2284ff',
-          550: '#166AE8', // used for hover on 500
+          550: '#166ae8', // used for hover on 500
           600: '#0b62ff',
+          650: '#035af7',
           700: '#044af1',
           800: '#0b3cc2',
           900: '#0f3590',
           950: '#0f245c',
           1000: '#0a172e',
         }
+      },
+      boxShadow: {
+        'theme-menu-dropdown-light': '0px 2px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+        'theme-menu-dropdown-dark': '1px 1px 38px -4px #ff002f3a, 0px 3px 20px -15px #ff002f29',
       },
       dropShadow: {
         'logo-light': '20px 8px 4px #19141a2a',
@@ -81,7 +93,7 @@ export default {
         'logo-red': '8px 4px 6px #ff00379a',
         'name-sm-light': '-2px 0 1px #19141a2a',
         'name-sm-dark': '-4px 0 3px #6060607a',
-        'z-logo-hover-light': '0 0 5px #2284ffd0',
+        'z-logo-hover-light': '0 0 5px #ff0048a0',
         'z-logo-hover-dark': '0 0 5px #b7ddfff0',
       },
       fontFamily: {

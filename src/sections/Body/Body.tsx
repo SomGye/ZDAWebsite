@@ -11,13 +11,10 @@ const Body = () => {
       <div>
         <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
       </div>
-      <h1 className="font-outfit font-light text-2xl my-4">ZDAWebsite</h1>
-      <p
-        className={
-          theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"
-        }
-        // className="nav-link-animated dark:nav-link-animated-dark" // TODO: re-enable when switching to Tailwind theming
-      >
+      <h1 className="font-outfit font-light text-2xl my-4 text-neutral-800 dark:text-neutral-100">
+        ZDAWebsite
+      </h1>
+      <p className="nav-link-animated dark:nav-link-animated-dark">
         Page Nav Link
       </p>
       <button
