@@ -4,7 +4,6 @@ import { useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/themeAtom";
 
 const Body = () => {
-  // const [theme, setTheme] = React.useState("light");
   const theme = useRecoilValue(themeAtom);
   return (
     <>
@@ -14,7 +13,7 @@ const Body = () => {
       <h1 className="font-outfit font-light text-2xl my-4 text-neutral-800 dark:text-neutral-100">
         ZDAWebsite
       </h1>
-      <p className="nav-link-animated dark:nav-link-animated-dark">
+      <p className={theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"}>
         Page Nav Link
       </p>
       <button

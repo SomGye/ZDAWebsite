@@ -35,7 +35,8 @@ body {
 .nav-link-animated {
   display: inline-block;
   position: relative;
-  color: #2284ff; /* zdaBlue-500 */
+  /* text-gray-700 */
+  color: rgb(55, 65, 81);
   width: fit-content;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -43,12 +44,13 @@ body {
   user-select: none;
   transition: color 0.3s ease-out, filter 0.3s ease-out;
   &:hover {
-    color: #166ae8; /* zdaBlue-550 */
-    filter: drop-shadow(0 0 32px #166ae880);
+    /* zdaRedpink-500 */
+    color: #ff1a62;
+    filter: drop-shadow(0 0 32px #ff1a6260);
     transition: color 0.3s ease-out, filter 0.3s ease-out;
   }
   &:active {
-    font-weight: 600;
+    font-weight: 800;
   }
 }
 
@@ -57,21 +59,23 @@ body {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 3px;
+  height: 2px;
   bottom: -0.3rem;
   left: 0;
-  background-color: #166ae8; /* zdaBlue-550 */
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
+  /* zdaRedpink-500 */
+  background-color: #ff1a62;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
   transition: transform 0.3s ease-out;
 }
 
 .nav-link-animated-dark {
   display: inline-block;
   position: relative;
-  color: #2284ff; /* zdaBlue-500 */
+  /* text-gray-200 */
+  color: rgb(229, 231, 235);
   width: fit-content;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -79,12 +83,13 @@ body {
   user-select: none;
   transition: color 0.3s ease-out, filter 0.3s ease-out;
   &:hover {
-    color: #49a1ff; /* zdaBlue-450 */
-    filter: drop-shadow(0 0 3px #49a1ff70);
+    /* zdaRedpink-600 */
+    color: #ff0048;
+    filter: drop-shadow(0 0 3px #ff004829);
     transition: color 0.3s ease-out, filter 0.3s ease-out;
   }
   &:active {
-    font-weight: 600;
+    font-weight: 800;
   }
 }
 
@@ -93,14 +98,16 @@ body {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 3px;
+  transform-origin: center;
+  height: 2px;
   bottom: -0.3rem;
   left: 0;
-  background-color: #49a1ff; /* zdaBlue-450 */
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
+  /* zdaRedpink-600 */
+  background-color: #ff0048;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
   transition: transform 0.3s ease-out;
 }
 
@@ -148,13 +155,13 @@ div.zda-header-logo-box {
 
 img.zda-header-logo {
   opacity: 1;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
   grid-area: 1 / 1 / 3 / 2;
 }
 
 img.zda-header-logo-hover {
   opacity: 0;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
   grid-area: 2 / 1 / 3 / 2;
 }
 
@@ -171,11 +178,11 @@ div.zda-header-logo-box:active img.zda-header-logo-hover {
 /* TODO: mobile style with opacity */
 /* div.Logo-Box-Mobile:hover img.ZDA-Logo-TopBanner, */
 /* div.Logo-Box-Mobile:active img.ZDA-Logo-TopBanner { */
-  /* display: none; */
+/* display: none; */
 /* } */
 
 /* div.Logo-Box-Mobile:hover img.ZDA-Logo-TopBanner-Hover, */
 /* div.Logo-Box-Mobile:active img.ZDA-Logo-TopBanner-Hover { */
-  /* display: block; */
+/* display: block; */
 /* } */
 /* -- */
