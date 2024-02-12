@@ -47,13 +47,13 @@ const App = ({ route }: Props) => {
   }, [route]);
 
   return (
-    <main className="bg-zdaBG-light dark:bg-zdaBG-dark flex min-h-screen flex-col items-center justify-evenly p-0 xs:px-12 sm:px-24 transition ease-out duration-500">
+    <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center justify-evenly p-0 transition ease-out duration-500">
       {!logoPage && !exPage && (
         <>
           <Header />
           <Body />
           {/* TEST: SCROLL FILLER */}
-          {/* <div className="py-12">
+          <div className="py-12">
             <p>...Hello</p>
             <p>World...</p>
             <p>...Hello</p>
@@ -118,7 +118,7 @@ const App = ({ route }: Props) => {
             <p>World...</p>
             <p>...Hello</p>
             <p>World...</p>
-          </div> */}
+          </div>
           <Footer />
         </>
       )}
