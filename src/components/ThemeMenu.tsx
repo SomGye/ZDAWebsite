@@ -138,7 +138,7 @@ const ThemeMenu = () => {
           {/* Button Section */}
           <DropdownMenu.Trigger asChild>
             <button
-              className="rounded-full w-[26px] h-[26px] inline-flex items-center justify-center text-zdaRedpink-600 dark:text-zdaRedpink-450 bg-zdaBG-lightCard dark:bg-zdaBG-darkCard shadow-[0_1px_8px] shadow-slate-400 hover:shadow-slate-400/25 dark:shadow-zdaRedpink-500/60 dark:hover:shadow-zdaRedpink-500/25 outline outline-1 outline-zdaRedpink-500/25 dark:outline-zdaRedpink-500/15 hover:bg-zdaRedpink-500/25 dark:hover:bg-zdaRedpink-400/25 active:bg-zdaRedpink-400/50 dark:active:bg-zdaRedpink-500/50 transition ease-out duration-300 3xl:w-[31px] 3xl:h-[31px] 4xl:w-[34px] 4xl:h-[34px] 4k:w-[40px] 4k:h-[40px] webkit-appearance-none"
+              className="rounded-full w-[26px] h-[26px] inline-flex items-center justify-center text-zdaRedpink-600 dark:text-zdaRedpink-450 bg-zdaBG-lightCard dark:bg-zdaBG-darkCard shadow-[0_1px_8px] shadow-stone-400 hover:shadow-stone-400/25 dark:shadow-zdaRedpink-500/60 dark:hover:shadow-zdaRedpink-500/25 outline outline-1 outline-zdaRedpink-500/25 dark:outline-zdaRedpink-500/15 hover:bg-zdaRedpink-500/25 dark:hover:bg-zdaRedpink-400/25 active:bg-zdaRedpink-400/50 dark:active:bg-zdaRedpink-500/50 transition ease-out duration-300 3xl:w-[31px] 3xl:h-[31px] 4xl:w-[34px] 4xl:h-[34px] 4k:w-[40px] 4k:h-[40px] webkit-appearance-none"
               aria-label="Theme Menu"
               title="Theme Menu"
               onClick={() => setOpen((prev) => !prev)}
@@ -149,7 +149,7 @@ const ThemeMenu = () => {
           {/* Menu Section */}
           <DropdownMenu.Portal>
             <DropdownMenu.Content
-              className="z-40 min-w-[160px] bg-zdaBG-lighterCard dark:bg-zdaRedpink-1000 rounded-lg p-[5px] shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+              className="z-50 min-w-[160px] bg-zdaBG-lighterCard dark:bg-zdaRedpink-1000 rounded-lg p-[5px] shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
               sideOffset={5}
               align="start"
               onInteractOutside={() => setOpen(false)}
