@@ -1,28 +1,43 @@
 import * as React from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/themeAtom";
 import ThemeMenu from "../../components/ThemeMenu";
 import zdaDarkCircLogo from "/zda_dark_circ.svg";
 import zdaLightCircLogo from "/zda_light_circ.svg";
 import zdaDarkCircHoverLogo from "/zda_dark_circ_hover.svg";
 import zdaLightCircHoverLogo from "/zda_light_circ_hover.svg";
+import { switchPage } from "../../helpers";
+import { pageAtom } from "../../states/pageAtom";
+import HamburgerMenu from "../../components/HamburgerMenu";
+import { hamburgerIcon } from "../../icons";
 
 const Header = () => {
+  const [, setPage] = useRecoilState(pageAtom);
+  const [open, setOpen] = React.useState(false);
   const theme = useRecoilValue(themeAtom);
   return (
     <>
       {/* TODO: mobile centered logo vers */}
       {/* TODO: hamburger menu icon button and Joy UI side panel */}
-      <header
-        className="fixed w-full z-40 top-0 left-0 py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md"
-      >
-        <div
-          className="inline-flex items-center py-3 mx-auto"
-        >
+      <header className="fixed w-full z-40 top-0 left-0 py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md">
+        <div className="inline-flex items-center py-3 mx-auto">
           {/* Logo/Title/Nav Container */}
           <div className="header-left flex absolute left-0 ml-4">
-            {/* Logo Btn and Title */}
+            {/* Nav Btn, Logo Btn and Title */}
             <a className="flex text-xl font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <div className="nav-btn-box">
+                {/* Nav Btn */}
+                <button
+                  className="p-2 mr-4 rounded-md bg-transparent text-neutral-900 dark:text-gray-200 hover:text-zdaRedpink-600 dark:hover:text-zdaRedpink-650 transition-colors duration-200 ease-out"
+                  onClick={() => setOpen(true)}
+                  onTouchEnd={() => setOpen(true)}
+                  aria-label="Navigation Menu"
+                  aria-description="Opens the Navigation Menu"
+                  title="Navigation Menu"
+                >
+                  {hamburgerIcon}
+                </button>
+              </div>
               <div className="zda-header-logo-box md:mr-1">
                 <img
                   src={theme === "dark" ? zdaDarkCircLogo : zdaLightCircLogo}
@@ -31,8 +46,8 @@ const Header = () => {
                   className="zda-header-logo cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                   width={36}
                   height={36}
-                  onClick={() => window.location.replace("/logo")}
-                  onTouchEnd={() => window.location.replace("/logo")}
+                  onClick={() => switchPage("Logo", setPage)}
+                  onTouchEnd={() => switchPage("Logo", setPage)}
                 />
                 <img
                   src={
@@ -45,8 +60,8 @@ const Header = () => {
                   className="zda-header-logo-hover cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                   width={36}
                   height={36}
-                  onClick={() => window.location.replace("/logo")}
-                  onTouchEnd={() => window.location.replace("/logo")}
+                  onClick={() => switchPage("Logo", setPage)}
+                  onTouchEnd={() => switchPage("Logo", setPage)}
                 />
               </div>
               <span className="ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 font-light cursor-default select-none">
@@ -101,6 +116,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <HamburgerMenu open={open} setOpen={setOpen} />
       </header>
     </>
   );
