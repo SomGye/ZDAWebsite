@@ -21,7 +21,7 @@ import "@fontsource/outfit/500.css";
 // import "@fontsource/plus-jakarta-sans/200.css";
 import "@fontsource/plus-jakarta-sans/300-italic.css";
 // import "@fontsource/plus-jakarta-sans/300.css";
-// import "@fontsource/plus-jakarta-sans/400-italic.css";
+import "@fontsource/plus-jakarta-sans/400-italic.css";
 import "@fontsource/plus-jakarta-sans/400.css";
 // import "@fontsource/plus-jakarta-sans/500-italic.css";
 // import "@fontsource/plus-jakarta-sans/500.css";

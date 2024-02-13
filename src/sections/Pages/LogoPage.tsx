@@ -1,6 +1,6 @@
 import * as React from "react";
 import { leftArrowMdIcon } from "../../icons";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/themeAtom";
 import zdalogo_dark from "/zda_dark.svg";
 import zdalogo_light from "/zda_light.svg";
@@ -9,9 +9,12 @@ import zda_red from "/zerodayanubis_red.svg";
 import zda_blue from "/zerodayanubis_blue.svg";
 import zda_dark from "/zerodayanubis_dark.svg";
 import zda_light from "/zerodayanubis_light.svg";
+import { switchPage } from "../../helpers";
+import { pageAtom } from "../../states/pageAtom";
 
 const LogoPage = () => {
   const theme = useRecoilValue(themeAtom);
+  const [, setPage] = useRecoilState(pageAtom);
   const colorMap = ["redpink", "red", "blue", "system"];
   const [currentColor, setColor] = React.useState(colorMap[0]);
 
@@ -78,7 +81,7 @@ const LogoPage = () => {
         <div className="my-14">
           <button
             className="btn-logopage inline-flex items-center justify-between w-full min-w-48 pt-[6px] pb-[6px] pl-4 pr-4 md:scale-[1.1] lg:scale-[1.2] rounded-md text-[15px] 3xl:text-lg 4xl:text-xl 4k:text-2xl text-gray-200 font-medium tracking-wider transition ease-out duration-300 motion-reduce:transition-none hover:text-gray-100 active:transition active:duration-500 active:ease-out select-none focus:outline-none relative bg-logoBtnLight dark:bg-logoBtnDark"
-            onClick={() => window.location.replace("/")}
+            onClick={() => switchPage("Home", setPage)}
           >
             {/* HOVER */}
             <div className="btn-logopage-helper inline-flex items-center justify-between w-full pt-[6px] pb-[6px] pl-4 pr-4 rounded-md text-[15px] 3xl:text-lg 4xl:text-xl 4k:text-2xl text-gray-200 font-medium tracking-wider bg-logoBtnHelperLight dark:bg-logoBtnHelperDark">

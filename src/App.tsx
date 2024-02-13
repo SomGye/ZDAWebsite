@@ -1,19 +1,17 @@
 import * as React from "react";
 import "./App.css";
 import { useRecoilState } from "recoil";
-import { examplesAtom, logoAtom } from "./states/pageAtom";
+import { pageAtom } from "./states/pageAtom";
 import Header from "./sections/Header/Header";
 import Body from "./sections/Body/Body";
 import Footer from "./sections/Footer/Footer";
-import LogoPage from "./sections/Pages/LogoPage";
-import ExamplesPage from "./sections/Pages/ExamplesPage";
+import { switchPage } from "./helpers";
 
 type Props = {
   route: string;
 };
 const App = ({ route }: Props) => {
-  const [logoPage, setLogoPage] = useRecoilState(logoAtom);
-  const [exPage, setExPage] = useRecoilState(examplesAtom);
+  const [page, setPage] = useRecoilState(pageAtom);
 
   React.useEffect(() => {
     // Hide the init loading screen
@@ -21,109 +19,38 @@ const App = ({ route }: Props) => {
     if (loadingpage && loadingpage.style) {
       loadingpage.style = "display: none";
     }
-  }, []);
 
-  React.useEffect(() => {
-    // Check Route
-    // TODO: fix these!
+    // Set page to incoming route
+    const currentPath = window.location.href;
     if (route === "portfolio") {
-      window.location.replace("https://www.zerodayanubis.com/portfolio");
-      // window.location.replace("/portfolio");
-      setExPage(false);
+      setPage("Portfolio");
     } else if (route === "commissions") {
-      window.location.replace("https://www.zerodayanubis.com/commissions");
-      // window.location.replace("/commissions");
-      setExPage(false);
-    } else if (route === "logo") {
-      setLogoPage(true);
-      setExPage(false);
+      setPage("Commissions");
     } else if (route === "examples") {
-      setLogoPage(false);
-      setExPage(true);
+      setPage("Examples");
+    } else if (route === "logo") {
+      setPage("Logo");
     } else {
-      setLogoPage(false);
-      setExPage(false);
+      // Check for direct path in URL and use Hard URL switch to clear sub-domain
+      if (currentPath.toLocaleLowerCase().includes("portfolio")) {
+        switchPage("Portfolio", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
+        switchPage("Commissions", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("examples")) {
+        switchPage("Examples", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("logo")) {
+        switchPage("Logo", setPage, true);
+      } else {
+        setPage("Home");
+      }
     }
-  }, [route]);
+  }, []);
 
   return (
     <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center justify-evenly p-0 transition ease-out duration-500">
-      {!logoPage && !exPage && (
-        <>
-          <Header />
-          <Body />
-          {/* TEST: SCROLL FILLER */}
-          <div className="py-12">
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-            <p>...Hello</p>
-            <p>World...</p>
-          </div>
-          <Footer />
-        </>
-      )}
-      {logoPage && <LogoPage />}
-      {exPage && <ExamplesPage />}
+      {page !== "Logo" && page !== "Examples" && <Header />}
+      <Body />
+      {page !== "Logo" && page !== "Examples" && <Footer />}
     </main>
   );
 };

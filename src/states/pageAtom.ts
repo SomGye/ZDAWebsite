@@ -1,11 +1,6 @@
 import { atom } from "recoil";
 
-export const logoAtom = atom({
-  key: "LogoState",
-  default: false,
-});
-
-export const examplesAtom = atom({
-  key: "ExamplesState",
-  default: false,
+export const pageAtom = atom({
+  key: "PageState",
+  default: "Home", // ["Home", "Portfolio", "Commissions", "About", "Logo", "Examples"]
 });
