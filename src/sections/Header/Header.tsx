@@ -17,14 +17,13 @@ const Header = () => {
   const theme = useRecoilValue(themeAtom);
   return (
     <>
-      {/* TODO: mobile centered logo vers */}
-      {/* TODO: hamburger menu icon button and Joy UI side panel */}
+      {/* TODO: full mobile vers layout with just nav/logo and logo centered */}
       <header className="fixed w-full z-40 top-0 left-0 py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md">
         <div className="inline-flex items-center py-3 mx-auto">
           {/* Logo/Title/Nav Container */}
-          <div className="header-left flex absolute left-0 ml-4">
+          <div className="header-left sm:grid sm:grid-cols-3 md:flex p-0 m-0 absolute left-0 ml-4">
             {/* Nav Btn, Logo Btn and Title */}
-            <a className="flex text-xl font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <a className="flex text-xl font-medium items-center text-gray-900 mb-0">
               <div className="nav-btn-box">
                 {/* Nav Btn */}
                 <button
@@ -38,7 +37,8 @@ const Header = () => {
                   {hamburgerIcon}
                 </button>
               </div>
-              <div className="zda-header-logo-box md:mr-1">
+              <div className="zda-header-logo-box sm:mr-2 lg:mr-1">
+                {/* Logo Btn */}
                 <img
                   src={theme === "dark" ? zdaDarkCircLogo : zdaLightCircLogo}
                   alt="ZDA Z Logo"
@@ -64,12 +64,12 @@ const Header = () => {
                   onTouchEnd={() => switchPage("Logo", setPage)}
                 />
               </div>
-              <span className="ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 font-light cursor-default select-none">
+              <span className="hidden xs:block sm:hidden lg:block ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 hover:text-zdaRedpink-500 dark:hover:text-zdaRedpink-600 transition-colors duration-500 ease-out font-light cursor-default select-none">
                 ⌞ZeroDayAnubis⌝
               </span>
             </a>
             {/* Nav Links */}
-            <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex items-center text-base font-plusjakartasans font-semibold justify-center">
+            <nav className="hidden sm:flex sm:place-self-center md:place-self-auto md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 items-center text-base font-plusjakartasans font-semibold justify-center">
               <p
                 className={
                   theme === "dark"
