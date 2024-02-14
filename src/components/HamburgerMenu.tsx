@@ -12,26 +12,9 @@ import { pageAtom } from "../states/pageAtom";
 import { Box, Button } from "@mui/joy";
 import { clickLink, switchPage } from "../helpers";
 import { themeAtom } from "../states/themeAtom";
-// import {
-//   HamburgerSheetDarkSx,
-//   HamburgerSheetLightSx,
-//   HamburgerTitleDarkSx,
-//   HamburgerTitleLightSx,
-//   HamburgerInnerNavBtnDarkSx,
-//   HamburgerInnerNavBtnLightSx,
-//   HamburgerCloseDarkSx,
-//   HamburgerCloseLightSx,
-//   HamburgerBoxTopSx,
-//   HamburgerBoxSx,
-//   HamburgerTopNavBtnDarkSx,
-//   HamburgerTopNavBtnLightSx,
-//   HamburgerFooterTextDarkSx,
-//   HamburgerFooterTextLightSx,
-//   HamburgerInnerNavIconDarkSx,
-//   HamburgerInnerNavIconLightSx,
-// } from "./HamburgerMenuSx";
-// import { LaunchRounded } from "@mui/icons-material";
-import { extLinkIcon } from "../icons";
+import { closeIcon, extLinkIcon } from "../icons";
+import zerodayanubis_dark from "/zerodayanubis_dark.svg";
+import zerodayanubis_light from "/zerodayanubis_light.svg";
 
 type props = {
   open: boolean;
@@ -73,46 +56,37 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
         }}
       >
         {/* TODO: replace MUI components with Tailwind HTML where needed */}
-        <Sheet className="rounded-md p-3 flex flex-col gap-3 h-full overflow-auto bg-zdaBG-lighterCard/90 dark:bg-zdaBG-darkCard/90 text-gray-700 dark:text-gray-200">
-          {/* <DialogTitle
-            className="pointer-events-none select-none"
-            sx={{ fontFamily: fontFamilyOutfitSx, fontSize: "18px" }}
-          >
-            Links
-          </DialogTitle> */}
-          <h3 className="font-outfit text-lg pointer-events-none select-none">
-            Links
-          </h3>
-          <ModalClose
-            className="bg-neutral-700 dark:bg-neutral-900 hover:bg-neutral-400 hover:dark:bg-neutral-700 text-gray-500 dark:text-neutral-700 hover:text-gray-700 hover:dark:text-neutral-500 transition-colors duration-200 dark:duration-100 ease-out select-none focus:outline-none"
-            aria-label="Close Navigation Menu"
-            title="Close"
-          />
+        {/* TODO: fix colors */}
+        <Sheet className="rounded-md p-4 flex flex-col gap-3 h-full overflow-auto items-center bg-zdaBG-lighterCard/90 dark:bg-zdaBG-darkCard/90 text-gray-700 dark:text-gray-200">
+          <div className="inline-flex items-center py-3 mx-auto">
+            <div className="text-lg font-semibold pointer-events-none select-none flex flex-row absolute left-0 ml-4">
+              <span>⌞&nbsp;</span>
+              <h3 className="font-outfit">The ZDA Website</h3>
+              <span>&nbsp;⌝</span>
+            </div>
+            <button
+              className="modal-close-btn p-2 mr-4 w-min rounded-md bg-gray-200/65 dark:bg-neutral-900/85 hover:bg-gray-300 dark:hover:bg-neutral-800/75 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
+              onClick={() => setOpen(false)}
+              onTouchEnd={() => setOpen(false)}
+              aria-description="Closes the Navigation Menu"
+              aria-label="Close Navigation Menu"
+              title="Close"
+            >
+              {closeIcon}
+            </button>
+          </div>
           <Divider className="mt-auto" />
-          <DialogContent className="gap-2">
-            <Typography
-              level="title-md"
-              fontWeight={600}
-              className="mt-2 text-gray-50 dark:text-neutral-100 pointer-events-none select-none"
-              sx={{ fontFamily: fontFamilyOutfitSx }}
-            >
-              The ZDA Website
-            </Typography>
-            <Box
-              className="flex flex-col xl:flex-row flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]"
-              // sx={HamburgerBoxTopSx}
-            >
+          <div className="drawer-content flex flex-col flex-[9999_1_0%] z-[1] gap-x-3 gap-y-4 p-2 m-2 overflow-auto">
+            <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
+              Sections
+            </p>
+            <Box className="flex flex-col xl:flex-row flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
               <Button
                 onClick={() => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
                 className="justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerTopNavBtnDarkSx
-                //     : HamburgerTopNavBtnLightSx
-                // }
               >
                 Home
               </Button>
@@ -122,11 +96,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerTopNavBtnDarkSx
-                //     : HamburgerTopNavBtnLightSx
-                // }
               >
                 Portfolio
               </Button>
@@ -136,28 +105,15 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerTopNavBtnDarkSx
-                //     : HamburgerTopNavBtnLightSx
-                // }
               >
                 Commissions
               </Button>
             </Box>
-            <Typography
-              level="title-md"
-              fontWeight={600}
-              className="mt-2 text-gray-50 dark:text-neutral-100 pointer-events-none select-none"
-              // sx={
-              //   theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
-              // }
-            >
+            <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Social Media
-            </Typography>
+            </p>
             <Box
               className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]"
-              // sx={HamburgerBoxSx}
             >
               <Button
                 startDecorator={extLinkIcon}
@@ -166,11 +122,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Bluesky
               </Button>
@@ -183,11 +134,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Instagram
               </Button>
@@ -198,11 +144,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Threads
               </Button>
@@ -213,29 +154,14 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Mastodon
               </Button>
             </Box>
-            <Typography
-              level="title-md"
-              fontWeight={600}
-              className="mt-2 text-gray-50 dark:text-neutral-100 pointer-events-none select-none"
-              // sx={
-              //   theme === "dark" ? HamburgerTitleDarkSx : HamburgerTitleLightSx
-              // }
-            >
-              Prints and Support
-            </Typography>
-            <Box
-              className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]"
-              // sx={HamburgerBoxSx}
-            >
+            <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
+              Prints/Support
+            </p>
+            <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <Button
                 startDecorator={extLinkIcon}
                 onClick={() => {
@@ -243,11 +169,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Print Shop
               </Button>
@@ -258,11 +179,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Ko-Fi (HQ Files)
               </Button>
@@ -273,11 +189,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 PayPal
               </Button>
@@ -288,25 +199,18 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   setOpen(false);
                 }}
                 className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
-                // sx={
-                //   theme === "dark"
-                //     ? HamburgerInnerNavBtnDarkSx
-                //     : HamburgerInnerNavBtnLightSx
-                // }
               >
                 Venmo
               </Button>
             </Box>
-          </DialogContent>
+          </div>
           <Divider className="mt-auto" />
           <Stack direction="row" justifyContent="center" useFlexGap spacing={1}>
-            <Typography
-              level="body-xs"
-              className="italic font-normal text-gray-200/75 dark:text-neutral-400/85 pointer-events-none select-none"
-              sx={{ fontFamily: fontFamilySx, fontSize: "14px" }}
-            >
-              Thank you for your support!
-            </Typography>
+            {/* TODO: tweak height for diff screen sizes */}
+            <img
+              src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
+              className="mx-4 my-2 max-h-8"
+            />
           </Stack>
         </Sheet>
       </Drawer>
