@@ -18,8 +18,53 @@ const Header = () => {
   return (
     <>
       {/* TODO: full mobile vers layout with just nav/logo and logo centered */}
-      <header className="fixed w-full z-40 top-0 left-0 py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md">
-        <div className="inline-flex items-center py-3 mx-auto">
+      <header className="fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md">
+        {/* MOBILE PHONE ONLY */}
+        <div className="flex justify-between items-center w-full xs:hidden p-0 mx-auto mb-0">
+          <div className="nav-btn-box ml-4">
+            {/* Nav Btn */}
+            <button
+              className="p-2 rounded-md bg-transparent text-neutral-900 dark:text-gray-200 hover:text-zdaRedpink-600 dark:hover:text-zdaRedpink-650 transition-colors duration-200 ease-out"
+              onClick={() => setOpen(true)}
+              aria-label="Navigation Menu"
+              aria-description="Opens the Navigation Menu"
+              title="Navigation Menu"
+            >
+              {hamburgerIcon}
+            </button>
+          </div>
+          <div className="zda-header-logo-box mr-1 sm:mr-2 lg:mr-1">
+            {/* Logo Btn */}
+            <img
+              src={theme === "dark" ? zdaDarkCircLogo : zdaLightCircLogo}
+              alt="ZDA Z Logo"
+              title="Click to see ZDA logo page"
+              className="zda-header-logo cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
+              width={36}
+              height={36}
+              onClick={() => switchPage("Logo", setPage)}
+              onTouchEnd={() => switchPage("Logo", setPage)}
+            />
+            <img
+              src={
+                theme === "dark" ? zdaLightCircHoverLogo : zdaDarkCircHoverLogo
+              }
+              alt="ZDA Z Logo Hover Version"
+              title="Click to see ZDA logo page"
+              className="zda-header-logo-hover cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
+              width={36}
+              height={36}
+              onClick={() => switchPage("Logo", setPage)}
+              onTouchEnd={() => switchPage("Logo", setPage)}
+            />
+          </div>
+          {/* Theme Menu */}
+          <div className="cursor-pointer focus-visible:outline-none mr-4 lg:flex lg:static lg:w-auto">
+            <ThemeMenu />
+          </div>
+        </div>
+        {/* BIG PHONE/TABLET/LAPTOP/DESKTOP */}
+        <div className="hidden xs:inline-flex items-center py-3 mx-auto">
           {/* Logo/Title/Nav Container */}
           <div className="header-left sm:grid sm:grid-cols-3 md:flex p-0 m-0 absolute left-0 ml-4">
             {/* Nav Btn, Logo Btn and Title */}
@@ -29,7 +74,6 @@ const Header = () => {
                 <button
                   className="p-2 mr-4 rounded-md bg-transparent text-neutral-900 dark:text-gray-200 hover:text-zdaRedpink-600 dark:hover:text-zdaRedpink-650 transition-colors duration-200 ease-out"
                   onClick={() => setOpen(true)}
-                  onTouchEnd={() => setOpen(true)}
                   aria-label="Navigation Menu"
                   aria-description="Opens the Navigation Menu"
                   title="Navigation Menu"
@@ -116,8 +160,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <HamburgerMenu open={open} setOpen={setOpen} />
       </header>
+      <HamburgerMenu open={open} setOpen={setOpen} />
     </>
   );
 };
