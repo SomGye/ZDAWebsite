@@ -65,7 +65,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               <span>&nbsp;⌝</span>
             </div>
             <button
-              className="modal-close-btn p-2 mr-4 w-min rounded-md bg-gray-200/65 dark:bg-neutral-900/85 hover:bg-gray-300 dark:hover:bg-neutral-800/75 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
+              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/65 dark:bg-neutral-900/85 hover:bg-gray-300 dark:hover:bg-neutral-800/75 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
               onClick={() => setOpen(false)}
               onTouchEnd={() => setOpen(false)}
               aria-description="Closes the Navigation Menu"
@@ -112,9 +112,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Social Media
             </p>
-            <Box
-              className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]"
-            >
+            <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <Button
                 startDecorator={extLinkIcon}
                 onClick={() => {
