@@ -57,7 +57,8 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
       >
         {/* TODO: replace MUI components with Tailwind HTML where needed */}
         {/* TODO: fix colors */}
-        <Sheet className="rounded-md p-4 flex flex-col gap-3 h-full overflow-auto items-center bg-zdaBG-lighterCard/90 dark:bg-zdaBG-darkCard/90 text-gray-700 dark:text-gray-200">
+        {/* TODO: 'active' clicked styles on btns */}
+        <Sheet className="rounded-md p-4 flex flex-col gap-3 h-full overflow-auto items-center bg-zdaBG-lighterCard/90 dark:bg-zdaBG-darkCard/95 text-gray-700 dark:text-gray-200">
           <div className="inline-flex items-center py-3 mx-auto">
             <div className="text-lg font-semibold pointer-events-none select-none flex flex-row absolute left-0 ml-4">
               <span>⌞&nbsp;</span>
@@ -65,7 +66,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               <span>&nbsp;⌝</span>
             </div>
             <button
-              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/65 dark:bg-neutral-900/85 hover:bg-gray-300 dark:hover:bg-neutral-800/75 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
+              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/75 dark:bg-neutral-800/45 hover:bg-gray-300 dark:hover:bg-neutral-800 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
               onClick={() => setOpen(false)}
               onTouchEnd={() => setOpen(false)}
               aria-description="Closes the Navigation Menu"
@@ -80,13 +81,13 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Sections
             </p>
-            <Box className="flex flex-col xl:flex-row flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
+            <Box className="flex flex-col flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
               <Button
                 onClick={() => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
-                className="justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
               >
                 Home
               </Button>
@@ -95,7 +96,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
-                className="justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
               >
                 Portfolio
               </Button>
@@ -104,9 +105,18 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
-                className="justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
               >
                 Commissions
+              </Button>
+              <Button
+                onClick={() => {
+                  switchPage("About", setPage);
+                  setOpen(false);
+                }}
+                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+              >
+                About
               </Button>
             </Box>
             <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
