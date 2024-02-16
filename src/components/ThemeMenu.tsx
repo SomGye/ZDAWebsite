@@ -149,13 +149,13 @@ const ThemeMenu = () => {
           {/* Menu Section */}
           <DropdownMenu.Portal>
             <DropdownMenu.Content
-              className="z-50 min-w-[160px] bg-zdaBG-lighterCard dark:bg-zdaRedpink-1000 rounded-lg p-[5px] shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+              className="z-50 min-w-[160px] bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-[5px] shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
               sideOffset={5}
               align="start"
               onInteractOutside={() => setOpen(false)}
             >
               <DropdownMenu.Item
-                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-450 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-zdaRedpink-50 dark:data-[highlighted]:bg-zdaRedpink-450/75 dark:data-[highlighted]:text-zinc-950"
+                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-gray-200/95 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-600/95 dark:data-[highlighted]:text-zinc-950"
                 onClick={() => changeTheme("dark")}
               >
                 <span className="mr-2 mt-[1px] 4xl:mr-3 4k:mr-4">
@@ -164,7 +164,7 @@ const ThemeMenu = () => {
                 Dark
               </DropdownMenu.Item>
               <DropdownMenu.Item
-                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-450 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-zdaRedpink-50 dark:data-[highlighted]:bg-zdaRedpink-450/75 dark:data-[highlighted]:text-zinc-950"
+                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-gray-200/95 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-600/95 dark:data-[highlighted]:text-zinc-950"
                 onClick={() => changeTheme("light")}
               >
                 <span className="mr-2 mt-[1px] 4xl:mr-3 4k:mr-4">
@@ -172,9 +172,9 @@ const ThemeMenu = () => {
                 </span>
                 Light
               </DropdownMenu.Item>
-              <DropdownMenu.Separator className="h-[1px] m-1 bg-zdaRedpink-600/20 dark:bg-zdaRedpink-400/20" />
+              <DropdownMenu.Separator className="h-[1px] m-1 bg-zdaRedpink-600/20 dark:bg-gray-600/5" />
               <DropdownMenu.Item
-                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-450 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-zdaRedpink-50 dark:data-[highlighted]:bg-zdaRedpink-450/75 dark:data-[highlighted]:text-zinc-950"
+                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-gray-200/95 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-600/95 dark:data-[highlighted]:text-zinc-950"
                 onClick={() => changeTheme("system")}
               >
                 <span className="mr-2 mt-[1px] 4xl:mr-3 4k:mr-4">
