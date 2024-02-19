@@ -58,7 +58,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
         {/* TODO: replace MUI components with Tailwind HTML where needed */}
         {/* TODO: fix colors */}
         {/* TODO: 'active' clicked styles on btns */}
-        <Sheet className="rounded-md p-4 flex flex-col gap-3 h-full overflow-auto items-center bg-zdaBG-lighterCard/90 dark:bg-zdaBG-darkCard/95 text-gray-700 dark:text-gray-200">
+        <Sheet className="rounded-md p-4 flex flex-col gap-3 h-full overflow-y-auto overflow-x-hidden items-center bg-zdaBG-lighterCard/90 dark:bg-zdaBG-darkCard/95 text-gray-700 dark:text-gray-200">
           <div className="inline-flex items-center py-3 mx-auto">
             <div className="text-lg font-semibold pointer-events-none select-none flex flex-row absolute left-0 ml-4">
               <span>⌞&nbsp;</span>
@@ -66,7 +66,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               <span>&nbsp;⌝</span>
             </div>
             <button
-              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/75 dark:bg-neutral-800/45 hover:bg-gray-300 dark:hover:bg-neutral-800 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
+              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/75 dark:bg-neutral-800/45 hover:bg-gray-300 active:bg-gray-400 dark:hover:bg-neutral-800 dark:active:bg-neutral-700 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
               onClick={() => setOpen(false)}
               onTouchEnd={() => setOpen(false)}
               aria-description="Closes the Navigation Menu"
@@ -76,53 +76,54 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               {closeIcon}
             </button>
           </div>
-          <Divider className="mt-auto" />
-          <div className="drawer-content flex flex-col flex-[9999_1_0%] z-[1] gap-x-3 gap-y-4 p-2 m-2 overflow-auto">
+          <Divider className="mt-auto" sx={{ marginBottom: -2 }} />
+          <div className="drawer-content flex flex-col flex-[9999_1_0%] z-[1] gap-x-3 gap-y-4 w-full px-3 py-2 m-2 overflow-auto">
             <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Sections
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
-              <Button
+              <button
                 onClick={() => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
-                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Home
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={() => {
                   switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
-                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Portfolio
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={() => {
                   switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
-                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Commissions
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={() => {
                   switchPage("About", setPage);
                   setOpen(false);
                 }}
-                className="w-full justify-start bg-zdaRed-500 dark:bg-zdaRed-600 hover:bg-gray-900 dark:hover:bg-zdaRed-1000 text-gray-800 dark:text-gray-200 hover:text-gray-100 dark:hover:text-gray-200 border-2 border-solid border-zdaRed-1000 hover:border-zdaRed-600 rounded-xl transition-all duration-150 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 About
-              </Button>
+              </button>
             </Box>
             <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Social Media
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
+              {/* START HERE - convert other buttons and use similar to above style but less rounded */}
               <Button
                 startDecorator={extLinkIcon}
                 onClick={() => {
