@@ -93,13 +93,12 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               Sections
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
-              {/* TODO: meditate on this; see if using light gray in dark mode is better */}
               <button
                 onClick={() => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Home
               </button>
@@ -108,7 +107,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Portfolio
               </button>
@@ -117,7 +116,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Commissions
               </button>
@@ -126,7 +125,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("About", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 About
               </button>
