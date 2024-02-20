@@ -12,7 +12,18 @@ import { pageAtom } from "../states/pageAtom";
 import { Box, Button } from "@mui/joy";
 import { clickLink, switchPage } from "../helpers";
 import { themeAtom } from "../states/themeAtom";
-import { closeIcon, extLinkIcon } from "../icons";
+import {
+  bskyIcon,
+  closeIcon,
+  extLinkIcon,
+  igIcon,
+  kofiIcon,
+  mastoIcon,
+  payPalIcon,
+  paymentIcon,
+  printShopIcon,
+  threadsIcon,
+} from "../icons";
 import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
 
@@ -82,12 +93,13 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               Sections
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
+              {/* TODO: meditate on this; see if using light gray in dark mode is better */}
               <button
                 onClick={() => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Home
               </button>
@@ -96,7 +108,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Portfolio
               </button>
@@ -105,7 +117,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 Commissions
               </button>
@@ -114,7 +126,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("About", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 my-1 text-base sm:text-sm font-medium bg-zdaBlue-200 hover:bg-zdaBlue-300 active:bg-zdaBlue-400 dark:bg-gray-600/35 dark:hover:bg-gray-600/55 dark:active:bg-gray-600/75 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-200 border-2 border-solid border-zdaBlue-100/70 hover:border-zdaBlue-300 active:border-transparent dark:border-gray-950/20 dark:hover:border-transparent dark:active:border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-300 dark:hover:bg-gray-400 dark:active:bg-gray-500 text-zdaBG-lighterCard dark:text-gray-900 dark:hover:text-black border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
               >
                 About
               </button>
@@ -123,99 +135,105 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               Social Media
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
-              {/* START HERE - convert other buttons and use similar to above style but less rounded */}
-              <Button
-                startDecorator={extLinkIcon}
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://bsky.app/profile/zerodayanubis.com");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Bluesky
-              </Button>
-              <Button
-                startDecorator={extLinkIcon}
+                <span className="mx-2 absolute left-0">{bskyIcon}</span>
+                <span className="mx-1">Bluesky</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink(
                     "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
                   );
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Instagram
-              </Button>
-              <Button
-                startDecorator={extLinkIcon}
+                <span className="mx-2 absolute left-0">{igIcon}</span>
+                <span className="mx-1">Instagram</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://www.threads.net/@zerodayanubis");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Threads
-              </Button>
-              <Button
-                startDecorator={extLinkIcon}
+                <span className="mx-2 absolute left-0">{threadsIcon}</span>
+                <span className="mx-1">Threads</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://ohai.social/@ZeroDayAnubis");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Mastodon
-              </Button>
+                <span className="mx-2 absolute left-0">{mastoIcon}</span>
+                <span className="mx-1">Mastodon</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
             </Box>
             <p className="font-outfit text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Prints/Support
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
-              <Button
-                startDecorator={extLinkIcon}
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://tinyurl.com/ZDAPrints");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Print Shop
-              </Button>
-              <Button
-                startDecorator={extLinkIcon}
+                <span className="mx-2 absolute left-0">{printShopIcon}</span>
+                <span className="mx-1">Print Shop</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://ko-fi.com/zerodayanubis");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Ko-Fi (HQ Files)
-              </Button>
-              <Button
-                startDecorator={extLinkIcon}
+                <span className="mx-2 absolute left-0">{kofiIcon}</span>
+                <span className="mx-1">Ko-Fi (HQ Files)</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://paypal.me/ZeroDayAnubis");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                PayPal
-              </Button>
-              <Button
-                startDecorator={extLinkIcon}
+                <span className="mx-2 absolute left-0">{payPalIcon}</span>
+                <span className="mx-1">PayPal</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
+              <button
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out"
                 onClick={() => {
                   clickLink("https://account.venmo.com/u/somgye");
                   setOpen(false);
                 }}
-                className="w-full justify-center bg-gray-50 dark:bg-neutral-950 hover:bg-gray-300 dark:hover:bg-neutral-800 text-zdaRedpink-950 dark:text-zdaRedpink-100 hover:text-zdaRedpink-1000 dark:hover:text-zdaRedpink-50 border-2 border-solid border-zdaBG-lightCard dark:border-zdaBG-darkCard hover:border-zdaRed-600 rounded-lg transition-colors duration-200 dark:duration-150 ease-out"
               >
-                Venmo
-              </Button>
+                <span className="mx-2 absolute left-0">{paymentIcon}</span>
+                <span className="mx-1">Venmo</span>
+                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
+              </button>
             </Box>
           </div>
           <Divider className="mt-auto" />
           <Stack direction="row" justifyContent="center" useFlexGap spacing={1}>
-            {/* TODO: tweak height for diff screen sizes */}
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               className="mx-4 my-2 max-h-8"
