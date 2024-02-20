@@ -72,6 +72,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("Home", setPage)}
               >
                 Home
               </p>
@@ -81,6 +82,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("Portfolio", setPage)}
               >
                 Portfolio
               </p>
@@ -90,6 +92,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("Commissions", setPage)}
               >
                 Commissions
               </p>
@@ -99,6 +102,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("About", setPage)}
               >
                 About
               </p>
@@ -116,6 +120,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("Home", setPage)}
               >
                 Home
               </p>
@@ -125,6 +130,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("Portfolio", setPage)}
               >
                 Portfolio
               </p>
@@ -134,6 +140,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("Commissions", setPage)}
               >
                 Commissions
               </p>
@@ -143,6 +150,7 @@ const Header = () => {
                     ? "nav-link-animated-dark"
                     : "nav-link-animated"
                 }
+                onClick={() => switchPage("About", setPage)}
               >
                 About
               </p>
