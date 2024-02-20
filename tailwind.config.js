@@ -18,11 +18,17 @@ export default {
       colors: {
         zdaBG: {
           dark: '#0b0a0d',
+          lessDarkCard: '#141316',
           darkCard: '#0f0e11',
           darkerCard: '#0e0d10',
           light: '#fafafa',
           lightCard: '#f0f0f0',
           lighterCard: '#f5f5f5',
+        },
+        zdaBtn: {
+          dark: '#1b1a1d',
+          darkCard: '#1d1c1f',
+          darkHover: '#2a292c',
         },
         zdaText: {
           dark: '#19141a',
