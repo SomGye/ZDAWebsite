@@ -155,7 +155,7 @@ const ThemeMenu = () => {
               onInteractOutside={() => setOpen(false)}
             >
               <DropdownMenu.Item
-                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-600 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-600/85 dark:data-[highlighted]:text-zinc-950 transition-colors ease-out duration-200"
+                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-550 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-550/85 dark:data-[highlighted]:text-zinc-950 transition-colors ease-out duration-200"
                 onClick={() => changeTheme("dark")}
               >
                 <span className="mr-2 mt-[1px] 4xl:mr-3 4k:mr-4">
@@ -164,7 +164,7 @@ const ThemeMenu = () => {
                 Dark
               </DropdownMenu.Item>
               <DropdownMenu.Item
-                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-600 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-600/85 dark:data-[highlighted]:text-zinc-950 transition-colors ease-out duration-200"
+                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-550 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-550/85 dark:data-[highlighted]:text-zinc-950 transition-colors ease-out duration-200"
                 onClick={() => changeTheme("light")}
               >
                 <span className="mr-2 mt-[1px] 4xl:mr-3 4k:mr-4">
@@ -174,7 +174,7 @@ const ThemeMenu = () => {
               </DropdownMenu.Item>
               <DropdownMenu.Separator className="h-[1px] m-1 bg-zdaRedpink-600/20 dark:bg-gray-600/5" />
               <DropdownMenu.Item
-                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-600 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-600/85 dark:data-[highlighted]:text-zinc-950 transition-colors ease-out duration-200"
+                className="group pb-[1px] my-2 md:my-0 text-base 3xl:text-lg 4xl:text-2xl 4k:text-3xl lg:py-3 3xl:py-4 4xl:py-6 4k:py-8 lg:px-6 3xl:px-8 4xl:px-10 4k:px-12 leading-none text-zdaRedpink-600/90 dark:text-zdaRedpink-550 rounded-md 3xl:rounded-lg flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[highlighted]:bg-zdaRedpink-600/75 data-[highlighted]:text-neutral-50 dark:data-[highlighted]:bg-zdaRedpink-550/85 dark:data-[highlighted]:text-zinc-950 transition-colors ease-out duration-200"
                 onClick={() => changeTheme("system")}
               >
                 <span className="mr-2 mt-[1px] 4xl:mr-3 4k:mr-4">

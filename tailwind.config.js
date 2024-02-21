@@ -29,6 +29,9 @@ export default {
           dark: '#1b1a1d',
           darkCard: '#1d1c1f',
           darkHover: '#2a292c',
+          light: '#eaeaea',
+          lightCard: '#e8e8e8',
+          lightHover: '#d5d5d5',
         },
         zdaText: {
           dark: '#19141a',
@@ -90,7 +93,7 @@ export default {
       },
       boxShadow: {
         'theme-menu-dropdown-light': '0px 2px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
-        'theme-menu-dropdown-dark': '1px 1px 38px -4px #ff002f3a, 0px 3px 20px -15px #ff002f29',
+        'theme-menu-dropdown-dark': '1px 1px 38px -4px #f700403a, 0px 3px 20px -15px #f7004029',
       },
       dropShadow: {
         'logo-light': '20px 8px 4px #19141a2a',
