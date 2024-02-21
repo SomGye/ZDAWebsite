@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full z-30 bottom-0 left-0 bg-gradient-to-b from-zdaRedpink-400/5 dark:from-stone-700/5 dark:to-zdaRedpink-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md">
-      <div className="container px-5 py-8 mx-auto">
+      <div className="px-3 md:px-7 lg:px-10 py-8 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-4 pointer-events-none select-none">
