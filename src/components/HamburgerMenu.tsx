@@ -201,7 +201,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 }}
               >
                 <span className="mx-2 absolute left-0">{kofiIcon}</span>
-                <span className="mx-1">Ko-Fi (HQ Files)</span>
+                <span className="mx-1">Ko-fi (HQ Files)</span>
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button

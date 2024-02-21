@@ -179,15 +179,4 @@ div.header-logo-box:hover img.header-logo-hover,
 div.header-logo-box:active img.header-logo-hover {
   opacity: 1;
 }
-
-/* TODO: mobile style with opacity */
-/* div.Logo-Box-Mobile:hover img.ZDA-Logo-TopBanner, */
-/* div.Logo-Box-Mobile:active img.ZDA-Logo-TopBanner { */
-/* display: none; */
-/* } */
-
-/* div.Logo-Box-Mobile:hover img.ZDA-Logo-TopBanner-Hover, */
-/* div.Logo-Box-Mobile:active img.ZDA-Logo-TopBanner-Hover { */
-/* display: block; */
-/* } */
 /* -- */
