@@ -7,6 +7,8 @@ import zda_light from "/zda_light_mono.svg";
 import zda_light_hover from "/zda_light_mono_hover.svg";
 import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
+import zdaworks_dark from "/zdaworks_dark_nl.svg";
+import zdaworks_light from "/zdaworks_light_nl.svg";
 import { chatIcon, emailIcon, privacyDocIcon } from "../../icons";
 
 const Footer = () => {
@@ -14,7 +16,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    // TODO: test and tweak for mobile/tablet/laptop
     <footer className="w-full z-30 bottom-0 left-0 bg-gradient-to-b from-zdaRedpink-400/5 dark:from-stone-700/5 dark:to-zdaRedpink-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md">
       <div className="container px-5 py-8 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
@@ -22,25 +23,24 @@ const Footer = () => {
             <h2 className="font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-4 pointer-events-none select-none">
               SOCIAL MEDIA
             </h2>
-            {/* TODO: see if margin bottom is needed, may remove */}
             <nav className="list-none mb-10">
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Bluesky
                 </a>
               </li>
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Instagram
                 </a>
               </li>
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Threads
                 </a>
               </li>
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Mastodon
                 </a>
               </li>
@@ -52,39 +52,46 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Print Shop
                 </a>
               </li>
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Ko-fi
                 </a>
               </li>
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   PayPal
                 </a>
               </li>
               <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
+                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300 select-none">
                   Venmo
                 </a>
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            {/* TODO: put the ZDA Works long logo below and link to parent company site */}
+          <div className="hidden md:block md:w-1/2 lg:w-1/4 w-full px-4">
             <h2 className="font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-4 pointer-events-none select-none">
               COMPANY
             </h2>
-            <nav className="list-none mb-10">
-              <li className="my-3">
-                <a className="text-gray-500 hover:text-black dark:text-gray-400/90 dark:hover:text-gray-300">
-                  ZDAWorks
-                </a>
-              </li>
-            </nav>
+            <h3 className=" max-w-[20ch] font-light text-gray-700 dark:text-gray-400 tracking-tight italic text-sm mb-4 select-none">
+              ZDA is brought to you by the abstract media hub company:
+            </h3>
+            <a
+              href="https://www.zda.works/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-4 lg:max-h-5"
+                src={theme === "dark" ? zdaworks_dark : zdaworks_light}
+                alt="ZDAWorks company logo"
+                title="Click to go to ZDAWorks site"
+              />
+            </a>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h3 className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 pointer-events-none select-none">
@@ -118,14 +125,15 @@ const Footer = () => {
                 src={
                   theme === "dark" ? zerodayanubis_dark : zerodayanubis_light
                 }
-                className="hidden sm:block ml-3 max-h-8"
+                className="hidden sm:block ml-3 max-h-8 select-none"
               />
             </div>
             <a
               href="https://www.zda.works/"
-              className="text-sm text-gray-700 dark:text-gray-400 sm:ml-6 sm:mt-0 mt-4"
+              className="text-sm text-gray-700 dark:text-gray-400 sm:ml-6 mt-[27px] sm:mt-0 select-none"
               target="_blank"
               rel="noopener noreferrer"
+              title="Click to go to ZDAWorks site"
             >
               © ZDA Works&nbsp;{currentYear}
             </a>
