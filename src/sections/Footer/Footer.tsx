@@ -139,9 +139,14 @@ const Footer = () => {
             </a>
           </div>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 gap-4 justify-center sm:justify-start">
-            {/* TODO: icon buttons for email and Discord */}
-            {emailIcon}
-            {chatIcon}
+            <button className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none">
+              <span className="mt-[1px] mr-0 lg:mr-6">{emailIcon}</span>
+              Email
+            </button>
+            <button className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none">
+              <span className="mt-[1px] mr-0 lg:mr-6">{chatIcon}</span>
+              Message
+            </button>
             {/* TODO: privacy policy `a` link, like on ZDAWorks */}
             {privacyDocIcon}
           </span>
