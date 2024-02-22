@@ -122,6 +122,61 @@ body.noscroll {
   transform-origin: center;
 }
 
+.footer-link-animated {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  padding-right: 0.2rem;
+}
+
+.footer-link-animated::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -0.3rem;
+  left: 0;
+  /* text-gray-600 */
+  background-color: #4B5563;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  transition: transform 0.3s ease-out;
+}
+
+.footer-link-animated-dark {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  padding-right: 0.2rem;
+}
+
+.footer-link-animated-dark::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  height: 2px;
+  bottom: -0.3rem;
+  left: 0;
+  /* text-gray-300 */
+  background-color: #D1D5DB;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  transition: transform 0.3s ease-out;
+}
+
+.footer-link-animated:hover::after,
+.footer-link-animated-dark:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
 .btn-logopage {
   transition: background-image 0.3s ease-out;
   &:hover .btn-logopage-helper {
