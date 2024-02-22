@@ -12,7 +12,7 @@ const Body = () => {
     <>
       {/* Standard Body */}
       {page !== "Logo" && page !== "Examples" && (
-        <div className="body-container my-16 xs:my-20 flex flex-col justify-center items-center">
+        <div className="body-container w-full my-16 xs:my-20 flex flex-col justify-center items-center">
           <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
           <h1 className="font-outfit font-light text-2xl my-4 text-neutral-800 dark:text-neutral-100">
             ZDAWebsite
