@@ -10,12 +10,14 @@ import zerodayanubis_light from "/zerodayanubis_light.svg";
 import zdaworks_dark from "/zdaworks_dark_nl.svg";
 import zdaworks_light from "/zdaworks_light_nl.svg";
 import { chatIcon, emailIcon, privacyDocIcon } from "../../icons";
+import { clickEmail, clickLink } from "../../helpers";
 
 const Footer = () => {
   const theme = useRecoilValue(themeAtom);
   const currentYear = new Date().getFullYear();
 
   return (
+    // TODO: add hidden trigger to go to Examples page
     <footer className="w-full z-30 bottom-0 left-0 bg-gradient-to-b from-zdaRedpink-400/5 dark:from-stone-700/5 dark:to-zdaRedpink-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md">
       <div className="px-3 md:px-7 lg:px-10 py-8 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
@@ -97,6 +99,14 @@ const Footer = () => {
             <h3 className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 pointer-events-none select-none">
               Thank you for visiting!
             </h3>
+            <a
+              className="inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70"
+              href="http://tinyurl.com/ZDAPrivacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {privacyDocIcon}&nbsp;PRIVACY POLICY
+            </a>
           </div>
         </div>
       </div>
@@ -139,16 +149,22 @@ const Footer = () => {
             </a>
           </div>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 gap-4 justify-center sm:justify-start">
-            <button className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none">
+            <button
+              className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
+              onClick={clickEmail}
+            >
               <span className="mt-[1px] mr-0 lg:mr-6">{emailIcon}</span>
               Email
             </button>
-            <button className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none">
+            <button
+              className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
+              onClick={() =>
+                clickLink("https://discordapp.com/users/193548282264420354")
+              }
+            >
               <span className="mt-[1px] mr-0 lg:mr-6">{chatIcon}</span>
               Message
             </button>
-            {/* TODO: privacy policy `a` link, like on ZDAWorks */}
-            {privacyDocIcon}
           </span>
         </div>
       </div>
