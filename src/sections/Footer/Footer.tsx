@@ -185,7 +185,8 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {privacyDocIcon}&nbsp;PRIVACY POLICY
+              <span className="hidden md:block">{privacyDocIcon}</span>
+              &nbsp;PRIVACY POLICY
             </a>
           </div>
         </div>
