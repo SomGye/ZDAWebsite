@@ -191,7 +191,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-gradient-to-tr from-zdaRed-500/15 to-gray-200 dark:from-zdaRedpink-900/5">
-        <div className="w-full px-5 md:px-9 lg:px-12 py-6 mx-auto flex items-center flex-col-reverse sm:flex-row">
+        <div className="w-full px-5 md:px-9 lg:px-12 py-8 mx-auto flex items-center flex-col-reverse sm:flex-row">
           {/* Logo and Copyright Container - Used for ordering on mobile vs desktop */}
           <div className="flex flex-col sm:flex-row items-center mt-8 sm:mt-auto">
             <div className="flex font-medium items-center md:justify-start justify-center text-gray-900">
