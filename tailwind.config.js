@@ -93,7 +93,7 @@ export default {
       },
       boxShadow: {
         'theme-menu-dropdown-light': '0px 2px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
-        'theme-menu-dropdown-dark': '1px 1px 38px -4px #f700403a, 0px 3px 20px -15px #f7004029',
+        'theme-menu-dropdown-dark': '1px 1px 38px -4px rgba(255, 229, 243, 0.20), 0px 3px 20px -15px rgba(255, 229, 243, 0.13)', // zdaRedpink-50
       },
       dropShadow: {
         'logo-light': '20px 8px 4px #19141a2a',
