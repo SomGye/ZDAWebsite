@@ -14,10 +14,40 @@ import { hamburgerIcon } from "../../icons";
 const Header = () => {
   const [, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
   const theme = useRecoilValue(themeAtom);
+  const headerHeight = 80;
+
+  const determineHeaderClass = () => {
+    if (scrolled) {
+      if (theme === "dark") {
+        return "scrolled-header-dark ";
+      } else {
+        return "scrolled-header ";
+      }
+    } else {
+      if (theme === "dark") {
+        return "top-header-dark ";
+      } else {
+        return "top-header ";
+      }
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > headerHeight);
+    });
+  }, []);
+
   return (
     <>
-      <header className="fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md">
+      <header
+        className={
+          determineHeaderClass() +
+          "fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md"
+        }
+      >
         <div className="header-container flex justify-between xs:justify-normal w-full items-center p-0 mx-auto xs:m-0">
           {/* LEFT - Nav Btn */}
           <div className="header-left ml-4">
