@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/themeAtom";
 import zda_dark from "/zda_dark_mono.svg";
 import zda_dark_hover from "/zda_dark_mono_hover.svg";
@@ -10,14 +10,15 @@ import zerodayanubis_light from "/zerodayanubis_light.svg";
 import zdaworks_dark from "/zdaworks_dark_nl.svg";
 import zdaworks_light from "/zdaworks_light_nl.svg";
 import { chatIcon, emailIcon, privacyDocIcon } from "../../icons";
-import { clickEmail, clickLink } from "../../helpers";
+import { clickEmail, clickLink, switchPage } from "../../helpers";
+import { pageAtom } from "../../states/pageAtom";
 
 const Footer = () => {
   const theme = useRecoilValue(themeAtom);
+  const [, setPage] = useRecoilState(pageAtom);
   const currentYear = new Date().getFullYear();
 
   return (
-    // TODO: add hidden trigger to go to Examples page
     <footer className="w-full z-30 bottom-0 left-0 bg-gradient-to-b from-zdaRedpink-400/5 dark:from-stone-700/5 dark:to-zdaRedpink-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md">
       <div className="px-3 md:px-7 lg:px-10 py-8 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
@@ -176,7 +177,10 @@ const Footer = () => {
             </a>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h3 className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 pointer-events-none select-none">
+            <h3
+              className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 cursor-default select-none"
+              onClick={() => switchPage("Examples", setPage)}
+            >
               Thank you for visiting!
             </h3>
             <a
