@@ -250,6 +250,7 @@ header.scrolled-header {
     rgba(255, 82, 142, 0.05),
     rgba(255, 82, 142, 0)
   );
+  border-color: transparent;
   transition: all 0.3s ease-out;
 }
 
@@ -268,6 +269,7 @@ header.scrolled-header-dark {
     rgba(199, 0, 43, 0.05),
     rgba(199, 0, 43, 0)
   );
+  border-color: transparent;
   transition: all 0.3s ease-out;
 }
 /* -- */
