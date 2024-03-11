@@ -7,10 +7,10 @@ import Body from "./sections/Body/Body";
 import Footer from "./sections/Footer/Footer";
 import { switchPage } from "./helpers";
 
-type Props = {
+type props = {
   route: string;
 };
-const App = ({ route }: Props) => {
+const App = ({ route }: props) => {
   const [page, setPage] = useRecoilState(pageAtom);
 
   React.useEffect(() => {
