@@ -6,6 +6,7 @@ import LogoPage from "../../pages/LogoPage";
 import ExamplesPage from "../../pages/ExamplesPage";
 import { switchPage } from "../../helpers";
 import InfoBanner from "../../components/InfoBanner";
+import PageIndicator from "../../components/PageIndicator";
 
 const Body = () => {
   const [page, setPage] = useRecoilState(pageAtom);
@@ -20,6 +21,7 @@ const Body = () => {
           {/* TODO: insert InfoBanner component here */}
           <InfoBanner />
           {/* TODO: insert secondary/backup tab nav here (only when nav links not in Header) */}
+          <PageIndicator />
           <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
           <h1 className="font-outfit font-light text-2xl my-4 text-neutral-800 dark:text-neutral-100">
             ZDAWebsite
