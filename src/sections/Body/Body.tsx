@@ -5,17 +5,21 @@ import { pageAtom } from "../../states/pageAtom";
 import LogoPage from "../../pages/LogoPage";
 import ExamplesPage from "../../pages/ExamplesPage";
 import { switchPage } from "../../helpers";
+import InfoBanner from "../../components/InfoBanner";
 
 const Body = () => {
   const [page, setPage] = useRecoilState(pageAtom);
   return (
     <>
-    {/* TODO: show Page Links when screen size determines that Header does not show them */}
-    {/* TODO: About Page that is the previous Home+Portfolio summary plus quick chronological feed of my art from 2021-2023; meant to be mostly static, pick images that will live on */}
+      {/* TODO: show Page Links when screen size determines that Header does not show them */}
+      {/* TODO: About Page that is the previous Home+Portfolio summary plus quick chronological feed of my art from 2021-2023; meant to be mostly static, pick images that will live on */}
       {/* Standard Body */}
       {page !== "Logo" && page !== "Examples" && (
-        <div className="body-container w-full my-16 xs:my-20 flex flex-col justify-center items-center">
+        // NOTE: used mt to counter Header height
+        <div className="body-container w-full mt-[61px] xs:mt-[77px] mb-16 xs:mb-20 flex flex-col justify-center items-center">
           {/* TODO: insert InfoBanner component here */}
+          <InfoBanner />
+          {/* TODO: insert secondary/backup tab nav here (only when nav links not in Header) */}
           <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
           <h1 className="font-outfit font-light text-2xl my-4 text-neutral-800 dark:text-neutral-100">
             ZDAWebsite
@@ -29,7 +33,9 @@ const Body = () => {
           {/* TEST: Heading Sections: text with long lines on left and right */}
           <div className="long-line-container flex flex-row justify-center items-center w-full my-8">
             <div className="left-line w-1/12 border-b rounded-2xl border-zdaRedpink-500 dark:border-zdaRedpink-600" />
-            <div className="mid-line mx-2 text-base font-outfit font-semibold text-zdaRedpink-500 dark:text-zdaRedpink-650 select-none">Portfolio</div>
+            <div className="mid-line mx-2 text-base font-outfit font-semibold text-zdaRedpink-500 dark:text-zdaRedpink-650 select-none">
+              Portfolio
+            </div>
             <div className="right-line w-3/5 border-b rounded-2xl border-zdaRedpink-500 dark:border-zdaRedpink-600" />
           </div>
           {/* TEST: SCROLL FILLER */}
