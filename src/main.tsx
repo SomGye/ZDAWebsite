@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ErrorPage from "./sections/Pages/ErrorPage.tsx";
+import ErrorPage from "./pages/ErrorPage.tsx";
 import { RecoilRoot } from "recoil";
 import App from "./App.tsx";
 import "./index.css";

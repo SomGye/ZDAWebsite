@@ -1,6 +1,6 @@
 import * as React from "react";
-import { leftArrowIcon } from "../../icons";
-import ThemeMenu from "../../components/ThemeMenu";
+import { leftArrowIcon } from "../icons";
+import ThemeMenu from "../components/ThemeMenu";
 
 const ErrorPage = () => {
   React.useEffect(() => {

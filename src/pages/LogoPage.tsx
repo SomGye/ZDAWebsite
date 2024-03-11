@@ -1,7 +1,7 @@
 import * as React from "react";
-import { leftArrowMdIcon } from "../../icons";
+import { leftArrowMdIcon } from "../icons";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { themeAtom } from "../../states/themeAtom";
+import { themeAtom } from "../states/themeAtom";
 import zdalogo_dark from "/zda_dark.svg";
 import zdalogo_light from "/zda_light.svg";
 import zda_redpink from "/zerodayanubis_redpink.svg";
@@ -9,8 +9,8 @@ import zda_red from "/zerodayanubis_red.svg";
 import zda_blue from "/zerodayanubis_blue.svg";
 import zda_dark from "/zerodayanubis_dark.svg";
 import zda_light from "/zerodayanubis_light.svg";
-import { switchPage } from "../../helpers";
-import { pageAtom } from "../../states/pageAtom";
+import { switchPage } from "../helpers";
+import { pageAtom } from "../states/pageAtom";
 
 const LogoPage = () => {
   const theme = useRecoilValue(themeAtom);
