@@ -7,11 +7,11 @@ const PageIndicator = () => {
   return (
     <div className="long-line-container flex flex-row justify-center items-center w-11/12 lg:w-[99%] my-2">
       {/* TODO: revisit when I have Body content: may need to go back to left w-[196px] and right w-full  */}
-      <div className="left-line w-3/5 border-b rounded-2xl border-zdaRedpink-500 dark:border-zdaRedpink-600" />
-      <div className="mid-line mx-2 text-lg font-outfit font-semibold text-zdaRedpink-500 dark:text-zdaRedpink-650 select-none">
+      <div className="left-line w-3/5 border-b rounded-2xl border-slate-500 dark:border-slate-500/90" />
+      <div className="mid-line mx-2 text-lg font-outfit font-medium text-slate-600 dark:text-slate-300/95 select-none">
         {page}
       </div>
-      <div className="right-line w-3/5 border-b rounded-2xl border-zdaRedpink-500 dark:border-zdaRedpink-600" />
+      <div className="right-line w-3/5 border-b rounded-2xl border-slate-500 dark:border-slate-500/90" />
     </div>
   );
 };
