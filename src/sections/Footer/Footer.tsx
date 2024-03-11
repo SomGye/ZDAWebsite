@@ -178,7 +178,7 @@ const Footer = () => {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h3
-              className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 cursor-default select-none"
+              className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 cursor-cell select-none"
               onClick={() => switchPage("Examples", setPage)}
             >
               Thank you for visiting!
