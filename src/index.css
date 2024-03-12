@@ -236,8 +236,8 @@ div.header-logo-box:active img.header-logo-hover {
 }
 
 header.top-header {
-  /* zdaBG-lighterCard */
-  background-color: #f5f5f5;
+  /* Use bg color from info-banner-container */
+  background-color: rgba(255, 0, 72, 0.045);
   background-image: none;
   transition: all 0.3s ease-out;
 }
@@ -250,13 +250,14 @@ header.scrolled-header {
     rgba(255, 82, 142, 0.05),
     rgba(255, 82, 142, 0)
   );
-  border-color: transparent;
+  /* gray-200/50 */
+  border-color: rgba(229, 231, 235, 0.5);
   transition: all 0.3s ease-out;
 }
 
 header.top-header-dark {
-  /* zdaBG-darkerCard */
-  background-color: #0e0d10;
+  /* Use bg color from info-banner-container */
+  background-color: rgba(255, 0, 72, 0.035);
   background-image: none;
   transition: all 0.3s ease-out;
 }
@@ -269,7 +270,8 @@ header.scrolled-header-dark {
     rgba(199, 0, 43, 0.05),
     rgba(199, 0, 43, 0)
   );
-  border-color: transparent;
+  /* stone-800/10 */
+  border-color: rgba(41, 37, 36, 0.1);
   transition: all 0.3s ease-out;
 }
 /* -- */

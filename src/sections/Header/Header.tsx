@@ -10,6 +10,7 @@ import { switchPage } from "../../helpers";
 import { pageAtom } from "../../states/pageAtom";
 import HamburgerMenu from "../../components/HamburgerMenu";
 import { hamburgerIcon } from "../../icons";
+import PageLinks from "../../components/PageLinks";
 
 const Header = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -45,7 +46,7 @@ const Header = () => {
       <header
         className={
           determineHeaderClass() +
-          "fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-gray-200/50 dark:border-stone-800/10 rounded-md"
+          "fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-transparent dark:border-transparent rounded-md"
         }
       >
         <div className="header-container flex justify-between xs:justify-normal w-full items-center p-0 mx-auto xs:m-0">
@@ -94,97 +95,14 @@ const Header = () => {
             <span className="hidden lg:block ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 hover:text-zdaRedpink-500 dark:hover:text-zdaRedpink-600 transition-colors duration-500 ease-out font-light cursor-default select-none">
               ⌞ZeroDayAnubis⌝
             </span>
-            {/* Nav Links */}
-            <nav className="hidden md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 items-center text-base font-plusjakartasans font-semibold justify-center">
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("Home", setPage)}
-              >
-                Home
-              </p>
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("Portfolio", setPage)}
-              >
-                Portfolio
-              </p>
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("Commissions", setPage)}
-              >
-                Commissions
-              </p>
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("About", setPage)}
-              >
-                About
-              </p>
-            </nav>
+            <PageLinks location={"headerLg"} />
           </div>
           {/* MID RIGHT - Title/Nav Links - (only xs thru md) */}
           <div className="header-midright hidden xs:flex md:hidden absolute left-1/2 right-1/2 justify-center">
             <span className="hidden xs:block sm:hidden lg:block ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 hover:text-zdaRedpink-500 dark:hover:text-zdaRedpink-600 transition-colors duration-500 ease-out font-light cursor-default select-none">
               ⌞ZeroDayAnubis⌝
             </span>
-            <nav className="hidden sm:flex sm:place-self-center md:place-self-auto md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 items-center text-base font-plusjakartasans font-semibold justify-center">
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("Home", setPage)}
-              >
-                Home
-              </p>
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("Portfolio", setPage)}
-              >
-                Portfolio
-              </p>
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("Commissions", setPage)}
-              >
-                Commissions
-              </p>
-              <p
-                className={
-                  theme === "dark"
-                    ? "nav-link-animated-dark"
-                    : "nav-link-animated"
-                }
-                onClick={() => switchPage("About", setPage)}
-              >
-                About
-              </p>
-            </nav>
+            <PageLinks location={"headerSm"} />
           </div>
           {/* RIGHT - Theme Menu */}
           <div className="header-right flex xs:absolute xs:right-0 mr-4">
