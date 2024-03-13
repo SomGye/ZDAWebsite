@@ -25,8 +25,8 @@ const LogoPage = () => {
   }, []);
 
   return (
-    <div className="flex justify-center w-full h-full my-8">
-      <div className="flex items-center flex-col">
+    <div className="logo-page-container flex justify-center w-full h-screen m-auto">
+      <div className="flex justify-center items-center flex-col flex-wrap">
         <div className="flex flex-col items-center text-md sm:text-lg 3xl:text-2xl 4xl:text-3xl 4k:text-4xl font-light font-outfit text-zdaText-dark dark:text-zdaText-light pointer-events-none select-none">
           Logo designed in InkScape
         </div>
