@@ -18,10 +18,9 @@ const Body = () => {
       {page !== "Logo" && page !== "Examples" && (
         // NOTE: used mt to counter Header height
         <div className="body-container w-full mt-[61px] xs:mt-[77px] mb-16 xs:mb-20 flex flex-col justify-center items-center">
-          {/* TODO: insert InfoBanner component here */}
           <InfoBanner />
-          {/* TODO: insert secondary/backup tab nav here (only when nav links not in Header) */}
-          <PageIndicator />
+          {/* TODO: rework the PageIndicator to be for section headers instead */}
+          {/* <PageIndicator /> */}
           <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
           <h1 className="font-outfit font-light text-2xl my-4 text-neutral-800 dark:text-neutral-100">
             ZDAWebsite

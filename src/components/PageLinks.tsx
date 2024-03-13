@@ -14,7 +14,7 @@ type locatorsType = {
   bodyTop: string;
 };
 const PageLinks = ({ location }: props) => {
-  const [, setPage] = useRecoilState(pageAtom);
+  const [page, setPage] = useRecoilState(pageAtom);
   const theme = useRecoilValue(themeAtom);
   const locators: locatorsType = {
     headerLg:
@@ -26,44 +26,96 @@ const PageLinks = ({ location }: props) => {
   };
   const [locator, setLocator] = React.useState(locators.headerLg);
 
+  const getNavClass = (linkName: string) => {
+    if (linkName === page) {
+      if (theme === "dark") {
+        return "nav-link-animated-dark-active";
+      } else {
+        return "nav-link-animated-active";
+      }
+    } else {
+      if (theme === "dark") {
+        return "nav-link-animated-dark";
+      } else {
+        return "nav-link-animated";
+      }
+    }
+  };
+
   React.useEffect(() => {
     setLocator(locators[location]);
   }, [location]);
 
   return (
     <nav className={locator}>
-      <p
-        className={
-          theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"
-        }
-        onClick={() => switchPage("Home", setPage)}
-      >
-        Home
-      </p>
-      <p
-        className={
-          theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"
-        }
-        onClick={() => switchPage("Portfolio", setPage)}
-      >
-        Portfolio
-      </p>
-      <p
-        className={
-          theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"
-        }
-        onClick={() => switchPage("Commissions", setPage)}
-      >
-        Commissions
-      </p>
-      <p
-        className={
-          theme === "dark" ? "nav-link-animated-dark" : "nav-link-animated"
-        }
-        onClick={() => switchPage("About", setPage)}
-      >
-        About
-      </p>
+      <div className="page-link-container relative flex flex-row justify-center items-center">
+        <div
+          className={
+            (page === "Home" ? "absolute " : "hidden ") +
+            (locator === locators.bodyTop
+              ? "right-0 top-3 ml-[5px] "
+              : "bottom-0 -mb-[5px] ") +
+            "left-line w-[3px] h-[3px] rounded-lg bg-gradient-radial from-zdaRedpink-500 via-zdaRedpink-400 to-transparent dark:from-zdaRedpink-600 dark:via-zdaRedpink-700 dark:to-transparent"
+          }
+        />
+        <p
+          className={getNavClass("Home")}
+          onClick={() => switchPage("Home", setPage)}
+        >
+          Home
+        </p>
+      </div>
+      <div className="page-link-container relative flex flex-row justify-center items-center">
+        <div
+          className={
+            (page === "Portfolio" ? "absolute " : "hidden ") +
+            (locator === locators.bodyTop
+              ? "right-0 top-3 ml-[5px] "
+              : "bottom-0 -mb-[5px] ") +
+            "left-line w-[3px] h-[3px] rounded-lg bg-gradient-radial from-zdaRedpink-500 via-zdaRedpink-400 to-transparent dark:from-zdaRedpink-600 dark:via-zdaRedpink-700 dark:to-transparent"
+          }
+        />
+        <p
+          className={getNavClass("Portfolio")}
+          onClick={() => switchPage("Portfolio", setPage)}
+        >
+          Portfolio
+        </p>
+      </div>
+      <div className="page-link-container relative flex flex-row justify-center items-center">
+        <div
+          className={
+            (page === "Commissions" ? "absolute " : "hidden ") +
+            (locator === locators.bodyTop
+              ? "right-0 top-3 ml-[5px] "
+              : "bottom-0 -mb-[5px] ") +
+            "left-line w-[3px] h-[3px] rounded-lg bg-gradient-radial from-zdaRedpink-500 via-zdaRedpink-400 to-transparent dark:from-zdaRedpink-600 dark:via-zdaRedpink-700 dark:to-transparent"
+          }
+        />
+        <p
+          className={getNavClass("Commissions")}
+          onClick={() => switchPage("Commissions", setPage)}
+        >
+          Commissions
+        </p>
+      </div>
+      <div className="page-link-container relative flex flex-row justify-center items-center">
+        <div
+          className={
+            (page === "About" ? "absolute " : "hidden ") +
+            (locator === locators.bodyTop
+              ? "right-0 top-3 ml-[5px] "
+              : "bottom-0 -mb-[5px] ") +
+            "left-line w-[3px] h-[3px] rounded-lg bg-gradient-radial from-zdaRedpink-500 via-zdaRedpink-400 to-transparent dark:from-zdaRedpink-600 dark:via-zdaRedpink-700 dark:to-transparent"
+          }
+        />
+        <p
+          className={getNavClass("About")}
+          onClick={() => switchPage("About", setPage)}
+        >
+          About
+        </p>
+      </div>
     </nav>
   );
 };
