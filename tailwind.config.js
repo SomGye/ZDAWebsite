@@ -14,6 +14,7 @@ export default {
         logoBtnHelperLight: 'linear-gradient(189deg, #2d8fff, #166dff 25%, #ff0b53 75%, #ff0b42)',
         logoBtnHelperActiveDark: 'linear-gradient(187deg, #4b0628, #881646 25%, #e4003d 75%, #e4002c)',
         logoBtnHelperActiveLight: 'linear-gradient(187deg, #85c8ff, #4ca9ff 25%, #2284ff 75%, #0b62ff)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       colors: {
         zdaBG: {
