@@ -37,7 +37,8 @@ body.noscroll {
 }
 
 /* CSS ADDENDUM */
-.nav-link-animated {
+.nav-link-animated,
+.nav-link-animated-active {
   display: inline-block;
   position: relative;
   /* text-gray-700 */
@@ -76,28 +77,6 @@ body.noscroll {
   transition: transform 0.3s ease-out;
 }
 
-.nav-link-animated-active {
-  display: inline-block;
-  position: relative;
-  /* text-gray-700 */
-  color: rgb(55, 65, 81);
-  width: fit-content;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s ease-out, filter 0.3s ease-out;
-  &:hover {
-    /* zdaRedpink-500 */
-    color: #ff1a62;
-    filter: drop-shadow(0 0 32px #ff1a6260);
-    transition: color 0.3s ease-out, filter 0.3s ease-out;
-  }
-  &:active {
-    font-weight: 800;
-  }
-}
-
 .nav-link-animated-active::after {
   content: "";
   position: absolute;
@@ -115,7 +94,8 @@ body.noscroll {
   transition: transform 0.3s ease-out;
 }
 
-.nav-link-animated-dark {
+.nav-link-animated-dark,
+.nav-link-animated-dark-active {
   display: inline-block;
   position: relative;
   /* text-gray-200 */
@@ -153,28 +133,6 @@ body.noscroll {
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
   transition: transform 0.3s ease-out;
-}
-
-.nav-link-animated-dark-active {
-  display: inline-block;
-  position: relative;
-  /* text-gray-200 */
-  color: rgb(229, 231, 235);
-  width: fit-content;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s ease-out, filter 0.3s ease-out;
-  &:hover {
-    /* zdaRedpink-600 */
-    color: #ff0048;
-    filter: drop-shadow(0 0 3px #ff004829);
-    transition: color 0.3s ease-out, filter 0.3s ease-out;
-  }
-  &:active {
-    font-weight: 800;
-  }
 }
 
 .nav-link-animated-dark-active::after {
