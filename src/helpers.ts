@@ -43,3 +43,18 @@ export const switchPage = (
   }
   setPage(target);
 };
+
+/**
+ * On image load, show the base img and hide the blur img.
+ * @param imgId unique className id of img
+ */
+export const loadImgHandler = (imgId: string) => {
+  const baseImg = document.querySelector("img." + imgId) as any;
+  if (baseImg) {
+    baseImg.classList.remove("hidden");
+  }
+  const blurImg = document.querySelector("img." + imgId + "b") as any;
+  if (blurImg) {
+    blurImg.classList.add("hidden");
+  }
+};
