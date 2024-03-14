@@ -98,12 +98,53 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
+      {/* Art History Summary */}
+      <div className="about-summary-container w-full flex flex-col items-center mx-4 mb-4 mt-8 px-2">
+        <p className="about-summary-blurb1 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
+          Initially, I loved and appreciated art from afar;
+          <br />I spent a long time doodling song lyrics and shapes in
+          notebooks.
+          <br />
+          Later, I explored creating glitch art by programming custom filters
+          <br />
+          and editing my own photography files.
+        </p>
+        <span className="w-1/2 h-px border-solid border-b-[3px] border-slate-800/75 dark:border-slate-300/75 rounded-xl my-3 pointer-events-none select-none" />
+        <p className="about-summary-blurb2 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
+          In January 2021, I decided to finally{" "}
+          <br className="block md:hidden" /> try my hand at digital art;
+          <br />I started out using PenUp and a phone stylus
+          <br />
+          to explore abstract art and re-discover{" "}
+          <br className="block md:hidden" /> my love of{" "}
+          <div className="inline-block font-semibold tracking-wide">
+            {"colors."}
+          </div>
+          <br />
+          <br />
+          When I tried Huion Sketch, <br className="block md:hidden" /> I
+          discovered a love of{" "}
+          <div className="inline-block font-semibold tracking-wide">
+            textures and layers.
+          </div>
+          <br />
+          Finally, I was gifted a tablet and <br className="block md:hidden" />{" "}
+          was able to try Procreate,
+          <br />
+          then my{" "}
+          <div className="inline-block font-semibold tracking-wide">
+            love and curiosity for art expanded.
+          </div>
+        </p>
+      </div>
       {/* TODO: Highlights Section: 2022-2024; talk about Procreate advancements and start of Inkscape  */}
       {/* TODO: ...2022-2024 additional photos in small col/row section */}
       {/* TODO: Highlights Section: 2021; talk about start of Procreate, then beginnings in Huion and PenUp  */}
       {/* TODO: ...2021 photos */}
       {/* TODO: ...2021 blurb */}
-      <span className="italic">Thanks for reading!</span>
+      <span className="italic text-slate-800/80 dark:text-slate-200/80 tracking-tight mt-8 pointer-events-none select-none">
+        Thanks for reading!
+      </span>
     </div>
   );
 };
