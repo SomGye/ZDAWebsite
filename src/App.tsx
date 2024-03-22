@@ -6,6 +6,7 @@ import Header from "./sections/Header/Header";
 import Body from "./sections/Body/Body";
 import Footer from "./sections/Footer/Footer";
 import { switchPage } from "./helpers";
+import { Analytics } from "@vercel/analytics/react";
 
 type props = {
   route: string;
@@ -47,11 +48,14 @@ const App = ({ route }: props) => {
   }, []);
 
   return (
-    <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center p-0 transition ease-out duration-500">
-      {page !== "Logo" && page !== "Examples" && <Header />}
-      <Body />
-      {page !== "Logo" && page !== "Examples" && <Footer />}
-    </main>
+    <>
+      <Analytics />
+      <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center p-0 transition ease-out duration-500">
+        {page !== "Logo" && page !== "Examples" && <Header />}
+        <Body />
+        {page !== "Logo" && page !== "Examples" && <Footer />}
+      </main>
+    </>
   );
 };
 
