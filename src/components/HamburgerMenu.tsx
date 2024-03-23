@@ -1,15 +1,11 @@
 import * as React from "react";
 import Drawer from "@mui/joy/Drawer";
-import DialogTitle from "@mui/joy/DialogTitle";
-import DialogContent from "@mui/joy/DialogContent";
-import ModalClose from "@mui/joy/ModalClose";
 import Divider from "@mui/joy/Divider";
 import Stack from "@mui/joy/Stack";
 import Sheet from "@mui/joy/Sheet";
-import Typography from "@mui/joy/Typography";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/pageAtom";
-import { Box, Button } from "@mui/joy";
+import { Box } from "@mui/joy";
 import { clickLink, switchPage } from "../helpers";
 import { themeAtom } from "../states/themeAtom";
 import {
@@ -35,10 +31,6 @@ type props = {
 const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
-  const fontFamilySx =
-    "'Plus Jakarta Sans', Outfit, system-ui, Avenir, Helvetica, Arial, sans-serif";
-  const fontFamilyOutfitSx =
-    "Outfit, 'Plus Jakarta Sans', system-ui, Avenir, Helvetica, Arial, sans-serif";
 
   React.useEffect(() => {
     if (open) {
