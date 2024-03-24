@@ -30,7 +30,7 @@ const AboutPage = () => {
   const theme = useRecoilValue(themeAtom);
 
   return (
-    <div className="about-page-container w-full flex flex-col my-4 justify-center items-center">
+    <div className="about-page-container w-full flex flex-col justify-center items-center">
       {/* Intro Part 1 */}
       <div className="about-intro-container w-full md:w-5/6 lg:w-3/5 xl:w-1/2 flex flex-col px-4 md:flex-row justify-between items-center md:mr-auto md:ml-5 lg:ml-24 xl:ml-48 2xl:ml-[17.5rem]">
         <div className="about-intro-title-and-pic-container flex flex-col md:flex-row-reverse items-center mx-2 my-4">

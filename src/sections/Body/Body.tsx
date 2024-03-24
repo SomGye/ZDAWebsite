@@ -18,10 +18,9 @@ const Body = () => {
         // NOTE: used mt to counter Header height
         <div className="body-container w-full mt-[61px] xs:mt-[77px] mb-16 xs:mb-20 flex flex-col justify-center items-center">
           <InfoBanner />
-          {/* TODO: rework the PageIndicator to be for section headers instead */}
-          {/* <PageIndicator /> */}
+          <PageIndicator />
           {page === "About" && <AboutPage />}
-          {/* TODO: Home/Portfolio/Commissions Pages and proper separation here */}
+          {/* TODO: Home/Portfolio/Commissions Pages and proper logic separation here */}
           {page !== "About" && (
             <>
               <img src={zerodayanubis_redpink} className="max-h-12 my-4" />
@@ -34,14 +33,6 @@ const Body = () => {
               >
                 Logo Page
               </button>
-              {/* TEST: Heading Sections: text with long lines on left and right */}
-              <div className="long-line-container flex flex-row justify-center items-center w-full my-8">
-                <div className="left-line w-1/12 border-b rounded-2xl border-zdaRedpink-500 dark:border-zdaRedpink-600" />
-                <div className="mid-line mx-2 text-base font-outfit font-semibold text-zdaRedpink-500 dark:text-zdaRedpink-650 select-none">
-                  Portfolio
-                </div>
-                <div className="right-line w-3/5 border-b rounded-2xl border-zdaRedpink-500 dark:border-zdaRedpink-600" />
-              </div>
               {/* TEST: SCROLL FILLER */}
               <div className="py-12">
                 <p>...Hello</p>
