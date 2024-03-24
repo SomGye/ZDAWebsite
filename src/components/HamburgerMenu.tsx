@@ -22,6 +22,7 @@ import {
 } from "../icons";
 import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
+import { altLongTextLogo } from "../AltText";
 
 type props = {
   open: boolean;
@@ -225,6 +226,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               className="mx-4 my-2 max-h-8 pointer-events-none select-none"
+              alt={altLongTextLogo}
             />
           </Stack>
         </Sheet>

@@ -12,6 +12,7 @@ import zdaworks_light from "/zdaworks_light_nl.svg";
 import { chatIcon, emailIcon, privacyDocIcon } from "../../icons";
 import { clickEmail, clickLink, switchPage } from "../../helpers";
 import { pageAtom } from "../../states/pageAtom";
+import { altLongTextLogo, altZDALogoSm, altZDAWorksLogo } from "../../AltText";
 
 const Footer = () => {
   const theme = useRecoilValue(themeAtom);
@@ -171,7 +172,7 @@ const Footer = () => {
               <img
                 className="max-h-4 lg:max-h-5"
                 src={theme === "dark" ? zdaworks_dark : zdaworks_light}
-                alt="ZDAWorks company logo"
+                alt={altZDAWorksLogo}
                 title="Click to go to ZDAWorks site"
               />
             </a>
@@ -203,14 +204,14 @@ const Footer = () => {
               <div className="header-logo-box mr-1 sm:mr-2 lg:mr-1 items-center">
                 <img
                   src={theme === "dark" ? zda_dark : zda_light}
-                  alt="ZDA Z Logo"
+                  alt={altZDALogoSm}
                   className="header-logo cursor-default pointer-events-none select-none transition ease-out duration-300 3xl:w-[32px] 3xl:h-[32px] 4xl:w-[40px] 4xl:h-[40px] 4k:w-[56px] 4k:h-[56px]"
                   width={32}
                   height={32}
                 />
                 <img
                   src={theme === "dark" ? zda_dark_hover : zda_light_hover}
-                  alt="ZDA Z Logo Hover Version"
+                  alt={altZDALogoSm}
                   className="header-logo-hover cursor-default pointer-events-none select-none transition ease-out duration-300 3xl:w-[32px] 3xl:h-[32px] 4xl:w-[40px] 4xl:h-[40px] 4k:w-[56px] 4k:h-[56px]"
                   width={32}
                   height={32}
@@ -221,6 +222,7 @@ const Footer = () => {
                   theme === "dark" ? zerodayanubis_dark : zerodayanubis_light
                 }
                 className="hidden sm:block ml-3 max-h-8 select-none"
+                alt={altLongTextLogo}
               />
             </div>
             <a

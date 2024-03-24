@@ -11,6 +11,7 @@ import { pageAtom } from "../../states/pageAtom";
 import HamburgerMenu from "../../components/HamburgerMenu";
 import { hamburgerIcon } from "../../icons";
 import PageLinks from "../../components/PageLinks";
+import { altZDALogoCirc } from "../../AltText";
 
 const Header = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -69,7 +70,7 @@ const Header = () => {
               {/* Logo Btn */}
               <img
                 src={theme === "dark" ? zdaDarkCircLogo : zdaLightCircLogo}
-                alt="ZDA Z Logo"
+                alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
                 className="header-logo cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                 width={36}
@@ -83,7 +84,7 @@ const Header = () => {
                     ? zdaLightCircHoverLogo
                     : zdaDarkCircHoverLogo
                 }
-                alt="ZDA Z Logo Hover Version"
+                alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
                 className="header-logo-hover cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                 width={36}

@@ -16,12 +16,14 @@ import {
   altHuionSketch_1625698314399,
   altHuionSketch_1625699078818,
   altKublaiAnubis02,
+  altLongTextLogo,
   altOutOfShape,
   altPenUp20210219_053858,
   altPenUp20210309_005026,
   altPenUp20210326_003107,
   altPenUp20210422_055424,
   altWretchedWitness,
+  altZDALogoSm,
 } from "../AltText";
 
 const AboutPage = () => {
@@ -36,6 +38,7 @@ const AboutPage = () => {
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               className="mx-2 my-1 max-h-12 pointer-events-none select-none"
+              alt={altLongTextLogo}
             />
             <span className="font-light italic text-lg my-2 pointer-events-none select-none">
               Abstract Media Creator
@@ -81,6 +84,7 @@ const AboutPage = () => {
             <img
               src={theme === "dark" ? zdamono_dark : zdamono_light}
               className="mx-2 my-1 max-h-12 pointer-events-none select-none"
+              alt={altZDALogoSm}
             />
             <span className="h-px w-10 border-solid border-b-[3px] border-slate-800/70 dark:border-slate-200/70 rounded-xl my-2 pointer-events-none select-none" />
             <p className="about-intro-blurb-md2 hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
@@ -335,6 +339,7 @@ const AboutPage = () => {
             <img
               src={theme === "dark" ? zdamono_dark : zdamono_light}
               className="mx-2 my-1 max-h-12 pointer-events-none select-none"
+              alt={altZDALogoSm}
             />
             <span className="h-px w-10 border-solid border-b-[3px] border-slate-800/70 dark:border-slate-200/70 rounded-xl my-2 pointer-events-none select-none" />
             <p className="about-modern-blurb-md2 hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">

@@ -11,6 +11,13 @@ import zda_dark from "/zerodayanubis_dark.svg";
 import zda_light from "/zerodayanubis_light.svg";
 import { switchPage } from "../helpers";
 import { pageAtom } from "../states/pageAtom";
+import {
+  altLongTextLogo,
+  altLongTextLogoBlue,
+  altLongTextLogoRed,
+  altLongTextLogoRedpink,
+  altZDALogoLg,
+} from "../AltText";
 
 const LogoPage = () => {
   const theme = useRecoilValue(themeAtom);
@@ -34,7 +41,7 @@ const LogoPage = () => {
           <img
             className="relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-light dark:drop-shadow-logo-dark select-none"
             src={theme === "dark" ? zdalogo_dark : zdalogo_light}
-            alt="ZDAWorks Logo"
+            alt={altZDALogoLg}
             width={400}
             height={400}
           />
@@ -44,7 +51,7 @@ const LogoPage = () => {
           {currentColor === colorMap[0] && (
             <img
               src={zda_redpink}
-              alt="ZeroDayAnubis Logo"
+              alt={altLongTextLogoRedpink}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
@@ -53,7 +60,7 @@ const LogoPage = () => {
           {currentColor === colorMap[1] && (
             <img
               src={zda_red}
-              alt="ZeroDayAnubis Logo"
+              alt={altLongTextLogoRed}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
@@ -62,7 +69,7 @@ const LogoPage = () => {
           {currentColor === colorMap[2] && (
             <img
               src={zda_blue}
-              alt="ZeroDayAnubis Logo"
+              alt={altLongTextLogoBlue}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
@@ -71,7 +78,7 @@ const LogoPage = () => {
           {currentColor === colorMap[3] && (
             <img
               src={theme === "dark" ? zda_dark : zda_light}
-              alt="ZeroDayAnubis Logo"
+              alt={altLongTextLogo}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
