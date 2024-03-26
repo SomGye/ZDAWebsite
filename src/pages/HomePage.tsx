@@ -28,7 +28,7 @@ const HomePage = () => {
       <div className="home-page-promo">
         You can visit my &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-black dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Portfolio", setPage)}
         >
           Portfolio
@@ -36,7 +36,7 @@ const HomePage = () => {
         &nbsp; to see my abstract works, and
         <br /> you can view my current &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-black dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Commissions", setPage)}
         >
           Commissions
@@ -48,7 +48,7 @@ const HomePage = () => {
         <br /> You can learn more about me and my brief
         <br /> art journey &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-black dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("About", setPage)}
         >
           here
