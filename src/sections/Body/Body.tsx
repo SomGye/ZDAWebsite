@@ -8,6 +8,7 @@ import { switchPage } from "../../helpers";
 import InfoBanner from "../../components/InfoBanner";
 import PageIndicator from "../../components/PageIndicator";
 import AboutPage from "../../pages/AboutPage";
+import HomePage from "../../pages/HomePage";
 
 const Body = () => {
   const [page, setPage] = useRecoilState(pageAtom);
@@ -19,8 +20,9 @@ const Body = () => {
         <div className="body-container w-full mt-[61px] xs:mt-[77px] mb-16 xs:mb-20 flex flex-col justify-center items-center">
           <InfoBanner />
           <PageIndicator />
+          {/* TODO: Portfolio/Commissions Page segments  */}
+          {page === "Home" && <HomePage />}
           {page === "About" && <AboutPage />}
-          {/* TODO: Home/Portfolio/Commissions Pages and proper logic separation here */}
           {page !== "About" && (
             <>
               <img src={zerodayanubis_redpink} className="max-h-12 my-4" />

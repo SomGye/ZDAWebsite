@@ -6,7 +6,7 @@ export const altLongTextLogoBlue = "ZERODAYANUBIS Logo in Blue";
 export const altZDALogoSm = "ZDA Small Z Logo";
 export const altZDALogoLg = "ZDA Large Z Logo";
 export const altZDALogoCirc = "ZDA Circular Logo";
-export const altZDAWorksLogo = "ZDAWorks Logo"
+export const altZDAWorksLogo = "ZDAWorks Logo";
 /* ALT TEXT FOR ART */
 export const altKublaiAnubis02 =
   "A powerful presence looms, as a sharp, triangular head of black, red, and pink, with glowing light blue eyes, stares at you, with glowing pink and orange flames underneath";
@@ -32,3 +32,11 @@ export const altWretchedWitness =
   "A grid of pink and purple rectangles with two oblong pink triangles and four ominous translucent purple diamonds on top";
 export const altOutOfShape =
   "Abstract shapes and blobs of seafoam green, teal, and light blue, with a dark gray vertical banner in the middle";
+export const altAnubisTheDeathless =
+  "Evil and dark thick lines try to wrap upwards and envelop an ominous, bright red being, with red lightning shooting from the top";
+export const altWispsOfAfterlife =
+  "Thin wisps of light orange emanate from the corner, over a backdrop of red flame and cold icy rectangles, with a glitchy bar of wild colors at the bottom";
+export const altFrameOfRevelation =
+  "A backdrop of light blue and purple with a framed portrait overlay, with wild concentric rings of blue overlapping under the frame";
+export const altTheHarbingerWakes =
+  "A burning triangular head of dark red flames over a spooky orb with a glowing red ring";
