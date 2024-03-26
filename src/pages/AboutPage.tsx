@@ -60,7 +60,7 @@ const AboutPage = () => {
           />
           <img
             onLoad={() => loadImgHandler("about-img01")}
-            src="/assets/2023-09-24-Kublai_Anubis_02-600px-c7.jpg"
+            src="/assets/2023-09-24-Kublai_Anubis_02-600px-c1.jpg"
             alt={altKublaiAnubis02}
             title="Kublai Anubis 02"
             className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
