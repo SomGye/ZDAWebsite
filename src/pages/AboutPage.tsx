@@ -57,6 +57,7 @@ const AboutPage = () => {
             alt={altKublaiAnubis02}
             title="Kublai Anubis 02"
             className="about-img01b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img01")}
@@ -184,6 +185,7 @@ const AboutPage = () => {
             alt={altPenUp20210219_053858}
             title="PenUp 20210219_053858"
             className="about-img05b z-20 h-full max-w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img05")}
@@ -197,6 +199,7 @@ const AboutPage = () => {
             alt={altPenUp20210326_003107}
             title="PenUp 20210326_003107"
             className="about-img06b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img06")}
@@ -210,6 +213,7 @@ const AboutPage = () => {
             alt={altPenUp20210422_055424}
             title="PenUp 20210422_055424"
             className="about-img07b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img07")}
@@ -223,6 +227,7 @@ const AboutPage = () => {
             alt={altPenUp20210309_005026}
             title="PenUp 20210309_005026"
             className="about-img08b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img08")}
@@ -248,6 +253,7 @@ const AboutPage = () => {
             alt={altHuionSketch_1623481967592}
             title="HuionSketch 1623481967592"
             className="about-img09b z-20 h-full max-w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img09")}
@@ -261,6 +267,7 @@ const AboutPage = () => {
             alt={altHuionSketch_1625698314399}
             title="HuionSketch 1625698314399"
             className="about-img10b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img10")}
@@ -274,6 +281,7 @@ const AboutPage = () => {
             alt={altHuionSketch_1623363242260}
             title="HuionSketch 1623363242260"
             className="about-img11b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img11")}
@@ -287,6 +295,7 @@ const AboutPage = () => {
             alt={altHuionSketch_1625699078818}
             title="HuionSketch 1625699078818"
             className="about-img12b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("about-img12")}

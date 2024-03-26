@@ -66,6 +66,7 @@ const HomePage = () => {
             alt={altAnubisTheDeathless}
             title="Anubis - The Deathless"
             className="home-img01b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("home-img01")}
@@ -79,6 +80,7 @@ const HomePage = () => {
             alt={altWispsOfAfterlife}
             title="Wisps of Afterlife"
             className="home-img02b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("home-img02")}
@@ -92,6 +94,7 @@ const HomePage = () => {
             alt={altFrameOfRevelation}
             title="Frame of Revelation"
             className="home-img03b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("home-img03")}
@@ -105,6 +108,7 @@ const HomePage = () => {
             alt={altTheHarbingerWakes}
             title="Anubis - The Harbinger Wakes"
             className="home-img04b z-20 h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
           />
           <img
             onLoad={() => loadImgHandler("home-img04")}
