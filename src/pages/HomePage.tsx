@@ -12,10 +12,10 @@ import {
 const HomePage = () => {
   const [, setPage] = useRecoilState(pageAtom);
   return (
-    // TODO: set up the line breaks for mobile (with hidden and sm:block) and desktop
-    <div className="home-page-container w-full flex flex-col justify-center items-center select-none">
-      <div className="home-page-intro">
-        Welcome to the &nbsp; ⌞ZeroDayAnubis⌝ &nbsp; website!
+    <div className="home-page-container w-full flex flex-col justify-center items-center text-slate-700 dark:text-slate-200 select-none">
+      <div className="home-page-intro max-w-[90%]">
+        Welcome to the <br className="block xs:hidden" /> &nbsp; ⌞ZeroDayAnubis⌝
+        &nbsp; website!
         <br />
         <p className="home-page-subintro italic text-sm my-4">
           I create abstract oddities, such as
@@ -25,7 +25,7 @@ const HomePage = () => {
           logos, graphic design, and more.
         </p>
       </div>
-      <div className="home-page-promo">
+      <div className="home-page-promo max-w-[90%] text-sm xs:text-base">
         You can visit my &nbsp;
         <p
           className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
@@ -33,8 +33,11 @@ const HomePage = () => {
         >
           Portfolio
         </p>
-        &nbsp; to see my abstract works, and
-        <br /> you can view my current &nbsp;
+        &nbsp; to <br className="block sm:hidden" /> see my favorite abstract
+        works ...
+        <br />
+        <br />
+        ... or you can view my current <br className="block sm:hidden" /> &nbsp;
         <p
           className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Commissions", setPage)}
@@ -43,10 +46,11 @@ const HomePage = () => {
         </p>
         &nbsp; types to see if you
         <br /> are interested in having custom
-        <br /> art/logos/designs created for you.
+        <br className="block sm:hidden" /> art/logos/designs made for you.
         <br />
-        <br /> You can learn more about me and my brief
-        <br /> art journey &nbsp;
+        <br /> You can also learn more about me{" "}
+        <br className="block sm:hidden" /> and my brief
+        <br className="hidden sm:block md:hidden" /> art journey &nbsp;
         <p
           className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("About", setPage)}
@@ -55,59 +59,59 @@ const HomePage = () => {
         </p>
         &nbsp; too!
       </div>
-      <div className="home-page-showcase1 w-9/10 flex flex-col md:flex-row justify-center items-center mx-4 my-4 border rounded-md border-slate-300/50 dark:border-slate-700/50">
-        <div className="home-page-showcase-img-container flex flex-col md:flex-row flex-wrap justify-center items-center gap-0 md:gap-2 px-8 py-4 drop-shadow-md">
+      <div className="home-page-showcase1 w-full sm:w-11/12 flex flex-col md:flex-row justify-center items-center mx-4 my-6 border border-solid md:border-none rounded-xl border-slate-300/50 dark:border-slate-700/20 shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)] md:shadow-none dark:md:shadow-none">
+        <div className="home-page-showcase-img-container flex flex-col md:flex-row flex-wrap md:grid md:grid-cols-2 2xl:flex justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
             src="/assets/2023-09-17-Anubis_-_The_Deathless-nozda-600px-c1-blur3x.jpg"
             alt={altAnubisTheDeathless}
             title="Anubis - The Deathless"
-            className="home-img01b z-20 h-full max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="home-img01b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
           />
           <img
             onLoad={() => loadImgHandler("home-img01")}
             src="/assets/2023-09-17-Anubis_-_The_Deathless-nozda-600px-c1.jpg"
             alt={altAnubisTheDeathless}
             title="Anubis - The Deathless"
-            className="hidden home-img01 z-10 h-full max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden home-img01 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
           />
           <img
             src="/assets/2023-08-27-Wisps_of_Afterlife-600px-c1-blur3x.jpg"
             alt={altWispsOfAfterlife}
             title="Wisps of Afterlife"
-            className="home-img02b z-20 h-full max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="home-img02b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
           />
           <img
             onLoad={() => loadImgHandler("home-img02")}
             src="/assets/2023-08-27-Wisps_of_Afterlife-600px-c1.jpg"
             alt={altWispsOfAfterlife}
             title="Wisps of Afterlife"
-            className="hidden home-img02 z-10 h-full max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden home-img02 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
           />
           <img
             src="/assets/2023-10-22-Frame_of_Revelation-600px-c1-blur3x.jpg"
             alt={altFrameOfRevelation}
             title="Frame of Revelation"
-            className="home-img03b z-20 h-full max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="home-img03b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
           />
           <img
             onLoad={() => loadImgHandler("home-img03")}
             src="/assets/2023-10-22-Frame_of_Revelation-600px-c1.jpg"
             alt={altFrameOfRevelation}
             title="Frame of Revelation"
-            className="hidden home-img03 z-10 h-full max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden home-img03 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
           />
           <img
             src="/assets/2024-01-06-Anubis_-_The_Harbinger_Wakes-600px-c1-blur3x.jpg"
             alt={altTheHarbingerWakes}
             title="Anubis - The Harbinger Wakes"
-            className="home-img04b z-20 h-full max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md select-none"
+            className="home-img04b z-20 h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md select-none"
           />
           <img
             onLoad={() => loadImgHandler("home-img04")}
             src="/assets/2024-01-06-Anubis_-_The_Harbinger_Wakes-600px-c1.jpg"
             alt={altTheHarbingerWakes}
             title="Anubis - The Harbinger Wakes"
-            className="hidden home-img04 z-10 h-full max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden home-img04 z-10 h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
           />
         </div>
       </div>
