@@ -64,7 +64,7 @@ const AboutPage = () => {
             src="/assets/2023-09-24-Kublai_Anubis_02-600px-c1.jpg"
             alt={altKublaiAnubis02}
             title="Kublai Anubis 02"
-            className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
         </div>
         <div className="about-intro-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -103,7 +103,7 @@ const AboutPage = () => {
             src={adrift_in_notions}
             alt={altAdriftInNotions}
             title="Adrift in Notions"
-            className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
         </div>
         <div className="about-intro-blurb-container-mobile2 flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -192,7 +192,7 @@ const AboutPage = () => {
             src="/assets/penup/20210219_053858-400px-c7.jpg"
             alt={altPenUp20210219_053858}
             title="PenUp 20210219_053858"
-            className="hidden about-img05 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img05 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
           <img
             src="/assets/penup/20210326_003107-400px-c7-blur3x.jpg"
@@ -206,7 +206,7 @@ const AboutPage = () => {
             src="/assets/penup/20210326_003107-400px-c7.jpg"
             alt={altPenUp20210326_003107}
             title="PenUp 20210326_003107"
-            className="hidden about-img06 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img06 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
           <img
             src="/assets/penup/20210422_055424-400px-c7-blur3x.jpg"
@@ -220,7 +220,7 @@ const AboutPage = () => {
             src="/assets/penup/20210422_055424-400px-c7.jpg"
             alt={altPenUp20210422_055424}
             title="PenUp 20210422_055424"
-            className="hidden about-img07 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img07 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
           <img
             src="/assets/penup/20210309_005026-400px-c7-blur3x.jpg"
@@ -234,7 +234,7 @@ const AboutPage = () => {
             src="/assets/penup/20210309_005026-400px-c7.jpg"
             alt={altPenUp20210309_005026}
             title="PenUp 20210309_005026"
-            className="hidden about-img08 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img08 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
         </div>
         <p className="about-old-blurb2 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
@@ -260,7 +260,7 @@ const AboutPage = () => {
             src="/assets/huion/HuionSketch_1623481967592-400px-c7.jpg"
             alt={altHuionSketch_1623481967592}
             title="HuionSketch 1623481967592"
-            className="hidden about-img09 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img09 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
           <img
             src="/assets/huion/HuionSketch_1625698314399-400px-c7-blur3x.jpg"
@@ -274,7 +274,7 @@ const AboutPage = () => {
             src="/assets/huion/HuionSketch_1625698314399-400px-c7.jpg"
             alt={altHuionSketch_1625698314399}
             title="HuionSketch 1625698314399"
-            className="hidden about-img10 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img10 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
           <img
             src="/assets/huion/HuionSketch_1623363242260-400px-c7-blur3x.jpg"
@@ -288,7 +288,7 @@ const AboutPage = () => {
             src="/assets/huion/HuionSketch_1623363242260-400px-c7.jpg"
             alt={altHuionSketch_1623363242260}
             title="HuionSketch 1623363242260"
-            className="hidden about-img11 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img11 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
           <img
             src="/assets/huion/HuionSketch_1625699078818-400px-c7-blur3x.jpg"
@@ -302,7 +302,7 @@ const AboutPage = () => {
             src="/assets/huion/HuionSketch_1625699078818-400px-c7.jpg"
             alt={altHuionSketch_1625699078818}
             title="HuionSketch 1625699078818"
-            className="hidden about-img12 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="hidden about-img12 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
         </div>
         <span className="w-1/2 h-px border-solid border-b-[3px] border-slate-600/50 dark:border-slate-300/60 rounded-xl my-3 pointer-events-none select-none" />
@@ -327,7 +327,7 @@ const AboutPage = () => {
             src={wretched_witness}
             alt={altWretchedWitness}
             title="Wretched Witness"
-            className="about-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="about-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
         </div>
         <div className="about-modern-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -367,7 +367,7 @@ const AboutPage = () => {
             src={out_of_shape}
             alt={altOutOfShape}
             title="Out of Shape"
-            className="about-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-200 ease-out hover:brightness-[1.01] hover:border-neutral-400/50 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-200 hover:ease-out select-none"
+            className="about-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
           />
         </div>
         <div className="about-modern-blurb-container-mobile2 flex flex-col md:hidden justify-center items-center mx-2 mb-4">
