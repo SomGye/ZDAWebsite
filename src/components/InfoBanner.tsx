@@ -9,8 +9,11 @@ import {
   slotsReadyAtom,
   waitlistSlotsAtom,
 } from "../states/commsAtom";
+import { CircularProgress } from "@mui/joy";
+import { themeAtom } from "../states/themeAtom";
 
 const InfoBanner = () => {
+  const theme = useRecoilValue(themeAtom);
   const [activeSlots, setActiveSlots] = useRecoilState(activeSlotsAtom);
   const [waitSlots, setWaitSlots] = useRecoilState(waitlistSlotsAtom);
   const maxSlots = useRecoilValue(maxSlotsAtom);
@@ -25,6 +28,7 @@ const InfoBanner = () => {
   const statusInit = "";
   const statusOpen = "OPEN";
   const statusClosed = "CLOSED";
+  const spinnerTimeout = 1250;
 
   React.useEffect(() => {
     // Query Vercel KV Store to get Commissions Slots Info
@@ -95,23 +99,51 @@ const InfoBanner = () => {
     };
 
     // Call Vercel KV API within hook
-    // TODO: comment out to stop API hits temporarily until ready
-    fetchData();
+    // TODO: UNCOMMENT WHEN NEARING FINAL PUSH
+    // fetchData();
   }, []);
 
   React.useEffect(() => {
     // Set ready only when not the init value
     if (activeSlots > slotsInit) {
       setActiveSlotsReady(true);
+    } else {
+      // Initiate timeout for spinner
+      setTimeout(() => {
+        setActiveSlotsReady(true);
+      }, spinnerTimeout);
     }
   }, [activeSlots]);
+
+  React.useEffect(() => {
+    // Ensure fallback after timeout
+    if (activeSlotsReady) {
+      if (activeSlots === slotsInit) {
+        setActiveSlots(slotsFallback);
+      }
+    }
+  }, [activeSlotsReady]);
 
   React.useEffect(() => {
     // Set ready only when not the init value
     if (waitSlots > slotsInit) {
       setWaitSlotsReady(true);
+    } else {
+      // Initiate timeout for spinner
+      setTimeout(() => {
+        setWaitSlotsReady(true);
+      }, spinnerTimeout);
     }
   }, [waitSlots]);
+
+  React.useEffect(() => {
+    // Ensure fallback after timeout
+    if (waitSlotsReady) {
+      if (waitSlots === slotsInit) {
+        setWaitSlots(slotsFallback);
+      }
+    }
+  }, [waitSlotsReady]);
 
   React.useEffect(() => {
     // Set ready only when not the init value
@@ -123,8 +155,22 @@ const InfoBanner = () => {
       } else {
         setCommsOpen(true);
       }
+    } else {
+      // Initiate timeout for spinner
+      setTimeout(() => {
+        setStatusReady(true);
+      }, spinnerTimeout);
     }
   }, [commStatus]);
+
+  React.useEffect(() => {
+    // Ensure fallback after timeout
+    if (statusReady) {
+      if (commStatus === statusInit) {
+        setCommStatus(statusClosed);
+      }
+    }
+  }, [statusReady]);
 
   return (
     <div className="info-banner-container w-full py-2 lg:py-0 flex flex-col lg:flex-row justify-center items-center bg-gradient-to-b from-[rgb(255_0_72_/_0.045)] dark:from-[rgb(255_0_72_/_0.035)] to-transparent">
@@ -134,26 +180,86 @@ const InfoBanner = () => {
         </span>
       </div>
       <div className="comm-info-container w-11/12 lg:mt-4">
-        {/* COMM STATUS - DEFAULT CLOSED */}
+        {/* COMM STATUS */}
         <div className="comm-status-container m-2">
           <span className="font-medium tracking-wide text-sm text-slate-900 dark:text-slate-200 pointer-events-none select-none">
-            COMMISSIONS {statusReady ? commStatus : statusClosed}
+            <div className="inline-flex items-center">
+              COMMISSIONS{" "}
+              {statusReady ? (
+                commStatus
+              ) : (
+                <CircularProgress
+                  variant={theme === "dark" ? "plain" : "solid"}
+                  sx={{
+                    marginLeft: 1,
+                    marginTop: "1px",
+                    "--CircularProgress-size": "15px",
+                    "--CircularProgress-trackThickness": "2px",
+                    "--CircularProgress-progressThickness": "2px",
+                    "--CircularProgress-progressColor": "rgb(255, 26, 98)",
+                    "--CircularProgress-trackColor": `${
+                      theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
+                    }`,
+                  }}
+                />
+              )}
+            </div>
           </span>
         </div>
         {/* ACTIVE COMM SLOTS */}
         <div className="comm-slots-container m-2">
           <span className="font-light italic tracking-wide text-sm text-slate-900 dark:text-slate-200 pointer-events-none select-none">
-            {`(${
-              activeSlotsReady ? activeSlots : slotsFallback
-            }/${maxSlots} SLOTS)`}
+            <div className="inline-flex items-center">
+              {"("}
+              {activeSlotsReady ? (
+                activeSlots
+              ) : (
+                <CircularProgress
+                  variant={theme === "dark" ? "plain" : "solid"}
+                  sx={{
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    marginTop: "4px",
+                    "--CircularProgress-size": "14px",
+                    "--CircularProgress-trackThickness": "2px",
+                    "--CircularProgress-progressThickness": "2px",
+                    "--CircularProgress-progressColor": "rgb(255, 26, 98)",
+                    "--CircularProgress-trackColor": `${
+                      theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
+                    }`,
+                  }}
+                />
+              )}
+              {`/${maxSlots} SLOTS)`}
+            </div>
           </span>
         </div>
         {/* WAITLIST COMM SLOTS */}
         <div className="comm-waitlist-container m-2">
           <span className="font-light italic tracking-wide text-sm text-slate-900 dark:text-slate-200 pointer-events-none select-none">
-            {`(${
-              waitSlotsReady ? waitSlots : slotsFallback
-            }/${maxSlots} WAITLIST)`}
+            <div className="inline-flex items-center">
+              {"("}
+              {waitSlotsReady ? (
+                waitSlots
+              ) : (
+                <CircularProgress
+                  variant={theme === "dark" ? "plain" : "solid"}
+                  sx={{
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    marginTop: "4px",
+                    "--CircularProgress-size": "14px",
+                    "--CircularProgress-trackThickness": "2px",
+                    "--CircularProgress-progressThickness": "2px",
+                    "--CircularProgress-progressColor": "rgb(255, 26, 98)",
+                    "--CircularProgress-trackColor": `${
+                      theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
+                    }`,
+                  }}
+                />
+              )}
+              {`/${maxSlots} WAITLIST)`}
+            </div>
           </span>
         </div>
       </div>
