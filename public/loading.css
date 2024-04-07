@@ -26,7 +26,7 @@ div#loadingpage {
   overflow: hidden;
 }
 
-div.SpinnerBox {
+div.spinnerbox {
   display: flex;
   position: absolute;
   top: 50%;
@@ -44,7 +44,7 @@ div.SpinnerBox {
   }
 }
 
-div.SpinnerBox span {
+div.spinnerbox span {
   position: absolute;
   border-radius: 50%;
   height: 100%;
@@ -53,23 +53,23 @@ div.SpinnerBox span {
   background-image: linear-gradient(#ff0037, #c7002b, #ff0048);
 }
 
-div.SpinnerBox span:nth-of-type(1) {
+div.spinnerbox span:nth-of-type(1) {
   filter: blur(5px);
 }
 
-div.SpinnerBox span:nth-of-type(2) {
+div.spinnerbox span:nth-of-type(2) {
   filter: blur(10px);
 }
 
-div.SpinnerBox span:nth-of-type(3) {
+div.spinnerbox span:nth-of-type(3) {
   filter: blur(25px);
 }
 
-div.SpinnerBox span:nth-of-type(4) {
+div.spinnerbox span:nth-of-type(4) {
   filter: blur(50px);
 }
 
-div.SpinnerBox::after {
+div.spinnerbox::after {
   content: "";
   position: absolute;
   top: 10px;
