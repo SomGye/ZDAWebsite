@@ -40,3 +40,5 @@ export const altFrameOfRevelation =
   "A backdrop of light blue and purple with a framed portrait overlay, with wild concentric rings of blue overlapping under the frame";
 export const altTheHarbingerWakes =
   "A burning triangular head of dark red flames over a spooky orb with a glowing red ring";
+export const altNonconformantSpectrum =
+  "A glowing wave of vibrant pink over a dark purple background, splitting into beams of yellow and blue";

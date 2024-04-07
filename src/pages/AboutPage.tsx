@@ -25,12 +25,73 @@ import {
   altWretchedWitness,
   altZDALogoSm,
 } from "../AltText";
+import Lightbox from "yet-another-react-lightbox";
+import { Captions } from "yet-another-react-lightbox/plugins";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+import { MdClosedCaption, MdClosedCaptionDisabled } from "react-icons/md";
+import { IoMdCloseCircle } from "react-icons/io";
+import {
+  photosAbout,
+  photosAboutHuion,
+  photosAboutPenUp,
+} from "../lightboxInfo";
 
 const AboutPage = () => {
   const theme = useRecoilValue(themeAtom);
+  const [idx_about, setIdx_about] = React.useState(-1);
+  const [idx_aboutPenUp, setIdx_aboutPenUp] = React.useState(-1);
+  const [idx_aboutHuion, setIdx_aboutHuion] = React.useState(-1);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const captionsRef = React.useRef(null) as any;
 
   return (
     <div className="about-page-container w-full flex flex-col justify-center items-center">
+      {/* Lightbox - About (Procreate/Inkscape) */}
+      <Lightbox
+        plugins={[Captions]}
+        captions={{
+          ref: captionsRef,
+          showToggle: true,
+          descriptionTextAlign: "center",
+        }}
+        on={{
+          click: () => {
+            (captionsRef.current?.visible
+              ? captionsRef.current?.hide
+              : captionsRef.current?.show)?.();
+          },
+        }}
+        index={idx_about}
+        render={{
+          iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+          iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+          iconClose: () => <IoMdCloseCircle size={28} />,
+        }}
+        slides={photosAbout}
+        styles={{
+          container: {
+            backdropFilter: "blur(16px)",
+            backgroundColor: "rgba(0,0,0,0.8)",
+          },
+          captionsTitle: {
+            fontSize: "16px",
+            fontWeight: "300",
+          },
+          captionsTitleContainer: {
+            height: "46px",
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            top: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+        open={idx_about >= 0}
+        close={() => setIdx_about(-1)}
+      />
       {/* Intro Part 1 */}
       <div className="about-intro-container w-full md:w-5/6 lg:w-3/5 xl:w-1/2 flex flex-col px-4 md:flex-row justify-between items-center md:mr-auto md:ml-5 lg:ml-24 xl:ml-48 2xl:ml-[17.5rem]">
         <div className="about-intro-title-and-pic-container flex flex-col md:flex-row-reverse items-center mx-2 my-4">
@@ -60,11 +121,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_about(0)}
             onLoad={() => loadImgHandler("about-img01")}
             src="/assets/2023-09-24-Kublai_Anubis_02-600px-c1.jpg"
             alt={altKublaiAnubis02}
             title="Kublai Anubis 02"
-            className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-intro-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -100,10 +162,11 @@ const AboutPage = () => {
             </p>
           </div>
           <img
+            onClick={() => setIdx_about(1)}
             src={adrift_in_notions}
             alt={altAdriftInNotions}
             title="Adrift in Notions"
-            className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-intro-blurb-container-mobile2 flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -188,11 +251,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutPenUp(0)}
             onLoad={() => loadImgHandler("about-img05")}
             src="/assets/penup/20210219_053858-400px-c7.jpg"
             alt={altPenUp20210219_053858}
             title="PenUp 20210219_053858"
-            className="hidden about-img05 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img05 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src="/assets/penup/20210326_003107-400px-c7-blur3x.jpg"
@@ -202,11 +266,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutPenUp(1)}
             onLoad={() => loadImgHandler("about-img06")}
             src="/assets/penup/20210326_003107-400px-c7.jpg"
             alt={altPenUp20210326_003107}
             title="PenUp 20210326_003107"
-            className="hidden about-img06 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img06 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src="/assets/penup/20210422_055424-400px-c7-blur3x.jpg"
@@ -216,11 +281,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutPenUp(2)}
             onLoad={() => loadImgHandler("about-img07")}
             src="/assets/penup/20210422_055424-400px-c7.jpg"
             alt={altPenUp20210422_055424}
             title="PenUp 20210422_055424"
-            className="hidden about-img07 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img07 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src="/assets/penup/20210309_005026-400px-c7-blur3x.jpg"
@@ -230,11 +296,56 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutPenUp(3)}
             onLoad={() => loadImgHandler("about-img08")}
             src="/assets/penup/20210309_005026-400px-c7.jpg"
             alt={altPenUp20210309_005026}
             title="PenUp 20210309_005026"
-            className="hidden about-img08 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img08 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+          <Lightbox
+            plugins={[Captions]}
+            captions={{
+              ref: captionsRef,
+              showToggle: true,
+              descriptionTextAlign: "center",
+            }}
+            on={{
+              click: () => {
+                (captionsRef.current?.visible
+                  ? captionsRef.current?.hide
+                  : captionsRef.current?.show)?.();
+              },
+            }}
+            index={idx_aboutPenUp}
+            render={{
+              iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+              iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+              iconClose: () => <IoMdCloseCircle size={28} />,
+            }}
+            slides={photosAboutPenUp}
+            styles={{
+              container: {
+                backdropFilter: "blur(16px)",
+                backgroundColor: "rgba(0,0,0,0.8)",
+              },
+              captionsTitle: {
+                fontSize: "16px",
+                fontWeight: "300",
+              },
+              captionsTitleContainer: {
+                height: "46px",
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                top: "auto",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              },
+            }}
+            open={idx_aboutPenUp >= 0}
+            close={() => setIdx_aboutPenUp(-1)}
           />
         </div>
         <p className="about-old-blurb2 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
@@ -256,11 +367,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutHuion(0)}
             onLoad={() => loadImgHandler("about-img09")}
             src="/assets/huion/HuionSketch_1623481967592-400px-c7.jpg"
             alt={altHuionSketch_1623481967592}
             title="HuionSketch 1623481967592"
-            className="hidden about-img09 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img09 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src="/assets/huion/HuionSketch_1625698314399-400px-c7-blur3x.jpg"
@@ -270,11 +382,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutHuion(1)}
             onLoad={() => loadImgHandler("about-img10")}
             src="/assets/huion/HuionSketch_1625698314399-400px-c7.jpg"
             alt={altHuionSketch_1625698314399}
             title="HuionSketch 1625698314399"
-            className="hidden about-img10 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img10 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src="/assets/huion/HuionSketch_1623363242260-400px-c7-blur3x.jpg"
@@ -284,11 +397,12 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutHuion(2)}
             onLoad={() => loadImgHandler("about-img11")}
             src="/assets/huion/HuionSketch_1623363242260-400px-c7.jpg"
             alt={altHuionSketch_1623363242260}
             title="HuionSketch 1623363242260"
-            className="hidden about-img11 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img11 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src="/assets/huion/HuionSketch_1625699078818-400px-c7-blur3x.jpg"
@@ -298,11 +412,56 @@ const AboutPage = () => {
             loading="lazy"
           />
           <img
+            onClick={() => setIdx_aboutHuion(3)}
             onLoad={() => loadImgHandler("about-img12")}
             src="/assets/huion/HuionSketch_1625699078818-400px-c7.jpg"
             alt={altHuionSketch_1625699078818}
             title="HuionSketch 1625699078818"
-            className="hidden about-img12 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="hidden about-img12 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+          <Lightbox
+            plugins={[Captions]}
+            captions={{
+              ref: captionsRef,
+              showToggle: true,
+              descriptionTextAlign: "center",
+            }}
+            on={{
+              click: () => {
+                (captionsRef.current?.visible
+                  ? captionsRef.current?.hide
+                  : captionsRef.current?.show)?.();
+              },
+            }}
+            index={idx_aboutHuion}
+            render={{
+              iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+              iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+              iconClose: () => <IoMdCloseCircle size={28} />,
+            }}
+            slides={photosAboutHuion}
+            styles={{
+              container: {
+                backdropFilter: "blur(16px)",
+                backgroundColor: "rgba(0,0,0,0.8)",
+              },
+              captionsTitle: {
+                fontSize: "16px",
+                fontWeight: "300",
+              },
+              captionsTitleContainer: {
+                height: "46px",
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                top: "auto",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              },
+            }}
+            open={idx_aboutHuion >= 0}
+            close={() => setIdx_aboutHuion(-1)}
           />
         </div>
         <span className="w-1/2 h-px border-solid border-b-[3px] border-slate-600/50 dark:border-slate-300/60 rounded-xl my-3 pointer-events-none select-none" />
@@ -324,10 +483,11 @@ const AboutPage = () => {
             </p>
           </div>
           <img
+            onClick={() => setIdx_about(2)}
             src={wretched_witness}
             alt={altWretchedWitness}
             title="Wretched Witness"
-            className="about-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="about-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-modern-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -364,10 +524,11 @@ const AboutPage = () => {
             </p>
           </div>
           <img
+            onClick={() => setIdx_about(3)}
             src={out_of_shape}
             alt={altOutOfShape}
             title="Out of Shape"
-            className="about-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none"
+            className="about-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-modern-blurb-container-mobile2 flex flex-col md:hidden justify-center items-center mx-2 mb-4">
