@@ -5,9 +5,9 @@ import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
 import zdamono_dark from "/zda_dark_mono.svg";
 import zdamono_light from "/zda_light_mono.svg";
-import adrift_in_notions from "/assets/adrift_in_notions-20240113.svg";
-import wretched_witness from "/assets/wretched_witness-20240120.svg";
-import out_of_shape from "/assets/out_of_shape-20240218.svg";
+// import adrift_in_notions from "/assets/adrift_in_notions-20240113.svg";
+// import wretched_witness from "/assets/wretched_witness-20240120.svg";
+// import out_of_shape from "/assets/out_of_shape-20240218.svg";
 import { loadImgHandler } from "../helpers";
 import {
   altAdriftInNotions,
@@ -36,6 +36,11 @@ import {
   photosAboutHuion,
   photosAboutPenUp,
 } from "../lightboxInfo";
+import {
+  photosAboutHuionThumbnail,
+  photosAboutPenUpThumbnail,
+  photosAboutThumbnail,
+} from "../thumbnailInfo";
 
 const AboutPage = () => {
   const theme = useRecoilValue(themeAtom);
@@ -114,18 +119,18 @@ const AboutPage = () => {
             </p>
           </div>
           <img
-            src="/assets/2023-09-24-Kublai_Anubis_02-600px-c7-blur3x.jpg"
-            alt={altKublaiAnubis02}
-            title="Kublai Anubis 02"
+            src={photosAboutThumbnail[0].blurSrc}
+            alt={photosAboutThumbnail[0].alt}
+            title={photosAboutThumbnail[0].title}
             className="about-img01b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_about(0)}
             onLoad={() => loadImgHandler("about-img01")}
-            src="/assets/2023-09-24-Kublai_Anubis_02-600px-c1.jpg"
-            alt={altKublaiAnubis02}
-            title="Kublai Anubis 02"
+            src={photosAboutThumbnail[0].src}
+            alt={photosAboutThumbnail[0].alt}
+            title={photosAboutThumbnail[0].title}
             className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
@@ -163,9 +168,9 @@ const AboutPage = () => {
           </div>
           <img
             onClick={() => setIdx_about(1)}
-            src={adrift_in_notions}
-            alt={altAdriftInNotions}
-            title="Adrift in Notions"
+            src={photosAboutThumbnail[1].src}
+            alt={photosAboutThumbnail[1].alt}
+            title={photosAboutThumbnail[1].title}
             className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
@@ -244,63 +249,63 @@ const AboutPage = () => {
         </p>
         <div className="about-old-penup-gallery flex flex-col xs:grid xs:grid-cols-2 md:flex md:flex-row flex-wrap justify-center items-center mx-2 my-4 gap-0 xs:gap-2">
           <img
-            src="/assets/penup/20210219_053858-400px-c7-blur3x.jpg"
-            alt={altPenUp20210219_053858}
-            title="PenUp 20210219_053858"
+            src={photosAboutPenUpThumbnail[0].blurSrc}
+            alt={photosAboutPenUpThumbnail[0].alt}
+            title={photosAboutPenUpThumbnail[0].title}
             className="about-img05b z-20 h-full max-w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutPenUp(0)}
             onLoad={() => loadImgHandler("about-img05")}
-            src="/assets/penup/20210219_053858-400px-c7.jpg"
-            alt={altPenUp20210219_053858}
-            title="PenUp 20210219_053858"
+            src={photosAboutPenUpThumbnail[0].src}
+            alt={photosAboutPenUpThumbnail[0].alt}
+            title={photosAboutPenUpThumbnail[0].title}
             className="hidden about-img05 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src="/assets/penup/20210326_003107-400px-c7-blur3x.jpg"
-            alt={altPenUp20210326_003107}
-            title="PenUp 20210326_003107"
+            src={photosAboutPenUpThumbnail[1].blurSrc}
+            alt={photosAboutPenUpThumbnail[1].alt}
+            title={photosAboutPenUpThumbnail[1].title}
             className="about-img06b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutPenUp(1)}
             onLoad={() => loadImgHandler("about-img06")}
-            src="/assets/penup/20210326_003107-400px-c7.jpg"
-            alt={altPenUp20210326_003107}
-            title="PenUp 20210326_003107"
+            src={photosAboutPenUpThumbnail[1].src}
+            alt={photosAboutPenUpThumbnail[1].alt}
+            title={photosAboutPenUpThumbnail[1].title}
             className="hidden about-img06 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src="/assets/penup/20210422_055424-400px-c7-blur3x.jpg"
-            alt={altPenUp20210422_055424}
-            title="PenUp 20210422_055424"
+            src={photosAboutPenUpThumbnail[2].blurSrc}
+            alt={photosAboutPenUpThumbnail[2].alt}
+            title={photosAboutPenUpThumbnail[2].title}
             className="about-img07b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutPenUp(2)}
             onLoad={() => loadImgHandler("about-img07")}
-            src="/assets/penup/20210422_055424-400px-c7.jpg"
-            alt={altPenUp20210422_055424}
-            title="PenUp 20210422_055424"
+            src={photosAboutPenUpThumbnail[2].src}
+            alt={photosAboutPenUpThumbnail[2].alt}
+            title={photosAboutPenUpThumbnail[2].title}
             className="hidden about-img07 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src="/assets/penup/20210309_005026-400px-c7-blur3x.jpg"
-            alt={altPenUp20210309_005026}
-            title="PenUp 20210309_005026"
+            src={photosAboutPenUpThumbnail[3].blurSrc}
+            alt={photosAboutPenUpThumbnail[3].alt}
+            title={photosAboutPenUpThumbnail[3].title}
             className="about-img08b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutPenUp(3)}
             onLoad={() => loadImgHandler("about-img08")}
-            src="/assets/penup/20210309_005026-400px-c7.jpg"
-            alt={altPenUp20210309_005026}
-            title="PenUp 20210309_005026"
+            src={photosAboutPenUpThumbnail[3].src}
+            alt={photosAboutPenUpThumbnail[3].alt}
+            title={photosAboutPenUpThumbnail[3].title}
             className="hidden about-img08 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
@@ -360,63 +365,63 @@ const AboutPage = () => {
         </p>
         <div className="about-old-huion-gallery flex flex-col xs:grid xs:grid-cols-2 md:flex md:flex-row flex-wrap justify-center items-center mx-2 my-4 gap-0 xs:gap-2">
           <img
-            src="/assets/huion/HuionSketch_1623481967592-400px-c7-blur3x.jpg"
-            alt={altHuionSketch_1623481967592}
-            title="HuionSketch 1623481967592"
+            src={photosAboutHuionThumbnail[0].blurSrc}
+            alt={photosAboutHuionThumbnail[0].alt}
+            title={photosAboutHuionThumbnail[0].title}
             className="about-img09b z-20 h-full max-w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutHuion(0)}
             onLoad={() => loadImgHandler("about-img09")}
-            src="/assets/huion/HuionSketch_1623481967592-400px-c7.jpg"
-            alt={altHuionSketch_1623481967592}
-            title="HuionSketch 1623481967592"
+            src={photosAboutHuionThumbnail[0].src}
+            alt={photosAboutHuionThumbnail[0].alt}
+            title={photosAboutHuionThumbnail[0].title}
             className="hidden about-img09 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src="/assets/huion/HuionSketch_1625698314399-400px-c7-blur3x.jpg"
-            alt={altHuionSketch_1625698314399}
-            title="HuionSketch 1625698314399"
+            src={photosAboutHuionThumbnail[1].blurSrc}
+            alt={photosAboutHuionThumbnail[1].alt}
+            title={photosAboutHuionThumbnail[1].title}
             className="about-img10b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutHuion(1)}
             onLoad={() => loadImgHandler("about-img10")}
-            src="/assets/huion/HuionSketch_1625698314399-400px-c7.jpg"
-            alt={altHuionSketch_1625698314399}
-            title="HuionSketch 1625698314399"
+            src={photosAboutHuionThumbnail[1].src}
+            alt={photosAboutHuionThumbnail[1].alt}
+            title={photosAboutHuionThumbnail[1].title}
             className="hidden about-img10 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src="/assets/huion/HuionSketch_1623363242260-400px-c7-blur3x.jpg"
-            alt={altHuionSketch_1623363242260}
-            title="HuionSketch 1623363242260"
+            src={photosAboutHuionThumbnail[2].blurSrc}
+            alt={photosAboutHuionThumbnail[2].alt}
+            title={photosAboutHuionThumbnail[2].title}
             className="about-img11b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutHuion(2)}
             onLoad={() => loadImgHandler("about-img11")}
-            src="/assets/huion/HuionSketch_1623363242260-400px-c7.jpg"
-            alt={altHuionSketch_1623363242260}
-            title="HuionSketch 1623363242260"
+            src={photosAboutHuionThumbnail[2].src}
+            alt={photosAboutHuionThumbnail[2].alt}
+            title={photosAboutHuionThumbnail[2].title}
             className="hidden about-img11 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src="/assets/huion/HuionSketch_1625699078818-400px-c7-blur3x.jpg"
-            alt={altHuionSketch_1625699078818}
-            title="HuionSketch 1625699078818"
+            src={photosAboutHuionThumbnail[3].blurSrc}
+            alt={photosAboutHuionThumbnail[3].alt}
+            title={photosAboutHuionThumbnail[3].title}
             className="about-img12b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_aboutHuion(3)}
             onLoad={() => loadImgHandler("about-img12")}
-            src="/assets/huion/HuionSketch_1625699078818-400px-c7.jpg"
-            alt={altHuionSketch_1625699078818}
-            title="HuionSketch 1625699078818"
+            src={photosAboutHuionThumbnail[3].src}
+            alt={photosAboutHuionThumbnail[3].alt}
+            title={photosAboutHuionThumbnail[3].title}
             className="hidden about-img12 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
@@ -484,9 +489,9 @@ const AboutPage = () => {
           </div>
           <img
             onClick={() => setIdx_about(2)}
-            src={wretched_witness}
-            alt={altWretchedWitness}
-            title="Wretched Witness"
+            src={photosAboutThumbnail[2].src}
+            alt={photosAboutThumbnail[2].alt}
+            title={photosAboutThumbnail[2].title}
             className="about-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
@@ -525,9 +530,9 @@ const AboutPage = () => {
           </div>
           <img
             onClick={() => setIdx_about(3)}
-            src={out_of_shape}
-            alt={altOutOfShape}
-            title="Out of Shape"
+            src={photosAboutThumbnail[3].src}
+            alt={photosAboutThumbnail[3].alt}
+            title={photosAboutThumbnail[3].title}
             className="about-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
