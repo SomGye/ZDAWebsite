@@ -10,7 +10,6 @@ import {
   altTheHarbingerWakes,
   altWispsOfAfterlife,
 } from "../AltText";
-import PageIndicator from "../components/PageIndicator";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -18,6 +17,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import { MdClosedCaption, MdClosedCaptionDisabled } from "react-icons/md";
 import { photosHome, photosHomeBtmSm, photosHomeBtmLg } from "../lightboxInfo";
 import { IoMdCloseCircle } from "react-icons/io";
+import SectionBreak from "../components/SectionBreak";
 
 const HomePage = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -183,7 +183,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <PageIndicator pageless />
+      <SectionBreak />
       <div className="home-page-showcase2 w-full sm:w-11/12 flex flex-col md:flex-row justify-center items-center mx-4 my-6 border border-solid md:border-none rounded-md border-slate-300/50 dark:border-slate-700/20 shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)] md:shadow-none dark:md:shadow-none">
         <div className="home-page-showcase2-img-container-sm flex 2xl:hidden flex-col justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
