@@ -20,6 +20,8 @@ import {
 import adrift_in_notions from "/assets/about/adrift_in_notions-20240113.svg";
 import wretched_witness from "/assets/about/wretched_witness-20240120.svg";
 import out_of_shape from "/assets/about/out_of_shape-20240218.svg";
+import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair.svg";
+import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
 
 export const photosHomeThumbnail = [
   {
@@ -154,3 +156,87 @@ export const photosAboutHuionThumbnail = [
     title: "HuionSketch 1625699078818",
   },
 ];
+
+// TODO: do alt text elsewhere and import
+export const photosPortfolioPostersThumbnail = [
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2024-03-28-TURMOIL-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2024-03-28-TURMOIL-600px-c1.jpg",
+      alt: altHuionSketch_1623481967592,
+      title: "TURMOIL",
+    },
+    {
+      src: zero_shift,
+      alt: altHuionSketch_1625698314399,
+      title: "Zero Shift",
+    },
+    {
+      src: rosecrance_despair,
+      alt: altHuionSketch_1625698314399,
+      title: "Rosecrance - Despair Version",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-11-28-A_Visual_Violation-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-11-28-A_Visual_Violation-600px-c1.jpg",
+      alt: altHuionSketch_1623363242260,
+      title: "A Visual Violation",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-11-10-The_Crux_of_Crisis-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-11-10-The_Crux_of_Crisis-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "The Crux of Crisis",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-10-22-Frame_of_Revelation-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-10-22-Frame_of_Revelation-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "Frame of Revelation",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-10-02-The_Chroma_Passage-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-10-02-The_Chroma_Passage-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "The Chroma Passage",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-09-24-Kublai_Anubis_02-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-09-24-Kublai_Anubis_02-600px-c1.jpg",
+      alt: altKublaiAnubis02,
+      title: "Kublai Anubis 02",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-09-17-Anubis_-_The_Deathless-no_zda-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-09-17-Anubis_-_The_Deathless-no_zda-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "Anubis - The Deathless",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-08-27-Wisps_of_Afterlife-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-08-27-Wisps_of_Afterlife-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "Wisps of Afterlife",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-07-31-Returning_Sublimation-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-07-31-Returning_Sublimation-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "Returning Sublimation",
+    },
+    {
+      blurSrc:
+        "/assets/portfolio/poster/thumbnail/2023-06-02-Smeared_Bridges-600px-c7-blur3x.jpg",
+      src: "/assets/portfolio/poster/thumbnail/2023-06-02-Smeared_Bridges-600px-c1.jpg",
+      alt: altHuionSketch_1625699078818,
+      title: "Smeared Bridges",
+    },
+  ];
