@@ -232,7 +232,7 @@ export const photosPortfolioPosters2 = [
 
 export const photosPortfolioPosters3 = [
   {
-    src: "/assets/portfolio/poster/2023-09-17-Anubis_-_The_Deathless-no_zda-65p-c1.jpg",
+    src: "/assets/portfolio/poster/lightbox/2023-09-17-Anubis_-_The_Deathless-no_zda-65p-c1.jpg",
     width: 1612,
     height: 2280,
     alt: altHuionSketch_1623481967592,
