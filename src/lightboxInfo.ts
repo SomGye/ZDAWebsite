@@ -22,6 +22,7 @@ import wretched_witness from "/assets/about/wretched_witness-20240120.svg";
 import out_of_shape from "/assets/about/out_of_shape-20240218.svg";
 import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair.svg";
 import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
+import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
 
 export const photosHome = [
   {
@@ -258,5 +259,36 @@ export const photosPortfolioPosters3 = [
     height: 2280,
     alt: altHuionSketch_1623481967592,
     title: "Smeared Bridges",
+  },
+];
+
+export const photosPortfolioAlbumArt = [
+  {
+    src: "/assets/portfolio/albumart/lightbox/prism_of_paragon-20240216-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "Prism of Paragon",
+  },
+  {
+    src: systems,
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1625698314399,
+    title: "Systems",
+  },
+  {
+    src: "/assets/portfolio/albumart/lightbox/2023-12-13-Regents-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "Regents",
+  },
+  {
+    src: "/assets/portfolio/albumart/lightbox/2023-12-11-In_Flux-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "In Flux",
   },
 ];

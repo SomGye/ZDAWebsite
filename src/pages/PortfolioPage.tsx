@@ -1,8 +1,12 @@
 import * as React from "react";
 import SectionIndicator from "../components/SectionIndicator";
 import SectionBreak from "../components/SectionBreak";
-import { photosPortfolioPostersThumbnail } from "../thumbnailInfo";
 import {
+  photosPortfolioAlbumArtThumbnail,
+  photosPortfolioPostersThumbnail,
+} from "../thumbnailInfo";
+import {
+  photosPortfolioAlbumArt,
   photosPortfolioPosters1,
   photosPortfolioPosters2,
   photosPortfolioPosters3,
@@ -19,6 +23,7 @@ const PortfolioPage = () => {
   const [idx_posters1, setIdx_posters1] = React.useState(-1);
   const [idx_posters2, setIdx_posters2] = React.useState(-1);
   const [idx_posters3, setIdx_posters3] = React.useState(-1);
+  const [idx_albumart, setIdx_albumart] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
 
@@ -67,12 +72,6 @@ const PortfolioPage = () => {
           Square
         </button>
       </div>
-      {/* NOTE: layouts are in RxC format! */}
-      {/* NOTE: the Prism of Paragon SVG loads strangely in Chrome, falling back to PNG */}
-      {/* TODO: Custom Extra Bold Headers per Section */}
-      {/* TODO: Poster A3/A4 Section -- TODO layout */}
-      {/* Layout: one after the other, alternating sides, with title/desc for each */}
-      {/* Layout: Desktop: alternating, 9/10 width, Tablet: alternating, 7/10 width, Mobile: nx1 */}
       <SectionIndicator sectionName="Posters" />
       <div className="portfolio-posters-subcontainer max-w-fit">
         <div className="portfolio-posters-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
@@ -484,7 +483,6 @@ const PortfolioPage = () => {
         open={idx_posters2 >= 0}
         close={() => setIdx_posters2(-1)}
       />
-      {/* TODO: Posters small gallery - no title/desc */}
       <div className="portfolio-posters-showcase w-full sm:w-11/12 flex flex-col md:flex-row justify-center items-center mx-4 my-6 border border-solid md:border-none rounded-md border-slate-300/50 dark:border-slate-700/20 shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)] md:shadow-none dark:md:shadow-none">
         <div className="portfolio-posters-showcase-img-container flex flex-col md:flex-row flex-wrap md:grid md:grid-cols-2 2xl:flex justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
@@ -593,10 +591,209 @@ const PortfolioPage = () => {
           />
         </div>
       </div>
-      {/* TODO: Abstractify/Album Art Section */}
-      {/* -- Layout: Desktop: L/R one after other with desc, Tablet: 2x2 2/3-width, Mobile: 4x1 */}
       <SectionIndicator sectionName="Album Arts" />
-      <span className="italic">Section stuff...</span>
+      <div className="portfolio-albumart-subcontainer max-w-fit">
+        <div className="portfolio-albumart-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
+          <div className="portfolio-albumart-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
+            <div className="portfolio-albumart-title-container-left flex flex-col justify-center md:justify-start items-center md:ml-8">
+              <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolioAlbumArtThumbnail[0].title}
+              </span>
+              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                An ominous pyramid fusing reds and pinks,
+                <br /> with a powerful energy surging inward;
+                <div className="italic font-semibold tracking-wide">
+                  {"...a terrifying energy lurks in the middle."}
+                </div>
+              </p>
+            </div>
+            <img
+              src={photosPortfolioAlbumArtThumbnail[0].blurSrc}
+              alt={photosPortfolioAlbumArtThumbnail[0].alt}
+              title={photosPortfolioAlbumArtThumbnail[0].title}
+              className="portfolio-albumart-img01b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_albumart(0)}
+              onLoad={() => loadImgHandler("portfolio-albumart-img01")}
+              src={photosPortfolioAlbumArtThumbnail[0].src}
+              alt={photosPortfolioAlbumArtThumbnail[0].alt}
+              title={photosPortfolioAlbumArtThumbnail[0].title}
+              className="hidden portfolio-albumart-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+          <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
+            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              An ominous pyramid fusing reds and pinks,
+              <br /> with a powerful energy surging inward;
+              <div className="italic font-semibold tracking-wide">
+                {"...a terrifying energy lurks in the middle."}
+              </div>
+            </p>
+          </div>
+        </div>
+        <SectionBreak />
+        <div className="portfolio-albumart-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+          <div className="portfolio-albumart-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
+            <div className="portfolio-albumart-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
+              <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolioAlbumArtThumbnail[1].title}
+              </span>
+              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                <div className="italic font-semibold tracking-wide">
+                  {"Wild energy surrounds a hypnotic lime orb,"}
+                </div>
+                it's power streaked by hasty dark inks
+                <br /> and passionate flames overtaking our world.
+              </p>
+            </div>
+            <img
+              onClick={() => setIdx_albumart(1)}
+              src={photosPortfolioAlbumArtThumbnail[1].src}
+              alt={photosPortfolioAlbumArtThumbnail[1].alt}
+              title={photosPortfolioAlbumArtThumbnail[1].title}
+              className="portfolio-albumart-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+          <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
+            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="italic font-semibold tracking-wide">
+                {"Wild energy surrounds a hypnotic lime orb,"}
+              </div>
+              it's power streaked by hasty dark inks
+              <br /> and passionate flames overtaking our world.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="portfolio-albumart-subcontainer max-w-fit">
+        <div className="portfolio-albumart-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
+          <div className="portfolio-albumart-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
+            <div className="portfolio-albumart-title-container-left flex flex-col justify-center md:justify-start items-center md:ml-8">
+              <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolioAlbumArtThumbnail[2].title}
+              </span>
+              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                A neon prison enraptures an eerie pyramid,
+                <br /> followed by a sweeping force of nature,
+                <div className="italic font-semibold tracking-wide">
+                  {"a river of purple enveloped by swarms of pink."}
+                </div>
+              </p>
+            </div>
+            <img
+              src={photosPortfolioAlbumArtThumbnail[2].blurSrc}
+              alt={photosPortfolioAlbumArtThumbnail[2].alt}
+              title={photosPortfolioAlbumArtThumbnail[2].title}
+              className="portfolio-albumart-img03b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_albumart(2)}
+              onLoad={() => loadImgHandler("portfolio-albumart-img03")}
+              src={photosPortfolioAlbumArtThumbnail[2].src}
+              alt={photosPortfolioAlbumArtThumbnail[2].alt}
+              title={photosPortfolioAlbumArtThumbnail[2].title}
+              className="hidden portfolio-albumart-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+          <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
+            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              A neon prison enraptures an eerie pyramid,
+              <br /> followed by a sweeping force of nature,
+              <div className="italic font-semibold tracking-wide">
+                {"a river of purple enveloped by swarms of pink."}
+              </div>
+            </p>
+          </div>
+        </div>
+        <SectionBreak />
+        <div className="portfolio-albumart-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+          <div className="portfolio-albumart-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
+            <div className="portfolio-albumart-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
+              <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolioAlbumArtThumbnail[3].title}
+              </span>
+              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                <div className="italic font-semibold tracking-wide">
+                  {"An emerald forest destroyed by unseen forces;"}
+                </div>
+                the reality of the mountain valley,
+                <br /> fraying at the edges, like a frail mind.
+              </p>
+            </div>
+            <img
+              src={photosPortfolioAlbumArtThumbnail[3].blurSrc}
+              alt={photosPortfolioAlbumArtThumbnail[3].alt}
+              title={photosPortfolioAlbumArtThumbnail[3].title}
+              className="portfolio-albumart-img04b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_albumart(3)}
+              onLoad={() => loadImgHandler("portfolio-albumart-img04")}
+              src={photosPortfolioAlbumArtThumbnail[3].src}
+              alt={photosPortfolioAlbumArtThumbnail[3].alt}
+              title={photosPortfolioAlbumArtThumbnail[3].title}
+              className="portfolio-albumart-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+          <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
+            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="italic font-semibold tracking-wide">
+                {"The divination of a fiercesome character"}
+              </div>
+              bestows a livid and terrifying aura,
+              <br /> beset by ferocious flames.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Lightbox
+        plugins={[Captions]}
+        captions={{
+          ref: captionsRef,
+          showToggle: true,
+          descriptionTextAlign: "center",
+        }}
+        on={{
+          click: () => {
+            (captionsRef.current?.visible
+              ? captionsRef.current?.hide
+              : captionsRef.current?.show)?.();
+          },
+        }}
+        index={idx_albumart}
+        render={{
+          iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+          iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+          iconClose: () => <IoMdCloseCircle size={28} />,
+        }}
+        slides={photosPortfolioAlbumArt}
+        styles={{
+          container: {
+            backdropFilter: "blur(16px)",
+            backgroundColor: "rgba(0,0,0,0.8)",
+          },
+          captionsTitle: {
+            fontSize: "16px",
+            fontWeight: "300",
+          },
+          captionsTitleContainer: {
+            height: "46px",
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            top: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+        open={idx_albumart >= 0}
+        close={() => setIdx_albumart(-1)}
+      />
       {/* TODO: 4K Wallpaper Section */}
       {/* -- Layout: Desktop: 4x1 2/3-width, Tablet: 4x1 3/4-width, Mobile: 4x1 full-width */}
       <SectionIndicator sectionName="4K Wallpapers/Wide" />
