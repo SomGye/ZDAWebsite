@@ -2,10 +2,12 @@ import * as React from "react";
 import SectionIndicator from "../components/SectionIndicator";
 import SectionBreak from "../components/SectionBreak";
 import {
+  photosPortfolio4kWallsThumbnail,
   photosPortfolioAlbumArtThumbnail,
   photosPortfolioPostersThumbnail,
 } from "../thumbnailInfo";
 import {
+  photosPortfolio4kWalls,
   photosPortfolioAlbumArt,
   photosPortfolioPosters1,
   photosPortfolioPosters2,
@@ -24,6 +26,7 @@ const PortfolioPage = () => {
   const [idx_posters2, setIdx_posters2] = React.useState(-1);
   const [idx_posters3, setIdx_posters3] = React.useState(-1);
   const [idx_albumart, setIdx_albumart] = React.useState(-1);
+  const [idx_4kwalls, setIdx_4kwalls] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
 
@@ -794,10 +797,174 @@ const PortfolioPage = () => {
         open={idx_albumart >= 0}
         close={() => setIdx_albumart(-1)}
       />
-      {/* TODO: 4K Wallpaper Section */}
-      {/* -- Layout: Desktop: 4x1 2/3-width, Tablet: 4x1 3/4-width, Mobile: 4x1 full-width */}
       <SectionIndicator sectionName="4K Wallpapers/Wide" />
-      <span className="italic">Section stuff...</span>
+      <div className="portfolio-4kwalls-subcontainer w-full px-4">
+        <div className="portfolio-4kwalls-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-4kwalls-title-and-pic-container-top flex flex-col-reverse items-center mx-2 my-4">
+            <div className="portfolio-4kwalls-title-container-top flex flex-col justify-center items-center">
+              <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolio4kWallsThumbnail[0].title}
+              </span>
+              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                <div className="italic font-semibold tracking-wide">
+                  {"A smooth backdrop of red to blue"}
+                </div>
+                is marked by wild stray shots of inverse colors
+                <br /> and pointed shapes eagerly piercing the view.
+              </p>
+            </div>
+            <img
+              onClick={() => setIdx_4kwalls(0)}
+              src={photosPortfolio4kWallsThumbnail[0].src}
+              alt={photosPortfolio4kWallsThumbnail[0].alt}
+              title={photosPortfolio4kWallsThumbnail[0].title}
+              className="portfolio-4kwalls-img01 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+        <SectionBreak />
+        <div className="portfolio-4kwalls-container-bottom w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-4kwalls-title-and-pic-container-bottom flex flex-col items-center mx-2 my-4">
+            <div className="portfolio-4kwalls-title-container-bottom flex flex-col justify-center items-center">
+              <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolio4kWallsThumbnail[1].title}
+              </span>
+              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                A burning sun streaked by glinting rays
+                <br /> over a hazardous landscape of fiery sands;
+                <div className="italic font-semibold tracking-wide">
+                  {"only the strongest will rule this land."}
+                </div>
+              </p>
+            </div>
+            <img
+              src={photosPortfolio4kWallsThumbnail[1].blurSrc}
+              alt={photosPortfolio4kWallsThumbnail[1].alt}
+              title={photosPortfolio4kWallsThumbnail[1].title}
+              className="portfolio-4kwalls-img02b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_4kwalls(1)}
+              onLoad={() => loadImgHandler("portfolio-4kwalls-img02")}
+              src={photosPortfolio4kWallsThumbnail[1].src}
+              alt={photosPortfolio4kWallsThumbnail[1].alt}
+              title={photosPortfolio4kWallsThumbnail[1].title}
+              className="hidden portfolio-4kwalls-img02 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+      <SectionBreak />
+      <div className="portfolio-4kwalls-subcontainer w-full px-4">
+        <div className="portfolio-4kwalls-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-4kwalls-title-and-pic-container-top flex flex-col-reverse items-center mx-2 my-4">
+            <div className="portfolio-4kwalls-title-container-top flex flex-col justify-center items-center">
+              <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolio4kWallsThumbnail[2].title}
+              </span>
+              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                Cascading pink particles burst apart,
+                <br /> as the photonic wave frays into many hues;
+                <div className="italic font-semibold tracking-wide">
+                  {"the air is overtaken by the bold and brave radiance."}
+                </div>
+              </p>
+            </div>
+            <img
+              src={photosPortfolio4kWallsThumbnail[2].blurSrc}
+              alt={photosPortfolio4kWallsThumbnail[2].alt}
+              title={photosPortfolio4kWallsThumbnail[2].title}
+              className="portfolio-4kwalls-img03b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_4kwalls(2)}
+              onLoad={() => loadImgHandler("portfolio-4kwalls-img03")}
+              src={photosPortfolio4kWallsThumbnail[2].src}
+              alt={photosPortfolio4kWallsThumbnail[2].alt}
+              title={photosPortfolio4kWallsThumbnail[2].title}
+              className="hidden portfolio-4kwalls-img03 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+        <SectionBreak />
+        <div className="portfolio-4kwalls-container-bottom w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-4kwalls-title-and-pic-container-bottom flex flex-col items-center mx-2 my-4">
+            <div className="portfolio-4kwalls-title-container-bottom flex flex-col justify-center items-center">
+              <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolio4kWallsThumbnail[3].title}
+              </span>
+              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                <div className="italic font-semibold tracking-wide">
+                  {"An emerald forest destroyed by unseen forces;"}
+                </div>
+                the reality of the mountain valley,
+                <br /> fraying at the edges, like a frail mind.
+              </p>
+            </div>
+            <img
+              src={photosPortfolio4kWallsThumbnail[3].blurSrc}
+              alt={photosPortfolio4kWallsThumbnail[3].alt}
+              title={photosPortfolio4kWallsThumbnail[3].title}
+              className="portfolio-4kwalls-img04b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_4kwalls(3)}
+              onLoad={() => loadImgHandler("portfolio-4kwalls-img04")}
+              src={photosPortfolio4kWallsThumbnail[3].src}
+              alt={photosPortfolio4kWallsThumbnail[3].alt}
+              title={photosPortfolio4kWallsThumbnail[3].title}
+              className="portfolio-4kwalls-img04 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+      <Lightbox
+        plugins={[Captions]}
+        captions={{
+          ref: captionsRef,
+          showToggle: true,
+          descriptionTextAlign: "center",
+        }}
+        on={{
+          click: () => {
+            (captionsRef.current?.visible
+              ? captionsRef.current?.hide
+              : captionsRef.current?.show)?.();
+          },
+        }}
+        index={idx_4kwalls}
+        render={{
+          iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+          iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+          iconClose: () => <IoMdCloseCircle size={28} />,
+        }}
+        slides={photosPortfolio4kWalls}
+        styles={{
+          container: {
+            backdropFilter: "blur(16px)",
+            backgroundColor: "rgba(0,0,0,0.8)",
+          },
+          captionsTitle: {
+            fontSize: "16px",
+            fontWeight: "300",
+          },
+          captionsTitleContainer: {
+            height: "46px",
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            top: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+        open={idx_4kwalls >= 0}
+        close={() => setIdx_4kwalls(-1)}
+      />
       {/* TODO: Phone Wallpaper Section? */}
       {/* -- Layout: Desktop: 1x4, Tablet: 2x2, Mobile: 4x1 */}
       <SectionIndicator sectionName="Phone Wallpapers" />

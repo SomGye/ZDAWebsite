@@ -23,6 +23,7 @@ import out_of_shape from "/assets/about/out_of_shape-20240218.svg";
 import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair.svg";
 import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
 import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
+import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
 
 export const photosHome = [
   {
@@ -290,5 +291,36 @@ export const photosPortfolioAlbumArt = [
     height: 1331,
     alt: altHuionSketch_1623481967592,
     title: "In Flux",
+  },
+];
+
+export const photosPortfolio4kWalls = [
+  {
+    src: prone_to_oblivion,
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1625698314399,
+    title: "Prone to Oblivion",
+  },
+  {
+    src: "/assets/portfolio/4kwalls/lightbox/2024-03-06-The_Infinite_Kingdom-65p-c1.jpg",
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1623481967592,
+    title: "Prism of Paragon",
+  },
+  {
+    src: "/assets/portfolio/4kwalls/lightbox/2024-02-07-Nonconformant_Spectrum-65p-c1.jpg",
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1623481967592,
+    title: "Nonconformant Spectrum",
+  },
+  {
+    src: "/assets/portfolio/4kwalls/lightbox/2024-01-11-Weathering_The_Waves-65p-c1.jpg",
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1623481967592,
+    title: "Weathering The Waves",
   },
 ];

@@ -23,6 +23,7 @@ import out_of_shape from "/assets/about/out_of_shape-20240218.svg";
 import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair.svg";
 import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
 import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
+import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
 
 export const photosHomeThumbnail = [
   {
@@ -268,5 +269,34 @@ export const photosPortfolioAlbumArtThumbnail = [
     src: "/assets/portfolio/albumart/thumbnail/2023-12-11-In_Flux-600px-c1.jpg",
     alt: altHuionSketch_1623363242260,
     title: "In Flux",
+  },
+];
+
+export const photosPortfolio4kWallsThumbnail = [
+  {
+    src: prone_to_oblivion,
+    alt: altHuionSketch_1625698314399,
+    title: "Prone to Oblivion",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/4kwalls/thumbnail/2024-03-06-The_Infinite_Kingdom-1000px-c7-blur3x.jpg",
+    src: "/assets/portfolio/4kwalls/thumbnail/2024-03-06-The_Infinite_Kingdom-1000px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "The Infinite Kingdom",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/4kwalls/thumbnail/2024-02-07-Nonconformant_Spectrum-1000px-c7-blur3x.jpg",
+    src: "/assets/portfolio/4kwalls/thumbnail/2024-02-07-Nonconformant_Spectrum-1000px-c1.jpg",
+    alt: altHuionSketch_1623363242260,
+    title: "Nonconformant Spectrum",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/4kwalls/thumbnail/2024-01-11-Weathering_The_Waves-1000px-c7-blur3x.jpg",
+    src: "/assets/portfolio/4kwalls/thumbnail/2024-01-11-Weathering_The_Waves-1000px-c1.jpg",
+    alt: altHuionSketch_1623363242260,
+    title: "Weathering The Waves",
   },
 ];
