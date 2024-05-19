@@ -4,11 +4,13 @@ import SectionBreak from "../components/SectionBreak";
 import {
   photosPortfolio4kWallsThumbnail,
   photosPortfolioAlbumArtThumbnail,
+  photosPortfolioPhoneWallsThumbnail,
   photosPortfolioPostersThumbnail,
 } from "../thumbnailInfo";
 import {
   photosPortfolio4kWalls,
   photosPortfolioAlbumArt,
+  photosPortfolioPhoneWalls,
   photosPortfolioPosters1,
   photosPortfolioPosters2,
   photosPortfolioPosters3,
@@ -27,6 +29,7 @@ const PortfolioPage = () => {
   const [idx_posters3, setIdx_posters3] = React.useState(-1);
   const [idx_albumart, setIdx_albumart] = React.useState(-1);
   const [idx_4kwalls, setIdx_4kwalls] = React.useState(-1);
+  const [idx_phonewalls, setIdx_phonewalls] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
 
@@ -965,10 +968,142 @@ const PortfolioPage = () => {
         open={idx_4kwalls >= 0}
         close={() => setIdx_4kwalls(-1)}
       />
-      {/* TODO: Phone Wallpaper Section? */}
-      {/* -- Layout: Desktop: 1x4, Tablet: 2x2, Mobile: 4x1 */}
       <SectionIndicator sectionName="Phone Wallpapers" />
-      <span className="italic">Section stuff...</span>
+      <div className="portfolio-phonewalls-subcontainer max-w-fit flex flex-col md:grid md:grid-cols-2 md:gap-0 lg:gap-2 xl:flex xl:flex-row">
+        <div className="portfolio-phonewalls-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioPhoneWallsThumbnail[0].blurSrc}
+            alt={photosPortfolioPhoneWallsThumbnail[0].alt}
+            title={photosPortfolioPhoneWallsThumbnail[0].title}
+            className="portfolio-phonewalls-img01b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_phonewalls(0)}
+            onLoad={() => loadImgHandler("portfolio-phonewalls-img01")}
+            src={photosPortfolioPhoneWallsThumbnail[0].src}
+            alt={photosPortfolioPhoneWallsThumbnail[0].alt}
+            title={photosPortfolioPhoneWallsThumbnail[0].title}
+            className="hidden portfolio-phonewalls-img01 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        {/* NOTE: show vertical break only on larger screens */}
+        <div className="block md:hidden">
+          <SectionBreak />
+        </div>
+        <div className="hidden xl:block">
+          <SectionBreak isVertical />
+        </div>
+        <div className="portfolio-phonewalls-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioPhoneWallsThumbnail[1].blurSrc}
+            alt={photosPortfolioPhoneWallsThumbnail[1].alt}
+            title={photosPortfolioPhoneWallsThumbnail[1].title}
+            className="portfolio-phonewalls-img02b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_phonewalls(1)}
+            onLoad={() => loadImgHandler("portfolio-phonewalls-img02")}
+            src={photosPortfolioPhoneWallsThumbnail[1].src}
+            alt={photosPortfolioPhoneWallsThumbnail[1].alt}
+            title={photosPortfolioPhoneWallsThumbnail[1].title}
+            className="hidden portfolio-phonewalls-img02 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        {/* NOTE: show vertical break only on larger screens */}
+        <div className="block md:hidden">
+          <SectionBreak />
+        </div>
+        <div className="hidden xl:block">
+          <SectionBreak isVertical />
+        </div>
+        <div className="portfolio-phonewalls-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioPhoneWallsThumbnail[2].blurSrc}
+            alt={photosPortfolioPhoneWallsThumbnail[2].alt}
+            title={photosPortfolioPhoneWallsThumbnail[2].title}
+            className="portfolio-phonewalls-img03b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_phonewalls(2)}
+            onLoad={() => loadImgHandler("portfolio-phonewalls-img03")}
+            src={photosPortfolioPhoneWallsThumbnail[2].src}
+            alt={photosPortfolioPhoneWallsThumbnail[2].alt}
+            title={photosPortfolioPhoneWallsThumbnail[2].title}
+            className="hidden portfolio-phonewalls-img03 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        {/* NOTE: show vertical break only on larger screens */}
+        <div className="block md:hidden">
+          <SectionBreak />
+        </div>
+        <div className="hidden xl:block">
+          <SectionBreak isVertical />
+        </div>
+        <div className="portfolio-phonewalls-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioPhoneWallsThumbnail[3].blurSrc}
+            alt={photosPortfolioPhoneWallsThumbnail[3].alt}
+            title={photosPortfolioPhoneWallsThumbnail[3].title}
+            className="portfolio-phonewalls-img04b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_phonewalls(3)}
+            onLoad={() => loadImgHandler("portfolio-phonewalls-img04")}
+            src={photosPortfolioPhoneWallsThumbnail[3].src}
+            alt={photosPortfolioPhoneWallsThumbnail[3].alt}
+            title={photosPortfolioPhoneWallsThumbnail[3].title}
+            className="hidden portfolio-phonewalls-img04 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        <Lightbox
+          plugins={[Captions]}
+          captions={{
+            ref: captionsRef,
+            showToggle: true,
+            descriptionTextAlign: "center",
+          }}
+          on={{
+            click: () => {
+              (captionsRef.current?.visible
+                ? captionsRef.current?.hide
+                : captionsRef.current?.show)?.();
+            },
+          }}
+          index={idx_phonewalls}
+          render={{
+            iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+            iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+            iconClose: () => <IoMdCloseCircle size={28} />,
+          }}
+          slides={photosPortfolioPhoneWalls}
+          styles={{
+            container: {
+              backdropFilter: "blur(16px)",
+              backgroundColor: "rgba(0,0,0,0.8)",
+            },
+            captionsTitle: {
+              fontSize: "16px",
+              fontWeight: "300",
+            },
+            captionsTitleContainer: {
+              height: "46px",
+              position: "absolute",
+              bottom: "0",
+              left: "0",
+              top: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            },
+          }}
+          open={idx_phonewalls >= 0}
+          close={() => setIdx_phonewalls(-1)}
+        />
+      </div>
       {/* TODO: Ultrawide Section */}
       {/* -- Layout: Desktop: 3x1 2/3-width, Tablet: 3x1 3/4-width, Mobile: 3x1 full-width */}
       <SectionIndicator sectionName="Ultrawide" />

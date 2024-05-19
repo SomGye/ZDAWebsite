@@ -324,3 +324,34 @@ export const photosPortfolio4kWalls = [
     title: "Weathering The Waves",
   },
 ];
+
+export const photosPortfolioPhoneWalls = [
+  {
+    src: "/assets/portfolio/phonewalls/lightbox/2024-01-02-Memoriam_de_Luce-65p-c1.jpg",
+    width: 936,
+    height: 2028,
+    alt: altHuionSketch_1623481967592,
+    title: "Memorium de Luce",
+  },
+  {
+    src: "/assets/portfolio/phonewalls/lightbox/2023-11-04-Divinity_Ends-65p-c1.jpg",
+    width: 936,
+    height: 2028,
+    alt: altHuionSketch_1623481967592,
+    title: "Divinity Ends",
+  },
+  {
+    src: "/assets/portfolio/phonewalls/lightbox/2023-11-03-Shaken_Petals-65p-c1.jpg",
+    width: 936,
+    height: 2028,
+    alt: altHuionSketch_1623481967592,
+    title: "Shaken Petals",
+  },
+  {
+    src: "/assets/portfolio/phonewalls/lightbox/2023-08-26-Zygotes_Severed-65p-c1.jpg",
+    width: 936,
+    height: 2028,
+    alt: altHuionSketch_1623481967592,
+    title: "Zygotes Severed",
+  },
+];

@@ -300,3 +300,34 @@ export const photosPortfolio4kWallsThumbnail = [
     title: "Weathering The Waves",
   },
 ];
+
+export const photosPortfolioPhoneWallsThumbnail = [
+  {
+    blurSrc:
+      "/assets/portfolio/phonewalls/thumbnail/2024-01-02-Memoriam_de_Luce-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/phonewalls/thumbnail/2024-01-02-Memoriam_de_Luce-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "Memorium de Luce",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/phonewalls/thumbnail/2023-11-04-Divinity_Ends-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/phonewalls/thumbnail/2023-11-04-Divinity_Ends-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "Divinity Ends",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/phonewalls/thumbnail/2023-11-03-Shaken_Petals-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/phonewalls/thumbnail/2023-11-03-Shaken_Petals-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "Shaken Petals",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/phonewalls/thumbnail/2023-08-26-Zygotes_Severed-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/phonewalls/thumbnail/2023-08-26-Zygotes_Severed-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "Zygotes Severed",
+  },
+];
