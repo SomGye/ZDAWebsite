@@ -6,6 +6,7 @@ import {
   photosPortfolioAlbumArtThumbnail,
   photosPortfolioPhoneWallsThumbnail,
   photosPortfolioPostersThumbnail,
+  photosPortfolioUltrawideThumbnail,
 } from "../thumbnailInfo";
 import {
   photosPortfolio4kWalls,
@@ -14,6 +15,7 @@ import {
   photosPortfolioPosters1,
   photosPortfolioPosters2,
   photosPortfolioPosters3,
+  photosPortfolioUltrawide,
 } from "../lightboxInfo";
 import { loadImgHandler } from "../helpers";
 import Lightbox from "yet-another-react-lightbox";
@@ -30,6 +32,7 @@ const PortfolioPage = () => {
   const [idx_albumart, setIdx_albumart] = React.useState(-1);
   const [idx_4kwalls, setIdx_4kwalls] = React.useState(-1);
   const [idx_phonewalls, setIdx_phonewalls] = React.useState(-1);
+  const [idx_ultrawide, setIdx_ultrawide] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
 
@@ -989,7 +992,7 @@ const PortfolioPage = () => {
         </div>
         {/* NOTE: show vertical break only on larger screens */}
         <div className="block md:hidden">
-          <SectionBreak />
+          <SectionBreak tight />
         </div>
         <div className="hidden xl:block">
           <SectionBreak isVertical />
@@ -1013,7 +1016,7 @@ const PortfolioPage = () => {
         </div>
         {/* NOTE: show vertical break only on larger screens */}
         <div className="block md:hidden">
-          <SectionBreak />
+          <SectionBreak tight />
         </div>
         <div className="hidden xl:block">
           <SectionBreak isVertical />
@@ -1037,7 +1040,7 @@ const PortfolioPage = () => {
         </div>
         {/* NOTE: show vertical break only on larger screens */}
         <div className="block md:hidden">
-          <SectionBreak />
+          <SectionBreak tight />
         </div>
         <div className="hidden xl:block">
           <SectionBreak isVertical />
@@ -1104,10 +1107,127 @@ const PortfolioPage = () => {
           close={() => setIdx_phonewalls(-1)}
         />
       </div>
-      {/* TODO: Ultrawide Section */}
-      {/* -- Layout: Desktop: 3x1 2/3-width, Tablet: 3x1 3/4-width, Mobile: 3x1 full-width */}
       <SectionIndicator sectionName="Ultrawide" />
-      <span className="italic">Section stuff...</span>
+      <div className="portfolio-ultrawide-subcontainer w-full px-4">
+        <div className="portfolio-ultrawide-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-ultrawide-title-and-pic-container-top flex flex-col items-center mx-2 my-4">
+            <img
+              src={photosPortfolioUltrawideThumbnail[0].blurSrc}
+              alt={photosPortfolioUltrawideThumbnail[0].alt}
+              title={photosPortfolioUltrawideThumbnail[0].title}
+              className="portfolio-ultrawide-img01b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_ultrawide(3)}
+              onLoad={() => loadImgHandler("portfolio-ultrawide-img01")}
+              src={photosPortfolioUltrawideThumbnail[0].src}
+              alt={photosPortfolioUltrawideThumbnail[0].alt}
+              title={photosPortfolioUltrawideThumbnail[0].title}
+              className="portfolio-ultrawide-img01 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+        {/* Tighten section break spacing for mobile */}
+        <div className="block md:hidden">
+          <SectionBreak tight />
+        </div>
+        <div className="hidden md:block">
+          <SectionBreak />
+        </div>
+        <div className="portfolio-ultrawide-container-bottom w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-ultrawide-title-and-pic-container-bottom flex flex-col items-center mx-2 my-4">
+            <img
+              src={photosPortfolioUltrawideThumbnail[1].blurSrc}
+              alt={photosPortfolioUltrawideThumbnail[1].alt}
+              title={photosPortfolioUltrawideThumbnail[1].title}
+              className="portfolio-ultrawide-img02b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_ultrawide(1)}
+              onLoad={() => loadImgHandler("portfolio-ultrawide-img02")}
+              src={photosPortfolioUltrawideThumbnail[1].src}
+              alt={photosPortfolioUltrawideThumbnail[1].alt}
+              title={photosPortfolioUltrawideThumbnail[1].title}
+              className="hidden portfolio-ultrawide-img02 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+        {/* Tighten section break spacing for mobile */}
+        <div className="block md:hidden">
+          <SectionBreak tight />
+        </div>
+        <div className="hidden md:block">
+          <SectionBreak />
+        </div>
+      </div>
+      <div className="portfolio-ultrawide-subcontainer w-full px-4">
+        <div className="portfolio-ultrawide-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+          <div className="portfolio-ultrawide-title-and-pic-container-top flex flex-col items-center mx-2 my-4">
+            <img
+              src={photosPortfolioUltrawideThumbnail[2].blurSrc}
+              alt={photosPortfolioUltrawideThumbnail[2].alt}
+              title={photosPortfolioUltrawideThumbnail[2].title}
+              className="portfolio-ultrawide-img03b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_ultrawide(2)}
+              onLoad={() => loadImgHandler("portfolio-ultrawide-img03")}
+              src={photosPortfolioUltrawideThumbnail[2].src}
+              alt={photosPortfolioUltrawideThumbnail[2].alt}
+              title={photosPortfolioUltrawideThumbnail[2].title}
+              className="hidden portfolio-ultrawide-img03 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+      <Lightbox
+        plugins={[Captions]}
+        captions={{
+          ref: captionsRef,
+          showToggle: true,
+          descriptionTextAlign: "center",
+        }}
+        on={{
+          click: () => {
+            (captionsRef.current?.visible
+              ? captionsRef.current?.hide
+              : captionsRef.current?.show)?.();
+          },
+        }}
+        index={idx_ultrawide}
+        render={{
+          iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+          iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+          iconClose: () => <IoMdCloseCircle size={28} />,
+        }}
+        slides={photosPortfolioUltrawide}
+        styles={{
+          container: {
+            backdropFilter: "blur(16px)",
+            backgroundColor: "rgba(0,0,0,0.8)",
+          },
+          captionsTitle: {
+            fontSize: "16px",
+            fontWeight: "300",
+          },
+          captionsTitleContainer: {
+            height: "46px",
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            top: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+        open={idx_ultrawide >= 0}
+        close={() => setIdx_ultrawide(-1)}
+      />
+      {/* // ? START HERE */}
       {/* TODO: Square (Misc) Section */}
       {/* -- Layout: Desktop: L/R one after other with desc, Tablet: 2x2 2/3-width, Mobile: 4x1 */}
       <SectionIndicator sectionName="Square" />

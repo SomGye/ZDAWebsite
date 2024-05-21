@@ -355,3 +355,27 @@ export const photosPortfolioPhoneWalls = [
     title: "Zygotes Severed",
   },
 ];
+
+export const photosPortfolioUltrawide = [
+  {
+    src: "/assets/portfolio/ultrawide/lightbox/2023-08-21-Self_Destruct_Sequence-65p-c1.jpg",
+    width: 2662,
+    height: 1114,
+    alt: altHuionSketch_1623481967592,
+    title: "Self-Destruct Sequence",
+  },
+  {
+    src: "/assets/portfolio/ultrawide/lightbox/2024-01-25-The_Trained_Trespass-65p-c1.jpg",
+    width: 3328,
+    height: 1404,
+    alt: altHuionSketch_1623481967592,
+    title: "The Trained Trespass",
+  },
+  {
+    src: "/assets/portfolio/ultrawide/lightbox/2023-04-26-Thing_202304261913-65p-c1.jpg",
+    width: 2662,
+    height: 1114,
+    alt: altHuionSketch_1623481967592,
+    title: "Thing 202304261913",
+  },
+];
