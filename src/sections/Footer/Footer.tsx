@@ -239,6 +239,7 @@ const Footer = () => {
             <button
               className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
               aria-label="Email"
+              title="Email me at zerodayanubis@gmail.com"
               onClick={clickEmail}
             >
               <span className="mt-[1px] mr-0 lg:mr-6">{emailIcon}</span>
@@ -246,7 +247,7 @@ const Footer = () => {
             </button>
             <button
               className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
-              aria-label="Message"
+              aria-label="Message" title="Message me on Discord"
               onClick={() =>
                 clickLink("https://discordapp.com/users/193548282264420354")
               }
