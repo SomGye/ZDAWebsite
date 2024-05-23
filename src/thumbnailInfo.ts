@@ -355,3 +355,34 @@ export const photosPortfolioUltrawideThumbnail = [
     title: "Thing_202304261913",
   },
 ];
+
+export const photosPortfolioSquareThumbnail = [
+  {
+    blurSrc:
+      "/assets/portfolio/square/thumbnail/2023-10-02-Saturated_Axons-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/square/thumbnail/2023-10-02-Saturated_Axons-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "Saturated Axons",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/square/thumbnail/2023-09-27-The_Temple_of_Loss-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/square/thumbnail/2023-09-27-The_Temple_of_Loss-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "The Temple of Loss",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/square/thumbnail/2023-09-08-The_Toxic_Descent-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/square/thumbnail/2023-09-08-The_Toxic_Descent-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "The Toxic Descent",
+  },
+  {
+    blurSrc:
+      "/assets/portfolio/square/thumbnail/2023-04-30-Binary_Worlds_The_Mess_Between-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/square/thumbnail/2023-04-30-Binary_Worlds_The_Mess_Between-600px-c1.jpg",
+    alt: altHuionSketch_1623481967592,
+    title: "The Mess Between",
+  },
+];

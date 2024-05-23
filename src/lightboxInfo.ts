@@ -379,3 +379,34 @@ export const photosPortfolioUltrawide = [
     title: "Thing 202304261913",
   },
 ];
+
+export const photosPortfolioSquare = [
+  {
+    src: "/assets/portfolio/square/lightbox/2023-10-02-Saturated_Axons-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "Saturated Axons",
+  },
+  {
+    src: "/assets/portfolio/square/lightbox/2023-09-27-The_Temple_of_Loss-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "The Temple of Loss",
+  },
+  {
+    src: "/assets/portfolio/square/lightbox/2023-09-08-The_Toxic_Descent-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "The Toxic Descent",
+  },
+  {
+    src: "/assets/portfolio/square/lightbox/2023-04-30-Binary_Worlds_The_Mess_Between-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "The Mess Between",
+  },
+];

@@ -6,6 +6,7 @@ import {
   photosPortfolioAlbumArtThumbnail,
   photosPortfolioPhoneWallsThumbnail,
   photosPortfolioPostersThumbnail,
+  photosPortfolioSquareThumbnail,
   photosPortfolioUltrawideThumbnail,
 } from "../thumbnailInfo";
 import {
@@ -15,6 +16,7 @@ import {
   photosPortfolioPosters1,
   photosPortfolioPosters2,
   photosPortfolioPosters3,
+  photosPortfolioSquare,
   photosPortfolioUltrawide,
 } from "../lightboxInfo";
 import { loadImgHandler } from "../helpers";
@@ -33,6 +35,7 @@ const PortfolioPage = () => {
   const [idx_4kwalls, setIdx_4kwalls] = React.useState(-1);
   const [idx_phonewalls, setIdx_phonewalls] = React.useState(-1);
   const [idx_ultrawide, setIdx_ultrawide] = React.useState(-1);
+  const [idx_square, setIdx_square] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
 
@@ -46,13 +49,15 @@ const PortfolioPage = () => {
       <div className="hidden sm:inline-flex rounded-md shadow-sm" role="group">
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-l border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          // className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-l border-gray-200 rounded-s-lg hover:bg-zdaBlue-100 hover:text-zdaBlue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-l border-gray-200 hover:border-zdaRed-100 rounded-s-lg hover:bg-red-50 hover:text-zdaRed-600 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:border-neutral-800/40 dark:text-white dark:hover:text-white  hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
         >
           Posters
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          // className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:border-zdaRed-100 hover:bg-red-50 hover:text-zdaRed-600 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:border-neutral-800/40 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
         >
           Album Arts
         </button>
@@ -1227,11 +1232,142 @@ const PortfolioPage = () => {
         open={idx_ultrawide >= 0}
         close={() => setIdx_ultrawide(-1)}
       />
-      {/* // ? START HERE */}
-      {/* TODO: Square (Misc) Section */}
-      {/* -- Layout: Desktop: L/R one after other with desc, Tablet: 2x2 2/3-width, Mobile: 4x1 */}
       <SectionIndicator sectionName="Square" />
-      <span className="italic">Section stuff...</span>
+      <div className="portfolio-square-subcontainer max-w-fit flex flex-col md:grid md:grid-cols-2 md:gap-0 lg:gap-2 xl:flex xl:flex-row">
+        <div className="portfolio-square-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioSquareThumbnail[0].blurSrc}
+            alt={photosPortfolioSquareThumbnail[0].alt}
+            title={photosPortfolioSquareThumbnail[0].title}
+            className="portfolio-square-img01b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_square(0)}
+            onLoad={() => loadImgHandler("portfolio-square-img01")}
+            src={photosPortfolioSquareThumbnail[0].src}
+            alt={photosPortfolioSquareThumbnail[0].alt}
+            title={photosPortfolioSquareThumbnail[0].title}
+            className="hidden portfolio-square-img01 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        {/* NOTE: show vertical break only on larger screens */}
+        <div className="block md:hidden">
+          <SectionBreak tight />
+        </div>
+        <div className="hidden xl:block">
+          <SectionBreak isVertical />
+        </div>
+        <div className="portfolio-square-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioSquareThumbnail[1].blurSrc}
+            alt={photosPortfolioSquareThumbnail[1].alt}
+            title={photosPortfolioSquareThumbnail[1].title}
+            className="portfolio-square-img02b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_square(1)}
+            onLoad={() => loadImgHandler("portfolio-square-img02")}
+            src={photosPortfolioSquareThumbnail[1].src}
+            alt={photosPortfolioSquareThumbnail[1].alt}
+            title={photosPortfolioSquareThumbnail[1].title}
+            className="hidden portfolio-square-img02 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        {/* NOTE: show vertical break only on larger screens */}
+        <div className="block md:hidden">
+          <SectionBreak tight />
+        </div>
+        <div className="hidden xl:block">
+          <SectionBreak isVertical />
+        </div>
+        <div className="portfolio-square-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioSquareThumbnail[2].blurSrc}
+            alt={photosPortfolioSquareThumbnail[2].alt}
+            title={photosPortfolioSquareThumbnail[2].title}
+            className="portfolio-square-img03b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_square(2)}
+            onLoad={() => loadImgHandler("portfolio-square-img03")}
+            src={photosPortfolioSquareThumbnail[2].src}
+            alt={photosPortfolioSquareThumbnail[2].alt}
+            title={photosPortfolioSquareThumbnail[2].title}
+            className="hidden portfolio-square-img03 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        {/* NOTE: show vertical break only on larger screens */}
+        <div className="block md:hidden">
+          <SectionBreak tight />
+        </div>
+        <div className="hidden xl:block">
+          <SectionBreak isVertical />
+        </div>
+        <div className="portfolio-square-pic-container w-full flex flex-col px-4">
+          <img
+            src={photosPortfolioSquareThumbnail[3].blurSrc}
+            alt={photosPortfolioSquareThumbnail[3].alt}
+            title={photosPortfolioSquareThumbnail[3].title}
+            className="portfolio-square-img04b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            loading="lazy"
+          />
+          <img
+            onClick={() => setIdx_square(3)}
+            onLoad={() => loadImgHandler("portfolio-square-img04")}
+            src={photosPortfolioSquareThumbnail[3].src}
+            alt={photosPortfolioSquareThumbnail[3].alt}
+            title={photosPortfolioSquareThumbnail[3].title}
+            className="hidden portfolio-square-img04 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+          />
+        </div>
+        <Lightbox
+          plugins={[Captions]}
+          captions={{
+            ref: captionsRef,
+            showToggle: true,
+            descriptionTextAlign: "center",
+          }}
+          on={{
+            click: () => {
+              (captionsRef.current?.visible
+                ? captionsRef.current?.hide
+                : captionsRef.current?.show)?.();
+            },
+          }}
+          index={idx_square}
+          render={{
+            iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+            iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+            iconClose: () => <IoMdCloseCircle size={28} />,
+          }}
+          slides={photosPortfolioSquare}
+          styles={{
+            container: {
+              backdropFilter: "blur(16px)",
+              backgroundColor: "rgba(0,0,0,0.8)",
+            },
+            captionsTitle: {
+              fontSize: "16px",
+              fontWeight: "300",
+            },
+            captionsTitleContainer: {
+              height: "46px",
+              position: "absolute",
+              bottom: "0",
+              left: "0",
+              top: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            },
+          }}
+          open={idx_square >= 0}
+          close={() => setIdx_square(-1)}
+        />
+      </div>
       <SectionBreak />
     </div>
   );
