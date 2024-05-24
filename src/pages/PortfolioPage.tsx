@@ -40,11 +40,10 @@ const PortfolioPage = () => {
   const captionsRef = React.useRef(null) as any;
 
   return (
-    // TODO: adjust the text width and word-wrap/line-breaks for diff screen sizes
     // TODO: add a 'Jump To' arrow button for each section (like just down arrow on 1st, up/down in mid, and just up arrow on last)
     // TODO: Finish nav bar styling for desktop/tablet
     // TODO: alternate vertical nav bar for mobile
-    // TODO: do nav bar jump-to functionality
+    // TODO: do nav bar jump-to functionality...
     <div className="portfolio-page-container w-full flex flex-col justify-center items-center">
       <div className="hidden sm:inline-flex rounded-md shadow-sm" role="group">
         <button
@@ -95,7 +94,9 @@ const PortfolioPage = () => {
                 {photosPortfolioPostersThumbnail[0].title}
               </span>
               <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                A terrifying mix of striking red splatters and streaks
+                A terrifying mix of
+                <br className="block lg:hidden" />
+                striking red splatters and streaks
                 <br /> over a shockingly dark red backdrop,
                 <br /> framed by inverse colors to further highlight
                 <div className="italic font-semibold tracking-wide">
@@ -121,7 +122,9 @@ const PortfolioPage = () => {
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              A terrifying mix of striking red splatters and streaks
+              A terrifying mix of
+              <br className="block md:hidden" />
+              striking red splatters and streaks
               <br /> over a shockingly dark red backdrop,
               <br /> framed by inverse colors to further highlight
               <div className="italic font-semibold tracking-wide">
@@ -139,7 +142,8 @@ const PortfolioPage = () => {
               </span>
               <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  {"A piece of muted yet whimsical graphic design,"}
+                  A piece of muted <br className="block lg:hidden" /> yet
+                  whimsical graphic design,
                 </div>
                 racing stripes dash across the middle
                 <br /> while a gray sphere hides a
@@ -158,7 +162,8 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
-                {"A piece of muted yet whimsical graphic design,"}
+                A piece of muted yet <br className="block md:hidden" />{" "}
+                whimsical graphic design,
               </div>
               racing stripes dash across the middle
               <br /> while a gray sphere hides a
@@ -176,7 +181,8 @@ const PortfolioPage = () => {
                 {photosPortfolioPostersThumbnail[2].title}
               </span>
               <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                A dark red rose comprised of sharp, deadly lines
+                A dark red rose comprised <br className="block lg:hidden" /> of
+                sharp, deadly lines
                 <br /> with edges of a haunting past looming overhead.
                 <div className="italic font-semibold tracking-wide">
                   {"This flower holds a troublesome tale."}
@@ -193,7 +199,8 @@ const PortfolioPage = () => {
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              A dark red rose comprised of sharp, deadly lines
+              A dark red rose comprised <br className="block md:hidden" /> of
+              sharp, deadly lines
               <br /> with edges of a haunting past looming overhead.
               <div className="italic font-semibold tracking-wide">
                 {"This flower holds a troublesome tale."}
@@ -319,7 +326,7 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <p className="portfolio-posters-blurb max-w-[16ch] xs:max-w-none text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               Tendrils of outlandish energy and color,
               <br /> both emanating outward and surging within,
               <div className="italic font-semibold tracking-wide">
@@ -337,10 +344,13 @@ const PortfolioPage = () => {
               </span>
               <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  {"A mystical frame acts as a portal between worlds:"}
+                  A mystical frame acts as <br className="block lg:hidden" /> a
+                  portal between worlds:
                 </div>
-                Impossibly powerful rings hold colorful energy,
-                <br /> while imagination breaks beyond the boundaries.
+                Impossibly powerful rings <br className="block lg:hidden" />{" "}
+                hold colorful energy,
+                <br /> while imagination breaks{" "}
+                <br className="block lg:hidden" /> beyond the boundaries.
               </p>
             </div>
             <img
@@ -362,10 +372,13 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
-                {"A mystical frame acts as a portal between worlds:"}
+                A mystical frame acts as <br className="block sm:hidden" /> a
+                portal between worlds:
               </div>
-              Impossibly powerful rings hold colorful energy,
-              <br /> while imagination breaks beyond the boundaries.
+              Impossibly powerful rings <br className="block sm:hidden" /> hold
+              colorful energy,
+              <br /> while imagination breaks <br className="block sm:hidden" />{" "}
+              beyond the boundaries.
             </p>
           </div>
         </div>
@@ -406,7 +419,8 @@ const PortfolioPage = () => {
               Softly blurred zones of colors
               <br /> hug the wispy, fraying beam of force,
               <div className="italic font-semibold tracking-wide">
-                {"bestowing the eyes with visions of lucidity."}
+                bestowing the eyes with <br className="block xs:hidden" />{" "}
+                visions of lucidity.
               </div>
             </p>
           </div>
@@ -673,7 +687,8 @@ const PortfolioPage = () => {
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
-                {"Wild energy surrounds a hypnotic lime orb,"}
+                Wild energy surrounds <br className="block xs:hidden" /> a
+                hypnotic lime orb,
               </div>
               it's power streaked by hasty dark inks
               <br /> and passionate flames overtaking our world.
@@ -692,7 +707,8 @@ const PortfolioPage = () => {
                 A neon prison enraptures an eerie pyramid,
                 <br /> followed by a sweeping force of nature,
                 <div className="italic font-semibold tracking-wide">
-                  {"a river of purple enveloped by swarms of pink."}
+                  a river of purple enveloped <br className="block lg:hidden" />{" "}
+                  by swarms of pink.
                 </div>
               </p>
             </div>
@@ -717,7 +733,8 @@ const PortfolioPage = () => {
               A neon prison enraptures an eerie pyramid,
               <br /> followed by a sweeping force of nature,
               <div className="italic font-semibold tracking-wide">
-                {"a river of purple enveloped by swarms of pink."}
+                a river of purple enveloped <br className="block lg:hidden" />{" "}
+                by swarms of pink.
               </div>
             </p>
           </div>
@@ -731,7 +748,8 @@ const PortfolioPage = () => {
               </span>
               <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  {"An emerald forest destroyed by unseen forces;"}
+                  An emerald forest <br className="block lg:hidden" /> destroyed
+                  by unseen forces;
                 </div>
                 the reality of the mountain valley,
                 <br /> fraying at the edges, like a frail mind.
@@ -756,10 +774,11 @@ const PortfolioPage = () => {
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
-                {"The divination of a fiercesome character"}
+                An emerald forest <br className="block xs:hidden" /> destroyed
+                by unseen forces;
               </div>
-              bestows a livid and terrifying aura,
-              <br /> beset by ferocious flames.
+              the reality of the mountain valley,
+              <br /> fraying at the edges, like a frail mind.
             </p>
           </div>
         </div>
@@ -820,8 +839,10 @@ const PortfolioPage = () => {
                 <div className="italic font-semibold tracking-wide">
                   {"A smooth backdrop of red to blue"}
                 </div>
-                is marked by wild stray shots of inverse colors
-                <br /> and pointed shapes eagerly piercing the view.
+                is marked by wild stray <br className="block xs:hidden" /> shots
+                of inverse colors
+                <br /> and pointed shapes <br className="block xs:hidden" />{" "}
+                eagerly piercing the view.
               </p>
             </div>
             <img
@@ -876,9 +897,11 @@ const PortfolioPage = () => {
               </span>
               <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 Cascading pink particles burst apart,
-                <br /> as the photonic wave frays into many hues;
+                <br /> as the photonic wave frays{" "}
+                <br className="block xs:hidden" /> into many hues;
                 <div className="italic font-semibold tracking-wide">
-                  {"the air is overtaken by the bold and brave radiance."}
+                  the air is overtaken by the <br className="block sm:hidden" />{" "}
+                  bold and brave radiance.
                 </div>
               </p>
             </div>
@@ -908,10 +931,10 @@ const PortfolioPage = () => {
               </span>
               <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  {"An emerald forest destroyed by unseen forces;"}
+                  {"Surging splashes of burning colors"}
                 </div>
-                the reality of the mountain valley,
-                <br /> fraying at the edges, like a frail mind.
+                grip the screen with playful waves,
+                <br /> an evening of gradients to dine on.
               </p>
             </div>
             <img
