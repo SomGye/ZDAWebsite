@@ -19,13 +19,14 @@ import {
   photosPortfolioSquare,
   photosPortfolioUltrawide,
 } from "../lightboxInfo";
-import { jumpToSection, loadImgHandler } from "../helpers";
+import { loadImgHandler } from "../helpers";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { MdClosedCaption, MdClosedCaptionDisabled } from "react-icons/md";
 import { IoMdCloseCircle } from "react-icons/io";
+import JumpToNav from "../components/JumpToNav";
 
 const PortfolioPage = () => {
   const [idx_posters1, setIdx_posters1] = React.useState(-1);
@@ -38,55 +39,50 @@ const PortfolioPage = () => {
   const [idx_square, setIdx_square] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
+  const leftSection = React.useCallback(
+    () => ({
+      id: "posters-section",
+      text: "Posters",
+    }),
+    []
+  );
+  const middleSections = React.useCallback(
+    () => [
+      {
+        id: "album-arts-section",
+        text: "Album Arts",
+      },
+      {
+        id: "4kwalls-section",
+        text: "4K Walls",
+      },
+      {
+        id: "phonewalls-section",
+        text: "Phone Walls",
+      },
+      {
+        id: "ultrawide-section",
+        text: "Ultrawide",
+      },
+    ],
+    []
+  );
+  const rightSection = React.useCallback(
+    () => ({
+      id: "square-section",
+      text: "Square",
+    }),
+    []
+  );
 
   return (
     // TODO: add a 'Jump To' arrow button for each section (like just down arrow on 1st, up/down in mid, and just up arrow on last)
-    // TODO: alternate vertical nav bar for mobile
     <div className="portfolio-page-container w-full flex flex-col justify-center items-center">
-      <div className="jump-to-nav hidden sm:inline-flex rounded-md shadow-sm" role="group">
-        <button
-          type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-l-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 rounded-s-lg hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white  hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
-          onClick={() => jumpToSection("posters-section")}
-        >
-          Posters
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
-          onClick={() => jumpToSection("album-arts-section")}
-        >
-          Album Arts
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
-          onClick={() => jumpToSection("4kwalls-section")}
-        >
-          4K Walls
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
-          onClick={() => jumpToSection("phonewalls-section")}
-        >
-          Phone Walls
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
-          onClick={() => jumpToSection("ultrawide-section")}
-        >
-          Ultrawide
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-r-2 border-gray-200 active:border-zdaRed-200/80 rounded-e-lg hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
-          onClick={() => jumpToSection("square-section")}
-        >
-          Square
-        </button>
-      </div>
+      <JumpToNav
+        leftSection={leftSection()}
+        middleSections={middleSections()}
+        rightSection={rightSection()}
+      />
       <SectionIndicator sectionName="Posters" id="posters-section" />
       <div className="portfolio-posters-subcontainer max-w-fit">
         <div className="portfolio-posters-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
