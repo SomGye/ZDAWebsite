@@ -58,3 +58,13 @@ export const loadImgHandler = (imgId: string) => {
     blurImg.classList.add("hidden");
   }
 };
+
+/**
+ * Using HTML id, jump to a section 'smoothly'.
+ * @param idOfSection HTML id of element (no # needed)
+ */
+export const jumpToSection = (idOfSection: string) => {
+  document
+    .getElementById(idOfSection)
+    ?.scrollIntoView({ behavior: "smooth" });
+};

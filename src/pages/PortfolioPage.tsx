@@ -19,7 +19,7 @@ import {
   photosPortfolioSquare,
   photosPortfolioUltrawide,
 } from "../lightboxInfo";
-import { loadImgHandler } from "../helpers";
+import { jumpToSection, loadImgHandler } from "../helpers";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -41,51 +41,53 @@ const PortfolioPage = () => {
 
   return (
     // TODO: add a 'Jump To' arrow button for each section (like just down arrow on 1st, up/down in mid, and just up arrow on last)
-    // TODO: Finish nav bar styling for desktop/tablet
     // TODO: alternate vertical nav bar for mobile
-    // TODO: do nav bar jump-to functionality...
     <div className="portfolio-page-container w-full flex flex-col justify-center items-center">
-      <div className="hidden sm:inline-flex rounded-md shadow-sm" role="group">
+      <div className="jump-to-nav hidden sm:inline-flex rounded-md shadow-sm" role="group">
         <button
           type="button"
-          // className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-l border-gray-200 rounded-s-lg hover:bg-zdaBlue-100 hover:text-zdaBlue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-l border-gray-200 hover:border-zdaRed-100 rounded-s-lg hover:bg-red-50 hover:text-zdaRed-600 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:border-neutral-800/40 dark:text-white dark:hover:text-white  hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-l-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 rounded-s-lg hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white  hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          onClick={() => jumpToSection("posters-section")}
         >
           Posters
         </button>
         <button
           type="button"
-          // className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:border-zdaRed-100 hover:bg-red-50 hover:text-zdaRed-600 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:border-neutral-800/40 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          onClick={() => jumpToSection("album-arts-section")}
         >
           Album Arts
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          onClick={() => jumpToSection("4kwalls-section")}
         >
           4K Walls
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          onClick={() => jumpToSection("phonewalls-section")}
         >
           Phone Walls
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          onClick={() => jumpToSection("ultrawide-section")}
         >
           Ultrawide
         </button>
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-r border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 transition-colors duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-r-2 border-gray-200 active:border-zdaRed-200/80 rounded-e-lg hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-zdaBlue-800/35 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          onClick={() => jumpToSection("square-section")}
         >
           Square
         </button>
       </div>
-      <SectionIndicator sectionName="Posters" />
+      <SectionIndicator sectionName="Posters" id="posters-section" />
       <div className="portfolio-posters-subcontainer max-w-fit">
         <div className="portfolio-posters-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
           <div className="portfolio-posters-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
@@ -619,7 +621,7 @@ const PortfolioPage = () => {
           />
         </div>
       </div>
-      <SectionIndicator sectionName="Album Arts" />
+      <SectionIndicator sectionName="Album Arts" id="album-arts-section" />
       <div className="portfolio-albumart-subcontainer max-w-fit">
         <div className="portfolio-albumart-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
           <div className="portfolio-albumart-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
@@ -827,7 +829,7 @@ const PortfolioPage = () => {
         open={idx_albumart >= 0}
         close={() => setIdx_albumart(-1)}
       />
-      <SectionIndicator sectionName="4K Wallpapers/Wide" />
+      <SectionIndicator sectionName="4K Wallpapers/Wide" id="4kwalls-section" />
       <div className="portfolio-4kwalls-subcontainer w-full px-4">
         <div className="portfolio-4kwalls-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
           <div className="portfolio-4kwalls-title-and-pic-container-top flex flex-col-reverse items-center mx-2 my-4">
@@ -999,7 +1001,10 @@ const PortfolioPage = () => {
         open={idx_4kwalls >= 0}
         close={() => setIdx_4kwalls(-1)}
       />
-      <SectionIndicator sectionName="Phone Wallpapers" />
+      <SectionIndicator
+        sectionName="Phone Wallpapers"
+        id="phonewalls-section"
+      />
       <div className="portfolio-phonewalls-subcontainer max-w-fit flex flex-col md:grid md:grid-cols-2 md:gap-0 lg:gap-2 xl:flex xl:flex-row">
         <div className="portfolio-phonewalls-pic-container w-full flex flex-col px-4">
           <img
@@ -1135,7 +1140,7 @@ const PortfolioPage = () => {
           close={() => setIdx_phonewalls(-1)}
         />
       </div>
-      <SectionIndicator sectionName="Ultrawide" />
+      <SectionIndicator sectionName="Ultrawide" id="ultrawide-section" />
       <div className="portfolio-ultrawide-subcontainer w-full px-4">
         <div className="portfolio-ultrawide-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
           <div className="portfolio-ultrawide-title-and-pic-container-top flex flex-col items-center mx-2 my-4">
@@ -1255,7 +1260,7 @@ const PortfolioPage = () => {
         open={idx_ultrawide >= 0}
         close={() => setIdx_ultrawide(-1)}
       />
-      <SectionIndicator sectionName="Square" />
+      <SectionIndicator sectionName="Square" id="square-section" />
       <div className="portfolio-square-subcontainer max-w-fit flex flex-col md:grid md:grid-cols-2 md:gap-0 lg:gap-2 xl:flex xl:flex-row">
         <div className="portfolio-square-pic-container w-full flex flex-col px-4">
           <img
