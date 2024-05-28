@@ -9,6 +9,7 @@ import HomePage from "../../pages/HomePage";
 import PortfolioPage from "../../pages/PortfolioPage";
 import CommissionsPage from "../../pages/CommissionsPage";
 import AboutPage from "../../pages/AboutPage";
+import JumpToTop from "../../components/JumpToTop";
 
 const Body = () => {
   const page = useRecoilValue(pageAtom);
@@ -18,6 +19,7 @@ const Body = () => {
       {page !== "Logo" && page !== "Examples" && (
         // NOTE: used mt to counter Header height
         <div className="body-container w-full mt-[61px] xs:mt-[77px] mb-16 xs:mb-20 flex flex-col justify-center items-center">
+          <JumpToTop />
           <InfoBanner />
           <PageIndicator />
           {page === "Home" && <HomePage />}

@@ -60,11 +60,16 @@ export const loadImgHandler = (imgId: string) => {
 };
 
 /**
- * Using HTML id, jump to a section 'smoothly'.
+ * Using HTML id, scroll to a section 'smoothly'.
  * @param idOfSection HTML id of element (no # needed)
  */
-export const jumpToSection = (idOfSection: string) => {
-  document
-    .getElementById(idOfSection)
-    ?.scrollIntoView({ behavior: "smooth" });
+export const scrollToSection = (idOfSection: string) => {
+  document.getElementById(idOfSection)?.scrollIntoView({ behavior: "smooth" });
+};
+
+/**
+ * Scroll to top of page 'smoothly'.
+ */
+export const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };

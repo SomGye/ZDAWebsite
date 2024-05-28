@@ -324,3 +324,21 @@ button.yarl__button:focus-visible {
   outline: none;
 }
 /* -- */
+
+/* FAB */
+.hide-fab {
+  width: 0;
+  height: 0;
+  bottom: 1rem;
+  right: 1rem;
+  border-width: 0;
+}
+
+.show-fab {
+  width: 40px;
+  height: 40px;
+  bottom: 6rem;
+  right: 6rem;
+  border-width: 1px;
+}
+/* -- */
