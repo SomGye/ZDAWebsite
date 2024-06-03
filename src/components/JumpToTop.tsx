@@ -5,7 +5,7 @@ import { useDebouncedCallback } from "use-debounce";
 
 const JumpToTop = () => {
   const minimumScroll = 200;
-  const debounceDelay = 100;
+  const debounceDelay = 125;
   const fabId = "jump-to-fab";
 
   const setFABVisibility = (shouldShow: boolean) => {
