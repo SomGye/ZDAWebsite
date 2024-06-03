@@ -72,7 +72,7 @@ const Header = () => {
                 src={theme === "dark" ? zdaDarkCircLogo : zdaLightCircLogo}
                 alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
-                className="header-logo cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
+                className="header-logo cursor-pointer pointer-events-auto select-none motion-safe:transition ease-out motion-safe:duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                 width={36}
                 height={36}
                 onClick={() => switchPage("Logo", setPage)}
@@ -86,7 +86,7 @@ const Header = () => {
                 }
                 alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
-                className="header-logo-hover cursor-pointer pointer-events-auto select-none transition ease-out duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
+                className="header-logo-hover cursor-pointer pointer-events-auto select-none motion-safe:transition ease-out motion-safe:duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                 width={36}
                 height={36}
                 onClick={() => switchPage("Logo", setPage)}
