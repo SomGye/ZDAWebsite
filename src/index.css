@@ -254,7 +254,9 @@ body.noscroll {
 }
 
 .btn-logopage {
-  transition: background-image 0.3s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: background-image 0.3s ease-out;
+  }
   &:hover .btn-logopage-helper {
     opacity: 1;
   }
@@ -272,7 +274,9 @@ body.noscroll {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: opacity 0.45s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.45s ease-out;
+  }
 }
 
 .btn-logopage-helper-active {
@@ -281,7 +285,9 @@ body.noscroll {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: opacity 0.2s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.2s ease-out;
+  }
 }
 
 div.header-logo-box {
@@ -371,6 +377,7 @@ button.yarl__button:focus-visible {
   border-width: 0;
 }
 
+/* TODO: set up positions for different screen sizes */
 .show-fab {
   width: 40px;
   height: 40px;
