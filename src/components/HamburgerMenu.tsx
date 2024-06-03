@@ -67,7 +67,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               <span>&nbsp;⌝</span>
             </div>
             <button
-              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/75 dark:bg-neutral-800/45 hover:bg-gray-300 active:bg-gray-400 dark:hover:bg-neutral-800 dark:active:bg-neutral-700 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 transition-colors duration-200 ease-out flex absolute right-0"
+              className="modal-close-btn p-2 mr-4 w-min rounded-full bg-gray-200/75 dark:bg-neutral-800/45 hover:bg-gray-300 active:bg-gray-400 dark:hover:bg-neutral-800 dark:active:bg-neutral-700 text-gray-600 dark:text-neutral-500 hover:text-gray-800 dark:hover:text-neutral-400 motion-safe:transition-colors motion-safe:duration-200 ease-out flex absolute right-0"
               onClick={() => setOpen(false)}
               onTouchEnd={() => setOpen(false)}
               aria-description="Closes the Navigation Menu"
@@ -88,7 +88,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
               >
                 Home
               </button>
@@ -97,7 +97,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
               >
                 Portfolio
               </button>
@@ -106,7 +106,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
               >
                 Commissions
               </button>
@@ -115,7 +115,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                   switchPage("About", setPage);
                   setOpen(false);
                 }}
-                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md transition-all duration-300 ease-out select-none"
+                className="w-44 sm:w-52 md:w-56 xl:w-64 2xl:w-72 py-2 xl:py-3 my-1 text-base sm:text-sm font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-neutral-800 text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
               >
                 About
               </button>
@@ -125,7 +125,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://bsky.app/profile/zerodayanubis.com");
                   setOpen(false);
@@ -136,7 +136,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink(
                     "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
@@ -149,7 +149,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://www.threads.net/@zerodayanubis");
                   setOpen(false);
@@ -160,7 +160,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://ohai.social/@ZeroDayAnubis");
                   setOpen(false);
@@ -176,7 +176,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://tinyurl.com/ZDAPrints");
                   setOpen(false);
@@ -187,7 +187,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://ko-fi.com/zerodayanubis");
                   setOpen(false);
@@ -198,7 +198,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://paypal.me/ZeroDayAnubis");
                   setOpen(false);
@@ -209,7 +209,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 <span className="mx-2 absolute right-0">{extLinkIcon}</span>
               </button>
               <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md transition-colors duration-200 ease-out select-none"
+                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base sm:text-sm font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                 onClick={() => {
                   clickLink("https://account.venmo.com/u/somgye");
                   setOpen(false);
