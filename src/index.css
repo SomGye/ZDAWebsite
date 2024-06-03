@@ -20,6 +20,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
   /* fixes the i in Ko-fi */
   font-variant: no-common-ligatures;
 }
