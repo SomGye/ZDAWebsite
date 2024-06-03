@@ -50,7 +50,7 @@ const App = ({ route }: props) => {
   return (
     <>
       <Analytics />
-      <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center p-0 motion-safe:transition ease-out duration-500">
+      <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center p-0 motion-safe:transition motion-safe:duration-500 ease-out">
         {page !== "Logo" && page !== "Examples" && <Header />}
         <Body />
         {page !== "Logo" && page !== "Examples" && <Footer />}
