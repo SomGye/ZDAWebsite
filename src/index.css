@@ -201,6 +201,9 @@ body.noscroll {
   width: 100%;
   transform: scaleX(0);
   height: 2px;
+  @media (prefers-reduced-motion) {
+    height: 1px;
+  }
   bottom: -0.3rem;
   left: 0;
   /* text-gray-600 */
@@ -209,7 +212,9 @@ body.noscroll {
   border-bottom-left-radius: 11px;
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
-  transition: transform 0.3s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.3s ease-out;
+  }
 }
 
 .footer-link-animated-dark {
@@ -226,6 +231,9 @@ body.noscroll {
   transform: scaleX(0);
   transform-origin: center;
   height: 2px;
+  @media (prefers-reduced-motion) {
+    height: 1px;
+  }
   bottom: -0.3rem;
   left: 0;
   /* text-gray-300 */
@@ -234,7 +242,9 @@ body.noscroll {
   border-bottom-left-radius: 11px;
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
-  transition: transform 0.3s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.3s ease-out;
+  }
 }
 
 .footer-link-animated:hover::after,
