@@ -44,7 +44,7 @@ const JumpToTop = () => {
     <>
       <button
         type="button"
-        className="jump-to-fab inline-flex flex-col justify-center items-center z-50 fixed rounded-full bg-gray-600 active:bg-gray-700 hover:bg-gray-500/95 text-white dark:text-gray-900 dark:hover:text-black border-gray-500/25 active:border-gray-800/20 hover:border-gray-600/20 dark:bg-gray-200 dark:active:bg-gray-500 dark:hover:bg-gray-400/95 dark:border-gray-700/25 dark:active:border-gray-400/20 dark:hover:border-gray-500/20 drop-shadow-sm dark:drop-shadow-sm transition-all duration-300 ease-out select-none"
+        className="jump-to-fab inline-flex flex-col justify-center items-center z-50 fixed rounded-full bg-gray-600 active:bg-gray-700 hover:bg-gray-500/95 text-white dark:text-gray-900 dark:hover:text-black border-gray-500/25 active:border-gray-800/20 hover:border-gray-600/20 dark:bg-gray-200 dark:active:bg-gray-500 dark:hover:bg-gray-400/95 dark:border-gray-700/25 dark:active:border-gray-400/20 dark:hover:border-gray-500/20 drop-shadow-sm dark:drop-shadow-sm motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
         aria-description="Scrolls to Top of Page"
         id={fabId}
         onClick={() => scrollToTop()}
