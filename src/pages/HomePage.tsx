@@ -2,14 +2,6 @@ import * as React from "react";
 import { loadImgHandler, switchPage } from "../helpers";
 import { useRecoilState } from "recoil";
 import { pageAtom } from "../states/pageAtom";
-import {
-  altAnubisTheDeathless,
-  altFrameOfRevelation,
-  altNonconformantSpectrum,
-  altOutOfShape,
-  altTheHarbingerWakes,
-  altWispsOfAfterlife,
-} from "../AltText";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -49,7 +41,7 @@ const HomePage = () => {
       <div className="home-page-promo max-w-[90%] text-sm xs:text-base">
         You can visit my &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Portfolio", setPage)}
         >
           Portfolio
@@ -60,7 +52,7 @@ const HomePage = () => {
         <br />
         ... or you can view my current <br className="block sm:hidden" /> &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Commissions", setPage)}
         >
           Commissions
@@ -73,13 +65,14 @@ const HomePage = () => {
         <br className="block sm:hidden" /> and my brief
         <br className="hidden sm:block md:hidden" /> art journey &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 transition-colors duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("About", setPage)}
         >
           here
         </p>
         &nbsp; too!
       </div>
+      {/* TODO: replace these images with different/newer ones */}
       <div className="home-page-showcase1 w-full sm:w-11/12 flex flex-col md:flex-row justify-center items-center mx-4 my-6 border border-solid md:border-none rounded-md border-slate-300/50 dark:border-slate-700/20 shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)] md:shadow-none dark:md:shadow-none">
         <div className="home-page-showcase-img-container flex flex-col md:flex-row flex-wrap md:grid md:grid-cols-2 2xl:flex justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
@@ -95,7 +88,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[0].src}
             alt={photosHomeThumbnail[0].alt}
             title={photosHomeThumbnail[0].title}
-            className="hidden home-img01 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img01 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosHomeThumbnail[1].blurSrc}
@@ -110,7 +103,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[1].src}
             alt={photosHomeThumbnail[1].alt}
             title={photosHomeThumbnail[1].title}
-            className="hidden home-img02 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img02 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosHomeThumbnail[2].blurSrc}
@@ -125,7 +118,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[2].src}
             alt={photosHomeThumbnail[2].alt}
             title={photosHomeThumbnail[2].title}
-            className="hidden home-img03 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img03 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosHomeThumbnail[3].blurSrc}
@@ -140,7 +133,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[3].src}
             alt={photosHomeThumbnail[3].alt}
             title={photosHomeThumbnail[3].title}
-            className="hidden home-img04 z-10 h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img04 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
@@ -204,7 +197,7 @@ const HomePage = () => {
             src={photosHomeBtmSmThumbnail[0].src}
             alt={photosHomeBtmSmThumbnail[0].alt}
             title={photosHomeBtmSmThumbnail[0].title}
-            className="hidden home-img05 z-10 h-full max-w-64 sm:max-w-[320px] md:max-w-[460px] lg:max-w-[520px] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img05 z-10 h-full max-w-64 sm:max-w-[320px] md:max-w-[460px] lg:max-w-[520px] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
@@ -265,7 +258,7 @@ const HomePage = () => {
             src={photosHomeBtmLgThumbnail[0].src}
             alt={photosHomeBtmLgThumbnail[0].alt}
             title={photosHomeBtmLgThumbnail[0].title}
-            className="hidden home-img06 z-10 h-full max-w-[1000px] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent transition-all duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 hover:transition-all hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img06 z-10 h-full max-w-[1000px] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
