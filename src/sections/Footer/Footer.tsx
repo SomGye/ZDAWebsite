@@ -237,7 +237,7 @@ const Footer = () => {
           </div>
           <span className="inline-flex sm:ml-auto my-2 sm:my-0 gap-4 justify-center sm:justify-start">
             <button
-              className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
+              className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 active:bg-gray-500/60 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:active:bg-neutral-500/45 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
               aria-label="Email"
               title="Email me at zerodayanubis@gmail.com"
               onClick={clickEmail}
@@ -246,8 +246,9 @@ const Footer = () => {
               Email
             </button>
             <button
-              className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
-              aria-label="Message" title="Message me on Discord"
+              className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 active:bg-gray-500/60 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:active:bg-neutral-500/45 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm transition-colors duration-300 ease-out select-none"
+              aria-label="Message"
+              title="Message me on Discord"
               onClick={() =>
                 clickLink("https://discordapp.com/users/193548282264420354")
               }
