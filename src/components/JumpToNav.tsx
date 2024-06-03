@@ -21,7 +21,7 @@ const JumpToNav = ({ leftSection, middleSections, rightSection }: props) => {
       >
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-l-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 rounded-s-lg hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-slate-500/35 dark:hover:border-zdaBlue-800/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-l-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 rounded-s-lg hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaRed-700/30 dark:hover:bg-zdaRed-700/50 dark:border-slate-500/35 dark:hover:border-zdaRed-700/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
           onClick={() => scrollToSection(leftSection.id)}
         >
           {leftSection.text}
@@ -29,7 +29,7 @@ const JumpToNav = ({ leftSection, middleSections, rightSection }: props) => {
         {middleSections.map((section) => (
           <button
             type="button"
-            className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-slate-500/35 dark:hover:border-zdaBlue-800/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+            className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaRed-700/30 dark:hover:bg-zdaRed-700/50 dark:border-slate-500/35 dark:hover:border-zdaRed-700/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
             onClick={() => scrollToSection(section.id)}
           >
             {section.text}
@@ -37,7 +37,7 @@ const JumpToNav = ({ leftSection, middleSections, rightSection }: props) => {
         ))}
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-r-2 border-gray-200 active:border-zdaRed-200/80 rounded-e-lg hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-slate-500/35 dark:hover:border-zdaBlue-800/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t-2 border-b-2 border-r-2 border-gray-200 active:border-zdaRed-200/80 rounded-e-lg hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaRed-700/30 dark:hover:bg-zdaRed-700/50 dark:border-slate-500/35 dark:hover:border-zdaRed-700/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
           onClick={() => scrollToSection(rightSection.id)}
         >
           {rightSection.text}
@@ -49,7 +49,7 @@ const JumpToNav = ({ leftSection, middleSections, rightSection }: props) => {
       >
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t border-l border-r border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 rounded-t-lg hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-slate-500/35 dark:hover:border-zdaBlue-800/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-t border-l border-r border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 rounded-t-lg hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaRed-700/30 dark:hover:bg-zdaRed-700/50 dark:border-slate-500/35 dark:hover:border-zdaRed-700/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
           onClick={() => scrollToSection(leftSection.id)}
         >
           {leftSection.text}
@@ -57,7 +57,7 @@ const JumpToNav = ({ leftSection, middleSections, rightSection }: props) => {
         {middleSections.map((section) => (
           <button
             type="button"
-            className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-l border-r border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-slate-500/35 dark:hover:border-zdaBlue-800/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+            className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-l border-r border-gray-200 active:border-zdaRed-200/80 hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaRed-700/30 dark:hover:bg-zdaRed-700/50 dark:border-slate-500/35 dark:hover:border-zdaRed-700/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
             onClick={() => scrollToSection(section.id)}
           >
             {section.text}
@@ -65,7 +65,7 @@ const JumpToNav = ({ leftSection, middleSections, rightSection }: props) => {
         ))}
         <button
           type="button"
-          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-b border-l border-r border-gray-200 active:border-zdaRed-200/80 rounded-b-lg hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaBlue-800/30 dark:hover:bg-zdaBlue-800/50 dark:border-slate-500/35 dark:hover:border-zdaBlue-800/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
+          className="px-4 py-2 text-sm font-medium text-gray-900 active:text-zdaRed-700/80 bg-white active:bg-red-500/20 border-b border-l border-r border-gray-200 active:border-zdaRed-200/80 rounded-b-lg hover:border-zdaRed-200/50 hover:bg-red-50 hover:text-zdaRed-600/80 dark:bg-neutral-900/45 dark:active:bg-zdaRed-700/30 dark:hover:bg-zdaRed-700/50 dark:border-slate-500/35 dark:hover:border-zdaRed-700/70 dark:text-white dark:hover:text-white hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all duration-200 ease-out select-none"
           onClick={() => scrollToSection(rightSection.id)}
         >
           {rightSection.text}
