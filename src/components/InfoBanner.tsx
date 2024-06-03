@@ -175,7 +175,7 @@ const InfoBanner = () => {
   return (
     <div className="info-banner-container w-full py-2 lg:py-0 flex flex-col lg:flex-row justify-center items-center bg-gradient-to-b from-[rgb(255_0_72_/_0.045)] dark:from-[rgb(255_0_72_/_0.035)] to-transparent">
       <div className="info-zda-container">
-        <span className="info-zda block xs:hidden sm:block lg:hidden m-2 text-lg text-gray-700 dark:text-gray-300 hover:text-zdaRedpink-500 dark:hover:text-zdaRedpink-600 transition-colors duration-500 ease-out font-light cursor-default select-none">
+        <span className="info-zda block xs:hidden sm:block lg:hidden m-2 text-lg text-gray-700 dark:text-gray-300 hover:text-zdaRedpink-500 dark:hover:text-zdaRedpink-600 motion-safe:transition-colors motion-safe:duration-500 ease-out font-light cursor-default select-none">
           ⌞ZeroDayAnubis⌝
         </span>
       </div>
