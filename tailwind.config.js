@@ -97,6 +97,9 @@ export default {
         'theme-menu-dropdown-dark': '1px 1px 38px -4px rgba(255, 229, 243, 0.20), 0px 3px 20px -15px rgba(255, 229, 243, 0.13)', // zdaRedpink-50
       },
       dropShadow: {
+        'btn-light': '0px 6px 4px #19141a2a',
+        'btn-dark': '0px 4px 6px #606060b5',
+        'btn-dark-sm': '0px 3px 4px #60606090',
         'logo-light': '20px 8px 4px #19141a2a',
         'logo-dark': '8px 4px 6px #60606040',
         'logo-blue': '8px 4px 6px #2284ff9a',
