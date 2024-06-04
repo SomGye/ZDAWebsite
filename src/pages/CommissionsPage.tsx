@@ -1,9 +1,9 @@
 import * as React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/pageAtom";
-import { CircularProgress } from "@mui/joy";
 import { themeAtom } from "../states/themeAtom";
 import { clickLink } from "../helpers";
+import MiniSpinner from "../components/MiniSpinner";
 
 const CommissionsPage = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -39,20 +39,7 @@ const CommissionsPage = () => {
       </button>
       {formLoading && (
         <span className="inline-flex justify-center items-center gap-2">
-          <CircularProgress
-            variant={theme === "dark" ? "plain" : "solid"}
-            sx={{
-              marginLeft: "2px",
-              marginRight: "2px",
-              "--CircularProgress-size": "14px",
-              "--CircularProgress-trackThickness": "2px",
-              "--CircularProgress-progressThickness": "2px",
-              "--CircularProgress-progressColor": "rgb(255, 26, 98)",
-              "--CircularProgress-trackColor": `${
-                theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
-              }`,
-            }}
-          />
+          <MiniSpinner theme={theme} />
           Loading form...
         </span>
       )}

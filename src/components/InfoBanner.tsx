@@ -9,8 +9,8 @@ import {
   slotsReadyAtom,
   waitlistSlotsAtom,
 } from "../states/commsAtom";
-import { CircularProgress } from "@mui/joy";
 import { themeAtom } from "../states/themeAtom";
+import MiniSpinner from "./MiniSpinner";
 
 const InfoBanner = () => {
   const theme = useRecoilValue(themeAtom);
@@ -188,20 +188,7 @@ const InfoBanner = () => {
               {statusReady ? (
                 commStatus
               ) : (
-                <CircularProgress
-                  variant={theme === "dark" ? "plain" : "solid"}
-                  sx={{
-                    marginLeft: 1,
-                    marginTop: "1px",
-                    "--CircularProgress-size": "15px",
-                    "--CircularProgress-trackThickness": "2px",
-                    "--CircularProgress-progressThickness": "2px",
-                    "--CircularProgress-progressColor": "rgb(255, 26, 98)",
-                    "--CircularProgress-trackColor": `${
-                      theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
-                    }`,
-                  }}
-                />
+                <MiniSpinner theme={theme} variant="info-banner-lg" />
               )}
             </div>
           </span>
@@ -214,21 +201,7 @@ const InfoBanner = () => {
               {activeSlotsReady ? (
                 activeSlots
               ) : (
-                <CircularProgress
-                  variant={theme === "dark" ? "plain" : "solid"}
-                  sx={{
-                    marginLeft: "2px",
-                    marginRight: "2px",
-                    marginTop: "4px",
-                    "--CircularProgress-size": "14px",
-                    "--CircularProgress-trackThickness": "2px",
-                    "--CircularProgress-progressThickness": "2px",
-                    "--CircularProgress-progressColor": "rgb(255, 26, 98)",
-                    "--CircularProgress-trackColor": `${
-                      theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
-                    }`,
-                  }}
-                />
+                <MiniSpinner theme={theme} variant="info-banner-sm" />
               )}
               {`/${maxSlots} SLOTS)`}
             </div>
@@ -242,21 +215,7 @@ const InfoBanner = () => {
               {waitSlotsReady ? (
                 waitSlots
               ) : (
-                <CircularProgress
-                  variant={theme === "dark" ? "plain" : "solid"}
-                  sx={{
-                    marginLeft: "2px",
-                    marginRight: "2px",
-                    marginTop: "4px",
-                    "--CircularProgress-size": "14px",
-                    "--CircularProgress-trackThickness": "2px",
-                    "--CircularProgress-progressThickness": "2px",
-                    "--CircularProgress-progressColor": "rgb(255, 26, 98)",
-                    "--CircularProgress-trackColor": `${
-                      theme === "dark" ? "rgba(0,0,0,0)" : "rgb(226, 232, 240)"
-                    }`,
-                  }}
-                />
+                <MiniSpinner theme={theme} variant="info-banner-sm" />
               )}
               {`/${maxSlots} WAITLIST)`}
             </div>
