@@ -408,3 +408,63 @@ button.yarl__button:focus-visible {
   border-width: 1px;
 }
 /* -- */
+
+/* SCROLLBAR (only works on Chrome/Safari/Edge; Firefox uses own overlay) */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+  /* gray-200 */
+  background: rgb(229, 231, 235);
+  @media (prefers-color-scheme: dark) {
+    background: #0b0a0d;
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 16px;
+  /* gray-900 */
+  background: rgb(209, 213, 219);
+  @media (prefers-color-scheme: dark) {
+    /* between gray-900 and 950 */
+    background: rgb(14, 16, 25);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  /* gray-600 */
+  background: rgba(75, 85, 99, 10);
+  /* gray-700 */
+  box-shadow: rgba(55, 65, 81, 0.8) 0px 0px 4px 2px inset;
+  @media (prefers-color-scheme: dark) {
+    /* gray-800 */
+    background: rgb(31, 41, 55);
+    /* gray-700 */
+    box-shadow: rgba(55, 65, 81, 0.2) 0px 0px 4px 2px inset;
+  }
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover, ::-webkit-scrollbar-thumb:vertical:hover {
+  /* zdaRedpink-600 */
+  background: #ff0048;
+  /* zdaRedpink-700 */
+  box-shadow: #c7002b5a 0px 0px 4px 2px inset;
+  @media (prefers-color-scheme: dark) {
+    /* gray-700 */
+    background: rgb(55, 65, 81);
+    /* gray-600 */
+    box-shadow: rgba(75, 85, 99, 0.2) 0px 0px 4px 2px inset;
+  }
+}
+
+::-webkit-scrollbar-thumb:horizontal:active, ::-webkit-scrollbar-thumb:vertical:active {
+  /* zdaRedpink-700 */
+  background: #c7002b;
+  @media (prefers-color-scheme: dark) {
+    /* slightly lighter gray-900 */
+    background: rgb(23, 30, 45);
+    box-shadow: none;
+  }
+}
+
+/* -- */
