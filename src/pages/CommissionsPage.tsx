@@ -4,6 +4,7 @@ import { pageAtom } from "../states/pageAtom";
 import { themeAtom } from "../states/themeAtom";
 import { clickLink } from "../helpers";
 import MiniSpinner from "../components/MiniSpinner";
+import ZDAButton from "../components/ZDAButton";
 
 const CommissionsPage = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -24,19 +25,18 @@ const CommissionsPage = () => {
     <div className="commissions-page-container w-full flex flex-col justify-center items-center">
       <span className="text-lg font-medium">TODO: Commissions Page</span>
       {/* Desktop/Tablet Only - Show/Hide Form directly in page */}
-      <button
-        className="hidden md:block w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaRedpink-600 hover:bg-zdaRedpink-700/90 active:bg-zdaRedpink-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out"
-        onClick={() => setFormVisible(!formVisible)}
-      >
-        {formVisible ? "Hide Commissions Form" : "Show Commissions Form"}
-      </button>
+      <ZDAButton
+        clickCallback={() => setFormVisible(!formVisible)}
+        textContent={
+          formVisible ? "Hide Commissions Form" : "Show Commissions Form"
+        }
+      />
       {/* Mobile Only - Open form in new tab */}
-      <button
-        className="block md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaRedpink-600 hover:bg-zdaRedpink-700/90 active:bg-zdaRedpink-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out"
-        onClick={() => clickLink(formLink)}
-      >
-        Commissions Form
-      </button>
+      <ZDAButton
+        clickCallback={() => clickLink(formLink)}
+        textContent="Commissions Form"
+        variant="mobile"
+      />
       {formLoading && (
         <span className="inline-flex justify-center items-center gap-2">
           <MiniSpinner theme={theme} />
