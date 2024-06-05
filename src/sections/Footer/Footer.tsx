@@ -165,6 +165,7 @@ const Footer = () => {
               ZDA is brought to you by the abstract media hub company:
             </h3>
             <a
+              className="select-none"
               href="https://www.zda.works/"
               target="_blank"
               rel="noopener noreferrer"
@@ -185,7 +186,7 @@ const Footer = () => {
               Thank you for visiting!
             </h3>
             <a
-              className="inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70"
+              className="inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70 select-none"
               href="http://tinyurl.com/ZDAPrivacy"
               target="_blank"
               rel="noopener noreferrer"
