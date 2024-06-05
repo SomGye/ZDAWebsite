@@ -132,7 +132,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <SectionBreak />
-        <div className="portfolio-posters-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+        <div className="portfolio-posters-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
@@ -207,7 +207,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <SectionBreak />
-        <div className="portfolio-posters-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+        <div className="portfolio-posters-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
@@ -334,7 +334,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <SectionBreak />
-        <div className="portfolio-posters-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+        <div className="portfolio-posters-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
@@ -424,7 +424,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <SectionBreak />
-        <div className="portfolio-posters-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+        <div className="portfolio-posters-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
