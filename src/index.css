@@ -387,12 +387,24 @@ button.yarl__button:focus-visible {
   border-width: 0;
 }
 
-/* TODO: set up positions for different screen sizes */
 .show-fab {
   width: 40px;
   height: 40px;
-  bottom: 6rem;
-  right: 6rem;
+  /* mobile */
+  bottom: 2rem;
+  right: 2rem;
+  @media (min-width: 768px) { /* md */
+    bottom: 6.25rem;
+    right: 2.5rem;
+  }
+  @media (min-width: 1024px) { /* lg */
+    bottom: 6rem;
+    right: 3rem;
+  }
+  @media (min-width: 1536px) { /* 2xl */
+    bottom: 5rem;
+    right: 3rem;
+  }
   border-width: 1px;
 }
 /* -- */
