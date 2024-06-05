@@ -19,7 +19,7 @@ import {
   photosPortfolioSquare,
   photosPortfolioUltrawide,
 } from "../lightboxInfo";
-import { loadImgHandler } from "../helpers";
+import { clickLink, loadImgHandler } from "../helpers";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -27,6 +27,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import { MdClosedCaption, MdClosedCaptionDisabled } from "react-icons/md";
 import { IoMdCloseCircle } from "react-icons/io";
 import JumpToNav from "../components/JumpToNav";
+import ZDAButton from "../components/ZDAButton";
 
 const PortfolioPage = () => {
   const [idx_posters1, setIdx_posters1] = React.useState(-1);
@@ -1392,6 +1393,22 @@ const PortfolioPage = () => {
         />
       </div>
       <SectionBreak />
+      <div className="kofi-support-container flex flex-col justify-center items-center mt-12">
+        <span className="mb-2 text-slate-600 dark:text-slate-300 select-none">
+          Visit my Ko-fi for{" "}
+          <div className="inline text-slate-700 dark:text-slate-200">
+            high quality downloads
+          </div>{" "}
+          of my art:
+        </span>
+        <ZDAButton
+          clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+          textContent="Downloads and Support"
+        />
+        <span className="mt-2 italic tracking-tight text-slate-600/80 dark:text-slate-300/80 select-none">
+          Any support is greatly appreciated
+        </span>
+      </div>
     </div>
   );
 };
