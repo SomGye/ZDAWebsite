@@ -113,6 +113,7 @@ export default {
       fontFamily: {
         'outfit': 'Outfit',
         'plusjakartasans': 'Plus Jakarta Sans',
+        'urbanist': 'Urbanist',
       },
       keyframes: {
         slideDownAndFade: {

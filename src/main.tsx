@@ -7,7 +7,7 @@ import App from "./App.tsx";
 import "./index.css";
 
 /* FONTSOURCE IMPORTS */
-// import "@fontsource/outfit/100.css";
+// import "@fontsource/outfit/100.css"; // ? Extra font
 // import "@fontsource/outfit/200.css";
 import "@fontsource/outfit/300.css";
 // import "@fontsource/outfit/400.css";
@@ -17,7 +17,7 @@ import "@fontsource/outfit/600.css";
 // import "@fontsource/outfit/800.css";
 // import "@fontsource/outfit/900.css";
 
-// import "@fontsource/plus-jakarta-sans/200-italic.css";
+// import "@fontsource/plus-jakarta-sans/200-italic.css"; // ? Default
 // import "@fontsource/plus-jakarta-sans/200.css";
 import "@fontsource/plus-jakarta-sans/300-italic.css";
 import "@fontsource/plus-jakarta-sans/300.css";
@@ -31,6 +31,16 @@ import "@fontsource/plus-jakarta-sans/600.css";
 // import "@fontsource/plus-jakarta-sans/700.css";
 // import "@fontsource/plus-jakarta-sans/800-italic.css";
 import "@fontsource/plus-jakarta-sans/800.css";
+
+// import "@fontsource/urbanist/100.css"; // ? Commissions Cards
+// import "@fontsource/urbanist/200.css";
+// import "@fontsource/urbanist/300.css";
+import "@fontsource/urbanist/400.css";
+// import "@fontsource/urbanist/500.css";
+// import "@fontsource/urbanist/600.css";
+// import "@fontsource/urbanist/700.css";
+// import "@fontsource/urbanist/800.css";
+// import "@fontsource/urbanist/900.css";
 
 const router = createBrowserRouter([
   {
