@@ -5,26 +5,8 @@ import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
 import zdamono_dark from "/zda_dark_mono.svg";
 import zdamono_light from "/zda_light_mono.svg";
-// import adrift_in_notions from "/assets/adrift_in_notions-20240113.svg";
-// import wretched_witness from "/assets/wretched_witness-20240120.svg";
-// import out_of_shape from "/assets/out_of_shape-20240218.svg";
 import { loadImgHandler } from "../helpers";
-import {
-  altAdriftInNotions,
-  altHuionSketch_1623363242260,
-  altHuionSketch_1623481967592,
-  altHuionSketch_1625698314399,
-  altHuionSketch_1625699078818,
-  altKublaiAnubis02,
-  altLongTextLogo,
-  altOutOfShape,
-  altPenUp20210219_053858,
-  altPenUp20210309_005026,
-  altPenUp20210326_003107,
-  altPenUp20210422_055424,
-  altWretchedWitness,
-  altZDALogoSm,
-} from "../AltText";
+import { altLongTextLogo, altZDALogoSm } from "../AltText";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
