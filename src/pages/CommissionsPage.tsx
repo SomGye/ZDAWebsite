@@ -30,17 +30,13 @@ const CommissionsPage = () => {
   }, [formVisible]);
 
   return (
-    // Commissions Types: Abstractify, Vectorize, (HyperCoalesce/SuperFusion/Super Synthesis)
-    // TODO: use <AspectRatio/> around <img/> to force ratio for example images: https://www.radix-ui.com/primitives/docs/components/aspect-ratio
-    //  -- in above, could make mosaic per type: use 3 examples but smash them together to form
-    //  -- one "Poster" size/ratio full image; use the AspectRatio to force custom ratio per
-    //  -- example img to piece together parts of the full picture.
+    // Commissions Types: Abstractify, Vectorize, Coalesce
     // TODO: when clicking btn on cards: 1) smooth scroll down to comm form section
     //  -- 2) emulate click by setting state and opening form
-    // TODO: when clicking comm card 'mosaic'/example img, setIdx and open Lightbox so that they can see all imgs per Comm Type
+    // TODO: when clicking comm card example img, setIdx and open Lightbox so that they can see all imgs per Comm Type
     <div className="commissions-page-container w-full flex flex-col justify-center items-center">
-      <div className="commissions-page-cards-container w-full md:w-[calc(100%-32px)] h-full mb-[48px] flex flex-col justify-center items-center rounded-2xl border border-gray-200/75 dark:border-neutral-900/75">
-        <div className="commissions-page-card-container w-11/12 md:w-4/5 xl:w-1/3 h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
+      <div className="commissions-page-cards-container w-full md:w-[calc(100%-32px)] h-full mb-[48px] py-4 sm:py-8 xl:py-12 flex flex-col justify-center items-center gap-0 sm:gap-4 xl:gap-8 rounded-2xl bg-zdaBG-lighterCard/75 dark:bg-zdaBG-darkerCard/30 border border-gray-200/20 dark:border-neutral-900/20">
+        <div className="commissions-page-card-container w-11/12 md:w-4/5 xl:w-1/3 h-full mx-2 my-4 rounded-xl bg-gradient-to-b sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-zdaRedpink-600 border-0 dark:border-0 border-gray-200 dark:border-neutral-900 drop-shadow-card-light dark:drop-shadow-card-dark">
           <div className="commissions-page-card">
             <div className="commissions-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
               <div className="grid">
@@ -57,17 +53,14 @@ const CommissionsPage = () => {
             </div>
             <CardBreak />
             <div className="commissions-page-card-content mx-4 my-6 sm:my-8 relative flex flex-col sm:flex-row justify-between items-center">
-              <div className="commissions-page-card-img-container">
-                <img
-                  onClick={() => setIdx_abstractify(0)}
-                  src={photosAboutThumbnail[1].src}
-                  alt={photosAboutThumbnail[1].alt}
-                  title={photosAboutThumbnail[1].title}
-                  className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
-                />
-              </div>
-              <div className="commissions-page-card-description-container absolute top-0 right-0 my-4">
-                {/* TODO: refine desc/list and fix scaling */}
+              <img
+                onClick={() => setIdx_abstractify(0)}
+                src={photosAboutThumbnail[1].src}
+                alt={photosAboutThumbnail[1].alt}
+                title={photosAboutThumbnail[1].title}
+                className="about-img02 z-10 h-full max-w-96 my-4 aspect-[14/9] object-cover object-center rounded-xl brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              />
+              <div className="commissions-page-card-description-container my-4">
                 <div className="commissions-page-card-description">
                   Description of comm type...
                   <ul className="mt-4 sm:mt-6">
@@ -82,7 +75,7 @@ const CommissionsPage = () => {
             <div className="commissions-page-card-bottom-content w-full inline-flex justify-between items-center">
               <span className="commissions-page-card-price m-4 p-1 inline-flex">
                 $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
-                <div className="text-gray-600 dark:text-gray-400 tracking-tight">
+                <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                   (PayPal/Kofi)
                 </div>
               </span>
@@ -93,7 +86,7 @@ const CommissionsPage = () => {
             </div>
           </div>
         </div>
-        <div className="commissions-page-card-container w-11/12 md:w-4/5 xl:w-1/3 h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
+        <div className="commissions-page-card-container w-11/12 md:w-4/5 xl:w-1/3 h-full mx-2 my-4 rounded-xl bg-gradient-to-b sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-zdaRedpink-600 border-0 dark:border-0 border-gray-200 dark:border-neutral-900 drop-shadow-card-light dark:drop-shadow-card-dark">
           <div className="commissions-page-card">
             <div className="commissions-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
               <div className="grid">
@@ -110,17 +103,14 @@ const CommissionsPage = () => {
             </div>
             <CardBreak />
             <div className="commissions-page-card-content mx-4 my-6 sm:my-8 relative flex flex-col sm:flex-row justify-between items-center">
-              <div className="commissions-page-card-img-container">
-                <img
-                  onClick={() => setIdx_vectorize(0)}
-                  src={photosAboutThumbnail[1].src}
-                  alt={photosAboutThumbnail[1].alt}
-                  title={photosAboutThumbnail[1].title}
-                  className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
-                />
-              </div>
-              <div className="commissions-page-card-description-container absolute top-0 right-0 my-4">
-                {/* TODO: refine desc/list and fix scaling */}
+              <img
+                onClick={() => setIdx_vectorize(0)}
+                src={photosAboutThumbnail[1].src}
+                alt={photosAboutThumbnail[1].alt}
+                title={photosAboutThumbnail[1].title}
+                className="about-img02 z-10 h-full max-w-96 my-4 aspect-[14/9] object-cover object-center rounded-xl brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              />
+              <div className="commissions-page-card-description-container my-4">
                 <div className="commissions-page-card-description">
                   Description of comm type...
                   <ul className="mt-4 sm:mt-6">
@@ -135,7 +125,7 @@ const CommissionsPage = () => {
             <div className="commissions-page-card-bottom-content w-full inline-flex justify-between items-center">
               <span className="commissions-page-card-price m-4 p-1 inline-flex">
                 $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
-                <div className="text-gray-600 dark:text-gray-400 tracking-tight">
+                <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                   (PayPal/Kofi)
                 </div>
               </span>
@@ -146,7 +136,7 @@ const CommissionsPage = () => {
             </div>
           </div>
         </div>
-        <div className="commissions-page-card-container w-11/12 md:w-4/5 xl:w-1/3 h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
+        <div className="commissions-page-card-container w-11/12 md:w-4/5 xl:w-1/3 h-full mx-2 my-4 rounded-xl bg-gradient-to-b sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-zdaRedpink-600 border-0 dark:border-0 border-gray-200 dark:border-neutral-900 drop-shadow-card-light dark:drop-shadow-card-dark">
           <div className="commissions-page-card">
             <div className="commissions-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
               <div className="grid">
@@ -163,17 +153,14 @@ const CommissionsPage = () => {
             </div>
             <CardBreak />
             <div className="commissions-page-card-content mx-4 my-6 sm:my-8 relative flex flex-col sm:flex-row justify-between items-center">
-              <div className="commissions-page-card-img-container">
-                <img
-                  onClick={() => setIdx_coalesce(0)}
-                  src={photosAboutThumbnail[1].src}
-                  alt={photosAboutThumbnail[1].alt}
-                  title={photosAboutThumbnail[1].title}
-                  className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
-                />
-              </div>
-              <div className="commissions-page-card-description-container absolute top-0 right-0 my-4">
-                {/* TODO: refine desc/list and fix scaling */}
+              <img
+                onClick={() => setIdx_coalesce(0)}
+                src={photosAboutThumbnail[1].src}
+                alt={photosAboutThumbnail[1].alt}
+                title={photosAboutThumbnail[1].title}
+                className="about-img02 z-10 h-full max-w-96 my-4 aspect-[14/9] object-cover object-center rounded-xl brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              />
+              <div className="commissions-page-card-description-container my-4">
                 <div className="commissions-page-card-description">
                   Description of comm type...
                   <ul className="mt-4 sm:mt-6">
@@ -188,7 +175,7 @@ const CommissionsPage = () => {
             <div className="commissions-page-card-bottom-content w-full inline-flex justify-between items-center">
               <span className="commissions-page-card-price m-4 p-1 inline-flex">
                 $<div className="tracking-wide">&nbsp;45&nbsp;&nbsp;</div>
-                <div className="text-gray-600 dark:text-gray-400 tracking-tight">
+                <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                   (PayPal/Kofi)
                 </div>
               </span>
