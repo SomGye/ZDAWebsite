@@ -100,6 +100,8 @@ export default {
         'btn-light': '0px 6px 4px #19141a2a',
         'btn-dark': '0px 4px 6px #606060b5',
         'btn-dark-sm': '0px 3px 4px #60606090',
+        'card-light': '-6px 6px 5px #dfa1a340',
+        'card-dark': '-6px -7px 4px #ff004848',
         'card-logo-light': '0px 4px 1px #60606040',
         'card-logo-dark': '0px 4px 4px #606060c0',
         'logo-light': '20px 8px 4px #19141a2a',
