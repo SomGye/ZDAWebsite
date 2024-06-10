@@ -24,6 +24,9 @@ import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-des
 import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
 import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
 import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
+import enter_panic from "/assets/commissions/vectorize/enter_panic-20240511.svg";
+import prone_to_oblivion_notext from "/assets/commissions/vectorize/prone_to_oblivion-20240410-notext.svg";
+import rosecrance_delusion from "/assets/commissions/vectorize/rosecrance-20240225-delusion.svg";
 
 export const photosHome = [
   {
@@ -408,5 +411,91 @@ export const photosPortfolioSquare = [
     height: 1331,
     alt: altHuionSketch_1623481967592,
     title: "The Mess Between",
+  },
+];
+
+export const photosCommissionsAbstractify = [
+  {
+    src: "/assets/commissions/abstractify/lightbox/2024-02-07-Nonconformant_Spectrum-notext-65p-c1.jpg",
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1623481967592,
+    title: "Nonconformant Spectrum",
+  },
+  {
+    src: "/assets/commissions/abstractify/lightbox/2024-01-11-Weathering_The_Waves-notext-65p-c1.jpg",
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1625698314399,
+    title: "Weathering The Waves",
+  },
+  {
+    src: "/assets/commissions/abstractify/lightbox/2024-03-06-The_Infinite_Kingdom-Damned-notext-65p-c1.jpg",
+    width: 2496,
+    height: 1404,
+    alt: altHuionSketch_1623481967592,
+    title: "The Infinite Kingdom - Damned",
+  },
+  {
+    src: "/assets/commissions/abstractify/lightbox/2023-10-25-Enso_03-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altHuionSketch_1623481967592,
+    title: "Enso 03",
+  },
+];
+
+export const photosCommissionsVectorize = [
+  {
+    src: adrift_in_notions,
+    width: 2280,
+    height: 3225,
+    alt: altHuionSketch_1623481967592,
+    title: "Adrift In Notions",
+  },
+  {
+    src: enter_panic,
+    width: 2280,
+    height: 3225,
+    alt: altHuionSketch_1623481967592,
+    title: "Enter Panic",
+  },
+  {
+    src: prone_to_oblivion_notext,
+    width: 2280,
+    height: 3225,
+    alt: altHuionSketch_1623481967592,
+    title: "Prone to Oblivion",
+  },
+  {
+    src: rosecrance_delusion,
+    width: 2280,
+    height: 3225,
+    alt: altHuionSketch_1623481967592,
+    title: "Rosecrance - Delusion Version",
+  },
+];
+
+export const photosCommissionsCoalesce = [
+  {
+    src: "/assets/commissions/coalesce/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
+    width: 2280,
+    height: 3225,
+    alt: altHuionSketch_1625698314399,
+    title: "TURMOIL",
+  },
+  {
+    src: "/assets/commissions/coalesce/lightbox/2024-04-20-DISASTER_WITH_CARE-65p-c1.jpg",
+    width: 1934,
+    height: 2275,
+    alt: altHuionSketch_1623481967592,
+    title: "DISASTER WITH CARE",
+  },
+  {
+    src: "/assets/commissions/coalesce/lightbox/2024-05-05-Disquietude_of_Dread-65p-c1.jpg",
+    width: 1534,
+    height: 1534,
+    alt: altHuionSketch_1623481967592,
+    title: "Disquietude of Dread",
   },
 ];

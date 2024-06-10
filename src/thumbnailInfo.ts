@@ -386,3 +386,31 @@ export const photosPortfolioSquareThumbnail = [
     title: "The Mess Between",
   },
 ];
+
+export const photosCommissionsAbstractifyThumbnail = [
+  {
+    blurSrc:
+      "/assets/commissions/abstractify/thumbnail/2024-02-07-Nonconformant_Spectrum-notext-1000px-c7-blur3x.jpg",
+    src: "/assets/commissions/abstractify/thumbnail/2024-02-07-Nonconformant_Spectrum-notext-1000px-c1.jpg",
+    alt: altHuionSketch_1623363242260,
+    title: "Nonconformant Spectrum",
+  },
+];
+
+export const photosCommissionsVectorizeThumbnail = [
+  {
+    src: adrift_in_notions,
+    alt: altAdriftInNotions,
+    title: "Adrift In Notions",
+  },
+];
+
+export const photosCommissionsCoalesceThumbnail = [
+  {
+    blurSrc:
+      "/assets/commissions/coalesce/thumbnail/2024-03-28-TURMOIL-600px-c7-blur3x.jpg",
+    src: "/assets/commissions/coalesce/thumbnail/2024-03-28-TURMOIL-1100px-c1.jpg",
+    alt: altHuionSketch_1623363242260,
+    title: "TURMOIL",
+  },
+];
