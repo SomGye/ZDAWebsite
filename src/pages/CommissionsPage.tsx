@@ -63,36 +63,36 @@ const CommissionsPage = () => {
   return (
     <div className="commissions-page-container w-full flex flex-col justify-center items-center">
       <div className="commissions-page-cards-container w-full md:w-[calc(100%-32px)] h-full mb-[48px] py-4 sm:py-8 xl:py-12 flex flex-col justify-center items-center gap-0 sm:gap-4 xl:gap-8 rounded-2xl bg-zdaBG-lighterCard/75 dark:bg-zdaBG-darkerCard/30 border border-gray-200/20 dark:border-neutral-900/20">
-        {/* TODO: finish/revise text section to explain commonalities among all types */}
-        {/* TODO: fix scaling for small screens for commonalities */}
-        <div className="commissions-page-common-description-container flex flex-col flex-wrap gap-2 mb-2 sm:mb-0 px-8 select-none">
+        {/* TODO: finish/revise common items to better fit info form before finalizing */}
+        <div className="commissions-page-common-description-container flex flex-col flex-wrap gap-4 m-2 sm:mb-0 px-8 select-none">
           <span className="commissions-page-common-title italic">
             For all commissions:
           </span>
-          <ul className="commissions-page-common-ul text-left text-sm text-gray-600 dark:text-gray-300/95 list-disc [&_ul]:list-[revert]">
-            <li className="commissions-page-common-li my-1">
-              They will focus on colors/contrast/textures with effects and
-              layers used to achieve best result
-            </li>
-            <li className="commissions-page-common-li my-1">
-              They will be delivered digitally (in PNG/SVG and JPG if needed)
-            </li>
-            <li className="commissions-page-common-li my-1">
-              There will be discussion of desired result, but no initial sketch
-              will be provided
-              <ul className="list-desc ml-4 my-1">
-                <li className="italic">
-                  NOTE: for art created in Procreate, a timelapse video and some
-                  WIPs can be provided
-                </li>
-              </ul>
-            </li>
-            <li className="commissions-page-common-li my-1">
-              Any commission requests can be refused
-            </li>
-          </ul>
+          <div className="commissions-page-common-items flex flex-col justify-center items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-300/95">
+            <span className="commissions-page-common-item">
+              &mdash;&nbsp;&nbsp;They will focus on colors/contrast/textures
+              with effects and layers used to achieve best
+              result&nbsp;&nbsp;&mdash;
+            </span>
+            <span className="commissions-page-common-item">
+              &mdash;&nbsp;&nbsp;They will be delivered digitally (in PNG/SVG
+              and JPG if needed)&nbsp;&nbsp;&mdash;
+            </span>
+            <span className="commissions-page-common-item">
+              &mdash;&nbsp;&nbsp;There will be discussion of desired result, but
+              no initial sketch will be provided&nbsp;&nbsp;&mdash;
+            </span>
+            <span className="commissions-page-common-subitem italic font-semibold">
+              &nbsp;&nbsp;NOTE: for art created in Procreate, a timelapse video
+              and some WIPs can be provided&nbsp;&nbsp;
+            </span>
+            <span className="commissions-page-common-item">
+              &mdash;&nbsp;&nbsp;Any commission requests can be
+              refused&nbsp;&nbsp;&mdash;
+            </span>
+          </div>
         </div>
-        <div className="commissions-page-comm-info my-2 inline-block gap-1 text-gray-600 dark:text-gray-300 tracking-wide select-none">
+        <div className="commissions-page-comm-info my-3 sm:my-0 sm:mt-3 inline-block text-gray-600 dark:text-gray-300 tracking-wide select-none">
           For full commission information, click{" "}
           <p
             className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
