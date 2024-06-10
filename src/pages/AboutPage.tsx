@@ -93,7 +93,7 @@ const AboutPage = () => {
             </span>
             <p className="about-intro-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               I am Anubis; I love photography, music, and gaming,
-              <br /> but I also create abstract oddities with a focus on
+              <br /> and I create abstract oddities with a focus on
               <br />
               <div className="italic font-semibold tracking-wide">
                 {"colors + contrast + textures."}
