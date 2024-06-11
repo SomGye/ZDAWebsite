@@ -468,6 +468,11 @@ const CommissionsPage = () => {
           close={() => setIdx_coalesce(-1)}
         />
       </div>
+      {/* 1px Form Section to Scroll To */}
+      <div
+        className="commissions-page-form-section h-px w-px mt-px"
+        id={formSection}
+      />
       <span className="commissions-page-btm-comm-text italic text-slate-600 dark:text-gray-300 tracking-tight select-none">
         If you are interested, <br className="block sm:hidden" /> you can
         commission me directly here:
@@ -491,11 +496,6 @@ const CommissionsPage = () => {
           Loading form...
         </span>
       )}
-      {/* 1px Form Section to Scroll To */}
-      <div
-        className="commissions-page-form-section h-px w-px mt-px"
-        id={formSection}
-      />
       {/* Embedded Commissions Form */}
       {formVisible && (
         <object
@@ -513,9 +513,117 @@ const CommissionsPage = () => {
         </object>
       )}
       <SectionBreak />
-      <div className="commissions-page-promo-container mt-[40px]"></div>
-      <div>TODO: Print Shop promo...</div>
-      <div>TODO: Payment methods promo...</div>
+      <div className="commissions-page-promos-container mt-[40px] flex flex-col justify-center items-center gap-6 select-none">
+        {/* Print Shop Promo */}
+        <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+          <span className="commissions-page-promo-title text-lg font-medium tracking-wide">
+            Print Shop
+          </span>
+          <span className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
+            Get art prints, posters, stickers, cards and more
+          </span>
+          {/* Mobile Only */}
+          <div className="flex justify-center items-center md:hidden">
+            <ZDAButton
+              clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
+              textContent="Print Shop"
+              tight
+              variant="mobile-neutral"
+            />
+          </div>
+          {/* Tablet/Desktop Only */}
+          <div className="hidden md:flex justify-center items-center">
+            <ZDAButton
+              clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
+              textContent="Print Shop"
+              tight
+              variant="neutral"
+            />
+          </div>
+        </div>
+        {/* Downloads Promo */}
+        <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+          <span className="commissions-page-promo-title text-lg font-medium tracking-wide">
+            Downloads
+          </span>
+          <p className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
+            Download high-quality versions of my art for free
+          </p>
+          {/* Mobile Only */}
+          <div className="flex justify-center items-center md:hidden">
+            <ZDAButton
+              clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+              textContent="Ko-fi"
+              tight
+              variant="mobile-neutral"
+            />
+          </div>
+          {/* Tablet/Desktop Only */}
+          <div className="hidden md:flex justify-center items-center">
+            <ZDAButton
+              clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+              textContent="Ko-fi"
+              tight
+              variant="neutral"
+            />
+          </div>
+        </div>
+        {/* Payment Methods Promo */}
+        <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+          <span className="commissions-page-promo-title text-lg font-medium tracking-wide">
+            Support
+          </span>
+          <p className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
+            If you want to directly support me or pay for commissions:
+          </p>
+          <div className="commissions-page-promo-button-container flex flex-col justify-center items-center gap-1">
+            {/* Mobile Only */}
+            <div className="flex justify-center items-center md:hidden">
+              <ZDAButton
+                clickCallback={() =>
+                  clickLink("https://paypal.me/ZeroDayAnubis")
+                }
+                textContent="PayPal"
+                tight
+                variant="mobile-neutral"
+              />
+            </div>
+            {/* Tablet/Desktop Only */}
+            <div className="hidden md:flex justify-center items-center">
+              <ZDAButton
+                clickCallback={() =>
+                  clickLink("https://paypal.me/ZeroDayAnubis")
+                }
+                textContent="PayPal"
+                tight
+                variant="neutral"
+              />
+            </div>
+            {/* Mobile Only */}
+            <div className="flex justify-center items-center md:hidden">
+              <ZDAButton
+                clickCallback={() =>
+                  clickLink("https://account.venmo.com/u/somgye")
+                }
+                textContent="Venmo"
+                tight
+                variant="mobile-neutral"
+              />
+            </div>
+            {/* Tablet/Desktop Only */}
+            <div className="hidden md:flex justify-center items-center">
+              <ZDAButton
+                clickCallback={() =>
+                  clickLink("https://account.venmo.com/u/somgye")
+                }
+                textContent="Venmo"
+                tight
+                variant="neutral"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
