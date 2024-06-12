@@ -1405,6 +1405,11 @@ const PortfolioPage = () => {
           clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
           textContent="Downloads and Support"
         />
+        <ZDAButton
+          clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+          textContent="Downloads and Support"
+          variant="mobile"
+        />
         <span className="mt-2 italic tracking-tight text-slate-600/80 dark:text-slate-300/80 select-none">
           Any support is greatly appreciated
         </span>
