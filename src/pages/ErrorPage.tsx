@@ -24,7 +24,7 @@ const ErrorPage = () => {
           Page Not Found
         </span>
         <button
-          className="inline-flex items-center px-4 py-[6px] 3xl:px-5 3xl:py-[8px] 4xl:px-7 4xl:py-[11px] 4k:px-9 4k:py-[14px] 3xl:scale-[1.1] 4xl:scale-[1.2] 4k:scale-[1.4] rounded-md bg-zdaRedpink-650 text-[15px] 3xl:text-lg 4xl:text-xl 4k:text-2xl text-gray-200 font-medium motion-safe:transition ease-out motion-safe:duration-300 hover:text-gray-100 hover:bg-zdaRedpink-700 active:bg-zdaRedpink-800/90 select-none"
+          className="inline-flex items-center group px-4 py-[6px] 3xl:px-5 3xl:py-[8px] 4xl:px-7 4xl:py-[11px] 4k:px-9 4k:py-[14px] 3xl:scale-[1.1] 4xl:scale-[1.2] 4k:scale-[1.4] rounded-md bg-zdaRedpink-650 text-[15px] 3xl:text-lg 4xl:text-xl 4k:text-2xl text-gray-200 font-medium motion-safe:transition ease-out motion-safe:duration-300 hover:text-gray-100 hover:bg-zdaRedpink-700 active:bg-zdaRedpink-800/90 select-none"
           onClick={() => window.location.replace("/")}
         >
           <span className="inline-block mr-2 motion-safe:transition-transform group-hover:-translate-x-1">
