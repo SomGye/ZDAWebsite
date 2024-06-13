@@ -24,6 +24,7 @@ import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-des
 import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
 import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
 import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
+import prone_to_oblivion_notext_rot from "/assets/examples/vectorize/prone_to_oblivion-20240410-notext-doc-rot.svg";
 
 export const photosHomeThumbnail = [
   {
@@ -410,6 +411,30 @@ export const photosCommissionsCoalesceThumbnail = [
     blurSrc:
       "/assets/commissions/coalesce/thumbnail/2024-03-28-TURMOIL-600px-c7-blur3x.jpg",
     src: "/assets/commissions/coalesce/thumbnail/2024-03-28-TURMOIL-1100px-c1.jpg",
+    alt: altHuionSketch_1623363242260,
+    title: "TURMOIL",
+  },
+];
+
+export const photosExamplesAbstractifyThumbnail = [
+  {
+    src: "/assets/examples/abstractify/2024-02-07-Nonconformant_Spectrum-notext-2400px-c1.jpg",
+    alt: altHuionSketch_1623363242260,
+    title: "Nonconformant Spectrum",
+  },
+];
+
+export const photosExamplesVectorizeThumbnail = [
+  {
+    src: prone_to_oblivion_notext_rot,
+    alt: altHuionSketch_1623363242260,
+    title: "Prone to Oblivion",
+  },
+];
+
+export const photosExamplesCoalesceThumbnail = [
+  {
+    src: "/assets/examples/coalesce/2024-03-28-TURMOIL-framed-1600px-c1.jpg",
     alt: altHuionSketch_1623363242260,
     title: "TURMOIL",
   },
