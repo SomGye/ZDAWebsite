@@ -1,5 +1,5 @@
 import * as React from "react";
-import { leftArrowIcon } from "../icons";
+import { leftArrowMdIcon } from "../icons";
 import ThemeMenu from "../components/ThemeMenu";
 import ZDAButton from "../components/ZDAButton";
 
@@ -26,14 +26,15 @@ const ErrorPage = () => {
         </span>
         <ZDAButton
           clickCallback={() => window.location.replace("/")}
-          leftIcon={leftArrowIcon}
+          leftIcon={leftArrowMdIcon}
           textContent="Go Back"
+          variant="grid"
         />
         <ZDAButton
           clickCallback={() => window.location.replace("/")}
-          leftIcon={leftArrowIcon}
+          leftIcon={leftArrowMdIcon}
           textContent="Go Back"
-          variant="mobile"
+          variant="mobile-grid"
         />
       </div>
     </div>

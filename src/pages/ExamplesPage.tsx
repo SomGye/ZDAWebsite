@@ -1,5 +1,5 @@
 import * as React from "react";
-import { leftArrowIcon } from "../icons";
+import { leftArrowMdIcon } from "../icons";
 import ThemeMenu from "../components/ThemeMenu";
 import CardBreak from "../components/CardBreak";
 import {
@@ -145,8 +145,9 @@ const ExamplesPage = () => {
       </div>
       <ZDAButton
         clickCallback={() => window.location.replace("/")}
-        leftIcon={leftArrowIcon}
+        leftIcon={leftArrowMdIcon}
         textContent="Go Back"
+        variant="grid"
       />
     </div>
   );
