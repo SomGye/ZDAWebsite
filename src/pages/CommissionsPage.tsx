@@ -522,24 +522,18 @@ const CommissionsPage = () => {
           <span className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
             Get art prints, posters, stickers, cards and more
           </span>
-          {/* Mobile Only */}
-          <div className="flex justify-center items-center md:hidden">
-            <ZDAButton
-              clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
-              textContent="Print Shop"
-              tight
-              variant="mobile-neutral"
-            />
-          </div>
-          {/* Tablet/Desktop Only */}
-          <div className="hidden md:flex justify-center items-center">
-            <ZDAButton
-              clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
-              textContent="Print Shop"
-              tight
-              variant="neutral"
-            />
-          </div>
+          <ZDAButton
+            clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
+            textContent="Print Shop"
+            tight
+            variant="mobile-neutral"
+          />
+          <ZDAButton
+            clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
+            textContent="Print Shop"
+            tight
+            variant="neutral"
+          />
         </div>
         {/* Downloads Promo */}
         <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
@@ -549,24 +543,18 @@ const CommissionsPage = () => {
           <p className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
             Download high-quality versions of my art for free
           </p>
-          {/* Mobile Only */}
-          <div className="flex justify-center items-center md:hidden">
-            <ZDAButton
-              clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
-              textContent="Ko-fi"
-              tight
-              variant="mobile-neutral"
-            />
-          </div>
-          {/* Tablet/Desktop Only */}
-          <div className="hidden md:flex justify-center items-center">
-            <ZDAButton
-              clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
-              textContent="Ko-fi"
-              tight
-              variant="neutral"
-            />
-          </div>
+          <ZDAButton
+            clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+            textContent="Ko-fi"
+            tight
+            variant="mobile-neutral"
+          />
+          <ZDAButton
+            clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+            textContent="Ko-fi"
+            tight
+            variant="neutral"
+          />
         </div>
         {/* Payment Methods Promo */}
         <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
@@ -577,50 +565,34 @@ const CommissionsPage = () => {
             If you want to directly support me or pay for commissions:
           </p>
           <div className="commissions-page-promo-button-container flex flex-col justify-center items-center gap-1">
-            {/* Mobile Only */}
-            <div className="flex justify-center items-center md:hidden">
-              <ZDAButton
-                clickCallback={() =>
-                  clickLink("https://paypal.me/ZeroDayAnubis")
-                }
-                textContent="PayPal"
-                tight
-                variant="mobile-neutral"
-              />
-            </div>
-            {/* Tablet/Desktop Only */}
-            <div className="hidden md:flex justify-center items-center">
-              <ZDAButton
-                clickCallback={() =>
-                  clickLink("https://paypal.me/ZeroDayAnubis")
-                }
-                textContent="PayPal"
-                tight
-                variant="neutral"
-              />
-            </div>
-            {/* Mobile Only */}
-            <div className="flex justify-center items-center md:hidden">
-              <ZDAButton
-                clickCallback={() =>
-                  clickLink("https://account.venmo.com/u/somgye")
-                }
-                textContent="Venmo"
-                tight
-                variant="mobile-neutral"
-              />
-            </div>
-            {/* Tablet/Desktop Only */}
-            <div className="hidden md:flex justify-center items-center">
-              <ZDAButton
-                clickCallback={() =>
-                  clickLink("https://account.venmo.com/u/somgye")
-                }
-                textContent="Venmo"
-                tight
-                variant="neutral"
-              />
-            </div>
+            <ZDAButton
+              clickCallback={() => clickLink("https://paypal.me/ZeroDayAnubis")}
+              textContent="PayPal"
+              tight
+              variant="mobile-neutral"
+            />
+            <ZDAButton
+              clickCallback={() => clickLink("https://paypal.me/ZeroDayAnubis")}
+              textContent="PayPal"
+              tight
+              variant="neutral"
+            />
+            <ZDAButton
+              clickCallback={() =>
+                clickLink("https://account.venmo.com/u/somgye")
+              }
+              textContent="Venmo"
+              tight
+              variant="mobile-neutral"
+            />
+            <ZDAButton
+              clickCallback={() =>
+                clickLink("https://account.venmo.com/u/somgye")
+              }
+              textContent="Venmo"
+              tight
+              variant="neutral"
+            />
           </div>
         </div>
       </div>
