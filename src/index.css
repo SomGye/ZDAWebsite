@@ -8,6 +8,13 @@
     -webkit-appearance: none;
   }
 }
+
+@layer base {
+  html {
+     /* Scale up everything on large displays relative to root elem */
+     @apply 4xl:text-xl 4k:text-2xl 5k:text-3xl;
+  }
+}
 /* -- */
 
 :root {
