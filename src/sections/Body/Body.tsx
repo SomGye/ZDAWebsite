@@ -18,7 +18,8 @@ const Body = () => {
       {/* Standard Body */}
       {page !== "Logo" && page !== "Examples" && (
         // NOTE: used mt to counter Header height
-        <div className="body-container w-full mt-[61px] xs:mt-[77px] mb-16 xs:mb-20 flex flex-col justify-center items-center">
+        // TODO: try to make a global state for dynamic header height and counter with mt
+        <div className="body-container w-full mt-[61px] xs:mt-[77px] 4k:mt-20 5k:mt-16 mb-16 xs:mb-20 flex flex-col justify-center items-center">
           <JumpToTop />
           <InfoBanner />
           <PageIndicator />
