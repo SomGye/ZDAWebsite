@@ -158,6 +158,7 @@ export default {
       '3xl': '2500px',
       '4xl': '3000px',
       '4k': '3840px',
+      '5k': '5120px',
     },
   },
   plugins: [],
