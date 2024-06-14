@@ -19,7 +19,8 @@ const Header = () => {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const theme = useRecoilValue(themeAtom);
-  const [headerHeight, setHeaderHeight] = React.useState(80); // 80px = 5rem
+  const defaultHeaderHeight = 80; // 80px = 5rem; will scale with screen size
+  const [headerHeight, setHeaderHeight] = React.useState(defaultHeaderHeight);
   const headerId = "app-header";
   const debounceDelay = 125;
 
@@ -67,7 +68,7 @@ const Header = () => {
       <header
         className={
           determineHeaderClass() +
-          "fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-transparent dark:border-transparent rounded-md"
+          "sticky w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-transparent dark:border-transparent rounded-md"
         }
         id={headerId}
       >
