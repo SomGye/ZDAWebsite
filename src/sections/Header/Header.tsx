@@ -12,13 +12,16 @@ import HamburgerMenu from "../../components/HamburgerMenu";
 import { hamburgerIcon } from "../../icons";
 import PageLinks from "../../components/PageLinks";
 import { altZDALogoCirc } from "../../AltText";
+import { useDebouncedCallback } from "use-debounce";
 
 const Header = () => {
   const [, setPage] = useRecoilState(pageAtom);
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const theme = useRecoilValue(themeAtom);
-  const headerHeight = 80;
+  const [headerHeight, setHeaderHeight] = React.useState(80); // 80px = 5rem
+  const headerId = "app-header";
+  const debounceDelay = 125;
 
   const determineHeaderClass = () => {
     if (scrolled) {
@@ -36,10 +39,27 @@ const Header = () => {
     }
   };
 
+  const resizeHandler = () => {
+    const headerElem = document.querySelector("#" + headerId) as any;
+    if (headerElem && headerElem.clientHeight) {
+      setHeaderHeight(headerElem.clientHeight);
+    }
+  };
+  const debouncedResize = useDebouncedCallback(resizeHandler, debounceDelay);
+
   React.useEffect(() => {
+    if (!window.onresize) {
+      // Add debounced handler to check header height
+      window.onresize = () => {
+        debouncedResize();
+      };
+    }
+
+    // ? NOTE: intentionally not debounced because it introduced bad visual bug
     window.addEventListener("scroll", () => {
       setScrolled(window.scrollY > headerHeight);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -49,6 +69,7 @@ const Header = () => {
           determineHeaderClass() +
           "fixed w-full z-40 top-0 left-0 py-3 xs:py-5 flex items-center bg-gradient-to-t from-zdaRedpink-400/5 dark:from-zdaRedpink-700/5 backdrop-blur-2xl text-gray-700 dark:text-gray-200 text-base font-outfit border-b border-transparent dark:border-transparent rounded-md"
         }
+        id={headerId}
       >
         <div className="header-container flex justify-between xs:justify-normal w-full items-center p-0 mx-auto xs:m-0">
           {/* LEFT - Nav Btn */}
