@@ -7,7 +7,7 @@ import App from "./App.tsx";
 import "./index.css";
 
 /* FONTSOURCE IMPORTS */
-// import "@fontsource/outfit/100.css"; // ? Extra font
+// import "@fontsource/outfit/100.css"; // ? Titles/Buttons
 // import "@fontsource/outfit/200.css";
 import "@fontsource/outfit/300.css";
 // import "@fontsource/outfit/400.css";
@@ -17,7 +17,7 @@ import "@fontsource/outfit/600.css";
 // import "@fontsource/outfit/800.css";
 // import "@fontsource/outfit/900.css";
 
-// import "@fontsource/plus-jakarta-sans/200-italic.css"; // ? Default
+// import "@fontsource/plus-jakarta-sans/200-italic.css"; // ? Default/Body text
 // import "@fontsource/plus-jakarta-sans/200.css";
 import "@fontsource/plus-jakarta-sans/300-italic.css";
 import "@fontsource/plus-jakarta-sans/300.css";

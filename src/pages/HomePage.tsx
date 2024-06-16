@@ -15,6 +15,7 @@ import {
   photosHomeBtmSmThumbnail,
   photosHomeThumbnail,
 } from "../thumbnailInfo";
+import PagePromos from "../components/PagePromos";
 
 const HomePage = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -306,7 +307,9 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div className="home-page-outro max-w-[90%] italic text-base mt-10 sm:mt-14">
+      <SectionBreak />
+      <PagePromos />
+      <div className="home-page-outro max-w-[90%] mt-12 sm:mt-10 italic select-none">
         Thank you for visiting!
       </div>
     </div>

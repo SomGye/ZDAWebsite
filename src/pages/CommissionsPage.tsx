@@ -28,6 +28,7 @@ import {
   photosCommissionsCoalesce,
   photosCommissionsVectorize,
 } from "../lightboxInfo";
+import PagePromos from "../components/PagePromos";
 
 const CommissionsPage = () => {
   const theme = useRecoilValue(themeAtom);
@@ -513,88 +514,9 @@ const CommissionsPage = () => {
         </object>
       )}
       <SectionBreak />
-      <div className="commissions-page-promos-container mt-[40px] flex flex-col justify-center items-center gap-6 select-none">
-        {/* Print Shop Promo */}
-        <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
-          <span className="commissions-page-promo-title text-lg font-medium tracking-wide">
-            Print Shop
-          </span>
-          <span className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
-            Get art prints, posters, stickers, cards and more
-          </span>
-          <ZDAButton
-            clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
-            textContent="Print Shop"
-            tight
-            variant="mobile-neutral"
-          />
-          <ZDAButton
-            clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
-            textContent="Print Shop"
-            tight
-            variant="neutral"
-          />
-        </div>
-        {/* Downloads Promo */}
-        <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
-          <span className="commissions-page-promo-title text-lg font-medium tracking-wide">
-            Downloads
-          </span>
-          <p className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
-            Download high-quality versions of my art for free
-          </p>
-          <ZDAButton
-            clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
-            textContent="Ko-fi"
-            tight
-            variant="mobile-neutral"
-          />
-          <ZDAButton
-            clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
-            textContent="Ko-fi"
-            tight
-            variant="neutral"
-          />
-        </div>
-        {/* Payment Methods Promo */}
-        <div className="commissions-page-promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
-          <span className="commissions-page-promo-title text-lg font-medium tracking-wide">
-            Support
-          </span>
-          <p className="commissions-page-promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
-            If you want to directly support me or pay for commissions:
-          </p>
-          <div className="commissions-page-promo-button-container flex flex-col justify-center items-center gap-1">
-            <ZDAButton
-              clickCallback={() => clickLink("https://paypal.me/ZeroDayAnubis")}
-              textContent="PayPal"
-              tight
-              variant="mobile-neutral"
-            />
-            <ZDAButton
-              clickCallback={() => clickLink("https://paypal.me/ZeroDayAnubis")}
-              textContent="PayPal"
-              tight
-              variant="neutral"
-            />
-            <ZDAButton
-              clickCallback={() =>
-                clickLink("https://account.venmo.com/u/somgye")
-              }
-              textContent="Venmo"
-              tight
-              variant="mobile-neutral"
-            />
-            <ZDAButton
-              clickCallback={() =>
-                clickLink("https://account.venmo.com/u/somgye")
-              }
-              textContent="Venmo"
-              tight
-              variant="neutral"
-            />
-          </div>
-        </div>
+      <PagePromos />
+      <div className="commissions-page-outro max-w-[90%] mt-12 sm:mt-10 italic select-none">
+        Thank you for checking out my art!
       </div>
     </div>
   );
