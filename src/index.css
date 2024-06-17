@@ -474,4 +474,18 @@ button.yarl__button:focus-visible {
   }
 }
 
+/* JOY UI DRAWER */
+div.MuiDrawer-content {
+  width: 100%;
+  @media (min-width: 640px) { /* sm */
+    width: min(100vw, clamp(300px, 40%, 100%));
+  }
+  @media (min-width: 1280px) { /* xl */
+    width: min(100vw, clamp(300px, 30%, 100%));
+  }
+  @media (min-width: 2500px) { /* 3xl */
+    width: min(100vw, clamp(300px, 25%, 100%));
+  }
+}
+
 /* -- */
