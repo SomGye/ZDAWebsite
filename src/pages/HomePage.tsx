@@ -189,7 +189,7 @@ const HomePage = () => {
             src={photosHomeBtmSmThumbnail[0].blurSrc}
             alt={photosHomeBtmSmThumbnail[0].alt}
             title={photosHomeBtmSmThumbnail[0].title}
-            className="home-img05b z-20 h-full max-w-64 sm:max-w-[320px] md:max-w-[460px] lg:max-w-[520px] my-4 object-cover object-center rounded-md select-none"
+            className="home-img05b z-20 h-full max-w-[calc(100%-2rem)] sm:max-w-[320px] md:max-w-[460px] lg:max-w-[520px] my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -198,7 +198,7 @@ const HomePage = () => {
             src={photosHomeBtmSmThumbnail[0].src}
             alt={photosHomeBtmSmThumbnail[0].alt}
             title={photosHomeBtmSmThumbnail[0].title}
-            className="hidden home-img05 z-10 h-full max-w-64 sm:max-w-[320px] md:max-w-[460px] lg:max-w-[520px] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img05 z-10 h-full max-w-[calc(100%-2rem)] sm:max-w-[320px] md:max-w-[460px] lg:max-w-[520px] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
