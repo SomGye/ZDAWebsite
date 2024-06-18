@@ -30,7 +30,7 @@ const ExamplesPage = () => {
       <div className="examples-page-cards-container w-[calc(100%-3rem)] h-full mb-40 p-8 grid grid-cols-3 gap-4 justify-center items-center justify-items-center rounded-2xl border border-gray-200/75 dark:border-neutral-900/75">
         <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
           <div className="examples-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
-            <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
+            <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider select-none">
               Abstractify
             </span>
           </div>
@@ -68,7 +68,7 @@ const ExamplesPage = () => {
         </div>
         <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
           <div className="examples-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
-            <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
+            <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider select-none">
               Vectorize
             </span>
           </div>
@@ -106,7 +106,7 @@ const ExamplesPage = () => {
         </div>
         <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
           <div className="examples-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
-            <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
+            <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider select-none">
               Coalesce
             </span>
           </div>
