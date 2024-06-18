@@ -89,7 +89,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[0].src}
             alt={photosHomeThumbnail[0].alt}
             title={photosHomeThumbnail[0].title}
-            className="hidden home-img01 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img01 z-10 hover:z-50 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosHomeThumbnail[1].blurSrc}
@@ -104,7 +104,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[1].src}
             alt={photosHomeThumbnail[1].alt}
             title={photosHomeThumbnail[1].title}
-            className="hidden home-img02 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img02 z-10 hover:z-50 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosHomeThumbnail[2].blurSrc}
@@ -119,7 +119,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[2].src}
             alt={photosHomeThumbnail[2].alt}
             title={photosHomeThumbnail[2].title}
-            className="hidden home-img03 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img03 z-10 hover:z-50 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosHomeThumbnail[3].blurSrc}
@@ -134,7 +134,7 @@ const HomePage = () => {
             src={photosHomeThumbnail[3].src}
             alt={photosHomeThumbnail[3].alt}
             title={photosHomeThumbnail[3].title}
-            className="hidden home-img04 z-10 hover:z-50 scale-100 motion-safe:hover:scale-[1.01] h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden home-img04 z-10 hover:z-50 h-full max-w-64 2xl:max-w-72 aspect-[200/283] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
