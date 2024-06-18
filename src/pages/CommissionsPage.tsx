@@ -164,7 +164,9 @@ const CommissionsPage = () => {
               <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                 (PayPal/Kofi)
               </div>
-              <CardBreak isVertical />
+              <div className="hidden md:flex">
+                <CardBreak isVertical />
+              </div>
             </span>
             {/* Mobile Only - Opens in new tab */}
             <div className="block md:hidden">
@@ -281,7 +283,9 @@ const CommissionsPage = () => {
               <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                 (PayPal/Kofi)
               </div>
-              <CardBreak isVertical />
+              <div className="hidden md:flex">
+                <CardBreak isVertical />
+              </div>
             </span>
             {/* Mobile Only - Opens in new tab */}
             <div className="block md:hidden">
@@ -405,7 +409,9 @@ const CommissionsPage = () => {
               <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                 (PayPal/Kofi)
               </div>
-              <CardBreak isVertical />
+              <div className="hidden md:flex">
+                <CardBreak isVertical />
+              </div>
             </span>
             {/* Mobile Only - Opens in new tab */}
             <div className="block md:hidden">
