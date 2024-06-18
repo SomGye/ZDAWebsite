@@ -23,6 +23,7 @@ import {
 import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
 import { altLongTextLogo } from "../AltText";
+import ZDAButton from "./ZDAButton";
 
 type props = {
   open: boolean;
@@ -83,142 +84,130 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               Sections
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center xl:justify-left gap-[1px] xl:gap-[2px]">
-              <button
-                onClick={() => {
+              <ZDAButton
+                clickCallback={() => {
                   switchPage("Home", setPage);
                   setOpen(false);
                 }}
-                className="w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => {
+                textContent="Home"
+                variant="hamburger-section"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   switchPage("Portfolio", setPage);
                   setOpen(false);
                 }}
-                className="w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
-              >
-                Portfolio
-              </button>
-              <button
-                onClick={() => {
+                textContent="Portfolio"
+                variant="hamburger-section"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   switchPage("Commissions", setPage);
                   setOpen(false);
                 }}
-                className="w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
-              >
-                Commissions
-              </button>
-              <button
-                onClick={() => {
+                textContent="Commissions"
+                variant="hamburger-section"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   switchPage("About", setPage);
                   setOpen(false);
                 }}
-                className="w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none"
-              >
-                About
-              </button>
+                textContent="About"
+                variant="hamburger-section"
+              />
             </Box>
             <p className="text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Social Media
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
-              <button
-                className="w-full inline-flex relative justify-center items-center p-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://bsky.app/profile/zerodayanubis.com");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{bskyIcon}</span>
-                <span className="mx-1">Bluesky</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+                leftIcon={bskyIcon}
+                rightIcon={extLinkIcon}
+                textContent="Bluesky"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   clickLink(
                     "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
                   );
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{igIcon}</span>
-                <span className="mx-1">Instagram</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+                leftIcon={igIcon}
+                rightIcon={extLinkIcon}
+                textContent="Instagram"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://www.threads.net/@zerodayanubis");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{threadsIcon}</span>
-                <span className="mx-1">Threads</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+                leftIcon={threadsIcon}
+                rightIcon={extLinkIcon}
+                textContent="Threads"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://ohai.social/@ZeroDayAnubis");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{mastoIcon}</span>
-                <span className="mx-1">Mastodon</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
+                leftIcon={mastoIcon}
+                rightIcon={extLinkIcon}
+                textContent="Mastodon"
+                variant="hamburger-outlined"
+              />
             </Box>
             <p className="text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
               Prints/Support
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://tinyurl.com/ZDAPrints");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{printShopIcon}</span>
-                <span className="mx-1">Print Shop</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+                leftIcon={printShopIcon}
+                rightIcon={extLinkIcon}
+                textContent="Print Shop"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://ko-fi.com/zerodayanubis");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{kofiIcon}</span>
-                <span className="mx-1">Ko-fi (HQ Files)</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+                leftIcon={kofiIcon}
+                rightIcon={extLinkIcon}
+                textContent="Ko-fi (HQ Files)"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://paypal.me/ZeroDayAnubis");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{payPalIcon}</span>
-                <span className="mx-1">PayPal</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
-              <button
-                className="w-full inline-flex relative justify-center items-center py-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                onClick={() => {
+                leftIcon={payPalIcon}
+                rightIcon={extLinkIcon}
+                textContent="PayPal"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
                   clickLink("https://account.venmo.com/u/somgye");
                   setOpen(false);
                 }}
-              >
-                <span className="mx-2 absolute left-0">{paymentIcon}</span>
-                <span className="mx-1">Venmo</span>
-                <span className="mx-2 absolute right-0">{extLinkIcon}</span>
-              </button>
+                leftIcon={paymentIcon}
+                rightIcon={extLinkIcon}
+                textContent="Venmo"
+                variant="hamburger-outlined"
+              />
             </Box>
           </div>
           <Divider className="mt-auto" />
