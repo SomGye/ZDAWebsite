@@ -7,12 +7,12 @@ const PagePromos = () => {
     <>
       <div className="promos-container flex flex-col justify-center items-center gap-6 my-6 sm:my-8 select-none">
         {/* Print Shop Promo */}
-        <div className="promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+        <div className="promo flex flex-col justify-center items-center w-auto xxs:w-80 xs:w-[21rem] md:w-[22rem] xl:w-[23rem] 4k:w-96 h-full mx-4 p-8 gap-4 rounded-lg bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
           <span className="promo-title text-lg font-medium tracking-wide">
             Print Shop
           </span>
           <span className="promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
-            Get art prints, posters, stickers, cards and more
+            Get art prints, posters, stickers, cards and more:
           </span>
           <ZDAButton
             clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
@@ -28,12 +28,12 @@ const PagePromos = () => {
           />
         </div>
         {/* Downloads Promo */}
-        <div className="promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+        <div className="promo flex flex-col justify-center items-center w-auto xxs:w-80 xs:w-[21rem] md:w-[22rem] xl:w-[23rem] 4k:w-96 h-full mx-4 p-8 gap-4 rounded-lg bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
           <span className="promo-title text-lg font-medium tracking-wide">
             Downloads
           </span>
           <p className="promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
-            Download high-quality versions of my art for free
+            Download high-quality versions of my art for free:
           </p>
           <ZDAButton
             clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
@@ -49,7 +49,7 @@ const PagePromos = () => {
           />
         </div>
         {/* Payment Methods Promo */}
-        <div className="promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+        <div className="promo flex flex-col justify-center items-center w-auto xxs:w-80 xs:w-[21rem] md:w-[22rem] xl:w-[23rem] 4k:w-96 h-full mx-4 p-8 gap-4 rounded-lg bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
           <span className="promo-title text-lg font-medium tracking-wide">
             Support
           </span>
@@ -88,12 +88,12 @@ const PagePromos = () => {
           </div>
         </div>
         {/* Socmeds Promo */}
-        <div className="promo flex flex-col justify-center items-center w-[300px] xs:w-[360px] sm:w-[450px] h-full mx-4 p-8 gap-4 rounded-md bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
+        <div className="promo flex flex-col justify-center items-center w-auto xxs:w-80 xs:w-[21rem] md:w-[22rem] xl:w-[23rem] 4k:w-96 h-full mx-4 p-8 gap-4 rounded-lg bg-gray-200/50 dark:bg-zdaBG-lessDarkCard/70">
           <span className="promo-title text-lg font-medium tracking-wide">
             Social Media
           </span>
           <p className="promo-description tracking-tight text-gray-600 dark:text-gray-300/95 text-balance">
-            Come visit our social media for updates and more
+            Visit my social media for the latest updates and art:
           </p>
           <div className="promo-button-container flex flex-col justify-center items-center gap-1">
             <ZDAButton
