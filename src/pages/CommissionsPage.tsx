@@ -35,6 +35,9 @@ const CommissionsPage = () => {
   const [idx_abstractify, setIdx_abstractify] = React.useState(-1);
   const [idx_vectorize, setIdx_vectorize] = React.useState(-1);
   const [idx_coalesce, setIdx_coalesce] = React.useState(-1);
+  const [hover_abstractify, setHover_abstractify] = React.useState(false);
+  const [hover_vectorize, setHover_vectorize] = React.useState(false);
+  const [hover_coalesce, setHover_coalesce] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
   const [formVisible, setFormVisible] = React.useState(false);
@@ -93,7 +96,7 @@ const CommissionsPage = () => {
             </span>
           </div>
         </div>
-        <div className="commissions-page-comm-info my-3 sm:my-0 sm:mt-3 inline-block text-gray-600 dark:text-gray-300 tracking-wide select-none">
+        <div className="commissions-page-comm-info mx-1 my-3 sm:my-0 sm:mt-3 inline-block text-gray-600 dark:text-gray-300 tracking-wide select-none">
           For full commission information, click{" "}
           <p
             className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
@@ -103,8 +106,12 @@ const CommissionsPage = () => {
           </p>
           .
         </div>
-        {/* // ? Abstractify */}
-        <div className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark">
+        {/* Abstractify */}
+        <div
+          className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
+          onMouseEnter={() => setHover_abstractify(true)}
+          onMouseLeave={() => setHover_abstractify(false)}
+        >
           <div className="commissions-page-card-img-and-btn-container rounded-t-xl rounded-b-none self-stretch relative flex flex-col -mt-4 -mx-4 pb-4">
             <div className="commissions-page-card-img-container grid">
               <img
@@ -133,7 +140,7 @@ const CommissionsPage = () => {
             </div>
           </div>
           <div className="commissions-page-card-middle-container justify-center items-center">
-            <span className="commissions-page-card-title flex justify-center items-center text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
+            <span className="commissions-page-card-title block w-min text-center mx-auto text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
               Abstractify
             </span>
             <div className="commissions-page-card-description-container my-2 flex flex-col md:inline-flex md:flex-row text-base md:text-sm lg:text-base items-center select-none">
@@ -157,7 +164,7 @@ const CommissionsPage = () => {
               (Click image for more examples)
             </div>
           </div>
-          <CardBreak />
+          <CardBreak isColorful={hover_abstractify} />
           <div className="commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row justify-between items-center select-none">
             <span className="commissions-page-card-price m-0 sm:m-4 p-1 inline-flex justify-center items-center">
               $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
@@ -229,8 +236,12 @@ const CommissionsPage = () => {
           open={idx_abstractify >= 0}
           close={() => setIdx_abstractify(-1)}
         />
-        {/* // ? Vectorize */}
-        <div className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark">
+        {/* Vectorize */}
+        <div
+          className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
+          onMouseEnter={() => setHover_vectorize(true)}
+          onMouseLeave={() => setHover_vectorize(false)}
+        >
           <div className="commissions-page-card-img-and-btn-container rounded-t-xl rounded-b-none self-stretch relative flex flex-col -mt-4 -mx-4 pb-4">
             <div className="commissions-page-card-img-container grid">
               <img
@@ -252,7 +263,7 @@ const CommissionsPage = () => {
             </div>
           </div>
           <div className="commissions-page-card-middle-container justify-center items-center">
-            <span className="commissions-page-card-title flex justify-center items-center text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
+            <span className="commissions-page-card-title block w-min text-center mx-auto text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
               Vectorize
             </span>
             <div className="commissions-page-card-description-container my-2 flex flex-col md:inline-flex md:flex-row text-base md:text-sm lg:text-base items-center select-none">
@@ -276,7 +287,7 @@ const CommissionsPage = () => {
               (Click image for more examples)
             </div>
           </div>
-          <CardBreak />
+          <CardBreak isColorful={hover_vectorize} />
           <div className="commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row justify-between items-center select-none">
             <span className="commissions-page-card-price m-0 sm:m-4 p-1 inline-flex justify-center items-center">
               $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
@@ -348,8 +359,12 @@ const CommissionsPage = () => {
           open={idx_vectorize >= 0}
           close={() => setIdx_vectorize(-1)}
         />
-        {/* // ? Coalesce */}
-        <div className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark">
+        {/* Coalesce */}
+        <div
+          className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
+          onMouseEnter={() => setHover_coalesce(true)}
+          onMouseLeave={() => setHover_coalesce(false)}
+        >
           <div className="commissions-page-card-img-and-btn-container rounded-t-xl rounded-b-none self-stretch relative flex flex-col -mt-4 -mx-4 pb-4">
             <div className="commissions-page-card-img-container grid">
               <img
@@ -378,7 +393,7 @@ const CommissionsPage = () => {
             </div>
           </div>
           <div className="commissions-page-card-middle-container justify-center items-center">
-            <span className="commissions-page-card-title flex justify-center items-center text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
+            <span className="commissions-page-card-title block w-min text-center mx-auto text-xl font-urbanist font-normal tracking-wider drop-shadow-card-logo-light dark:drop-shadow-card-logo-dark hover:drop-shadow-none dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-100 ease-out select-none">
               Coalesce
             </span>
             <div className="commissions-page-card-description-container my-2 flex flex-col md:inline-flex md:flex-row text-base md:text-sm lg:text-base items-center select-none">
@@ -402,7 +417,7 @@ const CommissionsPage = () => {
               (Click image for more examples)
             </div>
           </div>
-          <CardBreak />
+          <CardBreak isColorful={hover_coalesce} />
           <div className="commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row justify-between items-center select-none">
             <span className="commissions-page-card-price m-0 sm:m-4 p-1 inline-flex justify-center items-center">
               $<div className="tracking-wide">&nbsp;45&nbsp;&nbsp;</div>
