@@ -1410,8 +1410,8 @@ const PortfolioPage = () => {
           textContent="Downloads and Support"
           variant="mobile"
         />
-        <span className="mt-2 italic tracking-tight text-slate-600/80 dark:text-slate-300/80 select-none">
-          Any support is greatly appreciated
+        <span className="portfolio-page-outro mt-2 italic tracking-tight text-slate-600/80 dark:text-slate-300/80 select-none">
+          Any support is greatly appreciated!
         </span>
       </div>
     </div>
