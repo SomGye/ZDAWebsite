@@ -56,8 +56,9 @@ const ZDAButton = ({
         "w-full inline-flex relative justify-center items-center p-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none",
     },
   ];
-  const [activeClassName, setActiveClassName] =
-    React.useState(defaultClassName); // TODO: move away from default here and use "" or "hidden"
+  const [activeClassName, setActiveClassName] = React.useState(
+    variantsList[1].className
+  ); // use neutral while loading for subtler transition
   // ? NOTE: the will-change-transform fixes the icon jitter issue when centering
   const leftIconSpanClassName =
     "inline-flex justify-center items-center mr-2 transition-transform group-hover:-translate-x-1 will-change-transform motion-reduce:transform-none";
@@ -74,11 +75,9 @@ const ZDAButton = ({
       setActiveClassName(
         variantsList.filter((item) => item.name === variant)[0].className
       );
+    } else {
+      setActiveClassName(defaultClassName);
     }
-    // TODO: add default logic
-    // else {
-    //   setActiveClassName(defaultClassName);
-    // }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variant]);
 
