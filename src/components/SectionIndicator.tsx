@@ -5,7 +5,6 @@ type props = {
   id?: string;
 };
 
-// TODO: experiment with more subtle gradients and plain colors?
 const SectionIndicator = ({ sectionName, id }: props) => {
   return (
     <div

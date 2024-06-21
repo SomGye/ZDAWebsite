@@ -42,3 +42,67 @@ export const altTheHarbingerWakes =
   "A burning triangular head of dark red flames over a spooky orb with a glowing red ring";
 export const altNonconformantSpectrum =
   "A glowing wave of vibrant pink over a dark purple background, splitting into beams of yellow and blue";
+export const altTurmoil =
+  "Striking glowing red chasms open up over a very dark brown backdrop, with cloudy and glitchy streaks of shades of red, framed by inverse colors";
+export const altZeroShift =
+  "Concentric circles and abstract shapes in shades of gray, overlaid by two dark racing stripes, over a dotted background";
+export const altRosecranceDespair =
+  "A deep red rose comprised of abstract rectangles and sharp lines, over a backdrop of overlapping light red circles";
+export const altAVisualViolation =
+  "Wild and vivid streaks and splashes of lime green, yellow, pink, purple, and blue colors, dotted by graffiti splats";
+export const altTheCruxOfCrisis =
+  "A thick band of pulsating pink cuts through a backdrop of dotted pink and purple, with crazy tendrils of light blue pouring out";
+export const altTheChromaPassage =
+  "Soft and smooth gradients of pink, blue, green, and yellow border a central wisp of yellow, pink and red, coming out of a distant sun";
+export const altReturningSublimation =
+  "A sublime set of colorful smears to the right, with hues of green, blue and yellow being interrupted by a horizontal bar or red and pink";
+export const altSmearedBridges =
+  "Three ominous floating vertical reddish pink smudges hovering over a backdrop of haunting dark purple smudges";
+export const altPrismOfParagon =
+  "An ominous red triangle with three shooting beams of orange going towards the middle, over a backdrop of purple squares and pink streaks";
+export const altSystems =
+  "A burning sphere of lime green streaked by inky splats and surrounded by green and blue flames";
+export const altRegents =
+  "Glowing pink and purple lines form a multi-outlined triangle over a backdrop of vaguely pink smears and blue splatters";
+export const altInFlux =
+  "Abstract smears of teal and gray form a vague version of a spooky forest";
+export const altProneToOblivion =
+  "Triangles of red overlap a backdrop of blue, with inverse colored lines cutting across them, and three apparitions of translucent red float across";
+export const altTheInfiniteKingdom =
+  "A burning sun with three horizontal light streaks float above two overlapping sand dunes";
+export const altWeatheringTheWaves =
+  "A series of colorful blue and red waves collide with each as they flow towards the upper right";
+export const altMemoriamDeLuce =
+  "Vivid streaks of pink and purple fly upwards as a backdrop of teal flames and splatters works to consume them";
+export const altDivinityEnds =
+  "An area of outer space on fire with red and orange flames as stellar rings cross through them";
+export const altShakenPetals =
+  "A vague shape of a red flower can be seen in the shadows of a purple valley, with subtle orange energy streaks coming out";
+export const altZygotesSevered =
+  "Vibrant green tendrils of light over a network of red and blue wires and veins";
+export const altSelfDestructSequence =
+  "A stellar storm rages around a star as swirling gas clouds of dark purple start to envelop it";
+export const altTheTrainedTrespass =
+  "White and gray consume a target in the middle, whilst a backdrop of terrifying ink and clouds rages on";
+export const altThing_202304261913 =
+  "Playful tendrils of pink dance around thick purple lines, over a backdrop of soft purple";
+export const altSaturatedAxons =
+  "Various layers of glowing pink and light purple tendrils flow towards the bottom left";
+export const altTheTempleOfLoss =
+  "A vague outline of a green triangle in the middle, overlaid by surging waves of blue, pink, and green";
+export const altTheToxicDescent =
+  "Three pillars of toxic green fumes rise over a yellow backdrop, with red flames consuming the pillars";
+export const altTheMessBetween =
+  "Three column of splotchy red, swiped by two horizontal sections of pink and purple";
+export const altTheInfiniteKingdomDamned =
+  "An inverse burning sun with three horizontal light streaks float above two overlapping sand dunes";
+export const altEnso03 =
+  "A thick torus of purple, yellow, and green colors floats over a violently volcanic backdrop, with surges of yellow energy flying out";
+export const altEnterPanic =
+  "Spooky glowing lines form multiple concentric circles, with streaks going off to the right, and leaving a gap in the middle for the text, ZERODAYANUBIS";
+export const altRosecranceDelusion =
+  "A red rose comprised of abstract rectangles and sharp lines, over a backdrop of swirling splotches of teal, peach, and purple";
+export const altDisasterWithCare =
+  "Three orbs of splotchy red hover over a backdrop of thick red lines, overlapped by zig zag lines of glowing red";
+export const altDisquietudeOfDread =
+  "Spooky swirls of foggy dark blue try to envelop a glowing column of green light, surrounded by a frame of mint and light green lines";
