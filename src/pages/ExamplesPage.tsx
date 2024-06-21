@@ -27,38 +27,34 @@ const ExamplesPage = () => {
       <span className="examples-page-title m-2 font-outfit font-semibold text-3xl text-gray-800 dark:text-gray-200 select-none">
         ZDA Art Commissions
       </span>
-      <div className="examples-page-cards-container w-[calc(100%-3rem)] h-full mb-40 p-8 grid grid-cols-3 gap-4 justify-center items-center justify-items-center rounded-2xl border border-gray-200/75 dark:border-neutral-900/75">
-        <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
+      <div className="examples-page-cards-container w-[calc(100%-3rem)] h-full mb-36 p-8 grid grid-cols-3 gap-4 justify-center items-center justify-items-center rounded-2xl border border-gray-200/75 dark:border-neutral-900/75">
+        <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800 select-none">
           <div className="examples-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
             <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider select-none">
               Abstractify
             </span>
           </div>
           <CardBreak />
-          <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col sm:flex-row justify-between items-center">
+          <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col justify-between items-center">
             <div className="examples-page-card-img-container">
               <img
                 src={photosExamplesAbstractifyThumbnail[0].src}
                 alt={photosExamplesAbstractifyThumbnail[0].alt}
                 title={photosExamplesAbstractifyThumbnail[0].title}
-                className="examples-img01 z-10 aspect-[9/13] h-full max-w-96 my-4 object-cover object-left-bottom rounded-md border-solid border dark:border-2 border-transparent select-none"
+                className="examples-img01 z-10 aspect-[9/13] h-full max-w-[26rem] my-8 object-cover object-left-bottom rounded-md border-solid border dark:border-2 border-transparent select-none"
               />
             </div>
-            <div className="examples-page-card-description-container my-4">
-              {/* TODO: refine desc/list and fix scaling */}
-              <div className="examples-page-card-description">
-                Description of comm type...
-                <ul className="mt-4 sm:mt-6">
-                  <li>Item 1</li>
-                  <li>Item 2</li>
-                  <li>Item 3</li>
-                </ul>
-              </div>
+            <div className="examples-page-card-description my-4">
+              <ul>
+                <li>Made in Procreate</li>
+                <li>Transform idea into digital abstract painting</li>
+                <li>Ready in 2-3 days</li>
+              </ul>
             </div>
           </div>
           <CardBreak />
           <div className="examples-page-card-bottom-content w-full inline-flex justify-center items-center">
-            <span className="examples-page-card-price m-4 p-1 inline-flex">
+            <span className="examples-page-card-price mt-8 p-1 inline-flex">
               $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
               <div className="text-gray-600 dark:text-gray-400 tracking-tight">
                 (PayPal/Kofi)
@@ -66,37 +62,33 @@ const ExamplesPage = () => {
             </span>
           </div>
         </div>
-        <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
+        <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800 select-none">
           <div className="examples-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
             <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider select-none">
               Vectorize
             </span>
           </div>
           <CardBreak />
-          <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col sm:flex-row justify-between items-center">
+          <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col justify-between items-center">
             <div className="examples-page-card-img-container">
               <img
                 src={photosExamplesVectorizeThumbnail[0].src}
                 alt={photosExamplesVectorizeThumbnail[0].alt}
                 title={photosExamplesVectorizeThumbnail[0].title}
-                className="examples-img02 z-10 aspect-[9/13] h-full max-w-96 my-4 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
+                className="examples-img02 z-10 aspect-[9/13] h-full max-w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
               />
             </div>
-            <div className="examples-page-card-description-container my-4">
-              {/* TODO: refine desc/list and fix scaling */}
-              <div className="examples-page-card-description">
-                Description of comm type...
-                <ul className="mt-4 sm:mt-6">
-                  <li>Item 1</li>
-                  <li>Item 2</li>
-                  <li>Item 3</li>
-                </ul>
-              </div>
+            <div className="examples-page-card-description my-4">
+              <ul>
+                <li>Made in Inkscape</li>
+                <li>Translate idea into vector art/logo/design</li>
+                <li>Ready in 2-3 days</li>
+              </ul>
             </div>
           </div>
           <CardBreak />
           <div className="examples-page-card-bottom-content w-full inline-flex justify-center items-center">
-            <span className="examples-page-card-price m-4 p-1 inline-flex">
+            <span className="examples-page-card-price mt-8 p-1 inline-flex">
               $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
               <div className="text-gray-600 dark:text-gray-400 tracking-tight">
                 (PayPal/Kofi)
@@ -104,37 +96,33 @@ const ExamplesPage = () => {
             </span>
           </div>
         </div>
-        <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800">
+        <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800 select-none">
           <div className="examples-page-card-title-container flex flex-col justify-center items-center my-2 sm:my-4">
             <span className="examples-page-card-title flex text-xl font-urbanist font-normal tracking-wider select-none">
               Coalesce
             </span>
           </div>
           <CardBreak />
-          <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col sm:flex-row justify-between items-center">
+          <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col justify-between items-center">
             <div className="examples-page-card-img-container">
               <img
                 src={photosExamplesCoalesceThumbnail[0].src}
                 alt={photosExamplesCoalesceThumbnail[0].alt}
                 title={photosExamplesCoalesceThumbnail[0].title}
-                className="examples-img03 z-10 aspect-[9/13] h-full max-w-96 my-4 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
+                className="examples-img03 z-10 aspect-[9/13] h-full max-w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
               />
             </div>
-            <div className="examples-page-card-description-container my-4">
-              {/* TODO: refine desc/list and fix scaling */}
-              <div className="examples-page-card-description">
-                Description of comm type...
-                <ul className="mt-4 sm:mt-6">
-                  <li>Item 1</li>
-                  <li>Item 2</li>
-                  <li>Item 3</li>
-                </ul>
-              </div>
+            <div className="examples-page-card-description my-4">
+              <ul>
+                <li>Made in Procreate/Inkscape/PSP</li>
+                <li>Fusion of abstract painting and vector art</li>
+                <li>Ready in 3-5 days</li>
+              </ul>
             </div>
           </div>
           <CardBreak />
           <div className="examples-page-card-bottom-content w-full inline-flex justify-center items-center">
-            <span className="examples-page-card-price m-4 p-1 inline-flex">
+            <span className="examples-page-card-price mt-8 p-1 inline-flex">
               $<div className="tracking-wide">&nbsp;45&nbsp;&nbsp;</div>
               <div className="text-gray-600 dark:text-gray-400 tracking-tight">
                 (PayPal/Kofi)
