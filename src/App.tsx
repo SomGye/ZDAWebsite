@@ -27,6 +27,8 @@ const App = ({ route }: props) => {
       setPage("Portfolio");
     } else if (route === "commissions") {
       setPage("Commissions");
+    } else if (route === "about") {
+      setPage("About");
     } else if (route === "examples") {
       setPage("Examples");
     } else if (route === "logo") {
@@ -37,6 +39,8 @@ const App = ({ route }: props) => {
         switchPage("Portfolio", setPage, true);
       } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
         switchPage("Commissions", setPage, true);
+      } else if (currentPath.toLocaleLowerCase().includes("about")) {
+        switchPage("About", setPage, true);
       } else if (currentPath.toLocaleLowerCase().includes("examples")) {
         switchPage("Examples", setPage, true);
       } else if (currentPath.toLocaleLowerCase().includes("logo")) {
