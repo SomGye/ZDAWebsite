@@ -91,7 +91,7 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[0].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 A terrifying mix of
                 <br className="block lg:hidden" />
                 striking red splatters and streaks
@@ -100,7 +100,7 @@ const PortfolioPage = () => {
                 <div className="italic font-semibold tracking-wide">
                   {"the boldness of the middle."}
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioPostersThumbnail[0].blurSrc}
@@ -119,7 +119,7 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               A terrifying mix of
               <br className="block md:hidden" />
               striking red splatters and streaks
@@ -128,7 +128,7 @@ const PortfolioPage = () => {
               <div className="italic font-semibold tracking-wide">
                 {"the boldness of the middle."}
               </div>
-            </p>
+            </div>
           </div>
         </div>
         <SectionBreak />
@@ -138,7 +138,7 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[1].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   A piece of muted <br className="block lg:hidden" /> yet
                   whimsical graphic design,
@@ -147,7 +147,7 @@ const PortfolioPage = () => {
                 <br /> while a gray sphere hides a
                 <br /> subtle blue gradient,
                 <br /> over a dotted backdrop.
-              </p>
+              </div>
             </div>
             <img
               onClick={() => setIdx_posters1(1)}
@@ -158,7 +158,7 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
                 A piece of muted yet <br className="block md:hidden" />{" "}
                 whimsical graphic design,
@@ -167,7 +167,7 @@ const PortfolioPage = () => {
               <br /> while a gray sphere hides a
               <br /> subtle blue gradient,
               <br /> over a dotted backdrop.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -178,14 +178,14 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[2].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 A dark red rose comprised <br className="block lg:hidden" /> of
                 sharp, deadly lines
                 <br /> with edges of a haunting past looming overhead.
                 <div className="italic font-semibold tracking-wide">
                   {"This flower holds a troublesome tale."}
                 </div>
-              </p>
+              </div>
             </div>
             <img
               onClick={() => setIdx_posters1(2)}
@@ -196,14 +196,14 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               A dark red rose comprised <br className="block md:hidden" /> of
               sharp, deadly lines
               <br /> with edges of a haunting past looming overhead.
               <div className="italic font-semibold tracking-wide">
                 {"This flower holds a troublesome tale."}
               </div>
-            </p>
+            </div>
           </div>
         </div>
         <SectionBreak />
@@ -213,13 +213,13 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[3].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   {"A wild whiplash of colors and strokes"}
                 </div>
                 shows bold whimsy and visual flavor;
                 <br /> an endless palette awaits.
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioPostersThumbnail[3].blurSrc}
@@ -238,13 +238,13 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
                 {"A wild whiplash of colors and strokes"}
               </div>
               shows bold whimsy and visual flavor;
               <br /> an endless palette awaits.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -299,13 +299,13 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[4].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 Tendrils of outlandish energy and color,
                 <br /> both emanating outward and surging within,
                 <div className="italic font-semibold tracking-wide">
                   {"highlighting vivid, untamed contrast."}
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioPostersThumbnail[4].blurSrc}
@@ -324,13 +324,13 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb max-w-[16ch] xs:max-w-none text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb max-w-[16ch] xs:max-w-none text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               Tendrils of outlandish energy and color,
               <br /> both emanating outward and surging within,
               <div className="italic font-semibold tracking-wide">
                 {"highlighting vivid, untamed contrast."}
               </div>
-            </p>
+            </div>
           </div>
         </div>
         <SectionBreak />
@@ -340,7 +340,7 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[5].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   A mystical frame acts as <br className="block lg:hidden" /> a
                   portal between worlds:
@@ -349,7 +349,7 @@ const PortfolioPage = () => {
                 hold colorful energy,
                 <br /> while imagination breaks{" "}
                 <br className="block lg:hidden" /> beyond the boundaries.
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioPostersThumbnail[5].blurSrc}
@@ -368,7 +368,7 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
                 A mystical frame acts as <br className="block sm:hidden" /> a
                 portal between worlds:
@@ -377,7 +377,7 @@ const PortfolioPage = () => {
               colorful energy,
               <br /> while imagination breaks <br className="block sm:hidden" />{" "}
               beyond the boundaries.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -388,13 +388,13 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[6].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 Softly blurred zones of colors
                 <br /> hug the wispy, fraying beam of force,
                 <div className="italic font-semibold tracking-wide">
                   {"bestowing the eyes with visions of lucidity."}
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioPostersThumbnail[6].blurSrc}
@@ -413,14 +413,14 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               Softly blurred zones of colors
               <br /> hug the wispy, fraying beam of force,
               <div className="italic font-semibold tracking-wide">
                 bestowing the eyes with <br className="block xs:hidden" />{" "}
                 visions of lucidity.
               </div>
-            </p>
+            </div>
           </div>
         </div>
         <SectionBreak />
@@ -430,13 +430,13 @@ const PortfolioPage = () => {
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioPostersThumbnail[7].title}
               </span>
-              <p className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   {"The divination of a fiercesome character"}
                 </div>
                 bestows a livid and terrifying aura,
                 <br /> beset by ferocious flames.
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioPostersThumbnail[7].blurSrc}
@@ -455,13 +455,13 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
                 {"The divination of a fiercesome character"}
               </div>
               bestows a livid and terrifying aura,
               <br /> beset by ferocious flames.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -625,13 +625,13 @@ const PortfolioPage = () => {
               <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioAlbumArtThumbnail[0].title}
               </span>
-              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 An ominous pyramid fusing reds and pinks,
                 <br /> with a powerful energy surging inward;
                 <div className="italic font-semibold tracking-wide">
                   {"...a terrifying energy lurks in the middle."}
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioAlbumArtThumbnail[0].blurSrc}
@@ -650,13 +650,13 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               An ominous pyramid fusing reds and pinks,
               <br /> with a powerful energy surging inward;
               <div className="italic font-semibold tracking-wide">
                 {"...a terrifying energy lurks in the middle."}
               </div>
-            </p>
+            </div>
           </div>
         </div>
         <SectionBreak />
@@ -666,13 +666,13 @@ const PortfolioPage = () => {
               <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioAlbumArtThumbnail[1].title}
               </span>
-              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   {"Wild energy surrounds a hypnotic lime orb,"}
                 </div>
                 it's power streaked by hasty dark inks
                 <br /> and passionate flames overtaking our world.
-              </p>
+              </div>
             </div>
             <img
               onClick={() => setIdx_albumart(1)}
@@ -683,14 +683,14 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
                 Wild energy surrounds <br className="block xs:hidden" /> a
                 hypnotic lime orb,
               </div>
               it's power streaked by hasty dark inks
               <br /> and passionate flames overtaking our world.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -701,14 +701,14 @@ const PortfolioPage = () => {
               <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioAlbumArtThumbnail[2].title}
               </span>
-              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 A neon prison enraptures an eerie pyramid,
                 <br /> followed by a sweeping force of nature,
                 <div className="italic font-semibold tracking-wide">
                   a river of purple enveloped <br className="block lg:hidden" />{" "}
                   by swarms of pink.
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioAlbumArtThumbnail[2].blurSrc}
@@ -727,14 +727,14 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               A neon prison enraptures an eerie pyramid,
               <br /> followed by a sweeping force of nature,
               <div className="italic font-semibold tracking-wide">
                 a river of purple enveloped <br className="block lg:hidden" />{" "}
                 by swarms of pink.
               </div>
-            </p>
+            </div>
           </div>
         </div>
         <SectionBreak />
@@ -744,14 +744,14 @@ const PortfolioPage = () => {
               <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolioAlbumArtThumbnail[3].title}
               </span>
-              <p className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   An emerald forest <br className="block lg:hidden" /> destroyed
                   by unseen forces;
                 </div>
                 the reality of the mountain valley,
                 <br /> fraying at the edges, like a frail mind.
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolioAlbumArtThumbnail[3].blurSrc}
@@ -770,14 +770,14 @@ const PortfolioPage = () => {
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <p className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+            <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
                 An emerald forest <br className="block xs:hidden" /> destroyed
                 by unseen forces;
               </div>
               the reality of the mountain valley,
               <br /> fraying at the edges, like a frail mind.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -833,7 +833,7 @@ const PortfolioPage = () => {
               <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolio4kWallsThumbnail[0].title}
               </span>
-              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   {"A smooth backdrop of red to blue"}
                 </div>
@@ -841,7 +841,7 @@ const PortfolioPage = () => {
                 of inverse colors
                 <br /> and pointed shapes <br className="block xs:hidden" />{" "}
                 eagerly piercing the view.
-              </p>
+              </div>
             </div>
             <img
               onClick={() => setIdx_4kwalls(0)}
@@ -859,13 +859,13 @@ const PortfolioPage = () => {
               <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolio4kWallsThumbnail[1].title}
               </span>
-              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 A burning sun streaked by glinting rays
                 <br /> over a hazardous landscape of fiery sands;
                 <div className="italic font-semibold tracking-wide">
                   {"only the strongest will rule this land."}
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolio4kWallsThumbnail[1].blurSrc}
@@ -893,7 +893,7 @@ const PortfolioPage = () => {
               <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolio4kWallsThumbnail[2].title}
               </span>
-              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 Cascading pink particles burst apart,
                 <br /> as the photonic wave frays{" "}
                 <br className="block xs:hidden" /> into many hues;
@@ -901,7 +901,7 @@ const PortfolioPage = () => {
                   the air is overtaken by the <br className="block sm:hidden" />{" "}
                   bold and brave radiance.
                 </div>
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolio4kWallsThumbnail[2].blurSrc}
@@ -927,13 +927,13 @@ const PortfolioPage = () => {
               <span className="portfolio-4kwalls-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
                 {photosPortfolio4kWallsThumbnail[3].title}
               </span>
-              <p className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              <div className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
                   {"Surging splashes of burning colors"}
                 </div>
                 grip the screen with playful waves,
                 <br /> an evening of gradients to dine on.
-              </p>
+              </div>
             </div>
             <img
               src={photosPortfolio4kWallsThumbnail[3].blurSrc}
