@@ -29,9 +29,11 @@ import {
   photosCommissionsVectorize,
 } from "../lightboxInfo";
 import PagePromos from "../components/PagePromos";
+import { commsOpenAtom } from "../states/commsAtom";
 
 const CommissionsPage = () => {
   const theme = useRecoilValue(themeAtom);
+  const commsOpen = useRecoilValue(commsOpenAtom);
   const [idx_abstractify, setIdx_abstractify] = React.useState(-1);
   const [idx_vectorize, setIdx_vectorize] = React.useState(-1);
   const [idx_coalesce, setIdx_coalesce] = React.useState(-1);
@@ -165,31 +167,40 @@ const CommissionsPage = () => {
             </div>
           </div>
           <CardBreak isColorful={hover_abstractify} />
-          <div className="commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row justify-between items-center select-none">
+          <div
+            className={
+              "commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row items-center select-none" +
+              (!commsOpen ? " justify-center" : " justify-between")
+            }
+          >
             <span className="commissions-page-card-price m-0 sm:m-4 p-1 inline-flex justify-center items-center">
               $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
               <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                 (PayPal/Kofi)
               </div>
-              <div className="hidden md:flex">
-                <CardBreak isVertical />
-              </div>
+              {commsOpen && (
+                <div className="hidden md:flex">
+                  <CardBreak isVertical />
+                </div>
+              )}
             </span>
-            {/* Mobile Only - Opens in new tab */}
-            <div className="block md:hidden">
-              <ZDAButton
-                clickCallback={() => clickLink(formLink)}
-                textContent="Commission Form"
-                variant="mobile"
-              />
-            </div>
-            {/* Tablet/Desktop Only - opens embedded form and scrolls down */}
-            <div className="hidden md:block">
-              <ZDAButton
-                clickCallback={() => commFormClickHandler()}
-                textContent="Commission Form"
-              />
-            </div>
+            {commsOpen && (
+              <>
+                <div className="block md:hidden">
+                  <ZDAButton
+                    clickCallback={() => clickLink(formLink)}
+                    textContent="Commission Form"
+                    variant="mobile"
+                  />
+                </div>
+                <div className="hidden md:block">
+                  <ZDAButton
+                    clickCallback={() => commFormClickHandler()}
+                    textContent="Commission Form"
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
         <Lightbox
@@ -288,31 +299,40 @@ const CommissionsPage = () => {
             </div>
           </div>
           <CardBreak isColorful={hover_vectorize} />
-          <div className="commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row justify-between items-center select-none">
+          <div
+            className={
+              "commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row items-center select-none" +
+              (!commsOpen ? " justify-center" : " justify-between")
+            }
+          >
             <span className="commissions-page-card-price m-0 sm:m-4 p-1 inline-flex justify-center items-center">
               $<div className="tracking-wide">&nbsp;30&nbsp;&nbsp;</div>
               <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                 (PayPal/Kofi)
               </div>
-              <div className="hidden md:flex">
-                <CardBreak isVertical />
-              </div>
+              {commsOpen && (
+                <div className="hidden md:flex">
+                  <CardBreak isVertical />
+                </div>
+              )}
             </span>
-            {/* Mobile Only - Opens in new tab */}
-            <div className="block md:hidden">
-              <ZDAButton
-                clickCallback={() => clickLink(formLink)}
-                textContent="Commission Form"
-                variant="mobile"
-              />
-            </div>
-            {/* Tablet/Desktop Only - opens embedded form and scrolls down */}
-            <div className="hidden md:block">
-              <ZDAButton
-                clickCallback={() => commFormClickHandler()}
-                textContent="Commission Form"
-              />
-            </div>
+            {commsOpen && (
+              <>
+                <div className="block md:hidden">
+                  <ZDAButton
+                    clickCallback={() => clickLink(formLink)}
+                    textContent="Commission Form"
+                    variant="mobile"
+                  />
+                </div>
+                <div className="hidden md:block">
+                  <ZDAButton
+                    clickCallback={() => commFormClickHandler()}
+                    textContent="Commission Form"
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
         <Lightbox
@@ -418,31 +438,40 @@ const CommissionsPage = () => {
             </div>
           </div>
           <CardBreak isColorful={hover_coalesce} />
-          <div className="commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row justify-between items-center select-none">
+          <div
+            className={
+              "commissions-page-card-bottom-content w-full flex flex-col sm:inline-flex sm:flex-row items-center select-none" +
+              (!commsOpen ? " justify-center" : " justify-between")
+            }
+          >
             <span className="commissions-page-card-price m-0 sm:m-4 p-1 inline-flex justify-center items-center">
               $<div className="tracking-wide">&nbsp;45&nbsp;&nbsp;</div>
               <div className="text-gray-600 dark:text-gray-300/95 tracking-tight">
                 (PayPal/Kofi)
               </div>
-              <div className="hidden md:flex">
-                <CardBreak isVertical />
-              </div>
+              {commsOpen && (
+                <div className="hidden md:flex">
+                  <CardBreak isVertical />
+                </div>
+              )}
             </span>
-            {/* Mobile Only - Opens in new tab */}
-            <div className="block md:hidden">
-              <ZDAButton
-                clickCallback={() => clickLink(formLink)}
-                textContent="Commission Form"
-                variant="mobile"
-              />
-            </div>
-            {/* Tablet/Desktop Only - opens embedded form and scrolls down */}
-            <div className="hidden md:block">
-              <ZDAButton
-                clickCallback={() => commFormClickHandler()}
-                textContent="Commission Form"
-              />
-            </div>
+            {commsOpen && (
+              <>
+                <div className="block md:hidden">
+                  <ZDAButton
+                    clickCallback={() => clickLink(formLink)}
+                    textContent="Commission Form"
+                    variant="mobile"
+                  />
+                </div>
+                <div className="hidden md:block">
+                  <ZDAButton
+                    clickCallback={() => commFormClickHandler()}
+                    textContent="Commission Form"
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
         <Lightbox
@@ -490,51 +519,55 @@ const CommissionsPage = () => {
           close={() => setIdx_coalesce(-1)}
         />
       </div>
-      {/* 1px Form Section to Scroll To */}
-      <div
-        className="commissions-page-form-section h-px w-px mt-px"
-        id={formSection}
-      />
-      <span className="commissions-page-btm-comm-text italic text-slate-600 dark:text-gray-300 tracking-tight select-none">
-        If you are interested, <br className="block sm:hidden" /> you can
-        commission me directly here:
-      </span>
-      {/* Desktop/Tablet Only - Show/Hide Form directly in page */}
-      <ZDAButton
-        clickCallback={() => setFormVisible(!formVisible)}
-        textContent={
-          formVisible ? "Hide Commissions Form" : "Show Commissions Form"
-        }
-      />
-      {/* Mobile Only - Open form in new tab */}
-      <ZDAButton
-        clickCallback={() => clickLink(formLink)}
-        textContent="Commissions Form"
-        variant="mobile"
-      />
-      {formLoading && (
-        <span className="inline-flex justify-center items-center gap-2">
-          <MiniSpinner theme={theme} />
-          Loading form...
-        </span>
+      {commsOpen && (
+        <div className="commissions-page-form-container w-full flex flex-col justify-center items-center">
+          {/* 1px Form Section to Scroll To */}
+          <div
+            className="commissions-page-form-section h-px w-px mt-px"
+            id={formSection}
+          />
+          <span className="commissions-page-btm-comm-text italic text-slate-600 dark:text-gray-300 tracking-tight select-none">
+            If you are interested, <br className="block sm:hidden" /> you can
+            commission me directly here:
+          </span>
+          {/* Desktop/Tablet Only - Show/Hide Form directly in page */}
+          <ZDAButton
+            clickCallback={() => setFormVisible(!formVisible)}
+            textContent={
+              formVisible ? "Hide Commissions Form" : "Show Commissions Form"
+            }
+          />
+          {/* Mobile Only - Open form in new tab */}
+          <ZDAButton
+            clickCallback={() => clickLink(formLink)}
+            textContent="Commissions Form"
+            variant="mobile"
+          />
+          {formLoading && (
+            <span className="inline-flex justify-center items-center gap-2">
+              <MiniSpinner theme={theme} />
+              Loading form...
+            </span>
+          )}
+          {/* Embedded Commissions Form */}
+          {formVisible && (
+            <object
+              data={formLink}
+              type="text/html"
+              style={{
+                width: "100%",
+                height: "600px",
+                paddingLeft: "16px",
+                paddingRight: "16px",
+              }}
+              onLoad={() => setFormLoading(false)}
+            >
+              Commissions Form
+            </object>
+          )}
+          <SectionBreak />
+        </div>
       )}
-      {/* Embedded Commissions Form */}
-      {formVisible && (
-        <object
-          data={formLink}
-          type="text/html"
-          style={{
-            width: "100%",
-            height: "600px",
-            paddingLeft: "16px",
-            paddingRight: "16px",
-          }}
-          onLoad={() => setFormLoading(false)}
-        >
-          Commissions Form
-        </object>
-      )}
-      <SectionBreak />
       <PagePromos />
       <div className="commissions-page-outro max-w-[90%] mt-12 sm:mt-10 italic select-none">
         Thank you for checking out my art!
