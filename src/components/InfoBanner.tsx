@@ -28,7 +28,7 @@ const InfoBanner = () => {
   const statusInit = "";
   const statusOpen = "OPEN";
   const statusClosed = "CLOSED";
-  const spinnerTimeout = 1250;
+  const spinnerTimeout = 1250; // ? NOTE: expected fetch times: 38ms (unthrottled), 260ms (slower Wifi), 600ms (Fast 3G)
 
   React.useEffect(() => {
     // Query Vercel KV Store to get Commissions Slots Info
@@ -99,8 +99,7 @@ const InfoBanner = () => {
     };
 
     // Call Vercel KV API within hook
-    // TODO: UNCOMMENT WHEN NEARING FINAL PUSH
-    // fetchData();
+    fetchData();
   }, []);
 
   React.useEffect(() => {
