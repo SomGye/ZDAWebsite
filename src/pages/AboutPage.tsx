@@ -95,9 +95,9 @@ const AboutPage = () => {
               I am Anubis; I love photography, music, and gaming,
               <br /> and I create abstract oddities with a focus on
               <br />
-              <div className="italic font-semibold tracking-wide">
+              <span className="italic font-semibold tracking-wide">
                 {"colors + contrast + textures."}
-              </div>
+              </span>
             </p>
           </div>
           <img
@@ -121,9 +121,9 @@ const AboutPage = () => {
             I am Anubis; I love photography, music, and gaming,
             <br /> but I also create abstract oddities with a focus on
             <br />
-            <div className="italic font-semibold tracking-wide">
+            <span className="italic font-semibold tracking-wide">
               {"colors + contrast + textures."}
-            </div>
+            </span>
           </p>
         </div>
       </div>
@@ -143,9 +143,9 @@ const AboutPage = () => {
               <br /> glitch art, albums, movie posters,
               <br /> pop-punk, landscape photography and more.
               <br />
-              <div className="italic font-semibold tracking-wide">
+              <span className="italic font-semibold tracking-wide">
                 {"I throw out the rulebook of art and create my own aesthetic."}
-              </div>
+              </span>
             </p>
           </div>
           <img
@@ -163,9 +163,9 @@ const AboutPage = () => {
             <br /> glitch art, albums, movie posters,
             <br /> pop-punk, landscape photography and more.
             <br />
-            <div className="italic font-semibold tracking-wide">
+            <span className="italic font-semibold tracking-wide">
               {"I throw out the rulebook of art and create my own aesthetic."}
-            </div>
+            </span>
           </p>
         </div>
       </div>
@@ -174,7 +174,7 @@ const AboutPage = () => {
         <span className="font-light italic text-lg tracking-tight my-2 pointer-events-none select-none">
           Summary of an artist...
         </span>
-        <p className="about-summary-blurb1 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
+        <p className="about-summary-blurb1 font-normal dark:font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
           Initially, I loved and appreciated art from afar;
           <br />I spent a long time doodling song lyrics and shapes in
           notebooks.
@@ -184,31 +184,31 @@ const AboutPage = () => {
           and editing my own photography files.
         </p>
         <span className="w-1/2 h-px border-solid border-b-[3px] border-slate-600/50 dark:border-slate-300/60 rounded-xl my-3 pointer-events-none select-none" />
-        <p className="about-summary-blurb2 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
+        <p className="about-summary-blurb2 font-normal dark:font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
           In January 2021, I decided to finally{" "}
           <br className="block md:hidden" /> try my hand at digital art;
           <br />I started out using PenUp and a phone stylus
           <br />
           to explore abstract art and re-discover{" "}
           <br className="block md:hidden" /> my love of{" "}
-          <div className="inline-block font-semibold tracking-wide">
+          <span className="inline-block font-semibold tracking-wide">
             {"colors."}
-          </div>
+          </span>
           <br />
           <br />
           When I tried Huion Sketch, <br className="block md:hidden" /> I
           discovered a love of{" "}
-          <div className="inline-block font-semibold tracking-wide">
+          <span className="inline-block font-semibold tracking-wide">
             textures and layers.
-          </div>
+          </span>
           <br />
           Finally, I was gifted a tablet and <br className="block md:hidden" />{" "}
           was able to try Procreate,
           <br />
           then my{" "}
-          <div className="inline-block font-semibold tracking-wide">
+          <span className="inline-block font-semibold tracking-wide">
             love and curiosity for art expanded.
-          </div>
+          </span>
         </p>
       </div>
       {/* Old Section */}
@@ -216,7 +216,7 @@ const AboutPage = () => {
         <span className="font-light italic text-lg tracking-tight my-2 pointer-events-none select-none">
           Small beginnings...
         </span>
-        <p className="about-old-blurb1 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
+        <p className="about-old-blurb1 font-normal dark:font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
           In 2021, I bought a phone for <br className="block md:hidden" /> how
           well the camera did in reviews,
           <br />
@@ -225,9 +225,9 @@ const AboutPage = () => {
           <br /> The PenUp app came with it, <br className="block md:hidden" />{" "}
           and after messing around,
           <br /> my old{" "}
-          <div className="inline-block font-semibold tracking-wide">
+          <span className="inline-block font-semibold tracking-wide">
             {"flame for art was reignited."}
-          </div>
+          </span>
         </p>
         <div className="about-old-penup-gallery flex flex-col xs:grid xs:grid-cols-2 md:flex md:flex-row flex-wrap justify-center items-center mx-2 my-4 gap-0 xs:gap-2">
           <img
@@ -335,15 +335,15 @@ const AboutPage = () => {
             close={() => setIdx_aboutPenUp(-1)}
           />
         </div>
-        <p className="about-old-blurb2 font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
+        <p className="about-old-blurb2 font-normal dark:font-light text-slate-800/90 dark:text-slate-200/90 text-pretty leading-relaxed pointer-events-none select-none">
           A short time later, I tried out Huion Sketch and
           <br />
           started experimenting more with <br className="block md:hidden" />{" "}
           layers, textures, and brushes.
           <br />I knew from this point, <br className="block md:hidden" />
-          <div className="inline-block font-semibold tracking-wide">
+          <span className="inline-block font-semibold tracking-wide">
             {"that the flame of art was here to stay."}
-          </div>
+          </span>
         </p>
         <div className="about-old-huion-gallery flex flex-col xs:grid xs:grid-cols-2 md:flex md:flex-row flex-wrap justify-center items-center mx-2 my-4 gap-0 xs:gap-2">
           <img
@@ -464,9 +464,9 @@ const AboutPage = () => {
               In January 2024, I started using Inkscape{" "}
               <br className="block md:hidden" /> and learning vector arts,
               <br /> channeling my passion for{" "}
-              <div className="inline-block italic font-semibold tracking-wide">
+              <span className="inline-block italic font-semibold tracking-wide">
                 {"graphic design and geometry."}
-              </div>
+              </span>
             </p>
           </div>
           <img
@@ -482,9 +482,9 @@ const AboutPage = () => {
             In January 2024, I started using Inkscape{" "}
             <br className="block md:hidden" /> and learning vector arts,
             <br /> channeling my passion for{" "}
-            <div className="inline-block italic font-semibold tracking-wide">
+            <span className="inline-block italic font-semibold tracking-wide">
               {"graphic design and geometry."}
-            </div>
+            </span>
           </p>
         </div>
       </div>
@@ -505,9 +505,9 @@ const AboutPage = () => {
               <br /> Now, I create logos, posters, album covers,
               <br /> wallpapers, ultrawide landscapes and more.
               <br />
-              <div className="italic font-semibold tracking-tight">
+              <span className="italic font-semibold tracking-tight">
                 {"I create abstract oddities and hope that you enjoy them!"}
-              </div>
+              </span>
             </p>
           </div>
           <img
@@ -528,11 +528,11 @@ const AboutPage = () => {
             <br /> Now, I create logos, posters, album covers,
             <br /> wallpapers, ultrawide landscapes and more.
             <br />
-            <div className="font-light tracking-wide">
+            <span className="italic font-semibold tracking-tight">
               {"I create abstract oddities"}
               <br className="block md:hidden" />
               {" and hope that you enjoy them!"}
-            </div>
+            </span>
           </p>
         </div>
       </div>
