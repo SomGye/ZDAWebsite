@@ -34,8 +34,8 @@ const CardBreak = ({ isVertical, isColorful }: props) => {
       )}
       {isVertical && (
         <div className="long-fading-line-container flex flex-col justify-center items-center w-full 5k:w-[2px] h-8 mx-2">
-          <div className="top-fading-line w-px h-4 mx-1 rounded-2xl bg-gradient-to-b from-gray-400/40 to-gray-400/80 dark:from-neutral-900/25 dark:to-neutral-900" />
-          <div className="bottom-fading-line w-px h-4 mx-1 rounded-2xl bg-gradient-to-t from-gray-400/40 to-gray-400/80 dark:from-neutral-900/25 dark:to-neutral-900" />
+          <div className="top-fading-line w-px h-4 mx-1 rounded-2xl bg-gradient-to-b from-gray-400/40 to-gray-400/80 dark:from-gray-500/45 dark:to-gray-500/75" />
+          <div className="bottom-fading-line w-px h-4 mx-1 rounded-2xl bg-gradient-to-t from-gray-400/40 to-gray-400/80 dark:from-gray-500/45 dark:to-gray-500/75" />
         </div>
       )}
     </>
