@@ -34,7 +34,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://bsky.app/profile/zerodayanubis.com"
                   target="_blank"
@@ -49,7 +49,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
                   target="_blank"
@@ -64,7 +64,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://www.threads.net/@zerodayanubis"
                   target="_blank"
@@ -79,13 +79,13 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://ohai.social/@ZeroDayAnubis"
+                  href="https://tinyurl.com/ZDACara"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Mastodon
+                  Cara
                 </a>
               </li>
             </nav>
@@ -101,7 +101,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://tinyurl.com/ZDAPrints"
                   target="_blank"
@@ -116,7 +116,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://ko-fi.com/zerodayanubis"
                   target="_blank"
@@ -131,7 +131,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://paypal.me/ZeroDayAnubis"
                   target="_blank"
@@ -146,7 +146,7 @@ const Footer = () => {
                     (theme === "dark"
                       ? "footer-link-animated-dark "
                       : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-800 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
                   href="https://account.venmo.com/u/somgye"
                   target="_blank"
@@ -185,6 +185,7 @@ const Footer = () => {
             >
               Thank you for visiting!
             </h3>
+            {/* TODO: update with new privacy policy link */}
             <a
               className="inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70 select-none"
               href="http://tinyurl.com/ZDAPrivacy"

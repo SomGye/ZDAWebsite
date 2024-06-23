@@ -149,18 +149,14 @@ const PagePromos = () => {
               variant="neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://ohai.social/@ZeroDayAnubis")
-              }
-              textContent="Mastodon"
+              clickCallback={() => clickLink("https://tinyurl.com/ZDACara")}
+              textContent="Cara"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://ohai.social/@ZeroDayAnubis")
-              }
-              textContent="Mastodon"
+              clickCallback={() => clickLink("https://tinyurl.com/ZDACara")}
+              textContent="Cara"
               tight
               variant="neutral"
             />

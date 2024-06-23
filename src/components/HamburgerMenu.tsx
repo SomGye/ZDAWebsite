@@ -14,7 +14,7 @@ import {
   extLinkIcon,
   igIcon,
   kofiIcon,
-  mastoIcon,
+  caraIcon,
   payPalIcon,
   paymentIcon,
   printShopIcon,
@@ -155,12 +155,12 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://ohai.social/@ZeroDayAnubis");
+                  clickLink("https://tinyurl.com/ZDACara");
                   setOpen(false);
                 }}
-                leftIcon={mastoIcon}
+                leftIcon={caraIcon}
                 rightIcon={extLinkIcon}
-                textContent="Mastodon"
+                textContent="Cara"
                 variant="hamburger-outlined"
               />
             </Box>
