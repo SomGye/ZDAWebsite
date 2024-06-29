@@ -24,6 +24,11 @@ import {
   altRosecranceDespair,
   altSaturatedAxons,
   altSelfDestructSequence,
+  altSemblanceOfMadness,
+  altSemblanceOfPeace,
+  altSemblanceOfSerenity,
+  altSemblanceOfSolitude,
+  altSemblanceOfUncertainty,
   altShakenPetals,
   altSmearedBridges,
   altSystems,
@@ -51,7 +56,10 @@ import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
 import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
 import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
 import prone_to_oblivion_notext_rot from "/assets/examples/vectorize/prone_to_oblivion-20240410-notext-doc-rot.svg";
+import semblance_peace from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-peace.svg";
+import semblance_solitude from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-solitude.svg";
 
+// TODO: update Home images...
 export const photosHomeThumbnail = [
   {
     blurSrc:
@@ -434,10 +442,37 @@ export const photosCommissionsVectorizeThumbnail = [
 export const photosCommissionsCoalesceThumbnail = [
   {
     blurSrc:
-      "/assets/commissions/coalesce/thumbnail/2024-03-28-TURMOIL-600px-c7-blur3x.jpg",
-    src: "/assets/commissions/coalesce/thumbnail/2024-03-28-TURMOIL-1100px-c1.jpg",
-    alt: altTurmoil,
-    title: "TURMOIL",
+      "/assets/commissions/coalesce/thumbnail/2024-06-25-Semblance_(Of_Madness)-rot-1500px-c7-blur3x.jpg",
+    src: "/assets/commissions/coalesce/thumbnail/2024-06-25-Semblance_(Of_Madness)-rot-1500px-c1.jpg",
+    alt: altSemblanceOfMadness,
+    title: "Semblance (Of Madness)",
+  },
+];
+
+export const photosCommissionsCoalesceComparisonThumbnail = [
+  {
+    src: semblance_solitude,
+    alt: altSemblanceOfSolitude,
+    title: "Semblance (Of Solitude)",
+  },
+  {
+    blurSrc:
+      "/assets/commissions/coalesce_comparison/thumbnail/2024-06-25-Semblance_(Of_Serenity)-1100px-c7-blur3x.jpg",
+    src: "/assets/commissions/coalesce_comparison/thumbnail/2024-06-25-Semblance_(Of_Serenity)-1100px-c1.jpg",
+    alt: altSemblanceOfSerenity,
+    title: "Semblance (Of Serenity)",
+  },
+  {
+    src: semblance_peace,
+    alt: altSemblanceOfPeace,
+    title: "Semblance (Of Peace)",
+  },
+  {
+    blurSrc:
+      "/assets/commissions/coalesce_comparison/thumbnail/2024-06-25-Semblance_(Of_Uncertainty)-1100px-c7-blur3x.jpg",
+    src: "/assets/commissions/coalesce_comparison/thumbnail/2024-06-25-Semblance_(Of_Uncertainty)-1100px-c1.jpg",
+    alt: altSemblanceOfUncertainty,
+    title: "Semblance (Of Uncertainty)",
   },
 ];
 

@@ -102,7 +102,15 @@ export const altEnterPanic =
   "Spooky glowing lines form multiple concentric circles, with streaks going off to the right, and leaving a gap in the middle for the text, ZERODAYANUBIS";
 export const altRosecranceDelusion =
   "A red rose comprised of abstract rectangles and sharp lines, over a backdrop of swirling splotches of teal, peach, and purple";
-export const altDisasterWithCare =
-  "Three orbs of splotchy red hover over a backdrop of thick red lines, overlapped by zig zag lines of glowing red";
 export const altDisquietudeOfDread =
   "Spooky swirls of foggy dark blue try to envelop a glowing column of green light, surrounded by a frame of mint and light green lines";
+export const altSemblanceOfMadness =
+  "Burning pillars of light over a backdrop of gradient pinkish orange to dark reddish purple";
+export const altSemblanceOfSerenity =
+  "Wavy pillars of blue gradient light over a backdrop of pale grayish blue to light blue, with subtle spotted textures over the pillars";
+export const altSemblanceOfUncertainty =
+  "Wavy pillars of magenta to dark blue gradient over a backdrop of textured pale pink to grayish blue, with glitches breaking up the waves";
+export const altSemblanceOfSolitude =
+  "Wavy pillars of soft gradient blue light over a backdrop of light to sky blue";
+export const altSemblanceOfPeace =
+  "Wavy pillars of soft light to dark blue light over a backdrop of teal to pinkish blue";

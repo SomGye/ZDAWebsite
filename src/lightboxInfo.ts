@@ -2,7 +2,6 @@ import {
   altAdriftInNotions,
   altAnubisTheDeathless,
   altAVisualViolation,
-  altDisasterWithCare,
   altDisquietudeOfDread,
   altDivinityEnds,
   altEnso03,
@@ -29,6 +28,11 @@ import {
   altRosecranceDespair,
   altSaturatedAxons,
   altSelfDestructSequence,
+  altSemblanceOfMadness,
+  altSemblanceOfPeace,
+  altSemblanceOfSerenity,
+  altSemblanceOfSolitude,
+  altSemblanceOfUncertainty,
   altShakenPetals,
   altSmearedBridges,
   altSystems,
@@ -59,7 +63,10 @@ import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240
 import enter_panic from "/assets/commissions/vectorize/enter_panic-20240511.svg";
 import prone_to_oblivion_notext from "/assets/commissions/vectorize/prone_to_oblivion-20240410-notext.svg";
 import rosecrance_delusion from "/assets/commissions/vectorize/rosecrance-20240225-delusion.svg";
+import semblance_peace from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-peace.svg";
+import semblance_solitude from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-solitude.svg";
 
+// TODO: update Home images...
 export const photosHome = [
   {
     src: "/assets/home/lightbox/2023-09-17-Anubis_-_The_Deathless-no_zda-65p-c1.jpg",
@@ -509,6 +516,13 @@ export const photosCommissionsVectorize = [
 
 export const photosCommissionsCoalesce = [
   {
+    src: "/assets/commissions/coalesce/lightbox/2024-06-25-Semblance_(Of_Madness)-65p-c1.jpg",
+    width: 936,
+    height: 2028,
+    alt: altSemblanceOfMadness,
+    title: "Semblance (Of Madness)",
+  },
+  {
     src: "/assets/commissions/coalesce/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
     width: 2280,
     height: 3225,
@@ -516,17 +530,41 @@ export const photosCommissionsCoalesce = [
     title: "TURMOIL",
   },
   {
-    src: "/assets/commissions/coalesce/lightbox/2024-04-20-DISASTER_WITH_CARE-65p-c1.jpg",
-    width: 1934,
-    height: 2275,
-    alt: altDisasterWithCare,
-    title: "DISASTER WITH CARE",
-  },
-  {
     src: "/assets/commissions/coalesce/lightbox/2024-05-05-Disquietude_of_Dread-65p-c1.jpg",
     width: 1534,
     height: 1534,
     alt: altDisquietudeOfDread,
     title: "Disquietude of Dread",
+  },
+];
+
+export const photosCommissionsCoalesceComparison = [
+  {
+    src: semblance_solitude,
+    width: 1440,
+    height: 3120,
+    alt: altSemblanceOfSolitude,
+    title: "Semblance (Of Solitude)",
+  },
+  {
+    src: "/assets/commissions/coalesce_comparison/lightbox/2024-06-25-Semblance_(Of_Serenity)-65p-c1.jpg",
+    width: 1440,
+    height: 3120,
+    alt: altSemblanceOfSerenity,
+    title: "Semblance (Of Serenity)",
+  },
+  {
+    src: semblance_peace,
+    width: 1440,
+    height: 3120,
+    alt: altSemblanceOfPeace,
+    title: "Semblance (Of Peace)",
+  },
+  {
+    src: "/assets/commissions/coalesce_comparison/lightbox/2024-06-25-Semblance_(Of_Uncertainty)-65p-c1.jpg",
+    width: 1440,
+    height: 3120,
+    alt: altSemblanceOfUncertainty,
+    title: "Semblance (Of Uncertainty)",
   },
 ];

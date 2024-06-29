@@ -8,6 +8,7 @@ import CardBreak from "../components/CardBreak";
 import SectionBreak from "../components/SectionBreak";
 import {
   photosCommissionsAbstractifyThumbnail,
+  photosCommissionsCoalesceComparisonThumbnail,
   photosCommissionsCoalesceThumbnail,
   photosCommissionsVectorizeThumbnail,
 } from "../thumbnailInfo";
@@ -26,10 +27,12 @@ import { IoMdCloseCircle } from "react-icons/io";
 import {
   photosCommissionsAbstractify,
   photosCommissionsCoalesce,
+  photosCommissionsCoalesceComparison,
   photosCommissionsVectorize,
 } from "../lightboxInfo";
 import PagePromos from "../components/PagePromos";
 import { commsOpenAtom } from "../states/commsAtom";
+import { downArrowBigIcon, rightArrowBigIcon } from "../icons";
 
 const CommissionsPage = () => {
   const theme = useRecoilValue(themeAtom);
@@ -37,6 +40,7 @@ const CommissionsPage = () => {
   const [idx_abstractify, setIdx_abstractify] = React.useState(-1);
   const [idx_vectorize, setIdx_vectorize] = React.useState(-1);
   const [idx_coalesce, setIdx_coalesce] = React.useState(-1);
+  const [idx_compare, setIdx_compare] = React.useState(-1);
   const [hover_abstractify, setHover_abstractify] = React.useState(false);
   const [hover_vectorize, setHover_vectorize] = React.useState(false);
   const [hover_coalesce, setHover_coalesce] = React.useState(false);
@@ -45,10 +49,11 @@ const CommissionsPage = () => {
   const [formVisible, setFormVisible] = React.useState(false);
   const [formLoading, setFormLoading] = React.useState(false);
   const [formScroll, setFormScroll] = React.useState(false);
-  const formLink =
-    "https://docs.google.com/forms/d/e/1FAIpQLScvPym9fjD6IxPcJ1xGK8gm3YT9QKuqL-sOYjiab1AohuxDsg/viewform?usp=sf_link"; // ! TODO: replace with real, updated ZDACommForm link later!
+  const formLink = "https://tinyurl.com/ZDACommForm";
   const formSection = "comm-form-section";
-  const infoLink = "https://tinyurl.com/ZDACommInfo6"; // ! TODO: replace with updated comm info link later!
+  const infoLink = "https://tinyurl.com/ZDACommInfo7";
+  const compareMap = ["solitudeType", "peaceType"];
+  const [currentCompare, setCompare] = React.useState(compareMap[0]);
 
   const commFormClickHandler = () => {
     setFormScroll(true);
@@ -66,10 +71,14 @@ const CommissionsPage = () => {
     }
   }, [formScroll, formVisible]);
 
+  React.useEffect(() => {
+    // Randomize Coalesce comparison type shown
+    setCompare(compareMap[Math.floor(Math.random() * compareMap.length)]);
+  }, []);
+
   return (
     <div className="commissions-page-container w-full flex flex-col justify-center items-center">
       <div className="commissions-page-cards-container w-full md:w-[calc(100%-32px)] h-full mb-[48px] py-4 sm:py-8 xl:py-12 flex flex-col justify-center items-center gap-0 sm:gap-4 xl:gap-8 rounded-2xl bg-zdaBG-lighterCard/75 dark:bg-zdaBG-darkerCard/30 border border-gray-200/20 dark:border-neutral-900/20">
-        {/* TODO: finish/revise common items to better fit info form before finalizing */}
         <div className="commissions-page-common-description-container flex flex-col flex-wrap gap-4 m-2 sm:mb-0 px-8 select-none">
           <span className="commissions-page-common-title italic">
             For all commissions:
@@ -81,18 +90,24 @@ const CommissionsPage = () => {
               result&nbsp;&nbsp;&mdash;
             </span>
             <span className="commissions-page-common-item">
-              &mdash;&nbsp;&nbsp;They will be delivered digitally (in PNG/SVG
-              and JPG if needed)&nbsp;&nbsp;&mdash;
+              &mdash;&nbsp;&nbsp;They will be delivered digitally
+              (PNG/SVG)&nbsp;&nbsp;&mdash;
             </span>
             <span className="commissions-page-common-item">
-              &mdash;&nbsp;&nbsp;There will be discussion of desired result, but
-              no initial sketch will be provided&nbsp;&nbsp;&mdash;
+              &mdash;&nbsp;&nbsp;No initial sketches will be
+              provided&nbsp;&nbsp;&mdash;
+            </span>
+            <span className="commissions-page-common-item">
+              &mdash;&nbsp;&nbsp;When applicable, some WIPs{" "}
+              <br className="block sm:hidden" />
+              can be provided at the end&nbsp;&nbsp;&mdash;
             </span>
             <span className="commissions-page-common-subitem italic font-semibold">
-              &nbsp;&nbsp;NOTE: for art created in Procreate, a timelapse video
-              and some WIPs can be provided&nbsp;&nbsp;
+              &nbsp;&nbsp;NOTE: for art created in Procreate,
+              <br className="block sm:hidden" /> a timelapse video can be
+              provided&nbsp;&nbsp;
             </span>
-            <span className="commissions-page-common-item">
+            <span className="commissions-page-common-item italic">
               &mdash;&nbsp;&nbsp;Any commission requests can be
               refused&nbsp;&nbsp;&mdash;
             </span>
@@ -517,6 +532,164 @@ const CommissionsPage = () => {
           }}
           open={idx_coalesce >= 0}
           close={() => setIdx_coalesce(-1)}
+        />
+        {/* Coalesce Comparison */}
+        <div className="commissions-comparison-container w-full flex flex-col justify-center items-center">
+          <div className="commissions-comparison-card-container flex flex-col min-w-[35%] max-w-full h-full justify-center items-center mx-4 my-4 p-8 gap-4 rounded-xl border border-gray-200 dark:border-gray-600/10 bg-zdaBG-lightCard dark:bg-gray-700/10">
+            <div className="commissions-comparison-card-text-container justify-center items-center ">
+              <span className="commissions-page-card-title block text-center mx-auto text-xl font-urbanist font-normal text-gray-600 dark:text-gray-300 tracking-wider select-none">
+                Coalesce Comparison
+              </span>
+            </div>
+            {currentCompare === compareMap[0] && (
+              <div className="commissions-comparison-content-container flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center items-center">
+                <div className="commissions-comparison-content flex flex-col justify-center items-center gap-1">
+                  <span className="commissions-comparison-content-text-top text-gray-500 dark:text-gray-400 tracking-tight select-none">
+                    Before:
+                  </span>
+                  <img
+                    onClick={() => setIdx_compare(0)}
+                    src={photosCommissionsCoalesceComparisonThumbnail[0].src}
+                    alt={photosCommissionsCoalesceComparisonThumbnail[0].alt}
+                    title={
+                      photosCommissionsCoalesceComparisonThumbnail[0].title
+                    }
+                    className="commissions-compare-img01 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                  />
+                  <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
+                    (Inkscape only)
+                  </span>
+                </div>
+                <div className="block sm:hidden">{downArrowBigIcon}</div>
+                <div className="hidden sm:block">{rightArrowBigIcon}</div>
+                <div className="commissions-comparison-content flex flex-col justify-center items-center gap-1">
+                  <span className="commissions-comparison-content-text-top text-gray-500 dark:text-gray-400 tracking-tight select-none">
+                    After:
+                  </span>
+                  <img
+                    src={
+                      photosCommissionsCoalesceComparisonThumbnail[1].blurSrc
+                    }
+                    alt={photosCommissionsCoalesceComparisonThumbnail[1].alt}
+                    title={
+                      photosCommissionsCoalesceComparisonThumbnail[1].title
+                    }
+                    className="commissions-compare-img02b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+                    loading="lazy"
+                  />
+                  <img
+                    onClick={() => setIdx_compare(1)}
+                    onLoad={() => loadImgHandler("commissions-compare-img02")}
+                    src={photosCommissionsCoalesceComparisonThumbnail[1].src}
+                    alt={photosCommissionsCoalesceComparisonThumbnail[1].alt}
+                    title={
+                      photosCommissionsCoalesceComparisonThumbnail[1].title
+                    }
+                    className="hidden commissions-compare-img02 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                  />
+                  <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
+                    (Inkscape and Procreate)
+                  </span>
+                </div>
+              </div>
+            )}
+            {currentCompare === compareMap[1] && (
+              <div className="commissions-comparison-content-container flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center items-center">
+                <div className="commissions-comparison-content flex flex-col justify-center items-center gap-1">
+                  <span className="commissions-comparison-content-text-top text-gray-500 dark:text-gray-400 tracking-tight select-none">
+                    Before:
+                  </span>
+                  <img
+                    onClick={() => setIdx_compare(2)}
+                    src={photosCommissionsCoalesceComparisonThumbnail[2].src}
+                    alt={photosCommissionsCoalesceComparisonThumbnail[2].alt}
+                    title={
+                      photosCommissionsCoalesceComparisonThumbnail[2].title
+                    }
+                    className="commissions-compare-img03 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                  />
+                  <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
+                    (Inkscape only)
+                  </span>
+                </div>
+                <div className="block sm:hidden">{downArrowBigIcon}</div>
+                <div className="hidden sm:block">{rightArrowBigIcon}</div>
+                <div className="commissions-comparison-content flex flex-col justify-center items-center gap-1">
+                  <span className="commissions-comparison-content-text-top text-gray-500 dark:text-gray-400 tracking-tight select-none">
+                    After:
+                  </span>
+                  <img
+                    src={
+                      photosCommissionsCoalesceComparisonThumbnail[3].blurSrc
+                    }
+                    alt={photosCommissionsCoalesceComparisonThumbnail[3].alt}
+                    title={
+                      photosCommissionsCoalesceComparisonThumbnail[3].title
+                    }
+                    className="commissions-compare-img04b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+                    loading="lazy"
+                  />
+                  <img
+                    onClick={() => setIdx_compare(3)}
+                    onLoad={() => loadImgHandler("commissions-compare-img04")}
+                    src={photosCommissionsCoalesceComparisonThumbnail[3].src}
+                    alt={photosCommissionsCoalesceComparisonThumbnail[3].alt}
+                    title={
+                      photosCommissionsCoalesceComparisonThumbnail[3].title
+                    }
+                    className="hidden commissions-compare-img04 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                  />
+                  <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
+                    (Inkscape and Procreate)
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+        <Lightbox
+          plugins={[Captions]}
+          captions={{
+            ref: captionsRef,
+            showToggle: true,
+            descriptionTextAlign: "center",
+          }}
+          on={{
+            click: () => {
+              (captionsRef.current?.visible
+                ? captionsRef.current?.hide
+                : captionsRef.current?.show)?.();
+            },
+          }}
+          index={idx_compare}
+          render={{
+            iconCaptionsVisible: () => <MdClosedCaption size={28} />,
+            iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
+            iconClose: () => <IoMdCloseCircle size={28} />,
+          }}
+          slides={photosCommissionsCoalesceComparison}
+          styles={{
+            container: {
+              backdropFilter: "blur(16px)",
+              backgroundColor: "rgba(0,0,0,0.8)",
+            },
+            captionsTitle: {
+              fontSize: "16px",
+              fontWeight: "300",
+            },
+            captionsTitleContainer: {
+              height: "46px",
+              position: "absolute",
+              bottom: "0",
+              left: "0",
+              top: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            },
+          }}
+          open={idx_compare >= 0}
+          close={() => setIdx_compare(-1)}
         />
       </div>
       {commsOpen && (
