@@ -19,13 +19,14 @@ const ExamplesPage = () => {
   }, []);
 
   return (
+    // TODO: make this all viewable on mobile/tablet (since I will have links to this)
     <div className="examples-page-container w-full h-full flex flex-col justify-center items-center bg-zdaBG-light dark:bg-zdaBG-dark">
       {/* NOTE: ThemeMenu needed here to detect theme separately, since this page bypasses App */}
       <div className="cursor-pointer focus-visible:outline-none absolute bottom-4 left-1/2 -translate-x-1/2 mr-0 mt-3 lg:left-auto lg:translate-x-0 lg:right-0 lg:mr-6">
         <ThemeMenu />
       </div>
       <span className="examples-page-title m-2 font-outfit font-semibold text-3xl text-gray-800 dark:text-gray-200 select-none">
-        ZDA Art Commissions
+        Examples of Art Commission Types
       </span>
       <div className="examples-page-cards-container w-[calc(100%-3rem)] h-full mb-36 p-8 grid grid-cols-3 gap-4 justify-center items-center justify-items-center rounded-2xl border border-gray-200/75 dark:border-neutral-900/75">
         <div className="examples-page-card w-full h-full mx-2 my-4 rounded-xl border border-gray-200 dark:border-neutral-800 select-none">

@@ -494,8 +494,8 @@ export const photosExamplesVectorizeThumbnail = [
 
 export const photosExamplesCoalesceThumbnail = [
   {
-    src: "/assets/examples/coalesce/2024-03-28-TURMOIL-framed-1600px-c1.jpg",
-    alt: altTurmoil,
-    title: "TURMOIL",
+    src: "/assets/examples/coalesce/2024-06-25-Semblance_(Of_Madness)-1100px-c1.jpg",
+    alt: altSemblanceOfMadness,
+    title: "Semblance (Of Madness)",
   },
 ];
