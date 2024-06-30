@@ -42,7 +42,7 @@ const HomePage = () => {
       <div className="home-page-promo max-w-[90%] text-sm xs:text-base">
         You can visit my &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Portfolio", setPage)}
         >
           Portfolio
@@ -53,7 +53,7 @@ const HomePage = () => {
         <br />
         ... or you can view my current <br className="block sm:hidden" /> &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Commissions", setPage)}
         >
           Commissions
@@ -66,7 +66,7 @@ const HomePage = () => {
         <br className="block sm:hidden" /> and my brief
         <br className="hidden sm:block md:hidden" /> art journey &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-600 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-600 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
+          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("About", setPage)}
         >
           here
