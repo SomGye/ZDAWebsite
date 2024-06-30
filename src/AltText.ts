@@ -38,8 +38,6 @@ export const altWispsOfAfterlife =
   "Thin wisps of light orange emanate from the corner, over a backdrop of red flame and cold icy rectangles, with a glitchy bar of wild colors at the bottom";
 export const altFrameOfRevelation =
   "A backdrop of light blue and purple with a framed portrait overlay, with wild concentric rings of blue overlapping under the frame";
-export const altTheHarbingerWakes =
-  "A burning triangular head of dark red flames over a spooky orb with a glowing red ring";
 export const altNonconformantSpectrum =
   "A glowing wave of vibrant pink over a dark purple background, splitting into beams of yellow and blue";
 export const altTurmoil =
@@ -102,6 +100,8 @@ export const altEnterPanic =
   "Spooky glowing lines form multiple concentric circles, with streaks going off to the right, and leaving a gap in the middle for the text, ZERODAYANUBIS";
 export const altRosecranceDelusion =
   "A red rose comprised of abstract rectangles and sharp lines, over a backdrop of swirling splotches of teal, peach, and purple";
+export const altRosecranceBrilliance =
+  "A red rose comprised of abstract rectangles and sharp lines, over a backdrop of vaguely blurred soft spots of pink and yellow";
 export const altDisquietudeOfDread =
   "Spooky swirls of foggy dark blue try to envelop a glowing column of green light, surrounded by a frame of mint and light green lines";
 export const altSemblanceOfMadness =

@@ -24,6 +24,7 @@ import {
   altProneToOblivion,
   altRegents,
   altReturningSublimation,
+  altRosecranceBrilliance,
   altRosecranceDelusion,
   altRosecranceDespair,
   altSaturatedAxons,
@@ -38,7 +39,6 @@ import {
   altSystems,
   altTheChromaPassage,
   altTheCruxOfCrisis,
-  altTheHarbingerWakes,
   altTheInfiniteKingdom,
   altTheInfiniteKingdomDamned,
   altTheMessBetween,
@@ -63,24 +63,24 @@ import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240
 import enter_panic from "/assets/commissions/vectorize/enter_panic-20240511.svg";
 import prone_to_oblivion_notext from "/assets/commissions/vectorize/prone_to_oblivion-20240410-notext.svg";
 import rosecrance_delusion from "/assets/commissions/vectorize/rosecrance-20240225-delusion.svg";
+import rosecrance_brilliance from "/assets/home/rosecrance-20240225-brilliance.svg";
 import semblance_peace from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-peace.svg";
 import semblance_solitude from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-solitude.svg";
 
-// TODO: update Home images...
 export const photosHome = [
   {
-    src: "/assets/home/lightbox/2023-09-17-Anubis_-_The_Deathless-no_zda-65p-c1.jpg",
-    width: 1612,
-    height: 2280,
-    alt: altAnubisTheDeathless,
-    title: "Anubis - The Deathless",
+    src: "/assets/home/lightbox/2024-06-25-Semblance_(Of_Serenity)-65p-c1.jpg",
+    width: 936,
+    height: 2028,
+    alt: altSemblanceOfSerenity,
+    title: "Semblance (Of Serenity)",
   },
   {
-    src: "/assets/home/lightbox/2023-08-27-Wisps_of_Afterlife-65p-c1.jpg",
-    width: 1612,
-    height: 2280,
-    alt: altWispsOfAfterlife,
-    title: "Wisps of Afterlife",
+    src: "/assets/home/lightbox/2024-05-05-Disquietude_of_Dread-notext-65p-c1.jpg",
+    width: 1331,
+    height: 1331,
+    alt: altDisquietudeOfDread,
+    title: "Disquietude of Dread",
   },
   {
     src: "/assets/home/lightbox/2023-10-22-Frame_of_Revelation-65p-c1.jpg",
@@ -90,11 +90,11 @@ export const photosHome = [
     title: "Frame of Revelation",
   },
   {
-    src: "/assets/home/lightbox/2024-01-06-Anubis_-_The_Harbinger_Wakes-edit_posttext-65p-c1.jpg",
-    width: 1331,
-    height: 1331,
-    alt: altTheHarbingerWakes,
-    title: "Anubis - The Harbinger Wakes",
+    src: rosecrance_brilliance,
+    width: 2280,
+    height: 3225,
+    alt: altRosecranceBrilliance,
+    title: "Rosecrance - Brilliance Version",
   },
 ];
 
