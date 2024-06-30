@@ -1148,7 +1148,7 @@ const PortfolioPage = () => {
               loading="lazy"
             />
             <img
-              onClick={() => setIdx_ultrawide(3)}
+              onClick={() => setIdx_ultrawide(0)}
               onLoad={() => loadImgHandler("portfolio-ultrawide-img01")}
               src={photosPortfolioUltrawideThumbnail[0].src}
               alt={photosPortfolioUltrawideThumbnail[0].alt}
