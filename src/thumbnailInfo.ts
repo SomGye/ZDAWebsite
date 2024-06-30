@@ -64,8 +64,8 @@ import semblance_solitude from "/assets/commissions/coalesce_comparison/semblanc
 export const photosHomeThumbnail = [
   {
     blurSrc:
-      "/assets/home/thumbnail/2024-06-25-Semblance_(Of_Serenity)-1100px-c7-blur3x.jpg",
-    src: "/assets/home/thumbnail/2024-06-25-Semblance_(Of_Serenity)-1100px-c1.jpg",
+      "/assets/home/thumbnail/2024-06-25-Semblance_(Of_Serenity)-800px-c7-blur3x.jpg",
+    src: "/assets/home/thumbnail/2024-06-25-Semblance_(Of_Serenity)-800px-c1.jpg",
     alt: altSemblanceOfSerenity,
     title: "Semblance (Of Serenity)",
   },
