@@ -28,7 +28,7 @@ const Footer = () => {
               SOCIAL MEDIA
             </h2>
             <nav className="list-none mb-10">
-              <li className="my-3">
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -42,8 +42,8 @@ const Footer = () => {
                 >
                   Bluesky
                 </a>
-              </li>
-              <li className="my-3">
+              </span>
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -57,8 +57,8 @@ const Footer = () => {
                 >
                   Instagram
                 </a>
-              </li>
-              <li className="my-3">
+              </span>
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -72,8 +72,8 @@ const Footer = () => {
                 >
                   Threads
                 </a>
-              </li>
-              <li className="my-3">
+              </span>
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -87,7 +87,7 @@ const Footer = () => {
                 >
                   Cara
                 </a>
-              </li>
+              </span>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -95,7 +95,7 @@ const Footer = () => {
               PRINTS AND SUPPORT
             </h2>
             <nav className="list-none mb-10">
-              <li className="my-3">
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -109,8 +109,8 @@ const Footer = () => {
                 >
                   Print Shop
                 </a>
-              </li>
-              <li className="my-3">
+              </span>
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -124,8 +124,8 @@ const Footer = () => {
                 >
                   Ko-fi
                 </a>
-              </li>
-              <li className="my-3">
+              </span>
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -139,8 +139,8 @@ const Footer = () => {
                 >
                   PayPal
                 </a>
-              </li>
-              <li className="my-3">
+              </span>
+              <span className="block my-3">
                 <a
                   className={
                     (theme === "dark"
@@ -154,7 +154,7 @@ const Footer = () => {
                 >
                   Venmo
                 </a>
-              </li>
+              </span>
             </nav>
           </div>
           <div className="hidden md:block md:w-1/2 lg:w-1/4 w-full px-4">
