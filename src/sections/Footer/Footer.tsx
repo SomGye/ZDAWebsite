@@ -133,7 +133,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://paypal.me/ZeroDayAnubis"
+                  href="https://www.paypal.com/ncp/payment/AGHU59JTKAC66"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -185,10 +185,9 @@ const Footer = () => {
             >
               Thank you for visiting!
             </h3>
-            {/* TODO: update with new privacy policy link */}
             <a
               className="inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70 select-none"
-              href="http://tinyurl.com/ZDAPrivacy"
+              href="http://tinyurl.com/ZDAPrivacy2"
               target="_blank"
               rel="noopener noreferrer"
             >

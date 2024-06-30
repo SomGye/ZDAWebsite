@@ -58,13 +58,13 @@ const PagePromos = () => {
           </p>
           <div className="promo-button-container flex flex-col justify-center items-center gap-1">
             <ZDAButton
-              clickCallback={() => clickLink("https://paypal.me/ZeroDayAnubis")}
+              clickCallback={() => clickLink("https://www.paypal.com/ncp/payment/AGHU59JTKAC66")}
               textContent="PayPal"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() => clickLink("https://paypal.me/ZeroDayAnubis")}
+              clickCallback={() => clickLink("https://www.paypal.com/ncp/payment/AGHU59JTKAC66")}
               textContent="PayPal"
               tight
               variant="neutral"

@@ -190,7 +190,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://paypal.me/ZeroDayAnubis");
+                  clickLink("https://www.paypal.com/ncp/payment/AGHU59JTKAC66");
                   setOpen(false);
                 }}
                 leftIcon={payPalIcon}
