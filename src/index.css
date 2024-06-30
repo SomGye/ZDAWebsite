@@ -377,6 +377,7 @@ header.scrolled-header-dark {
 /* LIGHTBOX */
 img.yarl__slide_image {
   max-height: 93vh !important;
+  border-radius: 0.375rem;
 }
 
 button.yarl__button:focus,
