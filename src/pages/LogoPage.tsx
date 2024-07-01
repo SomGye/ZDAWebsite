@@ -26,6 +26,12 @@ const LogoPage = () => {
   const [currentColor, setColor] = React.useState(colorMap[0]);
 
   React.useEffect(() => {
+    // Hide the init loading screen
+    const loadingpage = document.querySelector("#loadingpage") as any;
+    if (loadingpage && loadingpage.style) {
+      loadingpage.style = "display: none";
+    }
+
     // Randomize color used for long text logo
     const randomColor = colorMap[Math.floor(Math.random() * colorMap.length)];
     setColor(randomColor);

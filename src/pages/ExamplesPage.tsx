@@ -8,9 +8,14 @@ import {
   photosExamplesVectorizeThumbnail,
 } from "../thumbnailInfo";
 import ZDAButton from "../components/ZDAButton";
+import { switchPage } from "../helpers";
+import { useRecoilState } from "recoil";
+import { pageAtom } from "../states/pageAtom";
 
 const ExamplesPage = () => {
   const currentYear = new Date().getFullYear();
+  const [, setPage] = useRecoilState(pageAtom);
+
   React.useEffect(() => {
     // Hide the init loading screen
     const loadingpage = document.querySelector("#loadingpage") as any;
@@ -147,13 +152,13 @@ const ExamplesPage = () => {
       </div>
       <div className="ZDAButton-container my-8">
         <ZDAButton
-          clickCallback={() => window.location.replace("/")}
+          clickCallback={() => switchPage("Home", setPage)}
           leftIcon={leftArrowMdIcon}
           textContent="Go Back"
           variant="mobile-grid"
         />
         <ZDAButton
-          clickCallback={() => window.location.replace("/")}
+          clickCallback={() => switchPage("Home", setPage)}
           leftIcon={leftArrowMdIcon}
           textContent="Go Back"
           variant="grid"

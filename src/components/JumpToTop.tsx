@@ -32,13 +32,11 @@ const JumpToTop = () => {
 
   React.useEffect(() => {
     setFABVisibility(false);
-    if (!window.onscroll) {
-      // Add debounced handler to check scroll position
-      window.onscroll = () => {
-        debouncedScroll();
-      };
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // Add debounced handler to check scroll position
+    window.onscroll = () => {
+      debouncedScroll();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
