@@ -1,18 +1,6 @@
 #root {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* MUI OVERRIDES */
-div.MuiContainer-root.AppContainer {
-  max-width: none;
-  padding: 0;
+  scrollbar-gutter: stable;
 }

@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+} /* NEEDED here too! */
+
 div#loadingpage {
   display: flex;
   flex-direction: column;
@@ -5,7 +12,7 @@ div#loadingpage {
   align-items: center;
   position: absolute;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #29242a;
+  background-color: #0b0a0d;
   font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -14,11 +21,12 @@ div#loadingpage {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  width: 97vw;
-  height: 98vh;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-div.SpinnerBox {
+div.spinnerbox {
   display: flex;
   position: absolute;
   top: 50%;
@@ -27,8 +35,8 @@ div.SpinnerBox {
   height: 64px;
   width: 64px;
   animation: rotate_3922 1.2s linear infinite;
-  background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  background-color: #c7002b;
+  background-image: linear-gradient(#ff0037, #c7002b, #ff0048);
   z-index: 999;
 
   &:focus-visible {
@@ -36,39 +44,39 @@ div.SpinnerBox {
   }
 }
 
-div.SpinnerBox span {
+div.spinnerbox span {
   position: absolute;
   border-radius: 50%;
   height: 100%;
   width: 100%;
-  background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  background-color: #c7002b;
+  background-image: linear-gradient(#ff0037, #c7002b, #ff0048);
 }
 
-div.SpinnerBox span:nth-of-type(1) {
+div.spinnerbox span:nth-of-type(1) {
   filter: blur(5px);
 }
 
-div.SpinnerBox span:nth-of-type(2) {
+div.spinnerbox span:nth-of-type(2) {
   filter: blur(10px);
 }
 
-div.SpinnerBox span:nth-of-type(3) {
+div.spinnerbox span:nth-of-type(3) {
   filter: blur(25px);
 }
 
-div.SpinnerBox span:nth-of-type(4) {
+div.spinnerbox span:nth-of-type(4) {
   filter: blur(50px);
 }
 
-div.SpinnerBox::after {
+div.spinnerbox::after {
   content: "";
   position: absolute;
   top: 10px;
   left: 10px;
   right: 10px;
   bottom: 10px;
-  background-color: #29242a1a;
+  background-color: #0b0a0d1a;
   border: solid 5px #fafafaea;
   border-radius: 50%;
 }
@@ -85,5 +93,9 @@ div.SpinnerBox::after {
 
 span.loadingspan {
   position: absolute;
-  top: 60%;
+  margin-left: 8px; /* center relative to spinner */
+  margin-top: 148px;
+  font-size: 1.25rem;
+  pointer-events: none;
+  user-select: none;
 }
