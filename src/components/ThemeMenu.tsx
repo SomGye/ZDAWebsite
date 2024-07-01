@@ -1,5 +1,5 @@
 import * as React from "react";
-import { themeAtom } from "../states/themeAtom";
+import { themingAtom } from "../states/themingAtom";
 import { useRecoilState } from "recoil";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
@@ -11,7 +11,7 @@ import {
 } from "../icons";
 
 const ThemeMenu = () => {
-  const [theme, setTheme] = useRecoilState(themeAtom);
+  const [theme, setTheme] = useRecoilState(themingAtom);
   const [isAutoMode, setAutoMode] = React.useState(true);
   const [open, setOpen] = React.useState(false);
   const [option, setOption] = React.useState("system"); // dark/light/system
