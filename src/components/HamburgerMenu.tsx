@@ -3,9 +3,9 @@ import Drawer from "@mui/joy/Drawer";
 import Divider from "@mui/joy/Divider";
 import Stack from "@mui/joy/Stack";
 import Sheet from "@mui/joy/Sheet";
+import Box from "@mui/joy/Box";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/pageAtom";
-import { Box } from "@mui/joy";
 import { clickLink, switchPage } from "../helpers";
 import { themeAtom } from "../states/themeAtom";
 import {
