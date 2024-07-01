@@ -1,7 +1,7 @@
 {
   "name": "zdawebsite",
   "private": true,
-  "version": "1.5.5",
+  "version": "1.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
@@ -16,30 +16,35 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "~11.11.1",
+    "@emotion/react": "~11.11.3",
     "@emotion/styled": "~11.11.0",
-    "@fontsource/inter": "^5.0.13",
-    "@fontsource/karla": "^5.0.15",
-    "@fontsource/urbanist": "^5.0.18",
-    "@mui/icons-material": "~5.14.11",
-    "@mui/joy": "~5.0.0-beta.8",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "react-photo-album": "~2.3.0",
-    "react-router-dom": "~6.20.0",
+    "@fontsource/outfit": "^5.0.8",
+    "@fontsource/plus-jakarta-sans": "^5.0.18",
+    "@fontsource/urbanist": "^5.0.20",
+    "@mui/joy": "~5.0.0-beta.36",
+    "@radix-ui/react-dropdown-menu": "~2.0.6",
+    "@vercel/analytics": "~1.2.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "~5.2.1",
+    "react-router-dom": "6.23.1",
     "recoil": "~0.7.7",
+    "use-debounce": "~10.0.1",
     "yet-another-react-lightbox": "~3.14.0"
   },
   "devDependencies": {
-    "@types/react": "~18.2.15",
-    "@types/react-dom": "~18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "~4.0.3",
-    "eslint": "^8.45.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
-    "vite": "~4.4.5"
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "5.0.12"
   }
 }

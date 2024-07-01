@@ -5,6 +5,13 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Local History for Visual Studio Code
 .history/
@@ -37,7 +44,9 @@ npm-debug.log
 # No bundled stuff in git
 bin/
 dist/
+dist-ssr
 lib/
+*.local
 
 # Optional npm cache directory
 .npm
