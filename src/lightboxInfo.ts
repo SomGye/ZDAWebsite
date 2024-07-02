@@ -55,15 +55,15 @@ import {
 } from "./AltText";
 import adrift_in_notions from "/assets/about/adrift_in_notions-20240113.svg";
 import wretched_witness from "/assets/about/wretched_witness-20240120.svg";
-import out_of_shape from "/assets/about/out_of_shape-20240218.svg";
-import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair.svg";
+import out_of_shape from "/assets/about/out_of_shape-20240218-pathfix.svg";
+import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair-pathfix.svg";
 import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
-import systems from "/assets/portfolio/albumart/systems-20240214_1223.svg";
+import systems from "/assets/portfolio/albumart/systems-20240214_1223-pathfix.svg";
 import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
 import enter_panic from "/assets/commissions/vectorize/enter_panic-20240511.svg";
 import prone_to_oblivion_notext from "/assets/commissions/vectorize/prone_to_oblivion-20240410-notext.svg";
-import rosecrance_delusion from "/assets/commissions/vectorize/rosecrance-20240225-delusion.svg";
-import rosecrance_brilliance from "/assets/home/rosecrance-20240225-brilliance.svg";
+import rosecrance_delusion from "/assets/commissions/vectorize/rosecrance-20240225-delusion-pathfix.svg";
+import rosecrance_brilliance from "/assets/home/rosecrance-20240225-brilliance-pathfix.svg";
 import semblance_peace from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-peace.svg";
 import semblance_solitude from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-solitude.svg";
 
