@@ -128,7 +128,7 @@ const Header = () => {
             <PageLinks location={"headerSm"} />
           </div>
           {/* RIGHT - Theme Menu */}
-          <div className="header-right flex xs:absolute xs:right-0 mr-4">
+          <div className="header-right flex xs:absolute xs:right-0 mr-4 focus-visible:outline-none">
             <div className="cursor-pointer focus-visible:outline-none mx-2 lg:flex lg:static lg:w-auto">
               <ThemeMenu />
             </div>
