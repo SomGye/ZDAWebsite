@@ -133,12 +133,12 @@ const ThemeMenu = () => {
 
   return (
     <>
-      <div className="inline-flex items-center focus-visible:outline-none">
+      <div className="inline-flex items-center focus-visible:outline-none webkit-appearance-none appearance-none">
         <DropdownMenu.Root open={open} modal={false}>
           {/* Button Section */}
           <DropdownMenu.Trigger asChild>
             <button
-              className="rounded-full w-7 h-7 inline-flex items-center justify-center text-zdaRedpink-600 dark:text-zdaRedpink-50/60 bg-zdaBG-lightCard dark:bg-zdaBG-darkCard shadow-[0_1px_8px] shadow-stone-400 hover:shadow-stone-400/25 dark:shadow-zdaRedpink-50/15 dark:hover:shadow-zdaRedpink-50/5 outline outline-1 outline-zdaRedpink-500/25 dark:outline-zdaRedpink-50/10 hover:bg-zdaRedpink-500/25 dark:hover:bg-zdaRedpink-100/20 active:bg-zdaRedpink-400/50 dark:active:bg-zdaRedpink-50/25 motion-safe:transition ease-out motion-safe:duration-300 webkit-appearance-none"
+              className="rounded-full w-7 h-7 inline-flex items-center justify-center text-zdaRedpink-600 dark:text-zdaRedpink-50/60 bg-zdaBG-lightCard dark:bg-zdaBG-darkCard shadow-[0_1px_8px] shadow-stone-400 hover:shadow-stone-400/25 dark:shadow-zdaRedpink-50/15 dark:hover:shadow-zdaRedpink-50/5 outline outline-1 outline-zdaRedpink-500/25 dark:outline-zdaRedpink-50/10 hover:bg-zdaRedpink-500/25 dark:hover:bg-zdaRedpink-100/20 active:bg-zdaRedpink-400/50 dark:active:bg-zdaRedpink-50/25 motion-safe:transition ease-out motion-safe:duration-300 webkit-appearance-none appearance-none"
               aria-label="Theme Menu"
               title="Theme Menu"
               onClick={() => setOpen((prev) => !prev)}
