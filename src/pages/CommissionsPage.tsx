@@ -125,7 +125,7 @@ const CommissionsPage = () => {
         </div>
         {/* Abstractify */}
         <div
-          className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
+          className="commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
           onMouseEnter={() => setHover_abstractify(true)}
           onMouseLeave={() => setHover_abstractify(false)}
         >
@@ -264,7 +264,7 @@ const CommissionsPage = () => {
         />
         {/* Vectorize */}
         <div
-          className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
+          className="commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
           onMouseEnter={() => setHover_vectorize(true)}
           onMouseLeave={() => setHover_vectorize(false)}
         >
@@ -396,7 +396,7 @@ const CommissionsPage = () => {
         />
         {/* Coalesce */}
         <div
-          className="commissions-page-card-container flex flex-col min-w-[35%] max-w-full h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
+          className="commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light sm:drop-shadow-card-light dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
           onMouseEnter={() => setHover_coalesce(true)}
           onMouseLeave={() => setHover_coalesce(false)}
         >
@@ -535,7 +535,7 @@ const CommissionsPage = () => {
         />
         {/* Coalesce Comparison */}
         <div className="commissions-comparison-container w-full flex flex-col justify-center items-center">
-          <div className="commissions-comparison-card-container flex flex-col min-w-[35%] max-w-full h-full justify-center items-center mx-4 my-4 p-8 gap-4 rounded-xl border border-gray-200 dark:border-gray-600/10 bg-zdaBG-lightCard dark:bg-gray-700/10">
+          <div className="commissions-comparison-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full justify-center items-center mx-4 my-4 p-8 gap-4 rounded-xl border border-gray-200 dark:border-gray-600/10 bg-zdaBG-lightCard dark:bg-gray-700/10">
             <div className="commissions-comparison-card-text-container justify-center items-center ">
               <span className="commissions-page-card-title block text-center mx-auto text-xl font-urbanist font-normal text-gray-600 dark:text-gray-300 tracking-wider select-none">
                 Coalesce Comparison
