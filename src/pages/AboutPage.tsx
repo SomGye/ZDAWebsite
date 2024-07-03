@@ -81,8 +81,8 @@ const AboutPage = () => {
       />
       {/* Intro Part 1 */}
       <div className="about-intro-container w-full md:w-5/6 lg:w-3/5 xl:w-1/2 flex flex-col px-4 md:flex-row justify-between items-center md:mr-auto md:ml-5 lg:ml-24 xl:ml-48 2xl:ml-[17.5rem]">
-        <div className="about-intro-title-and-pic-container flex flex-col md:flex-row-reverse items-center mx-2 my-4">
-          <div className="about-intro-title-container flex flex-col justify-center md:justify-start items-center md:ml-8">
+        <div className="about-intro-title-and-pic-container flex flex-col md:flex-row-reverse items-center mx-2 my-4 w-full">
+          <div className="about-intro-title-container flex flex-col justify-center md:justify-start items-center md:ml-8 w-full">
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               className="mx-2 my-1 max-h-12 pointer-events-none select-none"
@@ -104,7 +104,7 @@ const AboutPage = () => {
             src={photosAboutThumbnail[0].blurSrc}
             alt={photosAboutThumbnail[0].alt}
             title={photosAboutThumbnail[0].title}
-            className="about-img01b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+            className="about-img01b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -113,7 +113,7 @@ const AboutPage = () => {
             src={photosAboutThumbnail[0].src}
             alt={photosAboutThumbnail[0].alt}
             title={photosAboutThumbnail[0].title}
-            className="hidden about-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img01 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-intro-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -129,8 +129,8 @@ const AboutPage = () => {
       </div>
       {/* Intro Part 2 */}
       <div className="about-intro-container2 w-full md:w-5/6 lg:w-3/5 xl:w-1/2 flex flex-col px-4 md:flex-row-reverse justify-between items-center md:ml-auto md:mr-5 lg:mr-24 xl:mr-48 2xl:mr-[17.5rem]">
-        <div className="about-intro-title-and-pic-container2 flex flex-col md:flex-row items-center mx-2 my-4">
-          <div className="about-intro-title-container2 flex flex-col justify-center md:justify-start items-center md:mr-8">
+        <div className="about-intro-title-and-pic-container2 flex flex-col md:flex-row items-center mx-2 my-4 w-full">
+          <div className="about-intro-title-container2 flex flex-col justify-center md:justify-start items-center md:mr-8 w-full">
             <img
               src={theme === "dark" ? zdamono_dark : zdamono_light}
               className="mx-2 my-1 max-h-12 pointer-events-none select-none"
@@ -153,7 +153,7 @@ const AboutPage = () => {
             src={photosAboutThumbnail[1].src}
             alt={photosAboutThumbnail[1].alt}
             title={photosAboutThumbnail[1].title}
-            className="about-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="about-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-intro-blurb-container-mobile2 flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -234,7 +234,7 @@ const AboutPage = () => {
             src={photosAboutPenUpThumbnail[0].blurSrc}
             alt={photosAboutPenUpThumbnail[0].alt}
             title={photosAboutPenUpThumbnail[0].title}
-            className="about-img05b z-20 h-full max-w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img05b z-20 h-full w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -243,13 +243,13 @@ const AboutPage = () => {
             src={photosAboutPenUpThumbnail[0].src}
             alt={photosAboutPenUpThumbnail[0].alt}
             title={photosAboutPenUpThumbnail[0].title}
-            className="hidden about-img05 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img05 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosAboutPenUpThumbnail[1].blurSrc}
             alt={photosAboutPenUpThumbnail[1].alt}
             title={photosAboutPenUpThumbnail[1].title}
-            className="about-img06b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img06b z-20 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -258,13 +258,13 @@ const AboutPage = () => {
             src={photosAboutPenUpThumbnail[1].src}
             alt={photosAboutPenUpThumbnail[1].alt}
             title={photosAboutPenUpThumbnail[1].title}
-            className="hidden about-img06 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img06 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosAboutPenUpThumbnail[2].blurSrc}
             alt={photosAboutPenUpThumbnail[2].alt}
             title={photosAboutPenUpThumbnail[2].title}
-            className="about-img07b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img07b z-20 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -273,13 +273,13 @@ const AboutPage = () => {
             src={photosAboutPenUpThumbnail[2].src}
             alt={photosAboutPenUpThumbnail[2].alt}
             title={photosAboutPenUpThumbnail[2].title}
-            className="hidden about-img07 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img07 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosAboutPenUpThumbnail[3].blurSrc}
             alt={photosAboutPenUpThumbnail[3].alt}
             title={photosAboutPenUpThumbnail[3].title}
-            className="about-img08b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img08b z-20 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -288,7 +288,7 @@ const AboutPage = () => {
             src={photosAboutPenUpThumbnail[3].src}
             alt={photosAboutPenUpThumbnail[3].alt}
             title={photosAboutPenUpThumbnail[3].title}
-            className="hidden about-img08 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img08 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
@@ -350,7 +350,7 @@ const AboutPage = () => {
             src={photosAboutHuionThumbnail[0].blurSrc}
             alt={photosAboutHuionThumbnail[0].alt}
             title={photosAboutHuionThumbnail[0].title}
-            className="about-img09b z-20 h-full max-w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img09b z-20 h-full w-36 my-2 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -359,13 +359,13 @@ const AboutPage = () => {
             src={photosAboutHuionThumbnail[0].src}
             alt={photosAboutHuionThumbnail[0].alt}
             title={photosAboutHuionThumbnail[0].title}
-            className="hidden about-img09 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img09 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosAboutHuionThumbnail[1].blurSrc}
             alt={photosAboutHuionThumbnail[1].alt}
             title={photosAboutHuionThumbnail[1].title}
-            className="about-img10b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img10b z-20 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -374,13 +374,13 @@ const AboutPage = () => {
             src={photosAboutHuionThumbnail[1].src}
             alt={photosAboutHuionThumbnail[1].alt}
             title={photosAboutHuionThumbnail[1].title}
-            className="hidden about-img10 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img10 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosAboutHuionThumbnail[2].blurSrc}
             alt={photosAboutHuionThumbnail[2].alt}
             title={photosAboutHuionThumbnail[2].title}
-            className="about-img11b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img11b z-20 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -389,13 +389,13 @@ const AboutPage = () => {
             src={photosAboutHuionThumbnail[2].src}
             alt={photosAboutHuionThumbnail[2].alt}
             title={photosAboutHuionThumbnail[2].title}
-            className="hidden about-img11 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img11 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosAboutHuionThumbnail[3].blurSrc}
             alt={photosAboutHuionThumbnail[3].alt}
             title={photosAboutHuionThumbnail[3].title}
-            className="about-img12b z-20 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
+            className="about-img12b z-20 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -404,7 +404,7 @@ const AboutPage = () => {
             src={photosAboutHuionThumbnail[3].src}
             alt={photosAboutHuionThumbnail[3].alt}
             title={photosAboutHuionThumbnail[3].title}
-            className="hidden about-img12 z-10 h-full max-w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden about-img12 z-10 h-full w-36 my-1 md:my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
@@ -455,8 +455,8 @@ const AboutPage = () => {
       </div>
       {/* Modern Summary Part 1 */}
       <div className="about-modern-container w-full md:w-5/6 lg:w-3/5 xl:w-1/2 flex flex-col px-4 md:flex-row justify-between items-center md:mr-auto md:ml-5 lg:ml-24 xl:ml-48 2xl:ml-[17.5rem]">
-        <div className="about-modern-title-and-pic-container flex flex-col md:flex-row-reverse items-center mx-2 my-4">
-          <div className="about-modern-title-container flex flex-col justify-center md:justify-start items-center md:ml-8">
+        <div className="about-modern-title-and-pic-container flex flex-col md:flex-row-reverse items-center mx-2 my-4 w-full">
+          <div className="about-modern-title-container flex flex-col justify-center md:justify-start items-center md:ml-8 w-full">
             <span className="font-light italic text-lg tracking-tight my-2 pointer-events-none select-none">
               Fast forward...
             </span>
@@ -474,7 +474,7 @@ const AboutPage = () => {
             src={photosAboutThumbnail[2].src}
             alt={photosAboutThumbnail[2].alt}
             title={photosAboutThumbnail[2].title}
-            className="about-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="about-img03 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-modern-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -490,8 +490,8 @@ const AboutPage = () => {
       </div>
       {/* Modern Summary Part 2 */}
       <div className="about-modern-container2 w-full md:w-5/6 lg:w-3/5 xl:w-1/2 flex flex-col px-4 md:flex-row-reverse justify-between items-center md:ml-auto md:mr-5 lg:mr-24 xl:mr-48 2xl:mr-[17.5rem]">
-        <div className="about-modern-title-and-pic-container2 flex flex-col md:flex-row items-center mx-2 my-4">
-          <div className="about-modern-title-container2 flex flex-col justify-center md:justify-start items-center md:mr-8">
+        <div className="about-modern-title-and-pic-container2 flex flex-col md:flex-row items-center mx-2 my-4 w-full">
+          <div className="about-modern-title-container2 flex flex-col justify-center md:justify-start items-center md:mr-8 w-full">
             <img
               src={theme === "dark" ? zdamono_dark : zdamono_light}
               className="mx-2 my-1 max-h-12 pointer-events-none select-none"
@@ -515,7 +515,7 @@ const AboutPage = () => {
             src={photosAboutThumbnail[3].src}
             alt={photosAboutThumbnail[3].alt}
             title={photosAboutThumbnail[3].title}
-            className="about-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="about-img04 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <div className="about-modern-blurb-container-mobile2 flex flex-col md:hidden justify-center items-center mx-2 mb-4">
