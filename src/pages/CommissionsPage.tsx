@@ -135,7 +135,7 @@ const CommissionsPage = () => {
                 src={photosCommissionsAbstractifyThumbnail[0].blurSrc}
                 alt={photosCommissionsAbstractifyThumbnail[0].alt}
                 title="Click for more examples"
-                className="comm-img01b z-20 col-start-1 row-start-1 w-full max-h-64 sm:max-h-80 lg:max-h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none select-none cursor-pointer"
+                className="comm-img01b z-20 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none select-none cursor-pointer"
                 loading="lazy"
               />
               <img
@@ -144,7 +144,7 @@ const CommissionsPage = () => {
                 src={photosCommissionsAbstractifyThumbnail[0].src}
                 alt={photosCommissionsAbstractifyThumbnail[0].alt}
                 title="Click for more examples"
-                className="hidden comm-img01 z-10 col-start-1 row-start-1 w-full max-h-64 sm:max-h-80 lg:max-h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
+                className="hidden comm-img01 z-10 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
               />
             </div>
             <div className="commissions-page-card-logo-container grid absolute z-10 right-[calc(50%-1.5rem)] bottom-4 translate-y-1/2">
@@ -275,7 +275,7 @@ const CommissionsPage = () => {
                 src={photosCommissionsVectorizeThumbnail[0].src}
                 alt={photosCommissionsVectorizeThumbnail[0].alt}
                 title="Click for more examples"
-                className="comm-img02 z-10 col-start-1 row-start-1 w-full max-h-64 sm:max-h-80 lg:max-h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
+                className="comm-img02 z-10 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
                 style={{ ...{ zoom: "1.05" } }}
               />
             </div>
@@ -406,7 +406,7 @@ const CommissionsPage = () => {
                 src={photosCommissionsCoalesceThumbnail[0].blurSrc}
                 alt={photosCommissionsCoalesceThumbnail[0].alt}
                 title="Click for more examples"
-                className="comm-img03b z-20 col-start-1 row-start-1 w-full max-h-64 sm:max-h-80 lg:max-h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none select-none cursor-pointer"
+                className="comm-img03b z-20 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none select-none cursor-pointer"
                 loading="lazy"
               />
               <img
@@ -415,7 +415,7 @@ const CommissionsPage = () => {
                 src={photosCommissionsCoalesceThumbnail[0].src}
                 alt={photosCommissionsCoalesceThumbnail[0].alt}
                 title="Click for more examples"
-                className="hidden comm-img03 z-10 col-start-1 row-start-1 w-full max-h-64 sm:max-h-80 lg:max-h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
+                className="hidden comm-img03 z-10 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
               />
             </div>
             <div className="commissions-page-card-logo-container grid absolute z-10 right-[calc(50%-1.5rem)] bottom-4 translate-y-1/2">
@@ -554,7 +554,7 @@ const CommissionsPage = () => {
                     title={
                       photosCommissionsCoalesceComparisonThumbnail[0].title
                     }
-                    className="commissions-compare-img01 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                    className="commissions-compare-img01 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
                   />
                   <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
                     (Inkscape only)
@@ -574,7 +574,7 @@ const CommissionsPage = () => {
                     title={
                       photosCommissionsCoalesceComparisonThumbnail[1].title
                     }
-                    className="commissions-compare-img02b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+                    className="commissions-compare-img02b z-20 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
                     loading="lazy"
                   />
                   <img
@@ -585,7 +585,7 @@ const CommissionsPage = () => {
                     title={
                       photosCommissionsCoalesceComparisonThumbnail[1].title
                     }
-                    className="hidden commissions-compare-img02 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                    className="hidden commissions-compare-img02 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
                   />
                   <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
                     (Inkscape and Procreate)
@@ -606,7 +606,7 @@ const CommissionsPage = () => {
                     title={
                       photosCommissionsCoalesceComparisonThumbnail[2].title
                     }
-                    className="commissions-compare-img03 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                    className="commissions-compare-img03 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
                   />
                   <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
                     (Inkscape only)
@@ -626,7 +626,7 @@ const CommissionsPage = () => {
                     title={
                       photosCommissionsCoalesceComparisonThumbnail[3].title
                     }
-                    className="commissions-compare-img04b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+                    className="commissions-compare-img04b z-20 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
                     loading="lazy"
                   />
                   <img
@@ -637,7 +637,7 @@ const CommissionsPage = () => {
                     title={
                       photosCommissionsCoalesceComparisonThumbnail[3].title
                     }
-                    className="hidden commissions-compare-img04 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+                    className="hidden commissions-compare-img04 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
                   />
                   <span className="commissions-comparison-content-text-btm text-gray-500 dark:text-gray-400 tracking-tight italic select-none">
                     (Inkscape and Procreate)
