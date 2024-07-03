@@ -106,7 +106,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[0].blurSrc}
               alt={photosPortfolioPostersThumbnail[0].alt}
               title={photosPortfolioPostersThumbnail[0].title}
-              className="portfolio-posters-img01b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-posters-img01b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -115,7 +115,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[0].src}
               alt={photosPortfolioPostersThumbnail[0].alt}
               title={photosPortfolioPostersThumbnail[0].title}
-              className="hidden portfolio-posters-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-posters-img01 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -154,7 +154,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[1].src}
               alt={photosPortfolioPostersThumbnail[1].alt}
               title={photosPortfolioPostersThumbnail[1].title}
-              className="portfolio-posters-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-posters-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -192,7 +192,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[2].src}
               alt={photosPortfolioPostersThumbnail[2].alt}
               title={photosPortfolioPostersThumbnail[2].title}
-              className="portfolio-posters-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-posters-img03 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -225,7 +225,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[3].blurSrc}
               alt={photosPortfolioPostersThumbnail[3].alt}
               title={photosPortfolioPostersThumbnail[3].title}
-              className="portfolio-posters-img04b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-posters-img04b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -234,7 +234,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[3].src}
               alt={photosPortfolioPostersThumbnail[3].alt}
               title={photosPortfolioPostersThumbnail[3].title}
-              className="portfolio-posters-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-posters-img04 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -311,7 +311,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[4].blurSrc}
               alt={photosPortfolioPostersThumbnail[4].alt}
               title={photosPortfolioPostersThumbnail[4].title}
-              className="portfolio-posters-img05b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-posters-img05b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -320,7 +320,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[4].src}
               alt={photosPortfolioPostersThumbnail[4].alt}
               title={photosPortfolioPostersThumbnail[4].title}
-              className="hidden portfolio-posters-img05 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-posters-img05 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -355,7 +355,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[5].blurSrc}
               alt={photosPortfolioPostersThumbnail[5].alt}
               title={photosPortfolioPostersThumbnail[5].title}
-              className="portfolio-posters-img06b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-posters-img06b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -364,7 +364,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[5].src}
               alt={photosPortfolioPostersThumbnail[5].alt}
               title={photosPortfolioPostersThumbnail[5].title}
-              className="portfolio-posters-img06 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-posters-img06 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -400,7 +400,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[6].blurSrc}
               alt={photosPortfolioPostersThumbnail[6].alt}
               title={photosPortfolioPostersThumbnail[6].title}
-              className="portfolio-posters-img07b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-posters-img07b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -409,7 +409,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[6].src}
               alt={photosPortfolioPostersThumbnail[6].alt}
               title={photosPortfolioPostersThumbnail[6].title}
-              className="hidden portfolio-posters-img07 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-posters-img07 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -442,7 +442,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[7].blurSrc}
               alt={photosPortfolioPostersThumbnail[7].alt}
               title={photosPortfolioPostersThumbnail[7].title}
-              className="portfolio-posters-img08b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-posters-img08b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -451,7 +451,7 @@ const PortfolioPage = () => {
               src={photosPortfolioPostersThumbnail[7].src}
               alt={photosPortfolioPostersThumbnail[7].alt}
               title={photosPortfolioPostersThumbnail[7].title}
-              className="portfolio-posters-img08 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-posters-img08 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -515,7 +515,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPostersThumbnail[8].blurSrc}
             alt={photosPortfolioPostersThumbnail[8].alt}
             title={photosPortfolioPostersThumbnail[8].title}
-            className="portfolio-posters-img09b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-posters-img09b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -524,13 +524,13 @@ const PortfolioPage = () => {
             src={photosPortfolioPostersThumbnail[8].src}
             alt={photosPortfolioPostersThumbnail[8].alt}
             title={photosPortfolioPostersThumbnail[8].title}
-            className="hidden portfolio-posters-img09 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-posters-img09 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosPortfolioPostersThumbnail[9].blurSrc}
             alt={photosPortfolioPostersThumbnail[9].alt}
             title={photosPortfolioPostersThumbnail[9].title}
-            className="portfolio-posters-img10b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-posters-img10b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -539,13 +539,13 @@ const PortfolioPage = () => {
             src={photosPortfolioPostersThumbnail[9].src}
             alt={photosPortfolioPostersThumbnail[9].alt}
             title={photosPortfolioPostersThumbnail[9].title}
-            className="hidden portfolio-posters-img10 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-posters-img10 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosPortfolioPostersThumbnail[10].blurSrc}
             alt={photosPortfolioPostersThumbnail[10].alt}
             title={photosPortfolioPostersThumbnail[10].title}
-            className="portfolio-posters-img11b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-posters-img11b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -554,13 +554,13 @@ const PortfolioPage = () => {
             src={photosPortfolioPostersThumbnail[10].src}
             alt={photosPortfolioPostersThumbnail[10].alt}
             title={photosPortfolioPostersThumbnail[10].title}
-            className="hidden portfolio-posters-img11 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-posters-img11 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
             src={photosPortfolioPostersThumbnail[11].blurSrc}
             alt={photosPortfolioPostersThumbnail[11].alt}
             title={photosPortfolioPostersThumbnail[11].title}
-            className="portfolio-posters-img12b z-20 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-posters-img12b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -569,7 +569,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPostersThumbnail[11].src}
             alt={photosPortfolioPostersThumbnail[11].alt}
             title={photosPortfolioPostersThumbnail[11].title}
-            className="hidden portfolio-posters-img12 z-10 h-full max-w-64 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-posters-img12 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
@@ -637,7 +637,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[0].blurSrc}
               alt={photosPortfolioAlbumArtThumbnail[0].alt}
               title={photosPortfolioAlbumArtThumbnail[0].title}
-              className="portfolio-albumart-img01b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-albumart-img01b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -646,7 +646,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[0].src}
               alt={photosPortfolioAlbumArtThumbnail[0].alt}
               title={photosPortfolioAlbumArtThumbnail[0].title}
-              className="hidden portfolio-albumart-img01 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-albumart-img01 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -660,7 +660,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <SectionBreak />
-        <div className="portfolio-albumart-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+        <div className="portfolio-albumart-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
           <div className="portfolio-albumart-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-albumart-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
@@ -679,7 +679,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[1].src}
               alt={photosPortfolioAlbumArtThumbnail[1].alt}
               title={photosPortfolioAlbumArtThumbnail[1].title}
-              className="portfolio-albumart-img02 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-albumart-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -714,7 +714,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[2].blurSrc}
               alt={photosPortfolioAlbumArtThumbnail[2].alt}
               title={photosPortfolioAlbumArtThumbnail[2].title}
-              className="portfolio-albumart-img03b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-albumart-img03b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -723,7 +723,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[2].src}
               alt={photosPortfolioAlbumArtThumbnail[2].alt}
               title={photosPortfolioAlbumArtThumbnail[2].title}
-              className="hidden portfolio-albumart-img03 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-albumart-img03 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -738,7 +738,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <SectionBreak />
-        <div className="portfolio-albumart-container-right w-full flex flex-col pl-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+        <div className="portfolio-albumart-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
           <div className="portfolio-albumart-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-albumart-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-albumart-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
@@ -757,7 +757,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[3].blurSrc}
               alt={photosPortfolioAlbumArtThumbnail[3].alt}
               title={photosPortfolioAlbumArtThumbnail[3].title}
-              className="portfolio-albumart-img04b z-20 h-full max-w-80 my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-albumart-img04b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -766,7 +766,7 @@ const PortfolioPage = () => {
               src={photosPortfolioAlbumArtThumbnail[3].src}
               alt={photosPortfolioAlbumArtThumbnail[3].alt}
               title={photosPortfolioAlbumArtThumbnail[3].title}
-              className="portfolio-albumart-img04 z-10 h-full max-w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-albumart-img04 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
@@ -848,7 +848,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[0].src}
               alt={photosPortfolio4kWallsThumbnail[0].alt}
               title={photosPortfolio4kWallsThumbnail[0].title}
-              className="portfolio-4kwalls-img01 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-4kwalls-img01 z-10 h-full w-[20rem] xs:w-[22rem] sm:w-[36rem] md:w-[40rem] lg:w-[55rem] 2xl:w-[70rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -871,7 +871,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[1].blurSrc}
               alt={photosPortfolio4kWallsThumbnail[1].alt}
               title={photosPortfolio4kWallsThumbnail[1].title}
-              className="portfolio-4kwalls-img02b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-4kwalls-img02b z-20 h-full w-[20rem] xs:w-[22rem] sm:w-[30rem] md:w-[32rem] lg:w-[45rem] 2xl:w-[60rem] my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -880,7 +880,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[1].src}
               alt={photosPortfolio4kWallsThumbnail[1].alt}
               title={photosPortfolio4kWallsThumbnail[1].title}
-              className="hidden portfolio-4kwalls-img02 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-4kwalls-img02 z-10 h-full w-[20rem] xs:w-[22rem] sm:w-[30rem] md:w-[32rem] lg:w-[45rem] 2xl:w-[60rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -907,7 +907,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[2].blurSrc}
               alt={photosPortfolio4kWallsThumbnail[2].alt}
               title={photosPortfolio4kWallsThumbnail[2].title}
-              className="portfolio-4kwalls-img03b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-4kwalls-img03b z-20 h-full w-[20rem] xs:w-[22rem] sm:w-[30rem] md:w-[32rem] lg:w-[45rem] 2xl:w-[60rem] my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -916,7 +916,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[2].src}
               alt={photosPortfolio4kWallsThumbnail[2].alt}
               title={photosPortfolio4kWallsThumbnail[2].title}
-              className="hidden portfolio-4kwalls-img03 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-4kwalls-img03 z-10 h-full w-[20rem] xs:w-[22rem] sm:w-[30rem] md:w-[32rem] lg:w-[45rem] 2xl:w-[60rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -939,7 +939,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[3].blurSrc}
               alt={photosPortfolio4kWallsThumbnail[3].alt}
               title={photosPortfolio4kWallsThumbnail[3].title}
-              className="portfolio-4kwalls-img04b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-4kwalls-img04b z-20 h-full w-[20rem] xs:w-[22rem] sm:w-[30rem] md:w-[32rem] lg:w-[45rem] 2xl:w-[60rem] my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -948,7 +948,7 @@ const PortfolioPage = () => {
               src={photosPortfolio4kWallsThumbnail[3].src}
               alt={photosPortfolio4kWallsThumbnail[3].alt}
               title={photosPortfolio4kWallsThumbnail[3].title}
-              className="portfolio-4kwalls-img04 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-4kwalls-img04 z-10 h-full w-[20rem] xs:w-[22rem] sm:w-[30rem] md:w-[32rem] lg:w-[45rem] 2xl:w-[60rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -1007,7 +1007,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[0].blurSrc}
             alt={photosPortfolioPhoneWallsThumbnail[0].alt}
             title={photosPortfolioPhoneWallsThumbnail[0].title}
-            className="portfolio-phonewalls-img01b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-phonewalls-img01b z-20 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -1016,7 +1016,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[0].src}
             alt={photosPortfolioPhoneWallsThumbnail[0].alt}
             title={photosPortfolioPhoneWallsThumbnail[0].title}
-            className="hidden portfolio-phonewalls-img01 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-phonewalls-img01 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         {/* NOTE: show vertical break only on larger screens */}
@@ -1031,7 +1031,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[1].blurSrc}
             alt={photosPortfolioPhoneWallsThumbnail[1].alt}
             title={photosPortfolioPhoneWallsThumbnail[1].title}
-            className="portfolio-phonewalls-img02b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-phonewalls-img02b z-20 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -1040,7 +1040,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[1].src}
             alt={photosPortfolioPhoneWallsThumbnail[1].alt}
             title={photosPortfolioPhoneWallsThumbnail[1].title}
-            className="hidden portfolio-phonewalls-img02 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-phonewalls-img02 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         {/* NOTE: show vertical break only on larger screens */}
@@ -1055,7 +1055,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[2].blurSrc}
             alt={photosPortfolioPhoneWallsThumbnail[2].alt}
             title={photosPortfolioPhoneWallsThumbnail[2].title}
-            className="portfolio-phonewalls-img03b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-phonewalls-img03b z-20 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -1064,7 +1064,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[2].src}
             alt={photosPortfolioPhoneWallsThumbnail[2].alt}
             title={photosPortfolioPhoneWallsThumbnail[2].title}
-            className="hidden portfolio-phonewalls-img03 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-phonewalls-img03 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         {/* NOTE: show vertical break only on larger screens */}
@@ -1079,7 +1079,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[3].blurSrc}
             alt={photosPortfolioPhoneWallsThumbnail[3].alt}
             title={photosPortfolioPhoneWallsThumbnail[3].title}
-            className="portfolio-phonewalls-img04b z-20 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md select-none"
+            className="portfolio-phonewalls-img04b z-20 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
@@ -1088,7 +1088,7 @@ const PortfolioPage = () => {
             src={photosPortfolioPhoneWallsThumbnail[3].src}
             alt={photosPortfolioPhoneWallsThumbnail[3].alt}
             title={photosPortfolioPhoneWallsThumbnail[3].title}
-            className="hidden portfolio-phonewalls-img04 z-10 h-full max-w-64 md:max-w-48 lg:max-w-60 xl:max-w-56 2xl:max-w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-phonewalls-img04 z-10 h-full w-64 md:w-48 lg:w-60 xl:w-56 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <Lightbox
@@ -1138,13 +1138,13 @@ const PortfolioPage = () => {
       </div>
       <SectionIndicator sectionName="Ultrawide" id="ultrawide-section" />
       <div className="portfolio-ultrawide-subcontainer w-full px-4">
-        <div className="portfolio-ultrawide-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+        <div className="portfolio-ultrawide-container-top w-full flex flex-row px-4 justify-center items-center mx-auto">
           <div className="portfolio-ultrawide-title-and-pic-container-top flex flex-col items-center mx-2 my-4">
             <img
               src={photosPortfolioUltrawideThumbnail[0].blurSrc}
               alt={photosPortfolioUltrawideThumbnail[0].alt}
               title={photosPortfolioUltrawideThumbnail[0].title}
-              className="portfolio-ultrawide-img01b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-ultrawide-img01b z-20 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -1153,7 +1153,7 @@ const PortfolioPage = () => {
               src={photosPortfolioUltrawideThumbnail[0].src}
               alt={photosPortfolioUltrawideThumbnail[0].alt}
               title={photosPortfolioUltrawideThumbnail[0].title}
-              className="portfolio-ultrawide-img01 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-ultrawide-img01 z-10 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -1164,13 +1164,13 @@ const PortfolioPage = () => {
         <div className="hidden md:block">
           <SectionBreak />
         </div>
-        <div className="portfolio-ultrawide-container-bottom w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+        <div className="portfolio-ultrawide-container-bottom w-full flex flex-row px-4 justify-center items-center mx-auto">
           <div className="portfolio-ultrawide-title-and-pic-container-bottom flex flex-col items-center mx-2 my-4">
             <img
               src={photosPortfolioUltrawideThumbnail[1].blurSrc}
               alt={photosPortfolioUltrawideThumbnail[1].alt}
               title={photosPortfolioUltrawideThumbnail[1].title}
-              className="portfolio-ultrawide-img02b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-ultrawide-img02b z-20 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -1179,7 +1179,7 @@ const PortfolioPage = () => {
               src={photosPortfolioUltrawideThumbnail[1].src}
               alt={photosPortfolioUltrawideThumbnail[1].alt}
               title={photosPortfolioUltrawideThumbnail[1].title}
-              className="hidden portfolio-ultrawide-img02 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-ultrawide-img02 z-10 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -1192,13 +1192,13 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="portfolio-ultrawide-subcontainer w-full px-4">
-        <div className="portfolio-ultrawide-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
+        <div className="portfolio-ultrawide-container-top w-full flex flex-row px-4 justify-center items-center mx-auto">
           <div className="portfolio-ultrawide-title-and-pic-container-top flex flex-col items-center mx-2 my-4">
             <img
               src={photosPortfolioUltrawideThumbnail[2].blurSrc}
               alt={photosPortfolioUltrawideThumbnail[2].alt}
               title={photosPortfolioUltrawideThumbnail[2].title}
-              className="portfolio-ultrawide-img03b z-20 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-ultrawide-img03b z-20 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -1207,7 +1207,7 @@ const PortfolioPage = () => {
               src={photosPortfolioUltrawideThumbnail[2].src}
               alt={photosPortfolioUltrawideThumbnail[2].alt}
               title={photosPortfolioUltrawideThumbnail[2].title}
-              className="hidden portfolio-ultrawide-img03 z-10 h-full max-w-[85vw] lg:max-w-[70vw] 2xl:max-w-[60vw] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-ultrawide-img03 z-10 w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>
@@ -1263,7 +1263,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[0].blurSrc}
             alt={photosPortfolioSquareThumbnail[0].alt}
             title={photosPortfolioSquareThumbnail[0].title}
-            className="portfolio-square-img01b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            className="portfolio-square-img01b z-20 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg select-none"
             loading="lazy"
           />
           <img
@@ -1272,7 +1272,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[0].src}
             alt={photosPortfolioSquareThumbnail[0].alt}
             title={photosPortfolioSquareThumbnail[0].title}
-            className="hidden portfolio-square-img01 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-square-img01 z-10 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         {/* NOTE: show vertical break only on larger screens */}
@@ -1287,7 +1287,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[1].blurSrc}
             alt={photosPortfolioSquareThumbnail[1].alt}
             title={photosPortfolioSquareThumbnail[1].title}
-            className="portfolio-square-img02b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            className="portfolio-square-img02b z-20 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg select-none"
             loading="lazy"
           />
           <img
@@ -1296,7 +1296,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[1].src}
             alt={photosPortfolioSquareThumbnail[1].alt}
             title={photosPortfolioSquareThumbnail[1].title}
-            className="hidden portfolio-square-img02 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-square-img02 z-10 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         {/* NOTE: show vertical break only on larger screens */}
@@ -1311,7 +1311,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[2].blurSrc}
             alt={photosPortfolioSquareThumbnail[2].alt}
             title={photosPortfolioSquareThumbnail[2].title}
-            className="portfolio-square-img03b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            className="portfolio-square-img03b z-20 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg select-none"
             loading="lazy"
           />
           <img
@@ -1320,7 +1320,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[2].src}
             alt={photosPortfolioSquareThumbnail[2].alt}
             title={photosPortfolioSquareThumbnail[2].title}
-            className="hidden portfolio-square-img03 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-square-img03 z-10 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         {/* NOTE: show vertical break only on larger screens */}
@@ -1335,7 +1335,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[3].blurSrc}
             alt={photosPortfolioSquareThumbnail[3].alt}
             title={photosPortfolioSquareThumbnail[3].title}
-            className="portfolio-square-img04b z-20 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg select-none"
+            className="portfolio-square-img04b z-20 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg select-none"
             loading="lazy"
           />
           <img
@@ -1344,7 +1344,7 @@ const PortfolioPage = () => {
             src={photosPortfolioSquareThumbnail[3].src}
             alt={photosPortfolioSquareThumbnail[3].alt}
             title={photosPortfolioSquareThumbnail[3].title}
-            className="hidden portfolio-square-img04 z-10 h-full max-w-64 md:max-w-56 lg:max-w-64 xl:max-w-60 2xl:max-w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            className="hidden portfolio-square-img04 z-10 h-full w-64 md:w-56 lg:w-64 xl:w-60 2xl:w-96 my-4 object-cover object-center rounded-lg brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
         </div>
         <Lightbox
