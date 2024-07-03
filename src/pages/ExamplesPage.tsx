@@ -48,7 +48,7 @@ const ExamplesPage = () => {
                 src={photosExamplesAbstractifyThumbnail[0].src}
                 alt={photosExamplesAbstractifyThumbnail[0].alt}
                 title={photosExamplesAbstractifyThumbnail[0].title}
-                className="examples-img01 z-10 aspect-[9/13] h-full max-w-full sm:max-w-48 lg:max-w-56 xl:max-w-60 2xl:max-w-72 3xl:max-w-[26rem] my-8 object-cover object-left-bottom rounded-md border-solid border dark:border-2 border-transparent select-none"
+                className="examples-img01 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-left-bottom rounded-md border-solid border dark:border-2 border-transparent select-none"
               />
             </div>
             <div className="examples-page-card-description my-4 text-sm lg:text-base">
@@ -82,7 +82,7 @@ const ExamplesPage = () => {
                 src={photosExamplesVectorizeThumbnail[0].src}
                 alt={photosExamplesVectorizeThumbnail[0].alt}
                 title={photosExamplesVectorizeThumbnail[0].title}
-                className="examples-img02 z-10 aspect-[9/13] h-full max-w-full sm:max-w-48 lg:max-w-56 xl:max-w-60 2xl:max-w-72 3xl:max-w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
+                className="examples-img02 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
               />
             </div>
             <div className="examples-page-card-description my-4 text-sm lg:text-base">
@@ -116,7 +116,7 @@ const ExamplesPage = () => {
                 src={photosExamplesCoalesceThumbnail[0].src}
                 alt={photosExamplesCoalesceThumbnail[0].alt}
                 title={photosExamplesCoalesceThumbnail[0].title}
-                className="examples-img03 z-10 aspect-[9/13] h-full max-w-full sm:max-w-48 lg:max-w-56 xl:max-w-60 2xl:max-w-72 3xl:max-w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
+                className="examples-img03 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent select-none"
               />
             </div>
             <div className="examples-page-card-description my-4 text-sm lg:text-base">
