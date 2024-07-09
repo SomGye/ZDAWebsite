@@ -19,7 +19,7 @@ export default {
       colors: {
         zdaBG: {
           dark: '#0b0a0d',
-          lessDarkCard: '#141316',
+          lessDarkCard: '#131215',
           darkCard: '#0f0e11',
           darkerCard: '#0e0d10',
           light: '#fafafa',
