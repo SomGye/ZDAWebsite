@@ -28,8 +28,9 @@ export default {
         },
         zdaBtn: {
           dark: '#1b1a1d',
-          darkCard: '#1d1c1f',
-          darkHover: '#2a292c',
+          darkerCard: '#1f1e21',
+          darkCard: '#212023',
+          darkHover: '#2e2d30',
           light: '#eaeaea',
           lightCard: '#e8e8e8',
           lightHover: '#d5d5d5',

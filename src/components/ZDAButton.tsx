@@ -48,7 +48,7 @@ const ZDAButton = ({
     {
       name: "hamburger-section",
       className:
-        "w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none",
+        "w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkerCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none",
     },
     {
       name: "hamburger-outlined",
