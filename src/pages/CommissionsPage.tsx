@@ -51,7 +51,7 @@ const CommissionsPage = () => {
   const [formScroll, setFormScroll] = React.useState(false);
   const formLink = "https://tinyurl.com/ZDACommForm";
   const formSection = "comm-form-section";
-  const infoLink = "https://tinyurl.com/ZDACommInfo7";
+  const infoLink = "https://tinyurl.com/ZDACommInfo8";
   const compareMap = ["solitudeType", "peaceType"];
   const [currentCompare, setCompare] = React.useState(compareMap[0]);
 
