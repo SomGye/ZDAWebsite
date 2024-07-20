@@ -45,6 +45,22 @@ export const switchPage = (
 };
 
 /**
+ * Perform a hard redirect to a link's path, bypassing the website.
+ * @param path external link's path
+ */
+export const redirectToLink = (path: string) => {
+  window.location.replace(path);
+};
+
+/**
+ * Gets the subdomain from the current hostname.
+ * @returns subdomain (or just domain if none) as string
+ */
+export const getSubdomain = () => {
+  return window.location.hostname.split(".", 1)[0];
+};
+
+/**
  * On image load, show the base img and hide the blur img.
  * @param imgId unique className id of img
  */
@@ -72,4 +88,13 @@ export const scrollToSection = (idOfSection: string) => {
  */
 export const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+/**
+ * Return string/word capitalized.
+ * @param str a word to capitalize
+ * @returns capitalized word (string)
+ */
+export const capitalizeString = (str: string) => {
+  return str.charAt(0).toLocaleUpperCase() + str.slice(1);
 };

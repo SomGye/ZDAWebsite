@@ -5,13 +5,20 @@ import { pageAtom } from "./states/pageAtom";
 import Header from "./sections/Header/Header";
 import Body from "./sections/Body/Body";
 import Footer from "./sections/Footer/Footer";
-import { switchPage } from "./helpers";
+import { capitalizeString, getSubdomain, switchPage } from "./helpers";
 import { Analytics } from "@vercel/analytics/react";
+
+type customRoute = {
+  path: string;
+  route: string;
+  redirect: string;
+};
 
 type props = {
   route: string;
+  routes: customRoute[];
 };
-const App = ({ route }: props) => {
+const App = ({ route, routes }: props) => {
   const [page, setPage] = useRecoilState(pageAtom);
 
   React.useEffect(() => {
@@ -21,33 +28,37 @@ const App = ({ route }: props) => {
       loadingpage.style = "display: none";
     }
 
-    // Set page to incoming route
-    const currentPath = window.location.href;
-    if (route === "portfolio") {
-      setPage("Portfolio");
-    } else if (route === "commissions") {
-      setPage("Commissions");
-    } else if (route === "about") {
-      setPage("About");
-    } else if (route === "examples") {
-      setPage("Examples");
-    } else if (route === "logo") {
-      setPage("Logo");
-    } else {
-      // Check for direct path in URL and use Hard URL switch to clear sub-domain
-      if (currentPath.toLocaleLowerCase().includes("portfolio")) {
-        switchPage("Portfolio", setPage, true);
-      } else if (currentPath.toLocaleLowerCase().includes("commissions")) {
-        switchPage("Commissions", setPage, true);
-      } else if (currentPath.toLocaleLowerCase().includes("about")) {
-        switchPage("About", setPage, true);
-      } else if (currentPath.toLocaleLowerCase().includes("examples")) {
-        switchPage("Examples", setPage, true);
-      } else if (currentPath.toLocaleLowerCase().includes("logo")) {
-        switchPage("Logo", setPage, true);
-      } else {
-        setPage("Home");
+    // Check and set the routes dynamically (by /route and route....com)
+    const subdomain = getSubdomain();
+    let matchedRoute = false;
+    for (let i = 0; i < routes.length; i++) {
+      // Internal/path
+      const presetRoute = routes[i];
+      // ? NOTE: skip the empty route for internal only
+      if (route && presetRoute.route) {
+        if (route === presetRoute.route) {
+          matchedRoute = true;
+          setPage(capitalizeString(presetRoute.route));
+          break;
+        }
       }
+    }
+    if (!matchedRoute) {
+      for (let i = 0; i < routes.length; i++) {
+        // External/Subdomain
+        const presetRoute = routes[i];
+        if (subdomain === presetRoute.route) {
+          matchedRoute = true;
+          switchPage(capitalizeString(presetRoute.route), setPage, true);
+          break;
+        }
+      }
+    }
+
+    // Fallback to Home
+    if (!matchedRoute) {
+      console.log("hit fallback");
+      setPage("Home");
     }
   }, []);
 

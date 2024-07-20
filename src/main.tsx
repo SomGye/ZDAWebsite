@@ -5,6 +5,8 @@ import ErrorPage from "./pages/ErrorPage.tsx";
 import { RecoilRoot } from "recoil";
 import App from "./App.tsx";
 import "./index.css";
+import RedirectStub from "./RedirectStub.tsx";
+import { commFormLink, commInfoLink, privacyLink } from "./links.ts";
 
 /* FONTSOURCE IMPORTS */
 // import "@fontsource/outfit/100.css"; // ? Titles/Buttons
@@ -42,38 +44,65 @@ import "@fontsource/urbanist/400.css";
 // import "@fontsource/urbanist/800.css";
 // import "@fontsource/urbanist/900.css";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
-    element: <App route="" />,
-    errorElement: <ErrorPage />,
+    route: "",
+    redirect: "",
   },
   {
     path: "/portfolio",
-    element: <App route="portfolio" />,
-    errorElement: <ErrorPage />,
+    route: "portfolio",
+    redirect: "",
   },
   {
     path: "/commissions",
-    element: <App route="commissions" />,
-    errorElement: <ErrorPage />,
+    route: "commissions",
+    redirect: "",
   },
   {
     path: "/about",
-    element: <App route="about" />,
-    errorElement: <ErrorPage />,
+    route: "about",
+    redirect: "",
   },
   {
     path: "/logo",
-    element: <App route="logo" />,
-    errorElement: <ErrorPage />,
+    route: "logo",
+    redirect: "",
   },
   {
     path: "/examples",
-    element: <App route="examples" />,
-    errorElement: <ErrorPage />,
+    route: "examples",
+    redirect: "",
   },
-]);
+  {
+    path: "/form",
+    route: "form",
+    redirect: commFormLink,
+  },
+  {
+    path: "/info",
+    route: "info",
+    redirect: commInfoLink,
+  },
+  {
+    path: "/privacy",
+    route: "privacy",
+    redirect: privacyLink,
+  },
+];
+const routerRoutes = routes.map((route) => { // ? dynamically map routes so that redirects skip App
+  return {
+    path: route.path,
+    element: route.redirect ? (
+      <RedirectStub redirectPath={route.redirect} />
+    ) : (
+      <App route={route.route} routes={routes} />
+    ),
+    errorElement: <ErrorPage />,
+  };
+});
+const router = createBrowserRouter(routerRoutes);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>

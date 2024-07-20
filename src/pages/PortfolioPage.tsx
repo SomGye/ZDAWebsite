@@ -28,6 +28,7 @@ import { MdClosedCaption, MdClosedCaptionDisabled } from "react-icons/md";
 import { IoMdCloseCircle } from "react-icons/io";
 import JumpToNav from "../components/JumpToNav";
 import ZDAButton from "../components/ZDAButton";
+import { kofiLink } from "../links";
 
 const PortfolioPage = () => {
   const [idx_posters1, setIdx_posters1] = React.useState(-1);
@@ -1402,11 +1403,11 @@ const PortfolioPage = () => {
           of my art:
         </span>
         <ZDAButton
-          clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+          clickCallback={() => clickLink(kofiLink)}
           textContent="Downloads and Support"
         />
         <ZDAButton
-          clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+          clickCallback={() => clickLink(kofiLink)}
           textContent="Downloads and Support"
           variant="mobile"
         />

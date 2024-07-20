@@ -1,6 +1,16 @@
 import * as React from "react";
 import ZDAButton from "./ZDAButton";
 import { clickLink } from "../helpers";
+import {
+  bskyLink,
+  caraLink,
+  igLink,
+  kofiLink,
+  payPalLink,
+  printShopLink,
+  threadsLink,
+  venmoLink,
+} from "../links";
 
 const PagePromos = () => {
   return (
@@ -15,13 +25,13 @@ const PagePromos = () => {
             Get art prints, posters, stickers, cards and more:
           </span>
           <ZDAButton
-            clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
+            clickCallback={() => clickLink(printShopLink)}
             textContent="Print Shop"
             tight
             variant="mobile-neutral"
           />
           <ZDAButton
-            clickCallback={() => clickLink("https://tinyurl.com/ZDAPrints")}
+            clickCallback={() => clickLink(printShopLink)}
             textContent="Print Shop"
             tight
             variant="neutral"
@@ -36,13 +46,13 @@ const PagePromos = () => {
             Download high-quality versions of my art for free:
           </p>
           <ZDAButton
-            clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+            clickCallback={() => clickLink(kofiLink)}
             textContent="Ko-fi"
             tight
             variant="mobile-neutral"
           />
           <ZDAButton
-            clickCallback={() => clickLink("https://ko-fi.com/zerodayanubis")}
+            clickCallback={() => clickLink(kofiLink)}
             textContent="Ko-fi"
             tight
             variant="neutral"
@@ -58,29 +68,25 @@ const PagePromos = () => {
           </p>
           <div className="promo-button-container flex flex-col justify-center items-center gap-1">
             <ZDAButton
-              clickCallback={() => clickLink("https://www.paypal.com/ncp/payment/AGHU59JTKAC66")}
+              clickCallback={() => clickLink(payPalLink)}
               textContent="PayPal"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() => clickLink("https://www.paypal.com/ncp/payment/AGHU59JTKAC66")}
+              clickCallback={() => clickLink(payPalLink)}
               textContent="PayPal"
               tight
               variant="neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://account.venmo.com/u/somgye")
-              }
+              clickCallback={() => clickLink(venmoLink)}
               textContent="Venmo"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://account.venmo.com/u/somgye")
-              }
+              clickCallback={() => clickLink(venmoLink)}
               textContent="Venmo"
               tight
               variant="neutral"
@@ -97,65 +103,49 @@ const PagePromos = () => {
           </p>
           <div className="promo-button-container flex flex-col justify-center items-center gap-1">
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://bsky.app/profile/zerodayanubis.com")
-              }
+              clickCallback={() => clickLink(bskyLink)}
               textContent="Bluesky"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://bsky.app/profile/zerodayanubis.com")
-              }
+              clickCallback={() => clickLink(bskyLink)}
               textContent="Bluesky"
               tight
               variant="neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink(
-                  "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
-                )
-              }
+              clickCallback={() => clickLink(igLink)}
               textContent="Instagram"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink(
-                  "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
-                )
-              }
+              clickCallback={() => clickLink(igLink)}
               textContent="Instagram"
               tight
               variant="neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://www.threads.net/@zerodayanubis")
-              }
+              clickCallback={() => clickLink(threadsLink)}
               textContent="Threads"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() =>
-                clickLink("https://www.threads.net/@zerodayanubis")
-              }
+              clickCallback={() => clickLink(threadsLink)}
               textContent="Threads"
               tight
               variant="neutral"
             />
             <ZDAButton
-              clickCallback={() => clickLink("https://tinyurl.com/ZDACara")}
+              clickCallback={() => clickLink(caraLink)}
               textContent="Cara"
               tight
               variant="mobile-neutral"
             />
             <ZDAButton
-              clickCallback={() => clickLink("https://tinyurl.com/ZDACara")}
+              clickCallback={() => clickLink(caraLink)}
               textContent="Cara"
               tight
               variant="neutral"
