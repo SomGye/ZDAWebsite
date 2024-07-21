@@ -24,6 +24,16 @@ import zerodayanubis_dark from "/zerodayanubis_dark.svg";
 import zerodayanubis_light from "/zerodayanubis_light.svg";
 import { altLongTextLogo } from "../AltText";
 import ZDAButton from "./ZDAButton";
+import {
+  bskyLink,
+  caraLink,
+  igLink,
+  kofiLink,
+  payPalLink,
+  printShopLink,
+  threadsLink,
+  venmoLink,
+} from "../links";
 
 type props = {
   open: boolean;
@@ -123,7 +133,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://bsky.app/profile/zerodayanubis.com");
+                  clickLink(bskyLink);
                   setOpen(false);
                 }}
                 leftIcon={bskyIcon}
@@ -133,9 +143,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink(
-                    "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
-                  );
+                  clickLink(igLink);
                   setOpen(false);
                 }}
                 leftIcon={igIcon}
@@ -145,7 +153,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://www.threads.net/@zerodayanubis");
+                  clickLink(threadsLink);
                   setOpen(false);
                 }}
                 leftIcon={threadsIcon}
@@ -155,7 +163,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://tinyurl.com/ZDACara");
+                  clickLink(caraLink);
                   setOpen(false);
                 }}
                 leftIcon={caraIcon}
@@ -170,7 +178,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://tinyurl.com/ZDAPrints");
+                  clickLink(printShopLink);
                   setOpen(false);
                 }}
                 leftIcon={printShopIcon}
@@ -180,7 +188,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://ko-fi.com/zerodayanubis");
+                  clickLink(kofiLink);
                   setOpen(false);
                 }}
                 leftIcon={kofiIcon}
@@ -190,7 +198,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://www.paypal.com/ncp/payment/AGHU59JTKAC66");
+                  clickLink(payPalLink);
                   setOpen(false);
                 }}
                 leftIcon={payPalIcon}
@@ -200,7 +208,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
               <ZDAButton
                 clickCallback={() => {
-                  clickLink("https://account.venmo.com/u/somgye");
+                  clickLink(venmoLink);
                   setOpen(false);
                 }}
                 leftIcon={paymentIcon}

@@ -13,6 +13,19 @@ import { chatIcon, emailIcon, privacyDocIcon } from "../../icons";
 import { clickEmail, clickLink, switchPage } from "../../helpers";
 import { pageAtom } from "../../states/pageAtom";
 import { altLongTextLogo, altZDALogoSm, altZDAWorksLogo } from "../../AltText";
+import {
+  bskyLink,
+  caraLink,
+  discordLink,
+  igLink,
+  kofiLink,
+  payPalLink,
+  printShopLink,
+  privacyLink,
+  threadsLink,
+  venmoLink,
+  zdaWorksLink,
+} from "../../links";
 
 const Footer = () => {
   const theme = useRecoilValue(themeAtom);
@@ -36,7 +49,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://bsky.app/profile/zerodayanubis.com"
+                  href={bskyLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -51,7 +64,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA=="
+                  href={igLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -66,7 +79,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://www.threads.net/@zerodayanubis"
+                  href={threadsLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -81,7 +94,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://tinyurl.com/ZDACara"
+                  href={caraLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -103,7 +116,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://tinyurl.com/ZDAPrints"
+                  href={printShopLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -118,7 +131,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://ko-fi.com/zerodayanubis"
+                  href={kofiLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -133,7 +146,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://www.paypal.com/ncp/payment/AGHU59JTKAC66"
+                  href={payPalLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -148,7 +161,7 @@ const Footer = () => {
                       : "footer-link-animated ") +
                     "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
                   }
-                  href="https://account.venmo.com/u/somgye"
+                  href={venmoLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -166,7 +179,7 @@ const Footer = () => {
             </h3>
             <a
               className="select-none"
-              href="https://www.zda.works/"
+              href={zdaWorksLink}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -187,7 +200,7 @@ const Footer = () => {
             </h3>
             <a
               className="inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70 select-none"
-              href="http://tinyurl.com/ZDAPrivacy2"
+              href={privacyLink}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -227,7 +240,7 @@ const Footer = () => {
               />
             </div>
             <a
-              href="https://www.zda.works/"
+              href={zdaWorksLink}
               className="text-sm text-gray-700 dark:text-gray-400 sm:ml-6 mt-[27px] sm:mt-0 select-none"
               target="_blank"
               rel="noopener noreferrer"
@@ -250,9 +263,7 @@ const Footer = () => {
               className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 active:bg-gray-500/60 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:active:bg-neutral-500/45 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm motion-safe:transition-colors motion-safe:duration-300 ease-out select-none"
               aria-label="Message"
               title="Message me on Discord"
-              onClick={() =>
-                clickLink("https://discordapp.com/users/193548282264420354")
-              }
+              onClick={() => clickLink(discordLink)}
             >
               <span className="mt-[1px] mr-0 lg:mr-6">{chatIcon}</span>
               Message

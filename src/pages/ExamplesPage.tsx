@@ -22,6 +22,7 @@ import {
   photosCommissionsCoalesce,
   photosCommissionsVectorize,
 } from "../lightboxInfo";
+import { zdaWorksLink } from "../links";
 
 const ExamplesPage = () => {
   const currentYear = new Date().getFullYear();
@@ -304,7 +305,7 @@ const ExamplesPage = () => {
           close={() => setIdx_coalesce(-1)}
         />
         <a
-          href="https://www.zda.works/"
+          href={zdaWorksLink}
           className="md:col-span-3 pt-4 text-sm text-gray-700 dark:text-gray-400 select-none"
           target="_blank"
           rel="noopener noreferrer"

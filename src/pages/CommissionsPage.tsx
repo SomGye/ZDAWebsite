@@ -33,6 +33,7 @@ import {
 import PagePromos from "../components/PagePromos";
 import { commsOpenAtom } from "../states/commsAtom";
 import { downArrowBigIcon, rightArrowBigIcon } from "../icons";
+import { commFormLink, commInfoLink } from "../links";
 
 const CommissionsPage = () => {
   const theme = useRecoilValue(themeAtom);
@@ -49,9 +50,7 @@ const CommissionsPage = () => {
   const [formVisible, setFormVisible] = React.useState(false);
   const [formLoading, setFormLoading] = React.useState(false);
   const [formScroll, setFormScroll] = React.useState(false);
-  const formLink = "https://tinyurl.com/ZDACommForm";
   const formSection = "comm-form-section";
-  const infoLink = "https://tinyurl.com/ZDACommInfo8";
   const compareMap = ["solitudeType", "peaceType"];
   const [currentCompare, setCompare] = React.useState(compareMap[0]);
 
@@ -117,7 +116,7 @@ const CommissionsPage = () => {
           For full commission information, click{" "}
           <p
             className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
-            onClick={() => clickLink(infoLink)}
+            onClick={() => clickLink(commInfoLink)}
           >
             here
           </p>
@@ -203,7 +202,7 @@ const CommissionsPage = () => {
               <>
                 <div className="block md:hidden">
                   <ZDAButton
-                    clickCallback={() => clickLink(formLink)}
+                    clickCallback={() => clickLink(commFormLink)}
                     textContent="Commission Form"
                     variant="mobile"
                   />
@@ -335,7 +334,7 @@ const CommissionsPage = () => {
               <>
                 <div className="block md:hidden">
                   <ZDAButton
-                    clickCallback={() => clickLink(formLink)}
+                    clickCallback={() => clickLink(commFormLink)}
                     textContent="Commission Form"
                     variant="mobile"
                   />
@@ -474,7 +473,7 @@ const CommissionsPage = () => {
               <>
                 <div className="block md:hidden">
                   <ZDAButton
-                    clickCallback={() => clickLink(formLink)}
+                    clickCallback={() => clickLink(commFormLink)}
                     textContent="Commission Form"
                     variant="mobile"
                   />
@@ -712,7 +711,7 @@ const CommissionsPage = () => {
           />
           {/* Mobile Only - Open form in new tab */}
           <ZDAButton
-            clickCallback={() => clickLink(formLink)}
+            clickCallback={() => clickLink(commFormLink)}
             textContent="Commissions Form"
             variant="mobile"
           />
@@ -725,7 +724,7 @@ const CommissionsPage = () => {
           {/* Embedded Commissions Form */}
           {formVisible && (
             <object
-              data={formLink}
+              data={commFormLink}
               type="text/html"
               style={{
                 width: "100%",
