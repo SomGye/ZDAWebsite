@@ -1,7 +1,7 @@
 /* GLOBALLY USED LINKS */
 // Redirects and ZDA-related links
 export const commFormLink = "https://tally.so/r/w52VP6";
-export const commInfoLink = "https://drive.google.com/file/d/1AQ-RCfIHOP77tW5D28NNaFl2wvkkBqUz/view?usp=sharing";
+export const commInfoLink = "https://drive.google.com/file/d/1pzzikwvD9myZus1P3TX0CLwe7Vp6njwa/view?usp=sharing";
 export const privacyLink = "https://drive.google.com/file/d/13cQYluebHO55mcJ057e2Z2IMw3ceW5rM/view?usp=sharing";
 export const zdaWorksLink = "https://www.zda.works/";
 // Social Media
