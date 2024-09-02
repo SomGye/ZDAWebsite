@@ -1,30 +1,35 @@
 import {
+  altAbsentEndeavour,
   altAdriftInNotions,
   altAnubisTheDeathless,
   altAVisualViolation,
   altDisquietudeOfDread,
   altDivinityEnds,
+  altEngineersDiscovery,
   altFrameOfRevelation,
   altHuionSketch_1623363242260,
   altHuionSketch_1623481967592,
   altHuionSketch_1625698314399,
   altHuionSketch_1625699078818,
-  altInFlux,
   altKublaiAnubis02,
+  altLostInTheStatic,
   altMemoriamDeLuce,
+  altMourningMoonSanguine,
   altNonconformantSpectrum,
   altOutOfShape,
   altPenUp20210219_053858,
   altPenUp20210309_005026,
   altPenUp20210326_003107,
   altPenUp20210422_055424,
+  altPitifulPloy,
   altPrismOfParagon,
   altProneToOblivion,
-  altRegents,
   altReturningSublimation,
   altRosecranceBrilliance,
   altRosecranceDespair,
   altSaturatedAxons,
+  altScatteredExistence,
+  altScreamingSun,
   altSelfDestructSequence,
   altSemblanceOfMadness,
   altSemblanceOfPeace,
@@ -37,13 +42,10 @@ import {
   altTheChromaPassage,
   altTheCruxOfCrisis,
   altTheInfiniteKingdom,
-  altTheMessBetween,
   altTheTempleOfLoss,
-  altTheToxicDescent,
   altTheTrainedTrespass,
   altThing_202304261913,
   altTurmoil,
-  altWeatheringTheWaves,
   altWispsOfAfterlife,
   altWretchedWitness,
   altZeroShift,
@@ -78,10 +80,10 @@ export const photosHomeThumbnail = [
   },
   {
     blurSrc:
-      "/assets/home/thumbnail/2023-10-22-Frame_of_Revelation-600px-c1-blur3x.jpg",
-    src: "/assets/home/thumbnail/2023-10-22-Frame_of_Revelation-600px-c1.jpg",
-    alt: altFrameOfRevelation,
-    title: "Frame of Revelation",
+      "/assets/home/thumbnail/2024-08-22-Absent_Endeavour-600px-c7-blur3x.jpg",
+    src: "/assets/home/thumbnail/2024-08-22-Absent_Endeavour-600px-c1.jpg",
+    alt: altAbsentEndeavour,
+    title: "Absent Endeavour",
   },
   {
     src: rosecrance_brilliance,
@@ -103,10 +105,10 @@ export const photosHomeBtmSmThumbnail = [
 export const photosHomeBtmLgThumbnail = [
   {
     blurSrc:
-      "/assets/home/thumbnail/2024-02-07-Nonconformant_Spectrum-1000px-c1-blur3x.jpg",
-    src: "/assets/home/thumbnail/2024-02-07-Nonconformant_Spectrum-1000px-c1.jpg",
-    alt: altNonconformantSpectrum,
-    title: "Nonconformant Spectrum",
+      "/assets/home/thumbnail/2024-08-27-Pitiful_Ploy-1800px-c1-blur3x.jpg",
+    src: "/assets/home/thumbnail/2024-08-27-Pitiful_Ploy-1800px-c1.jpg",
+    alt: altPitifulPloy,
+    title: "Pitiful Ploy",
   },
 ];
 
@@ -291,17 +293,17 @@ export const photosPortfolioAlbumArtThumbnail = [
   },
   {
     blurSrc:
-      "/assets/portfolio/albumart/thumbnail/2023-12-13-Regents-600px-c7-blur3x.jpg",
-    src: "/assets/portfolio/albumart/thumbnail/2023-12-13-Regents-600px-c1.jpg",
-    alt: altRegents,
-    title: "Regents",
+      "/assets/portfolio/albumart/thumbnail/mourning_moon-sanguine-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/albumart/thumbnail/mourning_moon-sanguine-600px-c1.jpg",
+    alt: altMourningMoonSanguine,
+    title: "Mourning Moon (Sanguine)",
   },
   {
     blurSrc:
-      "/assets/portfolio/albumart/thumbnail/2023-12-11-In_Flux-600px-c7-blur3x.jpg",
-    src: "/assets/portfolio/albumart/thumbnail/2023-12-11-In_Flux-600px-c1.jpg",
-    alt: altInFlux,
-    title: "In Flux",
+      "/assets/portfolio/albumart/thumbnail/2024-08-31-Lost_In_The_Static-reg-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/albumart/thumbnail/2024-08-31-Lost_In_The_Static-reg-600px-c1.jpg",
+    alt: altLostInTheStatic,
+    title: "Lost In The Static",
   },
 ];
 
@@ -327,10 +329,10 @@ export const photosPortfolio4kWallsThumbnail = [
   },
   {
     blurSrc:
-      "/assets/portfolio/4kwalls/thumbnail/2024-01-11-Weathering_The_Waves-1000px-c7-blur3x.jpg",
-    src: "/assets/portfolio/4kwalls/thumbnail/2024-01-11-Weathering_The_Waves-1000px-c1.jpg",
-    alt: altWeatheringTheWaves,
-    title: "Weathering The Waves",
+      "/assets/portfolio/4kwalls/thumbnail/2024-08-27-Pitiful_Ploy-1800px-c1-blur3x.jpg",
+    src: "/assets/portfolio/4kwalls/thumbnail/2024-08-27-Pitiful_Ploy-1800px-c1.jpg",
+    alt: altPitifulPloy,
+    title: "Pitiful Ploy",
   },
 ];
 
@@ -406,17 +408,17 @@ export const photosPortfolioSquareThumbnail = [
   },
   {
     blurSrc:
-      "/assets/portfolio/square/thumbnail/2023-09-08-The_Toxic_Descent-600px-c7-blur3x.jpg",
-    src: "/assets/portfolio/square/thumbnail/2023-09-08-The_Toxic_Descent-600px-c1.jpg",
-    alt: altTheToxicDescent,
-    title: "The Toxic Descent",
+      "/assets/portfolio/square/thumbnail/screaming_sun-notitle-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/square/thumbnail/screaming_sun-notitle-600px-c1.jpg",
+    alt: altScreamingSun,
+    title: "Screaming Sun",
   },
   {
     blurSrc:
-      "/assets/portfolio/square/thumbnail/2023-04-30-Binary_Worlds_The_Mess_Between-600px-c7-blur3x.jpg",
-    src: "/assets/portfolio/square/thumbnail/2023-04-30-Binary_Worlds_The_Mess_Between-600px-c1.jpg",
-    alt: altTheMessBetween,
-    title: "The Mess Between",
+      "/assets/portfolio/square/thumbnail/2024-07-11-Engineers-discovery-600px-c7-blur3x.jpg",
+    src: "/assets/portfolio/square/thumbnail/2024-07-11-Engineers-discovery-600px-c1.jpg",
+    alt: altEngineersDiscovery,
+    title: "Engineers (Discovery)",
   },
 ];
 
@@ -477,9 +479,9 @@ export const photosCommissionsCoalesceComparisonThumbnail = [
 
 export const photosExamplesAbstractifyThumbnail = [
   {
-    src: "/assets/examples/abstractify/2024-02-07-Nonconformant_Spectrum-notext-2400px-c1.jpg",
-    alt: altNonconformantSpectrum,
-    title: "Nonconformant Spectrum",
+    src: "/assets/examples/abstractify/2024-07-06-Scattered_Existence-textedit-1100px-c1.jpg",
+    alt: altScatteredExistence,
+    title: "Scattered Existence",
   },
 ];
 

@@ -114,3 +114,19 @@ export const altSemblanceOfSolitude =
   "Wavy pillars of soft gradient blue light over a backdrop of light to sky blue";
 export const altSemblanceOfPeace =
   "Wavy pillars of soft light to dark blue light over a backdrop of teal to pinkish blue";
+export const altAbsentEndeavour =
+  "Burning thick tendrils of pink and yellow light fly across pink and orange glowing paint streaks";
+export const altPitifulPloy =
+  "Spooky thin tendrils of red light emerge from a glowing center, with a terrifying dark horizontal helix, over a backdrop of dark purple paint splatters";
+export const altMourningMoonSanguine =
+  "A crimson crescent moon encased in a rounded rectangle over a backdrop of shattered teal glass and thin wiry striations";
+export const altLostInTheStatic =
+  "Traces of a void structure are torn away by colorful glitches of red, pink, green, and blue";
+export const altScreamingSun =
+  "Three glowing green triangles, floating diagonally, over a set of curved neon green lines, framed by broken square lines";
+export const altEngineersDiscovery =
+  "Worlds collide and shear apart, in a pink flash of light";
+export const altEngineersDanger =
+  "Worlds collide and shear apart, in a spooky red flash of light, with a strange red L-frame";
+export const altScatteredExistence =
+  "A glowing green symmetrical helix of paint splatters, over a backdrop of pink lines and purple paint splatters";

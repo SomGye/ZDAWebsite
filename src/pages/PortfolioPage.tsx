@@ -690,7 +690,8 @@ const PortfolioPage = () => {
                 hypnotic lime orb,
               </div>
               it's power streaked by hasty dark inks
-              <br /> and passionate flames overtaking our world.
+              <br /> and passionate flames <br className="block xs:hidden" />
+              overtaking our world.
             </div>
           </div>
         </div>
@@ -703,11 +704,10 @@ const PortfolioPage = () => {
                 {photosPortfolioAlbumArtThumbnail[2].title}
               </span>
               <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                A neon prison enraptures an eerie pyramid,
-                <br /> followed by a sweeping force of nature,
+                A crimson moon enveloped by a rounded cage,
+                <br /> glowing over a bed of shattered glass,
                 <div className="italic font-semibold tracking-wide">
-                  a river of purple enveloped <br className="block lg:hidden" />{" "}
-                  by swarms of pink.
+                  a hotbed of insanity and sadness.
                 </div>
               </div>
             </div>
@@ -729,11 +729,11 @@ const PortfolioPage = () => {
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              A neon prison enraptures an eerie pyramid,
-              <br /> followed by a sweeping force of nature,
+              A crimson moon enveloped <br className="block xs:hidden" /> by a
+              rounded cage,
+              <br /> glowing over a bed of shattered glass,
               <div className="italic font-semibold tracking-wide">
-                a river of purple enveloped <br className="block lg:hidden" />{" "}
-                by swarms of pink.
+                a hotbed of insanity and sadness.
               </div>
             </div>
           </div>
@@ -747,11 +747,10 @@ const PortfolioPage = () => {
               </span>
               <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  An emerald forest <br className="block lg:hidden" /> destroyed
-                  by unseen forces;
+                  The mind prison, scattered and stripped;
                 </div>
-                the reality of the mountain valley,
-                <br /> fraying at the edges, like a frail mind.
+                our realities torn to shreds,
+                <br /> as realizations crumble to dust.
               </div>
             </div>
             <img
@@ -773,11 +772,11 @@ const PortfolioPage = () => {
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
-                An emerald forest <br className="block xs:hidden" /> destroyed
-                by unseen forces;
+                The mind prison, <br className="block xs:hidden" /> scattered
+                and stripped;
               </div>
-              the reality of the mountain valley,
-              <br /> fraying at the edges, like a frail mind.
+              our realities torn to shreds,
+              <br /> as realizations crumble to dust.
             </div>
           </div>
         </div>
@@ -826,7 +825,7 @@ const PortfolioPage = () => {
         open={idx_albumart >= 0}
         close={() => setIdx_albumart(-1)}
       />
-      <SectionIndicator sectionName="4K Wallpapers/Wide" id="4kwalls-section" />
+      <SectionIndicator sectionName="4K Wallpapers" id="4kwalls-section" />
       <div className="portfolio-4kwalls-subcontainer w-full px-4">
         <div className="portfolio-4kwalls-container-top w-full lg:w-3/4 2xl:w-2/3 flex flex-row px-4 justify-center items-center mx-auto">
           <div className="portfolio-4kwalls-title-and-pic-container-top flex flex-col-reverse items-center mx-2 my-4">
@@ -930,10 +929,11 @@ const PortfolioPage = () => {
               </span>
               <div className="portfolio-4kwalls-blurb-md block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  {"Surging splashes of burning colors"}
+                  Chaotic tendrils spill <br className="block sm:hidden" />
+                  out from the void;
                 </div>
-                grip the screen with playful waves,
-                <br /> an evening of gradients to dine on.
+                fiercesome energy taints <br className="block sm:hidden" />
+                the radiant space.
               </div>
             </div>
             <img
