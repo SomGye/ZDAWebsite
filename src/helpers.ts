@@ -2,7 +2,7 @@
  * Click to do mailto to email
  */
 export const clickEmail = () => {
-  location.href = "mailto:zerodayanubis@gmail.com";
+  location.href = "mailto:anubis@zerodayanubis.com";
 };
 
 /**

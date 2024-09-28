@@ -253,7 +253,7 @@ const Footer = () => {
             <button
               className="inline-flex justify-between items-center px-4 py-2 h-min rounded-3xl bg-gray-500/15 active:bg-gray-500/60 hover:bg-gray-500/40 dark:bg-neutral-500/10 dark:active:bg-neutral-500/45 dark:hover:bg-neutral-500/25 text-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 text-[0] lg:text-sm motion-safe:transition-colors motion-safe:duration-300 ease-out select-none"
               aria-label="Email"
-              title="Email me at zerodayanubis@gmail.com"
+              title="Email me at anubis@zerodayanubis.com"
               onClick={clickEmail}
             >
               <span className="mt-[1px] mr-0 lg:mr-6">{emailIcon}</span>
