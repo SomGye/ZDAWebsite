@@ -8,7 +8,7 @@ import {
   photosExamplesVectorizeThumbnail,
 } from "../thumbnailInfo";
 import ZDAButton from "../components/ZDAButton";
-import { switchPage } from "../helpers";
+import { loadImgHandler, switchPage } from "../helpers";
 import { useRecoilState } from "recoil";
 import { pageAtom } from "../states/pageAtom";
 import Lightbox from "yet-another-react-lightbox";
@@ -62,11 +62,19 @@ const ExamplesPage = () => {
           <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col justify-between items-center">
             <div className="examples-page-card-img-container">
               <img
+                src={photosExamplesAbstractifyThumbnail[0].blurSrc}
+                alt={photosExamplesAbstractifyThumbnail[0].alt}
+                title={photosExamplesAbstractifyThumbnail[0].title}
+                className="examples-img01b z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-left-bottom rounded-md select-none"
+                loading="lazy"
+              />
+              <img
                 onClick={() => setIdx_abstractify(0)}
+                onLoad={() => loadImgHandler("examples-img01")}
                 src={photosExamplesAbstractifyThumbnail[0].src}
                 alt={photosExamplesAbstractifyThumbnail[0].alt}
                 title={photosExamplesAbstractifyThumbnail[0].title}
-                className="examples-img01 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-left-bottom rounded-md border-solid border dark:border-2 border-transparent brightness-100 motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.03] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 select-none cursor-pointer"
+                className="hidden examples-img01 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-left-bottom rounded-md border-solid border dark:border-2 border-transparent brightness-100 motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.03] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 select-none cursor-pointer"
               />
             </div>
             <div className="examples-page-card-description my-4 text-sm lg:text-base">
@@ -228,11 +236,18 @@ const ExamplesPage = () => {
           <div className="examples-page-card-content mx-4 my-6 sm:my-8 flex flex-col justify-between items-center">
             <div className="examples-page-card-img-container">
               <img
+                src={photosExamplesCoalesceThumbnail[0].blurSrc}
+                alt={photosExamplesCoalesceThumbnail[0].alt}
+                title={photosExamplesCoalesceThumbnail[0].title}
+                className="examples-img03b z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-center rounded-md select-none"
+              />
+              <img
                 onClick={() => setIdx_coalesce(0)}
+                onLoad={() => loadImgHandler("examples-img03")}
                 src={photosExamplesCoalesceThumbnail[0].src}
                 alt={photosExamplesCoalesceThumbnail[0].alt}
                 title={photosExamplesCoalesceThumbnail[0].title}
-                className="examples-img03 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent brightness-100 motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.03] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 select-none cursor-pointer"
+                className="hidden examples-img03 z-10 aspect-[9/13] h-full w-full sm:w-48 lg:w-56 xl:w-60 2xl:w-72 3xl:w-[26rem] my-8 object-cover object-center rounded-md border-solid border dark:border-2 border-transparent brightness-100 motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.03] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 select-none cursor-pointer"
               />
             </div>
             <div className="examples-page-card-description my-4 text-sm lg:text-base">
