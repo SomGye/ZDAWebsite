@@ -479,6 +479,8 @@ export const photosCommissionsCoalesceComparisonThumbnail = [
 
 export const photosExamplesAbstractifyThumbnail = [
   {
+    blurSrc:
+      "/assets/examples/abstractify/2024-07-06-Scattered_Existence-textedit-1100px-c7-blur3x.jpg",
     src: "/assets/examples/abstractify/2024-07-06-Scattered_Existence-textedit-1100px-c1.jpg",
     alt: altScatteredExistence,
     title: "Scattered Existence",
@@ -495,6 +497,8 @@ export const photosExamplesVectorizeThumbnail = [
 
 export const photosExamplesCoalesceThumbnail = [
   {
+    blurSrc:
+      "/assets/examples/coalesce/2024-06-25-Semblance_(Of_Madness)-1100px-c7-blur3x.jpg",
     src: "/assets/examples/coalesce/2024-06-25-Semblance_(Of_Madness)-1100px-c1.jpg",
     alt: altSemblanceOfMadness,
     title: "Semblance (Of Madness)",
