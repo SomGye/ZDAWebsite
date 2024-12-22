@@ -11,8 +11,14 @@ import {
   threadsLink,
   venmoLink,
 } from "../links";
+import kofi_gif from "/sparkle_mug.gif";
 
 const PagePromos = () => {
+  const kofiGifInfo = {
+    src: kofi_gif,
+    alt: "Animation of Kofi coffee mug with sparkles; click here to get to Downloads",
+    title: "Click here for HD Downloads!",
+  };
   return (
     <>
       <div className="promos-container flex flex-col justify-center items-center gap-6 my-6 sm:my-8 select-none">
@@ -56,6 +62,14 @@ const PagePromos = () => {
             textContent="Ko-fi"
             tight
             variant="neutral"
+          />
+          {/* Kofi gif */}
+          <img
+            src={kofiGifInfo.src}
+            alt={kofiGifInfo.alt}
+            title={kofiGifInfo.title}
+            onClick={() => clickLink(kofiLink)}
+            className="kofi-gif-img z-20 h-full w-20 mt-2 object-cover object-center rounded-md select-none cursor-pointer"
           />
         </div>
         {/* Payment Methods Promo */}
