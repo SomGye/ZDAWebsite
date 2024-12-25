@@ -5,14 +5,14 @@ export const commInfoLink = "https://go.zda.works/comminfo";
 export const privacyLink = "https://go.zda.works/privacyzda";
 export const zdaWorksLink = "https://zda.works/";
 // Social Media
-export const bskyLink = "https://bsky.app/profile/zerodayanubis.com";
-export const igLink = "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA==";
-export const threadsLink = "https://www.threads.net/@zerodayanubis";
-export const caraLink = "https://cara.app/zerodayanubis/";
+export const bskyLink = "https://go.zda.works/bsky";
+export const igLink = "https://go.zda.works/insta";
+export const threadsLink = "https://go.zda.works/threads";
+export const caraLink = "https://go.zda.works/cara";
 // Prints/Support
 export const printShopLink = "https://go.zda.works/prints";
-export const kofiLink = "https://ko-fi.com/zerodayanubis";
-export const payPalLink = "https://www.paypal.com/ncp/payment/AGHU59JTKAC66";
-export const venmoLink = "https://account.venmo.com/u/somgye";
+export const kofiLink = "https://go.zda.works/kofi";
+export const payPalLink = "https://go.zda.works/paypal";
+export const venmoLink = "https://go.zda.works/venmo";
 // Misc.
-export const discordLink = "https://discordapp.com/users/193548282264420354";
+export const discordLink = "https://go.zda.works/discord";
