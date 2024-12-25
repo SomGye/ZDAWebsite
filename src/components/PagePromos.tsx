@@ -11,8 +11,18 @@ import {
   threadsLink,
   venmoLink,
 } from "../links";
+import { useRecoilValue } from "recoil";
+import { themeAtom } from "../states/themeAtom";
+import kofi_gif from "/kofi_sparkle_mug-80px.gif";
+import kofi_gif_dark from "/kofi_speech_bubble-80px.gif";
 
 const PagePromos = () => {
+  const theme = useRecoilValue(themeAtom);
+  const kofiGifInfo = {
+    src: theme === "dark" ? kofi_gif_dark : kofi_gif,
+    alt: "Animation of Kofi coffee mug with sparkles; click here to get to Downloads",
+    title: "Click here for HD Downloads!",
+  };
   return (
     <>
       <div className="promos-container flex flex-col justify-center items-center gap-6 my-6 sm:my-8 select-none">
@@ -56,6 +66,14 @@ const PagePromos = () => {
             textContent="Ko-fi"
             tight
             variant="neutral"
+          />
+          {/* Kofi gif */}
+          <img
+            src={kofiGifInfo.src}
+            alt={kofiGifInfo.alt}
+            title={kofiGifInfo.title}
+            onClick={() => clickLink(kofiLink)}
+            className="kofi-gif-img z-20 h-full w-20 blur-none dark:blur-[0.3px] object-cover object-center rounded-md drop-shadow-logo-kofi dark:drop-shadow-logo-kofi-dark dark:hover:drop-shadow-logo-kofi motion-safe:transition-all motion-safe:duration-300 select-none cursor-pointer"
           />
         </div>
         {/* Payment Methods Promo */}

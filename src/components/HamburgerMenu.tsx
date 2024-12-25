@@ -34,6 +34,7 @@ import {
   threadsLink,
   venmoLink,
 } from "../links";
+import kofi_gif from "/kofi_rainbow_mug-200px.gif";
 
 type props = {
   open: boolean;
@@ -43,6 +44,11 @@ type props = {
 const HamburgerMenu = ({ open, setOpen }: props) => {
   const theme = useRecoilValue(themeAtom);
   const [, setPage] = useRecoilState(pageAtom);
+  const kofiGifInfo = {
+    src: kofi_gif,
+    alt: "Animation of Kofi coffee mug with sparkles; click here to get to Downloads",
+    title: "Click here for HD Downloads!",
+  };
 
   React.useEffect(() => {
     if (open) {
@@ -173,7 +179,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
               />
             </Box>
             <p className="text-lg font-medium text-gray-700 dark:text-gray-200 pointer-events-none select-none mt-2">
-              Prints/Support
+              Prints + Support
             </p>
             <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
               <ZDAButton
@@ -193,7 +199,7 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 }}
                 leftIcon={kofiIcon}
                 rightIcon={extLinkIcon}
-                textContent="Ko-fi (HQ Files)"
+                textContent="Ko-fi (HD Downloads)"
                 variant="hamburger-outlined"
               />
               <ZDAButton
@@ -215,6 +221,16 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 rightIcon={extLinkIcon}
                 textContent="Venmo"
                 variant="hamburger-outlined"
+              />
+            </Box>
+            <Box className="flex flex-col flex-wrap content-center items-center justify-center gap-[6px]">
+              {/* Kofi gif */}
+              <img
+                src={kofiGifInfo.src}
+                alt={kofiGifInfo.alt}
+                title={kofiGifInfo.title}
+                onClick={() => clickLink(kofiLink)}
+                className="kofi-gif-img z-20 h-full w-20 object-cover object-center rounded-md select-none cursor-pointer subpixel-antialiased"
               />
             </Box>
           </div>

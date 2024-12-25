@@ -113,6 +113,8 @@ export default {
         'logo-blue': '8px 4px 6px #2284ff9a',
         'logo-redpink': '8px 4px 6px #ff00489f',
         'logo-red': '8px 4px 6px #ff00379a',
+        'logo-kofi': '6px 4px 8px #ff5a2a85',
+        'logo-kofi-dark': '3px 2px 6px #fffaca80',
         'name-sm-light': '-2px 0 1px #19141a2a',
         'name-sm-dark': '-4px 0 3px #6060607a',
         'z-logo-hover-light': '0 0 5px #ff0048a0',
