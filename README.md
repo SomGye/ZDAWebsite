@@ -44,13 +44,13 @@
 ------
 ##### Examples Page
 - To see the Commission Tiers Examples page you can do one of the following:
-  - Go to the `/examples` route (or https://www.zerodayanubis.com/examples)
+  - Go to the `/examples` route (or https://zerodayanubis.com/examples)
   - Run `npm run examples`
   - Scroll down to the footer and click the "Thank you for visiting!"
 ------
 ##### Logo Page
 - To see the ZDA Logo page you can do one of the following:
-  - Go to the `/logo` route (or https://www.zerodayanubis.com/logo)
+  - Go to the `/logo` route (or https://zerodayanubis.com/logo)
   - Run `npm run logo`
   - Click the **Z** logo in the top banner (left for tablet/desktop, center for phone)
 ------
