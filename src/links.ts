@@ -3,7 +3,7 @@
 export const commFormLink = "https://go.zda.works/commform";
 export const commInfoLink = "https://go.zda.works/comminfo";
 export const privacyLink = "https://go.zda.works/privacyzda";
-export const zdaWorksLink = "https://www.zda.works/";
+export const zdaWorksLink = "https://zda.works/";
 // Social Media
 export const bskyLink = "https://bsky.app/profile/zerodayanubis.com";
 export const igLink = "https://instagram.com/zerodayanubis?igshid=OGQ5ZDc2ODk2ZA==";
