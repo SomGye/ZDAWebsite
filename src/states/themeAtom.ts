@@ -9,3 +9,5 @@ export const colorSchemeAtom = atom({
   key: "ColorSchemeState",
   default: "blue", // supported: "blue", "red"
 });
+
+export const colorSchemes = ["blue", "red"];

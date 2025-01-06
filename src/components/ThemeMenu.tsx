@@ -1,5 +1,5 @@
 import * as React from "react";
-import { colorSchemeAtom, themeAtom } from "../states/themeAtom";
+import { colorSchemeAtom, colorSchemes, themeAtom } from "../states/themeAtom";
 import { useRecoilState } from "recoil";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
@@ -14,7 +14,6 @@ import { capitalizeString } from "../helpers";
 
 const defaultTheme = "system";
 const defaultColorScheme = "blue";
-const colorSchemes = ["blue", "red"];
 const triggerClasses = [
   {
     className:
@@ -248,7 +247,7 @@ const ThemeMenu = () => {
           {/* Menu Section */}
           <DropdownMenu.Portal>
             <DropdownMenu.Content
-              // TODO: revisit shadow-theme-menu-dropdown light and dark
+              // TODO: revisit shadow-theme-menu-dropdown light and dark 
               className="z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
               sideOffset={5}
               align="start"
