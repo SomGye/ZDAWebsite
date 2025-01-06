@@ -639,7 +639,7 @@ button.yarl__button:focus-visible {
 ::-webkit-scrollbar-thumb {
   border-radius: 16px;
   /* gray-600 */
-  background: rgba(75, 85, 99, 10);
+  background: rgba(107, 114, 128);
   /* gray-700 */
   box-shadow: rgba(55, 65, 81, 0.8) 0px 0px 4px 2px inset;
   @media (prefers-color-scheme: dark) {
@@ -650,12 +650,11 @@ button.yarl__button:focus-visible {
   }
 }
 
-/* TODO: replace red with Tailwind grey or slate to be neutral */
 ::-webkit-scrollbar-thumb:horizontal:hover, ::-webkit-scrollbar-thumb:vertical:hover {
-  /* zdaRedpink-600 */
-  background: #ff0048;
-  /* zdaRedpink-700 */
-  box-shadow: #c7002b5a 0px 0px 4px 2px inset;
+  /* gray-600 */
+  background: #4b5563;
+  /* gray-700 */
+  box-shadow: #3741515a 0px 0px 4px 2px inset;
   @media (prefers-color-scheme: dark) {
     /* gray-700 */
     background: rgb(55, 65, 81);
@@ -665,8 +664,8 @@ button.yarl__button:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb:horizontal:active, ::-webkit-scrollbar-thumb:vertical:active {
-  /* zdaRedpink-700 */
-  background: #c7002b;
+  /* gray-700 */
+  background: #374151;
   @media (prefers-color-scheme: dark) {
     /* slightly lighter gray-900 */
     background: rgb(23, 30, 45);
