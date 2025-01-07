@@ -1,6 +1,6 @@
 import * as React from "react";
 import { loadImgHandler, switchPage } from "../helpers";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/pageAtom";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
@@ -16,14 +16,41 @@ import {
   photosHomeThumbnail,
 } from "../thumbnailInfo";
 import PagePromos from "../components/PagePromos";
+import { colorSchemeAtom, colorSchemes } from "../states/themeAtom";
+
+const linkClasses = [
+  {
+    className:
+      "home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer",
+    colorScheme: colorSchemes[0],
+  },
+  {
+    className:
+      "home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer",
+    colorScheme: colorSchemes[1],
+  },
+];
 
 const HomePage = () => {
   const [, setPage] = useRecoilState(pageAtom);
+  const colorScheme = useRecoilValue(colorSchemeAtom);
   const [idx_home, setIdx_home] = React.useState(-1);
   const [idx_homeBtmSm, setIdx_homeBtmSm] = React.useState(-1);
   const [idx_homeBtmLg, setIdx_homeBtmLg] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
+
+  const getColorSchemeClassName = () => {
+    // Filter on classes for className matching colorScheme
+    const resultObj = linkClasses.filter(
+      (classObj) => classObj.colorScheme === colorScheme
+    );
+    if (resultObj && resultObj.length) {
+      return resultObj[0].className;
+    } else {
+      return linkClasses[0].className;
+    }
+  };
 
   return (
     <div className="home-page-container w-full flex flex-col justify-center items-center text-slate-700 dark:text-slate-200 select-none">
@@ -42,7 +69,7 @@ const HomePage = () => {
       <div className="home-page-promo max-w-[90%] text-sm xs:text-base">
         You can visit my &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
+          className={getColorSchemeClassName()}
           onClick={() => switchPage("Portfolio", setPage)}
         >
           Portfolio
@@ -53,7 +80,7 @@ const HomePage = () => {
         <br />
         ... or you can view my current <br className="block sm:hidden" /> &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
+          className={getColorSchemeClassName()}
           onClick={() => switchPage("Commissions", setPage)}
         >
           Commissions
@@ -66,7 +93,7 @@ const HomePage = () => {
         <br className="block sm:hidden" /> and my brief
         <br className="hidden sm:block md:hidden" /> art journey &nbsp;
         <p
-          className="home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
+          className={getColorSchemeClassName()}
           onClick={() => switchPage("About", setPage)}
         >
           here
