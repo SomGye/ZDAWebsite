@@ -1396,7 +1396,7 @@ const PortfolioPage = () => {
       <SectionBreak />
       <div className="kofi-support-container flex flex-col justify-center items-center mt-12">
         <span className="mb-2 text-slate-600 dark:text-slate-300 select-none">
-          Visit my Ko-fi for{" "}
+          Visit my Ko-fi for <br className="block xs:hidden" />
           <div className="inline text-slate-700 dark:text-slate-200">
             high quality downloads
           </div>{" "}
