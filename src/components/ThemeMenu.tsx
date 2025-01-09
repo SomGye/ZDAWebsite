@@ -26,6 +26,16 @@ const triggerClasses = [
     colorScheme: colorSchemes[1],
   },
 ];
+const contentClasses = [
+  {
+    className: "z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark-blue will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade",
+    colorScheme: colorSchemes[0],
+  },
+  {
+    className: "z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark-red will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade",
+    colorScheme: colorSchemes[1],
+  },
+];
 const itemClasses = [
   {
     className:
@@ -38,7 +48,6 @@ const itemClasses = [
     colorScheme: colorSchemes[1],
   },
 ];
-
 const separatorClasses = [
   {
     className: "h-[1px] m-1 bg-zdaBlue-600/30 dark:bg-zdaBlue-100/20",
@@ -46,6 +55,16 @@ const separatorClasses = [
   },
   {
     className: "h-[1px] m-1 bg-zdaRedpink-600/30 dark:bg-zdaRedpink-100/20",
+    colorScheme: colorSchemes[1],
+  },
+];
+const arrowClasses = [
+  {
+    className: "fill-zdaBG-lighterCard dark:fill-zdaBlue-1000",
+    colorScheme: colorSchemes[0],
+  },
+  {
+    className: "fill-zdaBG-lighterCard dark:fill-zdaRedpink-1000",
     colorScheme: colorSchemes[1],
   },
 ];
@@ -158,8 +177,12 @@ const ThemeMenu = () => {
     // Determine class list from element type
     if (element === "trigger") {
       targetClasses = triggerClasses;
+    } else if (element === "content") {
+      targetClasses = contentClasses;
     } else if (element === "separator") {
       targetClasses = separatorClasses;
+    } else if (element === "arrow") {
+      targetClasses = arrowClasses;
     } else {
       targetClasses = itemClasses;
     }
@@ -247,8 +270,7 @@ const ThemeMenu = () => {
           {/* Menu Section */}
           <DropdownMenu.Portal>
             <DropdownMenu.Content
-              // TODO: revisit shadow-theme-menu-dropdown light and dark 
-              className="z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+              className={getColorSchemeClassName("content")}
               sideOffset={5}
               align="start"
               onInteractOutside={() => setOpen(false)}
@@ -298,7 +320,7 @@ const ThemeMenu = () => {
                 </span>
                 {capitalizeString(colorSchemes[1])}
               </DropdownMenu.Item>
-              <DropdownMenu.Arrow className="fill-zdaBG-lighterCard dark:fill-zdaRedpink-1000" />
+              <DropdownMenu.Arrow className={getColorSchemeClassName("arrow")} />
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
