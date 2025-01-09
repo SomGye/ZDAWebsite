@@ -49,7 +49,7 @@ const footerClasses = [
 const anchorClasses = [
   {
     className:
-      "inline-flex justify-start items-center gap-2 text-sm text-zdaBlue-400 hover:text-zdaBlue-800 active:text-zdaBlue-1000 dark:text-gray-400/80 dark:hover:text-zdaBlue-500 dark:active:text-zdaBlue-500/70 select-none",
+      "inline-flex justify-start items-center gap-2 text-sm text-zdaBlue-500 hover:text-zdaBlue-800 active:text-zdaBlue-1000 dark:text-gray-400/80 dark:hover:text-zdaBlue-500 dark:active:text-zdaBlue-500/70 select-none",
     colorScheme: colorSchemes[0],
   },
   {
