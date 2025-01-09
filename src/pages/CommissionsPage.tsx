@@ -227,6 +227,7 @@ const CommissionsPage = () => {
   React.useEffect(() => {
     // Randomize Coalesce comparison type shown
     setCompare(compareMap[Math.floor(Math.random() * compareMap.length)]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
