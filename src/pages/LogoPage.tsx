@@ -1,9 +1,11 @@
 import * as React from "react";
 import { leftArrowMdIcon } from "../icons";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { themeAtom } from "../states/themeAtom";
-import zdalogo_dark from "/zda_dark.svg";
-import zdalogo_light from "/zda_light.svg";
+import { colorSchemeAtom, colorSchemes, themeAtom } from "../states/themeAtom";
+import zdalogo_dark_blue from "/zda_dark_blue.svg";
+import zdalogo_light_blue from "/zda_light_blue.svg";
+import zdalogo_dark_red from "/zda_dark_red.svg";
+import zdalogo_light_red from "/zda_light_red.svg";
 import zda_redpink from "/zerodayanubis_redpink.svg";
 import zda_red from "/zerodayanubis_red.svg";
 import zda_blue from "/zerodayanubis_blue.svg";
@@ -19,11 +21,50 @@ import {
   altZDALogoLg,
 } from "../AltText";
 
+const logoSources = [
+  {
+    src: zdalogo_light_blue,
+    theme: "",
+    colorScheme: colorSchemes[0],
+  },
+  {
+    src: zdalogo_dark_blue,
+    theme: "dark",
+    colorScheme: colorSchemes[0],
+  },
+  {
+    src: zdalogo_light_red,
+    theme: "",
+    colorScheme: colorSchemes[1],
+  },
+  {
+    src: zdalogo_dark_red,
+    theme: "dark",
+    colorScheme: colorSchemes[1],
+  },
+];
+
 const LogoPage = () => {
   const theme = useRecoilValue(themeAtom);
+  const colorScheme = useRecoilValue(colorSchemeAtom);
   const [, setPage] = useRecoilState(pageAtom);
   const colorMap = ["redpink", "red", "blue", "system"];
   const [currentColor, setColor] = React.useState(colorMap[0]);
+
+  const getLogoSrc = () => {
+    // Normalize "light"/"system" to "" for theme filter
+    const normalizedTheme = theme !== "dark" ? "" : theme;
+    // Filter on sources by theme and colorScheme
+    const resultObj = logoSources.filter(
+      (logoSrc) =>
+        logoSrc.colorScheme === colorScheme && logoSrc.theme === normalizedTheme
+    );
+    if (resultObj && resultObj.length) {
+      return resultObj[0].src;
+    } else {
+      return logoSources[0].src;
+    }
+  };
 
   React.useEffect(() => {
     // Hide the init loading screen
@@ -46,7 +87,7 @@ const LogoPage = () => {
         <div className="flex flex-col items-center my-10 lg:my-14">
           <img
             className="relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-light dark:drop-shadow-logo-dark select-none"
-            src={theme === "dark" ? zdalogo_dark : zdalogo_light}
+            src={getLogoSrc()}
             alt={altZDALogoLg}
             width={400}
             height={400}
