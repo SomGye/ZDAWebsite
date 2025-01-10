@@ -207,7 +207,6 @@ const Header = () => {
                 onClick={() => switchPage("Logo", setPage)}
                 onTouchEnd={() => switchPage("Logo", setPage)}
               />
-              {/* // ? TODO: figure out lag when switching red/blue */}
               <img
                 src={getLogoSrc()}
                 alt={altZDALogoCirc}

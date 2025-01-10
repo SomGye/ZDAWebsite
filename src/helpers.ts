@@ -28,7 +28,14 @@ export const switchPage = (
   setPage: (page: string) => void,
   hardUrl: boolean = false
 ) => {
+  /* Reset scroll position to top;
+  if unsuccessful, use smooth scroll after short delay */
   document.body.scrollTop = document.documentElement.scrollTop = 0;
+  const scrollDelay = 220;
+  setTimeout(() => {
+    scrollToTop();
+  }, scrollDelay);
+
   // Set URL to target without refresh
   if (target === "Home") {
     window.history.replaceState({}, "", "/");
