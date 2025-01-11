@@ -1,5 +1,10 @@
 import * as React from "react";
-import { colorSchemeAtom, colorSchemes, themeAtom } from "../states/themeAtom";
+import {
+  colorSchemeAtom,
+  themes,
+  colorSchemes,
+  themeAtom,
+} from "../states/themeAtom";
 import { useRecoilState } from "recoil";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
@@ -12,8 +17,8 @@ import {
 } from "../icons";
 import { capitalizeString } from "../helpers";
 
-const defaultTheme = "system";
-const defaultColorScheme = "blue";
+const defaultTheme = themes[themes.length - 1]; // "system"
+const defaultColorScheme = colorSchemes[0];
 const triggerClasses = [
   {
     className:
@@ -28,11 +33,13 @@ const triggerClasses = [
 ];
 const contentClasses = [
   {
-    className: "z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark-blue will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade",
+    className:
+      "z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark-blue will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade",
     colorScheme: colorSchemes[0],
   },
   {
-    className: "z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark-red will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade",
+    className:
+      "z-50 min-w-40 bg-zdaBG-lighterCard dark:bg-zdaBG-darkerCard rounded-lg p-2 shadow-theme-menu-dropdown-light dark:shadow-theme-menu-dropdown-dark-red will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade",
     colorScheme: colorSchemes[1],
   },
 ];
@@ -74,8 +81,9 @@ const ThemeMenu = () => {
   const [colorScheme, setColorScheme] = useRecoilState(colorSchemeAtom);
   const [isAutoMode, setAutoMode] = React.useState(true);
   const [open, setOpen] = React.useState(false);
-  const [sysOption, setOption] = React.useState("system"); // dark/light/system
+  const [sysOption, setOption] = React.useState("system"); // used for Auto Mode and active highlight for themes
   const systemMatch = window.matchMedia("(prefers-color-scheme: dark)");
+  const themeIcons = [darkMenuIcon, lightMenuIcon, sysMenuIcon];
 
   const changeTheme = (newTheme: string) => {
     if (newTheme === "dark") {
@@ -275,52 +283,48 @@ const ThemeMenu = () => {
               align="start"
               onInteractOutside={() => setOpen(false)}
             >
-              {/* TODO: use mapping instead! */}
               {/* Theme Items */}
-              <DropdownMenu.Item
-                className={getColorSchemeClassName("item")}
-                onClick={() => changeTheme("dark")}
-              >
-                <span className="mr-2 4xl:mr-3 4k:mr-4">{darkMenuIcon}</span>
-                Dark
-              </DropdownMenu.Item>
-              <DropdownMenu.Item
-                className={getColorSchemeClassName("item")}
-                onClick={() => changeTheme("light")}
-              >
-                <span className="mr-2 4xl:mr-3 4k:mr-4">{lightMenuIcon}</span>
-                Light
-              </DropdownMenu.Item>
-              <DropdownMenu.Item
-                className={getColorSchemeClassName("item")}
-                onClick={() => changeTheme("system")}
-              >
-                <span className="mr-2 4xl:mr-3 4k:mr-4">{sysMenuIcon}</span>
-                System
-              </DropdownMenu.Item>
+              {themes.map((themeItem, idx) => (
+                <DropdownMenu.Item
+                  className={getColorSchemeClassName("item")}
+                  onClick={() => changeTheme(themeItem)}
+                >
+                  <span className="mr-2 4xl:mr-3 4k:mr-4">
+                    {themeIcons[idx]}
+                  </span>
+                  {sysOption === themeItem ? (
+                    <div className="font-semibold">
+                      {capitalizeString(themeItem)}
+                    </div>
+                  ) : (
+                    <div>{capitalizeString(themeItem)}</div>
+                  )}
+                </DropdownMenu.Item>
+              ))}
               <DropdownMenu.Separator
                 className={getColorSchemeClassName("separator")}
               />
               {/* Color Scheme Items */}
-              <DropdownMenu.Item
-                className={getColorSchemeClassName("item")}
-                onClick={() => changeColorScheme(colorSchemes[0])}
-              >
-                <span className="mr-2 4xl:mr-3 4k:mr-4">
-                  {colorSchemeMenuIcon}
-                </span>
-                {capitalizeString(colorSchemes[0])}
-              </DropdownMenu.Item>
-              <DropdownMenu.Item
-                className={getColorSchemeClassName("item")}
-                onClick={() => changeColorScheme(colorSchemes[1])}
-              >
-                <span className="mr-2 4xl:mr-3 4k:mr-4">
-                  {colorSchemeMenuIcon}
-                </span>
-                {capitalizeString(colorSchemes[1])}
-              </DropdownMenu.Item>
-              <DropdownMenu.Arrow className={getColorSchemeClassName("arrow")} />
+              {colorSchemes.map((colorSchemeItem) => (
+                <DropdownMenu.Item
+                  className={getColorSchemeClassName("item")}
+                  onClick={() => changeColorScheme(colorSchemeItem)}
+                >
+                  <span className="mr-2 4xl:mr-3 4k:mr-4">
+                    {colorSchemeMenuIcon}
+                  </span>
+                  {colorScheme === colorSchemeItem ? (
+                    <div className="font-semibold">
+                      {capitalizeString(colorSchemeItem)}
+                    </div>
+                  ) : (
+                    <div>{capitalizeString(colorSchemeItem)}</div>
+                  )}
+                </DropdownMenu.Item>
+              ))}
+              <DropdownMenu.Arrow
+                className={getColorSchemeClassName("arrow")}
+              />
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
