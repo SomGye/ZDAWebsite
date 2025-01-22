@@ -34,6 +34,7 @@ const linkClasses = [
 const HomePage = () => {
   const [, setPage] = useRecoilState(pageAtom);
   const colorScheme = useRecoilValue(colorSchemeAtom);
+  const [idx_scheme, setIdx_scheme] = React.useState(0);
   const [idx_home, setIdx_home] = React.useState(-1);
   const [idx_homeBtmSm, setIdx_homeBtmSm] = React.useState(-1);
   const [idx_homeBtmLg, setIdx_homeBtmLg] = React.useState(-1);
@@ -51,6 +52,11 @@ const HomePage = () => {
       return linkClasses[0].className;
     }
   };
+
+  React.useEffect(() => {
+    // Update matched scheme index
+    setIdx_scheme(colorSchemes.indexOf(colorScheme));
+  }, [colorScheme]);
 
   return (
     <div className="home-page-container w-full flex flex-col justify-center items-center text-slate-700 dark:text-slate-200 select-none">
@@ -265,19 +271,11 @@ const HomePage = () => {
         </div>
         <div className="home-page-showcase2-img-container hidden 2xl:flex flex-row justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
-            src={photosHomeBtmLgThumbnail[0].blurSrc}
-            alt={photosHomeBtmLgThumbnail[0].alt}
-            title={photosHomeBtmLgThumbnail[0].title}
-            className="home-img06b z-20 h-full w-[62.5rem] my-4 object-cover object-center rounded-md select-none"
-            loading="lazy"
-          />
-          <img
             onClick={() => setIdx_homeBtmLg(0)}
-            onLoad={() => loadImgHandler("home-img06")}
-            src={photosHomeBtmLgThumbnail[0].src}
-            alt={photosHomeBtmLgThumbnail[0].alt}
-            title={photosHomeBtmLgThumbnail[0].title}
-            className="hidden home-img06 z-10 h-full w-[62.5rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            src={photosHomeBtmLgThumbnail[idx_scheme][0].src}
+            alt={photosHomeBtmLgThumbnail[idx_scheme][0].alt}
+            title={photosHomeBtmLgThumbnail[idx_scheme][0].title}
+            className="home-img06 z-10 h-full w-[62.5rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
             plugins={[Captions]}
@@ -299,7 +297,7 @@ const HomePage = () => {
               iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
               iconClose: () => <IoMdCloseCircle size={28} />,
             }}
-            slides={photosHomeBtmLg}
+            slides={photosHomeBtmLg[idx_scheme]}
             styles={{
               container: {
                 backdropFilter: "blur(16px)",

@@ -6,12 +6,14 @@ import {
   themeAtom,
 } from "../../states/themeAtom";
 import ThemeMenu from "../../components/ThemeMenu";
-import zdaDarkCircLogo from "/zda_dark_circ.svg";
-import zdaLightCircLogo from "/zda_light_circ.svg";
-import zdaDarkCircHoverBlueLogo from "/zda_dark_circ_hover_blue.svg";
-import zdaLightCircHoverBlueLogo from "/zda_light_circ_hover_blue.svg";
-import zdaDarkCircHoverRedLogo from "/zda_dark_circ_hover_red.svg";
-import zdaLightCircHoverRedLogo from "/zda_light_circ_hover_red.svg";
+import {
+  zda_dark_circ_hover_blue_logo,
+  zda_dark_circ_hover_red_logo,
+  zda_dark_circ_logo,
+  zda_light_circ_hover_blue_logo,
+  zda_light_circ_hover_red_logo,
+  zda_light_circ_logo,
+} from "../../SvgSources";
 import { switchPage } from "../../helpers";
 import { pageAtom } from "../../states/pageAtom";
 import HamburgerMenu from "../../components/HamburgerMenu";
@@ -34,22 +36,22 @@ const navButtonClasses = [
 ];
 const circLogoSources = [
   {
-    src: zdaLightCircHoverBlueLogo,
+    src: zda_light_circ_hover_blue_logo,
     theme: "",
     colorScheme: colorSchemes[0],
   },
   {
-    src: zdaDarkCircHoverBlueLogo,
+    src: zda_dark_circ_hover_blue_logo,
     theme: "dark",
     colorScheme: colorSchemes[0],
   },
   {
-    src: zdaLightCircHoverRedLogo,
+    src: zda_light_circ_hover_red_logo,
     theme: "",
     colorScheme: colorSchemes[1],
   },
   {
-    src: zdaDarkCircHoverRedLogo,
+    src: zda_dark_circ_hover_red_logo,
     theme: "dark",
     colorScheme: colorSchemes[1],
   },
@@ -198,7 +200,9 @@ const Header = () => {
             <div className="header-logo-box mr-1 sm:mr-2 lg:mr-1">
               {/* Logo Btn */}
               <img
-                src={theme === "dark" ? zdaDarkCircLogo : zdaLightCircLogo}
+                src={
+                  theme === "dark" ? zda_dark_circ_logo : zda_light_circ_logo
+                }
                 alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
                 className="header-logo cursor-pointer pointer-events-auto select-none motion-safe:transition ease-out motion-safe:duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"

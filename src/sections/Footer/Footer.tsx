@@ -5,16 +5,18 @@ import {
   colorSchemes,
   themeAtom,
 } from "../../states/themeAtom";
-import zda_dark from "/zda_dark_mono.svg";
-import zda_dark_hover_blue from "/zda_dark_mono_hover_blue.svg";
-import zda_dark_hover_red from "/zda_dark_mono_hover_red.svg";
-import zda_light from "/zda_light_mono.svg";
-import zda_light_hover_blue from "/zda_light_mono_hover_blue.svg";
-import zda_light_hover_red from "/zda_light_mono_hover_red.svg";
-import zerodayanubis_dark from "/zerodayanubis_dark.svg";
-import zerodayanubis_light from "/zerodayanubis_light.svg";
-import zdaworks_dark from "/zdaworks_dark_nl.svg";
-import zdaworks_light from "/zdaworks_light_nl.svg";
+import {
+  zdamono_dark,
+  zdamono_dark_hover_blue,
+  zdamono_dark_hover_red,
+  zdamono_light,
+  zdamono_light_hover_blue,
+  zdamono_light_hover_red,
+  zdaworks_dark,
+  zdaworks_light,
+  zerodayanubis_dark,
+  zerodayanubis_light,
+} from "../../SvgSources";
 import { chatIcon, emailIcon, privacyDocIcon } from "../../icons";
 import { clickEmail, clickLink, switchPage } from "../../helpers";
 import { pageAtom } from "../../states/pageAtom";
@@ -74,22 +76,22 @@ const bgClasses = [
 
 const monoLogoSources = [
   {
-    src: zda_light_hover_blue,
+    src: zdamono_light_hover_blue,
     theme: "",
     colorScheme: colorSchemes[0],
   },
   {
-    src: zda_dark_hover_blue,
+    src: zdamono_dark_hover_blue,
     theme: "dark",
     colorScheme: colorSchemes[0],
   },
   {
-    src: zda_light_hover_red,
+    src: zdamono_light_hover_red,
     theme: "",
     colorScheme: colorSchemes[1],
   },
   {
-    src: zda_dark_hover_red,
+    src: zdamono_dark_hover_red,
     theme: "dark",
     colorScheme: colorSchemes[1],
   },
@@ -325,7 +327,7 @@ const Footer = () => {
             <div className="flex font-medium items-center md:justify-start justify-center text-gray-900">
               <div className="header-logo-box mr-1 sm:mr-2 lg:mr-1 items-center">
                 <img
-                  src={theme === "dark" ? zda_dark : zda_light}
+                  src={theme === "dark" ? zdamono_dark : zdamono_light}
                   alt={altZDALogoSm}
                   className="header-logo cursor-default pointer-events-none select-none motion-safe:transition ease-out motion-safe:duration-300 3xl:w-[32px] 3xl:h-[32px] 4xl:w-[40px] 4xl:h-[40px] 4k:w-[56px] 4k:h-[56px]"
                   width={32}

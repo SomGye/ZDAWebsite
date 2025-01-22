@@ -9,7 +9,7 @@ import {
 } from "../thumbnailInfo";
 import ZDAButton from "../components/ZDAButton";
 import { loadImgHandler, switchPage } from "../helpers";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { pageAtom } from "../states/pageAtom";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
@@ -23,15 +23,23 @@ import {
   photosCommissionsVectorize,
 } from "../lightboxInfo";
 import { zdaWorksLink } from "../links";
+import { colorSchemeAtom, colorSchemes } from "../states/themeAtom";
 
 const ExamplesPage = () => {
   const currentYear = new Date().getFullYear();
   const [, setPage] = useRecoilState(pageAtom);
+  const colorScheme = useRecoilValue(colorSchemeAtom);
+  const [idx_scheme, setIdx_scheme] = React.useState(0);
   const [idx_abstractify, setIdx_abstractify] = React.useState(-1);
   const [idx_vectorize, setIdx_vectorize] = React.useState(-1);
   const [idx_coalesce, setIdx_coalesce] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
+
+  React.useEffect(() => {
+    // Update matched scheme index
+    setIdx_scheme(colorSchemes.indexOf(colorScheme));
+  }, [colorScheme]);
 
   React.useEffect(() => {
     // Hide the init loading screen
@@ -202,7 +210,7 @@ const ExamplesPage = () => {
             iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
             iconClose: () => <IoMdCloseCircle size={28} />,
           }}
-          slides={photosCommissionsVectorize}
+          slides={photosCommissionsVectorize[idx_scheme]}
           styles={{
             container: {
               backdropFilter: "blur(16px)",

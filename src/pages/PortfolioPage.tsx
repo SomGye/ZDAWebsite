@@ -29,8 +29,12 @@ import { IoMdCloseCircle } from "react-icons/io";
 import JumpToNav from "../components/JumpToNav";
 import ZDAButton from "../components/ZDAButton";
 import { kofiLink } from "../links";
+import { useRecoilValue } from "recoil";
+import { colorSchemeAtom, colorSchemes } from "../states/themeAtom";
 
 const PortfolioPage = () => {
+  const colorScheme = useRecoilValue(colorSchemeAtom);
+  const [idx_scheme, setIdx_scheme] = React.useState(0);
   const [idx_posters1, setIdx_posters1] = React.useState(-1);
   const [idx_posters2, setIdx_posters2] = React.useState(-1);
   const [idx_posters3, setIdx_posters3] = React.useState(-1);
@@ -77,6 +81,11 @@ const PortfolioPage = () => {
     []
   );
 
+  React.useEffect(() => {
+    // Update matched scheme index
+    setIdx_scheme(colorSchemes.indexOf(colorScheme));
+  }, [colorScheme]);
+
   return (
     <div className="portfolio-page-container w-full flex flex-col justify-center items-center">
       <JumpToNav
@@ -90,10 +99,55 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-left flex flex-col justify-center md:justify-start items-center md:ml-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[0].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][0].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                A terrifying mix of
+                Broken and scattered grids,
+                <br />
+                hiding unknown meaning,
+                <br /> betray a latent energy that
+                <div className="italic font-semibold tracking-wide">
+                  {"shines through your soul."}
+                </div>
+              </div>
+            </div>
+            <img
+              src={photosPortfolioPostersThumbnail[idx_scheme][0].blurSrc}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][0].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][0].title}
+              className="portfolio-posters-img01b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
+              onClick={() => setIdx_posters1(0)}
+              onLoad={() => loadImgHandler("portfolio-posters-img01")}
+              src={photosPortfolioPostersThumbnail[idx_scheme][0].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][0].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][0].title}
+              className="hidden portfolio-posters-img01 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+            />
+          </div>
+          <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
+            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              Broken and scattered grids,
+              <br className="block lg:hidden" />
+              hiding unknown meanings,
+              <br /> betray a latent energy that
+              <div className="italic font-semibold tracking-wide">
+                {"shines through your soul."}
+              </div>
+            </div>
+          </div>
+        </div>
+        <SectionBreak />
+        <div className="portfolio-posters-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
+          <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
+            <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
+              <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
+                {photosPortfolioPostersThumbnail[idx_scheme][1].title}
+              </span>
+              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                An unnerving mix of
                 <br className="block lg:hidden" />
                 striking red splatters and streaks
                 <br /> over a shockingly dark red backdrop,
@@ -104,25 +158,17 @@ const PortfolioPage = () => {
               </div>
             </div>
             <img
-              src={photosPortfolioPostersThumbnail[0].blurSrc}
-              alt={photosPortfolioPostersThumbnail[0].alt}
-              title={photosPortfolioPostersThumbnail[0].title}
-              className="portfolio-posters-img01b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
-              loading="lazy"
-            />
-            <img
-              onClick={() => setIdx_posters1(0)}
-              onLoad={() => loadImgHandler("portfolio-posters-img01")}
-              src={photosPortfolioPostersThumbnail[0].src}
-              alt={photosPortfolioPostersThumbnail[0].alt}
-              title={photosPortfolioPostersThumbnail[0].title}
-              className="hidden portfolio-posters-img01 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              onClick={() => setIdx_posters1(1)}
+              src={photosPortfolioPostersThumbnail[idx_scheme][1].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][1].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][1].title}
+              className="portfolio-posters-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              A terrifying mix of
-              <br className="block md:hidden" />
+              An unnerving mix of
+              <br className="block lg:hidden" />
               striking red splatters and streaks
               <br /> over a shockingly dark red backdrop,
               <br /> framed by inverse colors to further highlight
@@ -132,52 +178,13 @@ const PortfolioPage = () => {
             </div>
           </div>
         </div>
-        <SectionBreak />
-        <div className="portfolio-posters-container-right w-full flex flex-col px-4 md:pr-5 md:flex-row-reverse justify-between items-center mx-auto">
-          <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
-            <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
-              <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[1].title}
-              </span>
-              <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                <div className="italic font-semibold tracking-wide">
-                  A piece of muted <br className="block lg:hidden" /> yet
-                  whimsical graphic design,
-                </div>
-                racing stripes dash across the middle
-                <br /> while a gray sphere hides a
-                <br /> subtle blue gradient,
-                <br /> over a dotted backdrop.
-              </div>
-            </div>
-            <img
-              onClick={() => setIdx_posters1(1)}
-              src={photosPortfolioPostersThumbnail[1].src}
-              alt={photosPortfolioPostersThumbnail[1].alt}
-              title={photosPortfolioPostersThumbnail[1].title}
-              className="portfolio-posters-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
-            />
-          </div>
-          <div className="portfolio-posters-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
-            <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              <div className="italic font-semibold tracking-wide">
-                A piece of muted yet <br className="block md:hidden" />{" "}
-                whimsical graphic design,
-              </div>
-              racing stripes dash across the middle
-              <br /> while a gray sphere hides a
-              <br /> subtle blue gradient,
-              <br /> over a dotted backdrop.
-            </div>
-          </div>
-        </div>
       </div>
       <div className="portfolio-posters-subcontainer max-w-fit">
         <div className="portfolio-posters-container-left w-full flex flex-col px-4 md:pl-5 md:flex-row justify-between items-center mx-auto">
           <div className="portfolio-posters-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-left flex flex-col justify-center md:justify-start items-center md:ml-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[2].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][2].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 A dark red rose comprised <br className="block lg:hidden" /> of
@@ -190,9 +197,9 @@ const PortfolioPage = () => {
             </div>
             <img
               onClick={() => setIdx_posters1(2)}
-              src={photosPortfolioPostersThumbnail[2].src}
-              alt={photosPortfolioPostersThumbnail[2].alt}
-              title={photosPortfolioPostersThumbnail[2].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][2].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][2].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][2].title}
               className="portfolio-posters-img03 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
@@ -200,7 +207,8 @@ const PortfolioPage = () => {
             <div className="portfolio-posters-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               A dark red rose comprised <br className="block md:hidden" /> of
               sharp, deadly lines
-              <br /> with edges of a haunting past looming overhead.
+              <br /> with edges of a haunting <br className="block sm:hidden" />{" "}
+              past looming overhead.
               <div className="italic font-semibold tracking-wide">
                 {"This flower holds a troublesome tale."}
               </div>
@@ -212,7 +220,7 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[3].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][3].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
@@ -223,18 +231,18 @@ const PortfolioPage = () => {
               </div>
             </div>
             <img
-              src={photosPortfolioPostersThumbnail[3].blurSrc}
-              alt={photosPortfolioPostersThumbnail[3].alt}
-              title={photosPortfolioPostersThumbnail[3].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][3].blurSrc}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][3].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][3].title}
               className="portfolio-posters-img04b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
               onClick={() => setIdx_posters1(3)}
               onLoad={() => loadImgHandler("portfolio-posters-img04")}
-              src={photosPortfolioPostersThumbnail[3].src}
-              alt={photosPortfolioPostersThumbnail[3].alt}
-              title={photosPortfolioPostersThumbnail[3].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][3].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][3].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][3].title}
               className="portfolio-posters-img04 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
@@ -269,7 +277,7 @@ const PortfolioPage = () => {
           iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
           iconClose: () => <IoMdCloseCircle size={28} />,
         }}
-        slides={photosPortfolioPosters1}
+        slides={photosPortfolioPosters1[idx_scheme]}
         styles={{
           container: {
             backdropFilter: "blur(16px)",
@@ -298,7 +306,7 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-left flex flex-col justify-center md:justify-start items-center md:ml-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[4].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][4].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 Tendrils of outlandish energy and color,
@@ -309,18 +317,18 @@ const PortfolioPage = () => {
               </div>
             </div>
             <img
-              src={photosPortfolioPostersThumbnail[4].blurSrc}
-              alt={photosPortfolioPostersThumbnail[4].alt}
-              title={photosPortfolioPostersThumbnail[4].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][4].blurSrc}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][4].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][4].title}
               className="portfolio-posters-img05b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
               onClick={() => setIdx_posters2(0)}
               onLoad={() => loadImgHandler("portfolio-posters-img05")}
-              src={photosPortfolioPostersThumbnail[4].src}
-              alt={photosPortfolioPostersThumbnail[4].alt}
-              title={photosPortfolioPostersThumbnail[4].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][4].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][4].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][4].title}
               className="hidden portfolio-posters-img05 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
@@ -339,7 +347,7 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[5].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][5].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
@@ -353,18 +361,18 @@ const PortfolioPage = () => {
               </div>
             </div>
             <img
-              src={photosPortfolioPostersThumbnail[5].blurSrc}
-              alt={photosPortfolioPostersThumbnail[5].alt}
-              title={photosPortfolioPostersThumbnail[5].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][5].blurSrc}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][5].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][5].title}
               className="portfolio-posters-img06b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
               onClick={() => setIdx_posters2(1)}
               onLoad={() => loadImgHandler("portfolio-posters-img06")}
-              src={photosPortfolioPostersThumbnail[5].src}
-              alt={photosPortfolioPostersThumbnail[5].alt}
-              title={photosPortfolioPostersThumbnail[5].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][5].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][5].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][5].title}
               className="portfolio-posters-img06 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
@@ -387,7 +395,7 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-title-and-pic-container-left flex flex-col md:flex-row-reverse items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-left flex flex-col justify-center md:justify-start items-center md:ml-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[6].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][6].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 Softly blurred zones of colors
@@ -398,18 +406,18 @@ const PortfolioPage = () => {
               </div>
             </div>
             <img
-              src={photosPortfolioPostersThumbnail[6].blurSrc}
-              alt={photosPortfolioPostersThumbnail[6].alt}
-              title={photosPortfolioPostersThumbnail[6].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][6].blurSrc}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][6].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][6].title}
               className="portfolio-posters-img07b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
               onClick={() => setIdx_posters2(2)}
               onLoad={() => loadImgHandler("portfolio-posters-img07")}
-              src={photosPortfolioPostersThumbnail[6].src}
-              alt={photosPortfolioPostersThumbnail[6].alt}
-              title={photosPortfolioPostersThumbnail[6].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][6].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][6].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][6].title}
               className="hidden portfolio-posters-img07 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
@@ -429,7 +437,7 @@ const PortfolioPage = () => {
           <div className="portfolio-posters-title-and-pic-container-right flex flex-col md:flex-row items-center mx-2 my-4">
             <div className="portfolio-posters-title-container-right flex flex-col justify-center md:justify-start items-center md:mr-8">
               <span className="portfolio-posters-title font-light italic text-lg tracking-wide my-2 pointer-events-none select-none">
-                {photosPortfolioPostersThumbnail[7].title}
+                {photosPortfolioPostersThumbnail[idx_scheme][7].title}
               </span>
               <div className="portfolio-posters-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
@@ -440,18 +448,18 @@ const PortfolioPage = () => {
               </div>
             </div>
             <img
-              src={photosPortfolioPostersThumbnail[7].blurSrc}
-              alt={photosPortfolioPostersThumbnail[7].alt}
-              title={photosPortfolioPostersThumbnail[7].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][7].blurSrc}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][7].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][7].title}
               className="portfolio-posters-img08b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
               loading="lazy"
             />
             <img
               onClick={() => setIdx_posters2(3)}
               onLoad={() => loadImgHandler("portfolio-posters-img08")}
-              src={photosPortfolioPostersThumbnail[7].src}
-              alt={photosPortfolioPostersThumbnail[7].alt}
-              title={photosPortfolioPostersThumbnail[7].title}
+              src={photosPortfolioPostersThumbnail[idx_scheme][7].src}
+              alt={photosPortfolioPostersThumbnail[idx_scheme][7].alt}
+              title={photosPortfolioPostersThumbnail[idx_scheme][7].title}
               className="portfolio-posters-img08 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
@@ -513,63 +521,63 @@ const PortfolioPage = () => {
       <div className="portfolio-posters-showcase w-full sm:w-11/12 flex flex-col md:flex-row justify-center items-center mx-4 my-6 border border-solid md:border-none rounded-md border-slate-300/50 dark:border-slate-700/20 shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)] md:shadow-none dark:md:shadow-none">
         <div className="portfolio-posters-showcase-img-container flex flex-col md:flex-row flex-wrap md:grid md:grid-cols-2 2xl:flex justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
-            src={photosPortfolioPostersThumbnail[8].blurSrc}
-            alt={photosPortfolioPostersThumbnail[8].alt}
-            title={photosPortfolioPostersThumbnail[8].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][8].blurSrc}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][8].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][8].title}
             className="portfolio-posters-img09b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_posters3(0)}
             onLoad={() => loadImgHandler("portfolio-posters-img09")}
-            src={photosPortfolioPostersThumbnail[8].src}
-            alt={photosPortfolioPostersThumbnail[8].alt}
-            title={photosPortfolioPostersThumbnail[8].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][8].src}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][8].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][8].title}
             className="hidden portfolio-posters-img09 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src={photosPortfolioPostersThumbnail[9].blurSrc}
-            alt={photosPortfolioPostersThumbnail[9].alt}
-            title={photosPortfolioPostersThumbnail[9].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][9].blurSrc}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][9].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][9].title}
             className="portfolio-posters-img10b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_posters3(1)}
             onLoad={() => loadImgHandler("portfolio-posters-img10")}
-            src={photosPortfolioPostersThumbnail[9].src}
-            alt={photosPortfolioPostersThumbnail[9].alt}
-            title={photosPortfolioPostersThumbnail[9].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][9].src}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][9].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][9].title}
             className="hidden portfolio-posters-img10 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src={photosPortfolioPostersThumbnail[10].blurSrc}
-            alt={photosPortfolioPostersThumbnail[10].alt}
-            title={photosPortfolioPostersThumbnail[10].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][10].blurSrc}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][10].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][10].title}
             className="portfolio-posters-img11b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_posters3(2)}
             onLoad={() => loadImgHandler("portfolio-posters-img11")}
-            src={photosPortfolioPostersThumbnail[10].src}
-            alt={photosPortfolioPostersThumbnail[10].alt}
-            title={photosPortfolioPostersThumbnail[10].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][10].src}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][10].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][10].title}
             className="hidden portfolio-posters-img11 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <img
-            src={photosPortfolioPostersThumbnail[11].blurSrc}
-            alt={photosPortfolioPostersThumbnail[11].alt}
-            title={photosPortfolioPostersThumbnail[11].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][11].blurSrc}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][11].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][11].title}
             className="portfolio-posters-img12b z-20 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md select-none"
             loading="lazy"
           />
           <img
             onClick={() => setIdx_posters3(3)}
             onLoad={() => loadImgHandler("portfolio-posters-img12")}
-            src={photosPortfolioPostersThumbnail[11].src}
-            alt={photosPortfolioPostersThumbnail[11].alt}
-            title={photosPortfolioPostersThumbnail[11].title}
+            src={photosPortfolioPostersThumbnail[idx_scheme][11].src}
+            alt={photosPortfolioPostersThumbnail[idx_scheme][11].alt}
+            title={photosPortfolioPostersThumbnail[idx_scheme][11].title}
             className="hidden portfolio-posters-img12 z-10 h-full w-64 2xl:w-72 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
@@ -627,10 +635,10 @@ const PortfolioPage = () => {
                 {photosPortfolioAlbumArtThumbnail[0].title}
               </span>
               <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                An ominous pyramid fusing reds and pinks,
-                <br /> with a powerful energy surging inward;
+                Spherical horror abound,
+                <br /> with powerful energy surging all around;
                 <div className="italic font-semibold tracking-wide">
-                  {"...a terrifying energy lurks in the middle."}
+                  {"...a haunting symmetry takes over the middle."}
                 </div>
               </div>
             </div>
@@ -652,10 +660,11 @@ const PortfolioPage = () => {
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              An ominous pyramid fusing reds and pinks,
-              <br /> with a powerful energy surging inward;
+              Spherical horror abound,
+              <br /> with powerful energy surging all around;
               <div className="italic font-semibold tracking-wide">
-                {"...a terrifying energy lurks in the middle."}
+                ...a haunting symmetry <br className="block sm:hidden" /> takes
+                over the middle.
               </div>
             </div>
           </div>
@@ -668,30 +677,37 @@ const PortfolioPage = () => {
                 {photosPortfolioAlbumArtThumbnail[1].title}
               </span>
               <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+                A crimson moon enveloped by a rounded cage,
+                <br /> glowing over a bed of shattered glass,
                 <div className="italic font-semibold tracking-wide">
-                  {"Wild energy surrounds a hypnotic lime orb,"}
+                  a hotbed of insanity and sadness.
                 </div>
-                it's power streaked by hasty dark inks
-                <br /> and passionate flames overtaking our world.
               </div>
             </div>
             <img
+              src={photosPortfolioAlbumArtThumbnail[1].blurSrc}
+              alt={photosPortfolioAlbumArtThumbnail[1].alt}
+              title={photosPortfolioAlbumArtThumbnail[1].title}
+              className="portfolio-albumart-img02b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
+              loading="lazy"
+            />
+            <img
               onClick={() => setIdx_albumart(1)}
+              onLoad={() => loadImgHandler("portfolio-albumart-img02")}
               src={photosPortfolioAlbumArtThumbnail[1].src}
               alt={photosPortfolioAlbumArtThumbnail[1].alt}
               title={photosPortfolioAlbumArtThumbnail[1].title}
-              className="portfolio-albumart-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="hidden portfolio-albumart-img02 z-10 h-full w-80 my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
+              A crimson moon enveloped <br className="block xs:hidden" /> by a
+              rounded cage,
+              <br /> glowing over a bed of shattered glass,
               <div className="italic font-semibold tracking-wide">
-                Wild energy surrounds <br className="block xs:hidden" /> a
-                hypnotic lime orb,
+                a hotbed of insanity and sadness.
               </div>
-              it's power streaked by hasty dark inks
-              <br /> and passionate flames <br className="block xs:hidden" />
-              overtaking our world.
             </div>
           </div>
         </div>
@@ -704,11 +720,11 @@ const PortfolioPage = () => {
                 {photosPortfolioAlbumArtThumbnail[2].title}
               </span>
               <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-                A crimson moon enveloped by a rounded cage,
-                <br /> glowing over a bed of shattered glass,
                 <div className="italic font-semibold tracking-wide">
-                  a hotbed of insanity and sadness.
+                  The mind prison, scattered and stripped;
                 </div>
+                our realities torn to shreds,
+                <br /> as realizations crumble to dust.
               </div>
             </div>
             <img
@@ -729,12 +745,12 @@ const PortfolioPage = () => {
           </div>
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
-              A crimson moon enveloped <br className="block xs:hidden" /> by a
-              rounded cage,
-              <br /> glowing over a bed of shattered glass,
               <div className="italic font-semibold tracking-wide">
-                a hotbed of insanity and sadness.
+                The mind prison, <br className="block xs:hidden" /> scattered
+                and stripped;
               </div>
+              our realities torn to shreds,
+              <br /> as realizations crumble to dust.
             </div>
           </div>
         </div>
@@ -747,22 +763,14 @@ const PortfolioPage = () => {
               </span>
               <div className="portfolio-albumart-blurb-md hidden md:block my-2 text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
                 <div className="italic font-semibold tracking-wide">
-                  The mind prison, scattered and stripped;
+                  {"Wild energy surrounds a hypnotic lime orb,"}
                 </div>
-                our realities torn to shreds,
-                <br /> as realizations crumble to dust.
+                it's power streaked by hasty dark inks
+                <br /> and passionate flames overtaking our world.
               </div>
             </div>
             <img
-              src={photosPortfolioAlbumArtThumbnail[3].blurSrc}
-              alt={photosPortfolioAlbumArtThumbnail[3].alt}
-              title={photosPortfolioAlbumArtThumbnail[3].title}
-              className="portfolio-albumart-img04b z-20 h-full w-80 my-4 object-cover object-center rounded-md select-none"
-              loading="lazy"
-            />
-            <img
               onClick={() => setIdx_albumart(3)}
-              onLoad={() => loadImgHandler("portfolio-albumart-img04")}
               src={photosPortfolioAlbumArtThumbnail[3].src}
               alt={photosPortfolioAlbumArtThumbnail[3].alt}
               title={photosPortfolioAlbumArtThumbnail[3].title}
@@ -772,11 +780,12 @@ const PortfolioPage = () => {
           <div className="portfolio-albumart-blurb-container-mobile flex flex-col md:hidden justify-center items-center mx-2 mb-4">
             <div className="portfolio-albumart-blurb text-slate-800 dark:text-slate-200 text-pretty pointer-events-none select-none">
               <div className="italic font-semibold tracking-wide">
-                The mind prison, <br className="block xs:hidden" /> scattered
-                and stripped;
+                Wild energy surrounds <br className="block xs:hidden" /> a
+                hypnotic lime orb,
               </div>
-              our realities torn to shreds,
-              <br /> as realizations crumble to dust.
+              it's power streaked by hasty dark inks
+              <br /> and passionate flames <br className="block xs:hidden" />
+              overtaking our world.
             </div>
           </div>
         </div>
@@ -1145,7 +1154,7 @@ const PortfolioPage = () => {
               src={photosPortfolioUltrawideThumbnail[0].blurSrc}
               alt={photosPortfolioUltrawideThumbnail[0].alt}
               title={photosPortfolioUltrawideThumbnail[0].title}
-              className="portfolio-ultrawide-img01b z-20 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md select-none"
+              className="portfolio-ultrawide-img01b z-20 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover 2xl:object-none object-center rounded-md select-none"
               loading="lazy"
             />
             <img
@@ -1154,7 +1163,7 @@ const PortfolioPage = () => {
               src={photosPortfolioUltrawideThumbnail[0].src}
               alt={photosPortfolioUltrawideThumbnail[0].alt}
               title={photosPortfolioUltrawideThumbnail[0].title}
-              className="portfolio-ultrawide-img01 z-10 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
+              className="portfolio-ultrawide-img01 z-10 h-full w-[18rem] xs:w-[24rem] sm:w-[33rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[80rem] 3xl:w-[84rem] my-4 object-cover 2xl:object-none object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
             />
           </div>
         </div>

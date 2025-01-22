@@ -12,15 +12,17 @@ import {
   photosCommissionsCoalesceThumbnail,
   photosCommissionsVectorizeThumbnail,
 } from "../thumbnailInfo";
-import a_dark from "/comm-a-dark.svg";
-import a_light_blue from "/comm-a-light-blue.svg";
-import a_light_red from "/comm-a-light-red.svg";
-import c_dark from "/comm-c-dark.svg";
-import c_light_blue from "/comm-c-light-blue.svg";
-import c_light_red from "/comm-c-light-red.svg";
-import v_dark from "/comm-v-dark.svg";
-import v_light_blue from "/comm-v-light-blue.svg";
-import v_light_red from "/comm-v-light-red.svg";
+import {
+  a_dark,
+  a_light_blue,
+  a_light_red,
+  c_dark,
+  c_light_blue,
+  c_light_red,
+  v_dark,
+  v_light_blue,
+  v_light_red,
+} from "../SvgSources";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
@@ -153,6 +155,7 @@ const CommissionsPage = () => {
   const theme = useRecoilValue(themeAtom);
   const colorScheme = useRecoilValue(colorSchemeAtom);
   const commsOpen = useRecoilValue(commsOpenAtom);
+  const [idx_scheme, setIdx_scheme] = React.useState(0);
   const [idx_abstractify, setIdx_abstractify] = React.useState(-1);
   const [idx_vectorize, setIdx_vectorize] = React.useState(-1);
   const [idx_coalesce, setIdx_coalesce] = React.useState(-1);
@@ -204,7 +207,9 @@ const CommissionsPage = () => {
     // Filter on sources by letter, theme, and colorScheme
     const resultObj = letterLogoSources.filter(
       (logoSrc) =>
-        logoSrc.colorScheme === colorScheme && logoSrc.letter === letter && logoSrc.theme === normalizedTheme
+        logoSrc.colorScheme === colorScheme &&
+        logoSrc.letter === letter &&
+        logoSrc.theme === normalizedTheme
     );
     if (resultObj && resultObj.length) {
       return resultObj[0].src;
@@ -225,9 +230,14 @@ const CommissionsPage = () => {
   }, [formScroll, formVisible]);
 
   React.useEffect(() => {
+    // Update matched scheme index
+    setIdx_scheme(colorSchemes.indexOf(colorScheme));
+  }, [colorScheme]);
+
+  React.useEffect(() => {
     // Randomize Coalesce comparison type shown
     setCompare(compareMap[Math.floor(Math.random() * compareMap.length)]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -426,10 +436,10 @@ const CommissionsPage = () => {
             <div className="commissions-page-card-img-container grid">
               <img
                 onClick={() => setIdx_vectorize(0)}
-                src={photosCommissionsVectorizeThumbnail[0].src}
-                alt={photosCommissionsVectorizeThumbnail[0].alt}
+                src={photosCommissionsVectorizeThumbnail[idx_scheme][0].src}
+                alt={photosCommissionsVectorizeThumbnail[idx_scheme][0].alt}
                 title="Click for more examples"
-                className="comm-img02 z-10 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-center rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
+                className="comm-img02 z-10 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-bottom rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
                 style={{ ...{ zoom: "1.05" } }}
               />
             </div>
@@ -524,7 +534,7 @@ const CommissionsPage = () => {
             iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
             iconClose: () => <IoMdCloseCircle size={28} />,
           }}
-          slides={photosCommissionsVectorize}
+          slides={photosCommissionsVectorize[idx_scheme]}
           styles={{
             container: {
               backdropFilter: "blur(16px)",

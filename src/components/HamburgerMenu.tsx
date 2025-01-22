@@ -20,8 +20,7 @@ import {
   printShopIcon,
   threadsIcon,
 } from "../icons";
-import zerodayanubis_dark from "/zerodayanubis_dark.svg";
-import zerodayanubis_light from "/zerodayanubis_light.svg";
+import { zerodayanubis_dark, zerodayanubis_light } from "../SvgSources";
 import { altLongTextLogo } from "../AltText";
 import ZDAButton from "./ZDAButton";
 import {

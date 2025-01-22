@@ -130,3 +130,15 @@ export const altEngineersDanger =
   "Worlds collide and shear apart, in a spooky red flash of light, with a strange red L-frame";
 export const altScatteredExistence =
   "A glowing green symmetrical helix of paint splatters, over a backdrop of pink lines and purple paint splatters";
+export const altEtherealismBlue =
+  "A blocky backdrop of deep blues, with a diagonal wavy streak, glitchy rectangular outlines, bubbles in the corner, and glowing diagonal lines";
+export const altEtherealismRed =
+  "A blocky backdrop of deep magenta and orange, with a diagonal wavy streak, glitchy rectangular outlines, bubbles in the corner, and glowing diagonal lines";
+export const altZesAlt =
+  "A creepy orb of streaked textures, backlit by glowing red and purple and crossed by interlinking lines";
+export const altFocalPoint =
+  "Smooth gradients of sky blue and soft lavender blend towards the middle, where a bubble of light is caressed by atomic lines";
+export const altThing_202409241248 =
+  "A vivid playground of shapes and polygons in wild colors of yellow, orange, blue, and purple, with triangles and waves taking over the middle";
+export const altInternection =
+  "A marked pillar rises, with teal energy lines and a broken purple wave breaking around and over it";
