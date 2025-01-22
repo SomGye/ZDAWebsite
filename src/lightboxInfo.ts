@@ -9,14 +9,17 @@ import {
   altEngineersDiscovery,
   altEnso03,
   altEnterPanic,
+  altEtherealismBlue,
+  altEtherealismRed,
+  altFocalPoint,
   altFrameOfRevelation,
   altHuionSketch_1623363242260,
   altHuionSketch_1623481967592,
   altHuionSketch_1625698314399,
   altHuionSketch_1625699078818,
+  altInternection,
   altKublaiAnubis02,
   altLostInTheStatic,
-  altMemoriamDeLuce,
   altMourningMoonSanguine,
   altNonconformantSpectrum,
   altOutOfShape,
@@ -25,7 +28,6 @@ import {
   altPenUp20210326_003107,
   altPenUp20210422_055424,
   altPitifulPloy,
-  altPrismOfParagon,
   altProneToOblivion,
   altReturningSublimation,
   altRosecranceBrilliance,
@@ -47,28 +49,30 @@ import {
   altTheCruxOfCrisis,
   altTheInfiniteKingdom,
   altTheInfiniteKingdomDamned,
-  altTheMessBetween,
-  altTheTempleOfLoss,
-  altTheToxicDescent,
   altTheTrainedTrespass,
-  altThing_202304261913,
+  altThing_202409241248,
   altTurmoil,
   altWispsOfAfterlife,
   altWretchedWitness,
-  altZeroShift,
+  altZesAlt,
   altZygotesSevered,
 } from "./AltText";
+import rosecrance_brilliance from "/assets/home/rosecrance-20240225-brilliance-pathfix.svg";
+import etherealism_blue_full_rot from "/assets/home/etherealism-20250117_1040-main-full-rotedit-exp.svg";
+import etherealism_red_full_rot from "/assets/home/etherealism-20250117_1040-alt_thermal-full-rotedit-exp.svg";
 import adrift_in_notions from "/assets/about/adrift_in_notions-20240113.svg";
 import wretched_witness from "/assets/about/wretched_witness-20240120.svg";
 import out_of_shape from "/assets/about/out_of_shape-20240218-pathfix.svg";
 import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair-pathfix.svg";
-import zero_shift from "/assets/portfolio/poster/zero_shift-20240330.svg";
+import etherealism_blue from "/assets/portfolio/poster/etherealism-20250117_1040-main.svg";
+import etherealism_red from "/assets/portfolio/poster/etherealism-20250117_1040-thermal.svg";
 import systems from "/assets/portfolio/albumart/systems-20240214_1223-pathfix.svg";
 import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
 import enter_panic from "/assets/commissions/vectorize/enter_panic-20240511.svg";
 import prone_to_oblivion_notext from "/assets/commissions/vectorize/prone_to_oblivion-20240410-notext.svg";
 import rosecrance_delusion from "/assets/commissions/vectorize/rosecrance-20240225-delusion-pathfix.svg";
-import rosecrance_brilliance from "/assets/home/rosecrance-20240225-brilliance-pathfix.svg";
+import etherealism_blue_full from "/assets/commissions/vectorize/etherealism-20250117_1040-main-full.svg";
+import etherealism_red_full from "/assets/commissions/vectorize/etherealism-20250117_1040-alt_thermal-full.svg";
 import semblance_peace from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-peace.svg";
 import semblance_solitude from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-solitude.svg";
 
@@ -114,13 +118,24 @@ export const photosHomeBtmSm = [
 ];
 
 export const photosHomeBtmLg = [
-  {
-    src: "/assets/home/lightbox/2024-08-27-Pitiful_Ploy-65p-c1.jpg",
-    width: 3840,
-    height: 2160,
-    alt: altPitifulPloy,
-    title: "Pitiful Ploy",
-  },
+  [
+    {
+      src: etherealism_blue_full_rot,
+      width: 2705,
+      height: 2051,
+      alt: altEtherealismBlue,
+      title: "Etherealism",
+    },
+  ],
+  [
+    {
+      src: etherealism_red_full_rot,
+      width: 2705,
+      height: 2051,
+      alt: altEtherealismRed,
+      title: "Etherealism",
+    },
+  ],
 ];
 
 export const photosAbout = [
@@ -217,34 +232,66 @@ export const photosAboutHuion = [
 ];
 
 export const photosPortfolioPosters1 = [
-  {
-    src: "/assets/portfolio/poster/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
-    width: 2280,
-    height: 3225,
-    alt: altTurmoil,
-    title: "TURMOIL",
-  },
-  {
-    src: zero_shift,
-    width: 2280,
-    height: 3225,
-    alt: altZeroShift,
-    title: "Zero Shift",
-  },
-  {
-    src: rosecrance_despair,
-    width: 2280,
-    height: 3225,
-    alt: altRosecranceDespair,
-    title: "Rosecrance - Despair Version",
-  },
-  {
-    src: "/assets/portfolio/poster/lightbox/2023-11-28-A_Visual_Violation-65p-c1.jpg",
-    width: 2280,
-    height: 3225,
-    alt: altAVisualViolation,
-    title: "A Visual Violation",
-  },
+  [
+    {
+      src: etherealism_blue,
+      width: 3508,
+      height: 4961,
+      alt: altEtherealismBlue,
+      title: "Etherealism",
+    },
+    {
+      src: "/assets/portfolio/poster/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
+      width: 2280,
+      height: 3225,
+      alt: altTurmoil,
+      title: "TURMOIL",
+    },
+    {
+      src: rosecrance_despair,
+      width: 2280,
+      height: 3225,
+      alt: altRosecranceDespair,
+      title: "Rosecrance - Despair Version",
+    },
+    {
+      src: "/assets/portfolio/poster/lightbox/2023-11-28-A_Visual_Violation-65p-c1.jpg",
+      width: 2280,
+      height: 3225,
+      alt: altAVisualViolation,
+      title: "A Visual Violation",
+    },
+  ],
+  [
+    {
+      src: etherealism_red,
+      width: 3508,
+      height: 4961,
+      alt: altEtherealismRed,
+      title: "Etherealism",
+    },
+    {
+      src: "/assets/portfolio/poster/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
+      width: 2280,
+      height: 3225,
+      alt: altTurmoil,
+      title: "TURMOIL",
+    },
+    {
+      src: rosecrance_despair,
+      width: 2280,
+      height: 3225,
+      alt: altRosecranceDespair,
+      title: "Rosecrance - Despair Version",
+    },
+    {
+      src: "/assets/portfolio/poster/lightbox/2023-11-28-A_Visual_Violation-65p-c1.jpg",
+      width: 2280,
+      height: 3225,
+      alt: altAVisualViolation,
+      title: "A Visual Violation",
+    },
+  ],
 ];
 
 export const photosPortfolioPosters2 = [
@@ -311,25 +358,18 @@ export const photosPortfolioPosters3 = [
 
 export const photosPortfolioAlbumArt = [
   {
-    src: "/assets/portfolio/albumart/lightbox/prism_of_paragon-20240216-65p-c1.jpg",
+    src: "/assets/portfolio/albumart/lightbox/2024-10-23-Zes-alt-65p-c1.jpg",
     width: 1331,
     height: 1331,
-    alt: altPrismOfParagon,
-    title: "Prism of Paragon",
-  },
-  {
-    src: systems,
-    width: 1331,
-    height: 1331,
-    alt: altSystems,
-    title: "Systems",
+    alt: altZesAlt,
+    title: "Zes",
   },
   {
     src: "/assets/portfolio/albumart/lightbox/mourning_moon-sanguine-85p-c1.jpg",
     width: 1741,
     height: 1741,
     alt: altMourningMoonSanguine,
-    title: "Mourning Moon (Sanguine)",
+    title: "Mourning Moon",
   },
   {
     src: "/assets/portfolio/albumart/lightbox/2024-08-31-Lost_In_The_Static-reg-80p-c1.jpg",
@@ -337,6 +377,13 @@ export const photosPortfolioAlbumArt = [
     height: 1638,
     alt: altLostInTheStatic,
     title: "Lost In The Static",
+  },
+  {
+    src: systems,
+    width: 1331,
+    height: 1331,
+    alt: altSystems,
+    title: "Systems",
   },
 ];
 
@@ -373,11 +420,11 @@ export const photosPortfolio4kWalls = [
 
 export const photosPortfolioPhoneWalls = [
   {
-    src: "/assets/portfolio/phonewalls/lightbox/2024-01-02-Memoriam_de_Luce-65p-c1.jpg",
+    src: "/assets/portfolio/phonewalls/lightbox/focal_point-20241011-atomic-65p-c1.jpg",
     width: 936,
     height: 2028,
-    alt: altMemoriamDeLuce,
-    title: "Memorium de Luce",
+    alt: altFocalPoint,
+    title: "Focal Point",
   },
   {
     src: "/assets/portfolio/phonewalls/lightbox/2023-11-04-Divinity_Ends-65p-c1.jpg",
@@ -404,11 +451,11 @@ export const photosPortfolioPhoneWalls = [
 
 export const photosPortfolioUltrawide = [
   {
-    src: "/assets/portfolio/ultrawide/lightbox/2023-08-21-Self_Destruct_Sequence-65p-c1.jpg",
-    width: 2662,
-    height: 1114,
-    alt: altSelfDestructSequence,
-    title: "Self-Destruct Sequence",
+    src: "/assets/portfolio/ultrawide/lightbox/Thing_202409241248-frameless-document-30p-c1.jpg",
+    width: 2599,
+    height: 1552,
+    alt: altThing_202409241248,
+    title: "Thing_202409241248",
   },
   {
     src: "/assets/portfolio/ultrawide/lightbox/2024-01-25-The_Trained_Trespass-65p-c1.jpg",
@@ -418,11 +465,11 @@ export const photosPortfolioUltrawide = [
     title: "The Trained Trespass",
   },
   {
-    src: "/assets/portfolio/ultrawide/lightbox/2023-04-26-Thing_202304261913-65p-c1.jpg",
+    src: "/assets/portfolio/ultrawide/lightbox/2023-08-21-Self_Destruct_Sequence-65p-c1.jpg",
     width: 2662,
     height: 1114,
-    alt: altThing_202304261913,
-    title: "Thing 202304261913",
+    alt: altSelfDestructSequence,
+    title: "Self-Destruct Sequence",
   },
 ];
 
@@ -435,11 +482,11 @@ export const photosPortfolioSquare = [
     title: "Saturated Axons",
   },
   {
-    src: "/assets/portfolio/square/lightbox/2023-09-27-The_Temple_of_Loss-65p-c1.jpg",
+    src: "/assets/portfolio/square/lightbox/2024-12-26-Internection-mainv2-notext-65p-c1.jpg",
     width: 1331,
     height: 1331,
-    alt: altTheTempleOfLoss,
-    title: "The Temple of Loss",
+    alt: altInternection,
+    title: "Internection",
   },
   {
     src: "/assets/portfolio/square/lightbox/screaming_sun-notitle-65p-c1.jpg",
@@ -489,34 +536,66 @@ export const photosCommissionsAbstractify = [
 ];
 
 export const photosCommissionsVectorize = [
-  {
-    src: adrift_in_notions,
-    width: 2280,
-    height: 3225,
-    alt: altAdriftInNotions,
-    title: "Adrift In Notions",
-  },
-  {
-    src: enter_panic,
-    width: 2280,
-    height: 3225,
-    alt: altEnterPanic,
-    title: "Enter Panic",
-  },
-  {
-    src: prone_to_oblivion_notext,
-    width: 2280,
-    height: 3225,
-    alt: altProneToOblivion,
-    title: "Prone to Oblivion",
-  },
-  {
-    src: rosecrance_delusion,
-    width: 2280,
-    height: 3225,
-    alt: altRosecranceDelusion,
-    title: "Rosecrance - Delusion Version",
-  },
+  [
+    {
+      src: etherealism_blue_full,
+      width: 2280,
+      height: 3225,
+      alt: altEtherealismBlue,
+      title: "Etherealism",
+    },
+    {
+      src: enter_panic,
+      width: 2280,
+      height: 3225,
+      alt: altEnterPanic,
+      title: "Enter Panic",
+    },
+    {
+      src: prone_to_oblivion_notext,
+      width: 2280,
+      height: 3225,
+      alt: altProneToOblivion,
+      title: "Prone to Oblivion",
+    },
+    {
+      src: rosecrance_delusion,
+      width: 2280,
+      height: 3225,
+      alt: altRosecranceDelusion,
+      title: "Rosecrance - Delusion Version",
+    },
+  ],
+  [
+    {
+      src: etherealism_red_full,
+      width: 2280,
+      height: 3225,
+      alt: altEtherealismRed,
+      title: "Etherealism",
+    },
+    {
+      src: enter_panic,
+      width: 2280,
+      height: 3225,
+      alt: altEnterPanic,
+      title: "Enter Panic",
+    },
+    {
+      src: prone_to_oblivion_notext,
+      width: 2280,
+      height: 3225,
+      alt: altProneToOblivion,
+      title: "Prone to Oblivion",
+    },
+    {
+      src: rosecrance_delusion,
+      width: 2280,
+      height: 3225,
+      alt: altRosecranceDelusion,
+      title: "Rosecrance - Delusion Version",
+    },
+  ],
 ];
 
 export const photosCommissionsCoalesce = [
