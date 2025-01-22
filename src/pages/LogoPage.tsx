@@ -2,15 +2,17 @@ import * as React from "react";
 import { leftArrowMdIcon } from "../icons";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { colorSchemeAtom, colorSchemes, themeAtom } from "../states/themeAtom";
-import zdalogo_dark_blue from "/zda_dark_blue.svg";
-import zdalogo_light_blue from "/zda_light_blue.svg";
-import zdalogo_dark_red from "/zda_dark_red.svg";
-import zdalogo_light_red from "/zda_light_red.svg";
-import zda_redpink from "/zerodayanubis_redpink.svg";
-import zda_red from "/zerodayanubis_red.svg";
-import zda_blue from "/zerodayanubis_blue.svg";
-import zda_dark from "/zerodayanubis_dark.svg";
-import zda_light from "/zerodayanubis_light.svg";
+import {
+  zerodayanubis_blue,
+  zerodayanubis_red,
+  zerodayanubis_redpink,
+  zdalogo_dark_blue,
+  zdalogo_dark_red,
+  zdalogo_light_blue,
+  zdalogo_light_red,
+  zerodayanubis_dark,
+  zerodayanubis_light,
+} from "../SvgSources";
 import { switchPage } from "../helpers";
 import { pageAtom } from "../states/pageAtom";
 import {
@@ -97,7 +99,7 @@ const LogoPage = () => {
           By{" "}
           {currentColor === colorMap[0] && (
             <img
-              src={zda_redpink}
+              src={zerodayanubis_redpink}
               alt={altLongTextLogoRedpink}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
@@ -106,7 +108,7 @@ const LogoPage = () => {
           )}
           {currentColor === colorMap[1] && (
             <img
-              src={zda_red}
+              src={zerodayanubis_red}
               alt={altLongTextLogoRed}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
@@ -115,7 +117,7 @@ const LogoPage = () => {
           )}
           {currentColor === colorMap[2] && (
             <img
-              src={zda_blue}
+              src={zerodayanubis_blue}
               alt={altLongTextLogoBlue}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
@@ -124,7 +126,7 @@ const LogoPage = () => {
           )}
           {currentColor === colorMap[3] && (
             <img
-              src={theme === "dark" ? zda_dark : zda_light}
+              src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               alt={altLongTextLogo}
               className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}

@@ -12,15 +12,17 @@ import {
   photosCommissionsCoalesceThumbnail,
   photosCommissionsVectorizeThumbnail,
 } from "../thumbnailInfo";
-import a_dark from "/comm-a-dark.svg";
-import a_light_blue from "/comm-a-light-blue.svg";
-import a_light_red from "/comm-a-light-red.svg";
-import c_dark from "/comm-c-dark.svg";
-import c_light_blue from "/comm-c-light-blue.svg";
-import c_light_red from "/comm-c-light-red.svg";
-import v_dark from "/comm-v-dark.svg";
-import v_light_blue from "/comm-v-light-blue.svg";
-import v_light_red from "/comm-v-light-red.svg";
+import {
+  a_dark,
+  a_light_blue,
+  a_light_red,
+  c_dark,
+  c_light_blue,
+  c_light_red,
+  v_dark,
+  v_light_blue,
+  v_light_red,
+} from "../SvgSources";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";

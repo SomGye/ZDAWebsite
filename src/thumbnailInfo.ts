@@ -52,20 +52,22 @@ import {
   altZesAlt,
   altZygotesSevered,
 } from "./AltText";
-import adrift_in_notions from "/assets/about/adrift_in_notions-20240113.svg";
-import wretched_witness from "/assets/about/wretched_witness-20240120.svg";
-import out_of_shape from "/assets/about/out_of_shape-20240218-pathfix.svg";
-import rosecrance_despair from "/assets/portfolio/poster/rosecrance-20240225-despair-pathfix.svg";
-import rosecrance_brilliance from "/assets/home/rosecrance-20240225-brilliance-pathfix.svg";
-import etherealism_blue_full from "/assets/home/etherealism-20250117_1040-main-full-rotedit-exp.svg";
-import etherealism_red_full from "/assets/home/etherealism-20250117_1040-alt_thermal-full-rotedit-exp.svg";
-import etherealism_blue from "/assets/portfolio/poster/etherealism-20250117_1040-main.svg";
-import etherealism_red from "/assets/portfolio/poster/etherealism-20250117_1040-thermal.svg";
-import systems from "/assets/portfolio/albumart/systems-20240214_1223-pathfix.svg";
-import prone_to_oblivion from "/assets/portfolio/4kwalls/prone_to_oblivion-20240410.svg";
-import prone_to_oblivion_notext_rot from "/assets/examples/vectorize/prone_to_oblivion-20240410-notext-doc-rot.svg";
-import semblance_peace from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-peace.svg";
-import semblance_solitude from "/assets/commissions/coalesce_comparison/semblance-20240623_1531-solitude.svg";
+import {
+  adrift_in_notions,
+  etherealism_blue,
+  etherealism_blue_full_rot,
+  etherealism_red,
+  etherealism_red_full_rot,
+  out_of_shape,
+  prone_to_oblivion,
+  prone_to_oblivion_notext_rot,
+  rosecrance_brilliance,
+  rosecrance_despair,
+  semblance_peace,
+  semblance_solitude,
+  systems,
+  wretched_witness,
+} from "./SvgSources";
 
 export const photosHomeThumbnail = [
   {
@@ -109,14 +111,14 @@ export const photosHomeBtmSmThumbnail = [
 export const photosHomeBtmLgThumbnail = [
   [
     {
-      src: etherealism_blue_full,
+      src: etherealism_blue_full_rot,
       alt: altEtherealismBlue,
       title: "Etherealism",
     },
   ],
   [
     {
-      src: etherealism_red_full,
+      src: etherealism_red_full_rot,
       alt: altEtherealismRed,
       title: "Etherealism",
     },

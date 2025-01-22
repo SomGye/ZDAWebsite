@@ -1,10 +1,12 @@
 import * as React from "react";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../states/themeAtom";
-import zerodayanubis_dark from "/zerodayanubis_dark.svg";
-import zerodayanubis_light from "/zerodayanubis_light.svg";
-import zdamono_dark from "/zda_dark_mono.svg";
-import zdamono_light from "/zda_light_mono.svg";
+import {
+  zdamono_dark,
+  zdamono_light,
+  zerodayanubis_dark,
+  zerodayanubis_light,
+} from "../SvgSources";
 import { loadImgHandler } from "../helpers";
 import { altLongTextLogo, altZDALogoSm } from "../AltText";
 import Lightbox from "yet-another-react-lightbox";
