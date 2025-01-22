@@ -286,6 +286,7 @@ const ThemeMenu = () => {
               {/* Theme Items */}
               {themes.map((themeItem, idx) => (
                 <DropdownMenu.Item
+                  key={idx}
                   className={getColorSchemeClassName("item")}
                   onClick={() => changeTheme(themeItem)}
                 >
@@ -305,8 +306,9 @@ const ThemeMenu = () => {
                 className={getColorSchemeClassName("separator")}
               />
               {/* Color Scheme Items */}
-              {colorSchemes.map((colorSchemeItem) => (
+              {colorSchemes.map((colorSchemeItem, idx) => (
                 <DropdownMenu.Item
+                  key={idx}
                   className={getColorSchemeClassName("item")}
                   onClick={() => changeColorScheme(colorSchemeItem)}
                 >
