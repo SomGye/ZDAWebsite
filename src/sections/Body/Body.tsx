@@ -9,6 +9,7 @@ import HomePage from "../../pages/HomePage";
 import PortfolioPage from "../../pages/PortfolioPage";
 import CommissionsPage from "../../pages/CommissionsPage";
 import AboutPage from "../../pages/AboutPage";
+import WritingsPage from "../../pages/WritingsPage";
 import JumpToTop from "../../components/JumpToTop";
 
 const Body = () => {
@@ -25,6 +26,7 @@ const Body = () => {
           {page === "Portfolio" && <PortfolioPage />}
           {page === "Commissions" && <CommissionsPage />}
           {page === "About" && <AboutPage />}
+          {page === "Writings" && <WritingsPage />}
         </div>
       )}
       {/* Logo Page */}
