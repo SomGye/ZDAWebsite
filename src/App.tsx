@@ -57,7 +57,7 @@ const App = ({ route, routes }: props) => {
 
     // Fallback to Home
     if (!matchedRoute) {
-      console.log("hit fallback");
+      console.log("App: Hit fallback route");
       setPage("Home");
     }
   }, []);
