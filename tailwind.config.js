@@ -110,6 +110,7 @@ export default {
         'card-sm-light-red': '0px 6px 5px #dfa1a340',
         'card-sm-dark': '0px -8px 8px #1f29379a',
         'card-sm-dark-blue': '0px 2px 10px #2284ff1a', // zdaBlue-500
+        'card-sm-dark-red': '0px 2px 10px #ff1a621a', // zdaRedpink-500
         'card-logo-light': '0px 4px 1px #60606040',
         'card-logo-dark': '0px 4px 4px #606060c0',
         'logo-light': '20px 8px 4px #19141a2a',
