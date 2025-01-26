@@ -282,7 +282,7 @@ const Footer = () => {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="font-medium text-gray-900 dark:text-gray-300 tracking-widest text-sm mb-4 pointer-events-none select-none">
-              EXTRAS
+              MISC.
             </h2>
             <nav className="list-none mb-10">
               <span className="block my-3">
@@ -298,7 +298,19 @@ const Footer = () => {
                   Writings
                 </div>
               </span>
-              {/* TODO: Put in Examples link here */}
+              <span className="block my-3">
+                <div
+                  className={
+                    (theme === "dark"
+                      ? "footer-link-animated-dark "
+                      : "footer-link-animated ") +
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out cursor-pointer select-none"
+                  }
+                  onClick={() => switchPage("Examples", setPage)}
+                >
+                  Commission Examples
+                </div>
+              </span>
             </nav>
           </div>
           <div className="hidden md:block md:w-1/2 lg:w-1/4 w-full px-4">
@@ -323,10 +335,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h3
-              className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 cursor-cell select-none"
-              onClick={() => switchPage("Examples", setPage)}
-            >
+            <h3 className="font-light text-gray-600 dark:text-gray-400 tracking-wide italic text-[15px] mb-4 cursor-default select-none">
               Thank you for visiting!
             </h3>
             <a
