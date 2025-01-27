@@ -76,6 +76,11 @@ const routes = [
     redirect: "",
   },
   {
+    path: "/writings",
+    route: "writings",
+    redirect: "",
+  },
+  {
     path: "/form",
     route: "form",
     redirect: commFormLink,

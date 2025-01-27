@@ -599,6 +599,10 @@ button.yarl__button:focus-visible {
   /* mobile */
   bottom: 2rem;
   right: 2rem;
+  @media (min-width: 640px) { /* sm */
+    bottom: 2rem;
+    right: 1.47rem;
+  }
   @media (min-width: 768px) { /* md */
     bottom: 6.25rem;
     right: 2.5rem;
