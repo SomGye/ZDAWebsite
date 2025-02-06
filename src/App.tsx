@@ -7,6 +7,7 @@ import Body from "./sections/Body/Body";
 import Footer from "./sections/Footer/Footer";
 import { capitalizeString, getSubdomain, switchPage } from "./helpers";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 type customRoute = {
   path: string;
@@ -65,6 +66,7 @@ const App = ({ route, routes }: props) => {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <main className="bg-zdaBG-light dark:bg-zdaBG-dark text-gray-700 dark:text-gray-200 flex min-h-screen flex-col items-center p-0 motion-safe:transition motion-safe:duration-500 ease-out">
         {page !== "Logo" && page !== "Examples" && <Header />}
         <Body />
