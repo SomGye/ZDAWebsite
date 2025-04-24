@@ -16,7 +16,6 @@ import {
   kofiIcon,
   caraIcon,
   payPalIcon,
-  paymentIcon,
   printShopIcon,
   threadsIcon,
 } from "../icons";
@@ -31,7 +30,6 @@ import {
   payPalLink,
   printShopLink,
   threadsLink,
-  venmoLink,
 } from "../links";
 import kofi_gif from "/kofi_rainbow_mug-200px.gif";
 
@@ -209,16 +207,6 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 leftIcon={payPalIcon}
                 rightIcon={extLinkIcon}
                 textContent="PayPal"
-                variant="hamburger-outlined"
-              />
-              <ZDAButton
-                clickCallback={() => {
-                  clickLink(venmoLink);
-                  setOpen(false);
-                }}
-                leftIcon={paymentIcon}
-                rightIcon={extLinkIcon}
-                textContent="Venmo"
                 variant="hamburger-outlined"
               />
             </Box>

@@ -25,7 +25,6 @@ import {
   printShopLink,
   privacyLink,
   threadsLink,
-  venmoLink,
   zdaWorksLink,
 } from "../../links";
 
@@ -178,21 +177,6 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   PayPal
-                </a>
-              </span>
-              <span className="block my-3">
-                <a
-                  className={
-                    (theme === "dark"
-                      ? "footer-link-animated-dark "
-                      : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                  }
-                  href={venmoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Venmo
                 </a>
               </span>
             </nav>

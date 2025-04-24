@@ -13,6 +13,5 @@ export const caraLink = "https://go.zda.works/cara";
 export const printShopLink = "https://go.zda.works/prints";
 export const kofiLink = "https://go.zda.works/kofi";
 export const payPalLink = "https://go.zda.works/paypal";
-export const venmoLink = "https://go.zda.works/venmo";
 // Misc.
 export const discordLink = "https://go.zda.works/discord";

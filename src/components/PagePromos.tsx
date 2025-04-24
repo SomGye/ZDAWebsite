@@ -9,7 +9,6 @@ import {
   payPalLink,
   printShopLink,
   threadsLink,
-  venmoLink,
 } from "../links";
 import { useRecoilValue } from "recoil";
 import { themeAtom } from "../states/themeAtom";
@@ -94,18 +93,6 @@ const PagePromos = () => {
             <ZDAButton
               clickCallback={() => clickLink(payPalLink)}
               textContent="PayPal"
-              tight
-              variant="neutral"
-            />
-            <ZDAButton
-              clickCallback={() => clickLink(venmoLink)}
-              textContent="Venmo"
-              tight
-              variant="mobile-neutral"
-            />
-            <ZDAButton
-              clickCallback={() => clickLink(venmoLink)}
-              textContent="Venmo"
               tight
               variant="neutral"
             />
