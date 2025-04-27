@@ -4,10 +4,11 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../states/themeAtom";
 import {
   zerodayanubis_blue,
-  zdalogo_dark_blue,
-  zdalogo_light_blue,
   zerodayanubis_dark,
   zerodayanubis_light,
+  zdalogo_full_blue,
+  zdalogo_full_dark,
+  zdalogo_full_light,
 } from "../SvgSources";
 import { switchPage } from "../helpers";
 import { pageAtom } from "../states/pageAtom";
@@ -15,11 +16,11 @@ import { altLongTextLogo, altLongTextLogoBlue, altZDALogoLg } from "../AltText";
 
 const logoSources = [
   {
-    src: zdalogo_light_blue,
+    src: zdalogo_full_light,
     theme: "",
   },
   {
-    src: zdalogo_dark_blue,
+    src: zdalogo_full_dark,
     theme: "dark",
   },
 ];
@@ -62,10 +63,18 @@ const LogoPage = () => {
         <div className="flex flex-col items-center text-md sm:text-lg 3xl:text-2xl 4xl:text-3xl 4k:text-4xl font-light font-outfit text-zdaText-dark dark:text-zdaText-light pointer-events-none select-none">
           Logo designed in InkScape
         </div>
-        <div className="flex flex-col items-center my-10 lg:my-14">
+        <div className="full-logo-box flex flex-col items-center my-10 lg:my-14">
           <img
-            className="relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-light dark:drop-shadow-logo-dark select-none"
+            className="full-logo relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-light dark:drop-shadow-logo-dark motion-safe:transition ease-in motion-safe:duration-[400ms] select-none"
             src={getLogoSrc()}
+            alt={altZDALogoLg}
+            width={400}
+            height={400}
+          />
+          {/* hover? */}
+          <img
+            className="full-logo-hover relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-blue-light dark:drop-shadow-logo-blue-dark motion-safe:transition ease-in motion-safe:duration-[400ms] select-none"
+            src={zdalogo_full_blue}
             alt={altZDALogoLg}
             width={400}
             height={400}
@@ -77,7 +86,7 @@ const LogoPage = () => {
             <img
               src={zerodayanubis_blue}
               alt={altLongTextLogoBlue}
-              className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
+              className="ml-[2px] 3xl:ml-0 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
             />
@@ -86,7 +95,7 @@ const LogoPage = () => {
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               alt={altLongTextLogo}
-              className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
+              className="ml-[2px] 3xl:ml-0 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
             />

@@ -3,29 +3,19 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/themeAtom";
 import ThemeMenu from "../../components/ThemeMenu";
 import {
-  zda_dark_circ_hover_blue_logo,
   zda_dark_circ_logo,
-  zda_light_circ_hover_blue_logo,
   zda_light_circ_logo,
+  zda_circ_hover_logo,
+  zerodayanubis_dark,
+  zerodayanubis_light,
 } from "../../SvgSources";
 import { switchPage } from "../../helpers";
 import { pageAtom } from "../../states/pageAtom";
 import HamburgerMenu from "../../components/HamburgerMenu";
 import { hamburgerIcon } from "../../icons";
 import PageLinks from "../../components/PageLinks";
-import { altZDALogoCirc } from "../../AltText";
+import { altLongTextLogo, altZDALogoCirc } from "../../AltText";
 import { useDebouncedCallback } from "use-debounce";
-
-const circLogoSources = [
-  {
-    src: zda_light_circ_hover_blue_logo,
-    theme: "",
-  },
-  {
-    src: zda_dark_circ_hover_blue_logo,
-    theme: "dark",
-  },
-];
 
 const Header = () => {
   const [, setPage] = useRecoilState(pageAtom);
@@ -50,20 +40,6 @@ const Header = () => {
       } else {
         return "top-header ";
       }
-    }
-  };
-
-  const getLogoSrc = () => {
-    // Normalize "light"/"system" to "" for theme filter
-    const normalizedTheme = theme !== "dark" ? "" : theme;
-    // Filter on sources by theme and colorScheme
-    const resultObj = circLogoSources.filter(
-      (logoSrc) => logoSrc.theme === normalizedTheme
-    );
-    if (resultObj && resultObj.length) {
-      return resultObj[0].src;
-    } else {
-      return circLogoSources[0].src;
     }
   };
 
@@ -115,7 +91,7 @@ const Header = () => {
           </div>
           {/* MID - Logo Btn/Title/Links */}
           <div className="header-mid flex items-center content-center justify-center md:justify-start">
-            <div className="header-logo-box mr-1 sm:mr-2 lg:mr-1">
+            <div className="header-logo-box mr-1 sm:mr-2 lg:mr-1 motion-safe:transition ease-in motion-safe:duration-100 active:opacity-75">
               {/* Logo Btn */}
               <img
                 src={
@@ -123,33 +99,37 @@ const Header = () => {
                 }
                 alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
-                className="header-logo cursor-pointer pointer-events-auto select-none motion-safe:transition ease-out motion-safe:duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
+                className="header-logo cursor-pointer pointer-events-auto select-none motion-safe:transition ease-in motion-safe:duration-[400ms] 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                 width={36}
                 height={36}
                 onClick={() => switchPage("Logo", setPage)}
                 onTouchEnd={() => switchPage("Logo", setPage)}
               />
               <img
-                src={getLogoSrc()}
+                src={zda_circ_hover_logo}
                 alt={altZDALogoCirc}
                 title="Click to see ZDA logo page"
-                className="header-logo-hover cursor-pointer pointer-events-auto select-none motion-safe:transition ease-out motion-safe:duration-300 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
+                className="header-logo-hover cursor-pointer pointer-events-auto select-none motion-safe:transition ease-in motion-safe:duration-[400ms] 3xl:w-[36px] 3xl:h-[36px] 4xl:w-[44px] 4xl:h-[44px] 4k:w-[60px] 4k:h-[60px]"
                 width={36}
                 height={36}
                 onClick={() => switchPage("Logo", setPage)}
                 onTouchEnd={() => switchPage("Logo", setPage)}
               />
             </div>
-            <span className="hidden lg:block ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 hover:text-zdaBlue-500 dark:hover:text-zdaBlue-600 transition-colors duration-500 ease-out font-light cursor-default select-none">
-              ⌞ZeroDayAnubis⌝
-            </span>
+            <img
+              src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
+              className="hidden lg:block ml-4 mr-2 max-h-[2.35rem] select-none"
+              alt={altLongTextLogo}
+            />
             <PageLinks location={"headerLg"} />
           </div>
           {/* MID RIGHT - Title/Nav Links - (only xs thru md) */}
-          <div className="header-midright hidden xs:flex md:hidden absolute left-1/2 right-1/2 justify-center">
-            <span className="hidden xs:block sm:hidden lg:block ml-4 mr-2 text-xl text-gray-700 dark:text-gray-300 hover:text-zdaBlue-500 dark:hover:text-zdaBlue-600 transition-colors duration-500 ease-out font-light cursor-default select-none">
-              ⌞ZeroDayAnubis⌝
-            </span>
+          <div className="header-midright hidden xs:flex md:hidden justify-center items-center max-w-fit max-h-9">
+            <img
+              src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
+              className="hidden xs:block sm:hidden lg:block ml-3 mr-2 min-w-4 w-full min-h-4 max-h-[2.35rem] select-none"
+              alt={altLongTextLogo}
+            />
             <PageLinks location={"headerSm"} />
           </div>
           {/* RIGHT - Theme Menu */}

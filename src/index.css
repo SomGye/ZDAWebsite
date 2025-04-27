@@ -376,6 +376,31 @@ header.scrolled-header-dark {
   }
 }
 
+div.full-logo-box {
+  display: grid;
+  grid-template-rows: auto min-content;
+}
+
+img.full-logo {
+  opacity: 1;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+img.full-logo-hover {
+  opacity: 0;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+div.full-logo-box:hover img.full-logo,
+div.full-logo-box:active img.full-logo {
+  opacity: 0;
+}
+
+div.full-logo-box:hover img.full-logo-hover,
+div.full-logo-box:active img.full-logo-hover {
+  opacity: 1;
+}
+
 /* LIGHTBOX */
 img.yarl__slide_image {
   max-height: 93vh !important;

@@ -14,11 +14,11 @@ import {
 } from "../thumbnailInfo";
 import {
   a_dark,
-  a_light_blue,
+  a_light,
   c_dark,
-  c_light_blue,
+  c_light,
   v_dark,
-  v_light_blue,
+  v_light,
 } from "../SvgSources";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
@@ -39,7 +39,7 @@ import { commFormLink, commInfoLink } from "../links";
 
 const letterLogoSources = [
   {
-    src: a_light_blue,
+    src: a_light,
     letter: "a",
     theme: "",
   },
@@ -49,7 +49,7 @@ const letterLogoSources = [
     theme: "dark",
   },
   {
-    src: c_light_blue,
+    src: c_light,
     letter: "c",
     theme: "",
   },
@@ -59,7 +59,7 @@ const letterLogoSources = [
     theme: "dark",
   },
   {
-    src: v_light_blue,
+    src: v_light,
     letter: "v",
     theme: "",
   },

@@ -36,9 +36,9 @@ export default {
           lightHover: '#d5d5d5',
         },
         zdaText: {
-          dark: '#19141a',
+          dark: '#19141a', // ? also ZeroDayAnubis Long Text Logo
           darker: '#161117',
-          light: '#fafafafa',
+          light: '#fafafafa', // ? also ZeroDayAnubis Long Text Logo
           lighter: '#fdfdfd',
         },
         zdaRed: { // ? DEPRECATED
@@ -109,9 +109,10 @@ export default {
         'card-sm-dark-blue': '0px 2px 10px #2284ff1a', // zdaBlue-500
         'card-logo-light': '0px 4px 1px #60606040',
         'card-logo-dark': '0px 4px 4px #606060c0',
-        'logo-light': '20px 8px 4px #19141a2a',
-        'logo-dark': '8px 4px 6px #60606040',
-        'logo-blue': '8px 4px 6px #2284ff9a',
+        'logo-light': '14px 12px 5px #19141a24',
+        'logo-dark': '0px 0px 25px #60606012',
+        'logo-blue-light': '12px 10px 8px #2284ff99',
+        'logo-blue-dark': '0px 0px 16px #2284ff99',
         'logo-kofi': '6px 4px 8px #ff5a2a85',
         'logo-kofi-dark': '3px 2px 6px #fffaca80',
         'name-sm-light': '-2px 0 1px #19141a2a',

@@ -3,9 +3,9 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { themeAtom } from "../../states/themeAtom";
 import {
   zdamono_dark,
-  zdamono_dark_hover_blue,
+  zdamono_dark_hover,
   zdamono_light,
-  zdamono_light_hover_blue,
+  zdamono_light_hover,
   zdaworks_dark,
   zdaworks_light,
   zerodayanubis_dark,
@@ -30,11 +30,11 @@ import {
 
 const monoLogoSources = [
   {
-    src: zdamono_light_hover_blue,
+    src: zdamono_light_hover,
     theme: "",
   },
   {
-    src: zdamono_dark_hover_blue,
+    src: zdamono_dark_hover,
     theme: "dark",
   },
 ];
@@ -276,7 +276,7 @@ const Footer = () => {
                 src={
                   theme === "dark" ? zerodayanubis_dark : zerodayanubis_light
                 }
-                className="hidden sm:block ml-3 max-h-8 select-none"
+                className="hidden sm:block ml-3 max-h-[2.35rem] select-none"
                 alt={altLongTextLogo}
               />
             </div>
