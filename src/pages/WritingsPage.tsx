@@ -28,7 +28,7 @@ const WritingsPage = () => {
                   .map((item, idx) => (
                     <div
                       className={
-                        "writings-item w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 rounded-xl my-4 px-4 py-9 whitespace-pre-line border border-zdaBlue-400 hover:border-zdaBlue-300 dark:border-zdaBlue-600/75 dark:hover:border-zdaBlue-500 drop-shadow-card-sm-light-blue dark:drop-shadow-card-sm-dark-blue hover:drop-shadow-none dark:hover:drop-shadow-none bg-gradient-to-b from-zdaBG-light dark:from-zdaBlue-1000/30 via-zdaBG-lighterCard dark:via-zdaBlue-1000/30 to-zdaBlue-50/75 dark:to-zdaBlue-1000/30 motion-safe:transition-all motion-safe:duration-200 ease-out" +
+                        "writings-item w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 rounded-xl my-4 px-4 py-9 whitespace-pre-line border border-slate-300/25 hover:border-slate-400/25 dark:border-neutral-900/35 dark:hover:border-neutral-800/35 shadow-card-writings-light dark:shadow-card-writings-dark hover:shadow-card-writings-light-hover dark:hover:shadow-card-writings-dark-hover bg-gradient-to-br from-zdaBtn-light dark:from-zdaBG-darkestCard via-zdaBG-lighterCard dark:via-zdaBG-extraDark to-zdaBG-light dark:to-zdaBG-extraDark motion-safe:transition-all motion-safe:duration-300 ease-out" +
                         `${idx % 2 === 0 ? evenMargin : oddMargin}`
                       }
                       key={idx}
