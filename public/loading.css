@@ -38,9 +38,6 @@ div.spinnerbox {
   /* zdaBlue (600) Version */
   background-color: #0b62ff;
   background-image: linear-gradient(#2284ff, #0b62ff, #035af7);
-  /* zdaRedpink (700) Version */
-  /* background-color: #c7002b; */
-  /* background-image: linear-gradient(#ff0037, #c7002b, #ff0048); */
   z-index: 999;
 
   &:focus-visible {
@@ -56,9 +53,6 @@ div.spinnerbox span {
   /* zdaBlue (600) Version */
   background-color: #0b62ff;
   background-image: linear-gradient(#2284ff, #0b62ff, #035af7);
-  /* zdaRedpink (700) Version */
-  /* background-color: #c7002b; */
-  /* background-image: linear-gradient(#ff0037, #c7002b, #ff0048); */
 }
 
 div.spinnerbox span:nth-of-type(1) {

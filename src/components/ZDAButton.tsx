@@ -1,6 +1,4 @@
 import * as React from "react";
-import { useRecoilValue } from "recoil";
-import { colorSchemeAtom, colorSchemes } from "../states/themeAtom";
 
 type props = {
   clickCallback: () => void;
@@ -19,131 +17,50 @@ const ZDAButton = ({
   tight,
   variant = "default",
 }: props) => {
-  const colorScheme = useRecoilValue(colorSchemeAtom);
   const variantsList = [
     {
       name: "default",
-      classList: [
-        {
-          className:
-            "hidden md:inline-flex justify-center items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "hidden md:inline-flex justify-center items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaRedpink-650 hover:bg-zdaRedpink-700/90 active:bg-zdaRedpink-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "hidden md:inline-flex justify-center items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
     },
     {
       name: "mobile",
-      classList: [
-        {
-          className:
-            "inline-flex justify-center items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "inline-flex justify-center items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaRedpink-650 hover:bg-zdaRedpink-700/90 active:bg-zdaRedpink-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "inline-flex justify-center items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
     },
     {
       name: "neutral",
-      classList: [
-        {
-          className:
-            "hidden md:inline-flex justify-center items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-white/95 hover:text-white dark:text-gray-300 dark:hover:text-gray-100 dark:active:text-white font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark-neutral hover:drop-shadow-sm dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "hidden md:inline-flex justify-center items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-white/95 hover:text-white dark:text-gray-300 dark:hover:text-gray-100 dark:active:text-white font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark-neutral hover:drop-shadow-sm dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "hidden md:inline-flex justify-center items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-white/95 hover:text-white dark:text-gray-300 dark:hover:text-gray-100 dark:active:text-white font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark-neutral hover:drop-shadow-sm dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
     },
     {
       name: "mobile-neutral",
-      classList: [
-        {
-          className:
-            "inline-flex justify-center items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-white/95 hover:text-white dark:text-gray-300 dark:hover:text-gray-100 dark:active:text-white font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark-neutral hover:drop-shadow-sm dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "inline-flex justify-center items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-white/95 hover:text-white dark:text-gray-300 dark:hover:text-gray-100 dark:active:text-white font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark-neutral hover:drop-shadow-sm dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "inline-flex justify-center items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-white/95 hover:text-white dark:text-gray-300 dark:hover:text-gray-100 dark:active:text-white font-outfit text-lg drop-shadow-btn-light dark:drop-shadow-btn-dark-neutral hover:drop-shadow-sm dark:hover:drop-shadow-none motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
     },
     {
       name: "grid",
-      classList: [
-        {
-          className:
-            "hidden md:grid grid-cols-2 content-center justify-center items-center justify-items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "hidden md:grid grid-cols-2 content-center justify-center items-center justify-items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaRedpink-650 hover:bg-zdaRedpink-700/90 active:bg-zdaRedpink-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "hidden md:grid grid-cols-2 content-center justify-center items-center justify-items-center group w-[14.5rem] h-[2.25rem] m-4 p-1 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
     },
     {
       name: "mobile-grid",
-      classList: [
-        {
-          className:
-            "grid grid-cols-2 content-center justify-center items-center justify-items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "grid grid-cols-2 content-center justify-center items-center justify-items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaRedpink-650 hover:bg-zdaRedpink-700/90 active:bg-zdaRedpink-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "grid grid-cols-2 content-center justify-center items-center justify-items-center md:hidden w-64 h-10 m-4 rounded-2xl bg-zdaBlue-650 hover:bg-zdaBlue-700/90 active:bg-zdaBlue-800 dark:bg-white/90 dark:hover:bg-neutral-300/80 dark:active:bg-neutral-500 text-white/95 hover:text-white dark:text-gray-950 dark:hover:text-black font-outfit drop-shadow-btn-light dark:drop-shadow-btn-dark hover:drop-shadow-sm dark:hover:drop-shadow-btn-dark-sm motion-safe:transition-all motion-safe:duration-200 ease-out select-none",
     },
     {
       name: "hamburger-section",
-      classList: [
-        {
-          className:
-            "w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkerCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkerCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "w-full md:w-56 xl:w-64 2xl:w-72 p-2 my-1 text-base font-medium bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-zdaBtn-darkerCard dark:hover:bg-zdaBtn-darkHover dark:active:bg-zdaBtn-dark text-zdaBG-lighterCard dark:text-zdaBG-lighterCard dark:hover:text-white border-2 border-solid border-transparent rounded-md motion-safe:transition-all motion-safe:duration-300 ease-out select-none",
     },
     {
       name: "hamburger-outlined",
-      classList: [
-        {
-          className:
-            "w-full inline-flex relative justify-center items-center p-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[0],
-        },
-        {
-          className:
-            "w-full inline-flex relative justify-center items-center p-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none",
-          colorScheme: colorSchemes[1],
-        },
-      ],
+      className:
+        "w-full inline-flex relative justify-center items-center p-2 xl:py-3 my-1 xl:my-[0.1rem] text-base font-medium bg-transparent hover:bg-gray-600 active:bg-gray-700 dark:hover:bg-gray-300 dark:active:bg-gray-400 text-gray-800 hover:text-zdaBG-lighterCard dark:text-zdaBG-lighterCard  dark:hover:text-gray-900 border-2 border-solid border-gray-500 hover:border-gray-600 active:border-gray-700 dark:border-gray-500 dark:hover:border-gray-300 dark:active:border-gray-400 rounded-md motion-safe:transition-colors motion-safe:duration-200 ease-out select-none",
     },
   ];
   const [activeClassName, setActiveClassName] = React.useState(
-    variantsList[2].classList[0].className
+    variantsList[2].className
   ); // use neutral while loading for subtler transition
   // ? NOTE: the will-change-transform fixes the icon jitter issue when centering
   const leftIconSpanClassName =
@@ -156,33 +73,21 @@ const ZDAButton = ({
   const rightIconHamburgerSpanClassName =
     "flex mx-2 items-center absolute right-0";
 
-  const getVariantClassName = () => {
-    const defaultClassName = variantsList[0].classList[0].className;
-    const variantClassList = variantsList.filter(
-      (item) => item.name === variant
-    )[0]?.classList;
-    if (variantClassList && variantClassList.length) {
-      const resultObj = variantClassList.filter(
-        (classObj) => classObj.colorScheme === colorScheme
-      );
-      if (resultObj && resultObj.length) {
-        return resultObj[0].className;
-      } else {
-        return defaultClassName;
-      }
-    } else {
-      return defaultClassName;
-    }
-  };
-
   React.useEffect(() => {
+    const defaultClassName = variantsList[0].className;
     /* Update active className by variant,
     when variant or colorScheme changes */
-    setActiveClassName(getVariantClassName());
+    if (variant) {
+      setActiveClassName(
+        variantsList.filter((item) => item.name === variant)[0].className
+      );
+    } else {
+      setActiveClassName(defaultClassName);
+    }
 
     console.log("Color Scheme changed for ZDAButton");
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [variant, colorScheme]);
+  }, [variant]);
 
   return (
     <>

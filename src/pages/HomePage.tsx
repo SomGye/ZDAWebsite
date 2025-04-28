@@ -1,6 +1,6 @@
 import * as React from "react";
 import { loadImgHandler, switchPage } from "../helpers";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { pageAtom } from "../states/pageAtom";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
@@ -16,47 +16,14 @@ import {
   photosHomeThumbnail,
 } from "../thumbnailInfo";
 import PagePromos from "../components/PagePromos";
-import { colorSchemeAtom, colorSchemes } from "../states/themeAtom";
-
-const linkClasses = [
-  {
-    className:
-      "home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer",
-    colorScheme: colorSchemes[1],
-  },
-];
 
 const HomePage = () => {
   const [, setPage] = useRecoilState(pageAtom);
-  const colorScheme = useRecoilValue(colorSchemeAtom);
-  const [idx_scheme, setIdx_scheme] = React.useState(0);
   const [idx_home, setIdx_home] = React.useState(-1);
   const [idx_homeBtmSm, setIdx_homeBtmSm] = React.useState(-1);
   const [idx_homeBtmLg, setIdx_homeBtmLg] = React.useState(-1);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const captionsRef = React.useRef(null) as any;
-
-  const getColorSchemeClassName = () => {
-    // Filter on classes for className matching colorScheme
-    const resultObj = linkClasses.filter(
-      (classObj) => classObj.colorScheme === colorScheme
-    );
-    if (resultObj && resultObj.length) {
-      return resultObj[0].className;
-    } else {
-      return linkClasses[0].className;
-    }
-  };
-
-  React.useEffect(() => {
-    // Update matched scheme index
-    setIdx_scheme(colorSchemes.indexOf(colorScheme));
-  }, [colorScheme]);
 
   return (
     <div className="home-page-container w-full flex flex-col justify-center items-center text-slate-700 dark:text-slate-200 select-none">
@@ -75,7 +42,7 @@ const HomePage = () => {
       <div className="home-page-promo max-w-[90%] text-sm xs:text-base">
         You can visit my &nbsp;
         <p
-          className={getColorSchemeClassName()}
+          className="home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Portfolio", setPage)}
         >
           Portfolio
@@ -86,7 +53,7 @@ const HomePage = () => {
         <br />
         ... or you can view my current <br className="block sm:hidden" /> &nbsp;
         <p
-          className={getColorSchemeClassName()}
+          className="home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("Commissions", setPage)}
         >
           Commissions
@@ -99,7 +66,7 @@ const HomePage = () => {
         <br className="block sm:hidden" /> and my brief
         <br className="hidden sm:block md:hidden" /> art journey &nbsp;
         <p
-          className={getColorSchemeClassName()}
+          className="home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
           onClick={() => switchPage("About", setPage)}
         >
           here
@@ -272,9 +239,9 @@ const HomePage = () => {
         <div className="home-page-showcase2-img-container hidden 2xl:flex flex-row justify-center items-center gap-0 md:gap-2 px-0 xs:px-8 py-4 md:py-8 2xl:py-4 my-1 sm:my-0 border-none md:border-solid border rounded-md border-slate-300/50 dark:border-slate-700/20 drop-shadow-md shadow-none md:shadow-[8px_4px_12px_4px_rgba(51,65,85,0.10)] dark:md:shadow-[0_0_12px_4px_rgba(203,213,225,0.025)]">
           <img
             onClick={() => setIdx_homeBtmLg(0)}
-            src={photosHomeBtmLgThumbnail[idx_scheme][0].src}
-            alt={photosHomeBtmLgThumbnail[idx_scheme][0].alt}
-            title={photosHomeBtmLgThumbnail[idx_scheme][0].title}
+            src={photosHomeBtmLgThumbnail[0].src}
+            alt={photosHomeBtmLgThumbnail[0].alt}
+            title={photosHomeBtmLgThumbnail[0].title}
             className="home-img06 z-10 h-full w-[62.5rem] my-4 object-cover object-center rounded-md brightness-[.96] border-solid border dark:border-2 border-transparent motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] hover:border-neutral-600/40 dark:hover:border-neutral-500/60 motion-safe:hover:transition-all motion-safe:hover:duration-300 hover:ease-out select-none cursor-pointer"
           />
           <Lightbox
@@ -297,7 +264,7 @@ const HomePage = () => {
               iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
               iconClose: () => <IoMdCloseCircle size={28} />,
             }}
-            slides={photosHomeBtmLg[idx_scheme]}
+            slides={photosHomeBtmLg}
             styles={{
               container: {
                 backdropFilter: "blur(16px)",

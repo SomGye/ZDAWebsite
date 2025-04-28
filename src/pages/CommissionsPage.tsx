@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useRecoilValue } from "recoil";
-import { colorSchemeAtom, colorSchemes, themeAtom } from "../states/themeAtom";
+import { themeAtom } from "../states/themeAtom";
 import { clickLink, loadImgHandler, scrollToSection } from "../helpers";
 import MiniSpinner from "../components/MiniSpinner";
 import ZDAButton from "../components/ZDAButton";
@@ -14,14 +14,11 @@ import {
 } from "../thumbnailInfo";
 import {
   a_dark,
-  a_light_blue,
-  a_light_red,
+  a_light,
   c_dark,
-  c_light_blue,
-  c_light_red,
+  c_light,
   v_dark,
-  v_light_blue,
-  v_light_red,
+  v_light,
 } from "../SvgSources";
 import Lightbox from "yet-another-react-lightbox";
 import { Captions } from "yet-another-react-lightbox/plugins";
@@ -40,122 +37,42 @@ import { commsOpenAtom } from "../states/commsAtom";
 import { downArrowBigIcon, rightArrowBigIcon } from "../icons";
 import { commFormLink, commInfoLink } from "../links";
 
-const linkClasses = [
-  {
-    className:
-      "home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "home-page-text-link inline-block italic font-semibold text-zdaRedpink-650 dark:text-zdaRed-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaRedpink-650 dark:hover:border-zdaRed-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer",
-    colorScheme: colorSchemes[1],
-  },
-];
-const cardClasses = [
-  {
-    className:
-      "commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaBlue-100 dark:to-gray-700 drop-shadow-card-sm-light-blue sm:drop-shadow-card-light-blue dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaRed-100 dark:to-gray-700 drop-shadow-card-sm-light-red sm:drop-shadow-card-light-red dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark",
-    colorScheme: colorSchemes[1],
-  },
-];
-const letterClasses = [
-  {
-    className:
-      "commissions-page-card-logo-overlay z-40 col-start-1 row-start-1 h-12 w-12 my-1 rounded-full bg-transparent border-2 border-zdaBlue-900/80 hover:border-zdaBlue-700 dark:border-gray-300 dark:hover:border-gray-600 motion-safe:transition-all motion-safe:duration-150 ease-out select-none",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "commissions-page-card-logo-overlay z-40 col-start-1 row-start-1 h-12 w-12 my-1 rounded-full bg-transparent border-2 border-zdaRedpink-900/80 hover:border-zdaRedpink-700 dark:border-gray-300 dark:hover:border-gray-600 motion-safe:transition-all motion-safe:duration-150 ease-out select-none",
-    colorScheme: colorSchemes[1],
-  },
-];
 const letterLogoSources = [
   {
-    src: a_light_blue,
+    src: a_light,
     letter: "a",
     theme: "",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    src: a_light_red,
-    letter: "a",
-    theme: "",
-    colorScheme: colorSchemes[1],
   },
   {
     src: a_dark,
     letter: "a",
     theme: "dark",
-    colorScheme: colorSchemes[0],
   },
   {
-    src: a_dark,
-    letter: "a",
-    theme: "dark",
-    colorScheme: colorSchemes[1],
-  },
-  {
-    src: c_light_blue,
+    src: c_light,
     letter: "c",
     theme: "",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    src: c_light_red,
-    letter: "c",
-    theme: "",
-    colorScheme: colorSchemes[1],
   },
   {
     src: c_dark,
     letter: "c",
     theme: "dark",
-    colorScheme: colorSchemes[0],
   },
   {
-    src: c_dark,
-    letter: "c",
-    theme: "dark",
-    colorScheme: colorSchemes[1],
-  },
-  {
-    src: v_light_blue,
+    src: v_light,
     letter: "v",
     theme: "",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    src: v_light_red,
-    letter: "v",
-    theme: "",
-    colorScheme: colorSchemes[1],
   },
   {
     src: v_dark,
     letter: "v",
     theme: "dark",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    src: v_dark,
-    letter: "v",
-    theme: "dark",
-    colorScheme: colorSchemes[1],
   },
 ];
 
 const CommissionsPage = () => {
   const theme = useRecoilValue(themeAtom);
-  const colorScheme = useRecoilValue(colorSchemeAtom);
   const commsOpen = useRecoilValue(commsOpenAtom);
-  const [idx_scheme, setIdx_scheme] = React.useState(0);
   const [idx_abstractify, setIdx_abstractify] = React.useState(-1);
   const [idx_vectorize, setIdx_vectorize] = React.useState(-1);
   const [idx_coalesce, setIdx_coalesce] = React.useState(-1);
@@ -177,39 +94,13 @@ const CommissionsPage = () => {
     setFormVisible(true);
   };
 
-  const getColorSchemeClassName = (element: string) => {
-    let targetClasses;
-    // Determine class list from element type
-    if (element === "link") {
-      targetClasses = linkClasses;
-    } else if (element === "card") {
-      targetClasses = cardClasses;
-    } else if (element === "letter") {
-      targetClasses = letterClasses;
-    } else {
-      targetClasses = [{ className: "", colorScheme: colorSchemes[0] }];
-    }
-
-    // Filter on classes for className matching colorScheme
-    const resultObj = targetClasses.filter(
-      (classObj) => classObj.colorScheme === colorScheme
-    );
-    if (resultObj && resultObj.length) {
-      return resultObj[0].className;
-    } else {
-      return targetClasses[0].className;
-    }
-  };
-
   const getLogoSrc = (letter: string) => {
     // Normalize "light"/"system" to "" for theme filter
     const normalizedTheme = theme !== "dark" ? "" : theme;
     // Filter on sources by letter, theme, and colorScheme
     const resultObj = letterLogoSources.filter(
       (logoSrc) =>
-        logoSrc.colorScheme === colorScheme &&
-        logoSrc.letter === letter &&
-        logoSrc.theme === normalizedTheme
+        logoSrc.letter === letter && logoSrc.theme === normalizedTheme
     );
     if (resultObj && resultObj.length) {
       return resultObj[0].src;
@@ -228,11 +119,6 @@ const CommissionsPage = () => {
       setFormScroll(false); // reset
     }
   }, [formScroll, formVisible]);
-
-  React.useEffect(() => {
-    // Update matched scheme index
-    setIdx_scheme(colorSchemes.indexOf(colorScheme));
-  }, [colorScheme]);
 
   React.useEffect(() => {
     // Randomize Coalesce comparison type shown
@@ -280,7 +166,7 @@ const CommissionsPage = () => {
         <div className="commissions-page-comm-info mx-1 my-3 sm:my-0 sm:mt-3 inline-block text-gray-600 dark:text-gray-300 tracking-wide select-none">
           For full commission information, click{" "}
           <p
-            className={getColorSchemeClassName("link")}
+            className="home-page-text-link inline-block italic font-semibold text-zdaBlue-650 dark:text-zdaBlue-600 hover:text-slate-700 dark:hover:text-slate-300 active:text-slate-400 dark:active:text-slate-400 border-b border-solid border-transparent hover:border-zdaBlue-650 dark:hover:border-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-300 ease-out cursor-pointer"
             onClick={() => clickLink(commInfoLink)}
           >
             here
@@ -289,7 +175,7 @@ const CommissionsPage = () => {
         </div>
         {/* Abstractify */}
         <div
-          className={getColorSchemeClassName("card")}
+          className="commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaBlue-100 dark:to-gray-700 drop-shadow-card-sm-light-blue sm:drop-shadow-card-light-blue dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
           onMouseEnter={() => setHover_abstractify(true)}
           onMouseLeave={() => setHover_abstractify(false)}
         >
@@ -317,7 +203,7 @@ const CommissionsPage = () => {
                 alt="Abstractify Logo"
                 className="commissions-page-card-logo z-30 col-start-1 row-start-1 h-12 w-12 my-1 object-cover object-center rounded-full border border-transparent select-none"
               />
-              <div className={getColorSchemeClassName("letter")} />
+              <div className="commissions-page-card-logo-overlay z-40 col-start-1 row-start-1 h-12 w-12 my-1 rounded-full bg-transparent border-2 border-zdaBlue-900/80 hover:border-zdaBlue-700 dark:border-gray-300 dark:hover:border-gray-600 motion-safe:transition-all motion-safe:duration-150 ease-out select-none" />
             </div>
           </div>
           <div className="commissions-page-card-middle-container justify-center items-center">
@@ -428,7 +314,7 @@ const CommissionsPage = () => {
         />
         {/* Vectorize */}
         <div
-          className={getColorSchemeClassName("card")}
+          className="commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaBlue-100 dark:to-gray-700 drop-shadow-card-sm-light-blue sm:drop-shadow-card-light-blue dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
           onMouseEnter={() => setHover_vectorize(true)}
           onMouseLeave={() => setHover_vectorize(false)}
         >
@@ -436,8 +322,8 @@ const CommissionsPage = () => {
             <div className="commissions-page-card-img-container grid">
               <img
                 onClick={() => setIdx_vectorize(0)}
-                src={photosCommissionsVectorizeThumbnail[idx_scheme][0].src}
-                alt={photosCommissionsVectorizeThumbnail[idx_scheme][0].alt}
+                src={photosCommissionsVectorizeThumbnail[0].src}
+                alt={photosCommissionsVectorizeThumbnail[0].alt}
                 title="Click for more examples"
                 className="comm-img02 z-10 col-start-1 row-start-1 w-full h-64 sm:h-80 lg:h-96 aspect-[14/9] object-cover object-bottom rounded-t-xl rounded-b-none brightness-[.96] motion-safe:transition-all motion-safe:duration-300 ease-out hover:brightness-[1.025] select-none cursor-pointer"
                 style={{ ...{ zoom: "1.05" } }}
@@ -449,7 +335,7 @@ const CommissionsPage = () => {
                 alt="Vectorize Logo"
                 className="commissions-page-card-logo z-30 col-start-1 row-start-1 h-12 w-12 my-1 object-cover object-center rounded-full border border-transparent select-none"
               />
-              <div className={getColorSchemeClassName("letter")} />
+              <div className="commissions-page-card-logo-overlay z-40 col-start-1 row-start-1 h-12 w-12 my-1 rounded-full bg-transparent border-2 border-zdaBlue-900/80 hover:border-zdaBlue-700 dark:border-gray-300 dark:hover:border-gray-600 motion-safe:transition-all motion-safe:duration-150 ease-out select-none" />
             </div>
           </div>
           <div className="commissions-page-card-middle-container justify-center items-center">
@@ -534,7 +420,7 @@ const CommissionsPage = () => {
             iconCaptionsHidden: () => <MdClosedCaptionDisabled size={28} />,
             iconClose: () => <IoMdCloseCircle size={28} />,
           }}
-          slides={photosCommissionsVectorize[idx_scheme]}
+          slides={photosCommissionsVectorize}
           styles={{
             container: {
               backdropFilter: "blur(16px)",
@@ -560,7 +446,7 @@ const CommissionsPage = () => {
         />
         {/* Coalesce */}
         <div
-          className={getColorSchemeClassName("card")}
+          className="commissions-page-card-container flex flex-col w-[calc(100%-1.75rem)] xs:w-[25rem] sm:w-[34rem] md:w-[42rem] lg:w-[48rem] 3xl:w-[55rem] h-full mx-4 my-4 p-4 gap-4 rounded-xl bg-gradient-to-t sm:bg-gradient-to-tl from-zdaBG-lightCard dark:from-zdaBG-darkCard to-zdaBlue-100 dark:to-gray-700 drop-shadow-card-sm-light-blue sm:drop-shadow-card-light-blue dark:drop-shadow-card-sm-dark dark:sm:drop-shadow-card-dark"
           onMouseEnter={() => setHover_coalesce(true)}
           onMouseLeave={() => setHover_coalesce(false)}
         >
@@ -588,7 +474,7 @@ const CommissionsPage = () => {
                 alt="Coalesce Logo"
                 className="commissions-page-card-logo z-30 col-start-1 row-start-1 h-12 w-12 my-1 object-cover object-center rounded-full border border-transparent select-none"
               />
-              <div className={getColorSchemeClassName("letter")} />
+              <div className="commissions-page-card-logo-overlay z-40 col-start-1 row-start-1 h-12 w-12 my-1 rounded-full bg-transparent border-2 border-zdaBlue-900/80 hover:border-zdaBlue-700 dark:border-gray-300 dark:hover:border-gray-600 motion-safe:transition-all motion-safe:duration-150 ease-out select-none" />
             </div>
           </div>
           <div className="commissions-page-card-middle-container justify-center items-center">

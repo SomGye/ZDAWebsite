@@ -120,24 +120,13 @@ export const photosHomeBtmSm = [
 ];
 
 export const photosHomeBtmLg = [
-  [
-    {
-      src: etherealism_blue_full_rot,
-      width: 2705,
-      height: 2051,
-      alt: altEtherealismBlue,
-      title: "Etherealism",
-    },
-  ],
-  [
-    {
-      src: etherealism_red_full_rot,
-      width: 2705,
-      height: 2051,
-      alt: altEtherealismRed,
-      title: "Etherealism",
-    },
-  ],
+  {
+    src: etherealism_blue_full_rot,
+    width: 2705,
+    height: 2051,
+    alt: altEtherealismBlue,
+    title: "Etherealism",
+  },
 ];
 
 export const photosAbout = [
@@ -234,66 +223,34 @@ export const photosAboutHuion = [
 ];
 
 export const photosPortfolioPosters1 = [
-  [
-    {
-      src: etherealism_blue,
-      width: 3508,
-      height: 4961,
-      alt: altEtherealismBlue,
-      title: "Etherealism",
-    },
-    {
-      src: "/assets/portfolio/poster/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
-      width: 2280,
-      height: 3225,
-      alt: altTurmoil,
-      title: "TURMOIL",
-    },
-    {
-      src: rosecrance_despair,
-      width: 2280,
-      height: 3225,
-      alt: altRosecranceDespair,
-      title: "Rosecrance - Despair Version",
-    },
-    {
-      src: "/assets/portfolio/poster/lightbox/2023-11-28-A_Visual_Violation-65p-c1.jpg",
-      width: 2280,
-      height: 3225,
-      alt: altAVisualViolation,
-      title: "A Visual Violation",
-    },
-  ],
-  [
-    {
-      src: etherealism_red,
-      width: 3508,
-      height: 4961,
-      alt: altEtherealismRed,
-      title: "Etherealism",
-    },
-    {
-      src: "/assets/portfolio/poster/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
-      width: 2280,
-      height: 3225,
-      alt: altTurmoil,
-      title: "TURMOIL",
-    },
-    {
-      src: rosecrance_despair,
-      width: 2280,
-      height: 3225,
-      alt: altRosecranceDespair,
-      title: "Rosecrance - Despair Version",
-    },
-    {
-      src: "/assets/portfolio/poster/lightbox/2023-11-28-A_Visual_Violation-65p-c1.jpg",
-      width: 2280,
-      height: 3225,
-      alt: altAVisualViolation,
-      title: "A Visual Violation",
-    },
-  ],
+  {
+    src: etherealism_blue,
+    width: 3508,
+    height: 4961,
+    alt: altEtherealismBlue,
+    title: "Etherealism",
+  },
+  {
+    src: "/assets/portfolio/poster/lightbox/2024-03-28-TURMOIL-65p-c1.jpg",
+    width: 2280,
+    height: 3225,
+    alt: altTurmoil,
+    title: "TURMOIL",
+  },
+  {
+    src: rosecrance_despair,
+    width: 2280,
+    height: 3225,
+    alt: altRosecranceDespair,
+    title: "Rosecrance - Despair Version",
+  },
+  {
+    src: "/assets/portfolio/poster/lightbox/2023-11-28-A_Visual_Violation-65p-c1.jpg",
+    width: 2280,
+    height: 3225,
+    alt: altAVisualViolation,
+    title: "A Visual Violation",
+  },
 ];
 
 export const photosPortfolioPosters2 = [
@@ -538,66 +495,34 @@ export const photosCommissionsAbstractify = [
 ];
 
 export const photosCommissionsVectorize = [
-  [
-    {
-      src: etherealism_blue_full,
-      width: 2280,
-      height: 3225,
-      alt: altEtherealismBlue,
-      title: "Etherealism",
-    },
-    {
-      src: enter_panic,
-      width: 2280,
-      height: 3225,
-      alt: altEnterPanic,
-      title: "Enter Panic",
-    },
-    {
-      src: prone_to_oblivion_notext,
-      width: 2280,
-      height: 3225,
-      alt: altProneToOblivion,
-      title: "Prone to Oblivion",
-    },
-    {
-      src: rosecrance_delusion,
-      width: 2280,
-      height: 3225,
-      alt: altRosecranceDelusion,
-      title: "Rosecrance - Delusion Version",
-    },
-  ],
-  [
-    {
-      src: etherealism_red_full,
-      width: 2280,
-      height: 3225,
-      alt: altEtherealismRed,
-      title: "Etherealism",
-    },
-    {
-      src: enter_panic,
-      width: 2280,
-      height: 3225,
-      alt: altEnterPanic,
-      title: "Enter Panic",
-    },
-    {
-      src: prone_to_oblivion_notext,
-      width: 2280,
-      height: 3225,
-      alt: altProneToOblivion,
-      title: "Prone to Oblivion",
-    },
-    {
-      src: rosecrance_delusion,
-      width: 2280,
-      height: 3225,
-      alt: altRosecranceDelusion,
-      title: "Rosecrance - Delusion Version",
-    },
-  ],
+  {
+    src: etherealism_blue_full,
+    width: 2280,
+    height: 3225,
+    alt: altEtherealismBlue,
+    title: "Etherealism",
+  },
+  {
+    src: enter_panic,
+    width: 2280,
+    height: 3225,
+    alt: altEnterPanic,
+    title: "Enter Panic",
+  },
+  {
+    src: prone_to_oblivion_notext,
+    width: 2280,
+    height: 3225,
+    alt: altProneToOblivion,
+    title: "Prone to Oblivion",
+  },
+  {
+    src: rosecrance_delusion,
+    width: 2280,
+    height: 3225,
+    alt: altRosecranceDelusion,
+    title: "Rosecrance - Delusion Version",
+  },
 ];
 
 export const photosCommissionsCoalesce = [

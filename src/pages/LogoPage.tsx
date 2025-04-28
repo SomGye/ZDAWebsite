@@ -1,56 +1,34 @@
 import * as React from "react";
 import { leftArrowMdIcon } from "../icons";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { colorSchemeAtom, colorSchemes, themeAtom } from "../states/themeAtom";
+import { themeAtom } from "../states/themeAtom";
 import {
   zerodayanubis_blue,
-  zerodayanubis_red,
-  zerodayanubis_redpink,
-  zdalogo_dark_blue,
-  zdalogo_dark_red,
-  zdalogo_light_blue,
-  zdalogo_light_red,
   zerodayanubis_dark,
   zerodayanubis_light,
+  zdalogo_full_blue,
+  zdalogo_full_dark,
+  zdalogo_full_light,
 } from "../SvgSources";
 import { switchPage } from "../helpers";
 import { pageAtom } from "../states/pageAtom";
-import {
-  altLongTextLogo,
-  altLongTextLogoBlue,
-  altLongTextLogoRed,
-  altLongTextLogoRedpink,
-  altZDALogoLg,
-} from "../AltText";
+import { altLongTextLogo, altLongTextLogoBlue, altZDALogoLg } from "../AltText";
 
 const logoSources = [
   {
-    src: zdalogo_light_blue,
+    src: zdalogo_full_light,
     theme: "",
-    colorScheme: colorSchemes[0],
   },
   {
-    src: zdalogo_dark_blue,
+    src: zdalogo_full_dark,
     theme: "dark",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    src: zdalogo_light_red,
-    theme: "",
-    colorScheme: colorSchemes[1],
-  },
-  {
-    src: zdalogo_dark_red,
-    theme: "dark",
-    colorScheme: colorSchemes[1],
   },
 ];
 
 const LogoPage = () => {
   const theme = useRecoilValue(themeAtom);
-  const colorScheme = useRecoilValue(colorSchemeAtom);
   const [, setPage] = useRecoilState(pageAtom);
-  const colorMap = ["redpink", "red", "blue", "system"];
+  const colorMap = ["blue", "system"];
   const [currentColor, setColor] = React.useState(colorMap[0]);
 
   const getLogoSrc = () => {
@@ -58,8 +36,7 @@ const LogoPage = () => {
     const normalizedTheme = theme !== "dark" ? "" : theme;
     // Filter on sources by theme and colorScheme
     const resultObj = logoSources.filter(
-      (logoSrc) =>
-        logoSrc.colorScheme === colorScheme && logoSrc.theme === normalizedTheme
+      (logoSrc) => logoSrc.theme === normalizedTheme
     );
     if (resultObj && resultObj.length) {
       return resultObj[0].src;
@@ -86,10 +63,18 @@ const LogoPage = () => {
         <div className="flex flex-col items-center text-md sm:text-lg 3xl:text-2xl 4xl:text-3xl 4k:text-4xl font-light font-outfit text-zdaText-dark dark:text-zdaText-light pointer-events-none select-none">
           Logo designed in InkScape
         </div>
-        <div className="flex flex-col items-center my-10 lg:my-14">
+        <div className="full-logo-box flex flex-col items-center my-10 lg:my-14">
           <img
-            className="relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-light dark:drop-shadow-logo-dark select-none"
+            className="full-logo relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-light dark:drop-shadow-logo-dark motion-safe:transition ease-in motion-safe:duration-[400ms] select-none"
             src={getLogoSrc()}
+            alt={altZDALogoLg}
+            width={400}
+            height={400}
+          />
+          {/* hover? */}
+          <img
+            className="full-logo-hover relative w-[240px] md:w-[300px] lg:w-[360px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] 4xl:w-[720px] drop-shadow-logo-blue-light dark:drop-shadow-logo-blue-dark motion-safe:transition ease-in motion-safe:duration-[400ms] select-none"
+            src={zdalogo_full_blue}
             alt={altZDALogoLg}
             width={400}
             height={400}
@@ -99,36 +84,18 @@ const LogoPage = () => {
           By{" "}
           {currentColor === colorMap[0] && (
             <img
-              src={zerodayanubis_redpink}
-              alt={altLongTextLogoRedpink}
-              className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
+              src={zerodayanubis_blue}
+              alt={altLongTextLogoBlue}
+              className="ml-[2px] 3xl:ml-0 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
             />
           )}
           {currentColor === colorMap[1] && (
             <img
-              src={zerodayanubis_red}
-              alt={altLongTextLogoRed}
-              className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
-              width={219}
-              height={36}
-            />
-          )}
-          {currentColor === colorMap[2] && (
-            <img
-              src={zerodayanubis_blue}
-              alt={altLongTextLogoBlue}
-              className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
-              width={219}
-              height={36}
-            />
-          )}
-          {currentColor === colorMap[3] && (
-            <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
               alt={altLongTextLogo}
-              className="ml-[2px] 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
+              className="ml-[2px] 3xl:ml-0 3xl:w-[274px] 3xl:h-[45px] 4xl:w-[329px] 4xl:h-[54px] 4k:w-[420px] 4k:h-[69px] pointer-events-none select-none"
               width={219}
               height={36}
             />

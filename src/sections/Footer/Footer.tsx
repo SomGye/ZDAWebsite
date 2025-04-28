@@ -1,17 +1,11 @@
 import * as React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  colorSchemeAtom,
-  colorSchemes,
-  themeAtom,
-} from "../../states/themeAtom";
+import { themeAtom } from "../../states/themeAtom";
 import {
   zdamono_dark,
-  zdamono_dark_hover_blue,
-  zdamono_dark_hover_red,
+  zdamono_dark_hover,
   zdamono_light,
-  zdamono_light_hover_blue,
-  zdamono_light_hover_red,
+  zdamono_light_hover,
   zdaworks_dark,
   zdaworks_light,
   zerodayanubis_dark,
@@ -31,109 +25,31 @@ import {
   printShopLink,
   privacyLink,
   threadsLink,
-  venmoLink,
   zdaWorksLink,
 } from "../../links";
 
-const footerClasses = [
-  {
-    className:
-      "w-full z-30 bottom-0 left-0 mt-auto bg-gradient-to-b from-zdaBlue-400/5 dark:from-zdaBlue-700/0 dark:to-zdaBlue-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "w-full z-30 bottom-0 left-0 mt-auto bg-gradient-to-b from-zdaRedpink-400/5 dark:from-zdaRedpink-700/0 dark:to-zdaRedpink-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md",
-    colorScheme: colorSchemes[1],
-  },
-];
-
-const anchorClasses = [
-  {
-    className:
-      "inline-flex justify-start items-center gap-2 text-sm text-zdaBlue-500 hover:text-zdaBlue-800 active:text-zdaBlue-1000 dark:text-gray-400/80 dark:hover:text-zdaBlue-500 dark:active:text-zdaBlue-500/70 select-none",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "inline-flex justify-start items-center gap-2 text-sm text-zdaRed-400 hover:text-zdaRedpink-800 active:text-zdaRedpink-1000 dark:text-gray-400/80 dark:hover:text-zdaRed-500 dark:active:text-zdaRed-500/70 select-none",
-    colorScheme: colorSchemes[1],
-  },
-];
-
-const bgClasses = [
-  {
-    className:
-      "bg-gradient-to-tr from-zdaBlue-500/15 to-gray-200 dark:from-zdaBlue-900/5",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    className:
-      "bg-gradient-to-tr from-zdaRed-500/15 to-gray-200 dark:from-zdaRedpink-900/5",
-    colorScheme: colorSchemes[1],
-  },
-];
-
 const monoLogoSources = [
   {
-    src: zdamono_light_hover_blue,
+    src: zdamono_light_hover,
     theme: "",
-    colorScheme: colorSchemes[0],
   },
   {
-    src: zdamono_dark_hover_blue,
+    src: zdamono_dark_hover,
     theme: "dark",
-    colorScheme: colorSchemes[0],
-  },
-  {
-    src: zdamono_light_hover_red,
-    theme: "",
-    colorScheme: colorSchemes[1],
-  },
-  {
-    src: zdamono_dark_hover_red,
-    theme: "dark",
-    colorScheme: colorSchemes[1],
   },
 ];
 
 const Footer = () => {
   const theme = useRecoilValue(themeAtom);
-  const colorScheme = useRecoilValue(colorSchemeAtom);
   const [, setPage] = useRecoilState(pageAtom);
   const currentYear = new Date().getFullYear();
-
-  const getColorSchemeClassName = (element: string) => {
-    let targetClasses;
-    // Determine class list from element type
-    if (element === "footer") {
-      targetClasses = footerClasses;
-    } else if (element === "anchor") {
-      targetClasses = anchorClasses;
-    } else if (element === "bg") {
-      targetClasses = bgClasses;
-    } else {
-      targetClasses = [{ className: "", colorScheme: colorSchemes[0] }];
-    }
-
-    // Filter on classes for className matching colorScheme
-    const resultObj = targetClasses.filter(
-      (classObj) => classObj.colorScheme === colorScheme
-    );
-    if (resultObj && resultObj.length) {
-      return resultObj[0].className;
-    } else {
-      return targetClasses[0].className;
-    }
-  };
 
   const getLogoSrc = () => {
     // Normalize "light"/"system" to "" for theme filter
     const normalizedTheme = theme !== "dark" ? "" : theme;
     // Filter on sources by theme and colorScheme
     const resultObj = monoLogoSources.filter(
-      (logoSrc) =>
-        logoSrc.colorScheme === colorScheme && logoSrc.theme === normalizedTheme
+      (logoSrc) => logoSrc.theme === normalizedTheme
     );
     if (resultObj && resultObj.length) {
       return resultObj[0].src;
@@ -143,7 +59,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={getColorSchemeClassName("footer")}>
+    <footer className="w-full z-30 bottom-0 left-0 mt-auto bg-gradient-to-b from-zdaBlue-400/5 dark:from-zdaBlue-700/0 dark:to-zdaBlue-700/5 text-gray-700 dark:text-gray-200 text-base border-t border-gray-200/50 dark:border-stone-800/10 rounded-md">
       <div className="px-3 md:px-7 lg:px-10 py-8 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -263,21 +179,6 @@ const Footer = () => {
                   PayPal
                 </a>
               </span>
-              <span className="block my-3">
-                <a
-                  className={
-                    (theme === "dark"
-                      ? "footer-link-animated-dark "
-                      : "footer-link-animated ") +
-                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
-                  }
-                  href={venmoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Venmo
-                </a>
-              </span>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -339,7 +240,7 @@ const Footer = () => {
               Thank you for visiting!
             </h3>
             <a
-              className={getColorSchemeClassName("anchor")}
+              className="inline-flex justify-start items-center gap-2 text-sm text-zdaBlue-500 hover:text-zdaBlue-800 active:text-zdaBlue-1000 dark:text-gray-400/80 dark:hover:text-zdaBlue-500 dark:active:text-zdaBlue-500/70 select-none"
               href={privacyLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -350,7 +251,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={getColorSchemeClassName("bg")}>
+      <div className="bg-gradient-to-tr from-zdaBlue-500/15 to-gray-200 dark:from-zdaBlue-900/5">
         <div className="w-full px-5 md:px-9 lg:px-12 py-8 mx-auto flex items-center flex-col-reverse sm:flex-row">
           {/* Logo and Copyright Container - Used for ordering on mobile vs desktop */}
           <div className="flex flex-col sm:flex-row items-center mt-8 sm:mt-auto">
@@ -375,7 +276,7 @@ const Footer = () => {
                 src={
                   theme === "dark" ? zerodayanubis_dark : zerodayanubis_light
                 }
-                className="hidden sm:block ml-3 max-h-8 select-none"
+                className="hidden sm:block ml-3 max-h-[2.35rem] select-none"
                 alt={altLongTextLogo}
               />
             </div>
