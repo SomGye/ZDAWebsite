@@ -22,6 +22,8 @@ export default {
           lessDarkCard: '#131215',
           darkCard: '#0f0e11',
           darkerCard: '#0e0d10',
+          darkestCard: '#0d0b0f',
+          extraDark: '#09080b',
           light: '#fafafa',
           lightCard: '#f0f0f0',
           lighterCard: '#f5f5f5',
@@ -96,6 +98,10 @@ export default {
       boxShadow: {
         'theme-menu-dropdown-light': '0px 2px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
         'theme-menu-dropdown-dark-blue': '1px 1px 38px -4px rgba(237, 247, 255, 0.25), 0px 3px 20px -15px rgba(237, 247, 255, 0.15)', // zdaBlue-50
+        'card-writings-light': '15px 15px 20px #e9e9e9cc, -15px -15px 20px #ffffffcc',
+        'card-writings-light-hover': '30px 30px 44px #e9e9e9cc, -30px -30px 44px #ffffffcc',
+        'card-writings-dark': '11px 10px 16px #0e0d0ec9, -11px -10px 16px #09080bc9',
+        'card-writings-dark-hover': '26px 25px 32px #0e0d0ec9, -26px -25px 32px #09080bc9',
       },
       dropShadow: {
         'btn-light': '0px 6px 4px #19141a2a',

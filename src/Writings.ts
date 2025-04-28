@@ -87,6 +87,24 @@ Does everyone deserve forgiveness?
         day: 26,
         time: "0850",
       },
+      {
+        type: "poem",
+        title: "Nourish Me",
+        content: `Deep spinning void
+A depth unseen
+Cast me out into an unknown ocean
+Nourish me with your depth
+
+Staring out, hoping it stares back
+I never know, if I'll come back
+Staring out, where will I go
+Nourish me, and never let go`,
+        datetime: "2025-04-27 1039",
+        year: 2025,
+        month: 4,
+        day: 27,
+        time: "1039",
+      },
     ],
   },
   {
