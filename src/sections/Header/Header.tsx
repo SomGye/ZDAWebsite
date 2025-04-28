@@ -118,16 +118,16 @@ const Header = () => {
             </div>
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
-              className="hidden lg:block ml-4 mr-2 max-h-[2.35rem] select-none"
+              className="hidden lg:block ml-4 mr-2 max-h-9 select-none"
               alt={altLongTextLogo}
             />
             <PageLinks location={"headerLg"} />
           </div>
           {/* MID RIGHT - Title/Nav Links - (only xs thru md) */}
-          <div className="header-midright hidden xs:flex md:hidden justify-center items-center max-w-fit max-h-9">
+          <div className="header-midright hidden xs:flex md:hidden absolute left-1/2 right-1/2 justify-center">
             <img
               src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
-              className="hidden xs:block sm:hidden lg:block ml-3 mr-2 min-w-4 w-full min-h-4 max-h-[2.35rem] select-none"
+              className="hidden xs:block sm:hidden lg:block w-full min-w-40 min-h-7 cursor-default select-none"
               alt={altLongTextLogo}
             />
             <PageLinks location={"headerSm"} />

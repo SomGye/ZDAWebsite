@@ -11,6 +11,8 @@ import {
 } from "../states/commsAtom";
 import { themeAtom } from "../states/themeAtom";
 import MiniSpinner from "./MiniSpinner";
+import { zerodayanubis_dark, zerodayanubis_light } from "../SvgSources";
+import { altLongTextLogo } from "../AltText";
 
 const InfoBanner = () => {
   const theme = useRecoilValue(themeAtom);
@@ -174,9 +176,11 @@ const InfoBanner = () => {
   return (
     <div className="info-banner-container w-full py-2 lg:py-0 flex flex-col lg:flex-row justify-center items-center bg-gradient-to-b from-zdaBlue-600/[0.07] dark:from-zdaBlue-600/[0.045] to-transparent">
       <div className="info-zda-container">
-        <span className="info-zda block xs:hidden sm:block lg:hidden m-2 text-lg text-gray-700 dark:text-gray-300 hover:text-zdaBlue-500 dark:hover:text-zdaBlue-600 motion-safe:transition-colors motion-safe:duration-500 ease-out font-light cursor-default select-none">
-          ⌞ZeroDayAnubis⌝
-        </span>
+        <img
+          src={theme === "dark" ? zerodayanubis_dark : zerodayanubis_light}
+          className="info-zda block xs:hidden sm:block lg:hidden mx-2 my-1 max-w-40 max-h-8 cursor-default select-none"
+          alt={altLongTextLogo}
+        />
       </div>
       <div className="comm-info-container w-11/12 lg:mt-4">
         {/* COMM STATUS */}
