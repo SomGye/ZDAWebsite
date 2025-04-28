@@ -1,7 +1,7 @@
 {
   "name": "zdawebsite",
   "private": true,
-  "version": "2.8.3",
+  "version": "2.8.4",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
@@ -11,6 +11,7 @@
     "commissions": "vite --open /commissions",
     "examples": "vite --open /examples",
     "logo": "vite --open /logo",
+    "writings": "vite --open /writings",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -37,7 +38,7 @@
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -45,6 +46,6 @@
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
-    "vite": "5.0.12"
+    "vite": "^5.4.18"
   }
 }
