@@ -54,3 +54,9 @@
   - Run `npm run logo`
   - Click the **Z** logo in the top banner (left for tablet/desktop, center for phone)
 ------
+##### Writings Page
+- To see the Writings page you can do one of the following:
+  - Go to the `/writings` route (or https://zerodayanubis.com/writings)
+  - Run `npm run writings`
+  - Click the Writings link in the Footer
+------
