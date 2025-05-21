@@ -9,6 +9,7 @@ export const bskyLink = "https://go.zda.works/bsky";
 export const igLink = "https://go.zda.works/insta";
 export const threadsLink = "https://go.zda.works/threads";
 export const caraLink = "https://go.zda.works/cara";
+export const mastoLink = "https://mastoart.social/@zerodayanubis";
 // Prints/Support
 export const printShopLink = "https://go.zda.works/prints";
 export const kofiLink = "https://go.zda.works/kofi";

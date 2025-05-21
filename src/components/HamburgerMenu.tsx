@@ -18,6 +18,7 @@ import {
   payPalIcon,
   printShopIcon,
   threadsIcon,
+  mastoIcon,
 } from "../icons";
 import { zerodayanubis_dark, zerodayanubis_light } from "../SvgSources";
 import { altLongTextLogo } from "../AltText";
@@ -27,6 +28,7 @@ import {
   caraLink,
   igLink,
   kofiLink,
+  mastoLink,
   payPalLink,
   printShopLink,
   threadsLink,
@@ -172,6 +174,16 @@ const HamburgerMenu = ({ open, setOpen }: props) => {
                 leftIcon={caraIcon}
                 rightIcon={extLinkIcon}
                 textContent="Cara"
+                variant="hamburger-outlined"
+              />
+              <ZDAButton
+                clickCallback={() => {
+                  clickLink(mastoLink);
+                  setOpen(false);
+                }}
+                leftIcon={mastoIcon}
+                rightIcon={extLinkIcon}
+                textContent="Mastodon"
                 variant="hamburger-outlined"
               />
             </Box>

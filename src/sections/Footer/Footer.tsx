@@ -21,6 +21,7 @@ import {
   discordLink,
   igLink,
   kofiLink,
+  mastoLink,
   payPalLink,
   printShopLink,
   privacyLink,
@@ -125,6 +126,21 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   Cara
+                </a>
+              </span>
+              <span className="block my-3">
+                <a
+                  className={
+                    (theme === "dark"
+                      ? "footer-link-animated-dark "
+                      : "footer-link-animated ") +
+                    "text-gray-500 hover:text-gray-900 active:text-gray-900 active:font-semibold dark:text-gray-400/90 dark:hover:text-gray-300 dark:active:font-semibold motion-safe:transition-colors motion-safe:duration-200 ease-out select-none"
+                  }
+                  href={mastoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mastodon
                 </a>
               </span>
             </nav>

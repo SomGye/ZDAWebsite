@@ -6,6 +6,7 @@ import {
   caraLink,
   igLink,
   kofiLink,
+  mastoLink,
   payPalLink,
   printShopLink,
   threadsLink,
@@ -152,6 +153,18 @@ const PagePromos = () => {
             <ZDAButton
               clickCallback={() => clickLink(caraLink)}
               textContent="Cara"
+              tight
+              variant="neutral"
+            />
+            <ZDAButton
+              clickCallback={() => clickLink(mastoLink)}
+              textContent="Mastodon"
+              tight
+              variant="mobile-neutral"
+            />
+            <ZDAButton
+              clickCallback={() => clickLink(mastoLink)}
+              textContent="Mastodon"
               tight
               variant="neutral"
             />
