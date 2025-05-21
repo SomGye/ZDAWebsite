@@ -30,15 +30,15 @@ const Header = () => {
   const determineHeaderClass = () => {
     if (scrolled) {
       if (theme === "dark") {
-        return "scrolled-header-dark ";
+        return "scrolled-header-dark rounded-md ";
       } else {
-        return "scrolled-header ";
+        return "scrolled-header rounded-md ";
       }
     } else {
       if (theme === "dark") {
-        return "top-header-dark ";
+        return "top-header-dark rounded-none ";
       } else {
-        return "top-header ";
+        return "top-header rounded-none ";
       }
     }
   };
