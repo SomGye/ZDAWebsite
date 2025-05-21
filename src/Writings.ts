@@ -105,11 +105,64 @@ Nourish me, and never let go`,
         day: 27,
         time: "1039",
       },
+      {
+        type: "poem",
+        title: "The Chasm of Doubt",
+        content: `Swirling inside
+No way out
+But no way in
+The chasm is unknowing
+
+Vacuum of void
+Pulling me under
+I am within
+I am without
+The chasm of doubt`,
+        datetime: "2025-05-21 0800",
+        year: 2025,
+        month: 5,
+        day: 21,
+        time: "0800",
+      },
     ],
   },
   {
     section: "Ramblings",
-    contents: [],
+    contents: [
+      {
+        type: "rant",
+        title: "Allergies; Taking them seriously",
+        content: `I wish that allergies were taken more seriously.
+        For me, this can be incredibly disabling/dehabilitating.
+        There is no cure for allergies, only treatment, 
+        and even those have severe limitations.
+
+        When allergies hit hard, I am unable to participate in society,
+        unable to breathe, eat, move, or even really think. 
+        They close my airways, overheat my body, overload my immune
+        system, and rob me of any energy or strength.
+        Prescriptions and meds only help to alleviate the baseline and 
+        try to act as a preventative, and can help reduce harm, but
+        once a full-blown allergy attack hits, there is nothing you
+        can do except try not to make it worse, and rest. 
+        I have tried experimental treatments and shots, but they
+        did nothing. From what I can tell, the medical field has
+        made no advances in decades on this.
+
+        And yet, society as a whole treats allergies as mere "sniffles"
+        and an inconvenience to them. People get annoyed if you show any
+        signs, and are frightened of coughs. And yet, they refuse to
+        do anything to help, and society at large refuses to look into
+        a cure or real, proper treatment to fully alleviate symptoms.
+        We are just expected to suffer.
+        `,
+        datetime: "2025-05-21 1113",
+        year: 2025,
+        month: 5,
+        day: 21,
+        time: "1113",
+      },
+    ],
   },
   {
     section: "Phrases",

@@ -5,6 +5,17 @@ import { writings } from "../Writings";
 const WritingsPage = () => {
   const evenMargin = " ml-1 sm:ml-4 mr-1 sm:mr-8 md:mr-12 lg:mr-32";
   const oddMargin = " mr-1 sm:mr-4 ml-1 sm:ml-8 md:ml-12 lg:ml-32";
+  const soloMargin = " m-1 sm:m-4 md:m-6 xl:m-10";
+
+  const determineMargin = (idx: number, arrLen: number) => {
+    if (arrLen < 2) {
+      return soloMargin;
+    } else if (idx % 2 === 0) {
+      return evenMargin;
+    } else {
+      return oddMargin;
+    }
+  };
 
   return (
     <div className="writings-page-container w-full flex flex-col justify-center items-center">
@@ -25,11 +36,11 @@ const WritingsPage = () => {
                 {section.contents
                   .slice(0)
                   .reverse()
-                  .map((item, idx) => (
+                  .map((item, idx, arr) => (
                     <div
                       className={
                         "writings-item w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 rounded-xl my-4 px-4 py-9 whitespace-pre-line border border-slate-300/25 hover:border-slate-400/25 dark:border-neutral-900/35 dark:hover:border-neutral-800/35 shadow-card-writings-light dark:shadow-card-writings-dark hover:shadow-card-writings-light-hover dark:hover:shadow-card-writings-dark-hover bg-gradient-to-br from-zdaBtn-light dark:from-zdaBG-darkestCard via-zdaBG-lighterCard dark:via-zdaBG-extraDark to-zdaBG-light dark:to-zdaBG-extraDark motion-safe:transition-all motion-safe:duration-300 ease-out" +
-                        `${idx % 2 === 0 ? evenMargin : oddMargin}`
+                        `${determineMargin(idx, arr.length)}`
                       }
                       key={idx}
                     >
